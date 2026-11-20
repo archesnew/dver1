@@ -1475,6 +1475,10 @@
 
   function handleUrlHash() {
     const hash = window.location.hash;
+    if (hash === '#showroomsSection' || hash === '#showrooms') {
+      window.location.href = 'showrooms.html';
+      return;
+    }
     if (hash.startsWith('#product-')) {
       const prodId = hash.replace('#product-', '');
       openProductModal(prodId);
