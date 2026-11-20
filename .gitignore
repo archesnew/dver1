@@ -9,6 +9,7 @@ package-lock.json
 # Переменные окружения и секреты
 .env
 .env.*
+!.env.example
 *.env
 *.pem
 *.key

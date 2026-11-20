@@ -11,5 +11,10 @@ echo Открытие сайта в браузере...
 start http://localhost:3000/
 echo.
 echo Сервер запущен. Чтобы остановить, закройте это окно (или нажмите Ctrl+C).
-py -m http.server 3000
+where node >nul 2>nul
+if %ERRORLEVEL% equ 0 (
+  node server.js
+) else (
+  py -m http.server 3000
+)
 pause

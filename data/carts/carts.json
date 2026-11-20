@@ -1,0 +1,31 @@
+{
+  "+79997776655": {
+    "items": [],
+    "updatedAt": "2026-11-20T22:39:31.477Z"
+  },
+  "+79172223344": {
+    "items": [
+      {
+        "id": "mob-1",
+        "productId": "PROD-FERR-001",
+        "title": "13 СМ VITRA ВИНОРИТ ПАТИНА",
+        "brand": "Феррони",
+        "collection": "",
+        "article": "",
+        "image": "door-placeholder.svg",
+        "variant": "Винчестер",
+        "size": "860 × 2050 мм",
+        "opening": "Правое",
+        "scenario": "standard_kit_with_hardware",
+        "scenarioTitle": "Полный комплект",
+        "hardware": "Базовая",
+        "wcTurn": false,
+        "quantity": 1,
+        "unitPrice": 48500,
+        "isPriceKnown": true,
+        "priceText": "48 500 ₽"
+      }
+    ],
+    "updatedAt": "2026-11-20T22:39:43.280Z"
+  }
+}

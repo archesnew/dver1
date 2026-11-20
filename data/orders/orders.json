@@ -1,0 +1,149 @@
+[
+  {
+    "id": "D1-2026-5061",
+    "idempotencyKey": "idemp-1795214380967-v660zxf5b",
+    "status": "Новая",
+    "createdAt": "2026-11-20T22:39:40.970Z",
+    "client": {
+      "name": "Алексей Миронов",
+      "phone": "+79172223344",
+      "city": "Казань"
+    },
+    "delivery": {
+      "type": "delivery",
+      "installation": true,
+      "comment": "Новостройка, грузовой лифт работает."
+    },
+    "items": [
+      {
+        "id": "cart-1",
+        "productId": "PROD-FERR-001",
+        "title": "13 СМ VITRA ВИНОРИТ ПАТИНА",
+        "brand": "Феррони",
+        "collection": "Двери с терморазрывом",
+        "article": "",
+        "image": "data/catalog sources/ferroni/image_4.jpg",
+        "variant": "Винчестер патина",
+        "size": "860 × 2050 мм",
+        "opening": "Правое",
+        "scenario": "standard_kit_with_hardware",
+        "scenarioTitle": "Полный комплект с фурнитурой",
+        "hardware": "Магнитный замок + ручка ZAMAK",
+        "wcTurn": false,
+        "quantity": 2,
+        "unitPrice": 48500,
+        "isPriceKnown": true,
+        "totalPrice": 97000,
+        "priceText": "48 500 ₽"
+      },
+      {
+        "id": "cart-2",
+        "productId": "PROD-FSD-F2",
+        "title": "ФСД F2 АРХИТЕКТУРНАЯ ЭМАЛЬ",
+        "brand": "ФСД",
+        "collection": "High Architectural",
+        "article": "",
+        "image": "data/catalog sources/fsd/image_5.jpg",
+        "variant": "Эмаль RAL 9003 матовая",
+        "size": "800 × 2100 мм",
+        "opening": "Левое",
+        "scenario": "standard_kit_with_hardware",
+        "scenarioTitle": "Комплект с коробом и наличниками",
+        "hardware": "Скрытые петли 3D + WC защелка",
+        "wcTurn": true,
+        "quantity": 2,
+        "unitPrice": null,
+        "isPriceKnown": false,
+        "totalPrice": null,
+        "priceText": "Цена уточняется"
+      },
+      {
+        "id": "cart-3",
+        "productId": "PROD-CUSTOM-CEILING",
+        "title": "Скрытая дверь Invisible под покраску (в потолок)",
+        "brand": "Vira Doors",
+        "collection": "Invisible Line",
+        "article": "",
+        "image": "door-placeholder.svg",
+        "variant": "Грунт глубокого проникновения",
+        "size": "900 × 2800 мм (Нестандарт)",
+        "opening": "Реверсивное (от себя)",
+        "scenario": "leaf_only",
+        "scenarioTitle": "Полотно со скрытым алюминиевым коробом",
+        "hardware": "Без фурнитуры",
+        "wcTurn": false,
+        "quantity": 1,
+        "unitPrice": null,
+        "isPriceKnown": false,
+        "totalPrice": null,
+        "priceText": "Цена уточняется"
+      }
+    ],
+    "totalKnownPrice": 97000,
+    "hasUncertainPrices": true,
+    "priceNotice": "В заказе присутствуют позиции с расчетом стоимости инженером по спецификации фабрики."
+  },
+  {
+    "id": "D1-2026-7362",
+    "idempotencyKey": "test-idemp-1795214371448",
+    "status": "Новая",
+    "createdAt": "2026-11-20T22:39:31.475Z",
+    "client": {
+      "name": "Константин Архитекторов",
+      "phone": "+79997776655",
+      "city": "Казань"
+    },
+    "delivery": {
+      "type": "delivery",
+      "installation": true,
+      "comment": "Дизайн-проект ЖК Vincent, 4 этаж"
+    },
+    "items": [
+      {
+        "id": "item-1",
+        "productId": "PROD-FERR-001",
+        "title": "13 СМ VITRA ВИНОРИТ ПАТИНА",
+        "brand": "Феррони",
+        "collection": "Двери с терморазрывом",
+        "article": "",
+        "image": "catalog-images/PROD-FERR-001_main.png",
+        "variant": "Винчестер",
+        "size": "860 × 2050 мм",
+        "opening": "Правое",
+        "scenario": "standard_kit_with_hardware",
+        "scenarioTitle": "Полный комплект",
+        "hardware": "Базовая",
+        "wcTurn": false,
+        "quantity": 2,
+        "unitPrice": 48500,
+        "isPriceKnown": true,
+        "totalPrice": 97000,
+        "priceText": "48 500 ₽"
+      },
+      {
+        "id": "item-2",
+        "productId": "PROD-UNKNOWN-999",
+        "title": "Индивидуальное скрытое полотно в потолок",
+        "brand": "Vira Doors",
+        "collection": "",
+        "article": "",
+        "image": "door-placeholder.svg",
+        "variant": "Под покраску грунтованное",
+        "size": "1000 × 2700 мм",
+        "opening": "Левое (на себя)",
+        "scenario": "leaf_only",
+        "scenarioTitle": "Только полотно",
+        "hardware": "Без фурнитуры",
+        "wcTurn": false,
+        "quantity": 1,
+        "unitPrice": null,
+        "isPriceKnown": false,
+        "totalPrice": null,
+        "priceText": "Цена уточняется"
+      }
+    ],
+    "totalKnownPrice": 97000,
+    "hasUncertainPrices": true,
+    "priceNotice": "В заказе присутствуют позиции с расчетом стоимости инженером по спецификации фабрики."
+  }
+]

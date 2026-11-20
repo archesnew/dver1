@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Спецификация заказа (Корзина) — «Двери №1»</title>
+  <meta name="description" content="Оформление спецификации и заказа межкомнатных и входных дверей в премиальном шоуруме «Двери №1». Казань и Набережные Челны.">
+  
+  <!-- Шрифт Inter & Стили -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="cart.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+  <!-- ========================================================================
+       APPLE LIQUID GLASS HEADER
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <!-- 1. СЛЕВА: ТОЛЬКО ОРИГИНАЛЬНЫЙ ЛОГОТИП -->
+      <a href="index.html" class="header-logo-link" aria-label="Двери №1 — Главная">
+        <img src="logo.png" alt="Двери №1" class="header-logo-img">
+      </a>
+
+      <!-- 2. ПО ЦЕНТРУ: НАВИГАЦИЯ -->
+      <nav class="header-nav" aria-label="Основная навигация">
+        <a href="index.html" class="header-nav-link">Главная</a>
+        <a href="index.html#catalog" class="header-nav-link">Каталог</a>
+        <a href="showrooms.html" class="header-nav-link">Шоурумы</a>
+        <a href="index.html#contacts" class="header-nav-link">Контакты</a>
+      </nav>
+
+      <!-- 3. СПРАВА: КОРЗИНА И КНОПКА ЗАПИСИ -->
+      <div class="header-actions">
+        <a href="cart.html" class="btn-glass-cart" id="btnHeaderCart" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-badge-count" id="headerCartCount">0</span>
+        </a>
+
+        <button type="button" class="btn-glass-cta" onclick="window.location.href='index.html#consultation'">
+          Записаться на замер
+        </button>
+
+        <button type="button" class="btn-glass-menu" id="mobileMenuBtn" aria-label="Открыть меню" aria-expanded="false">
+          <svg viewBox="0 0 18 18" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line class="menu-line line-1" x1="2.5" y1="4.5" x2="15.5" y2="4.5" />
+            <line class="menu-line line-2" x1="2.5" y1="9" x2="15.5" y2="9" />
+            <line class="menu-line line-3" x1="2.5" y1="13.5" x2="15.5" y2="13.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- МОБИЛЬНОЕ ВЫПАДАЮЩЕЕ МЕНЮ -->
+  <div class="mobile-glass-overlay" id="mobileMenuOverlay"></div>
+  <div class="mobile-glass-panel" id="mobileMenuPanel">
+    <div class="mobile-menu-inner">
+      <nav class="mobile-nav-list">
+        <a href="index.html" class="mobile-nav-item">Главная</a>
+        <a href="index.html#catalog" class="mobile-nav-item">Каталог дверей</a>
+        <a href="cart.html" class="mobile-nav-item active">Корзина / Спецификация</a>
+        <a href="showrooms.html" class="mobile-nav-item">Флагманские шоурумы</a>
+        <a href="index.html#contacts" class="mobile-nav-item">Контакты и адреса</a>
+      </nav>
+      <div class="mobile-menu-contacts">
+        <a href="tel:+78432000000" class="mobile-phone-link">+7 (843) 200-00-00</a>
+        <div class="mobile-hours-text">Ежедневно 10:00 – 20:00 • Казань и Челны</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       СТРАНИЦА КОРЗИНЫ
+       ======================================================================== -->
+  <main class="cart-page-wrapper">
+    <!-- Хлебные крошки -->
+    <div class="cart-breadcrumb-bar">
+      <a href="index.html#catalog" class="cart-back-link">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10 13L5 8l5-5"/>
+        </svg>
+        <span>Вернуться в каталог</span>
+      </a>
+    </div>
+
+    <!-- Заголовок страницы -->
+    <div class="cart-header-title-row">
+      <h1 class="cart-main-heading">Ваша спецификация</h1>
+      <span class="cart-total-badge-label" id="cartHeaderItemsCount">0 позиций</span>
+    </div>
+
+    <!-- Вид 1: Корзина с товарами -->
+    <div class="cart-layout-grid" id="cartContentGrid">
+      <!-- Список товаров слева -->
+      <section class="cart-items-column" id="cartItemsContainer" aria-label="Список позиций спецификации">
+        <!-- Генерируется из CartStore -->
+      </section>
+
+      <!-- Сводка заказа справа -->
+      <aside class="cart-summary-sticky" aria-label="Сводка заказа">
+        <h2 class="cart-summary-title">Сводка заявки</h2>
+        
+        <div class="cart-summary-row">
+          <span>Всего позиций:</span>
+          <strong id="summaryTotalUnits">0 шт.</strong>
+        </div>
+        
+        <div class="cart-summary-row" id="summaryKnownRow">
+          <span>Фиксированная стоимость:</span>
+          <strong id="summaryKnownPrice">0 ₽</strong>
+        </div>
+
+        <div class="cart-summary-row uncertain" id="summaryUncertainRow" style="display: none;">
+          <span>Позиции с ценой по запросу:</span>
+          <strong id="summaryUncertainCount">0 шт.</strong>
+        </div>
+
+        <div class="cart-summary-divider"></div>
+
+        <div class="cart-summary-total-row">
+          <span class="cart-summary-total-label">Предварительный итог:</span>
+          <span class="cart-summary-total-val" id="summaryFinalTotal">0 ₽</span>
+        </div>
+
+        <div class="cart-summary-note" id="summaryNote">
+          Точная смета формируется инженером с учётом толщины стен, доборов, фурнитуры и замера проёмов на объекте.
+        </div>
+
+        <button type="button" class="btn-cart-checkout" id="btnStartCheckout">
+          <span>Оформить заявку</span>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 10h12M11 5l5 5-5 5"/>
+          </svg>
+        </button>
+
+        <div class="cart-guarantees-list">
+          <div class="cart-guarantee-item">
+            <span class="cart-guarantee-icon">✓</span>
+            <span>Бесплатная консультация ведущего инженера</span>
+          </div>
+          <div class="cart-guarantee-item">
+            <span class="cart-guarantee-icon">✓</span>
+            <span>Прямые поставки с фабрик без переплат</span>
+          </div>
+          <div class="cart-guarantee-item">
+            <span class="cart-guarantee-icon">✓</span>
+            <span>Гарантия на полотна и сертифицированный монтаж</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Вид 2: Пустая корзина -->
+    <div class="cart-empty-view" id="cartEmptyView" style="display: none;">
+      <svg class="cart-empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 0 1-8 0"/>
+      </svg>
+      <h2 class="cart-empty-title">В вашей спецификации пока нет дверей</h2>
+      <p class="cart-empty-desc">
+        Перейдите в каталог интерьерных и входных дверей, настройте размеры и отделку полотен, и добавьте их в корзину для точного расчета сметы.
+      </p>
+      <a href="index.html#catalog" class="btn-empty-catalog">
+        <span>Перейти в каталог дверей</span>
+        <span>→</span>
+      </a>
+    </div>
+  </main>
+
+  <!-- МОБИЛЬНАЯ ФИКСИРОВАННАЯ НИЖНЯЯ ПАНЕЛЬ -->
+  <div class="mobile-cart-sticky-bar" id="mobileCartStickyBar">
+    <div class="mobile-cart-sticky-info">
+      <span class="mobile-cart-sticky-label">Предварительный итог</span>
+      <span class="mobile-cart-sticky-val" id="mobileStickyTotal">0 ₽</span>
+    </div>
+    <button type="button" class="btn-mobile-checkout" id="btnMobileCheckout">
+      <span>Оформить</span>
+      <span>→</span>
+    </button>
+  </div>
+
+  <!-- ========================================================================
+       ПОШАГОВОЕ МОДАЛЬНОЕ ОКНО ОФОРМЛЕНИЯ ЗАЯВКИ
+       ======================================================================== -->
+  <div class="checkout-modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="checkout-modal-panel">
+      <!-- Заголовок модального окна -->
+      <div class="checkout-modal-header">
+        <h3 class="checkout-modal-title" id="modalTitle">Оформление заявки</h3>
+        <button type="button" class="btn-close-checkout" id="btnCloseCheckout" aria-label="Закрыть">✕</button>
+      </div>
+
+      <!-- Трекер шагов -->
+      <div class="checkout-steps-tracker" id="checkoutTracker">
+        <div class="checkout-step-tab active" data-step="1">
+          <span class="checkout-step-num">1</span>
+          <span>Контакты</span>
+        </div>
+        <div class="checkout-step-line"></div>
+        <div class="checkout-step-tab" data-step="2">
+          <span class="checkout-step-num">2</span>
+          <span>SMS-код</span>
+        </div>
+        <div class="checkout-step-line"></div>
+        <div class="checkout-step-tab" data-step="3">
+          <span class="checkout-step-num">3</span>
+          <span>Детали</span>
+        </div>
+        <div class="checkout-step-line"></div>
+        <div class="checkout-step-tab" data-step="4">
+          <span class="checkout-step-num">4</span>
+          <span>Финал</span>
+        </div>
+      </div>
+
+      <!-- Содержимое шагов -->
+      <div class="checkout-modal-body">
+        
+        <!-- ШАГ 1: КОНТАКТНЫЕ ДАННЫЕ -->
+        <div class="checkout-step-pane active" id="checkoutStep1">
+          <div class="form-group-field">
+            <label class="form-field-label" for="clientName">Ваше имя *</label>
+            <input type="text" class="form-field-input" id="clientName" placeholder="Константин" autocomplete="name" required>
+          </div>
+
+          <div class="form-group-field">
+            <label class="form-field-label" for="clientPhone">Номер телефона РФ *</label>
+            <input type="tel" class="form-field-input" id="clientPhone" placeholder="+7 (999) 000-00-00" autocomplete="tel" required>
+            <small style="color: var(--text-muted); font-size: 0.75rem; margin-top: 4px; display: block;">
+              На этот номер будет отправлен 4-значный SMS-код для подтверждения заявки.
+            </small>
+          </div>
+
+          <div class="form-group-field">
+            <label class="form-field-label">Выберите ваш город *</label>
+            <div class="city-select-grid">
+              <button type="button" class="city-select-btn active" data-city="Казань">
+                <div class="city-select-title">Казань</div>
+                <div class="city-select-sub">Флагманский салон на пр. Победы</div>
+              </button>
+              <button type="button" class="city-select-btn" data-city="Набережные Челны">
+                <div class="city-select-title">Набережные Челны</div>
+                <div class="city-select-sub">Шоурум интерьерных дверей</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ШАГ 2: ПОДТВЕРЖДЕНИЕ ТЕЛЕФОНА (SMS) -->
+        <div class="checkout-step-pane" id="checkoutStep2">
+          <div class="sms-verify-container">
+            <div class="sms-phone-target">Код отправлен на <span id="smsTargetPhoneDisplay">+7 (...)</span></div>
+            <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.4;">
+              Введите 4-значный одноразовый пароль из SMS-сообщения.
+            </p>
+
+            <div class="sms-error-banner" id="smsErrorBanner"></div>
+
+            <div class="sms-digits-row">
+              <input type="text" class="sms-digit-box" maxlength="1" inputmode="numeric" pattern="[0-9]*" id="smsDigit1" autocomplete="one-time-code">
+              <input type="text" class="sms-digit-box" maxlength="1" inputmode="numeric" pattern="[0-9]*" id="smsDigit2">
+              <input type="text" class="sms-digit-box" maxlength="1" inputmode="numeric" pattern="[0-9]*" id="smsDigit3">
+              <input type="text" class="sms-digit-box" maxlength="1" inputmode="numeric" pattern="[0-9]*" id="smsDigit4">
+            </div>
+
+            <div class="sms-countdown-note" id="smsCountdownNote">
+              Повторная отправка через: <strong id="smsTimerSeconds">60</strong> сек.
+            </div>
+
+            <button type="button" class="btn-resend-sms" id="btnResendSms" disabled>
+              Отправить код повторно
+            </button>
+          </div>
+        </div>
+
+        <!-- ШАГ 3: СПОСОБ ПОЛУЧЕНИЯ И МОНТАЖ -->
+        <div class="checkout-step-pane" id="checkoutStep3">
+          <div class="form-group-field">
+            <label class="form-field-label">Способ получения *</label>
+            <div class="delivery-options-grid">
+              <button type="button" class="delivery-card-btn active" data-delivery="pickup">
+                <div class="delivery-card-title">Самовывоз</div>
+                <div class="delivery-card-desc">Бесплатно со склада / шоурума</div>
+              </button>
+              <button type="button" class="delivery-card-btn" data-delivery="delivery">
+                <div class="delivery-card-title">Доставка на объект</div>
+                <div class="delivery-card-desc">Специализированным транспортом</div>
+              </button>
+            </div>
+          </div>
+
+          <label class="checkbox-option-card">
+            <input type="checkbox" id="chkInstallation" checked>
+            <div class="checkbox-option-label">
+              <strong>Требуется профессиональный монтаж и замер проёмов</strong>
+              Инженер приедет со специальным высокоточным оборудованием для проверки кривизны стен и чистовых полов.
+            </div>
+          </label>
+
+          <div class="form-group-field">
+            <label class="form-field-label" for="clientComment">Комментарий или адрес доставки</label>
+            <textarea class="form-field-textarea" id="clientComment" placeholder="Укажите адрес объекта, этаж, номер дизайн-проекта или пожелания по времени замера..."></textarea>
+          </div>
+        </div>
+
+        <!-- ШАГ 4: ФИНАЛЬНОЕ ПОДТВЕРЖДЕНИЕ -->
+        <div class="checkout-step-pane" id="checkoutStep4">
+          <div class="checkout-confirm-summary">
+            <div class="confirm-summary-line">
+              <span>Контактное лицо:</span>
+              <strong id="confirmClientName">—</strong>
+            </div>
+            <div class="confirm-summary-line">
+              <span>Телефон:</span>
+              <strong id="confirmClientPhone">—</strong>
+            </div>
+            <div class="confirm-summary-line">
+              <span>Город и получение:</span>
+              <strong id="confirmCityDelivery">—</strong>
+            </div>
+            <div class="confirm-summary-line">
+              <span>Монтаж:</span>
+              <strong id="confirmInstallation">—</strong>
+            </div>
+
+            <div class="confirm-items-mini-list" id="confirmMiniList">
+              <!-- Товары из корзины -->
+            </div>
+          </div>
+
+          <div class="cart-summary-total-row" style="margin-top: 16px;">
+            <span class="cart-summary-total-label">Сумма заказа:</span>
+            <span class="cart-summary-total-val" id="confirmTotalSum">0 ₽</span>
+          </div>
+
+          <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; margin-top: 8px;">
+            Нажимая кнопку «Отправить заявку», вы соглашаетесь на обработку персональных данных для согласования спецификации с инженером.
+          </p>
+        </div>
+
+        <!-- ЭКРАН БЛАГОДАРНОСТИ (ПОСЛЕ УСПЕШНОГО СОХРАНЕНИЯ) -->
+        <div class="checkout-step-pane" id="checkoutStepSuccess">
+          <div class="thank-you-container">
+            <div class="thank-you-check-icon">✓</div>
+            <h3 class="thank-you-title">Заявка успешно принята!</h3>
+            <div class="thank-you-order-id-badge" id="successOrderNumberBadge">#D1-2026-0000</div>
+            <p class="thank-you-note">
+              Ваша спецификация зафиксирована в системе. Ведущий инженер шоурума свяжется с вами по указанному телефону в течение 15 минут для подтверждения конфигураций и согласования выезда замерщика.
+            </p>
+            <button type="button" class="btn-cart-checkout" id="btnFinishSuccess">
+              Вернуться в каталог
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Подвал модального окна -->
+      <div class="checkout-modal-footer" id="checkoutFooter">
+        <button type="button" class="btn-checkout-prev" id="btnCheckoutPrev" style="visibility: hidden;">
+          ← Назад
+        </button>
+        <button type="button" class="btn-checkout-next" id="btnCheckoutNext">
+          <span>Продолжить</span>
+          <span>→</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Футер сайта -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          © 2026 «Двери №1». Премиальный шоурум интерьерных решений.
+        </div>
+        <div class="footer-legal-links">
+          <span>Казань • Набережные Челны</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="cart-store.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

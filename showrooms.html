@@ -13,6 +13,7 @@
 
   <link rel="stylesheet" href="app.css">
   <link rel="icon" type="image/svg+xml" href="door-placeholder.svg">
+  <script src="cart-store.js"></script>
 </head>
 <body class="page-showrooms">
 
@@ -35,8 +36,17 @@
         <a href="showrooms.html" class="header-nav-link active" data-nav="showrooms">Шоурумы</a>
       </nav>
 
-      <!-- СПРАВА: КНОПКА CTA (DESKTOP) И МЕНЮ (MOBILE) -->
+      <!-- СПРАВА: КОРЗИНА, КНОПКА CTA (DESKTOP) И МЕНЮ (MOBILE) -->
       <div class="header-actions">
+        <a href="cart.html" class="btn-glass-cart" id="btnHeaderCart" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-badge-count" id="headerCartCount">0</span>
+        </a>
+
         <button type="button" class="btn-glass-cta" id="btnHeaderLead" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Запись на замер со страницы шоурумов');">
           Записаться на замер
         </button>

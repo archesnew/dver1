@@ -945,24 +945,33 @@
   // --------------------------------------------------------------------------
 
   function loadCartFromStorage() {
-    try {
-      const saved = localStorage.getItem('DVER1_CART');
-      pdpState.cart = saved ? JSON.parse(saved) : [];
-    } catch (e) {
-      pdpState.cart = [];
+    if (window.CartStore) {
+      pdpState.cart = window.CartStore.getCart();
+    } else {
+      try {
+        const saved = localStorage.getItem('DVER1_CART');
+        pdpState.cart = saved ? JSON.parse(saved) : [];
+      } catch (e) {
+        pdpState.cart = [];
+      }
     }
   }
 
   function saveCartToStorage() {
-    try {
-      localStorage.setItem('DVER1_CART', JSON.stringify(pdpState.cart));
-    } catch (e) {
-      console.error('Ошибка сохранения корзины:', e);
+    if (window.CartStore) {
+      window.CartStore.setCart(pdpState.cart);
+    } else {
+      try {
+        localStorage.setItem('DVER1_CART', JSON.stringify(pdpState.cart));
+      } catch (e) {
+        console.error('Ошибка сохранения корзины:', e);
+      }
     }
   }
 
   function updateCartCount() {
-    const count = pdpState.cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    const cart = window.CartStore ? window.CartStore.getCart() : pdpState.cart;
+    const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
 
     const headerBadge = document.getElementById('headerCartCount');
     if (headerBadge) {
@@ -989,30 +998,45 @@
     }
 
     const price = calculateCurrentPrice();
+    const scenarioTitles = {
+      standard_kit_with_hardware: 'Полный комплект с фурнитурой',
+      kit_without_hardware: 'Комплект без фурнитуры',
+      leaf_only: 'Только полотно'
+    };
 
     const cartItem = {
-      id: `${p.id}-${pdpState.activeVariantIndex}-${pdpState.activeSize}-${pdpState.activeScenario}`,
+      id: `${p.id}-${pdpState.activeVariantIndex}-${pdpState.activeSize}-${pdpState.activeScenario}-${pdpState.activeOpening}`,
       productId: p.id,
       brand: p.brand || 'Двери №1',
       model: p.model || 'Модель двери',
+      collection: p.collection || '',
+      article: p.article || '',
       variant: vName,
       size: pdpState.activeSize,
       opening: pdpState.activeOpening,
       scenario: pdpState.activeScenario,
+      scenarioTitle: scenarioTitles[pdpState.activeScenario] || 'Комплект',
+      hardware: pdpState.wcTurn ? 'С сантехническим фиксатором (WC)' : 'Базовая ручка с магнитным замком',
       wcTurn: pdpState.wcTurn,
-      price: price,
+      unitPrice: price,
+      isPriceKnown: (typeof price === 'number' && price > 0),
       image: vImg,
       quantity: 1
     };
 
-    const existingIndex = pdpState.cart.findIndex(i => i.id === cartItem.id);
-    if (existingIndex >= 0) {
-      pdpState.cart[existingIndex].quantity += 1;
+    if (window.CartStore) {
+      window.CartStore.addItem(cartItem);
+      pdpState.cart = window.CartStore.getCart();
     } else {
-      pdpState.cart.push(cartItem);
+      const existingIndex = pdpState.cart.findIndex(i => i.id === cartItem.id);
+      if (existingIndex >= 0) {
+        pdpState.cart[existingIndex].quantity += 1;
+      } else {
+        pdpState.cart.push(cartItem);
+      }
+      saveCartToStorage();
     }
 
-    saveCartToStorage();
     updateCartCount();
     showToast(`«${p.model}» добавлена в корзину`);
     openCartModal();
@@ -1044,7 +1068,16 @@
         hasQuotePrice = true;
       }
 
-      const priceStr = item.price ? formatPrice(item.price) : 'По расчету инженера';
+      const isKnown = item.isPriceKnown || (typeof item.unitPrice === 'number' && item.unitPrice > 0) || (typeof item.price === 'number' && item.price > 0);
+      const priceVal = typeof item.unitPrice === 'number' ? item.unitPrice : item.price;
+
+      if (isKnown && priceVal > 0) {
+        totalPrice += priceVal * (item.quantity || 1);
+      } else {
+        hasQuotePrice = true;
+      }
+
+      const priceStr = isKnown ? formatPrice(priceVal) : 'Цена уточняется';
 
       return `
         <div class="cart-item-row" data-cart-id="${escapeHtml(item.id)}">
@@ -1062,11 +1095,11 @@
           </div>
           <div class="cart-item-controls">
             <div class="cart-qty-picker">
-              <button type="button" class="btn-qty-minus" data-idx="${idx}">−</button>
+              <button type="button" class="btn-qty-minus" data-idx="${idx}" data-id="${escapeHtml(item.id)}">−</button>
               <span class="qty-val">${item.quantity || 1}</span>
-              <button type="button" class="btn-qty-plus" data-idx="${idx}">+</button>
+              <button type="button" class="btn-qty-plus" data-idx="${idx}" data-id="${escapeHtml(item.id)}">+</button>
             </div>
-            <button type="button" class="btn-remove-item" data-idx="${idx}" title="Удалить позицию">✕</button>
+            <button type="button" class="btn-remove-item" data-idx="${idx}" data-id="${escapeHtml(item.id)}" title="Удалить позицию">✕</button>
           </div>
         </div>
       `;
@@ -1074,7 +1107,7 @@
 
     if (totalEl) {
       if (totalPrice > 0) {
-        totalEl.textContent = formatPrice(totalPrice) + (hasQuotePrice ? ' + смета' : '');
+        totalEl.textContent = formatPrice(totalPrice) + (hasQuotePrice ? ' + по уточнению' : '');
       } else {
         totalEl.textContent = 'Индивидуальная смета фабрики';
       }
@@ -1083,36 +1116,52 @@
     // Обработчики кнопок количества
     listEl.querySelectorAll('.btn-qty-minus').forEach(btn => {
       btn.onclick = () => {
-        const idx = parseInt(btn.getAttribute('data-idx'), 10);
-        if (pdpState.cart[idx]) {
-          pdpState.cart[idx].quantity -= 1;
-          if (pdpState.cart[idx].quantity <= 0) {
-            pdpState.cart.splice(idx, 1);
+        const id = btn.getAttribute('data-id');
+        if (window.CartStore) {
+          window.CartStore.updateQuantity(id, -1);
+          pdpState.cart = window.CartStore.getCart();
+        } else {
+          const idx = parseInt(btn.getAttribute('data-idx'), 10);
+          if (pdpState.cart[idx]) {
+            pdpState.cart[idx].quantity -= 1;
+            if (pdpState.cart[idx].quantity <= 0) pdpState.cart.splice(idx, 1);
+            saveCartToStorage();
           }
-          saveCartToStorage();
-          updateCartCount();
-          renderCartModal();
         }
+        updateCartCount();
+        renderCartModal();
       };
     });
 
     listEl.querySelectorAll('.btn-qty-plus').forEach(btn => {
       btn.onclick = () => {
-        const idx = parseInt(btn.getAttribute('data-idx'), 10);
-        if (pdpState.cart[idx]) {
-          pdpState.cart[idx].quantity += 1;
-          saveCartToStorage();
-          updateCartCount();
-          renderCartModal();
+        const id = btn.getAttribute('data-id');
+        if (window.CartStore) {
+          window.CartStore.updateQuantity(id, 1);
+          pdpState.cart = window.CartStore.getCart();
+        } else {
+          const idx = parseInt(btn.getAttribute('data-idx'), 10);
+          if (pdpState.cart[idx]) {
+            pdpState.cart[idx].quantity += 1;
+            saveCartToStorage();
+          }
         }
+        updateCartCount();
+        renderCartModal();
       };
     });
 
     listEl.querySelectorAll('.btn-remove-item').forEach(btn => {
       btn.onclick = () => {
-        const idx = parseInt(btn.getAttribute('data-idx'), 10);
-        pdpState.cart.splice(idx, 1);
-        saveCartToStorage();
+        const id = btn.getAttribute('data-id');
+        if (window.CartStore) {
+          window.CartStore.removeItem(id);
+          pdpState.cart = window.CartStore.getCart();
+        } else {
+          const idx = parseInt(btn.getAttribute('data-idx'), 10);
+          pdpState.cart.splice(idx, 1);
+          saveCartToStorage();
+        }
         updateCartCount();
         renderCartModal();
       };
