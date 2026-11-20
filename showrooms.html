@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Флагманские шоурумы «Двери №1» | Казань и Набережные Челны</title>
+  <meta name="description" content="Флагманские интерьерные пространства «Двери №1» в Казани и Набережных Челнах. Экспозиции полноразмерных дверей, скрытых коробов Invisible, образцов натурального шпона и эмали.">
+
+  <!-- Шрифтовая система: Inter (кириллица + латиница) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="app.css">
+  <link rel="icon" type="image/svg+xml" href="door-placeholder.svg">
+</head>
+<body class="page-showrooms">
+
+  <!-- ==========================================================================
+       HEADER: APPLE LIQUID GLASS
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <!-- СЛЕВА: ТОЛЬКО ОРИГИНАЛЬНЫЙ ЛОГОТИП -->
+      <a href="index.html" class="header-logo-link" aria-label="«Двери №1» — Главная">
+        <img src="logo.png" alt="Двери №1" class="header-logo-img">
+      </a>
+
+      <!-- ПО ЦЕНТРУ: КОМПАКТНОЕ МЕНЮ (DESKTOP) -->
+      <nav class="header-nav" id="headerNav" aria-label="Основная навигация">
+        <a href="index.html#catalogContent" class="header-nav-link" data-nav="catalog">Каталог</a>
+        <a href="index.html#catalogContent" class="header-nav-link" data-nav="interior">Межкомнатные</a>
+        <a href="index.html#catalogContent" class="header-nav-link" data-nav="entrance">Входные</a>
+        <a href="index.html#catalogContent" class="header-nav-link" data-nav="invisible">Скрытые</a>
+        <a href="showrooms.html" class="header-nav-link active" data-nav="showrooms">Шоурумы</a>
+      </nav>
+
+      <!-- СПРАВА: СТЕКЛЯННАЯ КАПСУЛА CTA (DESKTOP) И МЕНЮ (MOBILE) -->
+      <div class="header-actions">
+        <button type="button" class="btn-glass-cta" id="btnHeaderLead" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Вызов замерщика со страницы шоурумов');">
+          Вызвать замерщика
+        </button>
+
+        <button type="button" class="btn-glass-menu" id="mobileMenuBtn" aria-label="Открыть меню" aria-expanded="false">
+          <svg viewBox="0 0 18 18" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line class="menu-line line-1" x1="2.5" y1="4.5" x2="15.5" y2="4.5" />
+            <line class="menu-line line-2" x1="2.5" y1="9" x2="15.5" y2="9" />
+            <line class="menu-line line-3" x1="2.5" y1="13.5" x2="15.5" y2="13.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ПЛАВАЮЩЕЕ СТЕКЛЯННОЕ МОБИЛЬНОЕ МЕНЮ (APPLE LIQUID GLASS FLOATING PANEL) -->
+  <div class="mobile-glass-overlay" id="mobileGlassOverlay"></div>
+  <div class="mobile-glass-panel" id="mobileNavPanel" aria-hidden="true">
+    <div class="mobile-glass-inner">
+      <nav class="mobile-glass-nav" aria-label="Мобильная навигация">
+        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Каталог</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Межкомнатные</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Входные</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Скрытые</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="showrooms.html" class="mobile-glass-link active" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Шоурумы</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </nav>
+      <div class="mobile-glass-footer">
+        <button type="button" class="btn-mobile-glass-cta" onclick="if(window.closeMobileMenu) window.closeMobileMenu(); if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Вызов замерщика из мобильного меню');">
+          Вызвать замерщика
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: СТРАНИЦА ШОУРУМОВ
+       ========================================================================== -->
+  <main class="showrooms-page-main">
+    
+    <!-- ХЛЕБНЫЕ КРОШКИ -->
+    <div class="editorial-container" style="padding-top: 24px; padding-bottom: 0;">
+      <nav class="showrooms-breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a>
+        <span class="bc-sep">/</span>
+        <span class="bc-current">Шоурумы</span>
+      </nav>
+    </div>
+
+    <!-- HERO ШОУРУМОВ -->
+    <section class="showrooms-hero-section">
+      <div class="editorial-container">
+        <div class="editorial-header" style="text-align: left; margin-bottom: 48px;">
+          <div class="editorial-kicker">Физические пространства и экспозиции</div>
+          <h1 class="editorial-title" style="font-size: clamp(2rem, 3.8vw, 3.25rem); max-width: 900px; margin-left: 0; margin-right: 0;">
+            Флагманские шоурумы в Казани и Набережных Челнах
+          </h1>
+          <p class="editorial-subtitle" style="font-size: clamp(1rem, 1.3vw, 1.15rem); max-width: 760px; margin-left: 0; margin-right: 0;">
+            Пространства архитектурных дверей, где можно вживую оценить тактильность натурального шпона, плавность хода итальянских скрытых петель и надёжность входных полотен с терморазрывом.
+          </p>
+        </div>
+
+        <!-- КАРТОЧКИ ШОУРУМОВ -->
+        <div class="showrooms-grid">
+          
+          <!-- Шоурум Казань -->
+          <div class="showroom-card">
+            <div class="showroom-city-badge">Казань</div>
+            <h2 class="showroom-title">Шоурум на Сибирском тракте</h2>
+            
+            <div class="showroom-details">
+              <div class="showroom-detail-item">
+                <span class="detail-label">Адрес:</span>
+                <span class="detail-value">г. Казань, ул. Сибирский тракт, д. 59б</span>
+              </div>
+              <div class="showroom-detail-item">
+                <span class="detail-label">График:</span>
+                <span class="detail-value">Ежедневно с 09:00 до 19:00</span>
+              </div>
+              <div class="showroom-detail-item">
+                <span class="detail-label">Телефон:</span>
+                <span class="detail-value">+7 (843) 205-00-01</span>
+              </div>
+            </div>
+
+            <div class="showroom-desc">
+              Более 200 полноразмерных образцов межкомнатных и входных дверей в реальных интерьерных проёмах. Специализированные стенды скрытых инженерных коробов Invisible под покраску и штукатурку, раздвижных систем, образцов натурального шпона, эмалей палитры RAL/NCS и бесшумной итальянской фурнитуры.
+            </div>
+
+            <div class="showroom-features-strip">
+              <span class="showroom-feature-pill">200+ полотен</span>
+              <span class="showroom-feature-pill">Скрытые системы</span>
+              <span class="showroom-feature-pill">Библиотека декоров</span>
+              <span class="showroom-feature-pill">Удобная парковка</span>
+            </div>
+
+            <div class="showroom-actions">
+              <button type="button" class="btn-showroom-action" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Визит в шоурум Казань');">
+                Записаться на визит в Казани
+              </button>
+            </div>
+          </div>
+
+          <!-- Шоурум Набережные Челны -->
+          <div class="showroom-card">
+            <div class="showroom-city-badge">Набережные Челны</div>
+            <h2 class="showroom-title">Шоурум на Казанском проспекте</h2>
+            
+            <div class="showroom-details">
+              <div class="showroom-detail-item">
+                <span class="detail-label">Адрес:</span>
+                <span class="detail-value">г. Набережные Челны, Казанский проспект, д. 232</span>
+              </div>
+              <div class="showroom-detail-item">
+                <span class="detail-label">График:</span>
+                <span class="detail-value">Пн–Сб с 09:00 до 18:00, Вс — выходной</span>
+              </div>
+              <div class="showroom-detail-item">
+                <span class="detail-label">Телефон:</span>
+                <span class="detail-value">+7 (843) 205-00-01</span>
+              </div>
+            </div>
+
+            <div class="showroom-desc">
+              Флагманская экспозиция взломостойких стальных дверей с терморазрывом для коттеджей и загородного строительства, а также современные интерьерные коллекции межкомнатных полотен. Инженерная зона для подбора нестандартных проёмов и расчёта спецификаций по чертежам.
+            </div>
+
+            <div class="showroom-features-strip">
+              <span class="showroom-feature-pill">Терморазрыв в разрезе</span>
+              <span class="showroom-feature-pill">Консультация технолога</span>
+              <span class="showroom-feature-pill">Каталоги фабрик</span>
+              <span class="showroom-feature-pill">Спецификация по проекту</span>
+            </div>
+
+            <div class="showroom-actions">
+              <button type="button" class="btn-showroom-action" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Визит в шоурум Челны');">
+                Записаться на визит в Челнах
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ЧТО ВАС ЖДЁТ В ШОУРУМАХ -->
+    <section class="showrooms-experience-section">
+      <div class="editorial-container">
+        <div class="editorial-header">
+          <div class="editorial-kicker">Премиальный сервис</div>
+          <h2 class="editorial-title">Преимущества визита в экспозицию</h2>
+          <p class="editorial-subtitle">Полное погружение в проект: от подбора фактуры до согласования узлов сопряжения стен</p>
+        </div>
+
+        <div class="experience-grid">
+          <div class="experience-card">
+            <div class="experience-num">01</div>
+            <h3 class="experience-title">Полноразмерные полотна в проёмах</h3>
+            <p class="experience-desc">
+              Вы видите дверь не в виде маленького образца в каталоге, а в реальную высоту 2000–2400 мм с установленным коробом, наличником и притвором.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-num">02</div>
+            <h3 class="experience-title">Библиотека материалов и декоров</h3>
+            <p class="experience-desc">
+              Стенды образцов натурального дубового и орехового шпона, эмали шелковисто-матовой текстуры, стекла сатинат, лакобель и триплекс.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <div class="experience-num">03</div>
+            <h3 class="experience-title">Инженерный расчёт проекта</h3>
+            <p class="experience-desc">
+              Наши технологи сверят размеры проёмов, толщину чистового пола и стен, порекомендуют тип короба и составят детальную смету.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ: ПОМОЩЬ С ВЫБОРОМ И ЗАМЕР -->
+    <section class="home-consultation-section" id="consultationSection" style="padding-top: 0;">
+      <div class="editorial-container">
+        <div class="consultation-card">
+          <div class="consultation-content">
+            <div class="editorial-kicker">Сервис и подбор</div>
+            <h2 class="consultation-title">Помощь с выбором и точный замер</h2>
+            <p class="consultation-desc">
+              Инженеры шоурума помогут рассчитать размеры проёмов, подобрать варианты открывания, покрытие полотна и составить спецификацию для вашего дизайн-проекта.
+            </p>
+            <div class="consultation-actions">
+              <button type="button" class="btn-consultation-primary" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Вызов замерщика');">
+                Вызвать замерщика
+              </button>
+              <button type="button" class="btn-consultation-secondary" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Консультация эксперта');">
+                Получить консультацию
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       МОДАЛЬНЫЕ ОКНА: ЗАЯВКА И КОРЗИНА
+       ========================================================================== -->
+  <!-- 1. Модальное окно: Заявка / Замер -->
+  <div class="modal-backdrop" id="leadModal" style="display:none;" aria-hidden="true" role="dialog">
+    <div class="modal-window lead-modal-window">
+      <div class="modal-header">
+        <div class="modal-header-titles">
+          <div class="modal-kicker">Премиальный сервис</div>
+          <h2 class="modal-model-title" id="leadModalTitle">Записаться на визит в шоурум</h2>
+        </div>
+        <button type="button" class="modal-close-btn" id="btnCloseLeadModal" aria-label="Закрыть">✕</button>
+      </div>
+      <form class="lead-order-form" id="leadOrderForm" onsubmit="event.preventDefault(); if(window.DverApp && window.DverApp.submitLead) window.DverApp.submitLead(this); else alert('Спасибо! Ваша заявка принята. Менеджер шоурума свяжется с вами в течение 15 минут.');">
+        <div class="form-row">
+          <label for="leadName">Ваше имя *</label>
+          <input type="text" id="leadName" name="name" required placeholder="Константин">
+        </div>
+        <div class="form-row">
+          <label for="leadPhone">Номер телефона *</label>
+          <input type="tel" id="leadPhone" name="phone" required placeholder="+7 (999) 000-00-00">
+        </div>
+        <div class="form-row">
+          <label for="leadCity">Город шоурума</label>
+          <select id="leadCity" name="city">
+            <option value="Казань" selected>Казань (ул. Сибирский тракт, 59б)</option>
+            <option value="Набережные Челны">Набережные Челны (Казанский проспект, 232)</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="leadComment">Комментарий или удобное время</label>
+          <textarea id="leadComment" name="comment" rows="3" placeholder="Укажите пожелания или модель двери..."></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-lead-submit">Отправить заявку</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Модальное окно: Корзина -->
+  <div class="modal-backdrop" id="cartModal" style="display:none;" aria-hidden="true" role="dialog">
+    <div class="modal-window cart-modal-window">
+      <div class="modal-header">
+        <div class="modal-header-titles">
+          <div class="modal-kicker">Спецификация заказа</div>
+          <h2 class="modal-model-title">Корзина товаров</h2>
+        </div>
+        <button type="button" class="modal-close-btn" id="btnCloseCartModal" aria-label="Закрыть">✕</button>
+      </div>
+      <div class="cart-modal-body" id="cartModalBody">
+        <div class="cart-empty-message">Ваша спецификация пока пуста</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo-link">
+          <img src="logo.png" alt="Двери №1" class="footer-logo-img" width="132" height="34">
+        </a>
+        <p class="footer-brand-desc">
+          Премиальный шоурум дизайнерских дверей. Полный цикл: от лазерного замера проёмов и подбора отделки до чистового монтажа с гарантией.
+        </p>
+        <div class="footer-brand-city-badge">Казань & Набережные Челны</div>
+      </div>
+
+      <div class="footer-nav-col">
+        <div class="footer-col-title">Каталог</div>
+        <ul class="footer-links-list">
+          <li><a href="index.html#catalogContent" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Межкомнатные двери');">Межкомнатные двери</a></li>
+          <li><a href="index.html#catalogContent" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Входные двери');">Входные сейф-двери</a></li>
+          <li><a href="index.html#catalogContent" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Скрытые двери');">Скрытые короба Invisible</a></li>
+          <li><a href="index.html#catalogContent" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Двери со стеклом');">Двери со стеклом</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <div class="footer-col-title">Шоурумы</div>
+        <div class="footer-showroom-item">
+          <div class="footer-city-label">Казань:</div>
+          <div class="footer-address-val">ул. Сибирский тракт, д. 59б</div>
+          <div class="footer-time-val">Ежедневно с 09:00 до 19:00</div>
+        </div>
+        <div class="footer-showroom-item" style="margin-top: 14px;">
+          <div class="footer-city-label">Набережные Челны:</div>
+          <div class="footer-address-val">Казанский проспект, д. 232</div>
+          <div class="footer-time-val">Пн–Сб с 09:00 до 18:00</div>
+        </div>
+      </div>
+
+      <div class="footer-contact-col">
+        <div class="footer-col-title">Связь с экспертом</div>
+        <a href="tel:+78432050001" class="footer-phone-link">+7 (843) 205-00-01</a>
+        <div class="footer-phone-sub">Бесплатная консультация и вызов замерщика</div>
+        <button type="button" class="btn-footer-consult" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Консультация из подвала');">
+          Заказать обратный звонок
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-container">
+        <div class="footer-copyright">
+          © 2026 «Двери №1». Все права защищены. Архитектурные и интерьерные решения.
+        </div>
+        <div class="footer-bottom-links">
+          <span>Политика конфиденциальности</span>
+          <span>Договор оферты</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- СКРИПТЫ -->
+  <script src="app.js"></script>
+</body>
+</html>

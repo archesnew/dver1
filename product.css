@@ -214,13 +214,13 @@
 }
 
 .pdp-model-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 2.35rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.15;
   color: var(--text-primary);
   margin: 0 0 12px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .pdp-lead-description {
@@ -247,9 +247,9 @@
 }
 
 .pdp-price-amount {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 2.15rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   letter-spacing: -0.01em;
 }
@@ -612,12 +612,12 @@
 }
 
 .section-title-serif {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.75rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 8px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .section-subtitle {
@@ -671,11 +671,12 @@
 }
 
 .highlight-card-header {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 16px;
+  letter-spacing: -0.01em;
 }
 
 .highlight-list {
@@ -829,11 +830,12 @@
 }
 
 .complect-card-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 12px;
+  letter-spacing: -0.01em;
 }
 
 .complect-card-list {
@@ -912,9 +914,9 @@
 }
 
 .service-card-num {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--accent-terracotta);
   opacity: 0.4;
   margin-bottom: 12px;
@@ -1020,10 +1022,11 @@
 }
 
 .cart-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
 .cart-count-badge {
@@ -1147,9 +1150,9 @@
 }
 
 .cart-total-amount {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
@@ -1228,11 +1231,12 @@
 }
 
 .consult-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 
 .consult-subtitle {
