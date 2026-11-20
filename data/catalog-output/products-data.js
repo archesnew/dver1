@@ -57,7 +57,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FERR-001_main.png",
       "catalog-images/PROD-FERR-001_interior.png"
     ],
-    "price": 48500,
+    "price": 58500,
     "price_type": "fixed",
     "variants": [
       {
@@ -93,7 +93,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-001_main.png"
       }
     ],
-    "kit_price": 48500,
+    "kit_price": 58500,
     "dealer_price": 48500
   },
   {
@@ -154,7 +154,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FERR-002_main.png",
       "catalog-images/PROD-FERR-002_interior.png"
     ],
-    "price": 43700,
+    "price": 53700,
     "price_type": "fixed",
     "variants": [
       {
@@ -190,7 +190,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-002_main.png"
       }
     ],
-    "kit_price": 43700,
+    "kit_price": 53700,
     "dealer_price": 43700
   },
   {
@@ -250,7 +250,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-003_main.png"
     ],
-    "price": 40500,
+    "price": 50500,
     "price_type": "fixed",
     "variants": [
       {
@@ -286,7 +286,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-003_main.png"
       }
     ],
-    "kit_price": 40500,
+    "kit_price": 50500,
     "dealer_price": 40500
   },
   {
@@ -346,7 +346,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-004_main.png"
     ],
-    "price": 40500,
+    "price": 50500,
     "price_type": "fixed",
     "variants": [
       {
@@ -382,7 +382,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-004_main.png"
       }
     ],
-    "kit_price": 40500,
+    "kit_price": 50500,
     "dealer_price": 40500
   },
   {
@@ -442,7 +442,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-005_main.png"
     ],
-    "price": 43700,
+    "price": 53700,
     "price_type": "fixed",
     "variants": [
       {
@@ -478,7 +478,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-005_main.png"
       }
     ],
-    "kit_price": 43700,
+    "kit_price": 53700,
     "dealer_price": 43700
   },
   {
@@ -538,7 +538,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-006_main.png"
     ],
-    "price": 23300,
+    "price": 33300,
     "price_type": "fixed",
     "variants": [
       {
@@ -574,7 +574,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-006_main.png"
       }
     ],
-    "kit_price": 23300,
+    "kit_price": 33300,
     "dealer_price": 23300
   },
   {
@@ -634,7 +634,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-007_main.png"
     ],
-    "price": 23800,
+    "price": 33800,
     "price_type": "fixed",
     "variants": [
       {
@@ -670,7 +670,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-007_main.png"
       }
     ],
-    "kit_price": 23800,
+    "kit_price": 33800,
     "dealer_price": 23800
   },
   {
@@ -730,7 +730,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-008_main.png"
     ],
-    "price": 32500,
+    "price": 42500,
     "price_type": "fixed",
     "variants": [
       {
@@ -766,7 +766,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-008_main.png"
       }
     ],
-    "kit_price": 32500,
+    "kit_price": 42500,
     "dealer_price": 32500
   },
   {
@@ -826,7 +826,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-009_main.png"
     ],
-    "price": 24800,
+    "price": 34800,
     "price_type": "fixed",
     "variants": [
       {
@@ -862,7 +862,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-009_main.png"
       }
     ],
-    "kit_price": 24800,
+    "kit_price": 34800,
     "dealer_price": 24800
   },
   {
@@ -922,7 +922,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-010_main.png"
     ],
-    "price": 25700,
+    "price": 35700,
     "price_type": "fixed",
     "variants": [
       {
@@ -958,7 +958,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-010_main.png"
       }
     ],
-    "kit_price": 25700,
+    "kit_price": 35700,
     "dealer_price": 25700
   },
   {
@@ -1020,7 +1020,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FERR-011_alt1.png",
       "catalog-images/PROD-FERR-011_interior.png"
     ],
-    "price": 26000,
+    "price": 36000,
     "price_type": "fixed",
     "variants": [
       {
@@ -1056,7 +1056,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-011_main.png"
       }
     ],
-    "kit_price": 26000,
+    "kit_price": 36000,
     "dealer_price": 26000
   },
   {
@@ -1116,7 +1116,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-012_main.png"
     ],
-    "price": 28200,
+    "price": 38200,
     "price_type": "fixed",
     "variants": [
       {
@@ -1152,7 +1152,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-012_main.png"
       }
     ],
-    "kit_price": 28200,
+    "kit_price": 38200,
     "dealer_price": 28200
   },
   {
@@ -1212,7 +1212,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-013_main.png"
     ],
-    "price": 28200,
+    "price": 38200,
     "price_type": "fixed",
     "variants": [
       {
@@ -1248,7 +1248,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-013_main.png"
       }
     ],
-    "kit_price": 28200,
+    "kit_price": 38200,
     "dealer_price": 28200
   },
   {
@@ -1309,7 +1309,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FERR-014_main.png",
       "catalog-images/PROD-FERR-014_interior.png"
     ],
-    "price": 16000,
+    "price": 26000,
     "price_type": "fixed",
     "variants": [
       {
@@ -1345,7 +1345,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-014_main.png"
       }
     ],
-    "kit_price": 16000,
+    "kit_price": 26000,
     "dealer_price": 16000
   },
   {
@@ -1405,7 +1405,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-015_main.png"
     ],
-    "price": 21800,
+    "price": 31800,
     "price_type": "fixed",
     "variants": [
       {
@@ -1441,7 +1441,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-015_main.png"
       }
     ],
-    "kit_price": 21800,
+    "kit_price": 31800,
     "dealer_price": 21800
   },
   {
@@ -1501,7 +1501,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-016_main.png"
     ],
-    "price": 21950,
+    "price": 31950,
     "price_type": "fixed",
     "variants": [
       {
@@ -1537,7 +1537,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-016_main.png"
       }
     ],
-    "kit_price": 21950,
+    "kit_price": 31950,
     "dealer_price": 21950
   },
   {
@@ -1597,7 +1597,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-017_main.png"
     ],
-    "price": 21800,
+    "price": 31800,
     "price_type": "fixed",
     "variants": [
       {
@@ -1633,7 +1633,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-017_main.png"
       }
     ],
-    "kit_price": 21800,
+    "kit_price": 31800,
     "dealer_price": 21800
   },
   {
@@ -1693,7 +1693,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-018_main.png"
     ],
-    "price": 23000,
+    "price": 33000,
     "price_type": "fixed",
     "variants": [
       {
@@ -1729,7 +1729,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-018_main.png"
       }
     ],
-    "kit_price": 23000,
+    "kit_price": 33000,
     "dealer_price": 23000
   },
   {
@@ -1789,7 +1789,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-019_main.png"
     ],
-    "price": 21800,
+    "price": 31800,
     "price_type": "fixed",
     "variants": [
       {
@@ -1825,7 +1825,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-019_main.png"
       }
     ],
-    "kit_price": 21800,
+    "kit_price": 31800,
     "dealer_price": 21800
   },
   {
@@ -1885,7 +1885,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-020_main.png"
     ],
-    "price": 22950,
+    "price": 32950,
     "price_type": "fixed",
     "variants": [
       {
@@ -1921,7 +1921,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-020_main.png"
       }
     ],
-    "kit_price": 22950,
+    "kit_price": 32950,
     "dealer_price": 22950
   },
   {
@@ -1981,7 +1981,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-021_main.png"
     ],
-    "price": 21800,
+    "price": 31800,
     "price_type": "fixed",
     "variants": [
       {
@@ -2017,7 +2017,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-021_main.png"
       }
     ],
-    "kit_price": 21800,
+    "kit_price": 31800,
     "dealer_price": 21800
   },
   {
@@ -2077,7 +2077,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-022_main.png"
     ],
-    "price": 14700,
+    "price": 24700,
     "price_type": "fixed",
     "variants": [
       {
@@ -2113,7 +2113,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-022_main.png"
       }
     ],
-    "kit_price": 14700,
+    "kit_price": 24700,
     "dealer_price": 14700
   },
   {
@@ -2173,7 +2173,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-023_main.png"
     ],
-    "price": 19400,
+    "price": 29400,
     "price_type": "fixed",
     "variants": [
       {
@@ -2209,7 +2209,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-023_main.png"
       }
     ],
-    "kit_price": 19400,
+    "kit_price": 29400,
     "dealer_price": 19400
   },
   {
@@ -2269,7 +2269,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-024_main.png"
     ],
-    "price": 21800,
+    "price": 31800,
     "price_type": "fixed",
     "variants": [
       {
@@ -2305,7 +2305,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-024_main.png"
       }
     ],
-    "kit_price": 21800,
+    "kit_price": 31800,
     "dealer_price": 21800
   },
   {
@@ -2365,7 +2365,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-025_main.png"
     ],
-    "price": 15700,
+    "price": 25700,
     "price_type": "fixed",
     "variants": [
       {
@@ -2401,7 +2401,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-025_main.png"
       }
     ],
-    "kit_price": 15700,
+    "kit_price": 25700,
     "dealer_price": 15700
   },
   {
@@ -2461,7 +2461,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-026_main.png"
     ],
-    "price": 16000,
+    "price": 26000,
     "price_type": "fixed",
     "variants": [
       {
@@ -2497,7 +2497,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-026_main.png"
       }
     ],
-    "kit_price": 16000,
+    "kit_price": 26000,
     "dealer_price": 16000
   },
   {
@@ -2557,7 +2557,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-027_main.png"
     ],
-    "price": 18200,
+    "price": 28200,
     "price_type": "fixed",
     "variants": [
       {
@@ -2593,7 +2593,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-027_main.png"
       }
     ],
-    "kit_price": 18200,
+    "kit_price": 28200,
     "dealer_price": 18200
   },
   {
@@ -2653,7 +2653,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-028_main.png"
     ],
-    "price": 19900,
+    "price": 29900,
     "price_type": "fixed",
     "variants": [
       {
@@ -2689,7 +2689,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-028_main.png"
       }
     ],
-    "kit_price": 19900,
+    "kit_price": 29900,
     "dealer_price": 19900
   },
   {
@@ -2749,7 +2749,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-029_main.png"
     ],
-    "price": 23500,
+    "price": 33500,
     "price_type": "fixed",
     "variants": [
       {
@@ -2785,7 +2785,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-029_main.png"
       }
     ],
-    "kit_price": 23500,
+    "kit_price": 33500,
     "dealer_price": 23500
   },
   {
@@ -2845,7 +2845,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-030_main.png"
     ],
-    "price": 23000,
+    "price": 33000,
     "price_type": "fixed",
     "variants": [
       {
@@ -2881,7 +2881,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-030_main.png"
       }
     ],
-    "kit_price": 23000,
+    "kit_price": 33000,
     "dealer_price": 23000
   },
   {
@@ -2941,7 +2941,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-031_main.png"
     ],
-    "price": 24750,
+    "price": 34750,
     "price_type": "fixed",
     "variants": [
       {
@@ -2977,7 +2977,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-031_main.png"
       }
     ],
-    "kit_price": 24750,
+    "kit_price": 34750,
     "dealer_price": 24750
   },
   {
@@ -3037,7 +3037,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-032_main.png"
     ],
-    "price": 23350,
+    "price": 33350,
     "price_type": "fixed",
     "variants": [
       {
@@ -3073,7 +3073,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-032_main.png"
       }
     ],
-    "kit_price": 23350,
+    "kit_price": 33350,
     "dealer_price": 23350
   },
   {
@@ -3133,7 +3133,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-033_main.png"
     ],
-    "price": 24550,
+    "price": 34550,
     "price_type": "fixed",
     "variants": [
       {
@@ -3169,7 +3169,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-033_main.png"
       }
     ],
-    "kit_price": 24550,
+    "kit_price": 34550,
     "dealer_price": 24550
   },
   {
@@ -3229,7 +3229,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-034_main.png"
     ],
-    "price": 20900,
+    "price": 30900,
     "price_type": "fixed",
     "variants": [
       {
@@ -3265,7 +3265,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-034_main.png"
       }
     ],
-    "kit_price": 20900,
+    "kit_price": 30900,
     "dealer_price": 20900
   },
   {
@@ -3325,7 +3325,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-035_main.png"
     ],
-    "price": 16900,
+    "price": 26900,
     "price_type": "fixed",
     "variants": [
       {
@@ -3361,7 +3361,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-035_main.png"
       }
     ],
-    "kit_price": 16900,
+    "kit_price": 26900,
     "dealer_price": 16900
   },
   {
@@ -3421,7 +3421,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-036_main.png"
     ],
-    "price": 16900,
+    "price": 26900,
     "price_type": "fixed",
     "variants": [
       {
@@ -3457,7 +3457,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-036_main.png"
       }
     ],
-    "kit_price": 16900,
+    "kit_price": 26900,
     "dealer_price": 16900
   },
   {
@@ -3517,7 +3517,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-037_main.png"
     ],
-    "price": 14980,
+    "price": 24980,
     "price_type": "fixed",
     "variants": [
       {
@@ -3553,7 +3553,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-037_main.png"
       }
     ],
-    "kit_price": 14980,
+    "kit_price": 24980,
     "dealer_price": 14980
   },
   {
@@ -3613,7 +3613,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-038_main.png"
     ],
-    "price": 18200,
+    "price": 28200,
     "price_type": "fixed",
     "variants": [
       {
@@ -3649,7 +3649,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-038_main.png"
       }
     ],
-    "kit_price": 18200,
+    "kit_price": 28200,
     "dealer_price": 18200
   },
   {
@@ -3711,7 +3711,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FERR-039_alt1.png",
       "catalog-images/PROD-FERR-039_interior.png"
     ],
-    "price": 22900,
+    "price": 32900,
     "price_type": "fixed",
     "variants": [
       {
@@ -3747,7 +3747,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-039_main.png"
       }
     ],
-    "kit_price": 22900,
+    "kit_price": 32900,
     "dealer_price": 22900
   },
   {
@@ -3807,7 +3807,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-040_main.png"
     ],
-    "price": 16600,
+    "price": 26600,
     "price_type": "fixed",
     "variants": [
       {
@@ -3843,7 +3843,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-040_main.png"
       }
     ],
-    "kit_price": 16600,
+    "kit_price": 26600,
     "dealer_price": 16600
   },
   {
@@ -3903,7 +3903,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-041_main.png"
     ],
-    "price": 19900,
+    "price": 29900,
     "price_type": "fixed",
     "variants": [
       {
@@ -3939,7 +3939,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-041_main.png"
       }
     ],
-    "kit_price": 19900,
+    "kit_price": 29900,
     "dealer_price": 19900
   },
   {
@@ -3999,7 +3999,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-042_main.png"
     ],
-    "price": 17500,
+    "price": 27500,
     "price_type": "fixed",
     "variants": [
       {
@@ -4035,7 +4035,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-042_main.png"
       }
     ],
-    "kit_price": 17500,
+    "kit_price": 27500,
     "dealer_price": 17500
   },
   {
@@ -4095,7 +4095,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-043_main.png"
     ],
-    "price": 16600,
+    "price": 26600,
     "price_type": "fixed",
     "variants": [
       {
@@ -4131,7 +4131,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-043_main.png"
       }
     ],
-    "kit_price": 16600,
+    "kit_price": 26600,
     "dealer_price": 16600
   },
   {
@@ -4191,7 +4191,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-044_main.png"
     ],
-    "price": 16600,
+    "price": 26600,
     "price_type": "fixed",
     "variants": [
       {
@@ -4227,7 +4227,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-044_main.png"
       }
     ],
-    "kit_price": 16600,
+    "kit_price": 26600,
     "dealer_price": 16600
   },
   {
@@ -4287,7 +4287,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-045_main.png"
     ],
-    "price": 16600,
+    "price": 26600,
     "price_type": "fixed",
     "variants": [
       {
@@ -4323,7 +4323,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-045_main.png"
       }
     ],
-    "kit_price": 16600,
+    "kit_price": 26600,
     "dealer_price": 16600
   },
   {
@@ -4383,7 +4383,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-046_main.png"
     ],
-    "price": 16600,
+    "price": 26600,
     "price_type": "fixed",
     "variants": [
       {
@@ -4419,7 +4419,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-046_main.png"
       }
     ],
-    "kit_price": 16600,
+    "kit_price": 26600,
     "dealer_price": 16600
   },
   {
@@ -4479,7 +4479,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-047_main.png"
     ],
-    "price": 13500,
+    "price": 23500,
     "price_type": "fixed",
     "variants": [
       {
@@ -4515,7 +4515,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-047_main.png"
       }
     ],
-    "kit_price": 13500,
+    "kit_price": 23500,
     "dealer_price": 13500
   },
   {
@@ -4575,7 +4575,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-048_main.png"
     ],
-    "price": 11950,
+    "price": 21950,
     "price_type": "fixed",
     "variants": [
       {
@@ -4611,7 +4611,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-048_main.png"
       }
     ],
-    "kit_price": 11950,
+    "kit_price": 21950,
     "dealer_price": 11950
   },
   {
@@ -4671,7 +4671,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-049_main.png"
     ],
-    "price": 13500,
+    "price": 23500,
     "price_type": "fixed",
     "variants": [
       {
@@ -4707,7 +4707,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-049_main.png"
       }
     ],
-    "kit_price": 13500,
+    "kit_price": 23500,
     "dealer_price": 13500
   },
   {
@@ -4767,7 +4767,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-050_main.png"
     ],
-    "price": 14350,
+    "price": 24350,
     "price_type": "fixed",
     "variants": [
       {
@@ -4803,7 +4803,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-050_main.png"
       }
     ],
-    "kit_price": 14350,
+    "kit_price": 24350,
     "dealer_price": 14350
   },
   {
@@ -4863,7 +4863,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-051_main.png"
     ],
-    "price": 13500,
+    "price": 23500,
     "price_type": "fixed",
     "variants": [
       {
@@ -4899,7 +4899,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-051_main.png"
       }
     ],
-    "kit_price": 13500,
+    "kit_price": 23500,
     "dealer_price": 13500
   },
   {
@@ -4959,7 +4959,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-052_main.png"
     ],
-    "price": 11950,
+    "price": 21950,
     "price_type": "fixed",
     "variants": [
       {
@@ -4995,7 +4995,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-052_main.png"
       }
     ],
-    "kit_price": 11950,
+    "kit_price": 21950,
     "dealer_price": 11950
   },
   {
@@ -5055,7 +5055,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-053_main.png"
     ],
-    "price": 11450,
+    "price": 21450,
     "price_type": "fixed",
     "variants": [
       {
@@ -5091,7 +5091,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-053_main.png"
       }
     ],
-    "kit_price": 11450,
+    "kit_price": 21450,
     "dealer_price": 11450
   },
   {
@@ -5151,7 +5151,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-054_main.png"
     ],
-    "price": 12650,
+    "price": 22650,
     "price_type": "fixed",
     "variants": [
       {
@@ -5187,7 +5187,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-054_main.png"
       }
     ],
-    "kit_price": 12650,
+    "kit_price": 22650,
     "dealer_price": 12650
   },
   {
@@ -5249,7 +5249,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FERR-055_alt1.png",
       "catalog-images/PROD-FERR-055_alt2.png"
     ],
-    "price": 7400,
+    "price": 17400,
     "price_type": "fixed",
     "variants": [
       {
@@ -5285,7 +5285,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-055_main.png"
       }
     ],
-    "kit_price": 7400,
+    "kit_price": 17400,
     "dealer_price": 7400
   },
   {
@@ -5345,7 +5345,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-056_main.png"
     ],
-    "price": 12500,
+    "price": 22500,
     "price_type": "fixed",
     "variants": [
       {
@@ -5381,7 +5381,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-056_main.png"
       }
     ],
-    "kit_price": 12500,
+    "kit_price": 22500,
     "dealer_price": 12500
   },
   {
@@ -5441,7 +5441,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-057_main.png"
     ],
-    "price": 7600,
+    "price": 17600,
     "price_type": "fixed",
     "variants": [
       {
@@ -5477,7 +5477,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-057_main.png"
       }
     ],
-    "kit_price": 7600,
+    "kit_price": 17600,
     "dealer_price": 7600
   },
   {
@@ -5537,7 +5537,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-058_main.png"
     ],
-    "price": 7800,
+    "price": 17800,
     "price_type": "fixed",
     "variants": [
       {
@@ -5573,7 +5573,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-058_main.png"
       }
     ],
-    "kit_price": 7800,
+    "kit_price": 17800,
     "dealer_price": 7800
   },
   {
@@ -5635,7 +5635,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FERR-059_alt1.png",
       "catalog-images/PROD-FERR-059_interior.png"
     ],
-    "price": 24200,
+    "price": 34200,
     "price_type": "fixed",
     "variants": [
       {
@@ -5671,7 +5671,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-059_main.png"
       }
     ],
-    "kit_price": 24200,
+    "kit_price": 34200,
     "dealer_price": 24200
   },
   {
@@ -5731,7 +5731,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-060_main.png"
     ],
-    "price": 12650,
+    "price": 22650,
     "price_type": "fixed",
     "variants": [
       {
@@ -5767,7 +5767,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-060_main.png"
       }
     ],
-    "kit_price": 12650,
+    "kit_price": 22650,
     "dealer_price": 12650
   },
   {
@@ -5827,7 +5827,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-061_main.png"
     ],
-    "price": 16700,
+    "price": 26700,
     "price_type": "fixed",
     "variants": [
       {
@@ -5863,7 +5863,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-061_main.png"
       }
     ],
-    "kit_price": 16700,
+    "kit_price": 26700,
     "dealer_price": 16700
   },
   {
@@ -5923,7 +5923,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-062_main.png"
     ],
-    "price": 16900,
+    "price": 26900,
     "price_type": "fixed",
     "variants": [
       {
@@ -5959,7 +5959,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-062_main.png"
       }
     ],
-    "kit_price": 16900,
+    "kit_price": 26900,
     "dealer_price": 16900
   },
   {
@@ -6019,7 +6019,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-063_main.png"
     ],
-    "price": 7900,
+    "price": 17900,
     "price_type": "fixed",
     "variants": [
       {
@@ -6055,7 +6055,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-063_main.png"
       }
     ],
-    "kit_price": 7900,
+    "kit_price": 17900,
     "dealer_price": 7900
   },
   {
@@ -6115,7 +6115,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-064_main.png"
     ],
-    "price": 12250,
+    "price": 22250,
     "price_type": "fixed",
     "variants": [
       {
@@ -6151,7 +6151,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-064_main.png"
       }
     ],
-    "kit_price": 12250,
+    "kit_price": 22250,
     "dealer_price": 12250
   },
   {
@@ -6211,7 +6211,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-065_main.png"
     ],
-    "price": 13800,
+    "price": 23800,
     "price_type": "fixed",
     "variants": [
       {
@@ -6247,7 +6247,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-065_main.png"
       }
     ],
-    "kit_price": 13800,
+    "kit_price": 23800,
     "dealer_price": 13800
   },
   {
@@ -6307,7 +6307,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-066_main.png"
     ],
-    "price": 7900,
+    "price": 17900,
     "price_type": "fixed",
     "variants": [
       {
@@ -6343,7 +6343,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-066_main.png"
       }
     ],
-    "kit_price": 7900,
+    "kit_price": 17900,
     "dealer_price": 7900
   },
   {
@@ -6403,7 +6403,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FERR-067_main.png"
     ],
-    "price": 7980,
+    "price": 17980,
     "price_type": "fixed",
     "variants": [
       {
@@ -6439,7 +6439,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-067_main.png"
       }
     ],
-    "kit_price": 7980,
+    "kit_price": 17980,
     "dealer_price": 7980
   },
   {
@@ -6500,7 +6500,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FERR-068_main.png",
       "catalog-images/PROD-FERR-068_interior.png"
     ],
-    "price": 12250,
+    "price": 22250,
     "price_type": "fixed",
     "variants": [
       {
@@ -6536,7 +6536,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FERR-068_main.png"
       }
     ],
-    "kit_price": 12250,
+    "kit_price": 22250,
     "dealer_price": 12250
   },
   {
@@ -6594,7 +6594,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-001_alt1.png",
       "catalog-images/PROD-YOSH-001_alt2.png"
     ],
-    "price": 41500,
+    "price": 51500,
     "price_type": "fixed",
     "variants": [
       {
@@ -6630,7 +6630,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-001_main.png"
       }
     ],
-    "kit_price": 41500,
+    "kit_price": 51500,
     "dealer_price": 41500
   },
   {
@@ -6688,7 +6688,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-002_alt1.png",
       "catalog-images/PROD-YOSH-002_alt2.png"
     ],
-    "price": 34800,
+    "price": 44800,
     "price_type": "fixed",
     "variants": [
       {
@@ -6724,7 +6724,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-002_main.png"
       }
     ],
-    "kit_price": 34800,
+    "kit_price": 44800,
     "dealer_price": 34800
   },
   {
@@ -6782,7 +6782,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-003_alt1.png",
       "catalog-images/PROD-YOSH-003_alt2.png"
     ],
-    "price": 44500,
+    "price": 54500,
     "price_type": "fixed",
     "variants": [
       {
@@ -6818,7 +6818,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-003_main.png"
       }
     ],
-    "kit_price": 44500,
+    "kit_price": 54500,
     "dealer_price": 44500
   },
   {
@@ -6876,7 +6876,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-004_alt1.png",
       "catalog-images/PROD-YOSH-004_alt2.png"
     ],
-    "price": 36400,
+    "price": 46400,
     "price_type": "fixed",
     "variants": [
       {
@@ -6912,7 +6912,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-004_main.png"
       }
     ],
-    "kit_price": 36400,
+    "kit_price": 46400,
     "dealer_price": 36400
   },
   {
@@ -6970,7 +6970,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-005_alt1.png",
       "catalog-images/PROD-YOSH-005_alt2.png"
     ],
-    "price": 49000,
+    "price": 59000,
     "price_type": "fixed",
     "variants": [
       {
@@ -7006,7 +7006,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-005_main.png"
       }
     ],
-    "kit_price": 49000,
+    "kit_price": 59000,
     "dealer_price": 49000
   },
   {
@@ -7064,7 +7064,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-006_alt1.png",
       "catalog-images/PROD-YOSH-006_alt2.png"
     ],
-    "price": 38400,
+    "price": 48400,
     "price_type": "fixed",
     "variants": [
       {
@@ -7100,7 +7100,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-006_main.png"
       }
     ],
-    "kit_price": 38400,
+    "kit_price": 48400,
     "dealer_price": 38400
   },
   {
@@ -7158,7 +7158,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-007_alt1.png",
       "catalog-images/PROD-YOSH-007_alt2.png"
     ],
-    "price": 26000,
+    "price": 36000,
     "price_type": "fixed",
     "variants": [
       {
@@ -7194,7 +7194,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-007_main.png"
       }
     ],
-    "kit_price": 26000,
+    "kit_price": 36000,
     "dealer_price": 26000
   },
   {
@@ -7252,7 +7252,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-008_alt1.png",
       "catalog-images/PROD-YOSH-008_alt2.png"
     ],
-    "price": 26000,
+    "price": 36000,
     "price_type": "fixed",
     "variants": [
       {
@@ -7288,7 +7288,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-008_main.png"
       }
     ],
-    "kit_price": 26000,
+    "kit_price": 36000,
     "dealer_price": 26000
   },
   {
@@ -7347,7 +7347,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-009_alt1.png",
       "catalog-images/PROD-YOSH-009_alt2.png"
     ],
-    "price": 25700,
+    "price": 35700,
     "price_type": "fixed",
     "variants": [
       {
@@ -7399,7 +7399,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-009_main.png"
       }
     ],
-    "kit_price": 25700,
+    "kit_price": 35700,
     "dealer_price": 25700
   },
   {
@@ -7457,7 +7457,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-010_alt1.png",
       "catalog-images/PROD-YOSH-010_alt2.png"
     ],
-    "price": 19100,
+    "price": 29100,
     "price_type": "fixed",
     "variants": [
       {
@@ -7493,7 +7493,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-010_main.png"
       }
     ],
-    "kit_price": 19100,
+    "kit_price": 29100,
     "dealer_price": 19100
   },
   {
@@ -7551,7 +7551,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-011_alt1.png",
       "catalog-images/PROD-YOSH-011_alt2.png"
     ],
-    "price": 20600,
+    "price": 30600,
     "price_type": "fixed",
     "variants": [
       {
@@ -7587,7 +7587,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-011_main.png"
       }
     ],
-    "kit_price": 20600,
+    "kit_price": 30600,
     "dealer_price": 20600
   },
   {
@@ -7645,7 +7645,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-012_alt1.png",
       "catalog-images/PROD-YOSH-012_alt2.png"
     ],
-    "price": 23200,
+    "price": 33200,
     "price_type": "fixed",
     "variants": [
       {
@@ -7681,7 +7681,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-012_main.png"
       }
     ],
-    "kit_price": 23200,
+    "kit_price": 33200,
     "dealer_price": 23200
   },
   {
@@ -7739,7 +7739,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-013_alt1.png",
       "catalog-images/PROD-YOSH-013_alt2.png"
     ],
-    "price": 21500,
+    "price": 31500,
     "price_type": "fixed",
     "variants": [
       {
@@ -7775,7 +7775,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-013_main.png"
       }
     ],
-    "kit_price": 21500,
+    "kit_price": 31500,
     "dealer_price": 21500
   },
   {
@@ -7833,7 +7833,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-014_alt1.png",
       "catalog-images/PROD-YOSH-014_alt2.png"
     ],
-    "price": 21500,
+    "price": 31500,
     "price_type": "fixed",
     "variants": [
       {
@@ -7869,7 +7869,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-014_main.png"
       }
     ],
-    "kit_price": 21500,
+    "kit_price": 31500,
     "dealer_price": 21500
   },
   {
@@ -7927,7 +7927,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-015_alt1.png",
       "catalog-images/PROD-YOSH-015_alt2.png"
     ],
-    "price": 16900,
+    "price": 26900,
     "price_type": "fixed",
     "variants": [
       {
@@ -7963,7 +7963,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-015_main.png"
       }
     ],
-    "kit_price": 16900,
+    "kit_price": 26900,
     "dealer_price": 16900
   },
   {
@@ -8021,7 +8021,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-016_alt1.png",
       "catalog-images/PROD-YOSH-016_alt2.png"
     ],
-    "price": 18800,
+    "price": 28800,
     "price_type": "fixed",
     "variants": [
       {
@@ -8057,7 +8057,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-016_main.png"
       }
     ],
-    "kit_price": 18800,
+    "kit_price": 28800,
     "dealer_price": 18800
   },
   {
@@ -8115,7 +8115,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-017_alt1.png",
       "catalog-images/PROD-YOSH-017_alt2.png"
     ],
-    "price": 17500,
+    "price": 27500,
     "price_type": "fixed",
     "variants": [
       {
@@ -8151,7 +8151,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-017_main.png"
       }
     ],
-    "kit_price": 17500,
+    "kit_price": 27500,
     "dealer_price": 17500
   },
   {
@@ -8209,7 +8209,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-018_alt1.png",
       "catalog-images/PROD-YOSH-018_alt2.png"
     ],
-    "price": 22500,
+    "price": 32500,
     "price_type": "fixed",
     "variants": [
       {
@@ -8245,7 +8245,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-018_main.png"
       }
     ],
-    "kit_price": 22500,
+    "kit_price": 32500,
     "dealer_price": 22500
   },
   {
@@ -8304,7 +8304,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-019_alt1.png",
       "catalog-images/PROD-YOSH-019_alt2.png"
     ],
-    "price": 27800,
+    "price": 37800,
     "price_type": "fixed",
     "variants": [
       {
@@ -8356,7 +8356,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-019_main.png"
       }
     ],
-    "kit_price": 27800,
+    "kit_price": 37800,
     "dealer_price": 27800
   },
   {
@@ -8415,7 +8415,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-020_alt1.png",
       "catalog-images/PROD-YOSH-020_alt2.png"
     ],
-    "price": 27800,
+    "price": 37800,
     "price_type": "fixed",
     "variants": [
       {
@@ -8467,7 +8467,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-020_main.png"
       }
     ],
-    "kit_price": 27800,
+    "kit_price": 37800,
     "dealer_price": 27800
   },
   {
@@ -8525,7 +8525,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-021_alt1.png",
       "catalog-images/PROD-YOSH-021_alt2.png"
     ],
-    "price": 17200,
+    "price": 27200,
     "price_type": "fixed",
     "variants": [
       {
@@ -8561,7 +8561,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-021_main.png"
       }
     ],
-    "kit_price": 17200,
+    "kit_price": 27200,
     "dealer_price": 17200
   },
   {
@@ -8619,7 +8619,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-022_alt1.png",
       "catalog-images/PROD-YOSH-022_alt2.png"
     ],
-    "price": 13900,
+    "price": 23900,
     "price_type": "fixed",
     "variants": [
       {
@@ -8655,7 +8655,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-022_main.png"
       }
     ],
-    "kit_price": 13900,
+    "kit_price": 23900,
     "dealer_price": 13900
   },
   {
@@ -8713,7 +8713,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-023_alt1.png",
       "catalog-images/PROD-YOSH-023_alt2.png"
     ],
-    "price": 12650,
+    "price": 22650,
     "price_type": "fixed",
     "variants": [
       {
@@ -8749,7 +8749,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-023_main.png"
       }
     ],
-    "kit_price": 12650,
+    "kit_price": 22650,
     "dealer_price": 12650
   },
   {
@@ -8806,7 +8806,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-024_main.png",
       "catalog-images/PROD-YOSH-024_alt1.png"
     ],
-    "price": 9700,
+    "price": 19700,
     "price_type": "fixed",
     "variants": [
       {
@@ -8842,7 +8842,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-024_main.png"
       }
     ],
-    "kit_price": 9700,
+    "kit_price": 19700,
     "dealer_price": 9700
   },
   {
@@ -8899,7 +8899,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-025_main.png",
       "catalog-images/PROD-YOSH-025_alt1.png"
     ],
-    "price": 11800,
+    "price": 21800,
     "price_type": "fixed",
     "variants": [
       {
@@ -8935,7 +8935,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-025_main.png"
       }
     ],
-    "kit_price": 11800,
+    "kit_price": 21800,
     "dealer_price": 11800
   },
   {
@@ -8992,7 +8992,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-026_main.png",
       "catalog-images/PROD-YOSH-026_alt1.png"
     ],
-    "price": 13400,
+    "price": 23400,
     "price_type": "fixed",
     "variants": [
       {
@@ -9028,7 +9028,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-026_main.png"
       }
     ],
-    "kit_price": 13400,
+    "kit_price": 23400,
     "dealer_price": 13400
   },
   {
@@ -9085,7 +9085,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-027_main.png",
       "catalog-images/PROD-YOSH-027_alt1.png"
     ],
-    "price": 13800,
+    "price": 23800,
     "price_type": "fixed",
     "variants": [
       {
@@ -9121,7 +9121,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-027_main.png"
       }
     ],
-    "kit_price": 13800,
+    "kit_price": 23800,
     "dealer_price": 13800
   },
   {
@@ -9178,7 +9178,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-028_main.png",
       "catalog-images/PROD-YOSH-028_alt1.png"
     ],
-    "price": 13300,
+    "price": 23300,
     "price_type": "fixed",
     "variants": [
       {
@@ -9214,7 +9214,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-028_main.png"
       }
     ],
-    "kit_price": 13300,
+    "kit_price": 23300,
     "dealer_price": 13300
   },
   {
@@ -9271,7 +9271,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-029_main.png",
       "catalog-images/PROD-YOSH-029_alt1.png"
     ],
-    "price": 15600,
+    "price": 25600,
     "price_type": "fixed",
     "variants": [
       {
@@ -9307,7 +9307,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-029_main.png"
       }
     ],
-    "kit_price": 15600,
+    "kit_price": 25600,
     "dealer_price": 15600
   },
   {
@@ -9364,7 +9364,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-030_main.png",
       "catalog-images/PROD-YOSH-030_alt1.png"
     ],
-    "price": 15600,
+    "price": 25600,
     "price_type": "fixed",
     "variants": [
       {
@@ -9400,7 +9400,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-030_main.png"
       }
     ],
-    "kit_price": 15600,
+    "kit_price": 25600,
     "dealer_price": 15600
   },
   {
@@ -9455,7 +9455,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-031_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -9523,8 +9523,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-031_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -9579,7 +9579,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-032_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -9647,8 +9647,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-032_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -9703,7 +9703,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-033_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -9771,8 +9771,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-033_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -9827,7 +9827,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-034_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -9895,8 +9895,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-034_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -9951,7 +9951,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-035_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -9987,8 +9987,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-035_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -10043,7 +10043,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-036_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -10079,8 +10079,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-036_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -10135,7 +10135,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-037_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -10171,8 +10171,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-037_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -10230,7 +10230,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-YOSH-038_alt2.png",
       "catalog-images/PROD-YOSH-038_interior.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -10330,8 +10330,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-038_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -10386,7 +10386,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-039_main.png"
     ],
-    "price": 5380,
+    "price": 13200,
     "price_type": "fixed",
     "variants": [
       {
@@ -10454,8 +10454,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-039_main.png"
       }
     ],
-    "kit_price": 5380,
-    "leaf_price": 3200,
+    "kit_price": 15380,
+    "leaf_price": 13200,
     "dealer_price": 3200
   },
   {
@@ -10510,7 +10510,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-040_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -10578,8 +10578,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-040_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -10634,7 +10634,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-041_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -10734,8 +10734,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-041_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -10790,7 +10790,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-042_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -10890,8 +10890,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-042_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -10946,7 +10946,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-043_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -11014,8 +11014,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-043_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -11070,7 +11070,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-044_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -11138,8 +11138,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-044_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -11194,7 +11194,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-045_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -11262,8 +11262,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-045_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -11318,7 +11318,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-046_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -11386,8 +11386,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-046_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -11442,7 +11442,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-047_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -11542,8 +11542,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-047_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -11598,7 +11598,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-048_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -11698,8 +11698,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-048_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -11754,7 +11754,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-049_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -11854,8 +11854,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-049_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -11910,7 +11910,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-050_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -12010,8 +12010,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-050_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -12066,7 +12066,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-051_main.png"
     ],
-    "price": 8250,
+    "price": 15850,
     "price_type": "fixed",
     "variants": [
       {
@@ -12166,8 +12166,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-051_main.png"
       }
     ],
-    "kit_price": 8250,
-    "leaf_price": 5850,
+    "kit_price": 18250,
+    "leaf_price": 15850,
     "dealer_price": 5850
   },
   {
@@ -12222,7 +12222,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-YOSH-052_main.png"
     ],
-    "price": 8100,
+    "price": 15650,
     "price_type": "fixed",
     "variants": [
       {
@@ -12322,8 +12322,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-YOSH-052_main.png"
       }
     ],
-    "kit_price": 8100,
-    "leaf_price": 5650,
+    "kit_price": 18100,
+    "leaf_price": 15650,
     "dealer_price": 5650
   },
   {
@@ -12381,7 +12381,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-LUX-001_main.png"
     ],
-    "price": 30200,
+    "price": 40200,
     "price_type": "fixed",
     "variants": [
       {
@@ -12417,7 +12417,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-001_main.png"
       }
     ],
-    "kit_price": 30200,
+    "kit_price": 40200,
     "dealer_price": 30200
   },
   {
@@ -12476,7 +12476,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-002_main.png",
       "catalog-images/PROD-LUX-002_alt1.png"
     ],
-    "price": 30200,
+    "price": 40200,
     "price_type": "fixed",
     "variants": [
       {
@@ -12512,7 +12512,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-002_main.png"
       }
     ],
-    "kit_price": 30200,
+    "kit_price": 40200,
     "dealer_price": 30200
   },
   {
@@ -12572,7 +12572,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-003_alt1.png",
       "catalog-images/PROD-LUX-003_alt2.png"
     ],
-    "price": 25000,
+    "price": 35000,
     "price_type": "fixed",
     "variants": [
       {
@@ -12608,7 +12608,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-003_main.png"
       }
     ],
-    "kit_price": 25000,
+    "kit_price": 35000,
     "dealer_price": 25000
   },
   {
@@ -12667,7 +12667,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-004_main.png",
       "catalog-images/PROD-LUX-004_alt1.png"
     ],
-    "price": 25000,
+    "price": 35000,
     "price_type": "fixed",
     "variants": [
       {
@@ -12703,7 +12703,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-004_main.png"
       }
     ],
-    "kit_price": 25000,
+    "kit_price": 35000,
     "dealer_price": 25000
   },
   {
@@ -12763,7 +12763,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-005_alt1.png",
       "catalog-images/PROD-LUX-005_alt2.png"
     ],
-    "price": 27500,
+    "price": 37500,
     "price_type": "fixed",
     "variants": [
       {
@@ -12799,7 +12799,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-005_main.png"
       }
     ],
-    "kit_price": 27500,
+    "kit_price": 37500,
     "dealer_price": 27500
   },
   {
@@ -12859,7 +12859,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-006_alt1.png",
       "catalog-images/PROD-LUX-006_alt2.png"
     ],
-    "price": 27500,
+    "price": 37500,
     "price_type": "fixed",
     "variants": [
       {
@@ -12895,7 +12895,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-006_main.png"
       }
     ],
-    "kit_price": 27500,
+    "kit_price": 37500,
     "dealer_price": 27500
   },
   {
@@ -12955,7 +12955,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-007_alt1.png",
       "catalog-images/PROD-LUX-007_alt2.png"
     ],
-    "price": 27900,
+    "price": 37900,
     "price_type": "fixed",
     "variants": [
       {
@@ -12991,7 +12991,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-007_main.png"
       }
     ],
-    "kit_price": 27900,
+    "kit_price": 37900,
     "dealer_price": 27900
   },
   {
@@ -13051,7 +13051,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-008_alt1.png",
       "catalog-images/PROD-LUX-008_alt2.png"
     ],
-    "price": 27900,
+    "price": 37900,
     "price_type": "fixed",
     "variants": [
       {
@@ -13087,7 +13087,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-008_main.png"
       }
     ],
-    "kit_price": 27900,
+    "kit_price": 37900,
     "dealer_price": 27900
   },
   {
@@ -13147,7 +13147,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-009_alt1.png",
       "catalog-images/PROD-LUX-009_alt2.png"
     ],
-    "price": 36800,
+    "price": 46800,
     "price_type": "fixed",
     "variants": [
       {
@@ -13183,7 +13183,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-009_main.png"
       }
     ],
-    "kit_price": 36800,
+    "kit_price": 46800,
     "dealer_price": 36800
   },
   {
@@ -13243,7 +13243,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-010_alt1.png",
       "catalog-images/PROD-LUX-010_alt2.png"
     ],
-    "price": 36800,
+    "price": 46800,
     "price_type": "fixed",
     "variants": [
       {
@@ -13279,7 +13279,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-010_main.png"
       }
     ],
-    "kit_price": 36800,
+    "kit_price": 46800,
     "dealer_price": 36800
   },
   {
@@ -13339,7 +13339,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-011_alt1.png",
       "catalog-images/PROD-LUX-011_alt2.png"
     ],
-    "price": 48600,
+    "price": 58600,
     "price_type": "fixed",
     "variants": [
       {
@@ -13375,7 +13375,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-011_main.png"
       }
     ],
-    "kit_price": 48600,
+    "kit_price": 58600,
     "dealer_price": 48600
   },
   {
@@ -13435,7 +13435,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-012_alt1.png",
       "catalog-images/PROD-LUX-012_alt2.png"
     ],
-    "price": 48600,
+    "price": 58600,
     "price_type": "fixed",
     "variants": [
       {
@@ -13471,7 +13471,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-012_main.png"
       }
     ],
-    "kit_price": 48600,
+    "kit_price": 58600,
     "dealer_price": 48600
   },
   {
@@ -13531,7 +13531,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-013_alt1.png",
       "catalog-images/PROD-LUX-013_alt2.png"
     ],
-    "price": 27500,
+    "price": 37500,
     "price_type": "fixed",
     "variants": [
       {
@@ -13567,7 +13567,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-013_main.png"
       }
     ],
-    "kit_price": 27500,
+    "kit_price": 37500,
     "dealer_price": 27500
   },
   {
@@ -13627,7 +13627,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-014_alt1.png",
       "catalog-images/PROD-LUX-014_alt2.png"
     ],
-    "price": 27200,
+    "price": 37200,
     "price_type": "fixed",
     "variants": [
       {
@@ -13663,7 +13663,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-014_main.png"
       }
     ],
-    "kit_price": 27200,
+    "kit_price": 37200,
     "dealer_price": 27200
   },
   {
@@ -13723,7 +13723,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-015_alt1.png",
       "catalog-images/PROD-LUX-015_alt2.png"
     ],
-    "price": 37500,
+    "price": 47500,
     "price_type": "fixed",
     "variants": [
       {
@@ -13759,7 +13759,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-015_main.png"
       }
     ],
-    "kit_price": 37500,
+    "kit_price": 47500,
     "dealer_price": 37500
   },
   {
@@ -13818,7 +13818,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-016_main.png",
       "catalog-images/PROD-LUX-016_alt1.png"
     ],
-    "price": 47900,
+    "price": 57900,
     "price_type": "fixed",
     "variants": [
       {
@@ -13854,7 +13854,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-016_main.png"
       }
     ],
-    "kit_price": 47900,
+    "kit_price": 57900,
     "dealer_price": 47900
   },
   {
@@ -13913,7 +13913,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-017_main.png",
       "catalog-images/PROD-LUX-017_alt1.png"
     ],
-    "price": 42000,
+    "price": 52000,
     "price_type": "fixed",
     "variants": [
       {
@@ -13949,7 +13949,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-017_main.png"
       }
     ],
-    "kit_price": 42000,
+    "kit_price": 52000,
     "dealer_price": 42000
   },
   {
@@ -14009,7 +14009,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-018_alt1.png",
       "catalog-images/PROD-LUX-018_alt2.png"
     ],
-    "price": 44000,
+    "price": 54000,
     "price_type": "fixed",
     "variants": [
       {
@@ -14045,7 +14045,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-018_main.png"
       }
     ],
-    "kit_price": 44000,
+    "kit_price": 54000,
     "dealer_price": 44000
   },
   {
@@ -14105,7 +14105,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-019_alt1.png",
       "catalog-images/PROD-LUX-019_alt2.png"
     ],
-    "price": 44000,
+    "price": 54000,
     "price_type": "fixed",
     "variants": [
       {
@@ -14141,7 +14141,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-019_main.png"
       }
     ],
-    "kit_price": 44000,
+    "kit_price": 54000,
     "dealer_price": 44000
   },
   {
@@ -14199,7 +14199,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-LUX-020_main.png"
     ],
-    "price": 26000,
+    "price": 36000,
     "price_type": "fixed",
     "variants": [
       {
@@ -14235,7 +14235,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-020_main.png"
       }
     ],
-    "kit_price": 26000,
+    "kit_price": 36000,
     "dealer_price": 26000
   },
   {
@@ -14295,7 +14295,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-021_alt1.png",
       "catalog-images/PROD-LUX-021_alt2.png"
     ],
-    "price": 29800,
+    "price": 39800,
     "price_type": "fixed",
     "variants": [
       {
@@ -14331,7 +14331,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-021_main.png"
       }
     ],
-    "kit_price": 29800,
+    "kit_price": 39800,
     "dealer_price": 29800
   },
   {
@@ -14390,7 +14390,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-022_main.png",
       "catalog-images/PROD-LUX-022_alt1.png"
     ],
-    "price": 26000,
+    "price": 36000,
     "price_type": "fixed",
     "variants": [
       {
@@ -14426,7 +14426,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-022_main.png"
       }
     ],
-    "kit_price": 26000,
+    "kit_price": 36000,
     "dealer_price": 26000
   },
   {
@@ -14486,7 +14486,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-023_alt1.png",
       "catalog-images/PROD-LUX-023_alt2.png"
     ],
-    "price": 26000,
+    "price": 36000,
     "price_type": "fixed",
     "variants": [
       {
@@ -14522,7 +14522,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-023_main.png"
       }
     ],
-    "kit_price": 26000,
+    "kit_price": 36000,
     "dealer_price": 26000
   },
   {
@@ -14581,7 +14581,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-024_main.png",
       "catalog-images/PROD-LUX-024_interior.png"
     ],
-    "price": 37500,
+    "price": 47500,
     "price_type": "fixed",
     "variants": [
       {
@@ -14617,7 +14617,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-024_main.png"
       }
     ],
-    "kit_price": 37500,
+    "kit_price": 47500,
     "dealer_price": 37500
   },
   {
@@ -14676,7 +14676,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-025_main.png",
       "catalog-images/PROD-LUX-025_alt1.png"
     ],
-    "price": 37500,
+    "price": 47500,
     "price_type": "fixed",
     "variants": [
       {
@@ -14712,7 +14712,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-025_main.png"
       }
     ],
-    "kit_price": 37500,
+    "kit_price": 47500,
     "dealer_price": 37500
   },
   {
@@ -14772,7 +14772,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-026_alt1.png",
       "catalog-images/PROD-LUX-026_alt2.png"
     ],
-    "price": 65200,
+    "price": 75200,
     "price_type": "fixed",
     "variants": [
       {
@@ -14808,7 +14808,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-026_main.png"
       }
     ],
-    "kit_price": 65200,
+    "kit_price": 75200,
     "dealer_price": 65200
   },
   {
@@ -14868,7 +14868,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-027_alt1.png",
       "catalog-images/PROD-LUX-027_alt2.png"
     ],
-    "price": 29900,
+    "price": 39900,
     "price_type": "fixed",
     "variants": [
       {
@@ -14904,7 +14904,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-027_main.png"
       }
     ],
-    "kit_price": 29900,
+    "kit_price": 39900,
     "dealer_price": 29900
   },
   {
@@ -14964,7 +14964,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-028_alt1.png",
       "catalog-images/PROD-LUX-028_alt2.png"
     ],
-    "price": 32200,
+    "price": 42200,
     "price_type": "fixed",
     "variants": [
       {
@@ -15000,7 +15000,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-028_main.png"
       }
     ],
-    "kit_price": 32200,
+    "kit_price": 42200,
     "dealer_price": 32200
   },
   {
@@ -15060,7 +15060,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-029_alt1.png",
       "catalog-images/PROD-LUX-029_alt2.png"
     ],
-    "price": 29900,
+    "price": 39900,
     "price_type": "fixed",
     "variants": [
       {
@@ -15096,7 +15096,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-029_main.png"
       }
     ],
-    "kit_price": 29900,
+    "kit_price": 39900,
     "dealer_price": 29900
   },
   {
@@ -15155,7 +15155,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-030_main.png",
       "catalog-images/PROD-LUX-030_alt1.png"
     ],
-    "price": 28700,
+    "price": 38700,
     "price_type": "fixed",
     "variants": [
       {
@@ -15191,7 +15191,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-030_main.png"
       }
     ],
-    "kit_price": 28700,
+    "kit_price": 38700,
     "dealer_price": 28700
   },
   {
@@ -15250,7 +15250,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-031_main.png",
       "catalog-images/PROD-LUX-031_alt1.png"
     ],
-    "price": 28700,
+    "price": 38700,
     "price_type": "fixed",
     "variants": [
       {
@@ -15286,7 +15286,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-031_main.png"
       }
     ],
-    "kit_price": 28700,
+    "kit_price": 38700,
     "dealer_price": 28700
   },
   {
@@ -15345,7 +15345,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-032_main.png",
       "catalog-images/PROD-LUX-032_alt1.png"
     ],
-    "price": 37500,
+    "price": 47500,
     "price_type": "fixed",
     "variants": [
       {
@@ -15381,7 +15381,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-032_main.png"
       }
     ],
-    "kit_price": 37500,
+    "kit_price": 47500,
     "dealer_price": 37500
   },
   {
@@ -15441,7 +15441,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-033_alt1.png",
       "catalog-images/PROD-LUX-033_alt2.png"
     ],
-    "price": 29600,
+    "price": 39600,
     "price_type": "fixed",
     "variants": [
       {
@@ -15477,7 +15477,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-033_main.png"
       }
     ],
-    "kit_price": 29600,
+    "kit_price": 39600,
     "dealer_price": 29600
   },
   {
@@ -15536,7 +15536,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-034_main.png",
       "catalog-images/PROD-LUX-034_alt1.png"
     ],
-    "price": 28700,
+    "price": 38700,
     "price_type": "fixed",
     "variants": [
       {
@@ -15572,7 +15572,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-034_main.png"
       }
     ],
-    "kit_price": 28700,
+    "kit_price": 38700,
     "dealer_price": 28700
   },
   {
@@ -15631,7 +15631,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-035_main.png",
       "catalog-images/PROD-LUX-035_alt1.png"
     ],
-    "price": 28700,
+    "price": 38700,
     "price_type": "fixed",
     "variants": [
       {
@@ -15667,7 +15667,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-035_main.png"
       }
     ],
-    "kit_price": 28700,
+    "kit_price": 38700,
     "dealer_price": 28700
   },
   {
@@ -15727,7 +15727,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-036_alt1.png",
       "catalog-images/PROD-LUX-036_alt2.png"
     ],
-    "price": 28700,
+    "price": 38700,
     "price_type": "fixed",
     "variants": [
       {
@@ -15763,7 +15763,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-036_main.png"
       }
     ],
-    "kit_price": 28700,
+    "kit_price": 38700,
     "dealer_price": 28700
   },
   {
@@ -15823,7 +15823,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-037_alt1.png",
       "catalog-images/PROD-LUX-037_alt2.png"
     ],
-    "price": 28700,
+    "price": 38700,
     "price_type": "fixed",
     "variants": [
       {
@@ -15859,7 +15859,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-037_main.png"
       }
     ],
-    "kit_price": 28700,
+    "kit_price": 38700,
     "dealer_price": 28700
   },
   {
@@ -15918,7 +15918,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-038_main.png",
       "catalog-images/PROD-LUX-038_alt1.png"
     ],
-    "price": 28700,
+    "price": 38700,
     "price_type": "fixed",
     "variants": [
       {
@@ -15954,7 +15954,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-038_main.png"
       }
     ],
-    "kit_price": 28700,
+    "kit_price": 38700,
     "dealer_price": 28700
   },
   {
@@ -16013,7 +16013,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-039_main.png",
       "catalog-images/PROD-LUX-039_alt1.png"
     ],
-    "price": 28700,
+    "price": 38700,
     "price_type": "fixed",
     "variants": [
       {
@@ -16049,7 +16049,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-039_main.png"
       }
     ],
-    "kit_price": 28700,
+    "kit_price": 38700,
     "dealer_price": 28700
   },
   {
@@ -16108,7 +16108,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-040_main.png",
       "catalog-images/PROD-LUX-040_alt1.png"
     ],
-    "price": 28700,
+    "price": 38700,
     "price_type": "fixed",
     "variants": [
       {
@@ -16144,7 +16144,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-040_main.png"
       }
     ],
-    "kit_price": 28700,
+    "kit_price": 38700,
     "dealer_price": 28700
   },
   {
@@ -16203,7 +16203,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-LUX-041_main.png",
       "catalog-images/PROD-LUX-041_alt1.png"
     ],
-    "price": 28700,
+    "price": 38700,
     "price_type": "fixed",
     "variants": [
       {
@@ -16239,7 +16239,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-LUX-041_main.png"
       }
     ],
-    "kit_price": 28700,
+    "kit_price": 38700,
     "dealer_price": 28700
   },
   {
@@ -16295,7 +16295,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-001_main.png",
       "catalog-images/PROD-FSD-001_interior.png"
     ],
-    "price": 38500,
+    "price": 48500,
     "price_type": "fixed",
     "variants": [
       {
@@ -16331,7 +16331,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-001_main.png"
       }
     ],
-    "kit_price": 38500,
+    "kit_price": 48500,
     "dealer_price": 38500
   },
   {
@@ -16387,7 +16387,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-002_main.png",
       "catalog-images/PROD-FSD-002_interior.png"
     ],
-    "price": 39900,
+    "price": 49900,
     "price_type": "fixed",
     "variants": [
       {
@@ -16423,7 +16423,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-002_main.png"
       }
     ],
-    "kit_price": 39900,
+    "kit_price": 49900,
     "dealer_price": 39900
   },
   {
@@ -16479,7 +16479,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-003_main.png",
       "catalog-images/PROD-FSD-003_interior.png"
     ],
-    "price": 26900,
+    "price": 36900,
     "price_type": "fixed",
     "variants": [
       {
@@ -16515,7 +16515,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-003_main.png"
       }
     ],
-    "kit_price": 26900,
+    "kit_price": 36900,
     "dealer_price": 26900
   },
   {
@@ -16571,7 +16571,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-004_main.png",
       "catalog-images/PROD-FSD-004_interior.png"
     ],
-    "price": 26900,
+    "price": 36900,
     "price_type": "fixed",
     "variants": [
       {
@@ -16607,7 +16607,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-004_main.png"
       }
     ],
-    "kit_price": 26900,
+    "kit_price": 36900,
     "dealer_price": 26900
   },
   {
@@ -16663,7 +16663,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-005_main.png",
       "catalog-images/PROD-FSD-005_interior.png"
     ],
-    "price": 40300,
+    "price": 50300,
     "price_type": "fixed",
     "variants": [
       {
@@ -16699,7 +16699,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-005_main.png"
       }
     ],
-    "kit_price": 40300,
+    "kit_price": 50300,
     "dealer_price": 40300
   },
   {
@@ -16755,7 +16755,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-006_main.png",
       "catalog-images/PROD-FSD-006_interior.png"
     ],
-    "price": 39900,
+    "price": 49900,
     "price_type": "fixed",
     "variants": [
       {
@@ -16791,7 +16791,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-006_main.png"
       }
     ],
-    "kit_price": 39900,
+    "kit_price": 49900,
     "dealer_price": 39900
   },
   {
@@ -16847,7 +16847,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-007_main.png",
       "catalog-images/PROD-FSD-007_interior.png"
     ],
-    "price": 24800,
+    "price": 34800,
     "price_type": "fixed",
     "variants": [
       {
@@ -16883,7 +16883,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-007_main.png"
       }
     ],
-    "kit_price": 24800,
+    "kit_price": 34800,
     "dealer_price": 24800
   },
   {
@@ -16939,7 +16939,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-008_main.png",
       "catalog-images/PROD-FSD-008_interior.png"
     ],
-    "price": 40500,
+    "price": 50500,
     "price_type": "fixed",
     "variants": [
       {
@@ -16975,7 +16975,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-008_main.png"
       }
     ],
-    "kit_price": 40500,
+    "kit_price": 50500,
     "dealer_price": 40500
   },
   {
@@ -17031,7 +17031,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-009_main.png",
       "catalog-images/PROD-FSD-009_interior.png"
     ],
-    "price": 26900,
+    "price": 36900,
     "price_type": "fixed",
     "variants": [
       {
@@ -17067,7 +17067,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-009_main.png"
       }
     ],
-    "kit_price": 26900,
+    "kit_price": 36900,
     "dealer_price": 26900
   },
   {
@@ -17123,7 +17123,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-010_main.png",
       "catalog-images/PROD-FSD-010_interior.png"
     ],
-    "price": 13700,
+    "price": 23700,
     "price_type": "fixed",
     "variants": [
       {
@@ -17159,7 +17159,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-010_main.png"
       }
     ],
-    "kit_price": 13700,
+    "kit_price": 23700,
     "dealer_price": 13700
   },
   {
@@ -17215,7 +17215,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-011_main.png",
       "catalog-images/PROD-FSD-011_interior.png"
     ],
-    "price": 13500,
+    "price": 23500,
     "price_type": "fixed",
     "variants": [
       {
@@ -17251,7 +17251,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-011_main.png"
       }
     ],
-    "kit_price": 13500,
+    "kit_price": 23500,
     "dealer_price": 13500
   },
   {
@@ -17306,7 +17306,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-012_main.png",
       "catalog-images/PROD-FSD-012_interior.png"
     ],
-    "price": 5200,
+    "price": 13150,
     "price_type": "fixed",
     "variants": [
       {
@@ -17342,8 +17342,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-012_main.png"
       }
     ],
-    "kit_price": 5200,
-    "leaf_price": 3150,
+    "kit_price": 15200,
+    "leaf_price": 13150,
     "dealer_price": 3150
   },
   {
@@ -17398,7 +17398,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-013_main.png",
       "catalog-images/PROD-FSD-013_interior.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -17434,8 +17434,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-013_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -17490,7 +17490,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-014_main.png",
       "catalog-images/PROD-FSD-014_interior.png"
     ],
-    "price": 6000,
+    "price": 13950,
     "price_type": "fixed",
     "variants": [
       {
@@ -17526,8 +17526,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-014_main.png"
       }
     ],
-    "kit_price": 6000,
-    "leaf_price": 3950,
+    "kit_price": 16000,
+    "leaf_price": 13950,
     "dealer_price": 3950
   },
   {
@@ -17582,7 +17582,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-015_main.png",
       "catalog-images/PROD-FSD-015_interior.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -17618,8 +17618,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-015_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -17674,7 +17674,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-016_main.png",
       "catalog-images/PROD-FSD-016_interior.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -17710,8 +17710,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-016_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -17766,7 +17766,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-017_main.png",
       "catalog-images/PROD-FSD-017_interior.png"
     ],
-    "price": 6280,
+    "price": 14100,
     "price_type": "fixed",
     "variants": [
       {
@@ -17802,8 +17802,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-017_main.png"
       }
     ],
-    "kit_price": 6280,
-    "leaf_price": 4100,
+    "kit_price": 16280,
+    "leaf_price": 14100,
     "dealer_price": 4100
   },
   {
@@ -17857,7 +17857,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FSD-018_main.png"
     ],
-    "price": 8100,
+    "price": 15650,
     "price_type": "fixed",
     "variants": [
       {
@@ -17893,8 +17893,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-018_main.png"
       }
     ],
-    "kit_price": 8100,
-    "leaf_price": 5650,
+    "kit_price": 18100,
+    "leaf_price": 15650,
     "dealer_price": 5650
   },
   {
@@ -17948,7 +17948,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FSD-019_main.png"
     ],
-    "price": 8100,
+    "price": 15650,
     "price_type": "fixed",
     "variants": [
       {
@@ -17984,8 +17984,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-019_main.png"
       }
     ],
-    "kit_price": 8100,
-    "leaf_price": 5650,
+    "kit_price": 18100,
+    "leaf_price": 15650,
     "dealer_price": 5650
   },
   {
@@ -18039,7 +18039,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FSD-020_main.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -18075,8 +18075,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-020_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -18130,7 +18130,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-FSD-021_main.png"
     ],
-    "price": 7430,
+    "price": 14980,
     "price_type": "fixed",
     "variants": [
       {
@@ -18166,8 +18166,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-021_main.png"
       }
     ],
-    "kit_price": 7430,
-    "leaf_price": 4980,
+    "kit_price": 17430,
+    "leaf_price": 14980,
     "dealer_price": 4980
   },
   {
@@ -18222,7 +18222,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-022_main.png",
       "catalog-images/PROD-FSD-022_interior.png"
     ],
-    "price": 7430,
+    "price": 14980,
     "price_type": "fixed",
     "variants": [
       {
@@ -18258,8 +18258,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-022_main.png"
       }
     ],
-    "kit_price": 7430,
-    "leaf_price": 4980,
+    "kit_price": 17430,
+    "leaf_price": 14980,
     "dealer_price": 4980
   },
   {
@@ -18314,7 +18314,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-FSD-023_main.png",
       "catalog-images/PROD-FSD-023_interior.png"
     ],
-    "price": 7625,
+    "price": 15100,
     "price_type": "fixed",
     "variants": [
       {
@@ -18350,8 +18350,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-FSD-023_main.png"
       }
     ],
-    "kit_price": 7625,
-    "leaf_price": 5100,
+    "kit_price": 17625,
+    "leaf_price": 15100,
     "dealer_price": 5100
   },
   {
@@ -18412,7 +18412,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-002_alt2.png",
       "catalog-images/PROD-VIRA-P3_page.png"
     ],
-    "price": 13800,
+    "price": 23800,
     "price_type": "fixed",
     "variants": [
       {
@@ -18448,7 +18448,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-002_main.png"
       }
     ],
-    "kit_price": 13800,
+    "kit_price": 23800,
     "dealer_price": 13800
   },
   {
@@ -18509,7 +18509,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-003_alt2.png",
       "catalog-images/PROD-VIRA-P4_page.png"
     ],
-    "price": 14000,
+    "price": 24000,
     "price_type": "fixed",
     "variants": [
       {
@@ -18545,7 +18545,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-003_main.png"
       }
     ],
-    "kit_price": 14000,
+    "kit_price": 24000,
     "dealer_price": 14000
   },
   {
@@ -18606,7 +18606,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-004_alt2.png",
       "catalog-images/PROD-VIRA-P5_page.png"
     ],
-    "price": 17200,
+    "price": 27200,
     "price_type": "fixed",
     "variants": [
       {
@@ -18642,7 +18642,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-004_main.png"
       }
     ],
-    "kit_price": 17200,
+    "kit_price": 27200,
     "dealer_price": 17200
   },
   {
@@ -18703,7 +18703,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-005_alt2.png",
       "catalog-images/PROD-VIRA-P6_page.png"
     ],
-    "price": 22000,
+    "price": 32000,
     "price_type": "fixed",
     "variants": [
       {
@@ -18739,7 +18739,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-005_main.png"
       }
     ],
-    "kit_price": 22000,
+    "kit_price": 32000,
     "dealer_price": 22000
   },
   {
@@ -18800,7 +18800,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-006_alt2.png",
       "catalog-images/PROD-VIRA-P7_page.png"
     ],
-    "price": 26000,
+    "price": 36000,
     "price_type": "fixed",
     "variants": [
       {
@@ -18836,7 +18836,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-006_main.png"
       }
     ],
-    "kit_price": 26000,
+    "kit_price": 36000,
     "dealer_price": 26000
   },
   {
@@ -18897,7 +18897,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-007_alt2.png",
       "catalog-images/PROD-VIRA-P8_page.png"
     ],
-    "price": 30000,
+    "price": 40000,
     "price_type": "fixed",
     "variants": [
       {
@@ -18933,7 +18933,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-007_main.png"
       }
     ],
-    "kit_price": 30000,
+    "kit_price": 40000,
     "dealer_price": 30000
   },
   {
@@ -18994,7 +18994,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-008_alt2.png",
       "catalog-images/PROD-VIRA-P9_page.png"
     ],
-    "price": 26000,
+    "price": 36000,
     "price_type": "fixed",
     "variants": [
       {
@@ -19030,7 +19030,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-008_main.png"
       }
     ],
-    "kit_price": 26000,
+    "kit_price": 36000,
     "dealer_price": 26000
   },
   {
@@ -19091,7 +19091,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-009_alt2.png",
       "catalog-images/PROD-VIRA-P10_page.png"
     ],
-    "price": 42000,
+    "price": 52000,
     "price_type": "fixed",
     "variants": [
       {
@@ -19127,7 +19127,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-009_main.png"
       }
     ],
-    "kit_price": 42000,
+    "kit_price": 52000,
     "dealer_price": 42000
   },
   {
@@ -19188,7 +19188,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-010_alt2.png",
       "catalog-images/PROD-VIRA-P11_page.png"
     ],
-    "price": 44500,
+    "price": 54500,
     "price_type": "fixed",
     "variants": [
       {
@@ -19224,7 +19224,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-010_main.png"
       }
     ],
-    "kit_price": 44500,
+    "kit_price": 54500,
     "dealer_price": 44500
   },
   {
@@ -19285,7 +19285,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-011_alt2.png",
       "catalog-images/PROD-VIRA-P12_page.png"
     ],
-    "price": 22000,
+    "price": 32000,
     "price_type": "fixed",
     "variants": [
       {
@@ -19321,7 +19321,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-011_main.png"
       }
     ],
-    "kit_price": 22000,
+    "kit_price": 32000,
     "dealer_price": 22000
   },
   {
@@ -19382,7 +19382,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-012_alt2.png",
       "catalog-images/PROD-VIRA-P13_page.png"
     ],
-    "price": 22000,
+    "price": 32000,
     "price_type": "fixed",
     "variants": [
       {
@@ -19418,7 +19418,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-012_main.png"
       }
     ],
-    "kit_price": 22000,
+    "kit_price": 32000,
     "dealer_price": 22000
   },
   {
@@ -19479,7 +19479,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-013_alt2.png",
       "catalog-images/PROD-VIRA-P14_page.png"
     ],
-    "price": 27500,
+    "price": 37500,
     "price_type": "fixed",
     "variants": [
       {
@@ -19515,7 +19515,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-013_main.png"
       }
     ],
-    "kit_price": 27500,
+    "kit_price": 37500,
     "dealer_price": 27500
   },
   {
@@ -19576,7 +19576,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-014_alt2.png",
       "catalog-images/PROD-VIRA-P15_page.png"
     ],
-    "price": 29000,
+    "price": 39000,
     "price_type": "fixed",
     "variants": [
       {
@@ -19612,7 +19612,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-014_main.png"
       }
     ],
-    "kit_price": 29000,
+    "kit_price": 39000,
     "dealer_price": 29000
   },
   {
@@ -19673,7 +19673,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-015_alt2.png",
       "catalog-images/PROD-VIRA-P16_page.png"
     ],
-    "price": 15000,
+    "price": 25000,
     "price_type": "fixed",
     "variants": [
       {
@@ -19709,7 +19709,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-015_main.png"
       }
     ],
-    "kit_price": 15000,
+    "kit_price": 25000,
     "dealer_price": 15000
   },
   {
@@ -19770,7 +19770,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-016_alt2.png",
       "catalog-images/PROD-VIRA-P17_page.png"
     ],
-    "price": 23000,
+    "price": 33000,
     "price_type": "fixed",
     "variants": [
       {
@@ -19806,7 +19806,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-016_main.png"
       }
     ],
-    "kit_price": 23000,
+    "kit_price": 33000,
     "dealer_price": 23000
   },
   {
@@ -19867,7 +19867,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-017_interior.png",
       "catalog-images/PROD-VIRA-P18_page.png"
     ],
-    "price": 39000,
+    "price": 49000,
     "price_type": "fixed",
     "variants": [
       {
@@ -19903,7 +19903,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-017_main.png"
       }
     ],
-    "kit_price": 39000,
+    "kit_price": 49000,
     "dealer_price": 39000
   },
   {
@@ -19964,7 +19964,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-018_alt2.png",
       "catalog-images/PROD-VIRA-P19_page.png"
     ],
-    "price": 44000,
+    "price": 54000,
     "price_type": "fixed",
     "variants": [
       {
@@ -20000,7 +20000,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-018_main.png"
       }
     ],
-    "kit_price": 44000,
+    "kit_price": 54000,
     "dealer_price": 44000
   },
   {
@@ -20061,7 +20061,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-019_interior.png",
       "catalog-images/PROD-VIRA-P20_page.png"
     ],
-    "price": 37000,
+    "price": 47000,
     "price_type": "fixed",
     "variants": [
       {
@@ -20097,7 +20097,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-019_main.png"
       }
     ],
-    "kit_price": 37000,
+    "kit_price": 47000,
     "dealer_price": 37000
   },
   {
@@ -20158,7 +20158,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-020_alt2.png",
       "catalog-images/PROD-VIRA-P21_page.png"
     ],
-    "price": 57000,
+    "price": 67000,
     "price_type": "fixed",
     "variants": [
       {
@@ -20194,7 +20194,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-020_main.png"
       }
     ],
-    "kit_price": 57000,
+    "kit_price": 67000,
     "dealer_price": 57000
   },
   {
@@ -20256,7 +20256,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-021_interior.png",
       "catalog-images/PROD-VIRA-P22_page.png"
     ],
-    "price": 47000,
+    "price": 57000,
     "price_type": "fixed",
     "variants": [
       {
@@ -20292,7 +20292,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-021_main.png"
       }
     ],
-    "kit_price": 47000,
+    "kit_price": 57000,
     "dealer_price": 47000
   },
   {
@@ -20352,7 +20352,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-022_alt1.png",
       "catalog-images/PROD-VIRA-022_alt2.png"
     ],
-    "price": 23500,
+    "price": 33500,
     "price_type": "fixed",
     "variants": [
       {
@@ -20388,7 +20388,7 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-022_main.png"
       }
     ],
-    "kit_price": 23500,
+    "kit_price": 33500,
     "dealer_price": 23500
   },
   {
@@ -20397,7 +20397,7 @@ window.CATALOG_PRODUCTS = [
     "brand_id": "BRAND-CHAMELEON",
     "collection": "Invisible",
     "collection_id": "COLL-CHAM-INVISIBLE",
-    "model": "Invisible (Скрытая дверь под отделку)",
+    "model": "Invisible Direct (Скрытая дверь 44 мм под отделку)",
     "article": null,
     "category": "Скрытые двери",
     "description": "Дверь скрытого монтажа Chameleon Doors Invisible. Полотно под покраску, обои или декоративную штукатурку с алюминиевой кромкой или без кромки. Скрытый алюминиевый короб под шпаклевку.",
@@ -20446,7 +20446,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-001_interior.png",
       "catalog-images/PROD-CHAM-P8_page.png"
     ],
-    "price": 19900,
+    "price": 24500,
     "price_type": "fixed",
     "variants": [
       {
@@ -20466,8 +20466,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-001_main.png"
       }
     ],
-    "kit_price": 19900,
-    "leaf_price": 14500,
+    "kit_price": 29900,
+    "leaf_price": 24500,
     "dealer_price": 14500
   },
   {
@@ -20476,10 +20476,10 @@ window.CATALOG_PRODUCTS = [
     "brand_id": "BRAND-CHAMELEON",
     "collection": "Invisible",
     "collection_id": "COLL-CHAM-INVISIBLE",
-    "model": "Invisible (Скрытая дверь под отделку)",
+    "model": "Invisible Reverse (Скрытая дверь 59 мм реверс под отделку)",
     "article": null,
     "category": "Скрытые двери",
-    "description": "Дверь скрытого монтажа Chameleon Doors Invisible. Полотно под покраску, обои или декоративную штукатурку с алюминиевой кромкой или без кромки. Скрытый алюминиевый короб под шпаклевку.",
+    "description": "Дверь скрытого монтажа Chameleon Doors Invisible Reverse (обратного открывания от себя на 90° в проем). Полотно под покраску, обои или штукатурку. Скрытый алюминиевый реверсивный короб под шпаклевку.",
     "source": {
       "pdf_file": "Chameleon Doors каталог 01.03.2026.pdf",
       "page": 9,
@@ -20504,7 +20504,7 @@ window.CATALOG_PRODUCTS = [
         "2000х900 мм",
         "Высота до 2700 мм под заказ"
       ],
-      "opening_direction": "Direct (на себя) / Reverse (от себя)",
+      "opening_direction": "Reverse (от себя в проем)",
       "other_specs": {
         "thickness": "40-59 мм",
         "frame": "Анодированный алюминиевый короб скрытого монтажа"
@@ -20523,9 +20523,9 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-CHAM-002_main.png",
       "catalog-images/PROD-CHAM-002_interior.png",
-      "catalog-images/PROD-CHAM-P9_page.png"
+      "catalog-images/PROD-CHAM-001_interior.png"
     ],
-    "price": 19900,
+    "price": 24500,
     "price_type": "fixed",
     "variants": [
       {
@@ -20545,8 +20545,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-002_main.png"
       }
     ],
-    "kit_price": 19900,
-    "leaf_price": 14500,
+    "kit_price": 29900,
+    "leaf_price": 24500,
     "dealer_price": 14500
   },
   {
@@ -20603,7 +20603,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-003_main.png",
       "catalog-images/PROD-CHAM-P10_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -20671,8 +20671,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P10_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -20729,7 +20729,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-004_main.png",
       "catalog-images/PROD-CHAM-P10_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -20797,8 +20797,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P10_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -20855,7 +20855,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-005_main.png",
       "catalog-images/PROD-CHAM-P10_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -20923,8 +20923,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P10_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -20981,7 +20981,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-006_main.png",
       "catalog-images/PROD-CHAM-P11_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -21049,8 +21049,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P11_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -21107,7 +21107,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-007_main.png",
       "catalog-images/PROD-CHAM-P11_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -21175,8 +21175,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P11_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -21233,7 +21233,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-008_main.png",
       "catalog-images/PROD-CHAM-P11_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -21301,8 +21301,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P11_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -21359,7 +21359,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-009_main.png",
       "catalog-images/PROD-CHAM-P11_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -21427,8 +21427,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P11_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -21485,7 +21485,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-010_main.png",
       "catalog-images/PROD-CHAM-P11_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -21553,8 +21553,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P11_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -21611,7 +21611,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-011_main.png",
       "catalog-images/PROD-CHAM-P11_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -21679,8 +21679,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P11_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -21737,7 +21737,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-012_main.png",
       "catalog-images/PROD-CHAM-P12_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -21773,8 +21773,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-012_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -21831,7 +21831,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-013_main.png",
       "catalog-images/PROD-CHAM-P12_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -21867,8 +21867,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-013_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -21925,7 +21925,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-014_main.png",
       "catalog-images/PROD-CHAM-P12_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -21961,8 +21961,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-014_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22019,7 +22019,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-015_main.png",
       "catalog-images/PROD-CHAM-P12_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22055,8 +22055,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-015_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22113,7 +22113,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-016_main.png",
       "catalog-images/PROD-CHAM-P12_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22149,8 +22149,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-016_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22207,7 +22207,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-017_main.png",
       "catalog-images/PROD-CHAM-P12_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22243,8 +22243,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-017_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22301,7 +22301,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-018_main.png",
       "catalog-images/PROD-CHAM-P12_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22337,8 +22337,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-018_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22395,7 +22395,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-019_main.png",
       "catalog-images/PROD-CHAM-P12_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22431,8 +22431,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-019_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22489,7 +22489,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-020_main.png",
       "catalog-images/PROD-CHAM-P13_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22525,8 +22525,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-020_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22583,7 +22583,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-021_main.png",
       "catalog-images/PROD-CHAM-P13_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22619,8 +22619,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-021_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22677,7 +22677,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-022_main.png",
       "catalog-images/PROD-CHAM-P13_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22713,8 +22713,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-022_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22771,7 +22771,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-023_main.png",
       "catalog-images/PROD-CHAM-P13_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22807,8 +22807,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-023_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22865,7 +22865,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-024_main.png",
       "catalog-images/PROD-CHAM-P14_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22901,8 +22901,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-024_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -22959,7 +22959,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-025_main.png",
       "catalog-images/PROD-CHAM-P14_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -22995,8 +22995,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-025_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -23053,7 +23053,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-026_main.png",
       "catalog-images/PROD-CHAM-P14_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -23089,8 +23089,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-026_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -23147,7 +23147,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-027_main.png",
       "catalog-images/PROD-CHAM-P14_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -23183,8 +23183,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-027_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -23241,7 +23241,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-028_main.png",
       "catalog-images/PROD-CHAM-P14_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -23277,8 +23277,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-028_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -23335,7 +23335,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-029_main.png",
       "catalog-images/PROD-CHAM-P14_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -23371,8 +23371,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-029_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -23429,7 +23429,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-030_main.png",
       "catalog-images/PROD-CHAM-P14_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -23465,8 +23465,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-030_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -23523,7 +23523,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-031_main.png",
       "catalog-images/PROD-CHAM-P14_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -23559,8 +23559,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-031_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -23617,7 +23617,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-032_main.png",
       "catalog-images/PROD-CHAM-P15_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -23685,8 +23685,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P15_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -23743,7 +23743,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-033_main.png",
       "catalog-images/PROD-CHAM-P15_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -23811,8 +23811,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P15_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -23869,7 +23869,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-034_main.png",
       "catalog-images/PROD-CHAM-P15_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -23937,8 +23937,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P15_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -23995,7 +23995,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-035_main.png",
       "catalog-images/PROD-CHAM-P16_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -24063,8 +24063,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P16_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -24121,7 +24121,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-036_main.png",
       "catalog-images/PROD-CHAM-P16_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -24189,8 +24189,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P16_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -24247,7 +24247,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-037_main.png",
       "catalog-images/PROD-CHAM-P16_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -24315,8 +24315,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P16_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -24373,7 +24373,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-038_main.png",
       "catalog-images/PROD-CHAM-P16_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -24441,8 +24441,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P16_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -24499,7 +24499,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-039_main.png",
       "catalog-images/PROD-CHAM-P17_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -24535,8 +24535,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-039_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -24593,7 +24593,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-040_main.png",
       "catalog-images/PROD-CHAM-P17_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -24629,8 +24629,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-040_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -24687,7 +24687,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-041_main.png",
       "catalog-images/PROD-CHAM-P17_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -24723,8 +24723,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-041_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -24781,7 +24781,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-042_main.png",
       "catalog-images/PROD-CHAM-P17_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -24817,8 +24817,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-042_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -24875,7 +24875,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-043_main.png",
       "catalog-images/PROD-CHAM-P17_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -24911,8 +24911,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-043_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -24969,7 +24969,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-044_main.png",
       "catalog-images/PROD-CHAM-P18_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25005,8 +25005,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-044_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -25063,7 +25063,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-045_main.png",
       "catalog-images/PROD-CHAM-P18_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25099,8 +25099,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-045_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -25157,7 +25157,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-046_main.png",
       "catalog-images/PROD-CHAM-P18_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25193,8 +25193,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-046_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -25251,7 +25251,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-047_main.png",
       "catalog-images/PROD-CHAM-P18_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25287,8 +25287,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-047_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -25345,7 +25345,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-048_main.png",
       "catalog-images/PROD-CHAM-P18_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25381,8 +25381,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-048_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -25439,7 +25439,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-049_main.png",
       "catalog-images/PROD-CHAM-P19_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25475,8 +25475,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-049_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -25533,7 +25533,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-050_main.png",
       "catalog-images/PROD-CHAM-P19_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25569,8 +25569,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-050_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -25627,7 +25627,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-051_main.png",
       "catalog-images/PROD-CHAM-P19_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25663,8 +25663,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-051_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -25721,7 +25721,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-052_main.png",
       "catalog-images/PROD-CHAM-P19_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25757,8 +25757,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-052_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -25815,7 +25815,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-053_main.png",
       "catalog-images/PROD-CHAM-P19_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25851,8 +25851,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-053_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -25909,7 +25909,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-054_main.png",
       "catalog-images/PROD-CHAM-P20_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -25945,8 +25945,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-054_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -26003,7 +26003,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-055_main.png",
       "catalog-images/PROD-CHAM-P20_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -26039,8 +26039,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-055_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -26097,7 +26097,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-056_main.png",
       "catalog-images/PROD-CHAM-P20_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -26133,8 +26133,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-056_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -26191,7 +26191,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-057_main.png",
       "catalog-images/PROD-CHAM-P20_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -26227,8 +26227,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-057_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -26285,7 +26285,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-058_main.png",
       "catalog-images/PROD-CHAM-P20_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -26321,8 +26321,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-058_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -26379,7 +26379,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-059_main.png",
       "catalog-images/PROD-CHAM-P20_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -26415,8 +26415,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-059_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -26473,7 +26473,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-060_main.png",
       "catalog-images/PROD-CHAM-P20_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -26509,8 +26509,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-060_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -26568,7 +26568,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-061_interior.png",
       "catalog-images/PROD-CHAM-P21_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -26604,8 +26604,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-061_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -26663,7 +26663,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-062_interior.png",
       "catalog-images/PROD-CHAM-P21_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -26699,8 +26699,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-062_main.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -26757,7 +26757,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-063_main.png",
       "catalog-images/PROD-CHAM-P22_page.png"
     ],
-    "price": 8300,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -26793,8 +26793,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-063_main.png"
       }
     ],
-    "kit_price": 8300,
-    "leaf_price": 5900,
+    "kit_price": 18300,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -26851,7 +26851,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-064_main.png",
       "catalog-images/PROD-CHAM-P22_page.png"
     ],
-    "price": 8300,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -26887,8 +26887,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-064_main.png"
       }
     ],
-    "kit_price": 8300,
-    "leaf_price": 5900,
+    "kit_price": 18300,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -26945,7 +26945,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-065_main.png",
       "catalog-images/PROD-CHAM-P22_page.png"
     ],
-    "price": 8300,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -26981,8 +26981,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-065_main.png"
       }
     ],
-    "kit_price": 8300,
-    "leaf_price": 5900,
+    "kit_price": 18300,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -27039,7 +27039,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-066_main.png",
       "catalog-images/PROD-CHAM-P22_page.png"
     ],
-    "price": 8300,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -27075,8 +27075,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-066_main.png"
       }
     ],
-    "kit_price": 8300,
-    "leaf_price": 5900,
+    "kit_price": 18300,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -27133,7 +27133,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-067_main.png",
       "catalog-images/PROD-CHAM-P22_page.png"
     ],
-    "price": 8300,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -27169,8 +27169,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-067_main.png"
       }
     ],
-    "kit_price": 8300,
-    "leaf_price": 5900,
+    "kit_price": 18300,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -27227,7 +27227,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-068_main.png",
       "catalog-images/PROD-CHAM-P22_page.png"
     ],
-    "price": 8300,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -27263,8 +27263,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-068_main.png"
       }
     ],
-    "kit_price": 8300,
-    "leaf_price": 5900,
+    "kit_price": 18300,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -27321,7 +27321,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-069_main.png",
       "catalog-images/PROD-CHAM-P22_page.png"
     ],
-    "price": 8300,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -27357,8 +27357,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-069_main.png"
       }
     ],
-    "kit_price": 8300,
-    "leaf_price": 5900,
+    "kit_price": 18300,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -27416,7 +27416,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-070_interior.png",
       "catalog-images/PROD-CHAM-P23_page.png"
     ],
-    "price": 8300,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -27452,8 +27452,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-070_main.png"
       }
     ],
-    "kit_price": 8300,
-    "leaf_price": 5900,
+    "kit_price": 18300,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -27511,7 +27511,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-071_interior.png",
       "catalog-images/PROD-CHAM-P23_page.png"
     ],
-    "price": 8300,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -27547,8 +27547,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-071_main.png"
       }
     ],
-    "kit_price": 8300,
-    "leaf_price": 5900,
+    "kit_price": 18300,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -27605,7 +27605,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-072_main.png",
       "catalog-images/PROD-CHAM-P24_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -27673,8 +27673,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P24_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -27731,7 +27731,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-073_main.png",
       "catalog-images/PROD-CHAM-P24_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -27799,8 +27799,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P24_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -27857,7 +27857,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-074_main.png",
       "catalog-images/PROD-CHAM-P24_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -27925,8 +27925,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P24_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -27983,7 +27983,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-075_main.png",
       "catalog-images/PROD-CHAM-P24_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -28051,8 +28051,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P24_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -28109,7 +28109,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-076_main.png",
       "catalog-images/PROD-CHAM-P24_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -28177,8 +28177,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P24_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -28235,7 +28235,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-077_main.png",
       "catalog-images/PROD-CHAM-P24_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -28303,8 +28303,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P24_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -28361,7 +28361,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-078_main.png",
       "catalog-images/PROD-CHAM-P24_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -28429,8 +28429,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P24_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -28487,7 +28487,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-079_main.png",
       "catalog-images/PROD-CHAM-P25_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -28555,8 +28555,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P25_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -28613,7 +28613,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-080_main.png",
       "catalog-images/PROD-CHAM-P25_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -28681,8 +28681,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P25_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -28739,7 +28739,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-081_main.png",
       "catalog-images/PROD-CHAM-P25_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -28807,8 +28807,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P25_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -28865,7 +28865,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-082_main.png",
       "catalog-images/PROD-CHAM-P25_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -28933,8 +28933,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P25_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -28991,7 +28991,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-083_main.png",
       "catalog-images/PROD-CHAM-P25_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -29059,8 +29059,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P25_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -29117,7 +29117,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-084_main.png",
       "catalog-images/PROD-CHAM-P25_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -29185,8 +29185,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P25_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -29243,7 +29243,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-085_main.png",
       "catalog-images/PROD-CHAM-P25_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -29311,8 +29311,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P25_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -29369,7 +29369,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-086_main.png",
       "catalog-images/PROD-CHAM-P26_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -29437,8 +29437,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P26_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -29495,7 +29495,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-087_main.png",
       "catalog-images/PROD-CHAM-P26_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -29563,8 +29563,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P26_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -29621,7 +29621,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-088_main.png",
       "catalog-images/PROD-CHAM-P26_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -29689,8 +29689,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P26_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -29747,7 +29747,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-089_main.png",
       "catalog-images/PROD-CHAM-P26_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -29815,8 +29815,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P26_page.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -29873,7 +29873,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-090_main.png",
       "catalog-images/PROD-CHAM-P27_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -29909,8 +29909,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-090_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -29967,7 +29967,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-091_main.png",
       "catalog-images/PROD-CHAM-P27_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -30003,8 +30003,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-091_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -30061,7 +30061,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-092_main.png",
       "catalog-images/PROD-CHAM-P27_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -30097,8 +30097,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-092_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -30155,7 +30155,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-093_main.png",
       "catalog-images/PROD-CHAM-P27_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -30191,8 +30191,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-093_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -30249,7 +30249,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-094_main.png",
       "catalog-images/PROD-CHAM-P27_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -30285,8 +30285,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-094_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -30343,7 +30343,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-095_main.png",
       "catalog-images/PROD-CHAM-P27_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -30379,8 +30379,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-095_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -30437,7 +30437,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-096_main.png",
       "catalog-images/PROD-CHAM-P27_page.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -30473,8 +30473,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-096_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -30531,7 +30531,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-097_main.png",
       "catalog-images/PROD-CHAM-P28_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -30599,8 +30599,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P28_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -30657,7 +30657,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-098_main.png",
       "catalog-images/PROD-CHAM-P28_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -30725,8 +30725,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P28_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -30783,7 +30783,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-099_main.png",
       "catalog-images/PROD-CHAM-P28_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -30851,8 +30851,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P28_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -30909,7 +30909,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-100_main.png",
       "catalog-images/PROD-CHAM-P28_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -30977,8 +30977,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P28_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -31035,7 +31035,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-101_main.png",
       "catalog-images/PROD-CHAM-P29_page.png"
     ],
-    "price": 8575,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -31103,8 +31103,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P29_page.png"
       }
     ],
-    "kit_price": 8575,
-    "leaf_price": 5950,
+    "kit_price": 18575,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -31161,7 +31161,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-102_main.png",
       "catalog-images/PROD-CHAM-P29_page.png"
     ],
-    "price": 8575,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -31229,8 +31229,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P29_page.png"
       }
     ],
-    "kit_price": 8575,
-    "leaf_price": 5950,
+    "kit_price": 18575,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -31287,7 +31287,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-103_main.png",
       "catalog-images/PROD-CHAM-P29_page.png"
     ],
-    "price": 8575,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -31355,8 +31355,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P29_page.png"
       }
     ],
-    "kit_price": 8575,
-    "leaf_price": 5950,
+    "kit_price": 18575,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -31413,7 +31413,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-104_main.png",
       "catalog-images/PROD-CHAM-P29_page.png"
     ],
-    "price": 8575,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -31481,8 +31481,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P29_page.png"
       }
     ],
-    "kit_price": 8575,
-    "leaf_price": 5950,
+    "kit_price": 18575,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -31539,7 +31539,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-105_main.png",
       "catalog-images/PROD-CHAM-P29_page.png"
     ],
-    "price": 8575,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -31607,8 +31607,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P29_page.png"
       }
     ],
-    "kit_price": 8575,
-    "leaf_price": 5950,
+    "kit_price": 18575,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -31665,7 +31665,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-106_main.png",
       "catalog-images/PROD-CHAM-P29_page.png"
     ],
-    "price": 8575,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -31733,8 +31733,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P29_page.png"
       }
     ],
-    "kit_price": 8575,
-    "leaf_price": 5950,
+    "kit_price": 18575,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -31791,7 +31791,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-107_main.png",
       "catalog-images/PROD-CHAM-P29_page.png"
     ],
-    "price": 8575,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -31859,8 +31859,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P29_page.png"
       }
     ],
-    "kit_price": 8575,
-    "leaf_price": 5950,
+    "kit_price": 18575,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -31917,7 +31917,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-108_main.png",
       "catalog-images/PROD-CHAM-P29_page.png"
     ],
-    "price": 8575,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -31985,8 +31985,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P29_page.png"
       }
     ],
-    "kit_price": 8575,
-    "leaf_price": 5950,
+    "kit_price": 18575,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -32043,7 +32043,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-109_main.png",
       "catalog-images/PROD-CHAM-P29_page.png"
     ],
-    "price": 8575,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -32111,8 +32111,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P29_page.png"
       }
     ],
-    "kit_price": 8575,
-    "leaf_price": 5950,
+    "kit_price": 18575,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -32169,7 +32169,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-110_main.png",
       "catalog-images/PROD-CHAM-P30_page.png"
     ],
-    "price": 8100,
+    "price": 15650,
     "price_type": "fixed",
     "variants": [
       {
@@ -32237,8 +32237,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P30_page.png"
       }
     ],
-    "kit_price": 8100,
-    "leaf_price": 5650,
+    "kit_price": 18100,
+    "leaf_price": 15650,
     "dealer_price": 5650
   },
   {
@@ -32295,7 +32295,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-111_main.png",
       "catalog-images/PROD-CHAM-P30_page.png"
     ],
-    "price": 8100,
+    "price": 15650,
     "price_type": "fixed",
     "variants": [
       {
@@ -32363,8 +32363,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P30_page.png"
       }
     ],
-    "kit_price": 8100,
-    "leaf_price": 5650,
+    "kit_price": 18100,
+    "leaf_price": 15650,
     "dealer_price": 5650
   },
   {
@@ -32421,7 +32421,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-112_main.png",
       "catalog-images/PROD-CHAM-P30_page.png"
     ],
-    "price": 8100,
+    "price": 15650,
     "price_type": "fixed",
     "variants": [
       {
@@ -32489,8 +32489,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P30_page.png"
       }
     ],
-    "kit_price": 8100,
-    "leaf_price": 5650,
+    "kit_price": 18100,
+    "leaf_price": 15650,
     "dealer_price": 5650
   },
   {
@@ -32547,7 +32547,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-113_main.png",
       "catalog-images/PROD-CHAM-P30_page.png"
     ],
-    "price": 8100,
+    "price": 15650,
     "price_type": "fixed",
     "variants": [
       {
@@ -32615,8 +32615,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P30_page.png"
       }
     ],
-    "kit_price": 8100,
-    "leaf_price": 5650,
+    "kit_price": 18100,
+    "leaf_price": 15650,
     "dealer_price": 5650
   },
   {
@@ -32674,7 +32674,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-114_interior.png",
       "catalog-images/PROD-CHAM-P31_page.png"
     ],
-    "price": 8100,
+    "price": 15650,
     "price_type": "fixed",
     "variants": [
       {
@@ -32742,8 +32742,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-114_interior.png"
       }
     ],
-    "kit_price": 8100,
-    "leaf_price": 5650,
+    "kit_price": 18100,
+    "leaf_price": 15650,
     "dealer_price": 5650
   },
   {
@@ -32801,7 +32801,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-115_interior.png",
       "catalog-images/PROD-CHAM-P31_page.png"
     ],
-    "price": 8100,
+    "price": 15650,
     "price_type": "fixed",
     "variants": [
       {
@@ -32869,8 +32869,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-115_interior.png"
       }
     ],
-    "kit_price": 8100,
-    "leaf_price": 5650,
+    "kit_price": 18100,
+    "leaf_price": 15650,
     "dealer_price": 5650
   },
   {
@@ -32927,7 +32927,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-116_main.png",
       "catalog-images/PROD-CHAM-P32_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -32995,8 +32995,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P32_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -33053,7 +33053,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-117_main.png",
       "catalog-images/PROD-CHAM-P32_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -33121,8 +33121,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P32_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -33179,7 +33179,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-118_main.png",
       "catalog-images/PROD-CHAM-P32_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -33247,8 +33247,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P32_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -33305,7 +33305,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-119_main.png",
       "catalog-images/PROD-CHAM-P32_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -33373,8 +33373,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P32_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -33431,7 +33431,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-120_main.png",
       "catalog-images/PROD-CHAM-P33_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -33499,8 +33499,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P33_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -33557,7 +33557,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-121_main.png",
       "catalog-images/PROD-CHAM-P33_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -33625,8 +33625,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P33_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -33683,7 +33683,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-122_main.png",
       "catalog-images/PROD-CHAM-P33_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -33751,8 +33751,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P33_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -33809,7 +33809,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-123_main.png",
       "catalog-images/PROD-CHAM-P33_page.png"
     ],
-    "price": 8400,
+    "price": 15950,
     "price_type": "fixed",
     "variants": [
       {
@@ -33877,8 +33877,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P33_page.png"
       }
     ],
-    "kit_price": 8400,
-    "leaf_price": 5950,
+    "kit_price": 18400,
+    "leaf_price": 15950,
     "dealer_price": 5950
   },
   {
@@ -33935,7 +33935,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-124_main.png",
       "catalog-images/PROD-CHAM-P34_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -33971,8 +33971,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-124_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34029,7 +34029,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-125_main.png",
       "catalog-images/PROD-CHAM-P34_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -34065,8 +34065,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-125_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34123,7 +34123,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-126_main.png",
       "catalog-images/PROD-CHAM-P34_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -34159,8 +34159,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-126_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34217,7 +34217,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-127_main.png",
       "catalog-images/PROD-CHAM-P34_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -34253,8 +34253,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-127_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34311,7 +34311,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-128_main.png",
       "catalog-images/PROD-CHAM-P34_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -34347,8 +34347,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-128_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34405,7 +34405,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-129_main.png",
       "catalog-images/PROD-CHAM-P34_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -34441,8 +34441,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-129_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34499,7 +34499,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-130_main.png",
       "catalog-images/PROD-CHAM-P34_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -34535,8 +34535,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-130_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34593,7 +34593,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-131_main.png",
       "catalog-images/PROD-CHAM-P34_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -34629,8 +34629,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-131_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34687,7 +34687,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-132_main.png",
       "catalog-images/PROD-CHAM-P35_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -34723,8 +34723,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-132_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34781,7 +34781,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-133_main.png",
       "catalog-images/PROD-CHAM-P35_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -34817,8 +34817,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-133_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34875,7 +34875,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-134_main.png",
       "catalog-images/PROD-CHAM-P35_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -34911,8 +34911,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-134_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -34969,7 +34969,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-135_main.png",
       "catalog-images/PROD-CHAM-P35_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35005,8 +35005,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-135_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -35063,7 +35063,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-136_main.png",
       "catalog-images/PROD-CHAM-P35_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35099,8 +35099,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-136_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -35157,7 +35157,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-137_main.png",
       "catalog-images/PROD-CHAM-P35_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35193,8 +35193,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-137_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -35251,7 +35251,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-138_main.png",
       "catalog-images/PROD-CHAM-P35_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35287,8 +35287,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-138_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -35345,7 +35345,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-139_main.png",
       "catalog-images/PROD-CHAM-P35_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35381,8 +35381,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-139_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -35439,7 +35439,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-140_main.png",
       "catalog-images/PROD-CHAM-P36_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35475,8 +35475,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-140_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -35533,7 +35533,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-141_main.png",
       "catalog-images/PROD-CHAM-P36_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35569,8 +35569,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-141_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -35627,7 +35627,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-142_main.png",
       "catalog-images/PROD-CHAM-P36_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35663,8 +35663,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-142_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -35721,7 +35721,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-143_main.png",
       "catalog-images/PROD-CHAM-P36_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35757,8 +35757,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-143_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -35815,7 +35815,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-144_main.png",
       "catalog-images/PROD-CHAM-P36_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35851,8 +35851,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-144_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -35909,7 +35909,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-145_main.png",
       "catalog-images/PROD-CHAM-P36_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -35945,8 +35945,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-145_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36003,7 +36003,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-146_main.png",
       "catalog-images/PROD-CHAM-P36_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36039,8 +36039,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-146_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36097,7 +36097,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-147_main.png",
       "catalog-images/PROD-CHAM-P36_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36133,8 +36133,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-147_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36192,7 +36192,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-148_interior.png",
       "catalog-images/PROD-CHAM-P37_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36228,8 +36228,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-148_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36287,7 +36287,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-149_interior.png",
       "catalog-images/PROD-CHAM-P37_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36323,8 +36323,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-149_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36381,7 +36381,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-150_main.png",
       "catalog-images/PROD-CHAM-P38_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36417,8 +36417,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-150_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36475,7 +36475,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-151_main.png",
       "catalog-images/PROD-CHAM-P38_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36511,8 +36511,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-151_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36569,7 +36569,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-152_main.png",
       "catalog-images/PROD-CHAM-P38_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36605,8 +36605,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-152_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36663,7 +36663,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-153_main.png",
       "catalog-images/PROD-CHAM-P38_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36699,8 +36699,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-153_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36757,7 +36757,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-154_main.png",
       "catalog-images/PROD-CHAM-P38_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36793,8 +36793,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-154_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36851,7 +36851,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-155_main.png",
       "catalog-images/PROD-CHAM-P38_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36887,8 +36887,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-155_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -36945,7 +36945,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-156_main.png",
       "catalog-images/PROD-CHAM-P38_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -36981,8 +36981,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-156_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -37039,7 +37039,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-157_main.png",
       "catalog-images/PROD-CHAM-P38_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -37075,8 +37075,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-157_main.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -37133,7 +37133,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-158_main.png",
       "catalog-images/PROD-CHAM-P39_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -37201,8 +37201,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P39_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -37259,7 +37259,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-159_main.png",
       "catalog-images/PROD-CHAM-P39_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -37327,8 +37327,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P39_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -37385,7 +37385,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-160_main.png",
       "catalog-images/PROD-CHAM-P39_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -37453,8 +37453,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-P39_page.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -37513,7 +37513,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-161_alt2.png",
       "catalog-images/PROD-CHAM-P40_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -37581,8 +37581,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-161_alt1.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -37642,7 +37642,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-CHAM-162_interior.png",
       "catalog-images/PROD-CHAM-P41_page.png"
     ],
-    "price": 9950,
+    "price": 17500,
     "price_type": "fixed",
     "variants": [
       {
@@ -37710,8 +37710,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-CHAM-162_alt1.png"
       }
     ],
-    "kit_price": 9950,
-    "leaf_price": 7500,
+    "kit_price": 19950,
+    "leaf_price": 17500,
     "dealer_price": 7500
   },
   {
@@ -37831,12 +37831,12 @@ window.CATALOG_PRODUCTS = [
     "id": "PROD-MEZH-001",
     "brand": "Фабрика Межкомнатных Дверей",
     "brand_id": "BRAND-MEZH-DOORS",
-    "collection": "Межкомнатные двери 2026",
+    "collection": "Invisible",
     "collection_id": "COLL-MEZH-2026",
-    "model": "Межкомнатные двери 2026 Стр.2",
+    "model": "Invisible под покраску (Скрытая дверь 38 мм)",
     "article": null,
-    "category": "Межкомнатные двери",
-    "description": "Межкомнатная дверь Межкомнатные двери 2026 Стр.2. Коллекция: Межкомнатные двери 2026. Конструкция: Каркасно-щитовая. Покрытие: Полипропилен. Толщина полотна: 38 мм.",
+    "category": "Скрытые двери",
+    "description": "Дверь скрытого монтажа Invisible. Грунтованное полотно под покраску, декоративную штукатурку или обои. Комплектуется анодированным скрытым алюминиевым коробом под шпаклевку и скрытыми петлями 180°.",
     "source": {
       "pdf_file": "Каталог_межкомнатных_дверей_2026_3.pdf",
       "page": 2,
@@ -37845,11 +37845,11 @@ window.CATALOG_PRODUCTS = [
       "check_reason": null
     },
     "specs": {
-      "door_type": "Межкомнатная дверь",
+      "door_type": "Скрытая дверь",
       "construction": "Каркасно-щитовая",
       "material": "МДФ / сосновый брус",
-      "coating": "Полипропилен",
-      "color": "Бьянка / Айс / Крим / Санторини / Платина / Белый / Дуб дымчатый",
+      "coating": "Грунт под покраску / штукатурку / обои",
+      "color": "Под покраску (белый грунт)",
       "texture": "Матовая / древесная фактура / гладкая эмаль",
       "glass": "Глухое полотно (без остекления)",
       "decor": "Алюминиевая кромка ABS черная / хром, композитная заливка",
@@ -37880,44 +37880,44 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-001_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
         "variant_id": "VAR-PROD-MEZH-001-1",
-        "name": "Межкомнатные двери 2026 Стр.2 2000х600 мм",
+        "name": "Invisible под отделку 2000х600 мм",
         "size": "2000х600 мм",
-        "color": "Полипропилен",
+        "color": "Грунт под покраску",
         "opening": "Универсальное",
         "image": "catalog-images/PROD-MEZH-001_main.png"
       },
       {
         "variant_id": "VAR-PROD-MEZH-001-2",
-        "name": "Межкомнатные двери 2026 Стр.2 2000х700 мм",
+        "name": "Invisible под отделку 2000х700 мм",
         "size": "2000х700 мм",
-        "color": "Полипропилен",
+        "color": "Грунт под покраску",
         "opening": "Универсальное",
         "image": "catalog-images/PROD-MEZH-001_main.png"
       },
       {
         "variant_id": "VAR-PROD-MEZH-001-3",
-        "name": "Межкомнатные двери 2026 Стр.2 2000х800 мм",
+        "name": "Invisible под отделку 2000х800 мм",
         "size": "2000х800 мм",
-        "color": "Полипропилен",
+        "color": "Грунт под покраску",
         "opening": "Универсальное",
         "image": "catalog-images/PROD-MEZH-001_main.png"
       },
       {
         "variant_id": "VAR-PROD-MEZH-001-4",
-        "name": "Межкомнатные двери 2026 Стр.2 2000х900 мм",
+        "name": "Invisible под отделку 2000х900 мм",
         "size": "2000х900 мм",
-        "color": "Полипропилен",
+        "color": "Грунт под покраску",
         "opening": "Универсальное",
         "image": "catalog-images/PROD-MEZH-001_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -37974,7 +37974,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-002_main.png",
       "catalog-images/PROD-MEZH-002_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -38010,8 +38010,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-002_main.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -38068,7 +38068,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-003_main.png",
       "catalog-images/PROD-MEZH-003_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -38104,8 +38104,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-003_main.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -38162,7 +38162,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-004_main.png",
       "catalog-images/PROD-MEZH-004_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -38198,8 +38198,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-004_main.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -38258,7 +38258,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-005_alt2.png",
       "catalog-images/PROD-MEZH-005_interior.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -38294,8 +38294,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-005_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -38353,7 +38353,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-006_alt1.png",
       "catalog-images/PROD-MEZH-006_alt2.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -38389,8 +38389,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-006_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -38449,7 +38449,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-007_alt2.png",
       "catalog-images/PROD-MEZH-007_interior.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -38485,8 +38485,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-007_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -38544,7 +38544,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-008_alt1.png",
       "catalog-images/PROD-MEZH-008_alt2.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -38580,8 +38580,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-008_main.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -38640,7 +38640,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-009_alt2.png",
       "catalog-images/PROD-MEZH-009_interior.png"
     ],
-    "price": 8250,
+    "price": 15850,
     "price_type": "fixed",
     "variants": [
       {
@@ -38676,8 +38676,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-009_main.png"
       }
     ],
-    "kit_price": 8250,
-    "leaf_price": 5850,
+    "kit_price": 18250,
+    "leaf_price": 15850,
     "dealer_price": 5850
   },
   {
@@ -38735,7 +38735,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-010_alt1.png",
       "catalog-images/PROD-MEZH-010_alt2.png"
     ],
-    "price": 8250,
+    "price": 15850,
     "price_type": "fixed",
     "variants": [
       {
@@ -38771,8 +38771,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-010_main.png"
       }
     ],
-    "kit_price": 8250,
-    "leaf_price": 5850,
+    "kit_price": 18250,
+    "leaf_price": 15850,
     "dealer_price": 5850
   },
   {
@@ -38830,7 +38830,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-011_alt1.png",
       "catalog-images/PROD-MEZH-011_alt2.png"
     ],
-    "price": 8250,
+    "price": 15850,
     "price_type": "fixed",
     "variants": [
       {
@@ -38866,8 +38866,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-011_main.png"
       }
     ],
-    "kit_price": 8250,
-    "leaf_price": 5850,
+    "kit_price": 18250,
+    "leaf_price": 15850,
     "dealer_price": 5850
   },
   {
@@ -38924,7 +38924,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-012_main.png",
       "catalog-images/PROD-MEZH-012_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -38960,8 +38960,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-012_interior.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -39018,7 +39018,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-013_main.png",
       "catalog-images/PROD-MEZH-013_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -39054,8 +39054,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-013_interior.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -39113,7 +39113,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-014_alt1.png",
       "catalog-images/PROD-MEZH-014_alt2.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -39149,8 +39149,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-014_alt1.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -39208,7 +39208,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-015_alt1.png",
       "catalog-images/PROD-MEZH-015_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -39244,8 +39244,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-015_main.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -39303,7 +39303,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-016_alt1.png",
       "catalog-images/PROD-MEZH-016_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -39339,8 +39339,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-016_main.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -39398,7 +39398,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-017_alt1.png",
       "catalog-images/PROD-MEZH-017_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -39434,8 +39434,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-017_main.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -39492,7 +39492,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-018_main.png",
       "catalog-images/PROD-MEZH-018_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -39528,8 +39528,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-018_main.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -39586,7 +39586,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-019_main.png",
       "catalog-images/PROD-MEZH-019_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -39622,8 +39622,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-019_main.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -39680,7 +39680,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-020_main.png",
       "catalog-images/PROD-MEZH-020_interior.png"
     ],
-    "price": 7050,
+    "price": 14650,
     "price_type": "fixed",
     "variants": [
       {
@@ -39716,8 +39716,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-020_main.png"
       }
     ],
-    "kit_price": 7050,
-    "leaf_price": 4650,
+    "kit_price": 17050,
+    "leaf_price": 14650,
     "dealer_price": 4650
   },
   {
@@ -39776,7 +39776,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-021_alt2.png",
       "catalog-images/PROD-MEZH-021_interior.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -39812,8 +39812,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-021_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -39871,7 +39871,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-022_alt1.png",
       "catalog-images/PROD-MEZH-022_alt2.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -39907,8 +39907,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-022_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -39964,7 +39964,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-023_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40000,8 +40000,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-023_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40057,7 +40057,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-024_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40093,8 +40093,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-024_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40150,7 +40150,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-025_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40186,8 +40186,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-025_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40243,7 +40243,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-026_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40279,8 +40279,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-026_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40336,7 +40336,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-027_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40372,8 +40372,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-027_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40429,7 +40429,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-028_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40465,8 +40465,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-028_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40524,7 +40524,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-029_alt1.png",
       "catalog-images/PROD-MEZH-029_alt2.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40560,8 +40560,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-029_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40617,7 +40617,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-030_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40653,8 +40653,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-030_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40710,7 +40710,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-031_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40746,8 +40746,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-031_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40803,7 +40803,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-032_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40839,8 +40839,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-032_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40896,7 +40896,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-033_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -40932,8 +40932,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-033_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -40989,7 +40989,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-034_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41025,8 +41025,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-034_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -41082,7 +41082,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-035_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41118,8 +41118,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-035_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -41175,7 +41175,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-036_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41211,8 +41211,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-036_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -41268,7 +41268,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-037_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41304,8 +41304,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-037_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -41361,7 +41361,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-038_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41397,8 +41397,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-038_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -41455,7 +41455,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-039_main.png",
       "catalog-images/PROD-MEZH-039_interior.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41491,8 +41491,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-039_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -41549,7 +41549,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-040_main.png",
       "catalog-images/PROD-MEZH-040_interior.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41585,8 +41585,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-040_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -41643,7 +41643,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-041_main.png",
       "catalog-images/PROD-MEZH-041_interior.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41679,8 +41679,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-041_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -41738,7 +41738,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-042_alt1.png",
       "catalog-images/PROD-MEZH-042_alt2.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41774,8 +41774,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-042_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -41831,7 +41831,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-043_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41867,8 +41867,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-043_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -41924,7 +41924,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-044_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -41960,8 +41960,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-044_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -42017,7 +42017,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-045_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -42053,8 +42053,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-045_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -42110,7 +42110,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-046_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -42146,8 +42146,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-046_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -42203,7 +42203,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-047_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -42239,8 +42239,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-047_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -42296,7 +42296,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-048_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -42332,8 +42332,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-048_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -42389,7 +42389,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-049_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -42425,8 +42425,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-049_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -42482,7 +42482,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-050_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -42518,8 +42518,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-050_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -42575,7 +42575,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-051_main.png"
     ],
-    "price": 8350,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -42611,8 +42611,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-051_main.png"
       }
     ],
-    "kit_price": 8350,
-    "leaf_price": 5900,
+    "kit_price": 18350,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -42668,7 +42668,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-052_main.png"
     ],
-    "price": 8350,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -42704,8 +42704,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-052_main.png"
       }
     ],
-    "kit_price": 8350,
-    "leaf_price": 5900,
+    "kit_price": 18350,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -42761,7 +42761,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-MEZH-053_main.png"
     ],
-    "price": 8350,
+    "price": 15900,
     "price_type": "fixed",
     "variants": [
       {
@@ -42797,8 +42797,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-053_main.png"
       }
     ],
-    "kit_price": 8350,
-    "leaf_price": 5900,
+    "kit_price": 18350,
+    "leaf_price": 15900,
     "dealer_price": 5900
   },
   {
@@ -42857,7 +42857,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-MEZH-054_alt2.png",
       "catalog-images/PROD-MEZH-054_interior.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -42893,8 +42893,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-MEZH-054_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -42948,7 +42948,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-001_main.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -42984,8 +42984,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-001_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -43039,7 +43039,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-002_main.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -43075,8 +43075,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-002_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -43130,7 +43130,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-003_main.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -43166,8 +43166,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-003_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -43221,7 +43221,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-004_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -43257,8 +43257,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-004_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -43312,7 +43312,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-005_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -43348,8 +43348,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-005_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -43403,7 +43403,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-006_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -43439,8 +43439,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-006_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -43494,7 +43494,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-007_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -43530,8 +43530,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-007_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -43585,7 +43585,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-008_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -43621,8 +43621,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-008_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -43676,7 +43676,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-009_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -43712,8 +43712,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-009_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -43767,7 +43767,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-010_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -43803,8 +43803,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-010_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -43858,7 +43858,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-011_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -43894,8 +43894,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-011_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -43949,7 +43949,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-012_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -43985,8 +43985,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-012_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44040,7 +44040,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-013_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44076,8 +44076,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-013_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44131,7 +44131,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-014_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44167,8 +44167,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-014_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44222,7 +44222,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-015_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44258,8 +44258,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-015_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44313,7 +44313,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-016_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44349,8 +44349,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-016_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44404,7 +44404,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-017_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44440,8 +44440,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-017_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44495,7 +44495,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-018_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44531,8 +44531,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-018_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44586,7 +44586,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-019_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44622,8 +44622,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-019_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44677,7 +44677,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-020_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44713,8 +44713,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-020_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44768,7 +44768,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-021_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44804,8 +44804,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-021_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44859,7 +44859,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-022_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44895,8 +44895,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-022_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -44950,7 +44950,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-023_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -44986,8 +44986,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-023_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -45041,7 +45041,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-D25-024_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -45077,8 +45077,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-D25-024_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -45133,7 +45133,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-001_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -45169,8 +45169,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-001_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -45225,7 +45225,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-002_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -45261,8 +45261,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-002_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -45317,7 +45317,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-003_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -45353,8 +45353,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-003_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -45409,7 +45409,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-004_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -45445,8 +45445,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-004_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -45501,7 +45501,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-005_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -45537,8 +45537,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-005_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -45593,7 +45593,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-006_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -45629,8 +45629,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-006_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -45685,7 +45685,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-007_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -45721,8 +45721,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-007_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -45777,7 +45777,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-008_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -45813,8 +45813,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-008_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -45869,7 +45869,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-009_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -45905,8 +45905,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-009_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -45961,7 +45961,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-010_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -45997,8 +45997,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-010_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -46053,7 +46053,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-011_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -46089,8 +46089,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-011_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -46145,7 +46145,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-012_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -46181,8 +46181,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-012_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -46237,7 +46237,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-013_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -46273,8 +46273,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-013_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -46329,7 +46329,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-014_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -46365,8 +46365,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-014_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -46421,7 +46421,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-015_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -46457,8 +46457,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-015_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -46513,7 +46513,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-016_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -46549,8 +46549,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-016_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -46605,7 +46605,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-017_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -46641,8 +46641,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-017_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -46697,7 +46697,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-018_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -46733,8 +46733,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-018_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -46789,7 +46789,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-019_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -46825,8 +46825,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-019_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -46881,7 +46881,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-P14_img1.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -46918,8 +46918,8 @@ window.CATALOG_PRODUCTS = [
       }
     ],
     "need_manual_check": true,
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -46974,7 +46974,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-021_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -47010,8 +47010,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-021_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -47067,7 +47067,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-DVER-022_main.png",
       "catalog-images/PROD-DVER-022_alt1.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -47103,8 +47103,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-022_alt1.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -47159,7 +47159,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-023_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -47195,8 +47195,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-023_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -47251,7 +47251,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-024_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -47287,8 +47287,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-024_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -47343,7 +47343,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-025_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -47379,8 +47379,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-025_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -47435,7 +47435,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-026_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -47471,8 +47471,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-026_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -47527,7 +47527,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-027_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -47563,8 +47563,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-027_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -47619,7 +47619,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-028_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -47655,8 +47655,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-028_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -47711,7 +47711,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-029_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -47747,8 +47747,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-029_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -47803,7 +47803,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-030_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -47839,8 +47839,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-030_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -47895,7 +47895,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-031_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -47931,8 +47931,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-031_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -47987,7 +47987,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-032_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -48023,8 +48023,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-032_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -48079,7 +48079,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-033_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -48115,8 +48115,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-033_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -48171,7 +48171,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-DVER-034_main.png"
     ],
-    "price": 5040,
+    "price": 12990,
     "price_type": "fixed",
     "variants": [
       {
@@ -48207,8 +48207,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-DVER-034_main.png"
       }
     ],
-    "kit_price": 5040,
-    "leaf_price": 2990,
+    "kit_price": 15040,
+    "leaf_price": 12990,
     "dealer_price": 2990
   },
   {
@@ -48265,7 +48265,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-001_alt1.png",
       "catalog-images/PROD-HW-001_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -48301,8 +48301,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-001_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -48359,7 +48359,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-002_alt1.png",
       "catalog-images/PROD-HW-002_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -48395,8 +48395,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-002_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -48453,7 +48453,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-003_alt1.png",
       "catalog-images/PROD-HW-003_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -48489,8 +48489,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-003_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -48547,7 +48547,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-004_alt1.png",
       "catalog-images/PROD-HW-004_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -48583,8 +48583,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-004_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -48641,7 +48641,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-005_alt1.png",
       "catalog-images/PROD-HW-005_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -48677,8 +48677,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-005_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -48735,7 +48735,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-006_alt1.png",
       "catalog-images/PROD-HW-006_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -48771,8 +48771,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-006_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -48829,7 +48829,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-007_alt1.png",
       "catalog-images/PROD-HW-007_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -48865,8 +48865,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-007_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -48923,7 +48923,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-008_alt1.png",
       "catalog-images/PROD-HW-008_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -48959,8 +48959,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-008_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49017,7 +49017,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-009_alt1.png",
       "catalog-images/PROD-HW-009_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49053,8 +49053,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-009_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49111,7 +49111,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-010_alt1.png",
       "catalog-images/PROD-HW-010_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49147,8 +49147,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-010_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49205,7 +49205,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-011_alt1.png",
       "catalog-images/PROD-HW-011_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49241,8 +49241,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-011_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49299,7 +49299,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-012_alt1.png",
       "catalog-images/PROD-HW-012_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49335,8 +49335,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-012_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49393,7 +49393,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-013_alt1.png",
       "catalog-images/PROD-HW-013_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49429,8 +49429,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-013_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49487,7 +49487,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-014_alt1.png",
       "catalog-images/PROD-HW-014_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49523,8 +49523,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-014_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49581,7 +49581,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-015_alt1.png",
       "catalog-images/PROD-HW-015_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49617,8 +49617,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-015_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49675,7 +49675,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-016_alt1.png",
       "catalog-images/PROD-HW-016_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49711,8 +49711,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-016_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49769,7 +49769,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-017_alt1.png",
       "catalog-images/PROD-HW-017_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49805,8 +49805,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-017_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49863,7 +49863,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-018_alt1.png",
       "catalog-images/PROD-HW-018_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49899,8 +49899,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-018_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -49957,7 +49957,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-019_alt1.png",
       "catalog-images/PROD-HW-019_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -49993,8 +49993,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-019_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50051,7 +50051,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-020_alt1.png",
       "catalog-images/PROD-HW-020_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -50087,8 +50087,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-020_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50145,7 +50145,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-021_alt1.png",
       "catalog-images/PROD-HW-021_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -50181,8 +50181,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-021_alt1.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50239,7 +50239,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-022_alt1.png",
       "catalog-images/PROD-HW-022_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -50275,8 +50275,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-022_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50333,7 +50333,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-023_alt1.png",
       "catalog-images/PROD-HW-023_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -50369,8 +50369,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-023_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50427,7 +50427,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-024_alt1.png",
       "catalog-images/PROD-HW-024_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -50463,8 +50463,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-024_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50521,7 +50521,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-025_alt1.png",
       "catalog-images/PROD-HW-025_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -50557,8 +50557,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-025_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50615,7 +50615,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-026_alt1.png",
       "catalog-images/PROD-HW-026_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -50651,8 +50651,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-026_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50709,7 +50709,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-027_alt1.png",
       "catalog-images/PROD-HW-027_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -50745,8 +50745,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-027_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50803,7 +50803,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-028_alt1.png",
       "catalog-images/PROD-HW-028_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -50839,8 +50839,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-028_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50897,7 +50897,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-029_alt1.png",
       "catalog-images/PROD-HW-029_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -50933,8 +50933,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-029_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -50991,7 +50991,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-030_alt1.png",
       "catalog-images/PROD-HW-030_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51027,8 +51027,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-030_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -51085,7 +51085,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-031_alt1.png",
       "catalog-images/PROD-HW-031_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51121,8 +51121,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-031_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -51179,7 +51179,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-032_alt1.png",
       "catalog-images/PROD-HW-032_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51215,8 +51215,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-032_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -51273,7 +51273,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-033_alt1.png",
       "catalog-images/PROD-HW-033_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51309,8 +51309,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-033_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -51367,7 +51367,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-034_alt1.png",
       "catalog-images/PROD-HW-034_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51403,8 +51403,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-034_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -51461,7 +51461,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-035_alt1.png",
       "catalog-images/PROD-HW-035_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51497,8 +51497,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-035_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -51555,7 +51555,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-036_alt1.png",
       "catalog-images/PROD-HW-036_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51591,8 +51591,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-036_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -51647,7 +51647,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-037_main.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51683,8 +51683,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-037_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -51739,7 +51739,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-038_main.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51775,8 +51775,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-038_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -51831,7 +51831,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-039_main.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51867,8 +51867,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-039_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -51923,7 +51923,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-040_main.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -51959,8 +51959,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-040_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -52017,7 +52017,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-041_alt1.png",
       "catalog-images/PROD-HW-041_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -52053,8 +52053,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-041_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -52111,7 +52111,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-HW-042_alt1.png",
       "catalog-images/PROD-HW-042_alt2.png"
     ],
-    "price": 7150,
+    "price": 14750,
     "price_type": "fixed",
     "variants": [
       {
@@ -52147,8 +52147,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-042_main.png"
       }
     ],
-    "kit_price": 7150,
-    "leaf_price": 4750,
+    "kit_price": 17150,
+    "leaf_price": 14750,
     "dealer_price": 4750
   },
   {
@@ -52203,7 +52203,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-043_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -52239,8 +52239,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-043_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -52295,7 +52295,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-044_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -52331,8 +52331,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-044_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -52387,7 +52387,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-045_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -52423,8 +52423,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-045_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -52479,7 +52479,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-046_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -52515,8 +52515,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-046_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -52571,7 +52571,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-047_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -52607,8 +52607,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-047_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -52663,7 +52663,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-048_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -52699,8 +52699,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-048_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -52755,7 +52755,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-049_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -52791,8 +52791,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-049_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -52847,7 +52847,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-050_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -52883,8 +52883,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-050_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -52939,7 +52939,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-051_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -52975,8 +52975,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-051_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -53031,7 +53031,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-052_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -53067,8 +53067,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-052_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -53123,7 +53123,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-053_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -53159,8 +53159,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-053_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -53215,7 +53215,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-054_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -53251,8 +53251,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-054_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -53307,7 +53307,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-055_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -53343,8 +53343,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-055_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -53399,7 +53399,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-056_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -53435,8 +53435,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-056_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -53491,7 +53491,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-057_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -53527,8 +53527,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-057_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -53583,7 +53583,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-058_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -53619,8 +53619,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-058_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -53675,7 +53675,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-059_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -53711,8 +53711,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-059_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -53767,7 +53767,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-060_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -53803,8 +53803,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-060_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -53859,7 +53859,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-061_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -53895,8 +53895,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-061_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -53951,7 +53951,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-062_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -53987,8 +53987,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-062_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -54043,7 +54043,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-063_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -54079,8 +54079,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-063_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -54135,7 +54135,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-064_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -54171,8 +54171,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-064_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -54227,7 +54227,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-065_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -54263,8 +54263,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-065_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -54319,7 +54319,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-066_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -54355,8 +54355,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-066_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -54411,7 +54411,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-067_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -54447,8 +54447,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-067_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -54503,7 +54503,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-068_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -54539,8 +54539,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-068_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -54595,7 +54595,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-069_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -54631,8 +54631,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-069_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -54687,7 +54687,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-070_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -54723,8 +54723,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-070_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -54779,7 +54779,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-071_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -54815,8 +54815,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-071_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -54871,7 +54871,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-072_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -54907,8 +54907,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-072_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -54963,7 +54963,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-073_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -54999,8 +54999,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-073_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -55055,7 +55055,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-074_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -55091,8 +55091,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-074_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -55147,7 +55147,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-075_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -55183,8 +55183,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-075_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -55239,7 +55239,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-076_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -55275,8 +55275,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-076_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -55331,7 +55331,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-077_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -55367,8 +55367,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-077_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -55423,7 +55423,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-078_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -55459,8 +55459,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-078_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -55515,7 +55515,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-079_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -55551,8 +55551,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-079_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -55607,7 +55607,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-080_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -55643,8 +55643,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-080_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -55699,7 +55699,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-081_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -55735,8 +55735,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-081_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -55791,7 +55791,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-082_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -55827,8 +55827,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-082_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -55883,7 +55883,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-083_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -55919,8 +55919,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-083_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -55975,7 +55975,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-084_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56011,8 +56011,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-084_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56067,7 +56067,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-085_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56103,8 +56103,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-085_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56159,7 +56159,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-086_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56195,8 +56195,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-086_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56251,7 +56251,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-087_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56287,8 +56287,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-087_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56343,7 +56343,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-088_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56379,8 +56379,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-088_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56435,7 +56435,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-089_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56471,8 +56471,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-089_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56527,7 +56527,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-090_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56563,8 +56563,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-090_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56619,7 +56619,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-091_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56655,8 +56655,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-091_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56711,7 +56711,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-092_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56747,8 +56747,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-092_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56803,7 +56803,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-093_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56839,8 +56839,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-093_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56895,7 +56895,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-094_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -56931,8 +56931,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-094_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -56987,7 +56987,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-095_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -57023,8 +57023,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-095_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -57079,7 +57079,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-096_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -57115,8 +57115,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-096_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -57171,7 +57171,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-097_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -57207,8 +57207,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-097_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -57263,7 +57263,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-098_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -57299,8 +57299,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-098_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -57355,7 +57355,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-099_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -57391,8 +57391,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-099_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -57447,7 +57447,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-100_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -57483,8 +57483,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-100_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -57539,7 +57539,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-101_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -57575,8 +57575,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-101_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -57631,7 +57631,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-102_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -57667,8 +57667,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-102_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -57723,7 +57723,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-103_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -57759,8 +57759,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-103_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -57815,7 +57815,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-104_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -57851,8 +57851,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-104_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -57907,7 +57907,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-105_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -57943,8 +57943,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-105_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -57999,7 +57999,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-106_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -58035,8 +58035,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-106_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -58091,7 +58091,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-107_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -58127,8 +58127,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-107_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -58183,7 +58183,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-108_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -58219,8 +58219,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-108_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -58275,7 +58275,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-109_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -58311,8 +58311,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-109_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -58367,7 +58367,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-110_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -58403,8 +58403,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-110_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -58459,7 +58459,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-111_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -58495,8 +58495,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-111_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -58551,7 +58551,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-112_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -58587,8 +58587,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-112_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -58643,7 +58643,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-113_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -58679,8 +58679,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-113_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -58735,7 +58735,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-114_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -58771,8 +58771,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-114_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -58827,7 +58827,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-115_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -58863,8 +58863,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-115_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -58919,7 +58919,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-116_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -58955,8 +58955,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-116_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -59011,7 +59011,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-117_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -59047,8 +59047,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-117_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -59103,7 +59103,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-118_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -59139,8 +59139,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-118_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -59195,7 +59195,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-119_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -59231,8 +59231,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-119_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -59287,7 +59287,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-120_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -59323,8 +59323,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-120_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -59379,7 +59379,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-121_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -59415,8 +59415,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-121_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -59471,7 +59471,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-122_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -59507,8 +59507,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-122_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -59563,7 +59563,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-123_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -59599,8 +59599,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-123_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -59655,7 +59655,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-124_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -59691,8 +59691,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-124_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -59747,7 +59747,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-125_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -59783,8 +59783,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-125_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -59839,7 +59839,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-126_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -59875,8 +59875,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-126_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -59931,7 +59931,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-127_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -59967,8 +59967,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-127_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -60023,7 +60023,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-128_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -60059,8 +60059,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-128_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -60115,7 +60115,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-129_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -60151,8 +60151,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-129_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -60207,7 +60207,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-130_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -60243,8 +60243,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-130_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -60299,7 +60299,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-131_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -60335,8 +60335,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-131_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -60391,7 +60391,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-132_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -60427,8 +60427,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-132_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -60483,7 +60483,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-133_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -60519,8 +60519,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-133_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -60575,7 +60575,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-134_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -60611,8 +60611,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-134_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -60667,7 +60667,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-135_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -60703,8 +60703,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-135_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -60759,7 +60759,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-P86_img1.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -60796,8 +60796,8 @@ window.CATALOG_PRODUCTS = [
       }
     ],
     "need_manual_check": true,
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -60852,7 +60852,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-137_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -60888,8 +60888,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-137_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -60944,7 +60944,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-138_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -60980,8 +60980,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-138_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -61036,7 +61036,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-139_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -61072,8 +61072,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-139_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -61128,7 +61128,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-140_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -61164,8 +61164,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-140_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -61220,7 +61220,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-141_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -61256,8 +61256,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-141_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -61312,7 +61312,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-142_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -61348,8 +61348,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-142_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -61404,7 +61404,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-143_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -61440,8 +61440,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-143_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -61496,7 +61496,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-144_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -61532,8 +61532,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-144_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -61588,7 +61588,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-145_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -61624,8 +61624,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-145_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -61680,7 +61680,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-146_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -61716,8 +61716,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-146_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -61772,7 +61772,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-147_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -61808,8 +61808,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-147_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -61864,7 +61864,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-148_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -61900,8 +61900,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-148_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -61956,7 +61956,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-149_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -61992,8 +61992,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-149_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -62048,7 +62048,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-150_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -62084,8 +62084,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-150_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -62140,7 +62140,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-151_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -62176,8 +62176,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-151_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -62232,7 +62232,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-152_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -62268,8 +62268,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-152_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -62324,7 +62324,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-153_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -62360,8 +62360,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-153_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -62416,7 +62416,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-154_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -62452,8 +62452,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-154_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -62508,7 +62508,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-155_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -62544,8 +62544,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-155_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -62600,7 +62600,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-156_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -62636,8 +62636,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-156_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -62692,7 +62692,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-157_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -62728,8 +62728,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-157_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -62784,7 +62784,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-158_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -62820,8 +62820,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-158_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -62876,7 +62876,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-159_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -62912,8 +62912,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-159_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -62968,7 +62968,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-160_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -63004,8 +63004,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-160_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -63060,7 +63060,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-161_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -63096,8 +63096,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-161_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -63152,7 +63152,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-162_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -63188,8 +63188,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-162_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -63244,7 +63244,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-163_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -63280,8 +63280,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-163_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -63336,7 +63336,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-164_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -63372,8 +63372,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-164_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -63428,7 +63428,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-165_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -63464,8 +63464,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-165_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -63520,7 +63520,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-166_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -63556,8 +63556,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-166_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -63612,7 +63612,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-167_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -63648,8 +63648,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-167_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -63704,7 +63704,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-168_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -63740,8 +63740,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-168_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -63796,7 +63796,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-169_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -63832,8 +63832,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-169_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -63888,7 +63888,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-170_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -63924,8 +63924,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-170_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -63980,7 +63980,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-171_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -64016,8 +64016,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-171_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -64072,7 +64072,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-172_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -64108,8 +64108,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-172_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -64164,7 +64164,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-173_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -64200,8 +64200,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-173_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -64256,7 +64256,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-174_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -64292,8 +64292,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-174_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -64348,7 +64348,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-175_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -64384,8 +64384,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-175_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -64440,7 +64440,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-176_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -64476,8 +64476,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-176_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -64532,7 +64532,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-177_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -64568,8 +64568,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-177_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -64624,7 +64624,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-178_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -64660,8 +64660,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-178_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -64716,7 +64716,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-179_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -64752,8 +64752,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-179_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -64808,7 +64808,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-180_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -64844,8 +64844,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-180_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -64900,7 +64900,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-181_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -64936,8 +64936,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-181_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -64992,7 +64992,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-182_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65028,8 +65028,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-182_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -65084,7 +65084,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-183_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65120,8 +65120,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-183_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -65176,7 +65176,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-184_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65212,8 +65212,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-184_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -65268,7 +65268,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-185_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65304,8 +65304,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-185_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -65360,7 +65360,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-186_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65396,8 +65396,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-186_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -65452,7 +65452,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-187_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65488,8 +65488,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-187_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -65544,7 +65544,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-188_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65580,8 +65580,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-188_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -65636,7 +65636,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-189_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65672,8 +65672,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-189_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -65728,7 +65728,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-190_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65764,8 +65764,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-190_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -65820,7 +65820,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-191_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65856,8 +65856,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-191_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -65912,7 +65912,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-192_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -65948,8 +65948,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-192_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66004,7 +66004,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-193_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66040,8 +66040,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-193_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66096,7 +66096,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-194_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66132,8 +66132,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-194_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66188,7 +66188,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-195_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66224,8 +66224,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-195_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66280,7 +66280,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-196_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66316,8 +66316,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-196_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66372,7 +66372,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-197_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66408,8 +66408,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-197_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66464,7 +66464,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-198_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66500,8 +66500,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-198_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66556,7 +66556,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-199_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66592,8 +66592,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-199_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66648,7 +66648,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-200_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66684,8 +66684,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-200_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66740,7 +66740,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-201_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66776,8 +66776,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-201_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66832,7 +66832,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-202_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66868,8 +66868,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-202_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -66924,7 +66924,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-203_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -66960,8 +66960,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-203_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -67016,7 +67016,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-204_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -67052,8 +67052,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-204_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -67108,7 +67108,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-205_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -67144,8 +67144,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-205_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -67200,7 +67200,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-206_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -67236,8 +67236,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-206_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -67292,7 +67292,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-207_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -67328,8 +67328,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-207_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -67384,7 +67384,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-208_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -67420,8 +67420,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-208_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -67476,7 +67476,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-209_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -67512,8 +67512,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-209_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -67568,7 +67568,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-210_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -67604,8 +67604,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-210_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -67660,7 +67660,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-211_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -67696,8 +67696,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-211_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -67752,7 +67752,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-212_main.png"
     ],
-    "price": 5980,
+    "price": 13800,
     "price_type": "fixed",
     "variants": [
       {
@@ -67788,8 +67788,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-212_main.png"
       }
     ],
-    "kit_price": 5980,
-    "leaf_price": 3800,
+    "kit_price": 15980,
+    "leaf_price": 13800,
     "dealer_price": 3800
   },
   {
@@ -67844,7 +67844,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-213_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -67880,8 +67880,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-213_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -67936,7 +67936,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-214_main.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -67972,8 +67972,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-HW-214_main.png"
       }
     ],
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -68028,7 +68028,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-P120_img1.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -68065,8 +68065,8 @@ window.CATALOG_PRODUCTS = [
       }
     ],
     "need_manual_check": true,
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   },
   {
@@ -68121,7 +68121,7 @@ window.CATALOG_PRODUCTS = [
     "images": [
       "catalog-images/PROD-HW-P120_img1.png"
     ],
-    "price": 4900,
+    "price": 12850,
     "price_type": "fixed",
     "variants": [
       {
@@ -68158,8 +68158,8 @@ window.CATALOG_PRODUCTS = [
       }
     ],
     "need_manual_check": true,
-    "kit_price": 4900,
-    "leaf_price": 2850,
+    "kit_price": 14900,
+    "leaf_price": 12850,
     "dealer_price": 2850
   }
 ];
