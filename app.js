@@ -618,7 +618,7 @@
       grid.innerHTML = `
         <div class="empty-catalog-state" style="grid-column: 1 / -1; padding: 60px 20px; text-align: center;">
           <div style="font-size: 2.5rem; margin-bottom: 12px;">🔍</div>
-          <div style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--text-primary); margin-bottom: 8px;">Модели не найдены</div>
+          <div style="font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--text-primary); margin-bottom: 8px;">Модели не найдены</div>
           <div style="color: var(--text-secondary); font-size: 0.9375rem; max-width: 440px; margin: 0 auto 20px;">
             Попробуйте изменить поисковый запрос или сбросить активные фильтры параметров.
           </div>
@@ -1210,7 +1210,7 @@
         </div>
 
         <div style="font-size: 0.75rem; color: var(--text-muted); background: rgba(0,0,0,0.2); padding: 8px 12px; border-radius: var(--radius-md);">
-          ℹ️ <strong>Правило прозрачности:</strong> В интернет-магазине «Двери №1» цена не навязывается. Точная смета формируется после бесплатного выезда мастера-замерщика с лазерным нивелиром.
+          ℹ️ <strong>Правило прозрачности:</strong> В салоне «Двери №1» цена фиксируется прозрачно. Точная смета формируется после лазерного замера геометрии проёмов инженером.
         </div>
 
         <button type="button" class="btn-card-request" onclick="window.DverApp.openLeadModal('${product.id}')">
@@ -1337,7 +1337,7 @@
         `;
       } else {
         summaryBox.innerHTML = `
-          <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Бесплатный выезд инженера-замерщика</div>
+          <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Выезд инженера-замерщика для проверки проёмов</div>
           <div style="color: var(--text-secondary);">
             Инженер привезет каталоги покрытий, веер эмалей и проведет лазерный замер дверных проемов
           </div>

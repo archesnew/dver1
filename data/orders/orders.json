@@ -1,5 +1,152 @@
 [
   {
+    "id": "D1-2026-9767",
+    "idempotencyKey": "idemp-1795215378759-6jvgrnh4b",
+    "status": "Новая",
+    "createdAt": "2026-11-20T22:56:18.765Z",
+    "client": {
+      "name": "Руслан Хабибуллин",
+      "phone": "+79033889900",
+      "city": "Казань"
+    },
+    "delivery": {
+      "type": "delivery",
+      "installation": true,
+      "comment": "ул. Баумана, 58. Срочный заказ на загородный дом."
+    },
+    "items": [
+      {
+        "id": "PROD-CHAM-063-0-2000х600 мм-standard_kit_with_hardware-Универсальное",
+        "productId": "PROD-CHAM-063",
+        "title": "L 1",
+        "brand": "Chameleon Doors",
+        "collection": "LINE COLLECTION",
+        "article": "",
+        "image": "data/catalog-output/catalog-images/PROD-CHAM-063_main.png",
+        "variant": "ПВХ декор по каталогу",
+        "size": "2000х600 мм",
+        "opening": "Универсальное",
+        "scenario": "standard_kit_with_hardware",
+        "scenarioTitle": "Полный комплект с фурнитурой",
+        "hardware": "Базовая ручка с магнитным замком",
+        "wcTurn": false,
+        "quantity": 1,
+        "unitPrice": 8300,
+        "isPriceKnown": true,
+        "totalPrice": 8300,
+        "priceText": "8 300 ₽"
+      },
+      {
+        "id": "PROD-CHAM-001-0-2000х600 мм-standard_kit_with_hardware-Direct",
+        "productId": "PROD-CHAM-001",
+        "title": "Invisible (Скрытая дверь под отделку)",
+        "brand": "Chameleon Doors",
+        "collection": "Invisible",
+        "article": "",
+        "image": "data/catalog-output/catalog-images/PROD-CHAM-001_main.png",
+        "variant": "Грунт",
+        "size": "2000х600 мм",
+        "opening": "Direct",
+        "scenario": "standard_kit_with_hardware",
+        "scenarioTitle": "Полный комплект с фурнитурой",
+        "hardware": "Базовая ручка с магнитным замком",
+        "wcTurn": false,
+        "quantity": 1,
+        "unitPrice": 19900,
+        "isPriceKnown": true,
+        "totalPrice": 19900,
+        "priceText": "19 900 ₽"
+      }
+    ],
+    "totalKnownPrice": 28200,
+    "hasUncertainPrices": false,
+    "priceNotice": "Сумма фиксирована по позициям каталога."
+  },
+  {
+    "id": "D1-2026-6589",
+    "idempotencyKey": "idemp-1795215362690-7q6jg1sd2",
+    "status": "Новая",
+    "createdAt": "2026-11-20T22:56:02.695Z",
+    "client": {
+      "name": "Елена Васильева",
+      "phone": "+79274112233",
+      "city": "Набережные Челны"
+    },
+    "delivery": {
+      "type": "pickup",
+      "installation": true,
+      "comment": ""
+    },
+    "items": [
+      {
+        "id": "PROD-FERR-001-0-860х2050 мм-standard_kit_with_hardware-Левое",
+        "productId": "PROD-FERR-001",
+        "title": "13 СМ VITRA ВИНОРИТ ПАТИНА",
+        "brand": "Феррони",
+        "collection": "Двери с терморазрывом",
+        "article": "",
+        "image": "data/catalog-output/catalog-images/PROD-FERR-001_main.png",
+        "variant": "атмосферостойкое порошково-полимерное «букле шоколад»,",
+        "size": "860х2050 мм",
+        "opening": "Левое",
+        "scenario": "standard_kit_with_hardware",
+        "scenarioTitle": "Полный комплект с фурнитурой",
+        "hardware": "Базовая ручка с магнитным замком",
+        "wcTurn": false,
+        "quantity": 1,
+        "unitPrice": 48500,
+        "isPriceKnown": true,
+        "totalPrice": 48500,
+        "priceText": "48 500 ₽"
+      }
+    ],
+    "totalKnownPrice": 48500,
+    "hasUncertainPrices": false,
+    "priceNotice": "Сумма фиксирована по позициям каталога."
+  },
+  {
+    "id": "D1-2026-9549",
+    "idempotencyKey": "idemp-1795215353152-8wkdrfr5k",
+    "status": "Новая",
+    "createdAt": "2026-11-20T22:55:53.167Z",
+    "client": {
+      "name": "Александр Смирнов",
+      "phone": "+79172050101",
+      "city": "Казань"
+    },
+    "delivery": {
+      "type": "delivery",
+      "installation": true,
+      "comment": "ул. Кремлевская, 18, кв. 42. Прошу привезти образцы шпона."
+    },
+    "items": [
+      {
+        "id": "PROD-CHAM-063-0-2000х600 мм-standard_kit_with_hardware-Универсальное",
+        "productId": "PROD-CHAM-063",
+        "title": "L 1",
+        "brand": "Chameleon Doors",
+        "collection": "LINE COLLECTION",
+        "article": "",
+        "image": "data/catalog-output/catalog-images/PROD-CHAM-063_main.png",
+        "variant": "ПВХ декор по каталогу",
+        "size": "2000х600 мм",
+        "opening": "Универсальное",
+        "scenario": "standard_kit_with_hardware",
+        "scenarioTitle": "Полный комплект с фурнитурой",
+        "hardware": "С сантехническим фиксатором (WC)",
+        "wcTurn": true,
+        "quantity": 1,
+        "unitPrice": 10150,
+        "isPriceKnown": true,
+        "totalPrice": 10150,
+        "priceText": "10 150 ₽"
+      }
+    ],
+    "totalKnownPrice": 10150,
+    "hasUncertainPrices": false,
+    "priceNotice": "Сумма фиксирована по позициям каталога."
+  },
+  {
     "id": "D1-2026-5061",
     "idempotencyKey": "idemp-1795214380967-v660zxf5b",
     "status": "Новая",

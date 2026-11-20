@@ -1009,6 +1009,7 @@
       productId: p.id,
       brand: p.brand || 'Двери №1',
       model: p.model || 'Модель двери',
+      title: p.model || 'Модель двери',
       collection: p.collection || '',
       article: p.article || '',
       variant: vName,
@@ -1050,7 +1051,7 @@
     if (pdpState.cart.length === 0) {
       listEl.innerHTML = `
         <div class="empty-cart-msg">
-          <p style="font-size: 1.125rem; font-family: 'Playfair Display', serif; margin-bottom: 8px;">Ваша спецификация пока пуста</p>
+          <p style="font-size: 1.125rem; font-family: var(--font-display); font-weight: 600; margin-bottom: 8px;">Ваша спецификация пока пуста</p>
           <p style="color: var(--text-muted); font-size: 0.875rem;">Выберите модель в каталоге или нажмите кнопку «В корзину».</p>
         </div>
       `;

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /data/orders/
+Disallow: /data/carts/
+Disallow: /data/sms/
+Disallow: /api/
+
+Sitemap: https://dver1.ru/sitemap.xml
