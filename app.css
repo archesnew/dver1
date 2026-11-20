@@ -1713,30 +1713,36 @@ a {
   background: var(--bg-surface);
   border: 1px solid var(--border-stone);
   border-radius: var(--radius-md);
-  padding: 18px 16px;
+  padding: 0;
   position: sticky;
-  top: 92px;
-  max-height: calc(100vh - 110px);
+  top: 88px;
+  max-height: calc(100vh - 104px);
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow-card);
-  width: 240px;
-  contain: layout paint;
+  width: 250px;
+  overflow: hidden;
+  min-height: 0;
+  z-index: 10;
 }
 
 .filters-panel-inner {
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .filters-panel-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
-  padding-bottom: 10px;
+  flex-shrink: 0;
+  padding: 16px 18px 12px;
+  margin-bottom: 0;
   border-bottom: 1px solid var(--border-stone-subtle);
+  background: var(--bg-surface);
 }
 
 .filters-panel-title {
@@ -1762,17 +1768,26 @@ a {
 }
 
 .filters-scroll-body {
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
-  flex: 1;
-  padding-right: 4px;
+  overflow-x: hidden;
+  padding: 14px 18px 16px;
+  overscroll-behavior: contain;
 }
 
 .filters-scroll-body::-webkit-scrollbar {
-  width: 3px;
+  width: 4px;
+}
+.filters-scroll-body::-webkit-scrollbar-track {
+  background: transparent;
 }
 .filters-scroll-body::-webkit-scrollbar-thumb {
   background: var(--border-stone);
   border-radius: 2px;
+}
+.filters-scroll-body::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
 }
 
 .filter-section {
@@ -1867,12 +1882,23 @@ a {
 }
 
 .color-dot-swatch {
-  width: 11px;
-  height: 11px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
   flex-shrink: 0;
-  margin-right: 8px;
+  margin-right: 10px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.color-row-btn:hover .color-dot-swatch {
+  transform: scale(1.12);
+}
+
+.color-row-btn.active .color-dot-swatch {
+  box-shadow: 0 0 0 2px var(--bg-surface), 0 0 0 4px var(--accent-terracotta);
+  transform: scale(1.08);
 }
 
 /* Спойлер для второстепенных параметров */
@@ -1920,9 +1946,11 @@ a {
 .filters-panel-footer {
   display: flex;
   gap: 8px;
-  margin-top: 14px;
-  padding-top: 12px;
+  flex-shrink: 0;
+  padding: 12px 18px;
+  margin-top: 0;
   border-top: 1px solid var(--border-stone-subtle);
+  background: var(--bg-surface);
 }
 
 .btn-reset-filters-clean {
@@ -2211,16 +2239,20 @@ a {
     left: 0;
     bottom: 0;
     width: 320px;
-    max-width: 86vw;
+    max-width: 88vw;
     background: var(--bg-surface);
     border: none;
     border-radius: 0;
     z-index: 1050;
-    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 0 28px rgba(0, 0, 0, 0.25);
     transform: translateX(-100%);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100vh;
     max-height: 100vh;
-    padding: 20px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .catalog-filters-panel.open {

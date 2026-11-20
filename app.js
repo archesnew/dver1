@@ -118,11 +118,18 @@
   // ВСПОМОГАТЕЛЬНАЯ ЛОГИКА ФИЛЬТРАЦИИ ПО ЦВЕТУ И ТИПУ
   // --------------------------------------------------------------------------
   function matchesColor(product, colorKey) {
-    if (colorKey === 'all') return true;
+    if (!colorKey || colorKey === 'all') return true;
 
     const colorStrings = [];
-    if (product.specs?.color) colorStrings.push(product.specs.color.toLowerCase());
-    if (product.specs?.texture) colorStrings.push(product.specs.texture.toLowerCase());
+    if (product.title) colorStrings.push(product.title.toLowerCase());
+    if (product.model) colorStrings.push(product.model.toLowerCase());
+    if (product.collection) colorStrings.push(product.collection.toLowerCase());
+    if (product.description) colorStrings.push(product.description.toLowerCase());
+    if (product.specs) {
+      Object.values(product.specs).forEach(val => {
+        if (typeof val === 'string') colorStrings.push(val.toLowerCase());
+      });
+    }
     (product.variants || []).forEach(v => {
       if (v.color) colorStrings.push(v.color.toLowerCase());
       if (v.name) colorStrings.push(v.name.toLowerCase());
@@ -131,15 +138,15 @@
 
     switch (colorKey) {
       case 'white':
-        return /бел|9003|светл|крем|слонов|молоч|айвори/.test(joined);
+        return /бел|9003|светл|крем|слонов|молоч|айвори|вайт|white|снеж|бланко/.test(joined);
       case 'grey':
-        return /сер|графит|антрацит|букле|бетон|серебр|агат/.test(joined);
+        return /сер|графит|антрацит|букле|бетон|серебр|агат|грей|grey|gray|пепел|ферро/.test(joined);
       case 'wood':
-        return /дуб|ясен|орех|венге|листвен|тик|сосн|кедр|капучино|каштан|дерев/.test(joined);
+        return /дуб|ясен|орех|листвен|тик|сосн|кедр|капучино|каштан|дерев|шале|патина|сонома|ривьера|wood/.test(joined);
       case 'dark':
-        return /черн|чёрн|шоколад|темн|тёмн/.test(joined);
+        return /черн|чёрн|шоколад|темн|тёмн|black|блэк|карбон|нео ?блэк|венге|марен|ноч|угол|dark/.test(joined);
       case 'metal':
-        return /антик|мед|муар|шагрен|бронз|мета/.test(joined);
+        return /антик|мед|муар|шагрен|бронз|мета|латун|сталь|хром|нержав|металл/.test(joined);
       default:
         return true;
     }
@@ -175,12 +182,24 @@
   // ПОСТРОЕНИЕ 5 ОСНОВНЫХ И ВТОРОСТЕПЕННЫХ ФИЛЬТРОВ
   // --------------------------------------------------------------------------
   function buildFacetFilters() {
-    // 1. Категории
+    // 1. Категории - считаем по всем товарам каталога
     const categoryCounts = {};
+    state.allProducts.forEach(p => {
+      if (p.category) {
+        categoryCounts[p.category] = (categoryCounts[p.category] || 0) + 1;
+      }
+    });
+
+    // Для остальных фасетов: базовый пул товаров зависит от активной категории
+    const baseProducts = (state.activeCategory && state.activeCategory !== 'all')
+      ? state.allProducts.filter(p => p.category === state.activeCategory)
+      : state.allProducts;
+
     // 2. Бренды
     const brandCounts = {};
-    // 3. Цвета
+    // 3. Цветовая палитра
     const colorCounts = {
+      all: baseProducts.length,
       white: 0,
       grey: 0,
       wood: 0,
@@ -189,6 +208,7 @@
     };
     // 4. Типы
     const typeCounts = {
+      all: baseProducts.length,
       flush: 0,
       glass: 0,
       invisible: 0,
@@ -198,10 +218,7 @@
     const styleCounts = {};
     const materialCounts = {};
 
-    state.allProducts.forEach(p => {
-      if (p.category) {
-        categoryCounts[p.category] = (categoryCounts[p.category] || 0) + 1;
-      }
+    baseProducts.forEach(p => {
       if (p.brand) {
         brandCounts[p.brand] = (brandCounts[p.brand] || 0) + 1;
       }
@@ -237,6 +254,7 @@
       state.activeCategory = (state.activeCategory === val) ? 'all' : val;
       state.currentPage = 1;
       applyFiltersAndSort();
+      buildFacetFilters();
     });
 
     // 2. Фабрика / Производитель
@@ -244,6 +262,7 @@
       state.activeBrand = (state.activeBrand === val) ? 'all' : val;
       state.currentPage = 1;
       applyFiltersAndSort();
+      buildFacetFilters();
     }, 7);
 
     // 3. Цветовая гамма
@@ -251,6 +270,7 @@
       state.activeColor = (state.activeColor === val) ? 'all' : val;
       state.currentPage = 1;
       applyFiltersAndSort();
+      buildFacetFilters();
     });
 
     // 4. Тип двери
@@ -258,6 +278,7 @@
       state.activeType = (state.activeType === val) ? 'all' : val;
       state.currentPage = 1;
       applyFiltersAndSort();
+      buildFacetFilters();
     });
 
     // 5. Стоимость комплекта
@@ -273,12 +294,14 @@
       state.activeStyle = (state.activeStyle === val) ? 'all' : val;
       state.currentPage = 1;
       applyFiltersAndSort();
+      buildFacetFilters();
     }, 6);
 
     renderFilterOptionList('materialFilterList', materialCounts, state.activeMaterial, (val) => {
       state.activeMaterial = (state.activeMaterial === val) ? 'all' : val;
       state.currentPage = 1;
       applyFiltersAndSort();
+      buildFacetFilters();
     }, 6);
   }
 
@@ -322,17 +345,17 @@
     if (!container) return;
 
     const colors = [
-      { key: 'all', label: 'Все оттенки', hex: 'linear-gradient(135deg, #FAF9F6 0%, #8B5A2B 50%, #222 100%)', count: state.allProducts.length },
+      { key: 'all', label: 'Все оттенки', hex: 'linear-gradient(135deg, #FAF9F6 0%, #D4AF37 35%, #8B5A2B 70%, #222320 100%)', count: countMap.all || state.allProducts.length },
       { key: 'white', label: 'Белые и светлые', hex: '#FAF9F6', count: countMap.white },
-      { key: 'grey', label: 'Серые и графит', hex: '#6B6D6B', count: countMap.grey },
-      { key: 'wood', label: 'Древесные оттенки', hex: '#8B5A2B', count: countMap.wood },
-      { key: 'dark', label: 'Тёмные и чёрные', hex: '#222320', count: countMap.dark },
-      { key: 'metal', label: 'Металл и антик', hex: '#B8860B', count: countMap.metal }
+      { key: 'grey', label: 'Серые и графит', hex: '#686C6A', count: countMap.grey },
+      { key: 'wood', label: 'Древесные оттенки', hex: '#96633E', count: countMap.wood },
+      { key: 'dark', label: 'Тёмные и чёрные', hex: '#1E201E', count: countMap.dark },
+      { key: 'metal', label: 'Металл и антик', hex: 'linear-gradient(135deg, #B58A4A 0%, #7A5728 100%)', count: countMap.metal }
     ];
 
     let html = '';
     colors.forEach(c => {
-      const isActive = activeValue === c.key;
+      const isActive = activeValue === c.key || ((!activeValue || activeValue === 'all') && c.key === 'all');
       html += `
         <button type="button" class="filter-row-btn color-row-btn ${isActive ? 'active' : ''}" data-val="${c.key}">
           <span class="color-dot-swatch" style="background: ${c.hex};"></span>
@@ -356,7 +379,7 @@
     if (!container) return;
 
     const types = [
-      { key: 'all', label: 'Все конструкции', count: state.allProducts.length },
+      { key: 'all', label: 'Все конструкции', count: countMap.all || state.allProducts.length },
       { key: 'flush', label: 'Глухие полотна', count: countMap.flush },
       { key: 'glass', label: 'С остеклением / зеркалом', count: countMap.glass },
       { key: 'invisible', label: 'Скрытые Invisible', count: countMap.invisible },
@@ -365,7 +388,7 @@
 
     let html = '';
     types.forEach(t => {
-      const isActive = activeValue === t.key;
+      const isActive = activeValue === t.key || ((!activeValue || activeValue === 'all') && t.key === 'all');
       html += `
         <button type="button" class="filter-row-btn ${isActive ? 'active' : ''}" data-val="${t.key}">
           <span class="filter-label-text">${escapeHtml(t.label)}</span>
