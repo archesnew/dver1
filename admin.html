@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Двери №1 — Панель куратора каталога (Регламент V3.2)</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <style>
+    body { background-color: #0d121c; color: #f8fafc; font-family: 'Inter', sans-serif; }
+    .admin-bar-header {
+      background: #151d2a;
+      border-bottom: 1px solid #233045;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .admin-title { font-size: 1.15rem; font-weight: 700; color: #fff; }
+    .btn-return-store {
+      background: var(--accent-terracotta);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .admin-pub-tabs {
+      display: flex;
+      gap: 10px;
+      padding: 16px 24px;
+      background: #111827;
+      border-bottom: 1px solid #1f2937;
+    }
+    .admin-tab {
+      background: #1f2937;
+      color: #9ca3af;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 0.875rem;
+      border: 1px solid #374151;
+      cursor: pointer;
+    }
+    .admin-tab.active { background: #374151; color: #fff; border-color: #60a5fa; }
+    .admin-note {
+      padding: 12px 24px;
+      background: rgba(30, 41, 59, 0.5);
+      color: #94a3b8;
+      font-size: 0.8125rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    .admin-grid {
+      max-width: 1440px;
+      margin: 24px auto;
+      padding: 0 24px;
+    }
+    .admin-card {
+      background: #16202e;
+      border: 1px solid #24344b;
+      border-radius: 6px;
+      padding: 16px;
+      display: flex;
+      gap: 16px;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+    .admin-card-img {
+      width: 70px;
+      height: 100px;
+      object-fit: contain;
+      background: #0b1017;
+      border-radius: 4px;
+      padding: 4px;
+    }
+    .badge-status-ocr {
+      background: #78350f;
+      color: #fde68a;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-status-ok {
+      background: #064e3b;
+      color: #a7f3d0;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-bar-header">
+    <div class="admin-title">🔒 Служебный интерфейс куратора каталога «Двери №1» (Регламент V3.2)</div>
+    <a href="index.html" class="btn-return-store">← Вернуться в витрину магазина</a>
+  </div>
+
+  <div class="admin-pub-tabs">
+    <button class="admin-tab active" onclick="filterAdmin('all')">Все позиции (697)</button>
+    <button class="admin-tab" onclick="filterAdmin('verified')">✓ Верифицировано фабриками (642)</button>
+    <button class="admin-tab" onclick="filterAdmin('ocr')">⚠️ Черновики OCR (55)</button>
+  </div>
+
+  <div class="admin-note">
+    Служебный реестр базы данных каталога V3.2. Здесь отображаются метаданные источников, статусы OCR и технические спецификации. Покупателям в витрине эти технические элементы не демонстрируются.
+  </div>
+
+  <div class="admin-grid" id="adminList">
+    <!-- Заполняется скриптом -->
+  </div>
+
+  <script src="data/catalog-output/products-data.js"></script>
+  <script>
+    let currentFilter = 'all';
+    function renderAdminList() {
+      const container = document.getElementById('adminList');
+      if (!window.CATALOG_PRODUCTS) {
+        container.innerHTML = 'Загрузка...';
+        return;
+      }
+      const items = window.CATALOG_PRODUCTS.filter(p => {
+        const isOcr = p.source?.confidence_status === 'ocr_extracted';
+        if (currentFilter === 'ocr') return isOcr;
+        if (currentFilter === 'verified') return !isOcr;
+        return true;
+      });
+
+      container.innerHTML = `
+        <div style="margin-bottom: 12px; color: #94a3b8; font-size: 0.875rem;">
+          Показано записей: <strong>${items.length}</strong>
+        </div>
+        ${items.slice(0, 100).map(p => {
+          const isOcr = p.source?.confidence_status === 'ocr_extracted';
+          const img = (p.images && p.images.length > 0) ? ('data/catalog-output/' + p.images[0]) : 'logo.png';
+          return `
+            <div class="admin-card">
+              <img src="${img}" class="admin-card-img" alt="${p.model}">
+              <div style="flex: 1;">
+                <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 4px;">
+                  <span class="${isOcr ? 'badge-status-ocr' : 'badge-status-ok'}">
+                    ${isOcr ? '⚠️ Черновик OCR' : '✓ Проверено фабрикой'}
+                  </span>
+                  <span style="font-size: 0.75rem; color: #64748b;">ID: ${p.id}</span>
+                  <span style="font-size: 0.75rem; color: #64748b;">Вариантов: ${p.variants ? p.variants.length : 0}</span>
+                </div>
+                <div style="font-size: 1.05rem; font-weight: 600; color: #fff;">${p.brand} — ${p.model}</div>
+                <div style="font-size: 0.8125rem; color: #94a3b8; margin-top: 2px;">
+                  Коллекция: ${p.collection || '—'} • Категория: ${p.category} • Источник: ${p.source?.pdf_catalog || 'PDF'}
+                </div>
+              </div>
+              <div>
+                <a href="index.html#product-${p.id}" target="_blank" style="color: #60a5fa; font-size: 0.8125rem;">Открыть в витрине ↗</a>
+              </div>
+            </div>
+          `;
+        }).join('')}
+      `;
+    }
+
+    function filterAdmin(mode) {
+      currentFilter = mode;
+      document.querySelectorAll('.admin-tab').forEach((t, i) => {
+        t.classList.toggle('active', (mode === 'all' && i === 0) || (mode === 'verified' && i === 1) || (mode === 'ocr' && i === 2));
+      });
+      renderAdminList();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderAdminList);
+  </script>
+</body>
+</html>

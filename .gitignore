@@ -1,0 +1,45 @@
+# ==============================================================================
+# .gitignore — Двери №1 / Premium Showroom
+# ==============================================================================
+
+# Зависимости и пакеты
+node_modules/
+package-lock.json
+
+# Переменные окружения и секреты
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.cert
+*.secret
+
+# Временные файлы и системный кэш
+scratch/
+*.tmp
+*.temp
+*.log
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Системные файлы ОС
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Локальные артефакты скриншотов валидации дизайна в корне
+screen*.png
+crop*.png
+
+# Исходные тяжелые PDF-каталоги фабрик (>100 МБ, блокируются GitHub GH001)
+# Актуальные данные и структура находятся в data/catalog-output/
+data/catalog sources/
+data/catalog-sources/
+*.pdf
+
+# Резервные копии и промежуточные необработанные оригиналы
+# Рабочий каталог сайта использует data/catalog-output/catalog-images/
+data/catalog-output/catalog-images-original/
+data/catalog-output-backup/

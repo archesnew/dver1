@@ -1,0 +1,206 @@
+[
+  {
+    "id": "BRAND-AJAX",
+    "name": "AJAX",
+    "country": "Китай / Россия",
+    "description": "Дверная фурнитура, ручки, замки, петли, упоры, цилиндровые механизмы и доводчики.",
+    "categories": [
+      "Фурнитура"
+    ],
+    "catalogs": [
+      "2026_AJAX_catalog_web.pdf"
+    ],
+    "total_products": 84
+  },
+  {
+    "id": "BRAND-ARMADILLO",
+    "name": "Armadillo",
+    "country": "Италия / Китай",
+    "description": "Премиальная дверная фурнитура с многослойным покрытием TITANIUM, скрытые петли, магнитные замки.",
+    "categories": [
+      "Фурнитура"
+    ],
+    "catalogs": [
+      "2026_Armadillo_catalog_web_compressed.pdf"
+    ],
+    "total_products": 126
+  },
+  {
+    "id": "BRAND-CHAMELEON",
+    "name": "Chameleon Doors",
+    "country": "Россия",
+    "description": "Фабрика межкомнатных дверей, скрытых дверей Invisible, стеновых панелей и погонажа.",
+    "categories": [
+      "Двери со стеклом",
+      "Декоративные элементы и дополнительные решения",
+      "Комплектующие",
+      "Межкомнатные двери",
+      "Скрытые двери"
+    ],
+    "catalogs": [
+      "Chameleon Doors каталог 01.03.2026.pdf"
+    ],
+    "total_products": 164
+  },
+  {
+    "id": "BRAND-DVEREKI",
+    "name": "Двереки",
+    "country": "Россия",
+    "description": "Межкомнатные двери из экологичных материалов с выразительным дизайном.",
+    "categories": [
+      "Двери со стеклом",
+      "Межкомнатные двери"
+    ],
+    "catalogs": [
+      "Двереки каталог  .pdf"
+    ],
+    "total_products": 34
+  },
+  {
+    "id": "BRAND-DVERI2025",
+    "name": "Двери 2025",
+    "country": "Россия",
+    "description": "Современные каркасно-щитовые двери с алюминиевыми молдингами и фрезеровкой.",
+    "categories": [
+      "Межкомнатные двери"
+    ],
+    "catalogs": [
+      "Двери 2025.pdf"
+    ],
+    "total_products": 24
+  },
+  {
+    "id": "BRAND-FERRONI",
+    "name": "Феррони",
+    "country": "Россия",
+    "description": "Крупнейший российский производитель металлических входных дверей и терморазрывов.",
+    "categories": [
+      "Входные двери"
+    ],
+    "catalogs": [
+      "Каталог феррони 05-2026 (mngst) (4).pdf"
+    ],
+    "total_products": 68
+  },
+  {
+    "id": "BRAND-FSD",
+    "name": "ФСД",
+    "country": "Россия",
+    "description": "Широкий ассортимент входных и межкомнатных дверей складской программы.",
+    "categories": [
+      "Входные двери",
+      "Межкомнатные двери"
+    ],
+    "catalogs": [
+      "Каталог FSD 07-10-2025-2 цвета разв.pdf"
+    ],
+    "total_products": 23
+  },
+  {
+    "id": "BRAND-FUARO",
+    "name": "FUARO",
+    "country": "Китай / Россия",
+    "description": "Надежная дверная фурнитура из сплава ZAMAK, ручки на тонком основании 6 мм, замки и цилиндры.",
+    "categories": [
+      "Фурнитура"
+    ],
+    "catalogs": [
+      "2026_FUARO_catalog_DD_web (1).pdf"
+    ],
+    "total_products": 149
+  },
+  {
+    "id": "BRAND-HOLLYWOOD",
+    "name": "Двери Голливуда",
+    "country": "Россия",
+    "description": "Дизайнерские межкомнатные двери коллекций «Премьера» и «Блокбастер».",
+    "categories": [
+      "Двери со стеклом",
+      "Межкомнатные двери"
+    ],
+    "catalogs": [
+      "Каталог Двери Голливуда 2026г.pdf"
+    ],
+    "total_products": 216
+  },
+  {
+    "id": "BRAND-LUXOR",
+    "name": "Luxor",
+    "country": "Россия",
+    "description": "Премиальные стальные двери с терморазрывом, двойным МДФ и смарт-системами.",
+    "categories": [
+      "Входные двери"
+    ],
+    "catalogs": [
+      "Каталог Люксор май 2026 (3).pdf"
+    ],
+    "total_products": 41
+  },
+  {
+    "id": "BRAND-MEZH-DOORS",
+    "name": "Фабрика Межкомнатных Дверей",
+    "country": "Россия",
+    "description": "Межкомнатные двери скрытого монтажа, царговые, каркасно-щитовые и эмаль PRO.",
+    "categories": [
+      "Межкомнатные двери"
+    ],
+    "catalogs": [
+      "Каталог_межкомнатных_дверей_2026_3.pdf"
+    ],
+    "total_products": 54
+  },
+  {
+    "id": "BRAND-MORELLI",
+    "name": "Morelli",
+    "country": "Италия",
+    "description": "Итальянский бренд дизайнерской дверной фурнитуры, скрытых петель Innovation и систем для раздвижных дверей.",
+    "categories": [
+      "Фурнитура"
+    ],
+    "catalogs": [
+      "Морели .pdf"
+    ],
+    "total_products": 281
+  },
+  {
+    "id": "BRAND-PUNTO",
+    "name": "PUNTO",
+    "country": "Китай / Россия",
+    "description": "Современная дверная фурнитура, серия Estetica, ручки-скобы, кнобы, замки и петли.",
+    "categories": [
+      "Фурнитура"
+    ],
+    "catalogs": [
+      "2026_PUNTO_A4_web.pdf"
+    ],
+    "total_products": 186
+  },
+  {
+    "id": "BRAND-VIRADOORS",
+    "name": "ViraDoors",
+    "country": "Россия",
+    "description": "Металлические входные двери с современными замковыми системами и электронными биометрическими замками.",
+    "categories": [
+      "Входные двери",
+      "Фурнитура"
+    ],
+    "catalogs": [
+      "ViraDoors_каталог_2026_А4_4+4_НОВЫЙ_ПЕЧАТЬ.pdf"
+    ],
+    "total_products": 22
+  },
+  {
+    "id": "BRAND-YOSHKAR-OLA",
+    "name": "Йошкар-Ола",
+    "country": "Россия (Марий Эл)",
+    "description": "Производитель надежных входных стальных и межкомнатных дверей.",
+    "categories": [
+      "Входные двери",
+      "Межкомнатные двери"
+    ],
+    "catalogs": [
+      "ДВЕРИ ЙОШКАР ОЛА 2026.pdf"
+    ],
+    "total_products": 52
+  }
+]

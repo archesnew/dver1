@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Двери №1 — Премиальный шоурум межкомнатных и входных дверей | Казань и Набережные Челны</title>
+  <meta name="description" content="Шоурумы дизайнерских дверей «Двери №1». 697 моделей от ведущих фабрик. Инженерные системы, натуральный шпон, эмаль. Казань, Сибирский тракт 59б и Набережные Челны, Казанский проспект 232.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+  <!-- ЕДИНАЯ АРХИТЕКТУРНАЯ ШАПКА APPLE LIQUID GLASS -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <!-- СЛЕВА: ТОЛЬКО ОРИГИНАЛЬНЫЙ ЛОГОТИП -->
+      <a href="index.html" class="header-logo-link" aria-label="«Двери №1» — Главная">
+        <img src="logo.png" alt="Двери №1" class="header-logo-img">
+      </a>
+
+      <!-- ПО ЦЕНТРУ: КОМПАКТНОЕ МЕНЮ (DESKTOP) -->
+      <nav class="header-nav" id="headerNav" aria-label="Основная навигация">
+        <a href="#catalogContent" class="header-nav-link active" data-nav="catalog" onclick="if(window.DverApp && window.DverApp.resetAllFilters) window.DverApp.resetAllFilters();">Каталог</a>
+        <a href="#catalogContent" class="header-nav-link" data-nav="interior" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Межкомнатные двери');">Межкомнатные</a>
+        <a href="#catalogContent" class="header-nav-link" data-nav="entrance" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Входные двери');">Входные</a>
+        <a href="#catalogContent" class="header-nav-link" data-nav="invisible" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Скрытые двери');">Скрытые</a>
+        <a href="#showroomsSection" class="header-nav-link" data-nav="showrooms">Шоурумы</a>
+      </nav>
+
+      <!-- СПРАВА: СТЕКЛЯННАЯ КАПСУЛА CTA (DESKTOP) И МЕНЮ (MOBILE) -->
+      <div class="header-actions">
+        <button type="button" class="btn-glass-cta" id="btnHeaderLead" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Вызов замерщика из шапки');">
+          Вызвать замерщика
+        </button>
+
+        <button type="button" class="btn-glass-menu" id="mobileMenuBtn" aria-label="Открыть меню" aria-expanded="false">
+          <svg viewBox="0 0 18 18" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line class="menu-line line-1" x1="2.5" y1="4.5" x2="15.5" y2="4.5" />
+            <line class="menu-line line-2" x1="2.5" y1="9" x2="15.5" y2="9" />
+            <line class="menu-line line-3" x1="2.5" y1="13.5" x2="15.5" y2="13.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ПЛАВАЮЩЕЕ СТЕКЛЯННОЕ МОБИЛЬНОЕ МЕНЮ (APPLE LIQUID GLASS FLOATING PANEL) -->
+  <div class="mobile-glass-overlay" id="mobileGlassOverlay"></div>
+  <div class="mobile-glass-panel" id="mobileNavPanel" aria-hidden="true">
+    <div class="mobile-glass-inner">
+      <nav class="mobile-glass-nav" aria-label="Мобильная навигация">
+        <a href="#catalogContent" class="mobile-glass-link active" onclick="if(window.closeMobileMenu) window.closeMobileMenu(); if(window.DverApp && window.DverApp.resetAllFilters) window.DverApp.resetAllFilters();">
+          <span>Каталог</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu(); if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Межкомнатные двери');">
+          <span>Межкомнатные</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu(); if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Входные двери');">
+          <span>Входные</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu(); if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Скрытые двери');">
+          <span>Скрытые</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="#showroomsSection" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Шоурумы</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </nav>
+      <div class="mobile-glass-footer">
+        <button type="button" class="btn-mobile-glass-cta" onclick="if(window.closeMobileMenu) window.closeMobileMenu(); if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Вызов замерщика из мобильного меню');">
+          Вызвать замерщика
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПЕРВЫЙ ЭКРАН: PREMIUM APPLE-INSPIRED SHOWROOM HERO -->
+  <section class="hero-showroom-section" id="heroSection">
+    <div class="hero-bg-container">
+      <img src="hero-interior.jpg" alt="Интерьер премиального шоурума Двери №1" class="hero-bg-img">
+      <div class="hero-overlay-tint"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-glass-panel">
+        <div class="hero-kicker">Премиальный шоурум • Казань и Челны</div>
+        <h1 class="hero-title">Пространство начинается с деталей</h1>
+        <p class="hero-subtitle">Межкомнатные, входные и скрытые двери для продуманных интерьеров.</p>
+        <div class="hero-actions">
+          <a href="#catalogContent" class="btn-hero-primary" id="btnHeroCatalog">Смотреть каталог</a>
+          <button type="button" class="btn-hero-secondary" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Консультация и помощь с выбором');">
+            <span>Помочь с выбором</span>
+            <span class="arrow-icon">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ: КАТЕГОРИИ ДВЕРЕЙ (АРХИТЕКТУРНЫЕ НАПРАВЛЕНИЯ) -->
+  <section class="home-categories-section" id="categoriesSection">
+    <div class="editorial-container">
+      <div class="editorial-header">
+        <div class="editorial-kicker">Архитектурные направления</div>
+        <h2 class="editorial-title">Категории дверей</h2>
+        <p class="editorial-subtitle">Четыре ключевых концепта для продуманных интерьерных и входных решений</p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- 1. Межкомнатные двери -->
+        <a href="#catalogContent" class="category-card" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Межкомнатные двери');">
+          <div class="category-img-wrap">
+            <img src="data/catalog-output/catalog-images/PROD-HW-002_main.png" alt="Межкомнатные двери" class="category-door-img" loading="eager">
+          </div>
+          <div class="category-info">
+            <div class="category-meta">349 моделей</div>
+            <h3 class="category-name">Межкомнатные двери</h3>
+            <span class="category-arrow">Смотреть каталог →</span>
+          </div>
+        </a>
+
+        <!-- 2. Входные двери -->
+        <a href="#catalogContent" class="category-card" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Входные двери');">
+          <div class="category-img-wrap">
+            <img src="data/catalog-output/catalog-images/PROD-FERR-001_main.png" alt="Входные двери" class="category-door-img" loading="eager">
+          </div>
+          <div class="category-info">
+            <div class="category-meta">171 модель</div>
+            <h3 class="category-name">Входные двери</h3>
+            <span class="category-arrow">Смотреть каталог →</span>
+          </div>
+        </a>
+
+        <!-- 3. Скрытые двери -->
+        <a href="#catalogContent" class="category-card" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Скрытые двери');">
+          <div class="category-img-wrap">
+            <img src="data/catalog-output/catalog-images/PROD-CHAM-001_main.png" alt="Скрытые двери Invisible" class="category-door-img" loading="eager">
+          </div>
+          <div class="category-info">
+            <div class="category-meta">Инженерные короба</div>
+            <h3 class="category-name">Скрытые двери</h3>
+            <span class="category-arrow">Смотреть каталог →</span>
+          </div>
+        </a>
+
+        <!-- 4. Двери со стеклом -->
+        <a href="#catalogContent" class="category-card" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Двери со стеклом');">
+          <div class="category-img-wrap">
+            <img src="data/catalog-output/catalog-images/PROD-CHAM-003_main.png" alt="Двери со стеклом" class="category-door-img" loading="eager">
+          </div>
+          <div class="category-info">
+            <div class="category-meta">173 модели</div>
+            <h3 class="category-name">Двери со стеклом</h3>
+            <span class="category-arrow">Смотреть каталог →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ: ИЗБРАННЫЕ КОЛЛЕКЦИИ (CURATED SHOWCASE) -->
+  <section class="home-featured-section" id="featuredSection">
+    <div class="editorial-container">
+      <div class="editorial-header">
+        <div class="editorial-kicker">Выбор дизайнеров</div>
+        <h2 class="editorial-title">Избранные коллекции</h2>
+        <p class="editorial-subtitle">Реальные модели ведущих фабрик из экспозиции шоурумов</p>
+      </div>
+
+      <div class="featured-grid">
+        <!-- Модель 1: 13 СМ VITRA ВИНОРИТ ПАТИНА -->
+        <article class="featured-card">
+          <a href="product.html?id=PROD-FERR-001" class="featured-img-link" aria-label="Входная дверь 13 СМ VITRA ВИНОРИТ ПАТИНА">
+            <img src="data/catalog-output/catalog-images/PROD-FERR-001_main.png" alt="Входная дверь 13 СМ VITRA ВИНОРИТ ПАТИНА" class="featured-door-img" loading="eager">
+          </a>
+          <div class="featured-body">
+            <div class="featured-brand">Феррони • Двери с терморазрывом</div>
+            <h3 class="featured-model">
+              <a href="product.html?id=PROD-FERR-001">13 СМ VITRA ВИНОРИТ ПАТИНА</a>
+            </h3>
+            <div class="featured-footer">
+              <span class="featured-price">Уточнить цену</span>
+              <a href="product.html?id=PROD-FERR-001" class="btn-featured-view">Подробнее →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Модель 2: Invisible -->
+        <article class="featured-card">
+          <a href="product.html?id=PROD-CHAM-001" class="featured-img-link" aria-label="Скрытая дверь Invisible под отделку">
+            <img src="data/catalog-output/catalog-images/PROD-CHAM-001_main.png" alt="Скрытая дверь Invisible под отделку" class="featured-door-img" loading="eager">
+          </a>
+          <div class="featured-body">
+            <div class="featured-brand">Chameleon Doors • Invisible</div>
+            <h3 class="featured-model">
+              <a href="product.html?id=PROD-CHAM-001">Invisible (Скрытая дверь под отделку)</a>
+            </h3>
+            <div class="featured-footer">
+              <span class="featured-price">Уточнить цену</span>
+              <a href="product.html?id=PROD-CHAM-001" class="btn-featured-view">Подробнее →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Модель 3: Rail 1 -->
+        <article class="featured-card">
+          <a href="product.html?id=PROD-CHAM-003" class="featured-img-link" aria-label="Дверь со стеклом Rail 1">
+            <img src="data/catalog-output/catalog-images/PROD-CHAM-003_main.png" alt="Дверь со стеклом Rail 1" class="featured-door-img" loading="eager">
+          </a>
+          <div class="featured-body">
+            <div class="featured-brand">Chameleon Doors • Rail Collection</div>
+            <h3 class="featured-model">
+              <a href="product.html?id=PROD-CHAM-003">Rail 1</a>
+            </h3>
+            <div class="featured-footer">
+              <span class="featured-price">Уточнить цену</span>
+              <a href="product.html?id=PROD-CHAM-003" class="btn-featured-view">Подробнее →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Модель 4: ДЖАЗ КОМПОЗИШН -->
+        <article class="featured-card">
+          <a href="product.html?id=PROD-HW-002" class="featured-img-link" aria-label="Межкомнатная дверь ДЖАЗ КОМПОЗИШН">
+            <img src="data/catalog-output/catalog-images/PROD-HW-002_main.png" alt="Межкомнатная дверь ДЖАЗ КОМПОЗИШН" class="featured-door-img" loading="eager">
+          </a>
+          <div class="featured-body">
+            <div class="featured-brand">Двери Голливуда • Jazz</div>
+            <h3 class="featured-model">
+              <a href="product.html?id=PROD-HW-002">ДЖАЗ КОМПОЗИШН</a>
+            </h3>
+            <div class="featured-footer">
+              <span class="featured-price">Уточнить цену</span>
+              <a href="product.html?id=PROD-HW-002" class="btn-featured-view">Подробнее →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="featured-action-bar">
+        <a href="#catalogContent" class="btn-view-full-catalog" onclick="if(window.DverApp && window.DverApp.resetAllFilters) window.DverApp.resetAllFilters();">
+          <span>Смотреть весь каталог (697 моделей)</span>
+          <span class="arrow-icon">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАТАЛОГ ТОВАРОВ: ЛАКОНИЧНАЯ ПРЕМИАЛЬНАЯ ВИТРИНА -->
+  <main class="catalog-showroom-section" id="catalogContent">
+    <div class="catalog-container">
+
+      <!-- ЛАКОНИЧНЫЙ ВЕРХ КАТАЛОГА: ЗАГОЛОВОК И ОДНО ПРЕДЛОЖЕНИЕ ОПИСАНИЯ -->
+      <header class="catalog-header-minimal">
+        <div class="catalog-header-text">
+          <h2 class="catalog-category-title" id="catalogCategoryTitle">Коллекция дверей</h2>
+          <p class="catalog-category-desc" id="catalogCategoryDesc">
+            Дизайнерские межкомнатные и входные двери с подбором отделки, скрытых коробов и итальянской фурнитуры.
+          </p>
+        </div>
+
+        <!-- КОМПАКТНАЯ ПАНЕЛЬ УПРАВЛЕНИЯ: ПОИСК, КНОПКА ФИЛЬТРОВ И СОРТИРОВКА -->
+        <div class="catalog-controls-bar">
+          <div class="search-compact-wrapper">
+            <svg class="search-icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="searchInput" class="search-field-compact" placeholder="Поиск модели, коллекции или фабрики...">
+            <button type="button" id="searchClearBtn" class="btn-search-clear" title="Очистить" style="display:none;">✕</button>
+          </div>
+
+          <div class="controls-actions-group">
+            <button type="button" class="btn-toggle-filters" id="btnToggleFilters" aria-label="Открыть фильтры">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="8" y1="12" x2="20" y2="12"></line>
+                <line x1="12" y1="18" x2="20" y2="18"></line>
+                <circle cx="6" cy="12" r="2"></circle>
+              </svg>
+              <span>Фильтры</span>
+              <span class="active-filter-badge" id="activeFilterBadge" style="display:none;">0</span>
+            </button>
+
+            <div class="sort-compact-wrapper">
+              <select id="sortSelect" class="sort-select-compact" aria-label="Сортировка товаров">
+                <option value="default">По популярности</option>
+                <option value="name_asc">По названию (А → Я)</option>
+                <option value="name_desc">По названию (Я → А)</option>
+                <option value="brand_asc">По фабрике (А → Я)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ПОЛОСА АКТИВНЫХ ФИЛЬТРОВ -->
+      <div class="active-chips-strip" id="activeFilterChips" style="display:none;"></div>
+
+      <!-- ОСНОВНАЯ РАСКЛАДКА: ПАНЕЛЬ ФИЛЬТРОВ + СЕТКА ТОВАРОВ -->
+      <div class="catalog-layout-grid">
+
+        <!-- ЗАТЕМНЕНИЕ ДЛЯ МОБИЛЬНОЙ ШТОРКИ -->
+        <div class="filters-backdrop" id="filtersBackdrop"></div>
+
+        <!-- 5 ОСНОВНЫХ ФИЛЬТРОВ: КАТЕГОРИЯ, ПРОИЗВОДИТЕЛЬ, ЦВЕТ, ТИП ДВЕРИ, ЦЕНА -->
+        <aside class="catalog-filters-panel" id="filtersPanel">
+          <div class="filters-panel-inner">
+            <div class="filters-panel-header">
+              <div class="filters-panel-title">Параметры выбора</div>
+              <button type="button" class="btn-close-filters" id="btnCloseFilters" title="Закрыть панель фильтров">✕</button>
+            </div>
+
+            <div class="filters-scroll-body">
+              <!-- 1. Категория -->
+              <div class="filter-section">
+                <div class="filter-section-title">Категория</div>
+                <div class="filter-options-list" id="categoryFilterList"></div>
+              </div>
+
+              <!-- 2. Производитель -->
+              <div class="filter-section">
+                <div class="filter-section-title">Производитель (Фабрика)</div>
+                <div class="filter-options-list" id="brandFilterList"></div>
+              </div>
+
+              <!-- 3. Цветовая гамма -->
+              <div class="filter-section">
+                <div class="filter-section-title">Цветовая гамма</div>
+                <div class="filter-color-palette" id="colorFilterList"></div>
+              </div>
+
+              <!-- 4. Тип конструкции -->
+              <div class="filter-section">
+                <div class="filter-section-title">Тип двери</div>
+                <div class="filter-options-list" id="typeFilterList"></div>
+              </div>
+
+              <!-- 5. Ценовой расчет -->
+              <div class="filter-section">
+                <div class="filter-section-title">Стоимость комплекта</div>
+                <div class="filter-options-list" id="priceFilterList"></div>
+              </div>
+
+              <!-- ВТОРОСТЕПЕННЫЕ ПАРАМЕТРЫ ПОД СПОЙЛЕРОМ -->
+              <details class="filter-extra-details">
+                <summary class="filter-extra-summary">
+                  <span>Дополнительные параметры</span>
+                  <span class="chevron-icon">▾</span>
+                </summary>
+                <div class="filter-extra-content">
+                  <div class="filter-section" style="margin-top: 14px;">
+                    <div class="filter-section-title">Интерьерный стиль</div>
+                    <div class="filter-options-list" id="styleFilterList"></div>
+                  </div>
+                  <div class="filter-section">
+                    <div class="filter-section-title">Покрытие / Материал</div>
+                    <div class="filter-options-list" id="materialFilterList"></div>
+                  </div>
+                </div>
+              </details>
+            </div>
+
+            <div class="filters-panel-footer">
+              <button type="button" class="btn-reset-filters-clean" id="btnResetFilters">Сбросить всё</button>
+              <button type="button" class="btn-apply-filters" id="btnApplyFilters">Показать товары</button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- СЕТКА КАРТОЧЕК ТОВАРОВ -->
+        <section class="catalog-grid-area">
+          <div class="catalog-status-bar" id="resultsStatsBar">
+            <span class="status-count-text">Загрузка каталога...</span>
+          </div>
+
+          <div class="product-grid" id="productGrid">
+            <!-- Карточки товаров генерируются скриптом app.js -->
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- РАЗДЕЛ: ФЛАГМАНСКИЕ ШОУРУМЫ (SHOWROOMS) -->
+  <section class="home-showrooms-section" id="showroomsSection">
+    <div class="editorial-container">
+      <div class="editorial-header">
+        <div class="editorial-kicker">Физические пространства</div>
+        <h2 class="editorial-title">Флагманские шоурумы</h2>
+        <p class="editorial-subtitle">Экспозиции полноразмерных полотен, образцов отделки и скрытых инженерных коробов</p>
+      </div>
+
+      <div class="showrooms-grid">
+        <!-- Шоурум Казань -->
+        <div class="showroom-card">
+          <div class="showroom-city-badge">Казань</div>
+          <h3 class="showroom-title">Шоурум на Сибирском тракте</h3>
+          <div class="showroom-details">
+            <div class="showroom-detail-item">
+              <span class="detail-label">Адрес:</span>
+              <span class="detail-value">г. Казань, ул. Сибирский тракт, д. 59б</span>
+            </div>
+            <div class="showroom-detail-item">
+              <span class="detail-label">График:</span>
+              <span class="detail-value">Ежедневно с 09:00 до 19:00</span>
+            </div>
+            <div class="showroom-detail-item">
+              <span class="detail-label">Телефон:</span>
+              <span class="detail-value">+7 (843) 205-00-01</span>
+            </div>
+          </div>
+          <div class="showroom-desc">
+            Экспозиция дизайнерских межкомнатных и входных дверей. Стенды скрытых систем Invisible, образцы натурального шпона, эмали и фурнитуры.
+          </div>
+          <div class="showroom-actions">
+            <button type="button" class="btn-showroom-action" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Визит в шоурум Казань');">
+              Записаться на визит
+            </button>
+          </div>
+        </div>
+
+        <!-- Шоурум Набережные Челны -->
+        <div class="showroom-card">
+          <div class="showroom-city-badge">Набережные Челны</div>
+          <h3 class="showroom-title">Шоурум на Казанском проспекте</h3>
+          <div class="showroom-details">
+            <div class="showroom-detail-item">
+              <span class="detail-label">Адрес:</span>
+              <span class="detail-value">г. Набережные Челны, Казанский проспект, д. 232</span>
+            </div>
+            <div class="showroom-detail-item">
+              <span class="detail-label">График:</span>
+              <span class="detail-value">Пн–Сб с 09:00 до 18:00</span>
+            </div>
+            <div class="showroom-detail-item">
+              <span class="detail-label">Телефон:</span>
+              <span class="detail-value">+7 (843) 205-00-01</span>
+            </div>
+          </div>
+          <div class="showroom-desc">
+            Шоурум стальных дверей с терморазрывом и современных межкомнатных решений. Индивидуальный расчёт размеров и спецификации проёмов.
+          </div>
+          <div class="showroom-actions">
+            <button type="button" class="btn-showroom-action" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Визит в шоурум Челны');">
+              Записаться на визит
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ: ПОМОЩЬ С ВЫБОРОМ И ЗАМЕР (CONSULTATION) -->
+  <section class="home-consultation-section" id="consultationSection">
+    <div class="editorial-container">
+      <div class="consultation-card">
+        <div class="consultation-content">
+          <div class="editorial-kicker">Сервис и подбор</div>
+          <h2 class="consultation-title">Помощь с выбором и точный замер</h2>
+          <p class="consultation-desc">
+            Инженеры шоурума помогут рассчитать размеры проёмов, подобрать варианты открывания, покрытие полотна и составить спецификацию для вашего дизайн-проекта.
+          </p>
+          <div class="consultation-actions">
+            <button type="button" class="btn-consultation-primary" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Вызов замерщика');">
+              Вызвать замерщика
+            </button>
+            <button type="button" class="btn-consultation-secondary" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Консультация эксперта');">
+              Получить консультацию
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- МОДАЛЬНОЕ ОКНО: ДЕТАЛЬНАЯ КАРТОЧКА ТОВАРА -->
+  <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-window">
+      <button type="button" class="modal-close-btn" id="btnCloseModal" title="Закрыть (Esc)">✕</button>
+
+      <div class="modal-content-grid">
+        <!-- ЛЕВАЯ КОЛОНКА: ГАЛЕРЕЯ ИЗОБРАЖЕНИЙ -->
+        <div class="modal-gallery-col" id="modalGalleryBox">
+          <!-- Генерируется скриптом -->
+        </div>
+
+        <!-- ПРАВАЯ КОЛОНКА: ИНФОРМАЦИЯ, ВАРИАНТЫ, ТАБЫ -->
+        <div class="modal-info-col">
+          <div class="modal-breadcrumbs" id="modalBreadcrumbs">
+            <!-- Хлебные крошки -->
+          </div>
+
+          <div class="modal-title-row">
+            <h1 class="modal-model-title" id="modalTitle">Название модели</h1>
+            <div class="modal-badges-row" id="modalBadges">
+              <!-- Бейджи -->
+            </div>
+          </div>
+
+          <div class="modal-price-box">
+            <div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Стоимость базового комплекта</div>
+              <div class="modal-price-val">Уточнить цену</div>
+            </div>
+            <button type="button" class="btn-card-request" style="padding: 10px 20px; font-size: 0.9375rem;" onclick="window.DverApp.openLeadModal()">
+              Запросить расчет сметы
+            </button>
+          </div>
+
+          <!-- СЕКТОР ВЫБОРА РАЗМЕРА И ВАРИАНТА -->
+          <div class="variant-picker-section" id="modalVariantPicker">
+            <!-- Пилюли размеров, открываний, цветов -->
+          </div>
+
+          <!-- НАВИГАЦИЯ ПО ВКЛАДКАМ -->
+          <div class="modal-tabs-nav">
+            <button type="button" class="modal-tab-btn active" data-target-tab="tabSpecs">
+              📋 Характеристики
+            </button>
+            <button type="button" class="modal-tab-btn" data-target-tab="tabComplectation">
+              📦 Заводской состав
+            </button>
+            <button type="button" class="modal-tab-btn" data-target-tab="tabCalculator">
+              📐 Калькулятор погонажа
+            </button>
+            <button type="button" class="modal-tab-btn" data-target-tab="tabStock">
+              🏬 Склады в РТ
+            </button>
+          </div>
+
+          <!-- СОДЕРЖИМОЕ ВКЛАДОК -->
+          <div class="modal-tabs-content">
+            <div id="tabSpecs" class="modal-tab-pane active"></div>
+            <div id="tabComplectation" class="modal-tab-pane"></div>
+            <div id="tabCalculator" class="modal-tab-pane"></div>
+            <div id="tabStock" class="modal-tab-pane"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО: ОФОРМЛЕНИЕ ЗАЯВКИ НА РАСЧЕТ И ЗАМЕР -->
+  <div class="modal-overlay" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
+    <div class="modal-window lead-modal-window">
+      <button type="button" class="modal-close-btn" id="btnCloseLeadModal" title="Закрыть (Esc)">✕</button>
+
+      <div class="lead-form-header">
+        <h2 class="lead-form-title" id="leadModalTitle">Заявка на расчет сметы</h2>
+        <div class="lead-form-subtitle">Бесплатный выезд инженера-замерщика с образцами покрытий и каталогами фурнитуры</div>
+      </div>
+
+      <!-- Сводка выбранного товара -->
+      <div class="lead-product-summary-box" id="leadProductSummary">
+        <!-- Заполняется скриптом -->
+      </div>
+
+      <form id="leadOrderForm" class="lead-form-fields">
+        <div class="form-group">
+          <label for="leadNameInput" class="form-label">Ваше имя *</label>
+          <input type="text" id="leadNameInput" class="form-input" placeholder="Константин" required>
+        </div>
+
+        <div class="form-group">
+          <label for="leadPhoneInput" class="form-label">Телефон для связи *</label>
+          <input type="tel" id="leadPhoneInput" class="form-input" placeholder="+7 (987) 000-00-00" required>
+        </div>
+
+        <div class="form-group">
+          <label for="leadCitySelect" class="form-label">Город замера / доставки</label>
+          <select id="leadCitySelect" class="form-select">
+            <option value="Казань">Казань и пригород</option>
+            <option value="Набережные Челны">Набережные Челны и Закамье</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="leadAddressInput" class="form-label">Адрес объекта (улица, дом, кв.)</label>
+          <input type="text" id="leadAddressInput" class="form-input" placeholder="ул. Сибирский тракт, д. 59б">
+        </div>
+
+        <div class="form-group">
+          <label for="leadCommentInput" class="form-label">Комментарий к заказу или число проемов</label>
+          <textarea id="leadCommentInput" class="form-textarea" rows="2" placeholder="Например: 4 межкомнатные двери + 1 скрытая Invisible, замер в субботу"></textarea>
+        </div>
+
+        <button type="submit" class="btn-lead-submit">
+          Отправить заявку мастеру-замерщику
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ПОДВАЛ САЙТА (FOOTER) -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-container">
+      <div>
+        <div class="brand-block" style="margin-bottom: 14px;">
+          <img src="logo.png" alt="Двери №1" class="brand-logo-img" style="height: 38px;">
+          <div class="brand-titles">
+            <div class="brand-name" style="font-size: 1.15rem;">ДВЕРИ №1</div>
+            <div class="brand-subtitle">Федеральная рознично-оптовая сеть</div>
+          </div>
+        </div>
+        <p style="line-height: 1.6; max-width: 480px;">
+          Крупнейший специализированный дверной центр в Республике Татарстан. Официальный дистрибьютор фабрик: Оникс, Дворецкий, ProfilDoors, Владимирская фабрика дверей (ВФД), Океан, Корона, Двери регионов, Bravo, Turen Becker, Luxor.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Центры продаж и склады</div>
+        <p style="margin-bottom: 8px;">
+          <strong>г. Казань:</strong><br>
+          ул. Сибирский тракт, 59б<br>
+          <span style="color: var(--text-secondary);">Ежедневно с 09:00 до 19:00</span>
+        </p>
+        <p>
+          <strong>г. Набережные Челны:</strong><br>
+          Казанский проспект, 232<br>
+          <span style="color: var(--text-secondary);">Пн-Сб с 09:00 до 18:00</span>
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Контакты и сервисная служба</div>
+        <p style="margin-bottom: 6px;">Единая справочная служба:</p>
+        <p style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 12px;">+7 (843) 205-00-01</p>
+        <p style="color: var(--text-muted); font-size: 0.75rem;">
+          Выезд замерщика с лазерным измерительным комплексом и образцами отделки осуществляется бесплатно при оформлении договора монтажа.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div>© 2026 «Двери №1». Премиальный дверной шоурум в Казани и Набережных Челнах.</div>
+      <div>
+        <a href="admin.html" class="footer-curator-link" title="Перейти в панель верификации каталога">Служебный вход (V3.2)</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ВСПОМОГАТЕЛЬНОЕ УВЕДОМЛЕНИЕ (TOAST) -->
+  <div id="siteToast" class="toast-notice"></div>
+
+  <!-- СКРИПТЫ: ДАННЫЕ И ЛОГИКА -->
+  <!-- 1. Синхронные данные каталога (для работы как через http://, так и через локальный file://) -->
+  <script src="data/catalog-output/products-data.js"></script>
+  <!-- 2. Ядро каталога, фильтрация, галерея, калькулятор комплектации V3.2 -->
+  <script src="app.js"></script>
+
+</body>
+</html>

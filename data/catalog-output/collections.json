@@ -1,0 +1,754 @@
+[
+  {
+    "id": "COLL-AJAX-",
+    "name": "СЕРИЯ",
+    "brand_id": "BRAND-AJAX",
+    "brand_name": "AJAX",
+    "category": "Фурнитура",
+    "total_products": 41
+  },
+  {
+    "id": "COLL-AJAX-AS",
+    "name": "СЕРИЯ AS",
+    "brand_id": "BRAND-AJAX",
+    "brand_name": "AJAX",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-AJAX-CABIN",
+    "name": "СЕРИЯ CABIN",
+    "brand_id": "BRAND-AJAX",
+    "brand_name": "AJAX",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-AJAX-KJK51",
+    "name": "СЕРИЯ K.JK51",
+    "brand_id": "BRAND-AJAX",
+    "brand_name": "AJAX",
+    "category": "Фурнитура",
+    "total_products": 11
+  },
+  {
+    "id": "COLL-AJAX-KJK51IND",
+    "name": "СЕРИЯ K.JK51. IND",
+    "brand_id": "BRAND-AJAX",
+    "brand_name": "AJAX",
+    "category": "Фурнитура",
+    "total_products": 3
+  },
+  {
+    "id": "COLL-AJAX-KJS51",
+    "name": "СЕРИЯ K.JS51",
+    "brand_id": "BRAND-AJAX",
+    "brand_name": "AJAX",
+    "category": "Фурнитура",
+    "total_products": 14
+  },
+  {
+    "id": "COLL-AJAX-PD",
+    "name": "СЕРИЯ PD",
+    "brand_id": "BRAND-AJAX",
+    "brand_name": "AJAX",
+    "category": "Фурнитура",
+    "total_products": 2
+  },
+  {
+    "id": "COLL-AJAX-RJR54",
+    "name": "СЕРИЯ R.JR54",
+    "brand_id": "BRAND-AJAX",
+    "brand_name": "AJAX",
+    "category": "Фурнитура",
+    "total_products": 6
+  },
+  {
+    "id": "COLL-AJAX-RJR54IND",
+    "name": "СЕРИЯ R.JR54.IND",
+    "brand_id": "BRAND-AJAX",
+    "brand_name": "AJAX",
+    "category": "Фурнитура",
+    "total_products": 2
+  },
+  {
+    "id": "COLL-AJAX-RJSR51",
+    "name": "СЕРИЯ R.JSR51",
+    "brand_id": "BRAND-AJAX",
+    "brand_name": "AJAX",
+    "category": "Фурнитура",
+    "total_products": 3
+  },
+  {
+    "id": "COLL-ARM-ARMADILLO",
+    "name": "Коллекция Armadillo",
+    "brand_id": "BRAND-ARMADILLO",
+    "brand_name": "Armadillo",
+    "category": "Фурнитура",
+    "total_products": 2
+  },
+  {
+    "id": "COLL-ARM-CLARITY",
+    "name": "Коллекция CLARITY",
+    "brand_id": "BRAND-ARMADILLO",
+    "brand_name": "Armadillo",
+    "category": "Фурнитура",
+    "total_products": 27
+  },
+  {
+    "id": "COLL-ARM-SLIM",
+    "name": "Коллекция SLIM",
+    "brand_id": "BRAND-ARMADILLO",
+    "brand_name": "Armadillo",
+    "category": "Фурнитура",
+    "total_products": 15
+  },
+  {
+    "id": "COLL-ARM-URBAN",
+    "name": "Коллекция URBAN",
+    "brand_id": "BRAND-ARMADILLO",
+    "brand_name": "Armadillo",
+    "category": "Фурнитура",
+    "total_products": 82
+  },
+  {
+    "id": "COLL-CHAM-BARROOMSCO",
+    "name": "BAR ROOMS COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 5
+  },
+  {
+    "id": "COLL-CHAM-CLASSICCOL",
+    "name": "CLASSIC COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 6
+  },
+  {
+    "id": "COLL-CHAM-DESIGNCOLL",
+    "name": "DESIGN COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Межкомнатные двери",
+    "total_products": 26
+  },
+  {
+    "id": "COLL-CHAM-DIAGONALCO",
+    "name": "DIAGONAL COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Межкомнатные двери",
+    "total_products": 9
+  },
+  {
+    "id": "COLL-CHAM-FLYCOLLECT",
+    "name": "FLY COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 4
+  },
+  {
+    "id": "COLL-CHAM-GLASSCOLLE",
+    "name": "GLASS COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 9
+  },
+  {
+    "id": "COLL-CHAM-GRIDCOLLEC",
+    "name": "GRID COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 4
+  },
+  {
+    "id": "COLL-CHAM-INVISIBLE",
+    "name": "Invisible",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Скрытые двери",
+    "total_products": 2
+  },
+  {
+    "id": "COLL-CHAM-LINECOLLEC",
+    "name": "LINE COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Межкомнатные двери",
+    "total_products": 9
+  },
+  {
+    "id": "COLL-CHAM-MILFLYCOLL",
+    "name": "MIL FLY COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 3
+  },
+  {
+    "id": "COLL-CHAM-MINIMALCOL",
+    "name": "MINIMAL COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 14
+  },
+  {
+    "id": "COLL-CHAM-MINIMALSTE",
+    "name": "MINIMAL STEP COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 11
+  },
+  {
+    "id": "COLL-CHAM-MOLDINGCOL",
+    "name": "MOLDING COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Межкомнатные двери",
+    "total_products": 5
+  },
+  {
+    "id": "COLL-CHAM-OFFICECOLL",
+    "name": "OFFICE COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Межкомнатные двери",
+    "total_products": 8
+  },
+  {
+    "id": "COLL-CHAM-OVALCOLLEC",
+    "name": "OVAL COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 6
+  },
+  {
+    "id": "COLL-CHAM-RAILCOLLEC",
+    "name": "RAIL COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 3
+  },
+  {
+    "id": "COLL-CHAM-RICHCOLLEC",
+    "name": "RICH COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 4
+  },
+  {
+    "id": "COLL-CHAM-ROUNDSTICK",
+    "name": "ROUND STICK COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Межкомнатные двери",
+    "total_products": 8
+  },
+  {
+    "id": "COLL-CHAM-SELECTCOLL",
+    "name": "SELECT COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Межкомнатные двери",
+    "total_products": 12
+  },
+  {
+    "id": "COLL-CHAM-SLIMCOLLEC",
+    "name": "SLIM COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Межкомнатные двери",
+    "total_products": 5
+  },
+  {
+    "id": "COLL-CHAM-STICKCOLLE",
+    "name": "STICK COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Межкомнатные двери",
+    "total_products": 5
+  },
+  {
+    "id": "COLL-CHAM-VERYRICHCO",
+    "name": "VERY RICH COLLECTION",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Двери со стеклом",
+    "total_products": 4
+  },
+  {
+    "id": "COLL-CHAM-MOLDING",
+    "name": "Погонажные изделия",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Комплектующие",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-CHAM-PANELS",
+    "name": "Стеновые панели",
+    "brand_id": "BRAND-CHAMELEON",
+    "brand_name": "Chameleon Doors",
+    "category": "Декоративные элементы и дополнительные решения",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FUAR-BAROCCO",
+    "name": "Серия BAROCCO",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FUAR-BK6",
+    "name": "Серия BK6",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 2
+  },
+  {
+    "id": "COLL-FUAR-DC",
+    "name": "Серия DC",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FUAR-DC204",
+    "name": "Серия DC20-4",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FUAR-DC205",
+    "name": "Серия DC20-5",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FUAR-DCH",
+    "name": "Серия DCH",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 3
+  },
+  {
+    "id": "COLL-FUAR-DENVER",
+    "name": "Серия DENVER",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FUAR-DM",
+    "name": "Серия DM",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 9
+  },
+  {
+    "id": "COLL-FUAR-DSQ",
+    "name": "Серия DSQ",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 26
+  },
+  {
+    "id": "COLL-FUAR-ETALON",
+    "name": "Серия ETALON",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FUAR-KM",
+    "name": "Серия KM",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 7
+  },
+  {
+    "id": "COLL-FUAR-MAGNM",
+    "name": "Серия MAGNM",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 13
+  },
+  {
+    "id": "COLL-FUAR-NEO",
+    "name": "Серия NEO",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FUAR-PLASTP",
+    "name": "Серия PLASTP",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 8
+  },
+  {
+    "id": "COLL-FUAR-PRIMA",
+    "name": "Серия PRIMA",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FUAR-PRIZMA",
+    "name": "Серия PRIZMA",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 2
+  },
+  {
+    "id": "COLL-FUAR-RM",
+    "name": "Серия RM",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 15
+  },
+  {
+    "id": "COLL-FUAR-SAMPLE",
+    "name": "Серия SAMPLE",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FUAR-SL",
+    "name": "Серия SL",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 9
+  },
+  {
+    "id": "COLL-FUAR-SLR",
+    "name": "Серия SLR",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 7
+  },
+  {
+    "id": "COLL-FUAR-SM",
+    "name": "Серия SM",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 25
+  },
+  {
+    "id": "COLL-FUAR-XM",
+    "name": "Серия XM",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 4
+  },
+  {
+    "id": "COLL-FUAR-ZL",
+    "name": "Серия ZL",
+    "brand_id": "BRAND-FUARO",
+    "brand_name": "FUARO",
+    "category": "Фурнитура",
+    "total_products": 10
+  },
+  {
+    "id": "COLL-LUX-LUXOR2",
+    "name": "Luxor 2МДФ",
+    "brand_id": "BRAND-LUXOR",
+    "brand_name": "Luxor",
+    "category": "Входные двери",
+    "total_products": 15
+  },
+  {
+    "id": "COLL-LUX-LUXORLEONA",
+    "name": "Luxor Leonardo",
+    "brand_id": "BRAND-LUXOR",
+    "brand_name": "Luxor",
+    "category": "Входные двери",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-LUX-LUXOR",
+    "name": "Luxor Термо",
+    "brand_id": "BRAND-LUXOR",
+    "brand_name": "Luxor",
+    "category": "Входные двери",
+    "total_products": 25
+  },
+  {
+    "id": "COLL-MORE-MORELLIDES",
+    "name": "Morelli Design",
+    "brand_id": "BRAND-MORELLI",
+    "brand_name": "Morelli",
+    "category": "Фурнитура",
+    "total_products": 8
+  },
+  {
+    "id": "COLL-MORE-INNOVATION",
+    "name": "Петли Innovation / Morelli",
+    "brand_id": "BRAND-MORELLI",
+    "brand_name": "Morelli",
+    "category": "Фурнитура",
+    "total_products": 5
+  },
+  {
+    "id": "COLL-MORE-MORELLI",
+    "name": "Раздвижные системы Morelli",
+    "brand_id": "BRAND-MORELLI",
+    "brand_name": "Morelli",
+    "category": "Фурнитура",
+    "total_products": 268
+  },
+  {
+    "id": "COLL-PUN-ARC",
+    "name": "СЕРИЯ ARC",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-PUN-EL",
+    "name": "СЕРИЯ EL",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 2
+  },
+  {
+    "id": "COLL-PUN-ESTETICA",
+    "name": "СЕРИЯ ESTETICA",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 11
+  },
+  {
+    "id": "COLL-PUN-KARC",
+    "name": "СЕРИЯ K.ARC",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 9
+  },
+  {
+    "id": "COLL-PUN-MAESTRO",
+    "name": "СЕРИЯ MAESTRO",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 2
+  },
+  {
+    "id": "COLL-PUN-QL",
+    "name": "СЕРИЯ QL",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 5
+  },
+  {
+    "id": "COLL-PUN-QR",
+    "name": "СЕРИЯ QR",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 6
+  },
+  {
+    "id": "COLL-PUN-QSL",
+    "name": "СЕРИЯ QSL",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 2
+  },
+  {
+    "id": "COLL-PUN-RARC",
+    "name": "СЕРИЯ R.ARC",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 4
+  },
+  {
+    "id": "COLL-PUN-TL",
+    "name": "СЕРИЯ TL",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 8
+  },
+  {
+    "id": "COLL-PUN-ZQ",
+    "name": "СЕРИЯ ZQ",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 4
+  },
+  {
+    "id": "COLL-PUN-ZR",
+    "name": "СЕРИЯ ZR",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 4
+  },
+  {
+    "id": "COLL-PUN-",
+    "name": "СЕРИЯ ЭСТЕТИКА",
+    "brand_id": "BRAND-PUNTO",
+    "brand_name": "PUNTO",
+    "category": "Фурнитура",
+    "total_products": 128
+  },
+  {
+    "id": "COLL-VIRA-",
+    "name": "Входные двери с терморазрывом",
+    "brand_id": "BRAND-VIRADOORS",
+    "brand_name": "ViraDoors",
+    "category": "Входные двери",
+    "total_products": 5
+  },
+  {
+    "id": "COLL-VIRA-VIRADOORS",
+    "name": "Входные стальные двери ViraDoors",
+    "brand_id": "BRAND-VIRADOORS",
+    "brand_name": "ViraDoors",
+    "category": "Входные двери",
+    "total_products": 16
+  },
+  {
+    "id": "COLL-VIRA-SMART",
+    "name": "Электронные умные замки",
+    "brand_id": "BRAND-VIRADOORS",
+    "brand_name": "ViraDoors",
+    "category": "Фурнитура",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-DVER-",
+    "name": "Серия Эскалера",
+    "brand_id": "BRAND-DVEREKI",
+    "brand_name": "Двереки",
+    "category": "Межкомнатные двери",
+    "total_products": 34
+  },
+  {
+    "id": "COLL-D25-",
+    "name": "Серия Вектор",
+    "brand_id": "BRAND-DVERI2025",
+    "brand_name": "Двери 2025",
+    "category": "Межкомнатные двери",
+    "total_products": 24
+  },
+  {
+    "id": "COLL-HW-",
+    "name": "Коллекция Премьера",
+    "brand_id": "BRAND-HOLLYWOOD",
+    "brand_name": "Двери Голливуда",
+    "category": "Межкомнатные двери",
+    "total_products": 216
+  },
+  {
+    "id": "COLL-YOSH-",
+    "name": "Входные двери с терморазрывом",
+    "brand_id": "BRAND-YOSHKAR-OLA",
+    "brand_name": "Йошкар-Ола",
+    "category": "Входные двери",
+    "total_products": 30
+  },
+  {
+    "id": "COLL-YOSH-INT",
+    "name": "Межкомнатные двери Йошкар-Ола",
+    "brand_id": "BRAND-YOSHKAR-OLA",
+    "brand_name": "Йошкар-Ола",
+    "category": "Межкомнатные двери",
+    "total_products": 22
+  },
+  {
+    "id": "COLL-FSD-ENTRANCE",
+    "name": "Входные двери ФСД",
+    "brand_id": "BRAND-FSD",
+    "brand_name": "ФСД",
+    "category": "Входные двери",
+    "total_products": 11
+  },
+  {
+    "id": "COLL-FSD-INTERIOR",
+    "name": "Межкомнатные двери ФСД",
+    "brand_id": "BRAND-FSD",
+    "brand_name": "ФСД",
+    "category": "Межкомнатные двери",
+    "total_products": 12
+  },
+  {
+    "id": "COLL-MEZH-",
+    "name": "Каркасно-щитовые двери",
+    "brand_id": "BRAND-MEZH-DOORS",
+    "brand_name": "Фабрика Межкомнатных Дверей",
+    "category": "Межкомнатные двери",
+    "total_products": 50
+  },
+  {
+    "id": "COLL-MEZH-PRO",
+    "name": "Коллекция Эмаль PRO",
+    "brand_id": "BRAND-MEZH-DOORS",
+    "brand_name": "Фабрика Межкомнатных Дверей",
+    "category": "Межкомнатные двери",
+    "total_products": 3
+  },
+  {
+    "id": "COLL-MEZH-2026",
+    "name": "Межкомнатные двери 2026",
+    "brand_id": "BRAND-MEZH-DOORS",
+    "brand_name": "Фабрика Межкомнатных Дверей",
+    "category": "Межкомнатные двери",
+    "total_products": 1
+  },
+  {
+    "id": "COLL-FERR-",
+    "name": "Двери с терморазрывом",
+    "brand_id": "BRAND-FERRONI",
+    "brand_name": "Феррони",
+    "category": "Входные двери",
+    "total_products": 68
+  }
+]

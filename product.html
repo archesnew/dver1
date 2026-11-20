@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title id="pdpMetaTitle">Двери №1 — Страница товара | Премиальный шоурум</title>
+  <meta name="description" id="pdpMetaDesc" content="Премиальные межкомнатные и входные двери в Казани и Набережных Челнах. Заводская гарантия, бесплатный лазерный замер.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="product.css">
+</head>
+<body class="pdp-body">
+
+  <!-- ЕДИНАЯ АРХИТЕКТУРНАЯ ШАПКА APPLE LIQUID GLASS -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <!-- СЛЕВА: ТОЛЬКО ОРИГИНАЛЬНЫЙ ЛОГОТИП -->
+      <a href="index.html" class="header-logo-link" aria-label="«Двери №1» — Главная">
+        <img src="logo.png" alt="Двери №1" class="header-logo-img">
+      </a>
+
+      <!-- ПО ЦЕНТРУ: КОМПАКТНОЕ МЕНЮ (DESKTOP) -->
+      <nav class="header-nav" id="headerNav" aria-label="Основная навигация">
+        <a href="index.html#catalogContent" class="header-nav-link" data-nav="catalog">Каталог</a>
+        <a href="index.html#catalogContent" class="header-nav-link" data-nav="interior">Межкомнатные</a>
+        <a href="index.html#catalogContent" class="header-nav-link" data-nav="entrance">Входные</a>
+        <a href="index.html#catalogContent" class="header-nav-link" data-nav="invisible">Скрытые</a>
+        <a href="index.html#showroomsSection" class="header-nav-link" data-nav="showrooms">Шоурумы</a>
+      </nav>
+
+      <!-- СПРАВА: СТЕКЛЯННАЯ КАПСУЛА CTA (DESKTOP) И МЕНЮ (MOBILE) -->
+      <div class="header-actions">
+        <button type="button" class="btn-glass-cta" id="btnHeaderConsult" onclick="if(window.PDP && window.PDP.openConsultModal) window.PDP.openConsultModal('Вызов замерщика из шапки PDP');">
+          Вызвать замерщика
+        </button>
+
+        <button type="button" class="btn-glass-menu" id="mobileMenuBtn" aria-label="Открыть меню" aria-expanded="false">
+          <svg viewBox="0 0 18 18" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <line class="menu-line line-1" x1="2.5" y1="4.5" x2="15.5" y2="4.5" />
+            <line class="menu-line line-2" x1="2.5" y1="9" x2="15.5" y2="9" />
+            <line class="menu-line line-3" x1="2.5" y1="13.5" x2="15.5" y2="13.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ПЛАВАЮЩЕЕ СТЕКЛЯННОЕ МОБИЛЬНОЕ МЕНЮ (APPLE LIQUID GLASS FLOATING PANEL) -->
+  <div class="mobile-glass-overlay" id="mobileGlassOverlay"></div>
+  <div class="mobile-glass-panel" id="mobileNavPanel" aria-hidden="true">
+    <div class="mobile-glass-inner">
+      <nav class="mobile-glass-nav" aria-label="Мобильная навигация">
+        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Каталог</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Межкомнатные</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Входные</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Скрытые</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="index.html#showroomsSection" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+          <span>Шоурумы</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </nav>
+      <div class="mobile-glass-footer">
+        <button type="button" class="btn-mobile-glass-cta" onclick="if(window.closeMobileMenu) window.closeMobileMenu(); if(window.PDP && window.PDP.openConsultModal) window.PDP.openConsultModal('Вызов замерщика из мобильного меню');">
+          Вызвать замерщика
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ОСНОВНАЯ ЧАСТЬ СТРАНИЦЫ ТОВАРА -->
+  <main class="pdp-main-content">
+    <div class="pdp-container">
+
+      <!-- ХЛЕБНЫЕ КРОШКИ -->
+      <nav class="pdp-breadcrumbs" id="pdpBreadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a>
+        <span class="bc-sep">/</span>
+        <a href="index.html#catalogContent">Каталог</a>
+        <span class="bc-sep">/</span>
+        <span class="bc-current" id="bcCategory">Межкомнатные двери</span>
+        <span class="bc-sep">/</span>
+        <span class="bc-model" id="bcModel">Название модели</span>
+      </nav>
+
+      <!-- ПЕРВЫЙ ЭКРАН PDP: ДВУХКОЛОНОЧНЫЙ МАКЕТ (58% ГАЛЕРЕЯ / 42% БЛОК ВЫБОРА И ПОКУПКИ) -->
+      <div class="pdp-hero-grid">
+
+        <!-- ЛЕВАЯ КОЛОНКА (55-60%): БОЛЬШАЯ ФОТОГРАФИЯ ДВЕРИ И МИНИАТЮРЫ -->
+        <div class="pdp-gallery-col">
+          <div class="pdp-main-photo-card" id="pdpPhotoCard">
+            <div class="pdp-photo-zoom-hint" id="pdpZoomBtn" title="Нажмите для увеличения">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+              <span>Увеличить</span>
+            </div>
+
+            <img id="pdpMainImage" class="pdp-main-img" src="door-placeholder.svg" alt="Дверь" loading="eager">
+          </div>
+
+          <!-- МИНИАТЮРЫ ДОПОЛНИТЕЛЬНЫХ ИЗОБРАЖЕНИЙ (ИНТЕРЬЕРЫ, ВАРИАНТЫ, СХЕМЫ) -->
+          <div class="pdp-thumbnails-strip" id="pdpThumbnailsStrip">
+            <!-- Генерируются скриптом product.js -->
+          </div>
+        </div>
+
+        <!-- ПРАВАЯ КОЛОНКА (40-45%): ПОСЛЕДОВАТЕЛЬНЫЙ БЛОК ВЫБОРА И СВЕДЕНИЙ -->
+        <div class="pdp-details-col">
+
+          <!-- 1. ПРОИЗВОДИТЕЛЬ И КОЛЛЕКЦИЯ -->
+          <div class="pdp-brand-kicker" id="pdpBrandKicker">Фабрика • Коллекция</div>
+
+          <!-- 2. НАЗВАНИЕ МОДЕЛИ -->
+          <h1 class="pdp-model-title" id="pdpModelTitle">Загрузка модели...</h1>
+
+          <!-- 3. КРАТКОЕ ОПИСАНИЕ ИЗ КАТАЛОГА -->
+          <p class="pdp-lead-description" id="pdpLeadDesc">
+            Архитектурная конструкция с индивидуальным подбором параметров, покрытий и скрытых коробов.
+          </p>
+
+          <!-- 4. ЦЕНА ЛИБО «УТОЧНИТЬ ЦЕНУ» -->
+          <div class="pdp-price-panel">
+            <div class="pdp-price-row">
+              <span class="pdp-price-amount" id="pdpPriceAmount">Уточнить цену</span>
+              <span class="pdp-price-vat">с НДС</span>
+            </div>
+            <div class="pdp-price-subnote" id="pdpPriceSubnote">
+              Стоимость базового полотна / комплекта по спецификации проёма
+            </div>
+          </div>
+
+          <!-- РАЗДЕЛИТЕЛЬ -->
+          <hr class="pdp-stone-divider">
+
+          <!-- 5. ВЫБОР ДОСТУПНЫХ ИСПОЛНЕНИЙ (ЦВЕТ / ОТДЕЛКА / ОСТЕКЛЕНИЕ) -->
+          <div class="pdp-picker-group" id="groupExecution">
+            <div class="pdp-picker-header">
+              <span class="pdp-picker-label">Исполнение и отделка:</span>
+              <span class="pdp-picker-selected-val" id="selectedExecutionVal">—</span>
+            </div>
+            <div class="pdp-pills-wrap" id="executionPillsWrap">
+              <!-- Заполняется динамически -->
+            </div>
+          </div>
+
+          <!-- 6. ВЫБОР РАЗМЕРА -->
+          <div class="pdp-picker-group" id="groupSize">
+            <div class="pdp-picker-header">
+              <span class="pdp-picker-label">Размер полотна:</span>
+              <span class="pdp-picker-selected-val" id="selectedSizeVal">—</span>
+            </div>
+            <div class="pdp-pills-wrap" id="sizePillsWrap">
+              <!-- Заполняется динамически -->
+            </div>
+          </div>
+
+          <!-- 7. ВЫБОР СТОРОНЫ ОТКРЫВАНИЯ (ЕСЛИ ПРЕДУСМОТРЕНО МОДЕЛЬЮ) -->
+          <div class="pdp-picker-group" id="groupOpening" style="display: none;">
+            <div class="pdp-picker-header">
+              <span class="pdp-picker-label">Сторона открывания:</span>
+              <span class="pdp-picker-selected-val" id="selectedOpeningVal">Универсальное</span>
+            </div>
+            <div class="pdp-pills-wrap" id="openingPillsWrap">
+              <!-- Заполняется динамически -->
+            </div>
+          </div>
+
+          <!-- 4. ВЫБОР КОМПЛЕКТАЦИИ (СОГЛАСНО РЕГЛАМЕНТУ V3.2) -->
+          <div class="pdp-complectation-block">
+            <div class="pdp-complectation-header">
+              <span class="pdp-picker-label">Комплектация дверного блока:</span>
+              <span class="pdp-scenario-code" id="scenarioCodeBadge">V3.2</span>
+            </div>
+
+            <div class="pdp-scenario-options" id="scenarioOptionsList">
+              <label class="scenario-option-card active">
+                <input type="radio" name="pdpScenario" value="standard_kit_with_hardware" checked>
+                <div class="scenario-card-body">
+                  <div class="scenario-card-title">Комплект с коробом и фурнитурой</div>
+                  <div class="scenario-card-desc">Полотно + телескопический короб с уплотнителем + 2.5 наличника + скрытые петли и магнитный замок</div>
+                </div>
+              </label>
+
+              <label class="scenario-option-card">
+                <input type="radio" name="pdpScenario" value="kit_without_hardware">
+                <div class="scenario-card-body">
+                  <div class="scenario-card-title">Комплект без фурнитуры</div>
+                  <div class="scenario-card-desc">Полотно + коробочный брус + наличники (под собственную фурнитуру заказчика)</div>
+                </div>
+              </label>
+
+              <label class="scenario-option-card">
+                <input type="radio" name="pdpScenario" value="leaf_only">
+                <div class="scenario-card-body">
+                  <div class="scenario-card-title">Только дверное полотно</div>
+                  <div class="scenario-card-desc">Полотно без погонажных изделий и замка (для замены в готовый проём)</div>
+                </div>
+              </label>
+            </div>
+
+            <!-- ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ -->
+            <div class="pdp-extra-addons">
+              <label class="addon-checkbox-row">
+                <input type="checkbox" id="checkWcTurn">
+                <span>Сантехнический WC-фиксатор (для ванных комнат и санузлов)</span>
+              </label>
+              <label class="addon-checkbox-row">
+                <input type="checkbox" id="checkFreeMeasure" checked>
+                <span>Бесплатный выезд инженера-замерщика с образцами отделки в РТ</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 8. КНОПКА «ДОБАВИТЬ В КОРЗИНУ» И 9. ВТОРИЧНОЕ ДЕЙСТВИЕ -->
+          <div class="pdp-cta-block">
+            <button type="button" class="btn-pdp-cart" id="btnAddToCart">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span>Добавить в корзину</span>
+            </button>
+
+            <button type="button" class="btn-pdp-consult" id="btnGetConsult" onclick="window.PDP.openConsultModal('Запрос консультации со страницы товара')">
+              <span>Получить консультацию и замер</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+
+          <!-- ПРЕИМУЩЕСТВА СЕРВИСА -->
+          <div class="pdp-trust-grid">
+            <div class="trust-item">
+              <span class="trust-icon">📐</span>
+              <div class="trust-text">
+                <strong>Лазерный замер 0 ₽</strong>
+                <span>Точный расчёт монтажных зазоров</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">🛡️</span>
+              <div class="trust-text">
+                <strong>Гарантия до 5 лет</strong>
+                <span>Официальный сервисный центр</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">🚚</span>
+              <div class="trust-text">
+                <strong>Склады в РТ</strong>
+                <span>Казань и Набережные Челны</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 5. ДОПОЛНИТЕЛЬНЫЕ РАЗДЕЛЫ СТРАНИЦЫ (НИЖЕ ПЕРВОГО ЭКРАНА) -->
+      <section class="pdp-details-sections">
+
+        <!-- НАВИГАЦИЯ ПО ТАБАМ ДЕТАЛЕЙ -->
+        <div class="pdp-tabs-nav" role="tablist">
+          <button type="button" class="pdp-tab-nav-btn active" data-tab="tabOverview" role="tab" aria-selected="true">
+            <span>Описание и дизайн</span>
+          </button>
+          <button type="button" class="pdp-tab-nav-btn" data-tab="tabSpecs" role="tab" aria-selected="false">
+            <span>Характеристики</span>
+          </button>
+          <button type="button" class="pdp-tab-nav-btn" data-tab="tabVariants" role="tab" aria-selected="false">
+            <span>Варианты исполнения</span>
+          </button>
+          <button type="button" class="pdp-tab-nav-btn" data-tab="tabComplect" role="tab" aria-selected="false">
+            <span>Инженерный состав</span>
+          </button>
+          <button type="button" class="pdp-tab-nav-btn" data-tab="tabGallery" role="tab" aria-selected="false">
+            <span>Интерьер и схемы</span>
+          </button>
+          <button type="button" class="pdp-tab-nav-btn" data-tab="tabDelivery" role="tab" aria-selected="false">
+            <span>Доставка и монтаж</span>
+          </button>
+        </div>
+
+        <!-- ТАБ 1: ОПИСАНИЕ МОДЕЛИ -->
+        <div class="pdp-tab-panel active" id="tabOverview" role="tabpanel">
+          <div class="overview-content-layout">
+            <div class="overview-text-block">
+              <h2 class="section-title-serif">Архитектурная концепция модели</h2>
+              <div class="overview-body-text" id="pdpFullDesc">
+                <!-- Заполняется динамически -->
+              </div>
+              <div class="overview-key-points" id="pdpKeyPoints">
+                <!-- Ключевые преимущества -->
+              </div>
+            </div>
+            <div class="overview-highlight-card">
+              <div class="highlight-card-header">Стандарты фабрики</div>
+              <ul class="highlight-list" id="pdpFactoryHighlights">
+                <li>Экологически безопасные материалы высшего класса E1</li>
+                <li>Многослойная влагозащита торцов полотна</li>
+                <li>Высокая звукоизоляция дверного блока до 32–45 дБ</li>
+                <li>Точная заводская врезка скрытой фурнитуры на станках ЧПУ</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ТАБ 2: ХАРАКТЕРИСТИКИ -->
+        <div class="pdp-tab-panel" id="tabSpecs" role="tabpanel">
+          <h2 class="section-title-serif">Техническая спецификация</h2>
+          <div class="specs-grid-table" id="pdpSpecsTable">
+            <!-- Таблица характеристик генерируется скриптом -->
+          </div>
+        </div>
+
+        <!-- ТАБ 3: ВАРИАНТЫ ИСПОЛНЕНИЯ -->
+        <div class="pdp-tab-panel" id="tabVariants" role="tabpanel">
+          <h2 class="section-title-serif">Заводские модификации модели</h2>
+          <p class="section-subtitle">
+            Все модификации выпускаются на официальном производстве фабрики с соблюдением геометрии и стандартов влажности.
+          </p>
+          <div class="variants-cards-grid" id="pdpVariantsCardsGrid">
+            <!-- Карточки вариантов генерируются скриптом -->
+          </div>
+        </div>
+
+        <!-- ТАБ 4: КОМПЛЕКТАЦИЯ -->
+        <div class="pdp-tab-panel" id="tabComplect" role="tabpanel">
+          <h2 class="section-title-serif">Комплектация и погонажные решения</h2>
+          <div class="complect-breakdown-grid" id="pdpComplectBreakdown">
+            <!-- Элементы комплектации -->
+          </div>
+        </div>
+
+        <!-- ТАБ 5: ДОПОЛНИТЕЛЬНЫЕ ФОТОГРАФИИ И СХЕМЫ -->
+        <div class="pdp-tab-panel" id="tabGallery" role="tabpanel">
+          <h2 class="section-title-serif">Интерьерные решения и чертежи</h2>
+          <p class="section-subtitle">
+            Примеры установки в интерьерах, разрезы профилей и технические страницы каталога производителя.
+          </p>
+          <div class="interior-gallery-grid" id="pdpInteriorGallery">
+            <!-- Галерея интерьеров и схем -->
+          </div>
+        </div>
+
+        <!-- ТАБ 6: ДОСТАВКА И МОНТАЖ -->
+        <div class="pdp-tab-panel" id="tabDelivery" role="tabpanel">
+          <h2 class="section-title-serif">Доставка, лазерный замер и установка</h2>
+          <div class="service-cards-row">
+            <div class="service-card">
+              <div class="service-card-num">01</div>
+              <div class="service-card-title">Бесплатный лазерный замер</div>
+              <p class="service-card-text">
+                Инженер выезжает на объект в Казани, Набережных Челнах и пригородах с высокоточным лазерным измерителем и каталогами декоров.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-num">02</div>
+              <div class="service-card-title">Бережная доставка со складов</div>
+              <p class="service-card-text">
+                Собственный специализированный автотранспорт с фиксацией полотен. Доставка до квартиры или загородного дома с подъёмом.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-card-num">03</div>
+              <div class="service-card-title">Профессиональный монтаж</div>
+              <p class="service-card-text">
+                Монтажные бригады с профессиональным пылеудалением Festool, шаблонами для врезки петель и гарантией на работы 2 года.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 6. МОБИЛЬНАЯ ФИКСИРОВАННАЯ ПАНЕЛЬ ДЕЙСТВИЯ (STICKY BOTTOM BAR НА ТЕЛЕФОНАХ) -->
+  <aside class="pdp-mobile-sticky-bar" id="mobileStickyBar" aria-label="Быстрый заказ">
+    <div class="sticky-bar-info">
+      <div class="sticky-model-name" id="stickyModelName">Модель двери</div>
+      <div class="sticky-price-val" id="stickyPriceVal">Уточнить цену</div>
+    </div>
+    <div class="sticky-bar-actions">
+      <button type="button" class="btn-sticky-cart" id="btnStickyCart">
+        <span>В корзину</span>
+      </button>
+      <button type="button" class="btn-sticky-consult" id="btnStickyConsult" onclick="window.PDP.openConsultModal('Заказ из нижнего бара')" title="Консультация">
+        📞
+      </button>
+    </div>
+  </aside>
+
+  <!-- МОДАЛЬНОЕ ОКНО КОРЗИНЫ (ИНТЕРФЕЙС КОРЗИНЫ) -->
+  <div class="cart-modal-overlay" id="cartModal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="cart-modal-panel">
+      <div class="cart-modal-header">
+        <div class="cart-title-row">
+          <h2 class="cart-title" id="cartTitle">Ваша спецификация (Корзина)</h2>
+          <span class="cart-count-badge" id="cartModalCount">0</span>
+        </div>
+        <button type="button" class="btn-close-cart" id="btnCloseCart" aria-label="Закрыть корзину">✕</button>
+      </div>
+
+      <div class="cart-modal-body" id="cartItemsList">
+        <!-- Позиции корзины генерируются скриптом -->
+      </div>
+
+      <div class="cart-modal-footer">
+        <div class="cart-total-row">
+          <span class="cart-total-label">Предварительный итог:</span>
+          <span class="cart-total-amount" id="cartTotalAmount">По индивидуальной смете</span>
+        </div>
+        <p class="cart-note">
+          Точная смета формируется инженером с учётом толщины стен, доборов, фурнитуры и замера проёмов.
+        </p>
+        <button type="button" class="btn-checkout" id="btnCheckout" onclick="window.PDP.openCheckoutModal()">
+          Оформить заявку на комплектацию
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО КОНСУЛЬТАЦИИ / ЗАЯВКИ НА РАСЧЁТ -->
+  <div class="consult-modal-overlay" id="consultModal" role="dialog" aria-modal="true" aria-labelledby="consultTitle">
+    <div class="consult-modal-card">
+      <button type="button" class="btn-close-consult" id="btnCloseConsult" aria-label="Закрыть окно">✕</button>
+      
+      <div class="consult-header">
+        <h3 class="consult-title" id="consultTitle">Заявка на расчет сметы и замер</h3>
+        <p class="consult-subtitle">
+          Менеджер шоурума свяжется в течение 15 минут, согласует выезд инженера и зафиксирует фабричные скидки.
+        </p>
+      </div>
+
+      <div class="consult-item-preview" id="consultItemPreview">
+        <!-- Краткое описание выбранной модели и размера -->
+      </div>
+
+      <form id="consultForm" class="consult-form">
+        <div class="form-group">
+          <label for="consultName">Ваше имя *</label>
+          <input type="text" id="consultName" required placeholder="Например: Александр" class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label for="consultPhone">Телефон для связи *</label>
+          <input type="tel" id="consultPhone" required placeholder="+7 (___) ___-__-__" class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label for="consultCity">Город обслуживания</label>
+          <select id="consultCity" class="form-select">
+            <option value="Казань">Казань и пригород</option>
+            <option value="Набережные Челны">Набережные Челны и Закамье</option>
+            <option value="Другой город РТ">Другой город Республики Татарстан</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="consultComment">Комментарий или пожелания по проёмам</label>
+          <textarea id="consultComment" rows="2" placeholder="Например: новостройка, 4 проема, требуется скрытый монтаж" class="form-textarea"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit-consult">
+          <span>Отправить заявку в шоурум</span>
+          <span>→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО УВЕЛИЧЕННОГО ФОТО (LIGHTBOX) -->
+  <div class="lightbox-overlay" id="pdpLightbox" role="dialog" aria-modal="true">
+    <button type="button" class="lightbox-close-btn" id="btnCloseLightbox" title="Закрыть">✕</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Увеличенное изображение двери" class="lightbox-img">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- ПОДВАЛ САЙТА (SHOWROOM FOOTER) -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-container">
+      <div>
+        <div class="brand-block" style="margin-bottom: 16px;">
+          <img src="logo.png" alt="Двери №1" class="brand-logo-img">
+          <div class="brand-titles">
+            <div class="brand-name" style="font-size: 1.15rem;">ДВЕРИ №1</div>
+            <div class="brand-subtitle">Федеральная рознично-оптовая сеть</div>
+          </div>
+        </div>
+        <p style="line-height: 1.6; max-width: 460px; color: var(--text-muted); font-size: 0.8125rem;">
+          Крупнейший специализированный дверной центр в Республике Татарстан. Официальный дистрибьютор фабрик: Оникс, Дворецкий, ProfilDoors, Владимирская фабрика дверей, Океан, Корона, Двери регионов, Bravo, Turen Becker, Luxor, Chameleon Doors.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Центры продаж и склады</div>
+        <p style="margin-bottom: 8px; font-size: 0.8125rem; color: var(--text-secondary);">
+          <strong style="color: #fff;">г. Казань:</strong><br>
+          ул. Сибирский тракт, 59б<br>
+          <span>Ежедневно с 09:00 до 19:00</span>
+        </p>
+        <p style="font-size: 0.8125rem; color: var(--text-secondary);">
+          <strong style="color: #fff;">г. Набережные Челны:</strong><br>
+          Казанский проспект, 232<br>
+          <span>Пн-Сб с 09:00 до 18:00</span>
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Контакты и справочная</div>
+        <p style="margin-bottom: 6px; font-size: 0.8125rem; color: var(--text-muted);">Единая справочная служба:</p>
+        <p style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 10px;">+7 (843) 205-00-01</p>
+        <p style="color: var(--text-muted); font-size: 0.75rem; line-height: 1.5;">
+          Выезд замерщика с лазерным измерительным комплексом и образцами отделки осуществляется бесплатно при оформлении договора монтажа.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div>© 2026 «Двери №1». Премиальный дверной шоурум в Казани и Набережных Челнах.</div>
+      <div>
+        <a href="admin.html" class="footer-curator-link" title="Перейти в панель верификации каталога">Служебный вход (V3.2)</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST УВЕДОМЛЕНИЕ -->
+  <div id="siteToast" class="toast-notice"></div>
+
+  <!-- СКРИПТЫ: ДАННЫЕ И ЯДРО СТРАНИЦЫ ТОВАРА -->
+  <script src="data/catalog-output/products-data.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>
