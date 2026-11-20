@@ -261,10 +261,11 @@
     });
 
     // 5. Стоимость комплекта
-    renderPriceList('priceFilterList', state.allProducts.length, state.activePrice, (val) => {
+    renderPriceList('priceFilterList', state.activePrice, (val) => {
       state.activePrice = (state.activePrice === val) ? 'all' : val;
       state.currentPage = 1;
       applyFiltersAndSort();
+      buildFacetFilters();
     });
 
     // Второстепенные под спойлером
@@ -382,14 +383,28 @@
     });
   }
 
-  function renderPriceList(containerId, totalCount, activeValue, onSelect) {
+  function renderPriceList(containerId, activeValue, onSelect) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
+    // Считаем товары по категориям и диапазонам цен
+    const baseList = (state.activeCategory !== 'all')
+      ? state.allProducts.filter(p => p.category === state.activeCategory)
+      : state.allProducts;
+
+    const totalCount = baseList.length;
+    const cUnder10 = baseList.filter(p => (p.price || 0) < 10000).length;
+    const c10_25 = baseList.filter(p => (p.price || 0) >= 10000 && (p.price || 0) < 25000).length;
+    const c25_40 = baseList.filter(p => (p.price || 0) >= 25000 && (p.price || 0) < 40000).length;
+    const cOver40 = baseList.filter(p => (p.price || 0) >= 40000).length;
+
     const priceOptions = [
-      { key: 'all', label: 'Все предложения', count: totalCount },
-      { key: 'quote', label: 'По индивидуальной смете', count: totalCount }
-    ];
+      { key: 'all', label: 'Все диапазоны', count: totalCount },
+      { key: 'under_10k', label: 'До 10 000 ₽', count: cUnder10 },
+      { key: '10k_25k', label: '10 000 – 25 000 ₽', count: c10_25 },
+      { key: '25k_40k', label: '25 000 – 40 000 ₽', count: c25_40 },
+      { key: 'over_40k', label: 'От 40 000 ₽', count: cOver40 }
+    ].filter(opt => opt.key === 'all' || opt.count > 0);
 
     let html = '';
     priceOptions.forEach(opt => {
@@ -458,7 +473,16 @@
         return false;
       }
 
-      // 6. Стиль (второстепенный)
+      // 6. Стоимость комплекта
+      if (state.activePrice !== 'all') {
+        const pr = p.price || 0;
+        if (state.activePrice === 'under_10k' && pr >= 10000) return false;
+        if (state.activePrice === '10k_25k' && (pr < 10000 || pr >= 25000)) return false;
+        if (state.activePrice === '25k_40k' && (pr < 25000 || pr >= 40000)) return false;
+        if (state.activePrice === 'over_40k' && pr < 40000) return false;
+      }
+
+      // 7. Стиль (второстепенный)
       if (state.activeStyle !== 'all') {
         const s = p.specs?.style || '';
         if (!s.includes(state.activeStyle)) return false;
@@ -488,6 +512,12 @@
 
   function sortProducts() {
     switch (state.sortOption) {
+      case 'price_asc':
+        state.filteredProducts.sort((a, b) => (a.price || 0) - (b.price || 0));
+        break;
+      case 'price_desc':
+        state.filteredProducts.sort((a, b) => (b.price || 0) - (a.price || 0));
+        break;
       case 'name_asc':
         state.filteredProducts.sort((a, b) => (a.model || '').localeCompare(b.model || '', 'ru'));
         break;
@@ -528,7 +558,7 @@
       descEl.textContent = 'Светопрозрачные конструкции с триплексом, матовым сатинатом, лакобелем и декоративным остеклением.';
     } else {
       titleEl.textContent = 'Коллекция дизайнерских дверей';
-      descEl.textContent = 'Премиальные межкомнатные и входные двери ведущих фабрик с бесплатным лазерным замером по Республике Татарстан.';
+      descEl.textContent = 'Премиальные межкомнатные и входные двери ведущих фабрик с профессиональным инженерным замером по Республике Татарстан.';
     }
   }
 
@@ -668,7 +698,13 @@
       chips.push({ label: 'Тип: ' + (tMap[state.activeType] || state.activeType), onRemove: () => { state.activeType = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
     }
     if (state.activePrice !== 'all') {
-      chips.push({ label: 'Расчет: Индивидуальная смета', onRemove: () => { state.activePrice = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
+      const pLabels = {
+        'under_10k': 'Цена: До 10 000 ₽',
+        '10k_25k': 'Цена: 10 000 – 25 000 ₽',
+        '25k_40k': 'Цена: 25 000 – 40 000 ₽',
+        'over_40k': 'Цена: От 40 000 ₽'
+      };
+      chips.push({ label: pLabels[state.activePrice] || 'Цена: ' + state.activePrice, onRemove: () => { state.activePrice = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
     }
     if (state.activeStyle !== 'all') {
       chips.push({ label: 'Стиль: ' + state.activeStyle, onRemove: () => { state.activeStyle = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
