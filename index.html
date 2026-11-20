@@ -30,10 +30,10 @@
         <a href="showrooms.html" class="header-nav-link" data-nav="showrooms">Шоурумы</a>
       </nav>
 
-      <!-- СПРАВА: СТЕКЛЯННАЯ КАПСУЛА CTA (DESKTOP) И МЕНЮ (MOBILE) -->
+      <!-- СПРАВА: КНОПКА CTA (DESKTOP) И МЕНЮ (MOBILE) -->
       <div class="header-actions">
-        <button type="button" class="btn-glass-cta" id="btnHeaderLead" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Вызов замерщика из шапки');">
-          Вызвать замерщика
+        <button type="button" class="btn-glass-cta" id="btnHeaderLead" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Запись на замер из шапки');">
+          Записаться на замер
         </button>
 
         <button type="button" class="btn-glass-menu" id="mobileMenuBtn" aria-label="Открыть меню" aria-expanded="false">
@@ -74,8 +74,8 @@
         </a>
       </nav>
       <div class="mobile-glass-footer">
-        <button type="button" class="btn-mobile-glass-cta" onclick="if(window.closeMobileMenu) window.closeMobileMenu(); if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Вызов замерщика из мобильного меню');">
-          Вызвать замерщика
+        <button type="button" class="btn-mobile-glass-cta" onclick="if(window.closeMobileMenu) window.closeMobileMenu(); if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Запись на замер из мобильного меню');">
+          Записаться на замер
         </button>
       </div>
     </div>
@@ -112,52 +112,56 @@
         <p class="editorial-subtitle">Четыре ключевых концепта для продуманных интерьерных и входных решений</p>
       </div>
 
-      <div class="categories-grid">
-        <!-- 1. Межкомнатные двери -->
-        <a href="#catalogContent" class="category-card" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Межкомнатные двери');">
-          <div class="category-img-wrap">
-            <img src="data/catalog-output/catalog-images/PROD-HW-002_main.png" alt="Межкомнатные двери" class="category-door-img" loading="eager">
+      <div class="editorial-categories-gallery">
+        <!-- 1. Ведущее направление: Межкомнатные двери (Lead Feature Card) -->
+        <a href="#catalogContent" class="cat-editorial-card cat-editorial-lead" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Межкомнатные двери');">
+          <div class="cat-media-wrapper">
+            <img src="category-interior.jpg" alt="Межкомнатные двери" class="cat-editorial-img" loading="eager">
+            <div class="cat-scrim-overlay"></div>
           </div>
-          <div class="category-info">
-            <div class="category-meta">471 модель</div>
-            <h3 class="category-name">Межкомнатные двери</h3>
-            <span class="category-arrow">Смотреть каталог →</span>
-          </div>
-        </a>
-
-        <!-- 2. Входные двери -->
-        <a href="#catalogContent" class="category-card" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Входные двери');">
-          <div class="category-img-wrap">
-            <img src="data/catalog-output/catalog-images/PROD-FERR-001_main.png" alt="Входные двери" class="category-door-img" loading="eager">
-          </div>
-          <div class="category-info">
-            <div class="category-meta">171 модель</div>
-            <h3 class="category-name">Входные двери</h3>
-            <span class="category-arrow">Смотреть каталог →</span>
+          <div class="cat-editorial-content">
+            <span class="cat-editorial-kicker">Натуральный шпон и эмаль</span>
+            <h3 class="cat-editorial-title">Межкомнатные двери</h3>
+            <span class="cat-editorial-action">Смотреть коллекцию <span class="cat-arrow">→</span></span>
           </div>
         </a>
 
-        <!-- 3. Скрытые двери -->
-        <a href="#catalogContent" class="category-card" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Скрытые двери');">
-          <div class="category-img-wrap">
-            <img src="data/catalog-output/catalog-images/PROD-CHAM-001_main.png" alt="Скрытые двери Invisible" class="category-door-img" loading="eager">
+        <!-- 2. Скрытые двери (Invisible) -->
+        <a href="#catalogContent" class="cat-editorial-card cat-editorial-invisible" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Скрытые двери');">
+          <div class="cat-media-wrapper">
+            <img src="category-invisible.jpg" alt="Скрытые двери Invisible" class="cat-editorial-img" loading="eager">
+            <div class="cat-scrim-overlay"></div>
           </div>
-          <div class="category-info">
-            <div class="category-meta">Инженерные короба</div>
-            <h3 class="category-name">Скрытые двери</h3>
-            <span class="category-arrow">Смотреть каталог →</span>
+          <div class="cat-editorial-content">
+            <span class="cat-editorial-kicker">Интеграция в плоскость стены</span>
+            <h3 class="cat-editorial-title">Скрытые двери</h3>
+            <span class="cat-editorial-action">Смотреть коллекцию <span class="cat-arrow">→</span></span>
+          </div>
+        </a>
+
+        <!-- 3. Входные двери -->
+        <a href="#catalogContent" class="cat-editorial-card cat-editorial-entrance" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Входные двери');">
+          <div class="cat-media-wrapper">
+            <img src="category-entrance.jpg" alt="Входные двери" class="cat-editorial-img" loading="eager">
+            <div class="cat-scrim-overlay"></div>
+          </div>
+          <div class="cat-editorial-content">
+            <span class="cat-editorial-kicker">Взломостойкие двери для вилл и квартир</span>
+            <h3 class="cat-editorial-title">Входные двери</h3>
+            <span class="cat-editorial-action">Смотреть коллекцию <span class="cat-arrow">→</span></span>
           </div>
         </a>
 
         <!-- 4. Двери со стеклом -->
-        <a href="#catalogContent" class="category-card" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Двери со стеклом');">
-          <div class="category-img-wrap">
-            <img src="data/catalog-output/catalog-images/PROD-CHAM-101_main.png" alt="Двери со стеклом" class="category-door-img" loading="eager">
+        <a href="#catalogContent" class="cat-editorial-card cat-editorial-glass" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Двери со стеклом');">
+          <div class="cat-media-wrapper">
+            <img src="category-glass.jpg" alt="Двери со стеклом" class="cat-editorial-img" loading="eager">
+            <div class="cat-scrim-overlay"></div>
           </div>
-          <div class="category-info">
-            <div class="category-meta">51 модель</div>
-            <h3 class="category-name">Двери со стеклом</h3>
-            <span class="category-arrow">Смотреть каталог →</span>
+          <div class="cat-editorial-content">
+            <span class="cat-editorial-kicker">Рифлёное стекло в латунном профиле</span>
+            <h3 class="cat-editorial-title">Двери со стеклом</h3>
+            <span class="cat-editorial-action">Смотреть коллекцию <span class="cat-arrow">→</span></span>
           </div>
         </a>
       </div>
@@ -421,8 +425,8 @@
             Инженеры шоурума помогут рассчитать размеры проёмов, подобрать варианты открывания, покрытие полотна и составить спецификацию для вашего дизайн-проекта.
           </p>
           <div class="consultation-actions">
-            <button type="button" class="btn-consultation-primary" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Вызов замерщика');">
-              Вызвать замерщика
+            <button type="button" class="btn-consultation-primary" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Запись на замер');">
+              Записаться на замер
             </button>
             <button type="button" class="btn-consultation-secondary" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Консультация эксперта');">
               Получить консультацию
@@ -507,7 +511,7 @@
 
       <div class="lead-form-header">
         <h2 class="lead-form-title" id="leadModalTitle">Заявка на расчет сметы</h2>
-        <div class="lead-form-subtitle">Бесплатный выезд инженера-замерщика с образцами покрытий и каталогами фурнитуры</div>
+        <div class="lead-form-subtitle">Профессиональный выезд инженера-замерщика с образцами покрытий и каталогами фурнитуры</div>
       </div>
 
       <!-- Сводка выбранного товара -->
