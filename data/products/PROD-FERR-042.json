@@ -110,6 +110,7 @@
   "need_manual_check": true,
   "check_reason": "Цвет полотна не указан в документации производителя",
   "door_type_group": "entrance",
+  "inStock": true,
   "thumbs": [
     "data/catalog-output/thumbs/PROD-FERR-042_main.webp"
   ]

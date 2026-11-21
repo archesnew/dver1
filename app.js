@@ -21,6 +21,8 @@
     activeMaterial: 'all',
     publicationStatus: 'published', // 'published' (642), 'drafts' (55), 'all' (697)
     searchQuery: '',
+    onlyInStock: false, // Тумблер складской программы (быстрая доставка 1-2 дня)
+    comparedIds: [], // Массив ID моделей для сравнения (макс. 3)
     sortOption: 'default',
     currentPage: 1,
     pageSize: 24,
@@ -488,24 +490,34 @@
     const q = state.searchQuery.toLowerCase().trim();
 
     state.filteredProducts = state.allProducts.filter(p => {
-      // 1. Поиск по тексту
+      // 1. Поиск по тексту (название, бренд, категория, тип, цвет, материал, id, коллекция)
       if (q) {
-        const titleMatch = (p.model || '').toLowerCase().includes(q);
+        const titleMatch = (p.name || p.model || '').toLowerCase().includes(q);
         const colMatch = (p.collection || '').toLowerCase().includes(q);
         const brandMatch = (p.brand || '').toLowerCase().includes(q);
         const artMatch = (p.article || '').toLowerCase().includes(q);
+        const idMatch = (p.id || '').toLowerCase().includes(q);
         const catMatch = (p.category || '').toLowerCase().includes(q);
+        const typeMatch = (p.type || p.door_type_group || '').toLowerCase().includes(q);
+        const matMatch = (p.material || p.specs?.material || '').toLowerCase().includes(q);
+        const styleMatch = (p.style || p.specs?.style || '').toLowerCase().includes(q);
+        const colorMatch = (p.color || '').toLowerCase().includes(q) ||
+          (p.color_names || []).some(c => c.toLowerCase().includes(q));
         const descMatch = (p.description || '').toLowerCase().includes(q);
-        const specColorMatch = (p.specs?.color || '').toLowerCase().includes(q);
         const varMatch = (p.variants || []).some(v => 
           (v.name || '').toLowerCase().includes(q) || 
           (v.size || '').toLowerCase().includes(q) ||
           (v.color || '').toLowerCase().includes(q)
         );
 
-        if (!titleMatch && !colMatch && !brandMatch && !artMatch && !catMatch && !descMatch && !specColorMatch && !varMatch) {
+        if (!titleMatch && !colMatch && !brandMatch && !artMatch && !idMatch && !catMatch && !typeMatch && !matMatch && !styleMatch && !colorMatch && !descMatch && !varMatch) {
           return false;
         }
+      }
+
+      // 1.1. Наличие на складе (Спринт 4)
+      if (state.onlyInStock && !p.inStock) {
+        return false;
       }
 
       // 2. Категория
@@ -659,7 +671,7 @@
             Попробуйте изменить поисковый запрос или сбросить активные фильтры параметров.
           </div>
           <button type="button" class="btn-card-more" id="btnEmptyReset" style="margin: 0 auto; padding: 10px 24px;">
-            Сбросить все фильтры
+            Сбросить поиск и фильтры
           </button>
         </div>
       `;
@@ -678,12 +690,31 @@
       const collectionSub = p.collection ? `${brandName} • ${p.collection}` : brandName;
       const modelName = p.model || p.name || 'Дверное полотно';
       const priceText = p.price ? Number(p.price).toLocaleString('ru-RU') + ' ₽' : 'Уточнить цену';
+      const isCompared = state.comparedIds.includes(p.id);
+
+      // Бейдж наличия на складе (Спринт 4)
+      const inStockBadge = p.inStock ? `
+        <span class="badge-in-stock" title="В наличии на складе (доставка 1–2 дня)">
+          <span class="badge-dot"></span>
+          <span>В наличии</span>
+        </span>
+      ` : '';
 
       html += `
         <article class="product-card" data-id="${p.id}">
-          <a href="product.html?id=${encodeURIComponent(p.id)}" class="card-image-box">
-            <img class="card-img" src="${mainImg}" alt="${escapeHtml(modelName)}" loading="lazy" decoding="async" width="480" height="640" onerror="this.onerror=null; this.src='door-placeholder.svg';">
-          </a>
+          <div class="card-image-box-wrapper">
+            ${inStockBadge}
+            <button type="button" class="btn-card-compare ${isCompared ? 'active' : ''}" data-compare-id="${p.id}" title="${isCompared ? 'Удалить из сравнения' : 'Сравнить модель'}" aria-label="Сравнить модель">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </button>
+            <a href="product.html?id=${encodeURIComponent(p.id)}" class="card-image-box">
+              <img class="card-img" src="${mainImg}" alt="${escapeHtml(modelName)}" loading="lazy" decoding="async" width="480" height="640" onerror="this.onerror=null; this.src='door-placeholder.svg';">
+            </a>
+          </div>
           
           <div class="card-body">
             <div class="card-brand-line">${escapeHtml(collectionSub)}</div>
@@ -721,6 +752,16 @@
 
     grid.innerHTML = html;
 
+    // Навешивание клика на кнопки сравнения в карточках
+    grid.querySelectorAll('.btn-card-compare').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const id = btn.getAttribute('data-compare-id');
+        if (id) toggleCompare(id);
+      });
+    });
+
     // Подключение клика и IntersectionObserver для плавной автоматической подгрузки
     const btnLoadMore = document.getElementById('btnLoadMore');
     if (btnLoadMore) {
@@ -748,9 +789,21 @@
     const el = document.getElementById('resultsStatsBar');
     if (el) {
       const visibleCount = Math.min(state.currentPage * state.pageSize, state.filteredProducts.length);
-      el.innerHTML = `
-        <span class="status-count-text">Показано: <strong>${visibleCount}</strong> из <strong>${state.filteredProducts.length}</strong> моделей</span>
-      `;
+      const countEl = el.querySelector('.status-count-text');
+      if (countEl) {
+        countEl.innerHTML = `Показано: <strong>${visibleCount}</strong> из <strong>${state.filteredProducts.length}</strong> моделей`;
+      }
+    }
+
+    const btnStock = document.getElementById('btnStockToggle');
+    if (btnStock) {
+      if (state.onlyInStock) {
+        btnStock.classList.add('active');
+        btnStock.setAttribute('aria-checked', 'true');
+      } else {
+        btnStock.classList.remove('active');
+        btnStock.setAttribute('aria-checked', 'false');
+      }
     }
   }
 
@@ -759,6 +812,21 @@
     if (!container) return;
 
     const chips = [];
+
+    if (state.onlyInStock) {
+      chips.push({
+        label: 'В наличии на складе (1–2 дня)',
+        onRemove: () => {
+          state.onlyInStock = false;
+          const btn = document.getElementById('btnStockToggle');
+          if (btn) {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-checked', 'false');
+          }
+          applyFiltersAndSort();
+        }
+      });
+    }
 
     if (state.activeCategory !== 'all') {
       chips.push({ label: 'Категория: ' + state.activeCategory, onRemove: () => { state.activeCategory = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
@@ -834,12 +902,19 @@
     state.activeStyle = 'all';
     state.activeMaterial = 'all';
     state.searchQuery = '';
+    state.onlyInStock = false;
     state.currentPage = 1;
 
     const searchInput = document.getElementById('searchInput');
     if (searchInput) searchInput.value = '';
     const searchClear = document.getElementById('searchClearBtn');
     if (searchClear) searchClear.style.display = 'none';
+
+    const btnStock = document.getElementById('btnStockToggle');
+    if (btnStock) {
+      btnStock.classList.remove('active');
+      btnStock.setAttribute('aria-checked', 'false');
+    }
 
     document.querySelectorAll('.header-nav .header-nav-link, .mobile-nav-item').forEach(link => {
       if (link.dataset.nav === 'catalog' || link.textContent.trim() === 'Каталог') {
@@ -856,6 +931,187 @@
     const catalogEl = document.getElementById('catalogContent');
     if (catalogEl) {
       catalogEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  // СИСТЕМА СРАВНЕНИЯ МОДЕЛЕЙ (TASK 3 — SPRINT 4)
+  // --------------------------------------------------------------------------
+  function toggleCompare(id) {
+    if (!id) return;
+    const idx = state.comparedIds.indexOf(id);
+    if (idx > -1) {
+      state.comparedIds.splice(idx, 1);
+      showToast('Модель удалена из сравнения');
+    } else {
+      if (state.comparedIds.length >= 3) {
+        showToast('Можно сравнивать не более 3 моделей одновременно');
+        return;
+      }
+      state.comparedIds.push(id);
+      showToast('Модель добавлена к сравнению');
+    }
+
+    try {
+      localStorage.setItem('DVER1_COMPARE', JSON.stringify(state.comparedIds));
+    } catch (e) {}
+
+    // Обновляем состояние кнопок в сетке
+    document.querySelectorAll(`.btn-card-compare[data-compare-id="${id}"]`).forEach(btn => {
+      const active = state.comparedIds.includes(id);
+      btn.classList.toggle('active', active);
+      btn.title = active ? 'Удалить из сравнения' : 'Сравнить модель';
+    });
+
+    renderCompareFloatingBar();
+  }
+
+  function clearCompare() {
+    state.comparedIds = [];
+    try {
+      localStorage.removeItem('DVER1_COMPARE');
+    } catch (e) {}
+
+    document.querySelectorAll('.btn-card-compare.active').forEach(btn => {
+      btn.classList.remove('active');
+      btn.title = 'Сравнить модель';
+    });
+
+    renderCompareFloatingBar();
+    closeCompareModal();
+    showToast('Сравнение очищено');
+  }
+
+  function renderCompareFloatingBar() {
+    const bar = document.getElementById('compareFloatingBar');
+    if (!bar) return;
+
+    const count = state.comparedIds.length;
+    if (count === 0) {
+      bar.style.display = 'none';
+      return;
+    }
+
+    bar.style.display = 'flex';
+    const badge = document.getElementById('compareCountBadge');
+    if (badge) badge.textContent = count;
+
+    const thumbsContainer = document.getElementById('compareBarThumbs');
+    if (thumbsContainer) {
+      thumbsContainer.innerHTML = state.comparedIds.map(id => {
+        const prod = state.allProducts.find(p => p.id === id);
+        const name = prod ? (prod.model || prod.name || 'Дверь') : 'Дверь';
+        const img = prod ? (prod.thumb || ((prod.images && prod.images.length > 0) ? resolveImagePath(prod.images[0]) : 'door-placeholder.svg')) : 'door-placeholder.svg';
+        return `
+          <div class="compare-mini-thumb" title="${escapeHtml(name)}">
+            <img src="${img}" alt="${escapeHtml(name)}" loading="lazy">
+            <button type="button" class="btn-remove-mini" data-remove-id="${id}" title="Удалить">✕</button>
+          </div>
+        `;
+      }).join('');
+
+      thumbsContainer.querySelectorAll('.btn-remove-mini').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const removeId = btn.getAttribute('data-remove-id');
+          if (removeId) toggleCompare(removeId);
+        });
+      });
+    }
+  }
+
+  function openCompareModal() {
+    const modal = document.getElementById('compareModal');
+    const body = document.getElementById('compareModalBody');
+    if (!modal || !body) return;
+
+    if (state.comparedIds.length === 0) {
+      showToast('Выберите хотя бы одну модель для сравнения');
+      return;
+    }
+
+    const prods = state.comparedIds.map(id => state.allProducts.find(p => p.id === id)).filter(Boolean);
+
+    let html = `
+      <table class="compare-spec-table">
+        <thead>
+          <tr>
+            <th style="width: 160px;">Параметр</th>
+            ${prods.map(p => `
+              <td class="col-door-card">
+                <img src="${p.thumb || ((p.images && p.images.length > 0) ? resolveImagePath(p.images[0]) : 'door-placeholder.svg')}" alt="${escapeHtml(p.name || p.model || 'Дверь')}" class="compare-door-preview-img">
+                <div class="compare-door-name">${escapeHtml(p.name || p.model || 'Дверное полотно')}</div>
+                <div class="compare-door-price">${p.price ? Number(p.price).toLocaleString('ru-RU') + ' ₽' : 'По запросу'}</div>
+                <div style="margin-top: 10px; display: flex; gap: 8px; justify-content: center;">
+                  <a href="product.html?id=${encodeURIComponent(p.id)}" class="btn-card-more" style="padding: 6px 14px; font-size: 0.78rem;">
+                    Подробнее →
+                  </a>
+                  <button type="button" class="btn-compare-remove-cell" data-id="${p.id}" style="background: none; border: 1px solid var(--border-stone); border-radius: 4px; padding: 4px 8px; cursor: pointer; color: var(--text-muted); font-size: 0.75rem;" title="Убрать из сравнения">
+                    ✕
+                  </button>
+                </div>
+              </td>
+            `).join('')}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Фабрика / Бренд</th>
+            ${prods.map(p => `<td>${escapeHtml(p.brand || '—')}</td>`).join('')}
+          </tr>
+          <tr>
+            <th>Категория</th>
+            ${prods.map(p => `<td>${escapeHtml(p.category || '—')}</td>`).join('')}
+          </tr>
+          <tr>
+            <th>Тип конструкции</th>
+            ${prods.map(p => `<td>${escapeHtml(p.type || p.door_type_group || 'Распашная')}</td>`).join('')}
+          </tr>
+          <tr>
+            <th>Покрытие / Материал</th>
+            ${prods.map(p => `<td>${escapeHtml(p.material || p.specs?.material || 'Эмаль / Шпон')}</td>`).join('')}
+          </tr>
+          <tr>
+            <th>Цвет / Отделка</th>
+            ${prods.map(p => `<td>${escapeHtml(p.color || (p.color_names ? p.color_names.join(', ') : 'В ассортименте'))}</td>`).join('')}
+          </tr>
+          <tr>
+            <th>Срок поставки</th>
+            ${prods.map(p => `
+              <td>
+                ${p.inStock 
+                  ? '<span style="color: #1B4332; font-weight: 600;">● В наличии на складе (1–2 дня)</span>' 
+                  : '<span style="color: var(--text-secondary);">Под заказ (10–14 дней)</span>'}
+              </td>
+            `).join('')}
+          </tr>
+        </tbody>
+      </table>
+    `;
+
+    body.innerHTML = html;
+
+    body.querySelectorAll('.btn-compare-remove-cell').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-id');
+        toggleCompare(id);
+        if (state.comparedIds.length === 0) {
+          closeCompareModal();
+        } else {
+          openCompareModal();
+        }
+      });
+    });
+
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCompareModal() {
+    const modal = document.getElementById('compareModal');
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
     }
   }
 
@@ -1545,8 +1801,45 @@
         closeFiltersDrawer();
         closeProductModal();
         closeLeadModal();
+        closeCompareModal();
       }
     });
+
+    // Тумблер наличия на складе (Спринт 4 — Задача 2)
+    const btnStockToggle = document.getElementById('btnStockToggle');
+    if (btnStockToggle) {
+      btnStockToggle.addEventListener('click', () => {
+        state.onlyInStock = !state.onlyInStock;
+        state.currentPage = 1;
+        applyFiltersAndSort();
+      });
+    }
+
+    // Кнопки сравнения моделей (Спринт 4 — Задача 3)
+    const btnOpenCompare = document.getElementById('btnOpenCompareModal');
+    if (btnOpenCompare) btnOpenCompare.addEventListener('click', openCompareModal);
+
+    const btnClearCompare = document.getElementById('btnClearCompare');
+    if (btnClearCompare) btnClearCompare.addEventListener('click', clearCompare);
+
+    const btnCloseCompare = document.getElementById('btnCloseCompare');
+    if (btnCloseCompare) btnCloseCompare.addEventListener('click', closeCompareModal);
+
+    const compareModal = document.getElementById('compareModal');
+    if (compareModal) {
+      compareModal.addEventListener('click', (e) => {
+        if (e.target === compareModal) closeCompareModal();
+      });
+    }
+
+    // Загрузка сохранённого списка сравнения из localStorage
+    try {
+      const savedCompare = localStorage.getItem('DVER1_COMPARE');
+      if (savedCompare) {
+        state.comparedIds = JSON.parse(savedCompare) || [];
+      }
+    } catch (e) {}
+    renderCompareFloatingBar();
 
     // Компактная сортировка
     const sortSelect = document.getElementById('sortSelect');
@@ -1800,7 +2093,11 @@
     openLeadModal,
     closeLeadModal,
     resetAllFilters,
-    setCategory
+    setCategory,
+    toggleCompare,
+    clearCompare,
+    openCompareModal,
+    closeCompareModal
   };
 
   // Запуск при загрузке DOM

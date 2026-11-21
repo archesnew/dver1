@@ -59,6 +59,7 @@
   "need_manual_check": true,
   "check_reason": "Комплектующие и погонаж (подбираются в цвет полотна)",
   "door_type_group": "flush",
+  "inStock": true,
   "thumbs": [
     "data/catalog-output/thumbs/door-placeholder.webp"
   ]

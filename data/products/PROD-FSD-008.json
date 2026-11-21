@@ -118,6 +118,7 @@
   "need_manual_check": false,
   "check_reason": null,
   "door_type_group": "entrance",
+  "inStock": false,
   "thumbs": [
     "data/catalog-output/thumbs/PROD-FSD-008_main.webp",
     "data/catalog-output/thumbs/PROD-FSD-008_interior.webp"

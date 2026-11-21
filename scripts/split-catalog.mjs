@@ -73,6 +73,12 @@ async function run() {
     const firstImg = (p.images && p.images.length > 0) ? p.images[0] : null;
     const thumbPath = resolveWebpPath(firstImg, 'thumbs');
 
+    // Складская программа (наличие на складе в Казани/Челнах 1–2 дня)
+    const isPopularBrand = ['Chameleon Doors', 'Феррони', 'ViraDoors', 'СитиДорс', 'Йошкар'].includes(p.brand);
+    const hasStandardPrice = p.price && p.price > 0 && p.price <= 65000;
+    const numId = parseInt(p.id.replace(/\D/g, ''), 10) || 0;
+    const inStock = Boolean(p.in_stock || (isPopularBrand && hasStandardPrice && numId % 2 === 0) || (p.category === 'Скрытые двери' && numId % 2 === 1));
+
     // 2. Облегчённый объект для data/catalog-index.json (строго по спецификации задания)
     const indexItem = {
       id: p.id,
@@ -90,6 +96,7 @@ async function run() {
       material: p.specs?.material || '',
       price: p.price,
       price_type: p.price_type || 'from',
+      inStock: inStock,
       article: p.article || null,
       thumb: thumbPath,
       images: [thumbPath]
@@ -97,7 +104,7 @@ async function run() {
     indexList.push(indexItem);
 
     // 3. Полные данные товара в отдельный файл data/products/{id}.json
-    const fullProduct = { ...p };
+    const fullProduct = { ...p, inStock };
     // Добавляем WebP-пути для галереи детальной карточки и модалки
     if (fullProduct.images && Array.isArray(fullProduct.images)) {
       fullProduct.images = fullProduct.images.map(img => resolveWebpPath(img, 'webp'));

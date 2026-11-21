@@ -119,6 +119,7 @@
   "need_manual_check": false,
   "check_reason": null,
   "door_type_group": "invisible",
+  "inStock": true,
   "thumbs": [
     "data/catalog-output/thumbs/PROD-MEZH-001_main.webp"
   ]

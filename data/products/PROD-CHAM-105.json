@@ -172,6 +172,7 @@
   "need_manual_check": false,
   "check_reason": null,
   "door_type_group": "glass",
+  "inStock": false,
   "thumbs": [
     "data/catalog-output/thumbs/PROD-CHAM-105_main.webp",
     "data/catalog-output/thumbs/PROD-CHAM-P29_page.webp"

@@ -178,6 +178,7 @@
   "need_manual_check": false,
   "check_reason": null,
   "door_type_group": "flush",
+  "inStock": true,
   "thumbs": [
     "data/catalog-output/thumbs/PROD-CHAM-082_main.webp",
     "data/catalog-output/thumbs/PROD-CHAM-P25_page.webp"

@@ -108,6 +108,7 @@
   "need_manual_check": true,
   "check_reason": "Цвет полотна не указан в документации производителя",
   "door_type_group": "entrance",
+  "inStock": false,
   "thumbs": [
     "data/catalog-output/thumbs/PROD-LUX-001_main.webp"
   ]

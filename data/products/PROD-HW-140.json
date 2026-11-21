@@ -130,6 +130,7 @@
   "need_manual_check": false,
   "check_reason": null,
   "door_type_group": "flush",
+  "inStock": false,
   "thumbs": [
     "data/catalog-output/thumbs/PROD-HW-140_main.webp"
   ]

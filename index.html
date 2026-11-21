@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=3.6.0">
+  <link rel="stylesheet" href="app.css?v=3.7.0">
   <style id="critical-designer-fallback">
     .designer-showcase-wrapper { position: relative; width: 100%; }
     .designer-showcase-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; padding: 4px 2px 14px; }
@@ -42,7 +42,7 @@
     .skeleton-price { width: 40%; height: 20px; }
     @keyframes skeleton-pulse { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
   </style>
-  <script src="cart-store.js?v=3.6.0"></script>
+  <script src="cart-store.js?v=3.7.0"></script>
 </head>
 <body>
 
@@ -418,7 +418,7 @@
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <input type="text" id="searchInput" class="search-field-compact" placeholder="Поиск модели, коллекции или фабрики...">
+            <input type="text" id="searchInput" class="search-field-compact" placeholder="Поиск по названию, фабрике, цвету (например: эмаль, скрытая, Феррони)..." aria-label="Поиск по каталогу">
             <button type="button" id="searchClearBtn" class="btn-search-clear" title="Очистить" style="display:none;">✕</button>
           </div>
 
@@ -525,7 +525,15 @@
         <!-- СЕТКА КАРТОЧЕК ТОВАРОВ С НАЧАЛЬНЫМ SKELETON UI -->
         <section class="catalog-grid-area">
           <div class="catalog-status-bar" id="resultsStatsBar">
-            <span class="status-count-text">Загрузка каталога...</span>
+            <div class="status-left-group">
+              <span class="status-count-text">Загрузка каталога...</span>
+            </div>
+            <div class="status-right-group">
+              <button type="button" class="btn-stock-toggle" id="btnStockToggle" role="switch" aria-checked="false" title="Показать только двери с быстрой доставкой 1–2 дня">
+                <span class="stock-toggle-dot"></span>
+                <span class="stock-toggle-label">В наличии на складе (1–2 дня)</span>
+              </button>
+            </div>
           </div>
 
           <div class="product-grid" id="productGrid">
@@ -617,6 +625,62 @@
             <span>Смотреть адреса и экспозиции</span>
             <span class="arrow-icon">→</span>
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- МИНИ-ГИД: НА КАКОМ ЭТАПЕ РЕМОНТА ВЫЗЫВАТЬ ЗАМЕРЩИКА (SPRINT 4 — TASK 4) -->
+  <section class="renovation-steps-section" aria-label="Когда вызывать замерщика">
+    <div class="editorial-container">
+      <div class="renovation-steps-header">
+        <span class="renovation-steps-kicker">Таймлайн ремонта</span>
+        <h2 class="renovation-steps-title">На каком этапе ремонта вызывать замерщика?</h2>
+        <p class="renovation-steps-subtitle">Своевременный выезд инженера исключает дорогостоящие переделки проёмов и задержки чистового монтажа</p>
+      </div>
+
+      <div class="renovation-steps-timeline">
+        <!-- Шаг 1 -->
+        <div class="renovation-step-card">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3 class="step-title">Черновые работы</h3>
+            <p class="step-desc">Возведение межкомнатных перегородок, выравнивание стен штукатуркой и формирование проёмов.</p>
+          </div>
+        </div>
+
+        <!-- Шаг 2 -->
+        <div class="renovation-step-card">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3 class="step-title">Стяжка и пол</h3>
+            <p class="step-desc">Залита стяжка, понятен и зафиксирован точный финальный уровень чистового напольного покрытия.</p>
+          </div>
+        </div>
+
+        <!-- Шаг 3: АКЦЕНТНЫЙ (ВЫ ЗДЕСЬ) -->
+        <div class="renovation-step-card step-current">
+          <div class="step-badge-current">
+            <span class="pulse-dot"></span>
+            <span>Вы здесь</span>
+          </div>
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3 class="step-title">Вызов инженера</h3>
+            <p class="step-desc">Идеальный момент: инженер фиксирует точные габариты, скрытые короба Invisible и сторонность до финишной отделки.</p>
+          </div>
+          <button type="button" class="btn-step-measure" onclick="if(window.DverLeads) window.DverLeads.openLeadModal({ source: 'Таймлайн ремонта (Шаг 3 — Вызов инженера)' }); else if(window.DverApp) window.DverApp.openLeadModal('Таймлайн ремонта — Шаг 3');">
+            Вызвать замерщика сейчас →
+          </button>
+        </div>
+
+        <!-- Шаг 4 -->
+        <div class="renovation-step-card">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3 class="step-title">Монтаж дверей</h3>
+            <p class="step-desc">Чистовая установка после покраски стен, поклейки обоев и укладки плитки или ламината.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -813,14 +877,46 @@
     </div>
   </footer>
 
+  <!-- ПЛАВАЮЩАЯ ПАНЕЛЬ СРАВНЕНИЯ МОДЕЛЕЙ (TASK 3) -->
+  <div class="compare-floating-bar" id="compareFloatingBar" style="display: none;">
+    <div class="compare-bar-inner">
+      <div class="compare-bar-left">
+        <span class="compare-bar-label">Сравнение:</span>
+        <div class="compare-bar-thumbs" id="compareBarThumbs"></div>
+      </div>
+      <div class="compare-bar-actions">
+        <button type="button" class="btn-compare-open" id="btnOpenCompareModal">
+          <span>Сравнить</span>
+          <span class="compare-count-badge" id="compareCountBadge">0</span>
+        </button>
+        <button type="button" class="btn-compare-clear" id="btnClearCompare" title="Очистить сравнение">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО СРАВНЕНИЯ МОДЕЛЕЙ БОК О БОК -->
+  <div class="compare-modal-overlay" id="compareModal" style="display: none;">
+    <div class="compare-modal-panel">
+      <div class="compare-modal-header">
+        <div>
+          <h2 class="compare-modal-title">Сравнение моделей</h2>
+          <span class="compare-modal-subtitle">Сравнение характеристик и комплектаций выбранных дверей</span>
+        </div>
+        <button type="button" class="btn-close-compare" id="btnCloseCompare" aria-label="Закрыть">✕</button>
+      </div>
+      <div class="compare-modal-body" id="compareModalBody">
+        <!-- Таблица формируется скриптом app.js -->
+      </div>
+    </div>
+  </div>
+
   <!-- ВСПОМОГАТЕЛЬНОЕ УВЕДОМЛЕНИЕ (TOAST) -->
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- СКРИПТЫ: ДАННЫЕ И ЛОГИКА -->
-  <script src="js/config.js?v=3.6.1"></script>
-  <script src="js/leads.js?v=3.6.1"></script>
-  <!-- Облегчённый асинхронный каталог data/catalog-index.json подгружается ядром app.js -->
-  <script src="app.js?v=3.6.1"></script>
+  <script src="js/config.js?v=3.7.0"></script>
+  <script src="js/leads.js?v=3.7.0"></script>
+  <script src="app.js?v=3.7.0"></script>
 
 </body>
 </html>

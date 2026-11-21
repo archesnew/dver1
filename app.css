@@ -3745,3 +3745,567 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ==========================================================================
+   SPRINT 4: STOCK TOGGLE, CARD COMPARE, FLOATING BAR & RENOVATION TIMELINE
+   ========================================================================== */
+
+/* Stock Toggle Button in Catalog Toolbar */
+.catalog-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+}
+
+.status-left-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-stock-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: var(--bg-stone-subtle);
+  border: 1px solid var(--border-stone);
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.btn-stock-toggle:hover {
+  background: #FFFFFF;
+  border-color: #2D6A4F;
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.stock-toggle-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #C4C2BC;
+  transition: all 0.22s ease;
+}
+
+.btn-stock-toggle.active {
+  background: #E8F8EE;
+  border-color: #52B788;
+  color: #1B4332;
+  box-shadow: 0 2px 8px rgba(45, 106, 79, 0.15);
+}
+
+.btn-stock-toggle.active .stock-toggle-dot {
+  background: #2D6A4F;
+  box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.35);
+}
+
+/* In-Stock Badge on Product Card */
+.card-image-box-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.badge-in-stock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(82, 183, 136, 0.45);
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #1B4332;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+}
+
+.badge-in-stock .badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2D6A4F;
+}
+
+/* Compare Button on Product Card */
+.btn-card-compare {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-stone);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(34, 35, 32, 0.08);
+}
+
+.btn-card-compare:hover {
+  transform: scale(1.1);
+  color: var(--accent-terracotta);
+  border-color: var(--accent-terracotta);
+  background: #FFFFFF;
+}
+
+.btn-card-compare.active {
+  background: var(--accent-terracotta);
+  color: #FFFFFF;
+  border-color: var(--accent-terracotta);
+  box-shadow: 0 4px 10px rgba(184, 92, 58, 0.35);
+}
+
+/* Floating Compare Bar (Bottom Center) */
+.compare-floating-bar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 980;
+  background: rgba(34, 35, 32, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  padding: 8px 12px 8px 18px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  animation: slideUpCompare 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUpCompare {
+  from { transform: translateX(-50%) translateY(40px); opacity: 0; }
+  to { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+
+.compare-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.compare-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.compare-bar-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #DDD;
+}
+
+.compare-bar-thumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.compare-mini-thumb {
+  position: relative;
+  width: 36px;
+  height: 48px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  padding: 2px;
+}
+
+.compare-mini-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.compare-mini-thumb .btn-remove-thumb {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(34, 35, 32, 0.85);
+  color: #FFFFFF;
+  border: none;
+  font-size: 9px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.compare-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-compare-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: var(--accent-terracotta);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-compare-open:hover {
+  background: #9D492B;
+  transform: translateY(-1px);
+}
+
+.compare-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.btn-compare-clear {
+  background: transparent;
+  color: #AAA;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 50%;
+  transition: color 0.18s ease;
+}
+
+.btn-compare-clear:hover {
+  color: #FFF;
+}
+
+/* Comparison Modal Overlay & Dialog */
+.compare-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(34, 35, 32, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeInModal 0.25s ease;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.compare-modal-panel {
+  background: #FFFFFF;
+  border: 1px solid var(--border-stone);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.compare-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-stone);
+}
+
+.compare-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.compare-modal-subtitle {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.btn-close-compare {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.btn-close-compare:hover {
+  color: var(--text-primary);
+}
+
+.compare-modal-body {
+  padding: 24px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.compare-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.compare-spec-table th,
+.compare-spec-table td {
+  padding: 12px 14px;
+  border: 1px solid var(--border-stone);
+  text-align: left;
+  font-size: 0.875rem;
+  vertical-align: middle;
+}
+
+.compare-spec-table th {
+  background: #FAF9F6;
+  font-weight: 600;
+  color: var(--text-primary);
+  width: 180px;
+}
+
+.compare-spec-table .col-door-card {
+  text-align: center;
+}
+
+.compare-door-preview-img {
+  width: 90px;
+  height: 130px;
+  object-fit: contain;
+  margin: 0 auto 8px;
+  display: block;
+}
+
+.compare-door-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.compare-door-price {
+  color: var(--accent-terracotta);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Renovation Steps Timeline (Task 4) */
+.renovation-steps-section {
+  padding: 70px 0 50px;
+  background: #FAF9F6;
+  border-top: 1px solid var(--border-stone);
+  border-bottom: 1px solid var(--border-stone);
+}
+
+.renovation-steps-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+.renovation-steps-kicker {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-terracotta);
+  margin-bottom: 8px;
+}
+
+.renovation-steps-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.renovation-steps-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.renovation-steps-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.renovation-step-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid var(--border-stone);
+  border-radius: 8px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.renovation-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(34, 35, 32, 0.06);
+}
+
+.step-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #D3D0C7;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Step 3: Current / Accent */
+.renovation-step-card.step-current {
+  background: #FFFFFF;
+  border: 2px solid var(--accent-terracotta);
+  box-shadow: 0 8px 30px rgba(184, 92, 58, 0.16);
+}
+
+.step-current .step-num {
+  color: var(--accent-terracotta);
+}
+
+.step-badge-current {
+  position: absolute;
+  top: -12px;
+  left: 18px;
+  background: var(--accent-terracotta);
+  color: #FFFFFF;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 10px rgba(184, 92, 58, 0.35);
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  animation: pulseWhite 1.5s infinite;
+}
+
+@keyframes pulseWhite {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.btn-step-measure {
+  margin-top: 16px;
+  padding: 9px 12px;
+  background: var(--accent-terracotta);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  text-align: center;
+}
+
+.btn-step-measure:hover {
+  background: #9D492B;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .renovation-steps-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .renovation-steps-timeline {
+    grid-template-columns: 1fr;
+  }
+  .compare-floating-bar {
+    width: calc(100% - 32px);
+    border-radius: 16px;
+    bottom: 84px; /* выше кнопки виджета связи */
+  }
+  .compare-bar-label {
+    display: none;
+  }
+}
