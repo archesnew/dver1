@@ -140,9 +140,17 @@
         <p class="hero-subtitle">Межкомнатные, входные и скрытые двери для продуманных интерьеров.</p>
         <div class="hero-actions">
           <a href="#catalogContent" class="btn-hero-primary" id="btnHeroCatalog">Смотреть каталог</a>
-          <button type="button" class="btn-hero-secondary" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Консультация и помощь с выбором');">
-            <span>Помочь с выбором</span>
-            <span class="arrow-icon">→</span>
+          <button type="button" class="btn-hero-measure" onclick="if(window.DverLeads) window.DverLeads.openLeadModal({ source: 'Первый экран (Hero) — Бесплатный замер' }); else if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Первый экран (Hero) — Бесплатный замер');">
+            <span class="btn-icon-measure" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"/>
+                <path d="m14.5 3.5 2 2"/>
+                <path d="m11.5 6.5 2 2"/>
+                <path d="m8.5 9.5 2 2"/>
+                <path d="m5.5 12.5 2 2"/>
+              </svg>
+            </span>
+            <span>Бесплатный замер</span>
           </button>
         </div>
       </div>
@@ -790,7 +798,7 @@
       <div>
         <div class="footer-col-title">Контакты и сервисная служба</div>
         <p style="margin-bottom: 6px;">Единая справочная служба:</p>
-        <p style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 12px;">+7 (843) 205-00-01</p>
+        <p style="font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 12px;"><a href="tel:+78432050001" style="color: inherit; text-decoration: none;">+7 (843) 205-00-01</a></p>
         <p style="color: var(--text-muted); font-size: 0.75rem;">
           Выезд инженера-замерщика с лазерным измерительным комплексом и каталогами покрытий для точной проверки проёмов на объекте.
         </p>
@@ -800,7 +808,7 @@
     <div class="footer-bottom-bar">
       <div>© 2026 «Двери №1». Премиальный дверной шоурум в Казани и Набережных Челнах.</div>
       <div>
-        <a href="admin.html" class="footer-curator-link" title="Перейти в панель верификации каталога">Служебный вход (V3.2)</a>
+        <span style="color: var(--text-muted); font-size: 0.75rem;">Все права защищены</span>
       </div>
     </div>
   </footer>
@@ -809,8 +817,10 @@
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- СКРИПТЫ: ДАННЫЕ И ЛОГИКА -->
+  <script src="js/config.js?v=3.6.1"></script>
+  <script src="js/leads.js?v=3.6.1"></script>
   <!-- Облегчённый асинхронный каталог data/catalog-index.json подгружается ядром app.js -->
-  <script src="app.js?v=3.6.0"></script>
+  <script src="app.js?v=3.6.1"></script>
 
 </body>
 </html>

@@ -442,6 +442,26 @@
     if (btnAddCart) {
       btnAddCart.onclick = () => addCurrentProductToCart();
     }
+
+    // 8. Мессенджеры и быстрый замер (Sprint 2)
+    if (window.DVER_CONFIG) {
+      const msg = window.DVER_CONFIG.getProductInquiryText(p);
+      const btnWa = document.getElementById('pdpBtnWhatsApp');
+      if (btnWa) btnWa.href = window.DVER_CONFIG.getWhatsAppUrl(msg);
+      const btnTg = document.getElementById('pdpBtnTelegram');
+      if (btnTg) btnTg.href = window.DVER_CONFIG.getTelegramUrl(msg);
+    }
+    const btnMeasure = document.getElementById('pdpBtnMeasure');
+    if (btnMeasure) {
+      btnMeasure.onclick = () => {
+        if (window.DverLeads) {
+          window.DverLeads.openLeadModal({
+            product: p,
+            source: 'Страница товара — Вызов замерщика'
+          });
+        }
+      };
+    }
   }
 
   function getVariantDisplayName(v, p) {

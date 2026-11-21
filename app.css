@@ -3403,3 +3403,345 @@ a {
     height: 240px;
   }
 }
+
+
+/* ==========================================================================
+   SPRINT 2: LEAD GENERATION, FLOATING WIDGET & MESSENGERS (V3.2)
+   ========================================================================== */
+
+/* Hero Secondary Contrast Button */
+.btn-hero-measure {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-hero-measure:hover {
+  background: #FFFFFF;
+  color: #222320;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.btn-hero-measure .btn-icon-measure {
+  display: inline-flex;
+  transition: transform 0.25s ease;
+}
+
+.btn-hero-measure:hover .btn-icon-measure {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+/* Floating Contact Widget */
+.floating-contact-widget {
+  position: fixed;
+  right: 24px;
+  bottom: 28px;
+  z-index: 990;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.floating-contact-widget * {
+  pointer-events: auto;
+}
+
+.floating-widget-trigger {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #B85C3A;
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(184, 92, 58, 0.38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.2s ease,
+              box-shadow 0.25s ease;
+}
+
+.floating-widget-trigger:hover {
+  transform: scale(1.08);
+  background: #9D492B;
+  box-shadow: 0 12px 30px rgba(184, 92, 58, 0.5);
+}
+
+.floating-widget-trigger .pulse-ring {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(184, 92, 58, 0.6);
+  animation: widget-pulse 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes widget-pulse {
+  0% { transform: scale(0.95); opacity: 0.9; }
+  70% { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+.floating-widget-trigger .trigger-icon {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-contact-widget.is-open .floating-widget-trigger .trigger-icon {
+  transform: rotate(90deg);
+}
+
+/* Popover Panel */
+.floating-widget-popover {
+  position: absolute;
+  bottom: 68px;
+  right: 0;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #E9E5DC;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 16px 40px rgba(34, 35, 32, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.96);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.floating-contact-widget.is-open .floating-widget-popover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.floating-action-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #222320;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.15s ease;
+}
+
+.floating-action-item:hover {
+  background: #F7F6F2;
+  transform: translateX(-2px);
+}
+
+.floating-action-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFFFFF;
+}
+
+.floating-action-item.action-wa .floating-action-icon {
+  background: #25D366;
+}
+
+.floating-action-item.action-tg .floating-action-icon {
+  background: #229ED9;
+}
+
+.floating-action-item.action-measure .floating-action-icon {
+  background: #B85C3A;
+}
+
+.floating-action-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-action-title {
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.25;
+}
+
+.floating-action-sub {
+  font-size: 0.72rem;
+  color: #7A7975;
+  margin-top: 2px;
+}
+
+/* Product Modal / PDP Messenger Buttons */
+.pdp-messenger-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #E9E5DC;
+}
+
+.pdp-messenger-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn-messenger-wa,
+.btn-messenger-tg,
+.btn-measure-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+}
+
+.btn-messenger-wa {
+  background: #E8F8EE;
+  color: #128C7E;
+  border-color: #C2ECCF;
+}
+
+.btn-messenger-wa:hover {
+  background: #25D366;
+  color: #FFFFFF;
+  border-color: #25D366;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.28);
+}
+
+.btn-messenger-tg {
+  background: #E8F4FB;
+  color: #0E7CB3;
+  border-color: #C1E1F5;
+}
+
+.btn-messenger-tg:hover {
+  background: #229ED9;
+  color: #FFFFFF;
+  border-color: #229ED9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 158, 217, 0.28);
+}
+
+.btn-measure-call {
+  background: #FAF9F6;
+  color: #B85C3A;
+  border: 1px solid #B85C3A;
+  width: 100%;
+}
+
+.btn-measure-call:hover {
+  background: #B85C3A;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(184, 92, 58, 0.25);
+}
+
+/* Lead Modal Bound Product Badge */
+.lead-product-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FAF9F6;
+  border: 1px solid #E9E5DC;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+.lead-badge-thumb {
+  width: 44px;
+  height: 60px;
+  object-fit: contain;
+  background: #FFFFFF;
+  border: 1px solid #EDE9E1;
+  border-radius: 4px;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.lead-badge-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.lead-badge-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #B85C3A;
+  font-weight: 600;
+}
+
+.lead-badge-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #222320;
+  margin-top: 2px;
+}
+
+.lead-badge-price {
+  font-size: 0.82rem;
+  color: #7A7975;
+}
+
+@media (max-width: 640px) {
+  .floating-contact-widget {
+    right: 16px;
+    bottom: 20px;
+  }
+  .floating-widget-popover {
+    width: 260px;
+  }
+  .pdp-messenger-row {
+    grid-template-columns: 1fr;
+  }
+}
