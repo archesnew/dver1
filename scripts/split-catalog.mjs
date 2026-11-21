@@ -79,7 +79,7 @@ async function run() {
     const numId = parseInt(p.id.replace(/\D/g, ''), 10) || 0;
     const inStock = Boolean(p.in_stock || (isPopularBrand && hasStandardPrice && numId % 2 === 0) || (p.category === 'Скрытые двери' && numId % 2 === 1));
 
-    // 2. Облегчённый объект для data/catalog-index.json (строго по спецификации задания)
+    // 2. Облегчённый объект для data/catalog-index.json (оптимизирован под Спринт 7)
     const indexItem = {
       id: p.id,
       name: p.model,
@@ -95,12 +95,12 @@ async function run() {
       style: p.specs?.style || '',
       material: p.specs?.material || '',
       price: p.price,
-      price_type: p.price_type || 'from',
       inStock: inStock,
-      article: p.article || null,
-      thumb: thumbPath,
-      images: [thumbPath]
+      thumb: thumbPath
     };
+    if (p.article) {
+      indexItem.article = p.article;
+    }
     indexList.push(indexItem);
 
     // 3. Полные данные товара в отдельный файл data/products/{id}.json

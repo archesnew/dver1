@@ -338,6 +338,193 @@
 
     // 7. Микроразметка JSON-LD и OpenGraph (Спринт 5)
     updateProductJsonLd(p);
+
+    // 8. Рекомендации и история просмотров (Спринт 7 — Задача 3)
+    renderSimilarAndRecent(p);
+  }
+
+  // --------------------------------------------------------------------------
+  // РЕКОМЕНДАЦИИ И ИСТОРИЯ ПРОСМОТРОВ (PDP RETENTION — SPRINT 7)
+  // --------------------------------------------------------------------------
+
+  function recordRecentProduct(id) {
+    if (!id) return;
+    try {
+      let recents = JSON.parse(localStorage.getItem('DVER1_RECENT') || '[]');
+      if (!Array.isArray(recents)) recents = [];
+      recents = recents.filter(x => x !== id);
+      recents.unshift(id);
+      recents = recents.slice(0, 6);
+      localStorage.setItem('DVER1_RECENT', JSON.stringify(recents));
+    } catch (e) {
+      console.warn('recordRecentProduct error', e);
+    }
+  }
+
+  let cachedCatalogIndex = null;
+  async function getCatalogIndex() {
+    if (cachedCatalogIndex && Array.isArray(cachedCatalogIndex) && cachedCatalogIndex.length > 0) {
+      return cachedCatalogIndex;
+    }
+    try {
+      const res = await fetch('data/catalog-index.json');
+      if (res.ok) {
+        cachedCatalogIndex = await res.json();
+        return cachedCatalogIndex;
+      }
+    } catch (e) {
+      console.warn('Failed to fetch data/catalog-index.json', e);
+    }
+    if (window.CATALOG_PRODUCTS) {
+      return window.CATALOG_PRODUCTS;
+    }
+    return [];
+  }
+
+  async function renderSimilarAndRecent(p) {
+    if (!p || !p.id) return;
+
+    recordRecentProduct(p.id);
+
+    const catalog = await getCatalogIndex();
+    if (!catalog || catalog.length === 0) return;
+
+    renderSimilarDoors(p, catalog);
+    renderRecentDoors(p, catalog);
+  }
+
+  function renderSimilarDoors(p, catalog) {
+    const grid = document.getElementById('pdpSimilarGrid');
+    if (!grid) return;
+
+    const basePrice = p.price || 0;
+    const pCategory = p.category || '';
+    const pStyle = (p.specs?.style || p.style || '').toLowerCase();
+    const pColors = Array.isArray(p.color_groups) ? p.color_groups : [];
+
+    const candidates = catalog.filter(item => item.id !== p.id);
+
+    const scored = candidates.map(item => {
+      let score = 0;
+      const itemCat = item.category || '';
+      const itemPrice = item.price || 0;
+      const itemStyle = (item.specs?.style || item.style || '').toLowerCase();
+      const itemColors = Array.isArray(item.color_groups) ? item.color_groups : [];
+
+      if (itemCat === pCategory) {
+        score += 25;
+      } else if (
+        (pCategory.includes('Межкомнатные') || pCategory.includes('Скрытые') || pCategory.includes('стекл')) &&
+        (itemCat.includes('Межкомнатные') || itemCat.includes('Скрытые') || itemCat.includes('стекл'))
+      ) {
+        score += 15;
+      }
+
+      if (basePrice > 0 && itemPrice > 0) {
+        const delta = Math.abs(itemPrice - basePrice) / basePrice;
+        if (delta <= 0.15) {
+          score += 15;
+        } else if (delta <= 0.30) {
+          score += 10;
+        } else if (delta <= 0.50) {
+          score += 4;
+        }
+      }
+
+      if (pStyle && itemStyle) {
+        if (itemStyle === pStyle) {
+          score += 8;
+        } else if (itemStyle.includes(pStyle) || pStyle.includes(itemStyle)) {
+          score += 5;
+        }
+      }
+
+      if (pColors.length > 0 && itemColors.length > 0) {
+        const commonColor = pColors.some(c => itemColors.includes(c));
+        if (commonColor) score += 7;
+      }
+
+      if (item.inStock) score += 2;
+
+      return { item, score };
+    });
+
+    scored.sort((a, b) => b.score - a.score);
+
+    const top4 = scored.slice(0, 4).map(s => s.item);
+    if (top4.length === 0) return;
+
+    grid.innerHTML = top4.map(item => {
+      const img = item.thumb || ((item.images && item.images.length > 0) ? resolveImgPath(item.images[0]) : 'door-placeholder.svg');
+      const brand = item.brand || 'Коллекция';
+      const name = item.model || item.name || 'Дверь';
+      const priceText = item.price ? Number(item.price).toLocaleString('ru-RU') + ' ₽' : 'Уточнить цену';
+
+      return `
+        <a href="product.html?id=${encodeURIComponent(item.id)}" class="rec-card">
+          <div class="rec-card-image-box">
+            ${item.inStock ? '<span class="badge-in-stock" style="position: absolute; top: 10px; left: 10px;"><span class="badge-dot"></span>В наличии</span>' : ''}
+            <img src="${img}" alt="${escapeHtml(name)}" class="rec-card-img" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='door-placeholder.svg';">
+          </div>
+          <div class="rec-card-body">
+            <div class="rec-card-brand">${escapeHtml(brand)}</div>
+            <div class="rec-card-name" title="${escapeHtml(name)}">${escapeHtml(name)}</div>
+            <div class="rec-card-footer">
+              <span class="rec-card-price">${priceText}</span>
+              <span class="rec-card-btn">Подробнее →</span>
+            </div>
+          </div>
+        </a>
+      `;
+    }).join('');
+  }
+
+  function renderRecentDoors(p, catalog) {
+    const sec = document.getElementById('pdpRecentSection');
+    const grid = document.getElementById('pdpRecentGrid');
+    if (!sec || !grid) return;
+
+    let recents = [];
+    try {
+      recents = JSON.parse(localStorage.getItem('DVER1_RECENT') || '[]');
+    } catch (e) {
+      recents = [];
+    }
+
+    const otherRecentIds = recents.filter(id => id !== p.id);
+
+    if (otherRecentIds.length === 0) {
+      sec.style.display = 'none';
+      return;
+    }
+
+    const items = otherRecentIds.map(id => catalog.find(item => item.id === id)).filter(Boolean);
+
+    if (items.length === 0) {
+      sec.style.display = 'none';
+      return;
+    }
+
+    sec.style.display = 'block';
+    grid.innerHTML = items.map(item => {
+      const img = item.thumb || ((item.images && item.images.length > 0) ? resolveImgPath(item.images[0]) : 'door-placeholder.svg');
+      const brand = item.brand || 'Двери №1';
+      const name = item.model || item.name || 'Дверь';
+      const priceText = item.price ? Number(item.price).toLocaleString('ru-RU') + ' ₽' : 'Уточнить';
+
+      return `
+        <a href="product.html?id=${encodeURIComponent(item.id)}" class="recent-card">
+          <div class="recent-card-img-box">
+            <img src="${img}" alt="${escapeHtml(name)}" class="recent-card-img" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='door-placeholder.svg';">
+          </div>
+          <div class="recent-card-body">
+            <div class="recent-card-brand">${escapeHtml(brand)}</div>
+            <div class="recent-card-name" title="${escapeHtml(name)}">${escapeHtml(name)}</div>
+            <div class="recent-card-price">${priceText}</div>
+          </div>
+        </a>
+      `;
+    }).join('');
   }
 
   // --------------------------------------------------------------------------

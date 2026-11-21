@@ -47,9 +47,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=3.8.1">
-  <link rel="stylesheet" href="product.css?v=3.8.1">
-  <script src="cart-store.js?v=3.8.1"></script>
+  <link rel="stylesheet" href="app.css?v=3.9.0">
+  <link rel="stylesheet" href="product.css?v=3.9.0">
+  <script src="cart-store.js?v=3.9.0"></script>
 </head>
 <body class="pdp-body">
 
@@ -484,6 +484,28 @@
 
       </section>
 
+      <!-- 6. ПОХОЖИЕ МОДЕЛИ (PDP RETENTION) -->
+      <section class="pdp-recommendations-section" id="pdpSimilarSection">
+        <div class="recommendations-header">
+          <h2 class="recommendations-title">Похожие модели в этой категории</h2>
+          <p class="recommendations-subtitle">Подобранные варианты в близком ценовом диапазоне и стиле</p>
+        </div>
+        <div class="recommendations-grid" id="pdpSimilarGrid">
+          <!-- Карточки генерируются скриптом product.js -->
+        </div>
+      </section>
+
+      <!-- 7. ВЫ НЕДАВНО СМОТРЕЛИ (PDP RETENTION) -->
+      <section class="pdp-recent-views-section" id="pdpRecentSection" style="display: none;">
+        <div class="recommendations-header">
+          <h2 class="recommendations-title">Вы недавно смотрели</h2>
+          <p class="recommendations-subtitle">История просмотренных моделей для быстрого сравнения</p>
+        </div>
+        <div class="recent-views-strip" id="pdpRecentGrid">
+          <!-- Лента недавно просмотренных дверей -->
+        </div>
+      </section>
+
     </div>
   </main>
 
@@ -645,9 +667,10 @@
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- СКРИПТЫ: ЯДРО СТРАНИЦЫ ТОВАРА С АСИНХРОННОЙ ПОДГРУЗКОЙ JSON ТОВАРА -->
-  <script src="js/config.js?v=3.8.1"></script>
-  <script src="js/analytics.js?v=3.8.1"></script>
-  <script src="js/leads.js?v=3.8.1"></script>
-  <script src="product.js?v=3.8.1"></script>
+  <script src="js/config.js?v=3.9.0"></script>
+  <script src="js/city.js?v=3.9.0"></script>
+  <script src="js/analytics.js?v=3.9.0"></script>
+  <script src="js/leads.js?v=3.9.0"></script>
+  <script src="product.js?v=3.9.0"></script>
 </body>
 </html>

@@ -14,6 +14,28 @@
     LEAD_ENDPOINT: "", // URL webhook/бота; если пустой — срабатывает graceful fallback с WhatsApp/Telegram
     YM_COUNTER_ID: null, // Плейсхолдер для номера счётчика Яндекс.Метрики (Спринт 5)
 
+    // Города присутствия и флагманские шоурумы (Спринт 7)
+    CITIES: {
+      kazan: {
+        id: 'kazan',
+        name: 'Казань',
+        address: 'ул. Сибирский тракт, 59б',
+        schedule: 'Ежедневно 09:00–19:00',
+        phoneDisplay: '+7 (843) 205-00-01',
+        phoneRaw: '+78432050001',
+        coords: [55.8078, 49.1832]
+      },
+      chelny: {
+        id: 'chelny',
+        name: 'Набережные Челны',
+        address: 'Казанский проспект, 232',
+        schedule: 'Пн–Сб 09:00–18:00',
+        phoneDisplay: '+7 (843) 205-00-01',
+        phoneRaw: '+78432050001',
+        coords: [55.7089, 52.3789]
+      }
+    },
+
     // Базовые доплаты для комплекта «под ключ» (Спринт 3)
     KIT_SURCHARGES: {
       interior: [

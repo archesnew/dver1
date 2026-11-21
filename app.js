@@ -91,8 +91,17 @@
   }
 
   function finishDataLoad() {
+    const hasDeepLink = restoreStateFromUrl();
     buildFacetFilters();
     applyFiltersAndSort();
+    if (hasDeepLink) {
+      const catalogEl = document.getElementById('catalogContent');
+      if (catalogEl) {
+        setTimeout(() => {
+          catalogEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 120);
+      }
+    }
     handleUrlHash();
   }
 
@@ -118,13 +127,21 @@
   // СЕЛЕКТОР ГОРОДА (КАЗАНЬ / ЧЕЛНЫ)
   // --------------------------------------------------------------------------
   function setupCitySelector() {
+    window.addEventListener('dver:citychange', (e) => {
+      state.selectedCity = e.detail?.city || 'kazan';
+    });
+
     const pills = document.querySelectorAll('.city-pill');
     pills.forEach(pill => {
       pill.addEventListener('click', () => {
         pills.forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
         state.selectedCity = pill.dataset.city;
-        showToast('Город обслуживания: ' + state.selectedCity);
+        if (window.DverCity) {
+          window.DverCity.setCity(state.selectedCity);
+        } else {
+          showToast('Город обслуживания: ' + state.selectedCity);
+        }
       });
     });
   }
@@ -551,6 +568,7 @@
         if (state.activePrice === '10k_25k' && (pr < 10000 || pr >= 25000)) return false;
         if (state.activePrice === '25k_40k' && (pr < 25000 || pr >= 40000)) return false;
         if (state.activePrice === 'over_40k' && pr < 40000) return false;
+        if (state.activePrice === 'under_18k' && pr > 18000) return false;
       }
 
       // 7. Стиль (второстепенный)
@@ -579,6 +597,8 @@
     renderGrid();
     renderToolbarSummary();
     renderActiveFilterChips();
+    updatePresetPills();
+    syncUrlWithState();
   }
 
   function sortProducts() {
@@ -859,6 +879,7 @@
     if (state.activePrice !== 'all') {
       const pLabels = {
         'under_10k': 'Цена: До 10 000 ₽',
+        'under_18k': 'Цена: До 18 000 ₽',
         '10k_25k': 'Цена: 10 000 – 25 000 ₽',
         '25k_40k': 'Цена: 25 000 – 40 000 ₽',
         'over_40k': 'Цена: От 40 000 ₽'
@@ -1831,15 +1852,7 @@
       if (e.key === 'Escape') {
         closeFiltersDrawer();
         closeProductModal();
-        if (typeof window.trackGoal === 'function') {
-      window.trackGoal('lead_measure', {
-        ticketNumber,
-        source: 'Модалка замера (index.html)',
-        city: city || 'Казань'
-      });
-    }
-
-    closeLeadModal();
+        closeLeadModal();
         closeCompareModal();
       }
     });
@@ -1928,10 +1941,217 @@
       });
     }
 
-    // Инициализация мобильного меню, эффекта стекла и витрины Designer Selection
+    // Инициализация мобильного меню, эффекта стекла, витрины Designer Selection и пресетов
     initHeaderMenu();
     initHeaderScrollEffect();
     initDesignerShowcase();
+    setupPresets();
+  }
+
+  // --------------------------------------------------------------------------
+  // БЫСТРЫЕ ПРЕСЕТЫ КАТАЛОГА (SPRINT 7 — ЗАДАЧА 2)
+  // --------------------------------------------------------------------------
+  function setupPresets() {
+    const strip = document.getElementById('catalogPresetsStrip');
+    if (!strip) return;
+
+    strip.querySelectorAll('.preset-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        const p = pill.dataset.preset;
+        const isCurrentlyActive = pill.classList.contains('active');
+
+        if (isCurrentlyActive) {
+          if (p === 'instock') {
+            state.onlyInStock = false;
+            const btnStock = document.getElementById('btnStockToggle');
+            if (btnStock) {
+              btnStock.classList.remove('active');
+              btnStock.setAttribute('aria-checked', 'false');
+            }
+          } else if (p === 'invisible') {
+            state.activeType = 'all';
+          } else if (p === 'white') {
+            state.activeColor = 'all';
+          } else if (p === 'cottage') {
+            if (state.searchQuery === 'термо') {
+              state.searchQuery = '';
+              const sIn = document.getElementById('searchInput');
+              if (sIn) sIn.value = '';
+              const sClr = document.getElementById('searchClearBtn');
+              if (sClr) sClr.style.display = 'none';
+            }
+            if (state.activeCategory === 'Входные двери') {
+              state.activeCategory = 'all';
+            }
+          } else if (p === 'glass') {
+            state.activeType = 'all';
+          } else if (p === 'under18') {
+            state.activePrice = 'all';
+          }
+          showToast('Пресет отключен');
+        } else {
+          if (p === 'instock') {
+            state.onlyInStock = true;
+            const btnStock = document.getElementById('btnStockToggle');
+            if (btnStock) {
+              btnStock.classList.add('active');
+              btnStock.setAttribute('aria-checked', 'true');
+            }
+          } else if (p === 'invisible') {
+            state.activeType = 'invisible';
+            if (state.activeCategory === 'Входные двери') state.activeCategory = 'all';
+          } else if (p === 'white') {
+            state.activeColor = 'white';
+          } else if (p === 'cottage') {
+            state.activeCategory = 'Входные двери';
+            state.searchQuery = 'термо';
+            const sIn = document.getElementById('searchInput');
+            if (sIn) sIn.value = 'термо';
+            const sClr = document.getElementById('searchClearBtn');
+            if (sClr) sClr.style.display = 'block';
+          } else if (p === 'glass') {
+            state.activeType = 'glass';
+          } else if (p === 'under18') {
+            state.activePrice = 'under_18k';
+          }
+          showToast(`Пресет: ${pill.textContent.trim()}`);
+        }
+
+        state.currentPage = 1;
+        buildFacetFilters();
+        applyFiltersAndSort();
+
+        const catalogEl = document.getElementById('catalogContent');
+        if (catalogEl) {
+          const rect = catalogEl.getBoundingClientRect();
+          if (rect.top < -50 || rect.top > window.innerHeight) {
+            catalogEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  }
+
+  function updatePresetPills() {
+    const strip = document.getElementById('catalogPresetsStrip');
+    if (!strip) return;
+
+    strip.querySelectorAll('.preset-pill').forEach(pill => {
+      const p = pill.dataset.preset;
+      let isActive = false;
+      if (p === 'instock') {
+        isActive = state.onlyInStock === true;
+      } else if (p === 'invisible') {
+        isActive = state.activeType === 'invisible';
+      } else if (p === 'white') {
+        isActive = state.activeColor === 'white';
+      } else if (p === 'cottage') {
+        isActive = state.activeCategory === 'Входные двери' && (state.searchQuery || '').toLowerCase().includes('термо');
+      } else if (p === 'glass') {
+        isActive = state.activeType === 'glass';
+      } else if (p === 'under18') {
+        isActive = state.activePrice === 'under_18k';
+      }
+
+      if (isActive) {
+        pill.classList.add('active');
+        pill.setAttribute('aria-pressed', 'true');
+      } else {
+        pill.classList.remove('active');
+        pill.setAttribute('aria-pressed', 'false');
+      }
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // СИНХРОНИЗАЦИЯ URL (DEEP LINKS) (SPRINT 7 — ЗАДАЧА 1)
+  // --------------------------------------------------------------------------
+  function syncUrlWithState() {
+    try {
+      const params = new URLSearchParams();
+      if (state.activeCategory && state.activeCategory !== 'all') params.set('cat', state.activeCategory);
+      if (state.activeBrand && state.activeBrand !== 'all') params.set('brand', state.activeBrand);
+      if (state.activeColor && state.activeColor !== 'all') params.set('color', state.activeColor);
+      if (state.activeType && state.activeType !== 'all') params.set('type', state.activeType);
+      if (state.activePrice && state.activePrice !== 'all') params.set('price', state.activePrice);
+      if (state.activeStyle && state.activeStyle !== 'all') params.set('style', state.activeStyle);
+      if (state.activeMaterial && state.activeMaterial !== 'all') params.set('material', state.activeMaterial);
+      if (state.onlyInStock) params.set('inStock', '1');
+      if (state.searchQuery && state.searchQuery.trim()) params.set('q', state.searchQuery.trim());
+      if (state.sortOption && state.sortOption !== 'default') params.set('sort', state.sortOption);
+
+      const qs = params.toString();
+      const newUrl = qs ? (window.location.pathname + '?' + qs) : window.location.pathname;
+      const currentQs = window.location.search.replace(/^\?/, '');
+      if (currentQs !== qs) {
+        window.history.replaceState(null, '', newUrl);
+      }
+    } catch (e) {
+      console.warn('syncUrlWithState failed', e);
+    }
+  }
+
+  function restoreStateFromUrl() {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      let hasDeepLink = false;
+
+      if (params.has('cat')) {
+        state.activeCategory = params.get('cat');
+        hasDeepLink = true;
+      }
+      if (params.has('brand')) {
+        state.activeBrand = params.get('brand');
+        hasDeepLink = true;
+      }
+      if (params.has('color')) {
+        state.activeColor = params.get('color');
+        hasDeepLink = true;
+      }
+      if (params.has('type')) {
+        state.activeType = params.get('type');
+        hasDeepLink = true;
+      }
+      if (params.has('price')) {
+        state.activePrice = params.get('price');
+        hasDeepLink = true;
+      }
+      if (params.has('style')) {
+        state.activeStyle = params.get('style');
+        hasDeepLink = true;
+      }
+      if (params.has('material')) {
+        state.activeMaterial = params.get('material');
+        hasDeepLink = true;
+      }
+      if (params.get('inStock') === '1' || params.get('inStock') === 'true') {
+        state.onlyInStock = true;
+        hasDeepLink = true;
+        const btnStock = document.getElementById('btnStockToggle');
+        if (btnStock) {
+          btnStock.classList.add('active');
+          btnStock.setAttribute('aria-checked', 'true');
+        }
+      }
+      if (params.has('q')) {
+        state.searchQuery = params.get('q').trim();
+        hasDeepLink = true;
+        const searchInput = document.getElementById('searchInput');
+        const searchClear = document.getElementById('searchClearBtn');
+        if (searchInput) searchInput.value = state.searchQuery;
+        if (searchClear && state.searchQuery) searchClear.style.display = 'block';
+      }
+      if (params.has('sort')) {
+        state.sortOption = params.get('sort');
+        const sortSelect = document.getElementById('sortSelect');
+        if (sortSelect) sortSelect.value = state.sortOption;
+      }
+
+      return hasDeepLink;
+    } catch (e) {
+      console.warn('restoreStateFromUrl failed', e);
+      return false;
+    }
   }
 
   function handleUrlHash() {
