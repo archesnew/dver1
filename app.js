@@ -120,6 +120,9 @@
   // --------------------------------------------------------------------------
   function matchesColor(product, colorKey) {
     if (!colorKey || colorKey === 'all') return true;
+    if (Array.isArray(product.color_groups)) {
+      return product.color_groups.includes(colorKey);
+    }
 
     const colorStrings = [];
     if (product.title) colorStrings.push(product.title.toLowerCase());
@@ -148,13 +151,18 @@
         return /черн|чёрн|шоколад|темн|тёмн|black|блэк|карбон|нео ?блэк|венге|марен|ноч|угол|dark/.test(joined);
       case 'metal':
         return /антик|мед|муар|шагрен|бронз|мета|латун|сталь|хром|нержав|металл/.test(joined);
+      case 'other':
+        return /зелен|син|красн|желт|оранж|бордо|терракот/.test(joined);
       default:
         return true;
     }
   }
 
   function matchesType(product, typeKey) {
-    if (typeKey === 'all') return true;
+    if (!typeKey || typeKey === 'all') return true;
+    if (product.door_type_group) {
+      return product.door_type_group === typeKey;
+    }
 
     const g = (product.specs?.glass || '').toLowerCase();
     const cat = (product.category || '').toLowerCase();
@@ -192,8 +200,14 @@
     });
 
     // Для остальных фасетов: базовый пул товаров зависит от активной категории
+    // Для межкомнатных дверей включаем также скрытые (Invisible), являющиеся межкомнатными
     const baseProducts = (state.activeCategory && state.activeCategory !== 'all')
-      ? state.allProducts.filter(p => p.category === state.activeCategory)
+      ? state.allProducts.filter(p => {
+          if (state.activeCategory === 'Межкомнатные двери') {
+            return p.category === 'Межкомнатные двери' || p.category === 'Скрытые двери';
+          }
+          return p.category === state.activeCategory;
+        })
       : state.allProducts;
 
     // 2. Бренды
@@ -205,7 +219,8 @@
       grey: 0,
       wood: 0,
       dark: 0,
-      metal: 0
+      metal: 0,
+      other: 0
     };
     // 4. Типы
     const typeCounts = {
@@ -228,6 +243,7 @@
       if (matchesColor(p, 'wood')) colorCounts.wood++;
       if (matchesColor(p, 'dark')) colorCounts.dark++;
       if (matchesColor(p, 'metal')) colorCounts.metal++;
+      if (matchesColor(p, 'other')) colorCounts.other++;
 
       if (matchesType(p, 'flush')) typeCounts.flush++;
       if (matchesType(p, 'glass')) typeCounts.glass++;
@@ -347,12 +363,15 @@
 
     const colors = [
       { key: 'all', label: 'Все оттенки', hex: 'linear-gradient(135deg, #FAF9F6 0%, #D4AF37 35%, #8B5A2B 70%, #222320 100%)', count: countMap.all || state.allProducts.length },
-      { key: 'white', label: 'Белые и светлые', hex: '#FAF9F6', count: countMap.white },
-      { key: 'grey', label: 'Серые и графит', hex: '#686C6A', count: countMap.grey },
-      { key: 'wood', label: 'Древесные оттенки', hex: '#96633E', count: countMap.wood },
-      { key: 'dark', label: 'Тёмные и чёрные', hex: '#1E201E', count: countMap.dark },
-      { key: 'metal', label: 'Металл и антик', hex: 'linear-gradient(135deg, #B58A4A 0%, #7A5728 100%)', count: countMap.metal }
+      { key: 'white', label: 'Белые и светлые', hex: '#FAF9F6', count: countMap.white || 0 },
+      { key: 'grey', label: 'Серые и графит', hex: '#686C6A', count: countMap.grey || 0 },
+      { key: 'wood', label: 'Древесные оттенки', hex: '#96633E', count: countMap.wood || 0 },
+      { key: 'dark', label: 'Тёмные и чёрные', hex: '#1E201E', count: countMap.dark || 0 },
+      { key: 'metal', label: 'Металл и антик', hex: 'linear-gradient(135deg, #B58A4A 0%, #7A5728 100%)', count: countMap.metal || 0 }
     ];
+    if (countMap.other > 0) {
+      colors.push({ key: 'other', label: 'Другие цвета', hex: 'linear-gradient(135deg, #4A7A96 0%, #8A4A96 100%)', count: countMap.other });
+    }
 
     let html = '';
     colors.forEach(c => {
@@ -478,8 +497,12 @@
       }
 
       // 2. Категория
-      if (state.activeCategory !== 'all' && p.category !== state.activeCategory) {
-        return false;
+      if (state.activeCategory !== 'all') {
+        if (state.activeType === 'invisible' && state.activeCategory === 'Межкомнатные двери') {
+          if (p.category !== 'Межкомнатные двери' && p.category !== 'Скрытые двери') return false;
+        } else if (p.category !== state.activeCategory) {
+          return false;
+        }
       }
 
       // 3. Бренд (Фабрика)
