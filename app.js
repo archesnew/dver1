@@ -1551,9 +1551,10 @@
       });
     }
 
-    // Инициализация мобильного меню и эффекта стекла при скролле
+    // Инициализация мобильного меню, эффекта стекла и витрины Designer Selection
     initHeaderMenu();
     initHeaderScrollEffect();
+    initDesignerShowcase();
   }
 
   function handleUrlHash() {
@@ -1715,6 +1716,36 @@
       window.scrollTo(0, 500);
       header.classList.add('is-scrolled');
     }
+  }
+
+  function initDesignerShowcase() {
+    const track = document.getElementById('designerShowcaseTrack');
+    const prevBtn = document.getElementById('designerPrevBtn');
+    const nextBtn = document.getElementById('designerNextBtn');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    function updateNavState() {
+      const atStart = track.scrollLeft <= 8;
+      const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+      prevBtn.disabled = atStart;
+      nextBtn.disabled = atEnd;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      const card = track.querySelector('.designer-card');
+      const step = card ? card.offsetWidth + 20 : 320;
+      track.scrollBy({ left: -step, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const card = track.querySelector('.designer-card');
+      const step = card ? card.offsetWidth + 20 : 320;
+      track.scrollBy({ left: step, behavior: 'smooth' });
+    });
+
+    track.addEventListener('scroll', updateNavState, { passive: true });
+    window.addEventListener('resize', updateNavState, { passive: true });
+    updateNavState();
   }
 
   // Экспорт в глобальное пространство для inline-обработчиков

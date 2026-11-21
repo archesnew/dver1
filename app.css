@@ -962,131 +962,303 @@ a {
 }
 
 /* ==========================================================================
-   СЕКЦИЯ: ИЗБРАННЫЕ КОЛЛЕКЦИИ (CURATED SHOWCASE)
+   СЕКЦИЯ: DESIGNER SELECTION — ИЗБРАННЫЕ КОЛЛЕКЦИИ (РЕДАКЦИОННАЯ ВИТРИНА)
    ========================================================================== */
-.home-featured-section {
+.home-designer-section {
   padding: 80px 0;
-  background-color: #F2EFE9;
-  border-top: 1px solid rgba(221, 216, 206, 0.6);
-  border-bottom: 1px solid rgba(221, 216, 206, 0.6);
+  background-color: #F7F6F2; /* Warm Ivory */
+  border-top: 1px solid #E9E5DC; /* Warm Stone */
+  border-bottom: 1px solid #E9E5DC; /* Warm Stone */
+  position: relative;
+  overflow: hidden;
 }
 
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.designer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+}
+
+/* Редакционный заголовок и панель действий */
+.designer-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
   gap: 24px;
+  margin-bottom: 32px;
 }
 
-.featured-card {
+.designer-header-text {
+  flex: 1 1 auto;
+}
+
+.designer-kicker {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #B85C3A; /* Terracotta */
+  margin-bottom: 8px;
+}
+
+.designer-title {
+  font-family: var(--font-sans);
+  font-size: 2.125rem;
+  font-weight: 600;
+  color: #222320; /* Deep Graphite */
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+}
+
+.designer-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: #686C6A;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 600px;
+}
+
+.designer-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.designer-catalog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #222320;
+  text-decoration: none;
+  padding: 8px 16px;
   background: #FFFFFF;
-  border: 1px solid rgba(221, 216, 206, 0.65);
-  border-radius: 18px;
+  border: 1px solid #E9E5DC;
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.designer-catalog-link:hover {
+  color: #B85C3A;
+  border-color: #B85C3A;
+  background: #FAF9F6;
+  transform: translateY(-1px);
+}
+
+.designer-catalog-link .designer-arrow-icon {
+  transition: transform 0.2s ease;
+}
+
+.designer-catalog-link:hover .designer-arrow-icon {
+  transform: translateX(3px);
+}
+
+.designer-nav-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.designer-nav-btn {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid #E9E5DC;
+  border-radius: 6px;
+  color: #222320;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+}
+
+.designer-nav-btn:hover:not(:disabled) {
+  background: #222320;
+  border-color: #222320;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.designer-nav-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.designer-nav-btn:disabled {
+  opacity: 0.32;
+  cursor: not-allowed;
+  background: #FAF9F6;
+}
+
+/* Горизонтальная витрина моделей */
+.designer-showcase-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.designer-showcase-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 2px 14px;
+}
+
+.designer-showcase-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Карточка двери */
+.designer-card {
+  flex: 0 0 calc((100% - 3 * 20px) / 4);
+  min-width: calc((100% - 3 * 20px) / 4);
+  max-width: calc((100% - 3 * 20px) / 4);
+  scroll-snap-align: start;
+  background: #FFFFFF;
+  border: 1px solid #E9E5DC;
+  border-radius: 6px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.28s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+  box-shadow: 0 2px 6px rgba(34, 35, 32, 0.03);
 }
 
-.featured-card:hover {
+.designer-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 36px -8px rgba(34, 35, 32, 0.08);
-  border-color: rgba(184, 92, 58, 0.4);
+  box-shadow: 0 12px 28px -6px rgba(34, 35, 32, 0.08);
+  border-color: rgba(184, 92, 58, 0.38);
 }
 
-.featured-img-link {
+/* Медиа-канва двери */
+.designer-card-media {
+  display: block;
+  text-decoration: none;
+  background: #FAF9F6;
+  border-bottom: 1px solid #E9E5DC;
+  position: relative;
+  overflow: hidden;
+}
+
+.designer-canvas {
   height: 310px;
-  background: #FBF9F5;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px 20px 16px;
   position: relative;
-  overflow: hidden;
-  text-decoration: none;
 }
 
-.featured-door-img {
+.designer-door-img {
+  height: 100%;
   max-height: 100%;
   max-width: 100%;
   width: auto;
-  height: 100%;
   object-fit: contain;
-  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
-  filter: drop-shadow(0 4px 12px rgba(34, 35, 32, 0.06));
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 6px 14px rgba(34, 35, 32, 0.08));
 }
 
-.featured-card:hover .featured-door-img {
-  transform: scale(1.04);
+.designer-card:hover .designer-door-img {
+  transform: scale(1.028);
 }
 
-.featured-body {
-  padding: 20px 22px 24px;
+/* Содержимое карточки */
+.designer-card-body {
+  padding: 18px 20px 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.featured-brand {
+.designer-card-meta {
   font-family: var(--font-sans);
   font-size: 0.75rem;
-  color: var(--text-muted);
+  font-weight: 500;
+  color: #686C6A;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   margin-bottom: 6px;
 }
 
-.featured-model {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  margin-bottom: 16px;
-  line-height: 1.3;
-  min-height: 2.6em;
+.designer-card-title {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #222320;
+  line-height: 1.32;
+  margin: 0 0 16px 0;
+  min-height: 2.65em;
   letter-spacing: -0.01em;
 }
 
-.featured-model a {
+.designer-card-title a {
   color: inherit;
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
-.featured-model a:hover {
-  color: var(--accent-terracotta);
+.designer-card-title a:hover {
+  color: #B85C3A;
 }
 
-.featured-footer {
+.designer-card-footer {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   margin-top: auto;
   padding-top: 14px;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(233, 229, 220, 0.7);
 }
 
-.featured-price {
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-}
-
-.btn-featured-view {
-  font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--accent-terracotta);
-  text-decoration: none;
-  transition: transform 0.15s ease;
+.designer-price-box {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   gap: 4px;
 }
 
-.btn-featured-view:hover {
+.designer-price-label {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: #686C6A;
+  font-weight: 400;
+}
+
+.designer-price-val {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #222320;
+  letter-spacing: -0.01em;
+}
+
+.designer-card-link {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #B85C3A;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.15s ease;
+}
+
+.designer-card-link:hover {
   transform: translateX(3px);
 }
 
@@ -2993,30 +3165,52 @@ a {
     font-size: 1.55rem;
   }
 
-  .featured-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  /* Адаптив: DESIGNER SELECTION */
+  .home-designer-section {
+    padding: 52px 0;
   }
 
-  .featured-img-link {
-    height: 220px;
-    padding: 16px 12px 10px;
+  .designer-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
   }
 
-  .featured-body {
+  .designer-header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .designer-title {
+    font-size: 1.625rem;
+  }
+
+  .designer-subtitle {
+    font-size: 0.9375rem;
+  }
+
+  .designer-card {
+    flex: 0 0 calc((100% - 16px) / 2);
+    min-width: calc((100% - 16px) / 2);
+    max-width: calc((100% - 16px) / 2);
+  }
+
+  .designer-canvas {
+    height: 270px;
+    padding: 18px 14px 12px;
+  }
+
+  .designer-card-body {
     padding: 14px 14px 16px;
   }
 
-  .featured-model {
+  .designer-card-title {
     font-size: 1.05rem;
-    line-height: 1.25;
     min-height: 2.5em;
   }
 
-  .featured-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+  .designer-card-footer {
     padding-top: 10px;
   }
 
@@ -3093,6 +3287,17 @@ a {
 }
 
 @media (max-width: 480px) {
+  .designer-card {
+    flex: 0 0 82vw;
+    min-width: 82vw;
+    max-width: 82vw;
+  }
+
+  .designer-canvas {
+    height: 250px;
+    padding: 16px 12px 10px;
+  }
+
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
