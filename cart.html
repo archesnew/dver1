@@ -28,8 +28,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=3.9.0">
-  <link rel="stylesheet" href="cart.css?v=3.9.0">
+  <link rel="stylesheet" href="app.css?v=4.0.0">
+  <link rel="stylesheet" href="cart.css?v=4.0.0">
   <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body class="page-cart">
@@ -150,6 +150,18 @@
       <!-- Сводка заказа справа -->
       <aside class="cart-summary-sticky" aria-label="Сводка заказа">
         <h2 class="cart-summary-title">Сводка заявки</h2>
+
+        <!-- ИНДИКАТОР БЕСПЛАТНОЙ ДОСТАВКИ (SPRINT 8) -->
+        <div class="cart-upsell-delivery" id="cartDeliveryUpsellBox">
+          <div class="cart-upsell-delivery-header">
+            <span class="cart-upsell-delivery-icon" id="cartDeliveryIcon">🚚</span>
+            <span class="cart-upsell-delivery-title" id="cartDeliveryTitle">Доставка</span>
+          </div>
+          <div class="cart-upsell-progress-track">
+            <div class="cart-upsell-progress-bar" id="cartDeliveryProgressBar" style="width: 0%;"></div>
+          </div>
+          <div class="cart-upsell-delivery-desc" id="cartDeliveryDesc">Добавьте ещё двери до бесплатной доставки</div>
+        </div>
         
         <div class="cart-summary-row">
           <span>Всего позиций:</span>
@@ -159,6 +171,11 @@
         <div class="cart-summary-row" id="summaryKnownRow">
           <span>Фиксированная стоимость:</span>
           <strong id="summaryKnownPrice">0 ₽</strong>
+        </div>
+
+        <div class="cart-summary-row install-row" id="summaryInstallRow" style="display: none;">
+          <span>Монтаж «под ключ» (<span id="summaryInstallCount">0</span> шт.):</span>
+          <strong id="summaryInstallPrice">+0 ₽</strong>
         </div>
 
         <div class="cart-summary-row uncertain" id="summaryUncertainRow" style="display: none;">
@@ -171,6 +188,20 @@
         <div class="cart-summary-total-row">
           <span class="cart-summary-total-label">Предварительный итог:</span>
           <span class="cart-summary-total-val" id="summaryFinalTotal">0 ₽</span>
+        </div>
+
+        <!-- МОНТАЖ ПОД КЛЮЧ (SPRINT 8) -->
+        <div class="cart-upsell-install" id="cartInstallUpsellBox">
+          <label class="cart-install-checkbox-label">
+            <input type="checkbox" id="chkAddInstallation" class="cart-install-checkbox" />
+            <div class="cart-install-checkbox-content">
+              <div class="cart-install-title-row">
+                <span class="cart-install-title">Монтаж «под ключ»</span>
+                <span class="cart-install-badge-price" id="cartInstallPriceBadge">+0 ₽</span>
+              </div>
+              <p class="cart-install-desc">Профессиональная установка с гарантией 2 года: сборка, врезка фурнитуры, выставление по лазеру и уборка мусора.</p>
+            </div>
+          </label>
         </div>
 
         <div class="cart-summary-note" id="summaryNote">
@@ -436,7 +467,7 @@
     <div class="footer-container">
       <div class="footer-bottom-bar">
         <div class="footer-copyright">
-          © 2026 «Двери №1». Премиальный шоурум интерьерных решений.
+          © 2026 «Двери №1». Дизайн-шоурумы дверей в Казани и Набережных Челнах — складские цены официального дистрибьютора.
         </div>
         <div class="footer-legal-links">
           <span>Казань • Набережные Челны</span>
@@ -452,11 +483,11 @@
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- Скрипты -->
-  <script src="js/config.js?v=3.9.0"></script>
-  <script src="js/city.js?v=3.9.0"></script>
-  <script src="js/analytics.js?v=3.9.0"></script>
-  <script src="js/leads.js?v=3.9.0"></script>
-  <script src="cart-store.js?v=3.9.0"></script>
-  <script src="cart.js?v=3.9.0"></script>
+  <script src="js/config.js?v=4.0.0"></script>
+  <script src="js/city.js?v=4.0.0"></script>
+  <script src="js/analytics.js?v=4.0.0"></script>
+  <script src="js/leads.js?v=4.0.0"></script>
+  <script src="cart-store.js?v=4.0.0"></script>
+  <script src="cart.js?v=4.0.0"></script>
 </body>
 </html>

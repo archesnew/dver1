@@ -103,6 +103,33 @@
     return img;
   }
 
+  function calculateInstallationTotals(cart) {
+    function isEntrance(item) {
+      const cat = (item.category || item.type || item.door_type_group || item.collection || item.title || '').toLowerCase();
+      return cat.includes('входн') || item.type === 'entrance' || item.door_type_group === 'entrance';
+    }
+    let interiorQty = 0;
+    let entranceQty = 0;
+    (cart || []).forEach(item => {
+      const qty = item.quantity || 1;
+      if (isEntrance(item)) {
+        entranceQty += qty;
+      } else {
+        interiorQty += qty;
+      }
+    });
+    const priceInterior = (window.DVER_CONFIG && window.DVER_CONFIG.INSTALLATION_PRICE_INTERIOR) || 3500;
+    const priceEntrance = (window.DVER_CONFIG && window.DVER_CONFIG.INSTALLATION_PRICE_ENTRANCE) || 4500;
+    const cost = (interiorQty * priceInterior) + (entranceQty * priceEntrance);
+    const count = interiorQty + entranceQty;
+    return {
+      interiorQty,
+      entranceQty,
+      count,
+      cost
+    };
+  }
+
   function renderCart() {
     const cart = window.CartStore.getCart();
     const totals = window.CartStore.calculateTotals(cart);
@@ -310,12 +337,65 @@
       }
     }
 
-    const totalText = totals.knownItemsTotal > 0
-      ? `${totals.knownItemsTotal.toLocaleString('ru-RU')} ₽${totals.hasUncertainPrices ? ' *' : ''}`
+    // 1. Мотивация: прогресс-бар бесплатной доставки (Sprint 8)
+    const installTotals = calculateInstallationTotals(cart);
+    const freeDeliveryMin = (window.DVER_CONFIG && window.DVER_CONFIG.FREE_DELIVERY_MIN_QTY) || 4;
+    const deliveryBox = document.getElementById('cartDeliveryUpsellBox');
+    const deliveryBar = document.getElementById('cartDeliveryProgressBar');
+    const deliveryTitle = document.getElementById('cartDeliveryTitle');
+    const deliveryDesc = document.getElementById('cartDeliveryDesc');
+    const deliveryIcon = document.getElementById('cartDeliveryIcon');
+
+    if (deliveryBox && deliveryBar && deliveryTitle && deliveryDesc) {
+      if (totals.totalCount >= freeDeliveryMin) {
+        deliveryBox.classList.add('unlocked');
+        deliveryBar.style.width = '100%';
+        if (deliveryIcon) deliveryIcon.textContent = '🎉';
+        deliveryTitle.textContent = 'Бесплатная доставка';
+        deliveryDesc.innerHTML = '<strong>Бесплатная доставка по городу активирована</strong>';
+      } else {
+        deliveryBox.classList.remove('unlocked');
+        const pct = Math.max(8, Math.min(100, Math.round((totals.totalCount / freeDeliveryMin) * 100)));
+        deliveryBar.style.width = `${pct}%`;
+        if (deliveryIcon) deliveryIcon.textContent = '🚚';
+        deliveryTitle.textContent = 'Доставка по городу';
+        const diff = freeDeliveryMin - totals.totalCount;
+        deliveryDesc.textContent = `Добавьте ещё ${diff} ${pluralize(diff, 'комплект', 'комплекта', 'комплектов')} до бесплатной доставки`;
+      }
+    }
+
+    // 2. Допродажа: Монтаж «под ключ» (Sprint 8)
+    const chkSummaryInstall = document.getElementById('chkAddInstallation');
+    const installBadgePrice = document.getElementById('cartInstallPriceBadge');
+    const summaryInstallRow = document.getElementById('summaryInstallRow');
+    const summaryInstallCount = document.getElementById('summaryInstallCount');
+    const summaryInstallPrice = document.getElementById('summaryInstallPrice');
+
+    if (installBadgePrice) {
+      installBadgePrice.textContent = `+${installTotals.cost.toLocaleString('ru-RU')} ₽`;
+    }
+
+    const isInstallActive = chkSummaryInstall ? chkSummaryInstall.checked : checkoutState.delivery.installation;
+    checkoutState.delivery.installation = isInstallActive;
+    checkoutState.delivery.installationCost = isInstallActive ? installTotals.cost : 0;
+
+    if (summaryInstallRow && summaryInstallCount && summaryInstallPrice) {
+      if (isInstallActive && installTotals.count > 0) {
+        summaryInstallRow.style.display = 'flex';
+        summaryInstallCount.textContent = installTotals.count;
+        summaryInstallPrice.textContent = `+${installTotals.cost.toLocaleString('ru-RU')} ₽`;
+      } else {
+        summaryInstallRow.style.display = 'none';
+      }
+    }
+
+    const grandTotal = totals.knownItemsTotal + (isInstallActive ? installTotals.cost : 0);
+    const totalText = grandTotal > 0
+      ? `${grandTotal.toLocaleString('ru-RU')} ₽${totals.hasUncertainPrices ? ' *' : ''}`
       : 'По индивидуальной смете';
 
     if (summaryTotal) summaryTotal.textContent = totalText;
-    if (mobileStickyTotal) mobileStickyTotal.textContent = totalText;
+    if (mobileStickyTotal) mobileStickyTotal.textContent = grandTotal > 0 ? `${grandTotal.toLocaleString('ru-RU')} ₽` : 'По запросу';
   }
 
   // --------------------------------------------------------------------------
@@ -645,25 +725,39 @@
       const delText = checkoutState.delivery.type === 'delivery' ? 'Адресная доставка' : 'Самовывоз из салона';
       cCity.textContent = `${checkoutState.client.city} • ${delText}`;
     }
-    if (cInst) {
-      cInst.textContent = checkoutState.delivery.installation ? 'Требуется профессиональный монтаж' : 'Без монтажа';
-    }
-
     const cart = window.CartStore.getCart();
     const totals = window.CartStore.calculateTotals(cart);
+    const installTotals = calculateInstallationTotals(cart);
+
+    if (cInst) {
+      cInst.textContent = checkoutState.delivery.installation
+        ? `Профессиональный монтаж «под ключ» (+${installTotals.cost.toLocaleString('ru-RU')} ₽)`
+        : 'Без монтажа';
+    }
 
     if (miniList) {
-      miniList.innerHTML = cart.map(it => `
+      let miniHtml = cart.map(it => `
         <div class="confirm-mini-item">
           <span class="confirm-mini-title">${it.quantity} × ${escapeHtml(it.title)} (${escapeHtml(it.variant)}, ${escapeHtml(it.size)})</span>
           <span class="confirm-mini-price">${it.isPriceKnown && typeof it.unitPrice === 'number' ? (it.unitPrice * it.quantity).toLocaleString('ru-RU') + ' ₽' : 'Уточняется'}</span>
         </div>
       `).join('');
+
+      if (checkoutState.delivery.installation && installTotals.count > 0) {
+        miniHtml += `
+          <div class="confirm-mini-item confirm-mini-install">
+            <span class="confirm-mini-title">Монтаж «под ключ» (${installTotals.count} ${pluralize(installTotals.count, 'дверь', 'двери', 'дверей')})</span>
+            <span class="confirm-mini-price">+${installTotals.cost.toLocaleString('ru-RU')} ₽</span>
+          </div>
+        `;
+      }
+      miniList.innerHTML = miniHtml;
     }
 
     if (totalSum) {
-      totalSum.textContent = totals.knownItemsTotal > 0
-        ? `${totals.knownItemsTotal.toLocaleString('ru-RU')} ₽${totals.hasUncertainPrices ? ' *' : ''}`
+      const finalGrandSum = totals.knownItemsTotal + (checkoutState.delivery.installation ? installTotals.cost : 0);
+      totalSum.textContent = finalGrandSum > 0
+        ? `${finalGrandSum.toLocaleString('ru-RU')} ₽${totals.hasUncertainPrices ? ' *' : ''}`
         : 'По согласованию';
     }
   }
@@ -692,6 +786,7 @@
         delivery: {
           type: checkoutState.delivery.type,
           installation: checkoutState.delivery.installation,
+          installationCost: checkoutState.delivery.installationCost || 0,
           comment: checkoutState.delivery.comment
         },
         items: cart
@@ -773,6 +868,28 @@
         checkoutState.delivery.type = btn.getAttribute('data-delivery');
       });
     });
+
+    // Синхронизация чекбоксов монтажа «под ключ» (Sprint 8)
+    const chkSummaryInstall = document.getElementById('chkAddInstallation');
+    const chkModalInstall = document.getElementById('chkInstallation');
+
+    if (chkSummaryInstall) {
+      chkSummaryInstall.checked = checkoutState.delivery.installation;
+      chkSummaryInstall.addEventListener('change', (e) => {
+        checkoutState.delivery.installation = e.target.checked;
+        if (chkModalInstall) chkModalInstall.checked = e.target.checked;
+        renderCart();
+      });
+    }
+
+    if (chkModalInstall) {
+      chkModalInstall.checked = checkoutState.delivery.installation;
+      chkModalInstall.addEventListener('change', (e) => {
+        checkoutState.delivery.installation = e.target.checked;
+        if (chkSummaryInstall) chkSummaryInstall.checked = e.target.checked;
+        renderCart();
+      });
+    }
 
     // Телефонная маска (+7 (XXX) XXX-XX-XX)
     const phoneInput = document.getElementById('clientPhone');
@@ -995,6 +1112,7 @@
     if (!printContainer) return;
 
     const totals = window.CartStore.calculateTotals(cart);
+    const installTotals = calculateInstallationTotals(cart);
     if (typeof window.trackGoal === 'function') {
       window.trackGoal('pdf_export', { itemsCount: cart.length, total: totals.total });
     }
@@ -1036,6 +1154,24 @@
         </tr>
       `;
     });
+
+    if (checkoutState.delivery.installation && installTotals.count > 0) {
+      rowsHtml += `
+        <tr style="background: #fafafa; font-weight: 500;">
+          <td style="text-align: center; font-weight: 600;">+</td>
+          <td style="text-align: center; font-size: 18px;">🛠️</td>
+          <td colspan="4">
+            <strong>Профессиональный монтаж «под ключ» (Гарантия 2 года)</strong><br>
+            <small style="color: #666;">Включает: сборку и выставление лазером, врезку скрытой фурнитуры, монтаж доборов/наличников, уборку мусора</small>
+          </td>
+          <td style="text-align: center; font-weight: 600;">${installTotals.count} шт.</td>
+          <td style="text-align: right; white-space: nowrap;">—</td>
+          <td style="text-align: right; font-weight: 700; white-space: nowrap;">+${installTotals.cost.toLocaleString('ru-RU')} ₽</td>
+        </tr>
+      `;
+    }
+
+    const grandPdfTotal = totals.knownItemsTotal + (checkoutState.delivery.installation ? installTotals.cost : 0);
 
     printContainer.innerHTML = `
       <div class="print-doc-header">
@@ -1080,7 +1216,7 @@
             <td style="text-align: center; font-weight: 700;">${totals.totalCount} шт.</td>
             <td></td>
             <td style="text-align: right; font-weight: 800; font-size: 1.1em; color: #111;">
-              ${totals.knownItemsTotal.toLocaleString('ru-RU')} ₽
+              ${grandPdfTotal > 0 ? `${grandPdfTotal.toLocaleString('ru-RU')} ₽` : 'По смете'}
             </td>
           </tr>
         </tfoot>

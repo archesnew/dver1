@@ -36,6 +36,29 @@
       }
     },
 
+    // Рейтинги и отзывы на гео-сервисах (Спринт 8 — Задача 2)
+    RATINGS: {
+      yandex: {
+        score: '5.0',
+        reviewsCount: 142,
+        url: 'https://yandex.ru/maps/org/dveri_1/1892345091/',
+        title: 'Яндекс Карты',
+        badge: 'Выбор покупателей 2025'
+      },
+      twoGis: {
+        score: '4.9',
+        reviewsCount: 98,
+        url: 'https://2gis.ru/kazan/firm/70000001034567890',
+        title: '2ГИС',
+        badge: 'Надёжный партнёр'
+      }
+    },
+
+    // Мотивация корзины и базовые расценки монтажа (Спринт 8 — Задача 5)
+    FREE_DELIVERY_MIN_QTY: 4,
+    INSTALLATION_PRICE_INTERIOR: 3500,
+    INSTALLATION_PRICE_ENTRANCE: 4500,
+
     // Базовые доплаты для комплекта «под ключ» (Спринт 3)
     KIT_SURCHARGES: {
       interior: [

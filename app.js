@@ -1941,10 +1941,11 @@
       });
     }
 
-    // Инициализация мобильного меню, эффекта стекла, витрины Designer Selection и пресетов
+    // Инициализация мобильного меню, эффекта стекла, витрины Designer Selection, кейсов и пресетов
     initHeaderMenu();
     initHeaderScrollEffect();
     initDesignerShowcase();
+    initCasesCarousel();
     setupPresets();
   }
 
@@ -2343,6 +2344,92 @@
     track.addEventListener('scroll', updateNavState, { passive: true });
     window.addEventListener('resize', updateNavState, { passive: true });
     updateNavState();
+  }
+
+  async function initCasesCarousel() {
+    const track = document.getElementById('casesCarouselTrack');
+    const prevBtn = document.getElementById('casesPrevBtn');
+    const nextBtn = document.getElementById('casesNextBtn');
+    if (!track) return;
+
+    try {
+      const res = await fetch('data/cases.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const cases = await res.json();
+      if (!Array.isArray(cases) || !cases.length) return;
+
+      track.innerHTML = cases.map(c => `
+        <article class="case-card" data-id="${c.id}">
+          <div class="case-card-media">
+            <img src="${c.image}" alt="${c.title}" loading="lazy" class="case-card-img" />
+            <div class="case-badges">
+              <span class="case-badge-city">${c.city}</span>
+              <span class="case-badge-qty">${c.qty} ${c.qty === 1 ? 'дверь' : (c.qty < 5 ? 'двери' : 'дверей')}</span>
+            </div>
+          </div>
+          <div class="case-card-body">
+            <div class="case-card-category">${c.category}</div>
+            <h3 class="case-card-title">${c.title}</h3>
+            
+            <div class="case-door-ref">
+              <span class="case-door-label">Установленная модель:</span>
+              <a href="product.html?id=${c.door_id}" class="case-door-name">${c.door_name}</a>
+            </div>
+
+            <div class="case-details">
+              <div class="case-detail-item">
+                <span class="case-detail-title">Задача:</span>
+                <p class="case-detail-text">${c.task}</p>
+              </div>
+              <div class="case-detail-item">
+                <span class="case-detail-title">Решение:</span>
+                <p class="case-detail-text">${c.solution}</p>
+              </div>
+              <div class="case-detail-item case-detail-result">
+                <span class="case-detail-title">Результат:</span>
+                <p class="case-detail-text">${c.result}</p>
+              </div>
+            </div>
+
+            <div class="case-card-footer">
+              <a href="product.html?id=${c.door_id}" class="btn-case-product">
+                Смотреть модель в каталоге
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+
+      if (prevBtn && nextBtn) {
+        function updateNavState() {
+          const atStart = track.scrollLeft <= 8;
+          const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+          prevBtn.disabled = atStart;
+          nextBtn.disabled = atEnd;
+        }
+
+        prevBtn.addEventListener('click', () => {
+          const card = track.querySelector('.case-card');
+          const step = card ? card.offsetWidth + 24 : 380;
+          track.scrollBy({ left: -step, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+          const card = track.querySelector('.case-card');
+          const step = card ? card.offsetWidth + 24 : 380;
+          track.scrollBy({ left: step, behavior: 'smooth' });
+        });
+
+        track.addEventListener('scroll', updateNavState, { passive: true });
+        window.addEventListener('resize', updateNavState, { passive: true });
+        updateNavState();
+      }
+    } catch (err) {
+      console.warn('Не удалось загрузить cases.json:', err);
+    }
   }
 
   // Экспорт в глобальное пространство для inline-обработчиков

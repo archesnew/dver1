@@ -249,7 +249,7 @@ async function dispatchTelegramNotification(order) {
     `📞 *Телефон:* ${order.client.phone}\n` +
     `📍 *Город:* ${order.client.city}\n` +
     `🚚 *Получение:* ${order.delivery.type === 'delivery' ? 'Адресная доставка' : 'Самовывоз из шоурума'}\n` +
-    `🛠️ *Монтаж:* ${order.delivery.installation ? 'Да, требуется монтаж и замер' : 'Не требуется'}\n` +
+    `🛠️ *Монтаж:* ${order.delivery.installation ? `Да, требуется монтаж и замер${order.delivery.installationCost ? ` (+${order.delivery.installationCost.toLocaleString('ru-RU')} ₽)` : ''}` : 'Не требуется'}\n` +
     (order.delivery.comment ? `💬 *Комментарий:* ${order.delivery.comment}\n` : '') +
     `\n📦 *Состав заказа:*\n${itemsList}\n\n` +
     `💰 *Предварительный расчет:* ${order.totalKnownPrice ? order.totalKnownPrice.toLocaleString('ru-RU') + ' ₽' : 'По индивидуальной смете'}` +
@@ -791,6 +791,7 @@ const server = http.createServer(async (req, res) => {
         delivery: {
           type: body.delivery?.type === 'delivery' ? 'delivery' : 'pickup',
           installation: Boolean(body.delivery?.installation),
+          installationCost: Number(body.delivery?.installationCost) || 0,
           comment: String(body.delivery?.comment || '').trim()
         },
         items: validated.items,

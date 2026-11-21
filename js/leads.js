@@ -200,15 +200,17 @@
       }
 
       // Отправка событий в аналитику (Яндекс.Метрика / Google Analytics)
+      const goalName = payload.goalName || (payload.type === 'designer' ? 'lead_designer' : (payload.type === 'quiz' ? 'lead_quiz' : 'lead_measure'));
       if (typeof window.trackGoal === 'function') {
-        window.trackGoal('lead_measure', {
+        window.trackGoal(goalName, {
           ticketNumber,
           source: leadRecord.source,
-          city: leadRecord.city
+          city: leadRecord.city,
+          type: payload.type || 'standard'
         });
       }
 
-      logAnalyticsEvent('lead_form_submitted', {
+      logAnalyticsEvent(goalName, {
         ticketNumber,
         source: leadRecord.source,
         city: leadRecord.city
@@ -316,12 +318,23 @@
 
     const source = typeof options === 'string' ? options : (options.source || 'Вызов замерщика');
     const product = typeof options === 'object' ? (options.product || null) : null;
+    const isDesigner = (typeof options === 'object' && options.type === 'designer');
     currentBoundProduct = product;
+
+    modal.dataset.leadType = isDesigner ? 'designer' : 'standard';
 
     // Сводка выбранного товара в шапке модалки
     const summaryBox = document.getElementById('leadProductSummary');
     if (summaryBox) {
-      if (product) {
+      if (isDesigner) {
+        summaryBox.style.display = 'block';
+        summaryBox.innerHTML = `
+          <div class="lead-default-summary" style="border-left: 3px solid var(--accent-gold, #cbb17b); background: rgba(203, 177, 123, 0.08);">
+            <strong>Партнёрская программа «Двери №1»</strong>
+            <p style="margin-top: 4px; font-size: 0.8125rem;">Кэшбэк на объём, бесплатные образцы шпона и эмали на объект, расчёт полной спецификации по дизайн-проекту за 2 часа.</p>
+          </div>
+        `;
+      } else if (product) {
         const pName = product.name || product.model || 'Дверное полотно';
         const pId = product.id ? `арт. ${product.id}` : '';
         const pPrice = product.price ? `${Number(product.price).toLocaleString('ru-RU')} ₽` : '';
@@ -351,7 +364,11 @@
 
     const titleEl = document.getElementById('leadModalTitle');
     if (titleEl) {
-      titleEl.textContent = product ? 'Заявка на расчет и замер' : 'Вызов инженера-замерщика';
+      if (isDesigner) {
+        titleEl.textContent = 'Партнёрские условия для дизайнеров';
+      } else {
+        titleEl.textContent = product ? 'Заявка на расчет и замер' : 'Вызов инженера-замерщика';
+      }
     }
 
     // Очистка состояния валидации
@@ -465,6 +482,7 @@
           address: addressInput?.value,
           comment: commentInput?.value,
           source: modal.dataset.leadSource || 'Модалка замера',
+          type: modal.dataset.leadType || 'standard',
           product: currentBoundProduct
         };
 
@@ -596,6 +614,13 @@
     }
   }
 
+  function openDesignerModal(source = 'Блок для дизайнеров') {
+    openLeadModal({
+      source,
+      type: 'designer'
+    });
+  }
+
   // --------------------------------------------------------------------------
   // АВТОИНИЦИАЛИЗАЦИЯ ПРИ ЗАГРУЗКЕ DOM
   // --------------------------------------------------------------------------
@@ -617,6 +642,7 @@
     validatePhone,
     attachPhoneMask,
     openLeadModal,
+    openDesignerModal,
     closeLeadModal,
     initLeadForms,
     initFloatingWidget,

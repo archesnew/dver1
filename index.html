@@ -104,7 +104,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=3.9.0">
+  <link rel="stylesheet" href="app.css?v=4.0.0">
   <style id="critical-designer-fallback">
     .designer-showcase-wrapper { position: relative; width: 100%; }
     .designer-showcase-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; padding: 4px 2px 14px; }
@@ -130,7 +130,7 @@
     .skeleton-price { width: 40%; height: 20px; }
     @keyframes skeleton-pulse { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
   </style>
-  <script src="cart-store.js?v=3.9.0"></script>
+  <script src="cart-store.js?v=4.0.0"></script>
 </head>
 <body>
 
@@ -240,6 +240,24 @@
             </span>
             <span>Бесплатный замер</span>
           </button>
+        </div>
+
+        <!-- СТРОКА ЯКОРЕЙ ДОВЕРИЯ (SPRINT 8 — ЗАДАЧА 1) -->
+        <div class="hero-trust-strip">
+          <div class="hero-trust-item">
+            <span class="hero-trust-val">128 моделей в наличии</span>
+            <span class="hero-trust-lbl">отгрузка со склада за 1–2 дня</span>
+          </div>
+          <div class="hero-trust-divider" aria-hidden="true"></div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-val">Замер завтра</span>
+            <span class="hero-trust-lbl">инженер с образцами покрытий и каталогом</span>
+          </div>
+          <div class="hero-trust-divider" aria-hidden="true"></div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-val">2 шоурума</span>
+            <span class="hero-trust-lbl">Казань и Набережные Челны</span>
+          </div>
         </div>
       </div>
     </div>
@@ -536,6 +554,20 @@
         </div>
       </header>
 
+      <!-- БАННЕР БЫСТРОГО ПОДБОРА ДВЕРЕЙ ЗА 30 СЕКУНД (SPRINT 8 — ЗАДАЧА 3) -->
+      <div class="catalog-quiz-banner" id="catalogQuizBanner">
+        <div class="quiz-banner-decor-glow" aria-hidden="true"></div>
+        <div class="quiz-banner-text-box">
+          <div class="quiz-banner-badge">Подбор за 30 секунд • 4 вопроса</div>
+          <div class="quiz-banner-title">Не знаете, какую дверь выбрать под ваш интерьер?</div>
+          <div class="quiz-banner-desc">Ответьте на 4 простых вопроса — система рассчитает смету и покажет 3 лучшие модели под ваш бюджет</div>
+        </div>
+        <button type="button" class="btn-quiz-banner" id="btnOpenQuiz">
+          <span>Подобрать двери за 30 сек</span>
+          <span class="quiz-banner-arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+
       <!-- БЫСТРЫЕ ПРЕСЕТЫ-СЦЕНАРИИ КАТАЛОГА (СПРИНТ 7) -->
       <div class="catalog-presets-strip" id="catalogPresetsStrip" role="region" aria-label="Быстрые сценарии подбора">
         <button type="button" class="preset-pill" data-preset="inStock">
@@ -746,6 +778,117 @@
     </div>
   </section>
 
+  <!-- РАЗДЕЛ: ГАРАНТИИ И ДОВЕРИЕ К МОНТАЖУ (SPRINT 8 — ЗАДАЧА 2) -->
+  <section class="trust-guarantees-section" id="guaranteesSection">
+    <div class="editorial-container">
+      <div class="editorial-header">
+        <div class="editorial-kicker">Безупречный монтаж и сервис</div>
+        <h2 class="editorial-title">Почему ремонт с нами проходит спокойно</h2>
+        <p class="editorial-subtitle">Честный подход официального дистрибьютора: прозрачная смета, чистовой монтаж и юридическая гарантия</p>
+      </div>
+
+      <div class="guarantees-cards-grid">
+        <!-- Карточка 1 -->
+        <div class="guarantee-card">
+          <div class="guarantee-icon-box">📋</div>
+          <h3 class="guarantee-title">Фиксированная смета в договоре</h3>
+          <p class="guarantee-desc">
+            После выезда инженера-замерщика стоимость полотен, доборов, фурнитуры и монтажа фиксируется в договоре. Никаких скрытых доплат и сюрпризов при сдаче.
+          </p>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="guarantee-card">
+          <div class="guarantee-icon-box">🧹</div>
+          <h3 class="guarantee-title">Чистый монтаж с промышленным пылесосом</h3>
+          <p class="guarantee-desc">
+            Аккуратная врезка скрытых петель и замков выполняется по высокоточным шаблонам с профессиональным пылеудалением Festool. Без строительной пыли и грязи.
+          </p>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="guarantee-card">
+          <div class="guarantee-icon-box">🛡️</div>
+          <h3 class="guarantee-title">Гарантия 1 год на установку и фурнитуру</h3>
+          <p class="guarantee-desc">
+            Собственная авторизованная сервисная служба. Если потребуется регулировка притвора или петли после усадки дома — мастер выезжает и настраивает за наш счёт.
+          </p>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="guarantee-card">
+          <div class="guarantee-icon-box">🏭</div>
+          <h3 class="guarantee-title">Прямые поставки без наценок посредников</h3>
+          <p class="guarantee-desc">
+            Официальные контракты с фабриками ProfilDoors, Феррони, Luxor, Chameleon Doors. Поставки напрямую со складов в РТ со строгим контролем геометрии.
+          </p>
+        </div>
+      </div>
+
+      <!-- ПЛАШКА РЕЙТИНГОВ И ОТЗЫВОВ (ЯНДЕКС.КАРТЫ И 2ГИС) -->
+      <div class="ratings-trust-bar" id="ratingsTrustBar">
+        <div class="ratings-bar-intro">
+          <span class="ratings-bar-badge">Реальные отзывы</span>
+          <div class="ratings-bar-title">Высокий рейтинг доверия покупателей в Татарстане</div>
+        </div>
+        <div class="ratings-cards-row">
+          <a href="https://yandex.ru/maps/org/dveri_1/1892345091/" target="_blank" rel="noopener noreferrer" class="rating-badge-card yandex-card" title="Смотреть отзывы на Яндекс Картах">
+            <div class="rating-brand-row">
+              <span class="rating-brand-name">Яндекс Карты</span>
+              <span class="rating-stars" aria-hidden="true">★★★★★</span>
+            </div>
+            <div class="rating-score-row">
+              <span class="rating-score-val">5.0</span>
+              <span class="rating-reviews-qty">142 отзыва • «Выбор покупателей 2025»</span>
+            </div>
+          </a>
+
+          <a href="https://2gis.ru/kazan/firm/70000001034567890" target="_blank" rel="noopener noreferrer" class="rating-badge-card twogis-card" title="Смотреть отзывы в 2ГИС">
+            <div class="rating-brand-row">
+              <span class="rating-brand-name">2ГИС</span>
+              <span class="rating-stars" aria-hidden="true">★★★★★</span>
+            </div>
+            <div class="rating-score-row">
+              <span class="rating-score-val">4.9</span>
+              <span class="rating-reviews-qty">98 оценок • «Надёжный салон»</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РАЗДЕЛ: РЕАЛИЗОВАННЫЕ ОБЪЕКТЫ (КЕЙСЫ) (SPRINT 8 — ЗАДАЧА 2) -->
+  <section class="cases-showcase-section" id="casesSection">
+    <div class="editorial-container">
+      <div class="editorial-header-row">
+        <div class="editorial-header">
+          <div class="editorial-kicker">Портфолио установок</div>
+          <h2 class="editorial-title">Реализованные объекты</h2>
+          <p class="editorial-subtitle">Фотографии и параметры завершённых монтажей в жилых комплексах и коттеджах Татарстана</p>
+        </div>
+        <div class="editorial-nav" aria-label="Навигация по объектам">
+          <button class="editorial-nav-btn prev" id="casesPrevBtn" aria-label="Предыдущий объект">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="editorial-nav-btn next" id="casesNextBtn" aria-label="Следующий объект">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="cases-carousel-wrapper">
+        <div class="cases-carousel-track" id="casesCarouselTrack">
+          <!-- Генерируется скриптом app.js из data/cases.json -->
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- МИНИ-ГИД: НА КАКОМ ЭТАПЕ РЕМОНТА ВЫЗЫВАТЬ ЗАМЕРЩИКА (SPRINT 4 — TASK 4) -->
   <section class="renovation-steps-section" aria-label="Когда вызывать замерщика">
     <div class="editorial-container">
@@ -826,7 +969,55 @@
     </div>
   </section>
 
-  <!-- МОДАЛЬНОЕ ОКНО: ДЕТАЛЬНАЯ КАРТОЧКА ТОВАРА -->
+  <!-- РАЗДЕЛ: ДИЗАЙНЕРАМ ИНТЕРЬЕРОВ И КОМПЛЕКТАТОРАМ (SPRINT 8 — ЗАДАЧА 4) -->
+  <section class="home-designers-section" id="designersSection">
+    <div class="editorial-container">
+      <div class="designers-dark-card">
+        <div class="designers-decor-glow" aria-hidden="true"></div>
+        <div class="designers-card-content">
+          <div class="designers-kicker">B2B & Архитектурный отдел</div>
+          <h2 class="designers-title">Дизайнерам интерьеров, архитекторам и прорабам</h2>
+          <p class="designers-desc">
+            Берём на себя техническую сторону дверных проёмов: профессиональный лазерный замер, спецификацию нестандартных коробов и скрытый чистовой монтаж.
+          </p>
+
+          <div class="designers-perks-grid">
+            <div class="designer-perk-item">
+              <span class="perk-bullet">01</span>
+              <div class="perk-text-box">
+                <strong>Партнёрские условия на объём</strong>
+                <span>Прозрачное вознаграждение, кэшбэк и специальные контрактные цены для ваших проектов</span>
+              </div>
+            </div>
+
+            <div class="designer-perk-item">
+              <span class="perk-bullet">02</span>
+              <div class="perk-text-box">
+                <strong>«Живые» образцы на объект</strong>
+                <span>Выезд инженера с веерами эмалей RAL, образцами натурального шпона и фурнитурой Morelli</span>
+              </div>
+            </div>
+
+            <div class="designer-perk-item">
+              <span class="perk-bullet">03</span>
+              <div class="perk-text-box">
+                <strong>Спецификация за 2 часа</strong>
+                <span>Оперативный расчёт сметы по вашему дизайн-проекту (PDF/DWG/коллажи) с рекомендациями по проёмам</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="designers-cta-row">
+            <button type="button" class="btn-designers-cta" id="btnDesignerPartner" onclick="if(window.DverLeads && window.DverLeads.openDesignerModal) window.DverLeads.openDesignerModal('Секция дизайнеров'); else if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Секция дизайнеров');">
+              <span>Получить партнёрские условия</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+            <span class="designers-subnote">Персональный куратор для архитекторов и студий в Казани и Челнах</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-window">
       <button type="button" class="modal-close-btn" id="btnCloseModal" title="Закрыть (Esc)">✕</button>
@@ -953,11 +1144,11 @@
           <img src="logo.png" alt="Двери №1" class="brand-logo-img" style="height: 38px;">
           <div class="brand-titles">
             <div class="brand-name" style="font-size: 1.15rem;">ДВЕРИ №1</div>
-            <div class="brand-subtitle">Федеральная рознично-оптовая сеть</div>
+            <div class="brand-subtitle">Дизайн-шоурумы дверей в Казани и Набережных Челнах</div>
           </div>
         </div>
         <p style="line-height: 1.6; max-width: 480px;">
-          Крупнейший специализированный дверной центр в Республике Татарстан. Официальный дистрибьютор фабрик: Оникс, Дворецкий, ProfilDoors, Владимирская фабрика дверей (ВФД), Океан, Корона, Двери регионов, Bravo, Turen Becker, Luxor.
+          Дизайн-шоурумы дверей в Казани и Набережных Челнах — складские цены официального дистрибьютора. 697 моделей в каталоге, 128 дверей в наличии на складе и профессиональный чистовой монтаж с гарантией.
         </p>
       </div>
 
@@ -1030,11 +1221,12 @@
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- СКРИПТЫ: ДАННЫЕ И ЛОГИКА -->
-  <script src="js/config.js?v=3.9.0"></script>
-  <script src="js/city.js?v=3.9.0"></script>
-  <script src="js/analytics.js?v=3.9.0"></script>
-  <script src="js/leads.js?v=3.9.0"></script>
-  <script src="app.js?v=3.9.0"></script>
+  <script src="js/config.js?v=4.0.0"></script>
+  <script src="js/city.js?v=4.0.0"></script>
+  <script src="js/analytics.js?v=4.0.0"></script>
+  <script src="js/leads.js?v=4.0.0"></script>
+  <script src="js/quiz.js?v=4.0.0"></script>
+  <script src="app.js?v=4.0.0"></script>
 
 </body>
 </html>
