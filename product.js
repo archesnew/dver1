@@ -335,6 +335,9 @@
 
     // 6. Мобильный нижний бар
     renderStickyBar(p);
+
+    // 7. Микроразметка JSON-LD и OpenGraph (Спринт 5)
+    updateProductJsonLd(p);
   }
 
   // --------------------------------------------------------------------------
@@ -1091,13 +1094,14 @@
     const stickyName = document.getElementById('stickyModelName');
     const stickyPrice = document.getElementById('stickyPriceVal');
     const btnStickyCart = document.getElementById('btnStickyCart');
+    const btnStickyWa = document.getElementById('btnStickyWhatsapp');
 
     if (stickyName) {
       let vTitle = '';
       if (p.variants && p.variants[pdpState.activeVariantIndex]) {
         vTitle = ` (${p.variants[pdpState.activeVariantIndex].color || ''})`;
       }
-      stickyName.textContent = `${p.model || 'Дверь'}${vTitle}`;
+      stickyName.textContent = `${p.model || p.name || 'Дверь'}${vTitle}`;
     }
 
     const currentPrice = calculateCurrentPrice();
@@ -1105,9 +1109,115 @@
       stickyPrice.textContent = currentPrice ? formatPrice(currentPrice) : 'Уточнить цену';
     }
 
+    updateProductJsonLd(p);
+
     if (btnStickyCart) {
       btnStickyCart.onclick = () => addCurrentProductToCart();
     }
+
+    if (btnStickyWa) {
+      const cfg = window.DVER_CONFIG || window.DverConfig;
+      const cleanPhone = (cfg?.WHATSAPP_NUMBER || '78432050001').replace(/\D/g, '');
+      const priceText = currentPrice ? `${Number(currentPrice).toLocaleString('ru-RU')} ₽` : 'цена по запросу';
+      const msg = `Здравствуйте! Интересует дверь ${p.name || p.model} (комплект ${priceText}). Подскажите по наличию и замеру.`;
+      btnStickyWa.href = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(msg)}`;
+      btnStickyWa.onclick = () => {
+        if (typeof window.trackGoal === 'function') {
+          window.trackGoal('click_whatsapp', { source: 'mobile_sticky_bar', product: p.model || p.name });
+        }
+      };
+    }
+
+    initStickyBarScroll();
+  }
+
+  let stickyScrollInitialized = false;
+  function initStickyBarScroll() {
+    if (stickyScrollInitialized) return;
+    const stickyBar = document.getElementById('mobileStickyBar');
+    const mainActionEl = document.getElementById('btnAddToCart') || document.querySelector('.pdp-buy-box') || document.querySelector('.pdp-sticky-card');
+    if (!stickyBar || !mainActionEl) return;
+    stickyScrollInitialized = true;
+
+    function checkStickyVisibility() {
+      if (window.innerWidth > 768) {
+        stickyBar.classList.remove('is-visible');
+        document.body.classList.remove('sticky-bar-active');
+        return;
+      }
+      const rect = mainActionEl.getBoundingClientRect();
+      const scrolledPast = rect.bottom < 80;
+      if (scrolledPast) {
+        stickyBar.classList.add('is-visible');
+        document.body.classList.add('sticky-bar-active');
+      } else {
+        stickyBar.classList.remove('is-visible');
+        document.body.classList.remove('sticky-bar-active');
+      }
+    }
+
+    window.addEventListener('scroll', checkStickyVisibility, { passive: true });
+    window.addEventListener('resize', checkStickyVisibility, { passive: true });
+    checkStickyVisibility();
+  }
+
+  // --------------------------------------------------------------------------
+  // МИКРОРАЗМЕТКА PRODUCT JSON-LD И ДИНАМИЧЕСКИЙ OPENGRAPH (SPRINT 5)
+  // --------------------------------------------------------------------------
+  function updateProductJsonLd(p) {
+    if (!p) return;
+    let script = document.getElementById('productJsonLd');
+    if (!script) {
+      script = document.createElement('script');
+      script.id = 'productJsonLd';
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    const currentPrice = calculateCurrentPrice() || p.price || 0;
+    const modelName = p.name || p.model || 'Дверное полотно';
+    const brandName = p.brand || 'Двери №1';
+    const imgUrl = (p.images && p.images.length > 0)
+      ? `https://dver1.ru/${p.images[0]}`
+      : 'https://dver1.ru/assets/hero-arch.webp';
+
+    const schema = {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": `${brandName} ${modelName}`,
+      "image": [imgUrl],
+      "description": p.description || `${brandName} ${modelName} — премиальные межкомнатные и входные двери в Казани и Набережных Челнах.`,
+      "brand": {
+        "@type": "Brand",
+        "name": brandName
+      },
+      "sku": p.id,
+      "offers": {
+        "@type": "Offer",
+        "url": `https://dver1.ru/product.html?id=${encodeURIComponent(p.id)}`,
+        "priceCurrency": "RUB",
+        "price": currentPrice,
+        "priceValidUntil": "2027-12-31",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": p.inStock ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
+        "seller": {
+          "@type": "HomeGoodsStore",
+          "name": "Двери №1",
+          "telephone": "+7 (843) 205-00-01",
+          "url": "https://dver1.ru/"
+        }
+      }
+    };
+    script.textContent = JSON.stringify(schema, null, 2);
+
+    // Обновляем OpenGraph теги в <head>
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.content = `${brandName} ${modelName} | Двери №1`;
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.content = `Купить ${brandName} ${modelName} от ${Number(currentPrice).toLocaleString('ru-RU')} ₽. Шоурумы в Казани и Набережных Челнах.`;
+    const ogImg = document.querySelector('meta[property="og:image"]');
+    if (ogImg) ogImg.content = imgUrl;
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.content = `https://dver1.ru/product.html?id=${encodeURIComponent(p.id)}`;
   }
 
   // --------------------------------------------------------------------------
@@ -1516,6 +1626,15 @@
           productName: pdpState.product ? pdpState.product.model : '',
           timestamp: new Date().toISOString()
         };
+
+        if (typeof window.trackGoal === 'function') {
+          window.trackGoal('lead_measure', {
+            source: 'Карточка товара (product.html)',
+            productId: lead.productId,
+            productName: lead.productName,
+            city: lead.city || 'Казань'
+          });
+        }
 
         try {
           const leads = JSON.parse(localStorage.getItem('DVER1_LEADS') || '[]');

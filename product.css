@@ -1447,19 +1447,29 @@
     left: 0;
     right: 0;
     height: 66px;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-top: 1px solid var(--border-stone);
     padding: 8px 16px;
     z-index: 1000;
-    box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  }
+
+  .pdp-mobile-sticky-bar.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .sticky-bar-info {
     display: flex;
     flex-direction: column;
-    max-width: 55%;
+    max-width: 50%;
   }
 
   .sticky-model-name {
@@ -1487,20 +1497,44 @@
     background: var(--accent-terracotta);
     border: 1px solid var(--accent-terracotta);
     color: #fff;
-    padding: 9px 18px;
+    padding: 10px 18px;
     border-radius: var(--radius-sm);
     font-size: 0.8125rem;
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
   }
 
-  .btn-sticky-consult {
-    background: var(--bg-stone-subtle);
-    border: 1px solid var(--border-stone);
-    padding: 9px 12px;
+  .btn-sticky-cart:hover {
+    background: #9D492B;
+    transform: translateY(-1px);
+  }
+
+  .btn-sticky-whatsapp {
+    background: #25D366;
+    border: 1px solid #20BA5A;
+    color: #fff;
+    width: 38px;
+    height: 38px;
     border-radius: var(--radius-sm);
-    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.15s ease;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+  }
+
+  .btn-sticky-whatsapp:hover {
+    background: #20BA5A;
+    transform: translateY(-1px);
+  }
+
+  /* Сдвигаем плавающий виджет связи выше, когда видна липкая панель */
+  body.sticky-bar-active .floating-contact-widget {
+    bottom: 80px !important;
+    transition: bottom 0.3s ease;
   }
 }
 

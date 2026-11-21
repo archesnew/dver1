@@ -716,6 +716,12 @@
 
       // УСПЕХ!
       const orderId = data.orderId || (data.order && data.order.id) || 'D1-2026';
+
+      if (typeof window.trackGoal === 'function') {
+        const currentCart = window.CartStore.getCart();
+        const currentTotals = window.CartStore.calculateTotals(currentCart);
+        window.trackGoal('lead_cart', { orderId, total: currentTotals.total, itemsCount: currentCart.length });
+      }
       
       // Очищаем корзину клиента
       window.CartStore.clearCart();
@@ -913,6 +919,9 @@
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(() => {
           showToast('✓ Ссылка на подборку скопирована');
+          if (typeof window.trackGoal === 'function') {
+            window.trackGoal('share_cart', { itemsCount: cart.length });
+          }
         }).catch(() => {
           prompt('Скопируйте ссылку на спецификацию:', url);
         });
@@ -986,6 +995,9 @@
     if (!printContainer) return;
 
     const totals = window.CartStore.calculateTotals(cart);
+    if (typeof window.trackGoal === 'function') {
+      window.trackGoal('pdf_export', { itemsCount: cart.length, total: totals.total });
+    }
     const dateStr = new Date().toLocaleDateString('ru-RU', {
       day: 'numeric',
       month: 'long',

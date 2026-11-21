@@ -2581,6 +2581,26 @@ a {
 
   .btn-apply-filters {
     display: block;
+    flex: 1;
+    padding: 11px 16px;
+    background: var(--accent-terracotta);
+    border: 1px solid var(--accent-terracotta);
+    border-radius: var(--radius-sm);
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(184, 92, 58, 0.28);
+    transition: all 0.2s ease;
+  }
+  .btn-apply-filters:hover {
+    background: #9D492B;
+    transform: translateY(-1px);
+  }
+  .btn-reset-filters-clean {
+    padding: 11px 14px;
+    font-size: 0.84rem;
   }
 }
 

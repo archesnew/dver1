@@ -200,6 +200,14 @@
       }
 
       // Отправка событий в аналитику (Яндекс.Метрика / Google Analytics)
+      if (typeof window.trackGoal === 'function') {
+        window.trackGoal('lead_measure', {
+          ticketNumber,
+          source: leadRecord.source,
+          city: leadRecord.city
+        });
+      }
+
       logAnalyticsEvent('lead_form_submitted', {
         ticketNumber,
         source: leadRecord.source,

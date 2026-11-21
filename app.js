@@ -642,6 +642,7 @@
     if (state.activePrice !== 'all') count++;
     if (state.activeStyle !== 'all') count++;
     if (state.activeMaterial !== 'all') count++;
+    if (state.onlyInStock) count++;
     if (state.searchQuery.trim()) count++;
 
     const badge = document.getElementById('activeFilterBadge');
@@ -652,6 +653,18 @@
       } else {
         badge.style.display = 'none';
       }
+    }
+
+    const btnApply = document.getElementById('btnApplyFilters');
+    if (btnApply) {
+      const n = state.filteredProducts.length;
+      let word = 'моделей';
+      const abs = Math.abs(n) % 100;
+      const last = abs % 10;
+      if (abs > 10 && abs < 20) word = 'моделей';
+      else if (last > 1 && last < 5) word = 'модели';
+      else if (last === 1) word = 'модель';
+      btnApply.textContent = `Показать ${n} ${word}`;
     }
   }
 
@@ -1706,6 +1719,14 @@
       console.warn('LocalStorage error:', err);
     }
 
+    if (typeof window.trackGoal === 'function') {
+      window.trackGoal('lead_measure', {
+        ticketNumber,
+        source: 'Модалка замера (index.html)',
+        city: city || 'Казань'
+      });
+    }
+
     closeLeadModal();
     showToast(`Заявка №${ticketNumber} принята! Менеджер свяжется с вами в течение 15 минут.`);
   }
@@ -1749,7 +1770,15 @@
     }
     if (btnClose) btnClose.addEventListener('click', closeFiltersDrawer);
     if (filtersBackdrop) filtersBackdrop.addEventListener('click', closeFiltersDrawer);
-    if (btnApply) btnApply.addEventListener('click', closeFiltersDrawer);
+    if (btnApply) {
+      btnApply.addEventListener('click', () => {
+        closeFiltersDrawer();
+        const catalogEl = document.getElementById('catalogContent');
+        if (catalogEl) {
+          catalogEl.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
 
     // Кнопка сброса всех фильтров
     const btnResetFilters = document.getElementById('btnResetFilters');
@@ -1800,7 +1829,15 @@
       if (e.key === 'Escape') {
         closeFiltersDrawer();
         closeProductModal();
-        closeLeadModal();
+        if (typeof window.trackGoal === 'function') {
+      window.trackGoal('lead_measure', {
+        ticketNumber,
+        source: 'Модалка замера (index.html)',
+        city: city || 'Казань'
+      });
+    }
+
+    closeLeadModal();
         closeCompareModal();
       }
     });

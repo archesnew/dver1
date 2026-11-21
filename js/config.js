@@ -12,6 +12,7 @@
     WHATSAPP_NUMBER: "78432050001",
     TELEGRAM_USERNAME: "dver1_manager",
     LEAD_ENDPOINT: "", // URL webhook/бота; если пустой — срабатывает graceful fallback с WhatsApp/Telegram
+    YM_COUNTER_ID: null, // Плейсхолдер для номера счётчика Яндекс.Метрики (Спринт 5)
 
     // Базовые доплаты для комплекта «под ключ» (Спринт 3)
     KIT_SURCHARGES: {
@@ -85,4 +86,5 @@
   };
 
   window.DVER_CONFIG = DVER_CONFIG;
+  window.DverConfig = DVER_CONFIG;
 })();
