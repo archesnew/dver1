@@ -9,6 +9,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { URL } = require('url');
 const pricingEngine = require('./pricing-engine.js');
+const adminBackend = require('./admin-backend.js');
 
 const PORT = process.env.PORT || 3000;
 const ROOT_DIR = __dirname;
@@ -387,7 +388,7 @@ const server = http.createServer(async (req, res) => {
   if (req.method === 'OPTIONS') {
     res.writeHead(204, {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization'
     });
     return res.end();
@@ -773,6 +774,302 @@ const server = http.createServer(async (req, res) => {
   }
 
   // ------------------------------------------------------------------------
+  // ADMIN CONTROL CENTER API (V3.3)
+  // ------------------------------------------------------------------------
+
+  // Helper for admin auth check
+  function getAdminSession(req, requiredRole = null) {
+    const authHeader = req.headers['authorization'] || '';
+    const token = authHeader.replace(/^Bearer\s+/i, '').trim();
+    return adminBackend.verifySession(token, requiredRole);
+  }
+
+  // A1. POST /api/admin/auth/login
+  if (pathname === '/api/admin/auth/login' && req.method === 'POST') {
+    try {
+      const body = await parseBody(req);
+      const ip = req.socket.remoteAddress || '127.0.0.1';
+      const result = adminBackend.loginAdmin(body.login, body.password, ip);
+      return sendJson(res, 200, result);
+    } catch (err) {
+      return sendJson(res, 401, { error: err.message });
+    }
+  }
+
+  // A2. GET /api/admin/auth/me
+  if (pathname === '/api/admin/auth/me' && req.method === 'GET') {
+    const session = getAdminSession(req);
+    if (!session) return sendJson(res, 401, { error: 'Не авторизован.' });
+    return sendJson(res, 200, { user: session.user });
+  }
+
+  // A3. POST /api/admin/auth/logout
+  if (pathname === '/api/admin/auth/logout' && req.method === 'POST') {
+    const authHeader = req.headers['authorization'] || '';
+    const token = authHeader.replace(/^Bearer\s+/i, '').trim();
+    adminBackend.logoutAdmin(token);
+    return sendJson(res, 200, { success: true });
+  }
+
+  // A4. GET /api/admin/dashboard
+  if (pathname === '/api/admin/dashboard' && req.method === 'GET') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+    const stats = adminBackend.getDashboardStats();
+    return sendJson(res, 200, stats);
+  }
+
+  // A5. GET /api/admin/orders
+  if (pathname === '/api/admin/orders' && req.method === 'GET') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
+    const query = parsedUrl.searchParams;
+    const result = adminBackend.getOrdersList({
+      status: query.get('status'),
+      city: query.get('city'),
+      dateFrom: query.get('dateFrom'),
+      dateTo: query.get('dateTo'),
+      manager: query.get('manager'),
+      search: query.get('search'),
+      sort: query.get('sort') || 'date_desc',
+      page: parseInt(query.get('page') || '1', 10),
+      limit: parseInt(query.get('limit') || '50', 10)
+    });
+    return sendJson(res, 200, result);
+  }
+
+  // A6. GET /api/admin/orders/:id
+  if (pathname.startsWith('/api/admin/orders/') && !pathname.includes('/status') && !pathname.includes('/details') && req.method === 'GET') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
+    const orderId = pathname.replace('/api/admin/orders/', '').trim();
+    const order = adminBackend.getOrderById(orderId);
+    if (!order) return sendJson(res, 404, { error: 'Заказ не найден.' });
+    return sendJson(res, 200, order);
+  }
+
+  // A7. PUT /api/admin/orders/:id/status
+  if (pathname.startsWith('/api/admin/orders/') && pathname.endsWith('/status') && req.method === 'PUT') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
+    const orderId = pathname.replace('/api/admin/orders/', '').replace('/status', '').trim();
+    try {
+      const body = await parseBody(req);
+      const updated = adminBackend.updateOrderStatus(orderId, body.status, session.user, body.note || '');
+      return sendJson(res, 200, updated);
+    } catch (err) {
+      return sendJson(res, 400, { error: err.message });
+    }
+  }
+
+  // A8. PUT /api/admin/orders/:id/details
+  if (pathname.startsWith('/api/admin/orders/') && pathname.endsWith('/details') && req.method === 'PUT') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
+    const orderId = pathname.replace('/api/admin/orders/', '').replace('/details', '').trim();
+    try {
+      const body = await parseBody(req);
+      const updated = adminBackend.updateOrderDetails(orderId, body, session.user);
+      return sendJson(res, 200, updated);
+    } catch (err) {
+      return sendJson(res, 400, { error: err.message });
+    }
+  }
+
+  // A9. GET /api/admin/catalog
+  if (pathname === '/api/admin/catalog' && req.method === 'GET') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
+    const query = parsedUrl.searchParams;
+    const result = adminBackend.getCatalogProducts({
+      category: query.get('category'),
+      brand: query.get('brand'),
+      collection: query.get('collection'),
+      hasPrice: query.get('hasPrice'),
+      search: query.get('search'),
+      page: parseInt(query.get('page') || '1', 10),
+      limit: parseInt(query.get('limit') || '50', 10)
+    });
+    return sendJson(res, 200, result);
+  }
+
+  // A10. GET /api/admin/catalog/:id
+  if (pathname.startsWith('/api/admin/catalog/') && req.method === 'GET') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
+    const id = pathname.replace('/api/admin/catalog/', '').trim();
+    const prod = adminBackend.getProductById(id);
+    if (!prod) return sendJson(res, 404, { error: 'Товар не найден.' });
+    return sendJson(res, 200, prod);
+  }
+
+  // A11. PUT /api/admin/catalog/:id
+  if (pathname.startsWith('/api/admin/catalog/') && req.method === 'PUT') {
+    const session = getAdminSession(req, 'admin');
+    if (!session) return sendJson(res, 403, { error: 'Недостаточно прав. Требуются права Администратора.' });
+
+    const id = pathname.replace('/api/admin/catalog/', '').trim();
+    try {
+      const body = await parseBody(req);
+      const updated = adminBackend.updateProduct(id, body, session.user);
+      return sendJson(res, 200, updated);
+    } catch (err) {
+      return sendJson(res, 400, { error: err.message });
+    }
+  }
+
+  // A12. GET /api/admin/inventory
+  if (pathname === '/api/admin/inventory' && req.method === 'GET') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
+    const query = parsedUrl.searchParams;
+    const result = adminBackend.getInventoryList({
+      warehouse: query.get('warehouse') || 'all',
+      search: query.get('search'),
+      category: query.get('category'),
+      lowStock: query.get('lowStock') === 'true',
+      page: parseInt(query.get('page') || '1', 10),
+      limit: parseInt(query.get('limit') || '50', 10)
+    });
+    return sendJson(res, 200, result);
+  }
+
+  // A13. POST /api/admin/inventory/adjust
+  if (pathname === '/api/admin/inventory/adjust' && req.method === 'POST') {
+    const session = getAdminSession(req, 'admin');
+    if (!session) return sendJson(res, 403, { error: 'Недостаточно прав. Требуются права Администратора.' });
+
+    try {
+      const body = await parseBody(req);
+      const updated = adminBackend.adjustStock(body.productId, body.warehouseId, { actual: body.actual, reason: body.reason }, session.user);
+      return sendJson(res, 200, updated);
+    } catch (err) {
+      return sendJson(res, 400, { error: err.message });
+    }
+  }
+
+  // A14. POST /api/admin/inventory/transfer
+  if (pathname === '/api/admin/inventory/transfer' && req.method === 'POST') {
+    const session = getAdminSession(req, 'admin');
+    if (!session) return sendJson(res, 403, { error: 'Недостаточно прав. Требуются права Администратора.' });
+
+    try {
+      const body = await parseBody(req);
+      const updated = adminBackend.transferStock(body.productId, body.fromWarehouse, body.toWarehouse, body.count, body.reason, session.user);
+      return sendJson(res, 200, updated);
+    } catch (err) {
+      return sendJson(res, 400, { error: err.message });
+    }
+  }
+
+  // A15. GET /api/admin/customers
+  if (pathname === '/api/admin/customers' && req.method === 'GET') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
+    const query = parsedUrl.searchParams;
+    const result = adminBackend.getCustomersList({
+      search: query.get('search'),
+      city: query.get('city'),
+      sort: query.get('sort') || 'spent_desc',
+      page: parseInt(query.get('page') || '1', 10),
+      limit: parseInt(query.get('limit') || '50', 10)
+    });
+    return sendJson(res, 200, result);
+  }
+
+  // A16. POST /api/admin/customers/note
+  if (pathname === '/api/admin/customers/note' && req.method === 'POST') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
+    try {
+      const body = await parseBody(req);
+      const updated = adminBackend.addCustomerNote(body.phone, body.note, session.user);
+      return sendJson(res, 200, updated);
+    } catch (err) {
+      return sendJson(res, 400, { error: err.message });
+    }
+  }
+
+  // A17. GET /api/admin/services
+  if (pathname === '/api/admin/services' && req.method === 'GET') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+    const services = adminBackend.readServices();
+    return sendJson(res, 200, { services });
+  }
+
+  // A18. GET /api/admin/staff (Owner only)
+  if (pathname === '/api/admin/staff' && req.method === 'GET') {
+    const session = getAdminSession(req, 'owner');
+    if (!session) return sendJson(res, 403, { error: 'Доступ только для Владельца.' });
+    const users = adminBackend.readUsers().map(u => ({
+      id: u.id,
+      name: u.name,
+      login: u.login,
+      role: u.role,
+      active: u.active,
+      createdAt: u.createdAt,
+      lastLoginAt: u.lastLoginAt
+    }));
+    return sendJson(res, 200, { users });
+  }
+
+  // A19. GET /api/admin/audit
+  if (pathname === '/api/admin/audit' && req.method === 'GET') {
+    const session = getAdminSession(req, 'admin');
+    if (!session) return sendJson(res, 403, { error: 'Доступ ограничен.' });
+
+    const query = parsedUrl.searchParams;
+    let logs = adminBackend.readAuditLog();
+    const type = query.get('type');
+    const search = query.get('search');
+
+    if (type && type !== 'all') {
+      logs = logs.filter(l => l.action === type);
+    }
+    if (search) {
+      const q = search.toLowerCase();
+      logs = logs.filter(l => (l.details && l.details.toLowerCase().includes(q)) || (l.user && l.user.toLowerCase().includes(q)) || (l.entityId && l.entityId.toLowerCase().includes(q)));
+    }
+
+    return sendJson(res, 200, { total: logs.length, logs: logs.slice(0, 100) });
+  }
+
+  // A20. GET /api/admin/backups (Owner only)
+  if (pathname === '/api/admin/backups' && req.method === 'GET') {
+    const session = getAdminSession(req, 'owner');
+    if (!session) return sendJson(res, 403, { error: 'Доступ только для Владельца.' });
+    const backups = adminBackend.listBackups();
+    return sendJson(res, 200, { backups });
+  }
+
+  // A21. POST /api/admin/backups/create (Owner only)
+  if (pathname === '/api/admin/backups/create' && req.method === 'POST') {
+    const session = getAdminSession(req, 'owner');
+    if (!session) return sendJson(res, 403, { error: 'Доступ только для Владельца.' });
+    const result = adminBackend.createBackup(session.user);
+    return sendJson(res, 200, result);
+  }
+
+  // A22. POST /api/admin/backups/restore (Owner only)
+  if (pathname === '/api/admin/backups/restore' && req.method === 'POST') {
+    const session = getAdminSession(req, 'owner');
+    if (!session) return sendJson(res, 403, { error: 'Доступ только для Владельца.' });
+    const body = await parseBody(req);
+    const result = adminBackend.restoreBackup(body.backupId, session.user);
+    return sendJson(res, 200, result);
+  }
+
+  // ------------------------------------------------------------------------
   // STATIC FILE SERVING
   // ------------------------------------------------------------------------
   if (req.method !== 'GET' && req.method !== 'HEAD') {
@@ -784,11 +1081,17 @@ const server = http.createServer(async (req, res) => {
   if (relPath === 'cart') relPath = 'cart.html';
   if (relPath === 'product') relPath = 'product.html';
   if (relPath === 'showrooms') relPath = 'showrooms.html';
+  if (relPath === 'admin' || relPath === 'admin/') relPath = 'admin/index.html';
 
-  const safePath = path.normalize(path.join(ROOT_DIR, relPath));
+  let safePath = path.normalize(path.join(ROOT_DIR, relPath));
   if (!safePath.startsWith(ROOT_DIR)) {
     res.writeHead(403, { 'Content-Type': 'text/plain' });
     return res.end('Access Denied');
+  }
+
+  if (fs.existsSync(safePath) && fs.statSync(safePath).isDirectory()) {
+    const indexPath = path.join(safePath, 'index.html');
+    if (fs.existsSync(indexPath)) safePath = indexPath;
   }
 
   fs.stat(safePath, (err, stats) => {

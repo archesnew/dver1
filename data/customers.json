@@ -1,0 +1,97 @@
+[
+  {
+    "phone": "+79033889900",
+    "name": "Руслан Хабибуллин",
+    "city": "Казань",
+    "firstContactAt": "2026-11-20T22:56:18.765Z",
+    "lastContactAt": "2026-11-20T22:56:18.765Z",
+    "ordersCount": 1,
+    "totalSpent": 28200,
+    "orders": [
+      {
+        "id": "D1-2026-9767",
+        "date": "2026-11-20T22:56:18.765Z",
+        "status": "В обработке",
+        "sum": 28200,
+        "doorsCount": 2
+      }
+    ],
+    "notes": []
+  },
+  {
+    "phone": "+79274112233",
+    "name": "Елена Васильева",
+    "city": "Набережные Челны",
+    "firstContactAt": "2026-11-20T22:56:02.695Z",
+    "lastContactAt": "2026-11-20T22:56:02.695Z",
+    "ordersCount": 1,
+    "totalSpent": 48500,
+    "orders": [
+      {
+        "id": "D1-2026-6589",
+        "date": "2026-11-20T22:56:02.695Z",
+        "status": "Новая",
+        "sum": 48500,
+        "doorsCount": 1
+      }
+    ],
+    "notes": []
+  },
+  {
+    "phone": "+79172050101",
+    "name": "Александр Смирнов",
+    "city": "Казань",
+    "firstContactAt": "2026-11-20T22:55:53.167Z",
+    "lastContactAt": "2026-11-20T22:55:53.167Z",
+    "ordersCount": 1,
+    "totalSpent": 10150,
+    "orders": [
+      {
+        "id": "D1-2026-9549",
+        "date": "2026-11-20T22:55:53.167Z",
+        "status": "Новая",
+        "sum": 10150,
+        "doorsCount": 1
+      }
+    ],
+    "notes": []
+  },
+  {
+    "phone": "+79172223344",
+    "name": "Алексей Миронов",
+    "city": "Казань",
+    "firstContactAt": "2026-11-20T22:39:40.970Z",
+    "lastContactAt": "2026-11-20T22:39:40.970Z",
+    "ordersCount": 1,
+    "totalSpent": 97000,
+    "orders": [
+      {
+        "id": "D1-2026-5061",
+        "date": "2026-11-20T22:39:40.970Z",
+        "status": "Новая",
+        "sum": 97000,
+        "doorsCount": 5
+      }
+    ],
+    "notes": []
+  },
+  {
+    "phone": "+79997776655",
+    "name": "Константин Архитекторов",
+    "city": "Казань",
+    "firstContactAt": "2026-11-20T22:39:31.475Z",
+    "lastContactAt": "2026-11-20T22:39:31.475Z",
+    "ordersCount": 1,
+    "totalSpent": 97000,
+    "orders": [
+      {
+        "id": "D1-2026-7362",
+        "date": "2026-11-20T22:39:31.475Z",
+        "status": "Новая",
+        "sum": 97000,
+        "doorsCount": 3
+      }
+    ],
+    "notes": []
+  }
+]

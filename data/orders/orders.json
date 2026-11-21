@@ -2,7 +2,7 @@
   {
     "id": "D1-2026-9767",
     "idempotencyKey": "idemp-1795215378759-6jvgrnh4b",
-    "status": "Новая",
+    "status": "В обработке",
     "createdAt": "2026-11-20T22:56:18.765Z",
     "client": {
       "name": "Руслан Хабибуллин",
@@ -60,7 +60,34 @@
     ],
     "totalKnownPrice": 28200,
     "hasUncertainPrices": false,
-    "priceNotice": "Сумма фиксирована по позициям каталога."
+    "priceNotice": "Сумма фиксирована по позициям каталога.",
+    "updatedAt": "2026-11-21T00:13:59.542Z",
+    "history": [
+      {
+        "timestamp": "2026-11-21T00:12:56.889Z",
+        "user": "Руководитель (Владелец)",
+        "action": "status_change",
+        "oldStatus": "Новая",
+        "newStatus": "В обработке",
+        "note": "Тестовое взятие в работу"
+      },
+      {
+        "timestamp": "2026-11-21T00:13:43.890Z",
+        "user": "Руководитель (Владелец)",
+        "action": "status_change",
+        "oldStatus": "В обработке",
+        "newStatus": "В обработке",
+        "note": "Тестовое взятие в работу"
+      },
+      {
+        "timestamp": "2026-11-21T00:13:59.542Z",
+        "user": "Руководитель (Владелец)",
+        "action": "status_change",
+        "oldStatus": "В обработке",
+        "newStatus": "В обработке",
+        "note": "Тестовое взятие в работу"
+      }
+    ]
   },
   {
     "id": "D1-2026-6589",

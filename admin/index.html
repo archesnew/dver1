@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Двери №1 — Панель управления магазином (Admin Control Center)</title>
+  <link rel="icon" type="image/png" href="../logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- ====================================================================== -->
+  <!-- ЭКРАН АВТОРИЗАЦИИ (LOGIN OVERLAY) -->
+  <!-- ====================================================================== -->
+  <div id="loginScreen" class="login-overlay" style="display: none;">
+    <div class="login-card">
+      <div class="login-brand">
+        <img src="../logo.png" alt="Двери №1" class="login-logo-img">
+        <div class="login-title">Панель управления</div>
+        <div class="login-sub">Интернет-магазин «Двери №1» • Внутренний доступ</div>
+      </div>
+
+      <div id="loginAlert" class="alert-box alert-error" style="display: none;"></div>
+
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Рабочий логин / Email</label>
+          <input type="email" id="loginEmail" class="form-input" placeholder="например, owner@dver1.ru" required autocomplete="username">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Пароль сотрудника</label>
+          <input type="password" id="loginPassword" class="form-input" placeholder="••••••••••••" required autocomplete="current-password">
+        </div>
+
+        <button type="submit" id="btnLoginSubmit" class="btn-primary-action btn-full">
+          <span>Войти в систему</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+
+      <div class="login-quick-hint">
+        <div class="hint-title">Служебные аккаунты системы (Регламент V3.3):</div>
+        <div class="hint-roles">
+          <div class="role-pill" onclick="quickFillLogin('owner@dver1.ru')">
+            <strong>Владелец</strong>
+            <span>owner@dver1.ru</span>
+          </div>
+          <div class="role-pill" onclick="quickFillLogin('admin@dver1.ru')">
+            <strong>Администратор</strong>
+            <span>admin@dver1.ru</span>
+          </div>
+          <div class="role-pill" onclick="quickFillLogin('manager@dver1.ru')">
+            <strong>Менеджер</strong>
+            <span>manager@dver1.ru</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================== -->
+  <!-- ОСНОВНОЙ КАРКАС АДМИНИСТРАТИВНОЙ ПАНЕЛИ -->
+  <!-- ====================================================================== -->
+  <div id="appContainer" class="admin-app-layout" style="display: none;">
+
+    <!-- БОКОВОЕ МЕНЮ (SIDEBAR) -->
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <img src="../logo.png" alt="Двери №1" class="sidebar-logo">
+          <div class="sidebar-brand-text">
+            <span class="brand-name">ДВЕРИ №1</span>
+            <span class="brand-badge">CONTROL CENTER</span>
+          </div>
+        </div>
+        <button type="button" class="btn-close-mobile-nav" id="btnCloseMobileNav" aria-label="Закрыть меню">✕</button>
+      </div>
+
+      <!-- 11 НАВИГАЦИОННЫХ РАЗДЕЛОВ -->
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Основное управление</div>
+
+        <a href="#dashboard" class="nav-item active" data-nav="dashboard">
+          <span class="nav-icon">📊</span>
+          <span class="nav-text">Обзор</span>
+        </a>
+
+        <a href="#orders" class="nav-item" data-nav="orders">
+          <span class="nav-icon">📦</span>
+          <span class="nav-text">Заказы</span>
+          <span class="nav-badge" id="badgeNewOrders">0</span>
+        </a>
+
+        <a href="#catalog" class="nav-item" data-nav="catalog">
+          <span class="nav-icon">🚪</span>
+          <span class="nav-text">Каталог</span>
+          <span class="nav-sub-counter" id="badgeCatalogTotal">697</span>
+        </a>
+
+        <a href="#pricing" class="nav-item" data-nav="pricing">
+          <span class="nav-icon">🏷️</span>
+          <span class="nav-text">Ценообразование</span>
+        </a>
+
+        <div class="nav-section-title">Склад и партнеры</div>
+
+        <a href="#inventory" class="nav-item" data-nav="inventory">
+          <span class="nav-icon">🏢</span>
+          <span class="nav-text">Склад</span>
+        </a>
+
+        <a href="#suppliers" class="nav-item" data-nav="suppliers">
+          <span class="nav-icon">🤝</span>
+          <span class="nav-text">Поставщики</span>
+        </a>
+
+        <a href="#customers" class="nav-item" data-nav="customers">
+          <span class="nav-icon">👥</span>
+          <span class="nav-text">Клиенты</span>
+        </a>
+
+        <a href="#services" class="nav-item" data-nav="services">
+          <span class="nav-icon">🔧</span>
+          <span class="nav-text">Услуги и монтаж</span>
+        </a>
+
+        <div class="nav-section-title">Безопасность и система</div>
+
+        <a href="#staff" class="nav-item role-restricted-owner" data-nav="staff">
+          <span class="nav-icon">🛡️</span>
+          <span class="nav-text">Сотрудники</span>
+          <span class="nav-role-tag">Владелец</span>
+        </a>
+
+        <a href="#audit" class="nav-item" data-nav="audit">
+          <span class="nav-icon">📜</span>
+          <span class="nav-text">Журнал действий</span>
+        </a>
+
+        <a href="#settings" class="nav-item role-restricted-owner" data-nav="settings">
+          <span class="nav-icon">⚙️</span>
+          <span class="nav-text">Настройки и бэкапы</span>
+        </a>
+      </nav>
+
+      <!-- ТЕКУЩИЙ СОТРУДНИК -->
+      <div class="sidebar-user-footer">
+        <div class="user-avatar-circle" id="userAvatarText">О</div>
+        <div class="user-meta">
+          <div class="user-name-title" id="userNameDisplay">Загрузка...</div>
+          <div class="user-role-badge" id="userRoleBadge">Сотрудник</div>
+        </div>
+        <button type="button" class="btn-logout-icon" id="btnLogout" title="Выйти из системы">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ОСНОВНАЯ ОБЛАСТЬ (MAIN CONTENT AREA) -->
+    <div class="admin-main-wrap">
+
+      <!-- ВЕРХНЯЯ ШАПКА (HEADER) -->
+      <header class="admin-top-header">
+        <div class="header-left">
+          <button type="button" class="btn-hamburger" id="btnOpenMobileNav" aria-label="Открыть меню">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="header-breadcrumb">
+            <span class="crumb-root">Двери №1</span>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-current" id="headerCurrentSectionTitle">Обзор</span>
+          </div>
+        </div>
+
+        <div class="header-center">
+          <div class="global-search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="globalSearchInput" placeholder="Быстрый поиск заказа, товара, телефона...">
+          </div>
+        </div>
+
+        <div class="header-right">
+          <a href="../index.html" class="btn-open-storefront" target="_blank" title="Открыть публичную витрину магазина">
+            <span>Витрина</span>
+            <span class="icon-ext">↗</span>
+          </a>
+          <button type="button" class="btn-header-refresh" id="btnRefreshActiveView" title="Обновить данные">
+            <span class="refresh-icon">↻</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- КОНТЕЙНЕРЫ СЕКЦИЙ -->
+      <main class="admin-content-body">
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 1: ОБЗОР (DASHBOARD) -->
+        <!-- ================================================================ -->
+        <section id="viewDashboard" class="admin-view active">
+          <!-- Верхние KPI карточки -->
+          <div class="kpi-grid">
+            <div class="kpi-card kpi-orange" onclick="navigateSection('orders', { status: 'Новая' })">
+              <div class="kpi-top">
+                <span class="kpi-label">Новые заявки</span>
+                <span class="kpi-icon-pill">🔥</span>
+              </div>
+              <div class="kpi-value" id="kpiNewOrders">0</div>
+              <div class="kpi-desc">Требуют обработки менеджером</div>
+            </div>
+
+            <div class="kpi-card" onclick="navigateSection('orders', { status: 'В обработке' })">
+              <div class="kpi-top">
+                <span class="kpi-label">В работе</span>
+                <span class="kpi-icon-pill">⚡</span>
+              </div>
+              <div class="kpi-value" id="kpiProcessingOrders">0</div>
+              <div class="kpi-desc">Уточняются детали и замер</div>
+            </div>
+
+            <div class="kpi-card" onclick="navigateSection('orders', { status: 'Ожидает расчёта' })">
+              <div class="kpi-top">
+                <span class="kpi-label">Ожидают расчёта</span>
+                <span class="kpi-icon-pill">📐</span>
+              </div>
+              <div class="kpi-value" id="kpiAwaitingCalcOrders">0</div>
+              <div class="kpi-desc">Нестандартные размеры/спецификации</div>
+            </div>
+
+            <div class="kpi-card kpi-green" onclick="navigateSection('orders', { status: 'Подтверждена' })">
+              <div class="kpi-top">
+                <span class="kpi-label">Подтверждены / Оплачены</span>
+                <span class="kpi-icon-pill">✓</span>
+              </div>
+              <div class="kpi-value" id="kpiConfirmedOrders">0</div>
+              <div class="kpi-desc">Готовы к отгрузке и монтажу</div>
+            </div>
+
+            <div class="kpi-card" onclick="navigateSection('catalog', { hasPrice: 'no' })">
+              <div class="kpi-top">
+                <span class="kpi-label">Без розничной цены</span>
+                <span class="kpi-icon-pill">⚠️</span>
+              </div>
+              <div class="kpi-value" id="kpiNoPriceProducts">0</div>
+              <div class="kpi-desc">Позиции черновиков OCR</div>
+            </div>
+
+            <div class="kpi-card kpi-terracotta" onclick="navigateSection('pricing')">
+              <div class="kpi-top">
+                <span class="kpi-label">Правило наценки</span>
+                <span class="kpi-icon-pill">₽</span>
+              </div>
+              <div class="kpi-value" style="font-size: 1.25rem; font-weight: 700;">+10 000 ₽</div>
+              <div class="kpi-desc">Единый регламент цен фабрик</div>
+            </div>
+          </div>
+
+          <!-- Двухколоночный блок: Последние заявки + Требуют внимания -->
+          <div class="dash-grid-split">
+            <!-- Левая колонка: Последние заявки -->
+            <div class="dash-panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Последние заявки покупателей</h2>
+                  <p class="panel-sub">Поступающие из корзины и карточек товаров витрины</p>
+                </div>
+                <button type="button" class="btn-subtle" onclick="navigateSection('orders')">Все заказы →</button>
+              </div>
+
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Номер</th>
+                      <th>Дата</th>
+                      <th>Клиент</th>
+                      <th>Город</th>
+                      <th class="num-cell">Дверей</th>
+                      <th class="num-cell">Сумма</th>
+                      <th>Статус</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="dashRecentOrdersTable">
+                    <tr><td colspan="8" class="empty-cell">Загрузка заявок...</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Правая колонка: Требуют внимания & Последние действия -->
+            <div class="dash-panel-stacked">
+              <!-- Требуют внимания -->
+              <div class="dash-panel">
+                <div class="panel-header">
+                  <h2 class="panel-title">Требуют внимания</h2>
+                </div>
+                <div id="dashAttentionList" class="attention-list">
+                  <div class="attention-item att-neutral">Загрузка контрольных точек...</div>
+                </div>
+              </div>
+
+              <!-- Последние действия сотрудников -->
+              <div class="dash-panel">
+                <div class="panel-header">
+                  <div>
+                    <h2 class="panel-title">История действий</h2>
+                    <p class="panel-sub">Аудит операций сотрудников в системе</p>
+                  </div>
+                  <button type="button" class="btn-subtle" onclick="navigateSection('audit')">Полный лог →</button>
+                </div>
+                <div id="dashRecentAuditList" class="audit-mini-list">
+                  <div class="empty-cell">Загрузка журнала аудита...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 2: ЗАКАЗЫ (ORDERS) -->
+        <!-- ================================================================ -->
+        <section id="viewOrders" class="admin-view">
+          <div class="section-toolbar">
+            <div class="toolbar-left">
+              <div class="search-field">
+                <input type="text" id="orderSearchInput" placeholder="Поиск по № заявки, телефону, имени клиента...">
+              </div>
+
+              <select id="orderStatusFilter" class="select-filter">
+                <option value="all">Все статусы</option>
+                <option value="Новая">Новая</option>
+                <option value="В обработке">В обработке</option>
+                <option value="Ожидает расчёта">Ожидает расчёта</option>
+                <option value="Расчёт готов">Расчёт готов</option>
+                <option value="Подтверждена">Подтверждена</option>
+                <option value="Выполнена">Выполнена</option>
+                <option value="Отменена">Отменена</option>
+              </select>
+
+              <select id="orderCityFilter" class="select-filter">
+                <option value="all">Все города</option>
+                <option value="Казань">Казань</option>
+                <option value="Набережные Челны">Набережные Челны</option>
+              </select>
+
+              <select id="orderSortFilter" class="select-filter">
+                <option value="date_desc">Сначала новые</option>
+                <option value="date_asc">Сначала старые</option>
+                <option value="sum_desc">По сумме (убыв.)</option>
+                <option value="sum_asc">По сумме (возр.)</option>
+              </select>
+            </div>
+
+            <div class="toolbar-right">
+              <span class="counter-label" id="ordersCounterLabel">Всего: 0 заявок</span>
+            </div>
+          </div>
+
+          <div class="data-card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>№ Заказа</th>
+                    <th>Дата и время</th>
+                    <th>Клиент</th>
+                    <th>Телефон</th>
+                    <th>Город</th>
+                    <th class="num-cell">Позиций</th>
+                    <th class="num-cell">Сумма (каталог)</th>
+                    <th class="num-cell">Согласовано</th>
+                    <th>Ответственный</th>
+                    <th>Статус</th>
+                    <th>Действия</th>
+                  </tr>
+                </thead>
+                <tbody id="ordersTableBody">
+                  <tr><td colspan="11" class="empty-cell">Загрузка заказов...</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pagination-footer" id="ordersPagination"></div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 3: КАТАЛОГ (CATALOG) -->
+        <!-- ================================================================ -->
+        <section id="viewCatalog" class="admin-view">
+          <div class="section-toolbar">
+            <div class="toolbar-left">
+              <div class="search-field">
+                <input type="text" id="catalogSearchInput" placeholder="Поиск по модели, артикулу, бренду...">
+              </div>
+
+              <select id="catalogCategoryFilter" class="select-filter">
+                <option value="all">Все категории</option>
+                <option value="Входные двери">Входные двери</option>
+                <option value="Межкомнатные двери">Межкомнатные двери</option>
+                <option value="Скрытые двери">Скрытые двери</option>
+                <option value="Двери со стеклом">Двери со стеклом</option>
+              </select>
+
+              <select id="catalogBrandFilter" class="select-filter">
+                <option value="all">Все производители</option>
+                <option value="ViraDoors">ViraDoors</option>
+                <option value="Йошкар-Ола">GK Металл / Йошкар-Ола</option>
+                <option value="Chameleon Doors">Chameleon Doors</option>
+                <option value="Феррони">Феррони</option>
+                <option value="Luxor">Luxor</option>
+                <option value="ФСД">ФСД</option>
+                <option value="Фабрика Межкомнатных Дверей">Фабрика Межкомнатных Дверей</option>
+                <option value="Двери 2025">Двери 2025</option>
+                <option value="Голливуд">Голливуд</option>
+                <option value="Двереки">Двереки</option>
+              </select>
+
+              <select id="catalogPriceFilter" class="select-filter">
+                <option value="all">Все цены</option>
+                <option value="yes">С розничной ценой</option>
+                <option value="no">Без цены / под расчет</option>
+              </select>
+            </div>
+
+            <div class="toolbar-right">
+              <span class="counter-label" id="catalogCounterLabel">Показано: 0 товаров</span>
+            </div>
+          </div>
+
+          <div class="data-card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th style="width: 54px;">Фото</th>
+                    <th>ID / Артикул</th>
+                    <th>Модель и бренд</th>
+                    <th>Категория</th>
+                    <th>Коллекция</th>
+                    <th class="num-cell">Закупка</th>
+                    <th class="num-cell">Розница</th>
+                    <th class="num-cell">Наценка</th>
+                    <th>Статус</th>
+                    <th>Действия</th>
+                  </tr>
+                </thead>
+                <tbody id="catalogTableBody">
+                  <tr><td colspan="10" class="empty-cell">Загрузка каталога товаров...</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pagination-footer" id="catalogPagination"></div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 4: ЦЕНООБРАЗОВАНИЕ (PRICING & IMPORT) -->
+        <!-- ================================================================ -->
+        <section id="viewPricing" class="admin-view">
+          <!-- Регламент ценообразования -->
+          <div class="rule-banner-apple">
+            <div class="rule-banner-left">
+              <div class="rule-tag">РЕГЛАМЕНТ ЦЕНООБРАЗОВАНИЯ V3.3</div>
+              <div class="rule-equation">РОЗНИЧНАЯ ЦЕНА ДВЕРИ = ЗАКУПОЧНАЯ СТОИМОСТЬ + 10 000 ₽</div>
+              <div class="rule-details">
+                Единая фиксированная наценка ровно <strong>+10 000 ₽</strong> применяется к каждому дверному полотну всех фабрик РФ.<br>
+                Фурнитура, доборы, погонаж и монтаж исключены из единой наценки.
+              </div>
+            </div>
+            <div class="rule-banner-right">
+              <div class="safe-guard-shield">
+                <span class="shield-icon">🛡️</span>
+                <div>
+                  <div class="shield-title">Защита публикации</div>
+                  <div class="shield-sub">Ни одна цена не публикуется без подтверждения администратора</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Блок импорта прайс-листов -->
+          <div class="pricing-import-grid">
+            <div class="import-card">
+              <div class="import-title">📁 Загрузить файл прайс-листа фабрики</div>
+              <div class="import-sub">Поддерживаются оригинальные форматы поставщиков: XLSX, XLS, CSV, DOCX, PDF</div>
+
+              <div class="form-row-select">
+                <label for="importSupplierSelect">Поставщик:</label>
+                <select id="importSupplierSelect" class="select-filter" style="width: 100%;">
+                  <option value="">-- Автоопределение по структуре файла --</option>
+                  <option value="VIRA_DOORS">VIRA DOORS (ОПТ нал)</option>
+                  <option value="GK_ECONOM">GK Эконом (VIP нал)</option>
+                  <option value="GK_METALL">GK Металл (Складская / Заказ)</option>
+                  <option value="FERRONI_LUXOR">Феррони / Luxor (1 кат. Казань)</option>
+                  <option value="FSD">ФСД (ОПТ)</option>
+                  <option value="CHAMELEON">Chameleon Doors (Invisible / Rail)</option>
+                  <option value="MEZH_DOORS">Фабрика Межкомнатных Дверей / Двереки</option>
+                </select>
+              </div>
+
+              <div id="adminFileDropZone" class="file-drop-apple">
+                <div class="drop-icon">📄</div>
+                <div class="drop-text-bold">Перетащите прайс-лист сюда или выберите на диске</div>
+                <div class="drop-text-muted">Размер файла до 50 МБ</div>
+                <input type="file" id="adminPriceFileInput" style="display: none;" accept=".xlsx,.xls,.docx,.pdf,.csv">
+              </div>
+            </div>
+
+            <div class="import-card">
+              <div class="import-title">📋 Быстрая вставка текста или таблицы</div>
+              <div class="import-sub">Скопируйте строки прайса прямо из Excel или переписки и нажмите «Распознать»:</div>
+
+              <textarea id="adminPriceTextarea" class="text-paste-area" placeholder="Пример строк:
+GREY MIRROR – 23200 / под заказ 25000 / безнал 27000
+VIRA 1 металл / панель	13800	15200
+Эконом 60	9700 / 11450
+Invisible Direct	14500"></textarea>
+
+              <button type="button" id="btnAdminParseText" class="btn-primary-action">
+                ⚡ Распознать позиции и сопоставить с каталогом
+              </button>
+            </div>
+          </div>
+
+          <!-- Предварительный просмотр изменений цен -->
+          <div id="pricingPreviewContainer" style="display: none; margin-top: 24px;">
+            <div class="preview-stats-bar" id="previewStatsBar"></div>
+
+            <div class="data-card">
+              <div class="preview-toolbar">
+                <div class="preview-filter-btns">
+                  <button type="button" class="btn-tab-pill active" data-filter="all">Все (0)</button>
+                  <button type="button" class="btn-tab-pill" data-filter="exact">Точные (0)</button>
+                  <button type="button" class="btn-tab-pill" data-filter="changed">С изменением цены (0)</button>
+                  <button type="button" class="btn-tab-pill" data-filter="manual">Требуют проверки (0)</button>
+                  <button type="button" class="btn-tab-pill" data-filter="not_found">Не найдены (0)</button>
+                </div>
+
+                <div class="preview-actions">
+                  <button type="button" id="btnApplySelectedPrices" class="btn-primary-action" disabled>
+                    ✓ Применить выбранные изменения
+                  </button>
+                </div>
+              </div>
+
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 36px;"><input type="checkbox" id="checkSelectAllPreview"></th>
+                      <th>Поставщик</th>
+                      <th>Строка прайс-листа</th>
+                      <th>Товар в каталоге</th>
+                      <th class="num-cell">Старая закупка</th>
+                      <th class="num-cell">Новая закупка</th>
+                      <th class="num-cell">Наценка</th>
+                      <th class="num-cell">Старая розница</th>
+                      <th class="num-cell">Новая розница</th>
+                      <th class="num-cell">Разница</th>
+                      <th>Статус матчинга</th>
+                    </tr>
+                  </thead>
+                  <tbody id="previewPricingTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 5: ПОСТАВЩИКИ (SUPPLIERS) -->
+        <!-- ================================================================ -->
+        <section id="viewSuppliers" class="admin-view">
+          <div class="section-title-wrap">
+            <h2 class="page-title">Справочник фабрик и поставщиков</h2>
+            <p class="page-sub">Официальные фабрики-партнеры, правила закупки и история прайс-листов</p>
+          </div>
+
+          <div class="suppliers-cards-grid" id="suppliersCardsGrid">
+            <div class="empty-cell">Загрузка данных поставщиков...</div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 6: СКЛАД (INVENTORY) -->
+        <!-- ================================================================ -->
+        <section id="viewInventory" class="admin-view">
+          <div class="warehouse-pills-bar">
+            <div class="wh-pill active" data-wh="all">
+              <span class="wh-name">Все склады</span>
+              <span class="wh-addr">Казань + Набережные Челны</span>
+            </div>
+            <div class="wh-pill" data-wh="kazan_main">
+              <span class="wh-name">Казань</span>
+              <span class="wh-addr">Сибирский тракт, 59Б</span>
+            </div>
+            <div class="wh-pill" data-wh="chelny_main">
+              <span class="wh-name">Набережные Челны</span>
+              <span class="wh-addr">Казанский проспект, 232</span>
+            </div>
+          </div>
+
+          <div class="section-toolbar">
+            <div class="toolbar-left">
+              <div class="search-field">
+                <input type="text" id="inventorySearchInput" placeholder="Поиск по модели, артикулу, бренду...">
+              </div>
+
+              <select id="inventoryCategoryFilter" class="select-filter">
+                <option value="all">Все категории</option>
+                <option value="Входные двери">Входные двери</option>
+                <option value="Межкомнатные двери">Межкомнатные двери</option>
+                <option value="Скрытые двери">Скрытые двери</option>
+                <option value="Двери со стеклом">Двери со стеклом</option>
+              </select>
+
+              <label class="checkbox-label">
+                <input type="checkbox" id="inventoryLowStockCheckbox">
+                <span>Только заканчивающиеся (<= 1 шт.)</span>
+              </label>
+            </div>
+
+            <div class="toolbar-right">
+              <span class="counter-label" id="inventoryCounterLabel">Показано: 0 позиций</span>
+            </div>
+          </div>
+
+          <div class="data-card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th style="width: 50px;">Фото</th>
+                    <th>Модель и бренд</th>
+                    <th>Категория</th>
+                    <th class="wh-col-head">Казань (Факт / Резерв / Доступно)</th>
+                    <th class="wh-col-head">Челны (Факт / Резерв / Доступно)</th>
+                    <th>Действия</th>
+                  </tr>
+                </thead>
+                <tbody id="inventoryTableBody">
+                  <tr><td colspan="6" class="empty-cell">Загрузка складских остатков...</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pagination-footer" id="inventoryPagination"></div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 7: КЛИЕНТЫ (CUSTOMERS) -->
+        <!-- ================================================================ -->
+        <section id="viewCustomers" class="admin-view">
+          <div class="section-toolbar">
+            <div class="toolbar-left">
+              <div class="search-field">
+                <input type="text" id="customerSearchInput" placeholder="Поиск по телефону, имени клиента...">
+              </div>
+
+              <select id="customerCityFilter" class="select-filter">
+                <option value="all">Все города</option>
+                <option value="Казань">Казань</option>
+                <option value="Набережные Челны">Набережные Челны</option>
+              </select>
+
+              <select id="customerSortFilter" class="select-filter">
+                <option value="spent_desc">По общей сумме покупок</option>
+                <option value="orders_desc">По количеству заказов</option>
+                <option value="date_desc">По дате последнего обращения</option>
+              </select>
+            </div>
+
+            <div class="toolbar-right">
+              <span class="counter-label" id="customersCounterLabel">Клиентов: 0</span>
+            </div>
+          </div>
+
+          <div class="data-card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Клиент</th>
+                    <th>Телефон</th>
+                    <th>Город</th>
+                    <th>Первое обращение</th>
+                    <th>Последняя активность</th>
+                    <th class="num-cell">Заказов</th>
+                    <th class="num-cell">Общая сумма</th>
+                    <th>Заметки менеджера</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="customersTableBody">
+                  <tr><td colspan="9" class="empty-cell">Загрузка клиентской базы...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 8: УСЛУГИ И МОНТАЖ (SERVICES) -->
+        <!-- ================================================================ -->
+        <section id="viewServices" class="admin-view">
+          <div class="section-title-wrap">
+            <h2 class="page-title">Прейскурант услуг и профессионального монтажа</h2>
+            <p class="page-sub">Подтвержденные базовые ставки монтажной службы «Двери №1». Хранятся отдельно от стоимости полотен.</p>
+          </div>
+
+          <div class="data-card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Категория</th>
+                    <th>Наименование услуги</th>
+                    <th class="num-cell">Стоимость</th>
+                    <th>Единица</th>
+                    <th>Условия и состав работ</th>
+                  </tr>
+                </thead>
+                <tbody id="servicesTableBody">
+                  <tr><td colspan="5" class="empty-cell">Загрузка прейскуранта услуг...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 9: СОТРУДНИКИ (STAFF — OWNER ONLY) -->
+        <!-- ================================================================ -->
+        <section id="viewStaff" class="admin-view">
+          <div class="section-title-wrap">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <div>
+                <h2 class="page-title">Сотрудники и разграничение прав доступа</h2>
+                <p class="page-sub">Управление учетными записями, ролями и сессиями персонала</p>
+              </div>
+              <button type="button" class="btn-primary-action" id="btnOpenCreateStaffModal">
+                + Добавить сотрудника
+              </button>
+            </div>
+          </div>
+
+          <div class="data-card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Имя сотрудника</th>
+                    <th>Логин / Email</th>
+                    <th>Роль</th>
+                    <th>Статус</th>
+                    <th>Дата создания</th>
+                    <th>Последний вход</th>
+                    <th>Действия</th>
+                  </tr>
+                </thead>
+                <tbody id="staffTableBody">
+                  <tr><td colspan="7" class="empty-cell">Загрузка списка сотрудников...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 10: ЖУРНАЛ ДЕЙСТВИЙ (AUDIT LOG) -->
+        <!-- ================================================================ -->
+        <section id="viewAudit" class="admin-view">
+          <div class="section-toolbar">
+            <div class="toolbar-left">
+              <div class="search-field">
+                <input type="text" id="auditSearchInput" placeholder="Поиск в журнале аудита...">
+              </div>
+
+              <select id="auditTypeFilter" class="select-filter">
+                <option value="all">Все типы действий</option>
+                <option value="auth_login">Вход в систему</option>
+                <option value="order_status_update">Изменение статуса заказа</option>
+                <option value="order_update">Редактирование заказа</option>
+                <option value="product_edit">Редактирование товара</option>
+                <option value="inventory_adjust">Корректировка остатка</option>
+                <option value="inventory_transfer">Перемещение между складами</option>
+                <option value="price_applied">Публикация цен</option>
+                <option value="backup_created">Создание бэкапа</option>
+              </select>
+            </div>
+
+            <div class="toolbar-right">
+              <span class="counter-label" id="auditCounterLabel">Записей в логе: 0</span>
+            </div>
+          </div>
+
+          <div class="data-card">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Время</th>
+                    <th>Оператор</th>
+                    <th>Действие</th>
+                    <th>Объект</th>
+                    <th>Было</th>
+                    <th>Стало</th>
+                    <th>Детали операции</th>
+                  </tr>
+                </thead>
+                <tbody id="auditTableBody">
+                  <tr><td colspan="7" class="empty-cell">Загрузка журнала аудита...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================================================================ -->
+        <!-- РАЗДЕЛ 11: НАСТРОЙКИ И БЭКАПЫ (SETTINGS & BACKUPS — OWNER ONLY) -->
+        <!-- ================================================================ -->
+        <section id="viewSettings" class="admin-view">
+          <div class="section-title-wrap">
+            <h2 class="page-title">Резервное копирование и системные параметры</h2>
+            <p class="page-sub">Создание моментальных снимков заказов, каталога, складов и цен</p>
+          </div>
+
+          <div class="settings-grid">
+            <div class="settings-card">
+              <div class="settings-card-title">Создание резервной копии</div>
+              <p class="settings-desc">
+                Сохраняет полный снимок базы данных заказов, каталога товаров (697 позиций),
+                складских остатков двух складов, клиентской базы и истории переоценки.
+              </p>
+              <button type="button" id="btnCreateBackupNow" class="btn-primary-action">
+                💾 Создать моментальный бэкап сейчас
+              </button>
+            </div>
+
+            <div class="settings-card">
+              <div class="settings-card-title">Реестр резервных копий</div>
+              <div id="backupsListContainer" class="backups-list">
+                <div class="empty-cell">Загрузка бэкапов...</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ====================================================================== -->
+  <!-- БОКОВОЙ DRAWER: КАРТОЧКА ЗАКАЗА (ORDER DETAIL SLIDE-OVER) -->
+  <!-- ====================================================================== -->
+  <div id="drawerOrderDetail" class="drawer-overlay" style="display: none;">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <div>
+          <div class="drawer-top-row">
+            <span class="drawer-order-id" id="drawerOrderId">#D1-2026-0000</span>
+            <span class="status-pill-lg" id="drawerOrderStatusPill">Новая</span>
+          </div>
+          <div class="drawer-order-date" id="drawerOrderDate">20 ноября 2026, 22:56</div>
+        </div>
+        <button type="button" class="btn-close-drawer" id="btnCloseOrderDrawer">✕</button>
+      </div>
+
+      <div class="drawer-body">
+
+        <!-- 1. Информация о клиенте -->
+        <div class="drawer-section">
+          <h3 class="drawer-section-title">Информация о клиенте</h3>
+          <div class="client-info-grid">
+            <div class="ci-field">
+              <span class="ci-label">Имя клиента</span>
+              <span class="ci-val" id="drawerClientName">—</span>
+            </div>
+            <div class="ci-field">
+              <span class="ci-label">Телефон</span>
+              <a href="#" class="ci-val ci-phone" id="drawerClientPhone">—</a>
+            </div>
+            <div class="ci-field">
+              <span class="ci-label">Город</span>
+              <span class="ci-val" id="drawerClientCity">—</span>
+            </div>
+            <div class="ci-field">
+              <span class="ci-label">Адрес / Комментарий покупателя</span>
+              <span class="ci-val" id="drawerClientComment">—</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Управление заказом (статус, менеджер, сумма) -->
+        <div class="drawer-section drawer-action-box">
+          <h3 class="drawer-section-title">Обработка заказа</h3>
+          <div class="order-controls-grid">
+            <div class="form-group">
+              <label class="form-label" for="drawerSelectStatus">Статус заявки:</label>
+              <select id="drawerSelectStatus" class="form-select">
+                <option value="Новая">Новая</option>
+                <option value="В обработке">В обработке</option>
+                <option value="Ожидает расчёта">Ожидает расчёта</option>
+                <option value="Расчёт готов">Расчёт готов</option>
+                <option value="Подтверждена">Подтверждена</option>
+                <option value="Выполнена">Выполнена</option>
+                <option value="Отменена">Отменена</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="drawerSelectManager">Ответственный менеджер:</label>
+              <select id="drawerSelectManager" class="form-select">
+                <option value="">-- Не назначен --</option>
+                <option value="Менеджер шоурума Казань">Менеджер Казань</option>
+                <option value="Менеджер шоурума Челны">Менеджер Челны</option>
+                <option value="Старший администратор">Старший администратор</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="drawerAgreedTotalInput">Согласованная сумма заказа (₽):</label>
+              <input type="number" id="drawerAgreedTotalInput" class="form-input" placeholder="Введите сумму после замера">
+            </div>
+          </div>
+
+          <div style="margin-top: 12px; display: flex; gap: 8px;">
+            <button type="button" id="btnSaveOrderProcessing" class="btn-primary-action">
+              ✓ Сохранить изменения
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Состав заказа (Двери) -->
+        <div class="drawer-section">
+          <h3 class="drawer-section-title">Состав заказа (Двери и комплектация)</h3>
+          <div id="drawerOrderItemsList" class="order-items-drawer-list"></div>
+        </div>
+
+        <!-- 4. Услуги и доставка -->
+        <div class="drawer-section">
+          <h3 class="drawer-section-title">Дополнительные услуги и доставка</h3>
+          <div class="delivery-services-box" id="drawerServicesBreakdown"></div>
+        </div>
+
+        <!-- 5. Финансовый итог -->
+        <div class="drawer-section drawer-finance-total">
+          <div class="fin-row">
+            <span>Сумма по каталогу:</span>
+            <strong id="drawerFinCatalogSum">0 ₽</strong>
+          </div>
+          <div class="fin-row">
+            <span>Дополнительные услуги:</span>
+            <span id="drawerFinServicesSum">0 ₽</span>
+          </div>
+          <div class="fin-row fin-row-final">
+            <span>Итого к оплате покупателем:</span>
+            <span class="fin-final-num" id="drawerFinFinalTotal">0 ₽</span>
+          </div>
+        </div>
+
+        <!-- 6. Внутренние комментарии сотрудников -->
+        <div class="drawer-section">
+          <h3 class="drawer-section-title">Внутренние заметки менеджеров</h3>
+          <div id="drawerCommentsFeed" class="comments-feed"></div>
+
+          <div class="comment-input-row">
+            <input type="text" id="drawerNewCommentInput" class="form-input" placeholder="Оставить служебный комментарий (не виден клиенту)...">
+            <button type="button" id="btnSendOrderComment" class="btn-subtle">Отправить</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================== -->
+  <!-- МОДАЛЬНОЕ ОКНО: РЕДАКТИРОВАНИЕ ТОВАРА (PRODUCT EDIT MODAL) -->
+  <!-- ====================================================================== -->
+  <div id="modalProductEdit" class="modal-overlay" style="display: none;">
+    <div class="modal-container modal-lg">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title" id="modalProductTitle">Редактирование товара</div>
+          <div class="modal-sub" id="modalProductIdSub">ID: PROD-000</div>
+        </div>
+        <button type="button" class="btn-close-modal" id="btnCloseProductModal">✕</button>
+      </div>
+
+      <div class="modal-tabs-bar">
+        <button type="button" class="modal-tab-btn active" data-ptab="basic">Основное</button>
+        <button type="button" class="modal-tab-btn" data-ptab="specs">Характеристики</button>
+        <button type="button" class="modal-tab-btn" data-ptab="prices">Цены и поставщики</button>
+        <button type="button" class="modal-tab-btn" data-ptab="images">Изображения</button>
+      </div>
+
+      <form id="formProductEdit" class="modal-body">
+        <!-- Вкладка 1: Основное -->
+        <div class="modal-tab-content active" id="ptabContentBasic">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="editProductModel">Модель двери</label>
+              <input type="text" id="editProductModel" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="editProductBrand">Фабрика / Производитель</label>
+              <input type="text" id="editProductBrand" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="editProductCollection">Коллекция</label>
+              <input type="text" id="editProductCollection" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="editProductCategory">Категория каталога</label>
+              <select id="editProductCategory" class="form-select">
+                <option value="Входные двери">Входные двери</option>
+                <option value="Межкомнатные двери">Межкомнатные двери</option>
+                <option value="Скрытые двери">Скрытые двери</option>
+                <option value="Двери со стеклом">Двери со стеклом</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="editProductDescription">Описание товара</label>
+            <textarea id="editProductDescription" class="form-textarea" rows="4"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="editProductIsPublished">
+              <strong>Товар опубликован в каталоге магазина</strong>
+            </label>
+          </div>
+        </div>
+
+        <!-- Вкладка 2: Характеристики -->
+        <div class="modal-tab-content" id="ptabContentSpecs">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="editSpecThickness">Толщина полотна (мм)</label>
+              <input type="text" id="editSpecThickness" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="editSpecCoating">Покрытие / Отделка</label>
+              <input type="text" id="editSpecCoating" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="editSpecLocks">Замковая группа</label>
+              <input type="text" id="editSpecLocks" class="form-input">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="editSpecInsulation">Наполнитель / Утепление</label>
+              <input type="text" id="editSpecInsulation" class="form-input">
+            </div>
+          </div>
+        </div>
+
+        <!-- Вкладка 3: Цены -->
+        <div class="modal-tab-content" id="ptabContentPrices">
+          <div class="pricing-calc-box">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="editProductDealerPrice">Закупочная стоимость (₽)</label>
+                <input type="number" id="editProductDealerPrice" class="form-input" placeholder="Базовая оптовая цена">
+                <div class="form-hint">При изменении закупки розница пересчитывается автоматически (+10 000 ₽)</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="editProductRetailPrice">Розничная цена каталога (₽)</label>
+                <input type="number" id="editProductRetailPrice" class="form-input" required>
+                <div class="form-hint" style="color: #b85c3a;">Строго контролируется формулой: Розница = Закупка + 10 000 ₽</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Вкладка 4: Изображения -->
+        <div class="modal-tab-content" id="ptabContentImages">
+          <div class="form-group">
+            <label class="form-label">Предварительный просмотр изображения:</label>
+            <div class="img-preview-box">
+              <img id="editProductImgThumb" src="../logo.png" alt="" class="modal-thumb-img">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-subtle" id="btnCancelProductEdit">Отмена</button>
+          <button type="submit" class="btn-primary-action">✓ Сохранить изменения</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ====================================================================== -->
+  <!-- МОДАЛЬНОЕ ОКНО: КОРРЕКТИРОВКА ОСТАТКА СКЛАДА (STOCK ADJUST MODAL) -->
+  <!-- ====================================================================== -->
+  <div id="modalStockAdjust" class="modal-overlay" style="display: none;">
+    <div class="modal-container modal-sm">
+      <div class="modal-header">
+        <div class="modal-title">Корректировка складского остатка</div>
+        <button type="button" class="btn-close-modal" id="btnCloseStockModal">✕</button>
+      </div>
+
+      <form id="formStockAdjust" class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Модель:</label>
+          <div id="stockAdjustModelName" style="font-weight: 600; color: #1d1e1c;">—</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="stockAdjustWarehouse">Склад:</label>
+          <select id="stockAdjustWarehouse" class="form-select">
+            <option value="kazan_main">Казань (Сибирский тракт, 59Б)</option>
+            <option value="chelny_main">Набережные Челны (Казанский пр-т, 232)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="stockAdjustNewQty">Фактический остаток (шт.):</label>
+          <input type="number" id="stockAdjustNewQty" class="form-input" min="0" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="stockAdjustReason">Причина корректировки (для аудита):</label>
+          <input type="text" id="stockAdjustReason" class="form-input" placeholder="Инвентаризация, приемка, списание..." required>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-subtle" id="btnCancelStockModal">Отмена</button>
+          <button type="submit" class="btn-primary-action">Сохранить остаток</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ====================================================================== -->
+  <!-- МОДАЛЬНОЕ ОКНО: МЕЖСКЛАДСКОЕ ПЕРЕМЕЩЕНИЕ (STOCK TRANSFER MODAL) -->
+  <!-- ====================================================================== -->
+  <div id="modalStockTransfer" class="modal-overlay" style="display: none;">
+    <div class="modal-container modal-sm">
+      <div class="modal-header">
+        <div class="modal-title">Межскладское перемещение</div>
+        <button type="button" class="btn-close-modal" id="btnCloseTransferModal">✕</button>
+      </div>
+
+      <form id="formStockTransfer" class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Модель двери:</label>
+          <div id="stockTransferModelName" style="font-weight: 600; color: #1d1e1c;">—</div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="transferFromWh">Склад отправления:</label>
+            <select id="transferFromWh" class="form-select">
+              <option value="kazan_main">Казань</option>
+              <option value="chelny_main">Челны</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="transferToWh">Склад назначения:</label>
+            <select id="transferToWh" class="form-select">
+              <option value="chelny_main">Челны</option>
+              <option value="kazan_main">Казань</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="transferQuantity">Количество к перемещению (шт.):</label>
+          <input type="number" id="transferQuantity" class="form-input" min="1" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="transferReason">Основание перемещения:</label>
+          <input type="text" id="transferReason" class="form-input" placeholder="Пополнение склада Челнов под заказ..." required>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-subtle" id="btnCancelTransferModal">Отмена</button>
+          <button type="submit" class="btn-primary-action">Выполнить перемещение</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST УВЕДОМЛЕНИЯ -->
+  <div id="adminToastContainer" class="toast-container"></div>
+
+  <!-- СКРИПТ КЛИЕНТА АДМИНКИ -->
+  <script src="admin.js"></script>
+</body>
+</html>

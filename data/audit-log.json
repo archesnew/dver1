@@ -1,0 +1,112 @@
+[
+  {
+    "id": "AUD-1795220068001-cca51631",
+    "timestamp": "2026-11-21T00:14:28.001Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795220039666-d8170a25",
+    "timestamp": "2026-11-21T00:13:59.667Z",
+    "user": "Менеджер шоурума Казань (manager)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-mgr-003",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795220039550-1baba171",
+    "timestamp": "2026-11-21T00:13:59.550Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "order_status_update",
+    "entityType": "order",
+    "entityId": "D1-2026-9767",
+    "oldValue": "В обработке",
+    "newValue": "В обработке",
+    "details": "Статус заказа изменен с \"В обработке\" на \"В обработке\". Комментарий: Тестовое взятие в работу"
+  },
+  {
+    "id": "AUD-1795220039487-50d586b2",
+    "timestamp": "2026-11-21T00:13:59.487Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795220024000-1bb189b2",
+    "timestamp": "2026-11-21T00:13:44.000Z",
+    "user": "Менеджер шоурума Казань (manager)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-mgr-003",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795220023895-51321a8a",
+    "timestamp": "2026-11-21T00:13:43.895Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "order_status_update",
+    "entityType": "order",
+    "entityId": "D1-2026-9767",
+    "oldValue": "В обработке",
+    "newValue": "В обработке",
+    "details": "Статус заказа изменен с \"В обработке\" на \"В обработке\". Комментарий: Тестовое взятие в работу"
+  },
+  {
+    "id": "AUD-1795220023836-d0d4223f",
+    "timestamp": "2026-11-21T00:13:43.836Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795219977005-25c3e431",
+    "timestamp": "2026-11-21T00:12:57.005Z",
+    "user": "Менеджер шоурума Казань (manager)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-mgr-003",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795219976894-eec4999e",
+    "timestamp": "2026-11-21T00:12:56.895Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "order_status_update",
+    "entityType": "order",
+    "entityId": "D1-2026-9767",
+    "oldValue": "Новая",
+    "newValue": "В обработке",
+    "details": "Статус заказа изменен с \"Новая\" на \"В обработке\". Комментарий: Тестовое взятие в работу"
+  },
+  {
+    "id": "AUD-1795219976835-51309bd1",
+    "timestamp": "2026-11-21T00:12:56.835Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  }
+]
