@@ -992,6 +992,12 @@
   box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
 }
 
+@media (min-width: 769px) {
+  .mobile-cart-sticky-bar {
+    display: none !important;
+  }
+}
+
 .mobile-cart-sticky-info {
   display: flex;
   flex-direction: column;

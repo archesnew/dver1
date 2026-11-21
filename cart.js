@@ -152,7 +152,7 @@
 
     if (emptyView) emptyView.style.display = 'none';
     if (contentGrid) contentGrid.style.display = 'grid';
-    if (mobileBar) mobileBar.style.display = 'flex';
+    if (mobileBar) mobileBar.style.display = '';
     if (headerCount) headerCount.textContent = `${totals.totalCount} ${pluralize(totals.totalCount, 'позиция', 'позиции', 'позиций')}`;
 
     // Отрисовка списка товаров
