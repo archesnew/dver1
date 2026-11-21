@@ -350,14 +350,14 @@
       if (totals.totalCount >= freeDeliveryMin) {
         deliveryBox.classList.add('unlocked');
         deliveryBar.style.width = '100%';
-        if (deliveryIcon) deliveryIcon.textContent = '🎉';
+        if (deliveryIcon) deliveryIcon.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
         deliveryTitle.textContent = 'Бесплатная доставка';
         deliveryDesc.innerHTML = '<strong>Бесплатная доставка по городу активирована</strong>';
       } else {
         deliveryBox.classList.remove('unlocked');
         const pct = Math.max(8, Math.min(100, Math.round((totals.totalCount / freeDeliveryMin) * 100)));
         deliveryBar.style.width = `${pct}%`;
-        if (deliveryIcon) deliveryIcon.textContent = '🚚';
+        if (deliveryIcon) deliveryIcon.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>';
         deliveryTitle.textContent = 'Доставка по городу';
         const diff = freeDeliveryMin - totals.totalCount;
         deliveryDesc.textContent = `Добавьте ещё ${diff} ${pluralize(diff, 'комплект', 'комплекта', 'комплектов')} до бесплатной доставки`;
@@ -1159,7 +1159,7 @@
       rowsHtml += `
         <tr style="background: #fafafa; font-weight: 500;">
           <td style="text-align: center; font-weight: 600;">+</td>
-          <td style="text-align: center; font-size: 18px;">🛠️</td>
+          <td style="text-align: center; font-weight: 700; color: #B85C3A;">🔧</td>
           <td colspan="4">
             <strong>Профессиональный монтаж «под ключ» (Гарантия 2 года)</strong><br>
             <small style="color: #666;">Включает: сборку и выставление лазером, врезку скрытой фурнитуры, монтаж доборов/наличников, уборку мусора</small>

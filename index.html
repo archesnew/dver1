@@ -553,27 +553,58 @@
       <!-- БЫСТРЫЕ ПРЕСЕТЫ-СЦЕНАРИИ КАТАЛОГА (СПРИНТ 7) -->
       <div class="catalog-presets-strip" id="catalogPresetsStrip" role="region" aria-label="Быстрые сценарии подбора">
         <button type="button" class="preset-pill" data-preset="inStock">
-          <span class="preset-icon">⚡</span>
+          <span class="preset-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </span>
           <span>В наличии (1–2 дня)</span>
         </button>
         <button type="button" class="preset-pill" data-preset="invisible">
-          <span class="preset-icon">🚪</span>
+          <span class="preset-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="3" width="16" height="18" rx="2"/>
+              <line x1="8" y1="3" x2="8" y2="21" stroke-dasharray="2 2"/>
+              <circle cx="15.5" cy="12" r="1" fill="currentColor"/>
+            </svg>
+          </span>
           <span>Скрытые двери</span>
         </button>
         <button type="button" class="preset-pill" data-preset="white">
-          <span class="preset-icon">✨</span>
+          <span class="preset-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+          </span>
           <span>Белые и светлые</span>
         </button>
         <button type="button" class="preset-pill" data-preset="cottage">
-          <span class="preset-icon">🏡</span>
+          <span class="preset-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 10.5 12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 20v-9.5z"/>
+              <path d="M9 21v-6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6"/>
+            </svg>
+          </span>
           <span>В частный дом (термо)</span>
         </button>
         <button type="button" class="preset-pill" data-preset="glass">
-          <span class="preset-icon">🪟</span>
+          <span class="preset-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <line x1="12" y1="3" x2="12" y2="21"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+            </svg>
+          </span>
           <span>Со стеклом</span>
         </button>
         <button type="button" class="preset-pill" data-preset="under18">
-          <span class="preset-icon">🏷️</span>
+          <span class="preset-icon" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+              <line x1="7" y1="7" x2="7.01" y2="7"/>
+            </svg>
+          </span>
           <span>Хиты до 18 000 ₽</span>
         </button>
       </div>
@@ -772,7 +803,15 @@
       <div class="guarantees-cards-grid">
         <!-- Карточка 1 -->
         <div class="guarantee-card">
-          <div class="guarantee-icon-box">📋</div>
+          <div class="guarantee-icon-box" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
           <h3 class="guarantee-title">Фиксированная смета в договоре</h3>
           <p class="guarantee-desc">
             После выезда инженера-замерщика стоимость полотен, доборов, фурнитуры и монтажа фиксируется в договоре. Никаких скрытых доплат и сюрпризов при сдаче.
@@ -781,7 +820,11 @@
 
         <!-- Карточка 2 -->
         <div class="guarantee-card">
-          <div class="guarantee-icon-box">🧹</div>
+          <div class="guarantee-icon-box" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/>
+            </svg>
+          </div>
           <h3 class="guarantee-title">Чистый монтаж с промышленным пылесосом</h3>
           <p class="guarantee-desc">
             Аккуратная врезка скрытых петель и замков выполняется по высокоточным шаблонам с профессиональным пылеудалением Festool. Без строительной пыли и грязи.
@@ -790,7 +833,12 @@
 
         <!-- Карточка 3 -->
         <div class="guarantee-card">
-          <div class="guarantee-icon-box">🛡️</div>
+          <div class="guarantee-icon-box" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
           <h3 class="guarantee-title">Гарантия 1 год на установку и фурнитуру</h3>
           <p class="guarantee-desc">
             Собственная авторизованная сервисная служба. Если потребуется регулировка притвора или петли после усадки дома — мастер выезжает и настраивает за наш счёт.
@@ -799,7 +847,12 @@
 
         <!-- Карточка 4 -->
         <div class="guarantee-card">
-          <div class="guarantee-icon-box">🏭</div>
+          <div class="guarantee-icon-box" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 20h20"/>
+              <path d="M5 20V8l5 4V8l5 4V4h5v16"/>
+            </svg>
+          </div>
           <h3 class="guarantee-title">Прямые поставки без наценок посредников</h3>
           <p class="guarantee-desc">
             Официальные контракты с фабриками ProfilDoors, Феррони, Luxor, Chameleon Doors. Поставки напрямую со складов в РТ со строгим контролем геометрии.
@@ -1041,16 +1094,20 @@
           <!-- НАВИГАЦИЯ ПО ВКЛАДКАМ -->
           <div class="modal-tabs-nav">
             <button type="button" class="modal-tab-btn active" data-target-tab="tabSpecs">
-              📋 Характеристики
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span>Характеристики</span>
             </button>
             <button type="button" class="modal-tab-btn" data-target-tab="tabComplectation">
-              📦 Заводской состав
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              <span>Заводской состав</span>
             </button>
             <button type="button" class="modal-tab-btn" data-target-tab="tabCalculator">
-              📐 Калькулятор погонажа
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10v4M10 10v2M14 10v4M18 10v2"/></svg>
+              <span>Калькулятор погонажа</span>
             </button>
             <button type="button" class="modal-tab-btn" data-target-tab="tabStock">
-              🏬 Склады в РТ
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 22V18h6v4M2 7l10-5 10 5"/></svg>
+              <span>Склады в РТ</span>
             </button>
           </div>
 

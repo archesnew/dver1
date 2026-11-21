@@ -1458,6 +1458,27 @@
   margin-bottom: 8px;
 }
 
+.cart-upsell-delivery-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-terracotta, #B85C3A);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.cart-upsell-delivery-icon svg {
+  stroke: var(--accent-terracotta, #B85C3A);
+}
+
+.cart-upsell-delivery.unlocked .cart-upsell-delivery-icon {
+  color: #2E7D32;
+}
+
+.cart-upsell-delivery.unlocked .cart-upsell-delivery-icon svg {
+  stroke: #2E7D32;
+}
+
 .cart-upsell-delivery.unlocked .cart-upsell-delivery-header {
   color: #2E7D32;
 }

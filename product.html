@@ -260,14 +260,25 @@
             <!-- СЕГМЕНТНЫЙ ПЕРЕКЛЮЧАТЕЛЬ: ТОЛЬКО ПОЛОТНО / КОМПЛЕКТ ПОД КЛЮЧ -->
             <div class="pdp-kit-toggle" role="tablist" aria-label="Вариант комплектации">
               <button type="button" class="kit-toggle-btn" id="btnKitLeaf" data-kit="leaf" role="tab" aria-selected="false">
-                <span class="kit-toggle-icon">🚪</span>
+                <span class="kit-toggle-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 21V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v17"/>
+                    <circle cx="15.5" cy="12" r="1" fill="currentColor"/>
+                  </svg>
+                </span>
                 <span class="kit-toggle-text">
                   <strong>Только полотно</strong>
                   <small>Базовое полотно без погонажа</small>
                 </span>
               </button>
               <button type="button" class="kit-toggle-btn active" id="btnKitFull" data-kit="kit" role="tab" aria-selected="true">
-                <span class="kit-toggle-icon">✨</span>
+                <span class="kit-toggle-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <line x1="9" y1="3" x2="9" y2="21"/>
+                    <path d="M14 9h3M14 15h3"/>
+                  </svg>
+                </span>
                 <span class="kit-toggle-text">
                   <strong>Комплект «под ключ»</strong>
                   <small id="kitFullSubtext">Короб, наличники, петли, замок</small>
@@ -342,21 +353,41 @@
           <!-- ПРЕИМУЩЕСТВА СЕРВИСА -->
           <div class="pdp-trust-grid">
             <div class="trust-item">
-              <span class="trust-icon">📐</span>
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"/>
+                  <path d="m14.5 3.5 2 2"/>
+                  <path d="m11.5 6.5 2 2"/>
+                  <path d="m8.5 9.5 2 2"/>
+                  <path d="m5.5 12.5 2 2"/>
+                </svg>
+              </span>
               <div class="trust-text">
                 <strong>Лазерный замер</strong>
                 <span>Точный расчёт монтажных зазоров</span>
               </div>
             </div>
             <div class="trust-item">
-              <span class="trust-icon">🛡️</span>
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+              </span>
               <div class="trust-text">
                 <strong>Гарантия до 5 лет</strong>
                 <span>Официальный сервисный центр</span>
               </div>
             </div>
             <div class="trust-item">
-              <span class="trust-icon">🚚</span>
+              <span class="trust-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="3" width="15" height="13" rx="1"/>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                  <circle cx="5.5" cy="18.5" r="2.5"/>
+                  <circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              </span>
               <div class="trust-text">
                 <strong>Склады в РТ</strong>
                 <span>Казань и Набережные Челны</span>

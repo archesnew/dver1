@@ -522,8 +522,16 @@
 }
 
 .trust-icon {
-  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-terracotta, #B85C3A);
+  flex-shrink: 0;
   line-height: 1;
+}
+
+.trust-icon svg {
+  stroke: var(--accent-terracotta, #B85C3A);
 }
 
 .trust-text {
@@ -1718,8 +1726,16 @@
 }
 
 .kit-toggle-btn .kit-toggle-icon {
-  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-terracotta, #B85C3A);
+  flex-shrink: 0;
   line-height: 1;
+}
+
+.kit-toggle-btn .kit-toggle-icon svg {
+  stroke: var(--accent-terracotta, #B85C3A);
 }
 
 .kit-toggle-btn .kit-toggle-text {

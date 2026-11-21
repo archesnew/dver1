@@ -115,7 +115,13 @@
     if (grid) {
       grid.innerHTML = `
         <div class="empty-catalog-state">
-          <div class="empty-icon">⚠️</div>
+          <div class="empty-icon">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-terracotta); margin-bottom: 12px;">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
           <div class="empty-title">Не удалось загрузить данные каталога</div>
           <div class="empty-desc">Проверьте доступность файла <code>data/catalog-output/products.json</code>. Ошибка: ${err.message}</div>
         </div>
@@ -698,7 +704,9 @@
     if (state.filteredProducts.length === 0) {
       grid.innerHTML = `
         <div class="empty-catalog-state" style="grid-column: 1 / -1; padding: 60px 20px; text-align: center;">
-          <div style="font-size: 2.5rem; margin-bottom: 12px;">🔍</div>
+          <div style="margin-bottom: 12px; color: var(--accent-terracotta);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
           <div style="font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--text-primary); margin-bottom: 8px;">Модели не найдены</div>
           <div style="color: var(--text-secondary); font-size: 0.9375rem; max-width: 440px; margin: 0 auto 20px;">
             Попробуйте изменить поисковый запрос или сбросить активные фильтры параметров.
@@ -1614,13 +1622,19 @@
     pane.innerHTML = `
       <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.8125rem;">
         <div style="background: var(--bg-stone-light); padding: 14px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-stone);">
-          <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">📍 Центральный шоурум и склад «Казань»</div>
+          <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px; display: inline-flex; align-items: center; gap: 6px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-terracotta); flex-shrink: 0;" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Центральный шоурум и склад «Казань»
+          </div>
           <div style="color: var(--text-secondary);">ул. Сибирский тракт, 59б • Ежедневно 09:00 - 19:00</div>
           <div style="color: var(--accent-emerald); font-weight: 600; margin-top: 6px;">✓ Доступна складская программа (отгрузка за 24 ч)</div>
         </div>
 
         <div style="background: var(--bg-stone-light); padding: 14px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-stone);">
-          <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">📍 Шоурум и региональный склад «Набережные Челны»</div>
+          <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px; display: inline-flex; align-items: center; gap: 6px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-terracotta); flex-shrink: 0;" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Шоурум и региональный склад «Набережные Челны»
+          </div>
           <div style="color: var(--text-secondary);">Казанский проспект, 232 • Пн-Сб 09:00 - 18:00</div>
           <div style="color: var(--accent-terracotta); font-weight: 600; margin-top: 6px;">✓ Регулярная логистика Казань ↔ Челны (2 раза в неделю)</div>
         </div>

@@ -2074,12 +2074,27 @@ a {
 }
 
 .preset-pill .preset-icon {
-  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-terracotta, #B85C3A);
   line-height: 1;
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+
+.preset-pill .preset-icon svg {
+  stroke: var(--accent-terracotta, #B85C3A);
+  display: block;
+  transition: stroke 0.15s ease;
 }
 
 .preset-pill.active .preset-icon {
-  filter: brightness(1.2);
+  color: #FFFFFF;
+}
+
+.preset-pill.active .preset-icon svg {
+  stroke: #FFFFFF;
 }
 
 /* --------------------------------------------------------------------------
@@ -3109,6 +3124,9 @@ a {
 }
 
 .modal-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   background: transparent;
   border: none;
   color: var(--text-muted);
@@ -3119,6 +3137,12 @@ a {
   border-bottom: 2px solid transparent;
   transition: var(--transition-fast);
   white-space: nowrap;
+}
+
+.modal-tab-btn svg {
+  flex-shrink: 0;
+  stroke: currentColor;
+  transition: stroke var(--transition-fast);
 }
 
 .modal-tab-btn:hover {
@@ -4895,9 +4919,30 @@ a {
 }
 
 .quiz-opt-icon {
-  font-size: 1.625rem;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(184, 91, 53, 0.08);
+  border-radius: 10px;
+  color: var(--accent-terracotta, #B85C3A);
   flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.quiz-opt-icon svg {
+  stroke: var(--accent-terracotta, #B85C3A);
+  transition: stroke 0.2s ease;
+}
+
+.quiz-option-card.selected .quiz-opt-icon {
+  background: var(--accent-terracotta, #B85C3A);
+  color: #FFFFFF;
+}
+
+.quiz-option-card.selected .quiz-opt-icon svg {
+  stroke: #FFFFFF;
 }
 
 .quiz-opt-content {
@@ -5257,12 +5302,28 @@ a {
   width: 48px;
   height: 48px;
   background: rgba(184, 91, 53, 0.08);
+  border: 1px solid rgba(184, 91, 53, 0.15);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  color: var(--accent-terracotta, #B85C3A);
   margin-bottom: 18px;
+  transition: all 0.2s ease;
+}
+
+.guarantee-icon-box svg {
+  stroke: var(--accent-terracotta, #B85C3A);
+  transition: stroke 0.2s ease;
+}
+
+.guarantee-card:hover .guarantee-icon-box {
+  background: var(--accent-terracotta, #B85C3A);
+  color: #FFFFFF;
+}
+
+.guarantee-card:hover .guarantee-icon-box svg {
+  stroke: #FFFFFF;
 }
 
 .guarantee-title {

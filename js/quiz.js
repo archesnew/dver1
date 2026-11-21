@@ -30,19 +30,19 @@
       options: [
         {
           val: 'apartment',
-          icon: '🏢',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="9" y1="6" x2="9.01" y2="6"/><line x1="15" y1="6" x2="15.01" y2="6"/><line x1="9" y1="10" x2="9.01" y2="10"/><line x1="15" y1="10" x2="15.01" y2="10"/><line x1="9" y1="14" x2="9.01" y2="14"/><line x1="15" y1="14" x2="15.01" y2="14"/><path d="M10 22v-4h4v4"/></svg>',
           title: 'В квартиру',
           desc: 'Звукоизоляция до 42 дБ, влагостойкость для санузлов, трендовый дизайн'
         },
         {
           val: 'house',
-          icon: '🏡',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V20a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 20v-9.5z"/><path d="M9 21v-6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6"/></svg>',
           title: 'В частный дом или коттедж',
           desc: 'Терморазрыв без промерзания, защита от осадков, массив и шпон'
         },
         {
           val: 'commercial',
-          icon: '💼',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>',
           title: 'В офис или коммерцию',
           desc: 'Высокая износостойкость, минимализм, прочные итальянские ручки'
         }
@@ -56,25 +56,25 @@
       options: [
         {
           val: 'interior',
-          icon: '🚪',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v17"/><circle cx="15.5" cy="12" r="1" fill="currentColor"/></svg>',
           title: 'Межкомнатные двери',
           desc: 'Эмаль, натуральный шпон, экошпон с телескопическим погонажем'
         },
         {
           val: 'invisible',
-          icon: '🪄',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="3" x2="8" y2="21" stroke-dasharray="2 2"/><circle cx="15.5" cy="12" r="1" fill="currentColor"/></svg>',
           title: 'Скрытые Invisible',
           desc: 'Алюминиевые короба под покраску или отделку в плоскости стены'
         },
         {
           val: 'entrance',
-          icon: '🛡️',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>',
           title: 'Входные сейф-двери',
           desc: 'Замки 4 класса взломостойкости, терморазрыв и толстые контуры'
         },
         {
           val: 'glass',
-          icon: '🪟',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/></svg>',
           title: 'Со стеклом или зеркалом',
           desc: 'Безопасный триплекс, матовый сатинат, световые интерьерные решения'
         }
@@ -88,19 +88,19 @@
       options: [
         {
           val: '1-2',
-          icon: '1️⃣',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4h2v16h-4"/></svg>',
           title: '1–2 двери',
           desc: 'Точечная замена или входная сейф-дверь'
         },
         {
           val: '3-4',
-          icon: '4️⃣',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4v16M8 4v8h8"/></svg>',
           title: '3–4 двери',
           desc: 'Стандартная 2–3 комнатная квартира • Бесплатная доставка!'
         },
         {
           val: '5+',
-          icon: '✨',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4H8v7h7a4 4 0 0 1 0 8H8M18 10h4M20 8v4"/></svg>',
           title: '5 и более проёмов',
           desc: 'Коттедж, просторная квартира или офис • Максимальная скидка!'
         }
@@ -114,19 +114,19 @@
       options: [
         {
           val: 'under_18k',
-          icon: '🏷️',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>',
           title: 'До 18 000 ₽',
           desc: 'Надёжные складские модели высокого качества по оптовой цене'
         },
         {
           val: '18k_35k',
-          icon: '⭐',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
           title: '18 000 – 35 000 ₽',
           desc: 'Оптимальный стандарт: эмаль, натуральный шпон, скрытый монтаж'
         },
         {
           val: 'over_35k',
-          icon: '👑',
+          icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M11 3 8 9l4 12 4-12-3-6"/></svg>',
           title: 'Премиум от 35 000 ₽',
           desc: 'Авторские дизайнерские коллекции, терморазрыв с патиной, зеркала'
         }
@@ -337,7 +337,14 @@
 
         ${isVolumeOrder ? `
           <div class="quiz-promo-callout">
-            <span class="promo-callout-icon">🚚</span>
+            <span class="promo-callout-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13" rx="1"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </span>
             <div class="promo-callout-text">
               <strong>Спецпредложение для вашего объёма (${quizState.answers.openings === '5+' ? 'от 5 дверей' : '3–4 двери'}):</strong>
               <span>Бесплатная доставка со склада по Казани и Набережным Челнам + приоритетный лазерный замер!</span>
