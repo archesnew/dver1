@@ -11,8 +11,12 @@
     product: null,
     activeVariantIndex: 0,
     activeSize: '',
-    activeOpening: '',
+    activeOpening: 'Универсальное',
     activeScenario: 'standard_kit_with_hardware',
+    kitType: 'kit', // 'leaf' | 'kit'
+    selectedKitOptionIds: [],
+    wallColor: '#F7F7F5',
+    wallColorName: 'Белый',
     wcTurn: false,
     freeMeasure: true,
     activeMainImage: '',
@@ -80,7 +84,7 @@
   }
 
   // --------------------------------------------------------------------------
-  // РАСЧЁТ ЦЕНЫ
+  // РАСЧЁТ ЦЕНЫ (ЖИВОЙ КОНФИГУРАТОР V3.2)
   // --------------------------------------------------------------------------
 
   function calculateCurrentPrice() {
@@ -92,10 +96,21 @@
       return null;
     }
 
-    const mult = pdpState.scenarioMultipliers[pdpState.activeScenario] || 1.0;
-    let total = base * mult;
+    let total = base;
+    const isEntrance = (p.category && p.category.toLowerCase().includes('входн')) || (p.type === 'entrance');
+    const optionsConfig = (window.DVER_CONFIG && window.DVER_CONFIG.KIT_SURCHARGES)
+      ? (isEntrance ? window.DVER_CONFIG.KIT_SURCHARGES.entrance : window.DVER_CONFIG.KIT_SURCHARGES.interior)
+      : [];
 
-    if (pdpState.wcTurn) {
+    if (pdpState.kitType === 'kit') {
+      optionsConfig.forEach(opt => {
+        if (pdpState.selectedKitOptionIds.includes(opt.id)) {
+          total += opt.price;
+        }
+      });
+    }
+
+    if (pdpState.wcTurn && !isEntrance) {
       total += 1850;
     }
 
@@ -114,12 +129,10 @@
       if (priceAmountEl) priceAmountEl.textContent = formatted;
       if (stickyPriceEl) stickyPriceEl.textContent = formatted;
       if (priceSubnoteEl) {
-        if (pdpState.activeScenario === 'standard_kit_with_hardware') {
-          priceSubnoteEl.textContent = 'Полный комплект: полотно + коробка + наличники + фурнитура';
-        } else if (pdpState.activeScenario === 'kit_without_hardware') {
-          priceSubnoteEl.textContent = 'Комплект без фурнитуры (полотно + коробка + наличники)';
+        if (pdpState.kitType === 'kit') {
+          priceSubnoteEl.textContent = 'Комплект «под ключ» с выбранным набором погонажа и фурнитуры';
         } else {
-          priceSubnoteEl.textContent = 'Только дверное полотно без погонажных изделий';
+          priceSubnoteEl.textContent = 'Только дверное полотно без погонажных изделий и фурнитуры';
         }
       }
     } else {
@@ -428,13 +441,16 @@
     // 3. Открывание
     renderOpeningPills(p);
 
-    // 4. Сценарии комплектации
-    setupScenarioOptions();
+    // 4. Примерка под цвет стен (Sprint 3)
+    setupWallFitting(p);
 
-    // 5. Чекбоксы доп. опций
+    // 5. Живой конфигуратор «Полотно / Комплект под ключ» (Sprint 3)
+    setupLiveConfigurator(p);
+
+    // 6. Чекбоксы доп. опций
     setupExtraAddons();
 
-    // 6. Цены
+    // 7. Цены
     updatePriceDisplay();
 
     // 7. Кнопки добавления в корзину и заявки
@@ -663,23 +679,142 @@
     });
   }
 
-  function setupScenarioOptions() {
-    const scenarioList = document.getElementById('scenarioOptionsList');
-    if (!scenarioList) return;
+  // --------------------------------------------------------------------------
+  // ПРИМЕРКА ДВЕРИ ПОД ЦВЕТ СТЕН (SPRINT 3 — TASK 1)
+  // --------------------------------------------------------------------------
 
-    scenarioList.querySelectorAll('.scenario-option-card').forEach(card => {
-      const input = card.querySelector('input[type="radio"]');
-      if (!input) return;
+  function setupWallFitting(p) {
+    const swatchesWrap = document.getElementById('pdpWallSwatches');
+    const colorNameEl = document.getElementById('pdpWallColorName');
+    const photoCard = document.getElementById('pdpPhotoCard');
+    const mainImg = document.getElementById('pdpMainImage');
+    if (!swatchesWrap) return;
 
-      input.addEventListener('change', () => {
-        if (input.checked) {
-          pdpState.activeScenario = input.value;
-          scenarioList.querySelectorAll('.scenario-option-card').forEach(c => c.classList.remove('active'));
-          card.classList.add('active');
-          updatePriceDisplay();
+    const colors = (window.DVER_CONFIG && window.DVER_CONFIG.WALL_COLORS) || [
+      { id: 'white', name: 'Белый', hex: '#F7F7F5', default: true },
+      { id: 'beige', name: 'Тёплый беж', hex: '#E8DFD1' },
+      { id: 'concrete', name: 'Серый бетон', hex: '#C9CCC8' },
+      { id: 'graphite', name: 'Графит', hex: '#36393F' },
+      { id: 'sage', name: 'Шалфей', hex: '#9BA89B' },
+      { id: 'terracotta', name: 'Терракота', hex: '#B87D64' },
+      { id: 'wood', name: 'Светлое дерево', hex: '#D8C3A5' }
+    ];
+
+    swatchesWrap.innerHTML = '';
+    colors.forEach(col => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'wall-swatch-btn' + (col.hex === pdpState.wallColor ? ' active' : '');
+      btn.style.backgroundColor = col.hex;
+      btn.setAttribute('data-tooltip', col.name);
+      btn.setAttribute('aria-label', `Цвет стены: ${col.name}`);
+      btn.title = col.name;
+
+      btn.addEventListener('click', () => {
+        pdpState.wallColor = col.hex;
+        pdpState.wallColorName = col.name;
+        swatchesWrap.querySelectorAll('.wall-swatch-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (colorNameEl) colorNameEl.textContent = col.name;
+        if (photoCard) {
+          photoCard.style.backgroundColor = col.hex;
+        }
+        if (mainImg) {
+          if (col.id === 'graphite') {
+            mainImg.classList.add('shadow-dark-bg');
+          } else {
+            mainImg.classList.remove('shadow-dark-bg');
+          }
         }
       });
+
+      swatchesWrap.appendChild(btn);
     });
+
+    if (photoCard) photoCard.style.backgroundColor = pdpState.wallColor;
+    if (colorNameEl) colorNameEl.textContent = pdpState.wallColorName;
+  }
+
+  // --------------------------------------------------------------------------
+  // ЖИВОЙ КОНФИГУРАТОР «ПОЛОТНО / КОМПЛЕКТ ПОД КЛЮЧ» (SPRINT 3 — TASK 2)
+  // --------------------------------------------------------------------------
+
+  function setupLiveConfigurator(p) {
+    const isEntrance = (p.category && p.category.toLowerCase().includes('входн')) || (p.type === 'entrance');
+    const optionsConfig = (window.DVER_CONFIG && window.DVER_CONFIG.KIT_SURCHARGES)
+      ? (isEntrance ? window.DVER_CONFIG.KIT_SURCHARGES.entrance : window.DVER_CONFIG.KIT_SURCHARGES.interior)
+      : [];
+
+    const btnLeaf = document.getElementById('btnKitLeaf');
+    const btnFull = document.getElementById('btnKitFull');
+    const optionsWrap = document.getElementById('kitOptionsWrap');
+    const optionsList = document.getElementById('kitOptionsList');
+    const kitSubtext = document.getElementById('kitFullSubtext');
+    const wcRow = document.getElementById('wcTurnRow');
+
+    if (isEntrance && wcRow) {
+      wcRow.style.display = 'none';
+    }
+
+    if (kitSubtext) {
+      kitSubtext.textContent = isEntrance ? 'Доставка, подъём и монтаж' : 'Короб, наличники, петли, замок';
+    }
+
+    // По умолчанию активируем опции со статусом defaultActive
+    pdpState.selectedKitOptionIds = optionsConfig.filter(o => o.defaultActive).map(o => o.id);
+
+    // Рендер чекбоксов опций
+    if (optionsList) {
+      optionsList.innerHTML = '';
+      optionsConfig.forEach(opt => {
+        const isChecked = pdpState.selectedKitOptionIds.includes(opt.id);
+        const label = document.createElement('label');
+        label.className = 'kit-option-checkbox';
+        label.innerHTML = `
+          <input type="checkbox" data-opt-id="${escapeHtml(opt.id)}" ${isChecked ? 'checked' : ''}>
+          <span class="kit-option-label">
+            <span class="kit-option-name">${escapeHtml(opt.name)}</span>
+            <span class="kit-option-price">+${opt.price.toLocaleString('ru-RU')} ₽</span>
+          </span>
+        `;
+        const chk = label.querySelector('input');
+        chk.addEventListener('change', () => {
+          if (chk.checked) {
+            if (!pdpState.selectedKitOptionIds.includes(opt.id)) {
+              pdpState.selectedKitOptionIds.push(opt.id);
+            }
+          } else {
+            pdpState.selectedKitOptionIds = pdpState.selectedKitOptionIds.filter(id => id !== opt.id);
+          }
+          updatePriceDisplay();
+        });
+        optionsList.appendChild(label);
+      });
+    }
+
+    // Переключатель: «Только полотно» / «Комплект под ключ»
+    if (btnLeaf && btnFull) {
+      btnLeaf.onclick = () => {
+        pdpState.kitType = 'leaf';
+        btnLeaf.classList.add('active');
+        btnLeaf.setAttribute('aria-selected', 'true');
+        btnFull.classList.remove('active');
+        btnFull.setAttribute('aria-selected', 'false');
+        if (optionsWrap) optionsWrap.style.display = 'none';
+        updatePriceDisplay();
+      };
+
+      btnFull.onclick = () => {
+        pdpState.kitType = 'kit';
+        btnFull.classList.add('active');
+        btnFull.setAttribute('aria-selected', 'true');
+        btnLeaf.classList.remove('active');
+        btnLeaf.setAttribute('aria-selected', 'false');
+        if (optionsWrap) optionsWrap.style.display = 'block';
+        updatePriceDisplay();
+      };
+    }
   }
 
   function setupExtraAddons() {
@@ -1033,14 +1168,28 @@
     }
 
     const price = calculateCurrentPrice();
-    const scenarioTitles = {
-      standard_kit_with_hardware: 'Полный комплект с фурнитурой',
-      kit_without_hardware: 'Комплект без фурнитуры',
-      leaf_only: 'Только полотно'
-    };
+
+    const isEntrance = (p.category && p.category.toLowerCase().includes('входн')) || (p.type === 'entrance');
+    const optionsConfig = (window.DVER_CONFIG && window.DVER_CONFIG.KIT_SURCHARGES)
+      ? (isEntrance ? window.DVER_CONFIG.KIT_SURCHARGES.entrance : window.DVER_CONFIG.KIT_SURCHARGES.interior)
+      : [];
+
+    const activeOptNames = [];
+    if (pdpState.kitType === 'kit') {
+      optionsConfig.forEach(opt => {
+        if (pdpState.selectedKitOptionIds.includes(opt.id)) {
+          activeOptNames.push(opt.name);
+        }
+      });
+    }
+
+    const kitTypeTitle = pdpState.kitType === 'kit' ? 'Комплект «под ключ»' : 'Только полотно';
+    const hardwareDesc = pdpState.kitType === 'kit'
+      ? (activeOptNames.length > 0 ? activeOptNames.join(', ') : 'Базовый комплект')
+      : 'Без погонажа и фурнитуры';
 
     const cartItem = {
-      id: `${p.id}-${pdpState.activeVariantIndex}-${pdpState.activeSize}-${pdpState.activeScenario}-${pdpState.activeOpening}`,
+      id: `${p.id}-${pdpState.activeVariantIndex}-${pdpState.activeSize}-${pdpState.kitType}-${pdpState.selectedKitOptionIds.join('_')}-${pdpState.activeOpening || 'uni'}`,
       productId: p.id,
       brand: p.brand || 'Двери №1',
       model: p.model || 'Модель двери',
@@ -1048,11 +1197,15 @@
       collection: p.collection || '',
       article: p.article || '',
       variant: vName,
-      size: pdpState.activeSize,
-      opening: pdpState.activeOpening,
-      scenario: pdpState.activeScenario,
-      scenarioTitle: scenarioTitles[pdpState.activeScenario] || 'Комплект',
-      hardware: pdpState.wcTurn ? 'С сантехническим фиксатором (WC)' : 'Базовая ручка с магнитным замком',
+      size: pdpState.activeSize || '800 × 2000 мм',
+      opening: pdpState.activeOpening || 'Уточнит замерщик',
+      room: 'Гостиная', // Значение по умолчанию для спецификации по комнатам
+      kitType: pdpState.kitType,
+      kitTypeTitle: kitTypeTitle,
+      kitOptions: activeOptNames,
+      scenario: pdpState.kitType === 'kit' ? 'standard_kit_with_hardware' : 'leaf_only',
+      scenarioTitle: kitTypeTitle,
+      hardware: pdpState.wcTurn ? `${hardwareDesc} + WC-фиксатор` : hardwareDesc,
       wcTurn: pdpState.wcTurn,
       unitPrice: price,
       isPriceKnown: (typeof price === 'number' && price > 0),

@@ -31,12 +31,25 @@
   // --------------------------------------------------------------------------
 
   function initCartPage() {
+    // 1. Восстановление переданной по ссылке спецификации (?share=...)
+    restoreSharedCart();
+
+    // 2. Первоначальный рендер
     renderCart();
 
     // Слушаем события обновления корзины из любых источников
     window.addEventListener('dver1:cart-updated', () => {
       renderCart();
     });
+
+    // Привязка кнопок выгрузки PDF и расшаривания подборки
+    const btnShare = document.getElementById('btnShareCart');
+    const btnPdf = document.getElementById('btnDownloadPdf');
+    const btnSummaryPdf = document.getElementById('btnSummaryPdf');
+
+    if (btnShare) btnShare.addEventListener('click', shareCart);
+    if (btnPdf) btnPdf.addEventListener('click', generatePdfSpec);
+    if (btnSummaryPdf) btnSummaryPdf.addEventListener('click', generatePdfSpec);
 
     // Привязка кнопок старта оформления
     const btnStart = document.getElementById('btnStartCheckout');
@@ -117,11 +130,26 @@
 
     // Отрисовка списка товаров
     let html = '';
+    const standardRooms = (window.DVER_CONFIG && window.DVER_CONFIG.ROOMS) || [
+      'Гостиная', 'Спальня', 'Санузел', 'Гардеробная', 'Входная группа', 'Кухня', 'Детская', 'Кабинет'
+    ];
+
     cart.forEach(item => {
+      const currentRoom = item.room || 'Гостиная';
+      const isCustomRoom = !standardRooms.includes(currentRoom);
+
+      let roomsOptionsHtml = '';
+      standardRooms.forEach(rm => {
+        const selected = (currentRoom === rm) ? 'selected' : '';
+        roomsOptionsHtml += `<option value="${escapeHtml(rm)}" ${selected}>${escapeHtml(rm)}</option>`;
+      });
+
+      const currentOpening = item.opening || 'Уточнит замерщик';
+
       const priceDisplay = item.isPriceKnown && typeof item.unitPrice === 'number'
         ? `
           <div class="cart-item-price-val">${(item.unitPrice * item.quantity).toLocaleString('ru-RU')} ₽</div>
-          <div class="cart-item-price-unit">${item.unitPrice.toLocaleString('ru-RU')} ₽ / комплект</div>
+          <div class="cart-item-price-unit">${item.unitPrice.toLocaleString('ru-RU')} ₽ / ед.</div>
         `
         : `
           <div class="cart-item-price-uncertain">Цена уточняется</div>
@@ -133,6 +161,9 @@
         : '';
 
       const resolvedImage = resolveCartImg(item.image);
+
+      const kitPillClass = item.kitType === 'kit' ? 'pill-kit' : 'pill-leaf';
+      const kitTitle = item.kitTypeTitle || (item.kitType === 'kit' ? 'Комплект «под ключ»' : 'Только полотно');
 
       html += `
         <article class="cart-item-card" data-id="${escapeHtml(item.id)}">
@@ -150,10 +181,39 @@
               <div class="cart-item-specs-grid">
                 <span class="cart-spec-pill"><strong>Цвет:</strong> ${escapeHtml(item.variant)}</span>
                 <span class="cart-spec-pill"><strong>Размер:</strong> ${escapeHtml(item.size)}</span>
-                <span class="cart-spec-pill"><strong>Открывание:</strong> ${escapeHtml(item.opening)}</span>
-                <span class="cart-spec-pill"><strong>Комплектация:</strong> ${escapeHtml(item.scenarioTitle)}</span>
-                <span class="cart-spec-pill"><strong>Фурнитура:</strong> ${escapeHtml(item.hardware)}</span>
+                <span class="cart-spec-pill ${kitPillClass}"><strong>Комплектация:</strong> ${escapeHtml(kitTitle)}</span>
+                ${item.hardware ? `<span class="cart-spec-pill"><strong>Состав:</strong> ${escapeHtml(item.hardware)}</span>` : ''}
               </div>
+
+              <!-- РАСПРЕДЕЛЕНИЕ ПО КОМНАТАМ И СТОРОНА ОТКРЫВАНИЯ (SPRINT 3) -->
+              <div class="cart-item-custom-fields">
+                <div class="cart-field-group">
+                  <label class="cart-field-label">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    <span>Помещение:</span>
+                  </label>
+                  <div class="cart-room-combo">
+                    <select class="cart-room-select" data-id="${escapeHtml(item.id)}">
+                      ${roomsOptionsHtml}
+                      <option value="__custom__" ${isCustomRoom ? 'selected' : ''}>+ Свой вариант...</option>
+                    </select>
+                    <input type="text" class="cart-room-custom-input" data-id="${escapeHtml(item.id)}" placeholder="Название комнаты" value="${isCustomRoom ? escapeHtml(currentRoom) : ''}" style="${isCustomRoom ? 'display: block;' : 'display: none;'}">
+                  </div>
+                </div>
+
+                <div class="cart-field-group">
+                  <label class="cart-field-label">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><circle cx="14" cy="12" r="1.5"/></svg>
+                    <span>Открывание:</span>
+                  </label>
+                  <select class="cart-opening-select" data-id="${escapeHtml(item.id)}">
+                    <option value="Левое" ${currentOpening === 'Левое' ? 'selected' : ''}>Левое</option>
+                    <option value="Правое" ${currentOpening === 'Правое' ? 'selected' : ''}>Правое</option>
+                    <option value="Уточнит замерщик" ${(currentOpening === 'Уточнит замерщик' || currentOpening === 'Универсальное') ? 'selected' : ''}>Уточнит замерщик</option>
+                  </select>
+                </div>
+              </div>
+
               ${uncertainAlert}
             </div>
 
@@ -179,6 +239,40 @@
     });
 
     itemsContainer.innerHTML = html;
+
+    // Слушатели смены комнаты
+    itemsContainer.querySelectorAll('.cart-room-select').forEach(sel => {
+      sel.addEventListener('change', () => {
+        const id = sel.getAttribute('data-id');
+        const customInput = itemsContainer.querySelector(`.cart-room-custom-input[data-id="${id}"]`);
+        if (sel.value === '__custom__') {
+          if (customInput) {
+            customInput.style.display = 'block';
+            customInput.focus();
+          }
+        } else {
+          if (customInput) customInput.style.display = 'none';
+          window.CartStore.updateItem(id, { room: sel.value });
+        }
+      });
+    });
+
+    // Слушатели кастомного ввода комнаты
+    itemsContainer.querySelectorAll('.cart-room-custom-input').forEach(input => {
+      input.addEventListener('input', () => {
+        const id = input.getAttribute('data-id');
+        const val = input.value.trim() || 'Помещение';
+        window.CartStore.updateItem(id, { room: val });
+      });
+    });
+
+    // Слушатели смены стороны открывания
+    itemsContainer.querySelectorAll('.cart-opening-select').forEach(sel => {
+      sel.addEventListener('change', () => {
+        const id = sel.getAttribute('data-id');
+        window.CartStore.updateItem(id, { opening: sel.value });
+      });
+    });
 
     // Навешивание событий удаления и степпера
     itemsContainer.querySelectorAll('.btn-remove-item').forEach(btn => {
@@ -766,6 +860,230 @@
         btn.setAttribute('aria-expanded', 'false');
       });
     }
+  }
+
+  // --------------------------------------------------------------------------
+  // SPRINT 3: ШЕРИНГ ПОДБОРКИ, PDF СМЕТА И УВЕДОМЛЕНИЯ
+  // --------------------------------------------------------------------------
+
+  function showToast(msg) {
+    let toast = document.getElementById('siteToast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'siteToast';
+      toast.className = 'toast-notice';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3200);
+  }
+
+  // 1. Поделиться подборкой (Сериализация корзины в URL)
+  function shareCart() {
+    const cart = window.CartStore.getCart();
+    if (!cart || cart.length === 0) {
+      showToast('Спецификация пуста — добавьте двери для создания ссылки');
+      return;
+    }
+
+    const payload = cart.map(it => ({
+      id: it.productId,
+      t: it.title || it.model,
+      b: it.brand,
+      v: it.variant,
+      s: it.size,
+      o: it.opening,
+      r: it.room,
+      k: it.kitType,
+      opt: it.kitOptions || [],
+      q: it.quantity,
+      p: it.unitPrice,
+      img: it.image
+    }));
+
+    try {
+      const jsonStr = JSON.stringify(payload);
+      const b64 = btoa(encodeURIComponent(jsonStr));
+      const url = `${window.location.origin}${window.location.pathname}?share=${b64}`;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+          showToast('✓ Ссылка на подборку скопирована');
+        }).catch(() => {
+          prompt('Скопируйте ссылку на спецификацию:', url);
+        });
+      } else {
+        prompt('Скопируйте ссылку на спецификацию:', url);
+      }
+    } catch (e) {
+      console.error('Ошибка создания ссылки:', e);
+      showToast('Не удалось сформировать ссылку');
+    }
+  }
+
+  // 2. Восстановление подборки из ?share=...
+  function restoreSharedCart() {
+    const params = new URLSearchParams(window.location.search);
+    const shareParam = params.get('share');
+    if (!shareParam) return;
+
+    try {
+      const decodedJson = decodeURIComponent(atob(shareParam));
+      const items = JSON.parse(decodedJson);
+      if (Array.isArray(items) && items.length > 0) {
+        const restored = items.map(it => {
+          const isPriceKnown = typeof it.p === 'number' && it.p > 0;
+          const kitType = it.k || 'kit';
+          const kitTypeTitle = kitType === 'kit' ? 'Комплект «под ключ»' : 'Только полотно';
+          const optList = Array.isArray(it.opt) ? it.opt : [];
+          return {
+            id: `${it.id}-${it.v}-${it.s}-${kitType}-${optList.length}-${it.o || 'uni'}`,
+            productId: it.id,
+            title: it.t || 'Модель двери',
+            brand: it.b || 'Двери №1',
+            variant: it.v || 'Базовое покрытие',
+            size: it.s || '800 × 2000 мм',
+            opening: it.o || 'Уточнит замерщик',
+            room: it.r || 'Гостиная',
+            kitType: kitType,
+            kitTypeTitle: kitTypeTitle,
+            kitOptions: optList,
+            scenario: kitType === 'kit' ? 'standard_kit_with_hardware' : 'leaf_only',
+            scenarioTitle: kitTypeTitle,
+            hardware: optList.length > 0 ? optList.join(', ') : (kitType === 'kit' ? 'Базовый комплект' : 'Без фурнитуры'),
+            quantity: Math.max(1, parseInt(it.q, 10) || 1),
+            unitPrice: isPriceKnown ? it.p : null,
+            isPriceKnown: isPriceKnown,
+            image: it.img || 'door-placeholder.svg'
+          };
+        });
+
+        window.CartStore.setCart(restored);
+        showToast('✓ Спецификация успешно загружена по ссылке');
+
+        // Очищаем параметр из адресной строки без перезагрузки
+        const cleanUrl = window.location.pathname;
+        window.history.replaceState({}, document.title, cleanUrl);
+      }
+    } catch (e) {
+      console.error('Ошибка восстановления подборки:', e);
+    }
+  }
+
+  // 3. Генерация печатной сметы PDF
+  function generatePdfSpec() {
+    const cart = window.CartStore.getCart();
+    if (!cart || cart.length === 0) {
+      showToast('Корзина пуста — добавьте двери для выгрузки сметы');
+      return;
+    }
+
+    const printContainer = document.getElementById('printablePdfSpec');
+    if (!printContainer) return;
+
+    const totals = window.CartStore.calculateTotals(cart);
+    const dateStr = new Date().toLocaleDateString('ru-RU', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
+
+    let rowsHtml = '';
+    cart.forEach((it, idx) => {
+      const rowSum = (it.isPriceKnown && typeof it.unitPrice === 'number')
+        ? `${(it.unitPrice * it.quantity).toLocaleString('ru-RU')} ₽`
+        : 'По запросу';
+      const unitPriceStr = (it.isPriceKnown && typeof it.unitPrice === 'number')
+        ? `${it.unitPrice.toLocaleString('ru-RU')} ₽`
+        : 'По запросу';
+      const imgPath = resolveCartImg(it.image);
+
+      rowsHtml += `
+        <tr>
+          <td style="text-align: center; font-weight: 600;">${idx + 1}</td>
+          <td style="text-align: center; width: 60px;">
+            <img src="${escapeHtml(imgPath)}" style="width: 44px; height: 60px; object-fit: contain;" alt="">
+          </td>
+          <td>
+            <strong>${escapeHtml(it.brand)} • ${escapeHtml(it.title)}</strong><br>
+            <small style="color: #666;">Цвет: ${escapeHtml(it.variant)} | Размер: ${escapeHtml(it.size)}</small>
+          </td>
+          <td><strong>${escapeHtml(it.room || 'Гостиная')}</strong></td>
+          <td>${escapeHtml(it.opening || 'Уточнит замерщик')}</td>
+          <td>
+            <small><strong>${escapeHtml(it.kitTypeTitle || (it.kitType === 'kit' ? 'Комплект «под ключ»' : 'Только полотно'))}</strong></small><br>
+            <small style="color: #555;">${escapeHtml(it.hardware || '')}</small>
+          </td>
+          <td style="text-align: center; font-weight: 600;">${it.quantity} шт.</td>
+          <td style="text-align: right; white-space: nowrap;">${unitPriceStr}</td>
+          <td style="text-align: right; font-weight: 700; white-space: nowrap;">${rowSum}</td>
+        </tr>
+      `;
+    });
+
+    printContainer.innerHTML = `
+      <div class="print-doc-header">
+        <div class="print-header-top">
+          <div class="print-logo-box">
+            <img src="logo.png" alt="Двери №1" class="print-logo-img">
+            <div class="print-tagline">ПРЕМИАЛЬНЫЕ ШОУРУМЫ ДВЕРЕЙ И ИНЖЕНЕРНЫХ СИСТЕМ</div>
+          </div>
+          <div class="print-meta-box">
+            <div class="print-doc-number">СПЕЦИФИКАЦИЯ-СМЕТА № DVER-${Date.now().toString().slice(-6)}</div>
+            <div class="print-doc-date">Дата формирования: ${dateStr}</div>
+          </div>
+        </div>
+        <div class="print-contacts-bar">
+          <span><strong>Казань:</strong> ул. Сибирский тракт, 59б</span>
+          <span><strong>Челны:</strong> Казанский пр-т, 232</span>
+          <span><strong>Единый телефон:</strong> +7 (843) 205-00-01</span>
+          <span><strong>Сайт:</strong> dver1.ru</span>
+        </div>
+      </div>
+
+      <table class="print-spec-table">
+        <thead>
+          <tr>
+            <th>№</th>
+            <th>Фото</th>
+            <th>Модель и отделка</th>
+            <th>Помещение</th>
+            <th>Открывание</th>
+            <th>Комплектация</th>
+            <th>Кол-во</th>
+            <th>Цена / ед.</th>
+            <th>Сумма</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rowsHtml}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6" style="text-align: right; font-weight: 700;">ИТОГО ПО СПЕЦИФИКАЦИИ:</td>
+            <td style="text-align: center; font-weight: 700;">${totals.totalCount} шт.</td>
+            <td></td>
+            <td style="text-align: right; font-weight: 800; font-size: 1.1em; color: #111;">
+              ${totals.knownItemsTotal.toLocaleString('ru-RU')} ₽
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="print-footer-notes">
+        <p><strong>Примечание:</strong> Предварительная спецификация сформирована в шоуруме «Двери №1». Окончательная комплектация, толщина телескопических доборов и присадка замков верифицируются инженером-замерщиком при выезде на объект с лазерным измерительным комплексом.</p>
+        <div class="print-signature-row">
+          <div>Заказчик: _______________________ / __________________</div>
+          <div>Инженер-куратор: _______________________ / __________________</div>
+        </div>
+      </div>
+    `;
+
+    window.print();
   }
 
   function escapeHtml(str) {

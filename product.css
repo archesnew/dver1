@@ -1526,3 +1526,271 @@
     padding: 24px 20px;
   }
 }
+
+
+/* ==========================================================================
+   SPRINT 3: WALL COLOR FITTING & LIVE KIT CONFIGURATOR (PRODUCT PAGE)
+   ========================================================================== */
+
+/* Realistic Door Drop-Shadow */
+.pdp-main-img {
+  filter: drop-shadow(0 14px 28px rgba(34, 35, 32, 0.16));
+  transition: transform var(--transition-smooth), filter 0.35s ease;
+}
+
+.pdp-main-img.shadow-dark-bg {
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.45));
+}
+
+.pdp-main-photo-card {
+  transition: background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+/* Wall Color Fitting Panel */
+.pdp-wall-fitting-panel {
+  margin-top: 14px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-stone);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(34, 35, 32, 0.04);
+}
+
+.pdp-wall-fitting-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pdp-wall-fitting-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pdp-wall-fitting-title svg {
+  color: var(--accent-terracotta);
+}
+
+.pdp-wall-color-name {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.pdp-wall-swatches {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.wall-swatch-btn {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  outline: 1px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              outline-color 0.2s ease,
+              box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.wall-swatch-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wall-swatch-btn.active {
+  transform: scale(1.18);
+  outline: 2.5px solid var(--accent-terracotta);
+  box-shadow: 0 4px 14px rgba(184, 92, 58, 0.35);
+}
+
+.wall-swatch-btn.active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--accent-terracotta);
+}
+
+/* Tooltip on swatch */
+.wall-swatch-btn[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #222320;
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.18s ease;
+  z-index: 20;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.wall-swatch-btn:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Live Kit Configurator (Task 2) */
+.pdp-kit-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  background: var(--bg-stone-subtle);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-stone);
+  margin-top: 10px;
+}
+
+.kit-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: var(--text-secondary);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kit-toggle-btn .kit-toggle-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.kit-toggle-btn .kit-toggle-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.kit-toggle-btn .kit-toggle-text strong {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.kit-toggle-btn .kit-toggle-text small {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.kit-toggle-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.kit-toggle-btn.active {
+  background: #FFFFFF;
+  border-color: var(--border-stone);
+  color: var(--text-primary);
+  box-shadow: 0 3px 10px rgba(34, 35, 32, 0.06);
+}
+
+.kit-toggle-btn.active strong {
+  color: var(--accent-terracotta);
+}
+
+/* Kit Options Wrap */
+.pdp-kit-options-wrap {
+  margin-top: 14px;
+  padding: 14px;
+  background: #FAF9F6;
+  border: 1px solid var(--border-stone);
+  border-radius: var(--radius-sm);
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.kit-options-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.kit-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kit-option-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 12px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-stone);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.84rem;
+  color: var(--text-primary);
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.kit-option-checkbox:hover {
+  border-color: var(--accent-terracotta);
+  background: #FDFBF7;
+}
+
+.kit-option-checkbox input[type="checkbox"] {
+  accent-color: var(--accent-terracotta);
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.kit-option-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.kit-option-name {
+  font-weight: 500;
+}
+
+.kit-option-price {
+  font-weight: 600;
+  color: var(--accent-terracotta);
+  font-size: 0.84rem;
+  margin-left: 12px;
+  white-space: nowrap;
+}

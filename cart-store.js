@@ -55,6 +55,10 @@
           variant: item.variant || 'Базовое покрытие',
           size: item.size || '800 × 2000 мм',
           opening: item.opening || 'Универсальное',
+          room: item.room || 'Гостиная',
+          kitType: item.kitType || 'kit',
+          kitTypeTitle: item.kitTypeTitle || (item.kitType === 'leaf' ? 'Только полотно' : 'Комплект под ключ'),
+          kitOptions: Array.isArray(item.kitOptions) ? item.kitOptions : [],
           scenario: item.scenario || 'standard_kit_with_hardware',
           scenarioTitle: item.scenarioTitle || 'Полный комплект с фурнитурой',
           hardware: item.hardware || 'Базовая фурнитура с магнитным замком',
@@ -91,6 +95,17 @@
       this.setCart(filtered);
       this.syncBackground();
       return filtered;
+    },
+
+    updateItem(id, partial) {
+      if (!id || !partial) return this.getCart();
+      const cart = this.getCart();
+      const idx = cart.findIndex(it => it.id === id);
+      if (idx === -1) return cart;
+      cart[idx] = Object.assign({}, cart[idx], partial);
+      this.setCart(cart);
+      this.syncBackground();
+      return cart;
     },
 
     clearCart() {
