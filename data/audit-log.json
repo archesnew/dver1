@@ -1,5 +1,49 @@
 [
   {
+    "id": "AUD-1795221037319-3503f4e4",
+    "timestamp": "2026-11-21T00:30:37.319Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795220830606-ad03efa1",
+    "timestamp": "2026-11-21T00:27:10.606Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795220795953-929f1793",
+    "timestamp": "2026-11-21T00:26:35.953Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795220456632-b024760e",
+    "timestamp": "2026-11-21T00:20:56.632Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
     "id": "AUD-1795220068001-cca51631",
     "timestamp": "2026-11-21T00:14:28.001Z",
     "user": "Руководитель (Владелец) (owner)",

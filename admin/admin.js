@@ -331,38 +331,95 @@
 
   function renderOrdersTable(orders) {
     const tbody = document.getElementById('ordersTableBody');
+    const mobileCards = document.getElementById('ordersMobileCardsList');
+
     if (!orders || orders.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="11" class="empty-cell">Заказы не найдены.</td></tr>`;
+      if (tbody) tbody.innerHTML = `<tr><td colspan="11" class="empty-cell">Заказы не найдены.</td></tr>`;
+      if (mobileCards) mobileCards.innerHTML = `<div class="empty-cell">Заказы не найдены.</div>`;
       return;
     }
 
-    tbody.innerHTML = orders.map(o => {
-      const dateStr = formatDate(o.createdAt);
-      const doorsCount = o.items ? o.items.reduce((acc, i) => acc + (i.quantity || 1), 0) : 1;
-      const sumStr = o.totalKnownPrice ? `${o.totalKnownPrice.toLocaleString('ru-RU')} ₽` : '—';
-      const agreedStr = o.agreedTotal ? `<strong style="color: #16A34A;">${o.agreedTotal.toLocaleString('ru-RU')} ₽</strong>` : '<span style="color: #8E908A;">—</span>';
-      const statusClass = `status-${o.status.replace(/\s+/g, '-')}`;
+    // 1. Desktop Optimized Table Rows
+    if (tbody) {
+      tbody.innerHTML = orders.map(o => {
+        const dateHtml = formatSplitDate(o.createdAt);
+        const doorsCount = o.items ? o.items.reduce((acc, i) => acc + (i.quantity || 1), 0) : 1;
+        const sumStr = o.totalKnownPrice ? `${o.totalKnownPrice.toLocaleString('ru-RU')} ₽` : '—';
+        const agreedStr = o.agreedTotal
+          ? `<strong class="val-agreed-money">${o.agreedTotal.toLocaleString('ru-RU')} ₽</strong>`
+          : `<span class="val-no-money">—</span>`;
+        const statusClass = `status-${o.status.replace(/\s+/g, '-')}`;
+        const managerDisplay = o.assignedManager
+          ? o.assignedManager.replace('Менеджер шоурума ', 'Менеджер ').replace('Старший администратор', 'Старший админ')
+          : 'Не назначен';
 
-      return `
-        <tr style="cursor: pointer;" onclick="window.AdminApp.openOrderDrawer('${o.id}')">
-          <td style="font-weight: 700; color: #1d1e1c;">#${o.id}</td>
-          <td style="color: #656762; font-size: 0.75rem;">${dateStr}</td>
-          <td style="font-weight: 600;">${escapeHtml(o.client?.name || '—')}</td>
-          <td><a href="tel:${o.client?.phone}" class="ci-phone" onclick="event.stopPropagation()">${escapeHtml(o.client?.phone || '—')}</a></td>
-          <td>${escapeHtml(o.client?.city || '—')}</td>
-          <td class="num-cell">${doorsCount} шт.</td>
-          <td class="num-cell" style="font-weight: 600;">${sumStr}</td>
-          <td class="num-cell">${agreedStr}</td>
-          <td style="font-size: 0.75rem; color: #656762;">${escapeHtml(o.assignedManager || 'Не назначен')}</td>
-          <td><span class="status-pill ${statusClass}">${o.status}</span></td>
-          <td>
-            <button type="button" class="btn-subtle" onclick="event.stopPropagation(); window.AdminApp.openOrderDrawer('${o.id}')">
-              Открыть →
-            </button>
-          </td>
-        </tr>
-      `;
-    }).join('');
+        return `
+          <tr class="ord-table-row" onclick="window.AdminApp.openOrderDrawer('${o.id}')">
+            <td class="col-ord-id"><span class="ord-id-code">#${o.id}</span></td>
+            <td class="col-ord-date"><div class="ord-date-box">${dateHtml}</div></td>
+            <td class="col-ord-client" title="${escapeHtml(o.client?.name || '—')}">
+              <span class="ord-client-name">${escapeHtml(o.client?.name || '—')}</span>
+            </td>
+            <td class="col-ord-phone">
+              <a href="tel:${o.client?.phone}" class="ci-phone" onclick="event.stopPropagation()">${escapeHtml(o.client?.phone || '—')}</a>
+            </td>
+            <td class="col-ord-city"><span class="ord-city-tag">${escapeHtml(o.client?.city || '—')}</span></td>
+            <td class="col-ord-qty num-cell">${doorsCount} шт.</td>
+            <td class="col-ord-sum num-cell"><strong class="ord-sum-val">${sumStr}</strong></td>
+            <td class="col-ord-agreed num-cell">${agreedStr}</td>
+            <td class="col-ord-mgr" title="${escapeHtml(o.assignedManager || '')}">
+              <span class="ord-mgr-name">${escapeHtml(managerDisplay)}</span>
+            </td>
+            <td class="col-ord-status"><span class="status-pill ${statusClass}">${o.status}</span></td>
+            <td class="col-ord-act">
+              <button type="button" class="btn-open-order" onclick="event.stopPropagation(); window.AdminApp.openOrderDrawer('${o.id}')">
+                Открыть
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // 2. Mobile Responsive Cards (<= 820px)
+    if (mobileCards) {
+      mobileCards.innerHTML = orders.map(o => {
+        const dateStr = formatDate(o.createdAt);
+        const doorsCount = o.items ? o.items.reduce((acc, i) => acc + (i.quantity || 1), 0) : 1;
+        const sumStr = o.totalKnownPrice ? `${o.totalKnownPrice.toLocaleString('ru-RU')} ₽` : '—';
+        const statusClass = `status-${o.status.replace(/\s+/g, '-')}`;
+
+        return `
+          <div class="ord-mobile-card" onclick="window.AdminApp.openOrderDrawer('${o.id}')">
+            <div class="omc-top">
+              <div class="omc-id-date">
+                <span class="omc-id">#${o.id}</span>
+                <span class="omc-date">${dateStr}</span>
+              </div>
+              <span class="status-pill ${statusClass}">${o.status}</span>
+            </div>
+
+            <div class="omc-client-row">
+              <strong class="omc-name">${escapeHtml(o.client?.name || 'Клиент')}</strong>
+              <a href="tel:${o.client?.phone}" class="ci-phone omc-phone" onclick="event.stopPropagation()">${escapeHtml(o.client?.phone || '—')}</a>
+            </div>
+
+            <div class="omc-meta-row">
+              <span class="omc-city">г. ${escapeHtml(o.client?.city || 'Казань')}</span>
+              <span class="omc-qty">${doorsCount} шт. дверей</span>
+              <strong class="omc-sum">${sumStr}</strong>
+            </div>
+
+            <div class="omc-bottom">
+              <span class="omc-mgr">${escapeHtml(o.assignedManager || 'Менеджер не назначен')}</span>
+              <button type="button" class="btn-subtle" onclick="event.stopPropagation(); window.AdminApp.openOrderDrawer('${o.id}')">
+                Открыть заявку →
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
   }
 
   // Open Order Drawer
@@ -1301,6 +1358,18 @@
       });
     } catch (e) {
       return isoStr;
+    }
+  }
+
+  function formatSplitDate(isoStr) {
+    if (!isoStr) return '<span class="ord-date-val">—</span>';
+    try {
+      const d = new Date(isoStr);
+      const date = d.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' });
+      const time = d.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+      return `<span class="ord-date-val">${date}</span><span class="ord-time-val">${time}</span>`;
+    } catch (e) {
+      return `<span class="ord-date-val">${isoStr}</span>`;
     }
   }
 

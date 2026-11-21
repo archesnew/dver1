@@ -324,10 +324,10 @@
         <!-- РАЗДЕЛ 2: ЗАКАЗЫ (ORDERS) -->
         <!-- ================================================================ -->
         <section id="viewOrders" class="admin-view">
-          <div class="section-toolbar">
+          <div class="section-toolbar orders-toolbar">
             <div class="toolbar-left">
-              <div class="search-field">
-                <input type="text" id="orderSearchInput" placeholder="Поиск по № заявки, телефону, имени клиента...">
+              <div class="search-field orders-search-field">
+                <input type="text" id="orderSearchInput" placeholder="Поиск по № заявки, телефону, имени...">
               </div>
 
               <select id="orderStatusFilter" class="select-filter">
@@ -360,22 +360,23 @@
             </div>
           </div>
 
-          <div class="data-card">
-            <div class="table-wrap">
-              <table class="data-table">
+          <div class="data-card orders-card-container">
+            <!-- ДЕСКТОПНАЯ ОПТИМИЗИРОВАННАЯ ТАБЛИЦА (11 КОЛОНОК) -->
+            <div class="table-wrap orders-table-wrap">
+              <table class="data-table orders-table">
                 <thead>
                   <tr>
-                    <th>№ Заказа</th>
-                    <th>Дата и время</th>
-                    <th>Клиент</th>
-                    <th>Телефон</th>
-                    <th>Город</th>
-                    <th class="num-cell">Позиций</th>
-                    <th class="num-cell">Сумма (каталог)</th>
-                    <th class="num-cell">Согласовано</th>
-                    <th>Ответственный</th>
-                    <th>Статус</th>
-                    <th>Действия</th>
+                    <th class="col-ord-id">№ заказа</th>
+                    <th class="col-ord-date">Дата</th>
+                    <th class="col-ord-client">Клиент</th>
+                    <th class="col-ord-phone">Телефон</th>
+                    <th class="col-ord-city">Город</th>
+                    <th class="col-ord-qty num-cell">Позиций</th>
+                    <th class="col-ord-sum num-cell">Сумма</th>
+                    <th class="col-ord-agreed num-cell">Согласовано</th>
+                    <th class="col-ord-mgr">Ответственный</th>
+                    <th class="col-ord-status">Статус</th>
+                    <th class="col-ord-act">Действия</th>
                   </tr>
                 </thead>
                 <tbody id="ordersTableBody">
@@ -383,6 +384,9 @@
                 </tbody>
               </table>
             </div>
+
+            <!-- АДАПТИВНЫЙ СПИСОК КАРТОЧЕК ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (<= 820px) -->
+            <div id="ordersMobileCardsList" class="orders-mobile-cards" style="display: none;"></div>
 
             <div class="pagination-footer" id="ordersPagination"></div>
           </div>

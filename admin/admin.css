@@ -837,6 +837,327 @@ body {
   font-style: italic;
 }
 
+/* ==============================================================================
+   СПЕЦИАЛЬНЫЕ СТИЛИ: ОПТИМИЗИРОВАННАЯ ТАБЛИЦА ЗАКАЗОВ (UX FIX)
+   ============================================================================== */
+.orders-toolbar {
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.orders-toolbar .search-field input,
+.orders-toolbar .select-filter {
+  height: 36px;
+  padding: 0 12px;
+  font-size: 0.8125rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+}
+
+.orders-search-field input {
+  min-width: 280px;
+}
+
+.orders-card-container {
+  padding: 16px 18px;
+}
+
+.orders-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden; /* Fits cleanly without any horizontal scroll */
+  box-sizing: border-box;
+}
+
+.orders-table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+.orders-table th {
+  padding: 8px 6px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.orders-table td {
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.8125rem;
+  color: var(--text-main);
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.orders-table tr:hover td {
+  background: #FAF9F5;
+}
+
+/* Колонки десктопной таблицы заказов (ровно 100% в сумме) */
+.orders-table .col-ord-id {
+  width: 8.5%;
+  white-space: nowrap;
+}
+
+.orders-table .col-ord-date {
+  width: 8.5%;
+  white-space: nowrap;
+}
+
+.orders-table .col-ord-client {
+  width: 13%;
+  overflow: hidden;
+}
+
+.orders-table .col-ord-phone {
+  width: 11%;
+  white-space: nowrap;
+}
+
+.orders-table .col-ord-city {
+  width: 7%;
+  white-space: nowrap;
+}
+
+.orders-table .col-ord-qty {
+  width: 6%;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.orders-table .col-ord-sum {
+  width: 9%;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.orders-table .col-ord-agreed {
+  width: 9%;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.orders-table .col-ord-mgr {
+  width: 10%;
+  overflow: hidden;
+}
+
+.orders-table .col-ord-status {
+  width: 10%;
+  white-space: nowrap;
+}
+
+.orders-table .col-ord-act {
+  width: 8%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Элементы строки заказа */
+.ord-id-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.ord-date-box {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.ord-date-val {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-main);
+  font-variant-numeric: tabular-nums;
+}
+
+.ord-time-val {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.ord-client-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  color: var(--text-main);
+}
+
+.ord-city-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: var(--bg-subtle);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.val-agreed-money {
+  color: var(--status-conf);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.val-no-money {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.ord-sum-val {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  font-variant-numeric: tabular-nums;
+}
+
+.ord-mgr-name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.btn-open-order {
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-open-order:hover {
+  border-color: var(--accent-terracotta);
+  color: var(--accent-terracotta);
+  background: var(--accent-subtle);
+}
+
+/* ------------------------------------------------------------------------------
+   АДАПТИВНЫЕ КАРТОЧКИ ЗАКАЗОВ ДЛЯ МОБИЛЬНЫХ И ПЛАНШЕТОВ (<= 880px)
+   ------------------------------------------------------------------------------ */
+@media (max-width: 880px) {
+  .orders-table-wrap {
+    display: none !important;
+  }
+  .orders-mobile-cards {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.ord-mobile-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ord-mobile-card:hover {
+  border-color: var(--accent-terracotta);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.omc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.omc-id-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.omc-id {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--text-main);
+}
+
+.omc-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.omc-client-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.omc-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.omc-phone {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.omc-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding: 6px 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 8px;
+}
+
+.omc-sum {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.omc-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.omc-mgr {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
 /* Статусные бейджи */
 .status-pill {
   display: inline-block;
