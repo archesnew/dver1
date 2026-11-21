@@ -190,7 +190,7 @@ a {
 /* ПЕРЕКЛЮЧАТЕЛЬ ГОРОДА В ШАПКЕ (APPLE LIQUID GLASS) */
 .header-city-widget {
   position: relative;
-  margin-left: 20px;
+  margin: 0;
   display: inline-flex;
   align-items: center;
   z-index: 1010;
@@ -211,6 +211,7 @@ a {
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  white-space: nowrap;
 }
 
 .btn-city-switcher:hover,
@@ -238,7 +239,7 @@ a {
 .city-dropdown-menu {
   position: absolute;
   top: calc(100% + 8px);
-  left: 0;
+  right: 0;
   min-width: 260px;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px);
@@ -3651,33 +3652,38 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 24px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  padding: 13px 24px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-primary, #222320);
+  border: 1px solid var(--border-stone, #DCDAD4);
+  border-radius: var(--radius-pill, 9999px);
+  font-family: var(--font-sans, inherit);
+  font-size: 0.9375rem;
+  font-weight: 550;
+  letter-spacing: -0.01em;
   text-decoration: none;
   cursor: pointer;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-hero-measure:hover {
   background: #FFFFFF;
-  color: #222320;
-  border-color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  color: var(--accent-terracotta, #B85C3A);
+  border-color: var(--accent-terracotta, #B85C3A);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(184, 92, 58, 0.15);
 }
 
 .btn-hero-measure .btn-icon-measure {
   display: inline-flex;
   transition: transform 0.25s ease;
+}
+
+.btn-hero-measure .btn-icon-measure svg {
+  stroke: var(--accent-terracotta, #B85C3A);
 }
 
 .btn-hero-measure:hover .btn-icon-measure {

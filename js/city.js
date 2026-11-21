@@ -166,16 +166,16 @@
       </div>
     `;
 
-    // Вставляем виджет перед блоком навигации или после логотипа
-    const headerNav = headerContainer.querySelector('.header-nav');
-    const headerLogo = headerContainer.querySelector('.header-logo-link');
+    // Вставляем виджет в блок действий шапки (.header-actions) перед корзиной
+    const headerActions = headerContainer.querySelector('.header-actions');
+    const btnCart = headerActions ? headerActions.querySelector('#btnHeaderCart, .btn-glass-cart') : null;
 
-    if (headerLogo && headerNav) {
-      headerLogo.insertAdjacentElement('afterend', widget);
-    } else if (headerLogo) {
-      headerLogo.insertAdjacentElement('afterend', widget);
+    if (btnCart) {
+      btnCart.insertAdjacentElement('beforebegin', widget);
+    } else if (headerActions) {
+      headerActions.prepend(widget);
     } else {
-      headerContainer.prepend(widget);
+      headerContainer.appendChild(widget);
     }
 
     // Слушатели открытия/закрытия
