@@ -87,7 +87,13 @@
         "newStatus": "В обработке",
         "note": "Тестовое взятие в работу"
       }
-    ]
+    ],
+    "telegram": {
+      "status": "unconfigured",
+      "attempts": 0,
+      "lastAttemptAt": "2026-11-21T01:02:04.479Z",
+      "lastError": "TELEGRAM_BOT_TOKEN или TELEGRAM_CHAT_ID не заданы в .env"
+    }
   },
   {
     "id": "D1-2026-6589",
