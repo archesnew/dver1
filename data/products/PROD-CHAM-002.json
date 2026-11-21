@@ -1,0 +1,103 @@
+{
+  "id": "PROD-CHAM-002",
+  "brand": "Chameleon Doors",
+  "brand_id": "BRAND-CHAMELEON",
+  "collection": "Invisible",
+  "collection_id": "COLL-CHAM-INVISIBLE",
+  "model": "Invisible Reverse (Скрытая дверь 59 мм реверс под отделку)",
+  "article": null,
+  "category": "Скрытые двери",
+  "description": "Дверь скрытого монтажа Chameleon Doors Invisible Reverse (обратного открывания от себя на 90° в проем). Полотно под покраску, обои или штукатурку. Скрытый алюминиевый реверсивный короб под шпаклевку.",
+  "source": {
+    "pdf_file": "Chameleon Doors каталог 01.03.2026.pdf",
+    "page": 9,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Скрытая дверь",
+    "construction": "Каркасно-щитовое полотно с сотовым или трубчатым заполнением / брусом, алюминиевый скрытый короб",
+    "material": "Алюминий / МДФ / сосна",
+    "coating": "Грунт под покраску / штукатурку / обои",
+    "color": "Под покраску (белый грунт)",
+    "texture": "Гладкая грунтованная под финишную отделку",
+    "glass": "Нет",
+    "decor": "Алюминиевая кромка (матовый хром, черный)",
+    "style": "Минимализм / Хай-тек / Современный",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм",
+      "Высота до 2700 мм под заказ"
+    ],
+    "opening_direction": "Reverse (от себя в проем)",
+    "other_specs": {
+      "thickness": "40-59 мм",
+      "frame": "Анодированный алюминиевый короб скрытого монтажа"
+    }
+  },
+  "complectation": {
+    "leaf": "Грунтованное полотно с врезкой под скрытые петли и магнитный замок",
+    "frame": "Скрытый алюминиевый короб с уплотнителем и монтажными уголками",
+    "casing": "Без наличников (скрытый монтаж)",
+    "extensions": null,
+    "hinges": "Скрытые петли (хром / черный) 2 шт.",
+    "locks": "Магнитный замок AGB Mediana Polaris под фиксатор/цилиндр",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Врезка заводская"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-CHAM-002_main.webp",
+    "data/catalog-output/webp/PROD-CHAM-002_interior.webp",
+    "data/catalog-output/webp/PROD-CHAM-001_interior.webp"
+  ],
+  "price": 24500,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-CHAM-002-1",
+      "name": "Invisible Direct 2000х800 Алюм. кромка",
+      "size": "2000х800",
+      "color": "Грунт",
+      "opening": "Direct",
+      "image": "data/catalog-output/webp/PROD-CHAM-002_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-002_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-002-2",
+      "name": "Invisible Reverse 2000х800 Алюм. кромка",
+      "size": "2000х800",
+      "color": "Грунт",
+      "opening": "Reverse",
+      "image": "data/catalog-output/webp/PROD-CHAM-002_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-002_main.webp"
+    }
+  ],
+  "kit_price": 29900,
+  "leaf_price": 24500,
+  "dealer_price": 14500,
+  "color_groups": [
+    "white"
+  ],
+  "color_names": [
+    "Белый грунт под покраску"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "invisible",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-CHAM-002_main.webp",
+    "data/catalog-output/thumbs/PROD-CHAM-002_interior.webp",
+    "data/catalog-output/thumbs/PROD-CHAM-001_interior.webp"
+  ]
+}

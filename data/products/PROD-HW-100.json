@@ -1,0 +1,128 @@
+{
+  "id": "PROD-HW-100",
+  "brand": "Двери Голливуда",
+  "brand_id": "BRAND-HOLLYWOOD",
+  "collection": "Коллекция Блокбастер (Серия Беллеза)",
+  "collection_id": "COLL-HW-",
+  "model": "БЕЛЛЕЗА",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дизайнерская дверь «Двери Голливуда» — БЕЛЛЕЗА. Коллекция Блокбастер (Серия Беллеза). Премиальное исполнение, выверенная геометрия полотна и трендовая отделка.",
+  "source": {
+    "pdf_file": "Каталог Двери Голливуда 2026г.pdf",
+    "page": 72,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая / царговая усиленная конструкция",
+    "material": "МДФ высокой плотности / клееный массив сосны",
+    "coating": "Эмаль гладкая бесшовная / полимерное покрытие Soft Touch / Экошпон",
+    "color": "Шелковистый белый / Графит / Кашемир / Дуб натуральный / Орех",
+    "texture": "Матовая бархатистая / древесная глубокая",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Алюминиевый молдинг / глубокая 3D-фрезеровка / зеркало",
+    "style": "Неоклассика / Модерн / Арт-деко / Хай-тек",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (распашная, рото, раздвижная система-купе)",
+    "other_specs": {
+      "thickness": "38-44 мм",
+      "sound_insulation": "Повышенная шумоизоляция полотна"
+    }
+  },
+  "complectation": {
+    "leaf": "Дверное полотно БЕЛЛЕЗА с заводской врезкой или без врезки",
+    "frame": "Короб телескопический с уплотнителем (или скрытый короб Invisible)",
+    "casing": "Наличники фигурные каннелированные или плоские телескопические",
+    "extensions": "Доборы телескопические 100/150/200 мм",
+    "hinges": "Приобретаются отдельно (скрытые / накладные)",
+    "locks": "Приобретаются отдельно (магнитные замки)",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Плинтус и стеновые панели в цвет дверей (опция)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-HW-100_main.webp"
+  ],
+  "price": 12850,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-HW-100-1",
+      "name": "БЕЛЛЕЗА 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "Эмаль / Экошпон в ассортименте Hollywood Doors",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-HW-100_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-HW-100_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-HW-100-2",
+      "name": "БЕЛЛЕЗА 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "Эмаль / Экошпон в ассортименте Hollywood Doors",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-HW-100_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-HW-100_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-HW-100-3",
+      "name": "БЕЛЛЕЗА 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "Эмаль / Экошпон в ассортименте Hollywood Doors",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-HW-100_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-HW-100_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-HW-100-4",
+      "name": "БЕЛЛЕЗА 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "Эмаль / Экошпон в ассортименте Hollywood Doors",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-HW-100_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-HW-100_main.webp"
+    }
+  ],
+  "kit_price": 14900,
+  "leaf_price": 12850,
+  "dealer_price": 2850,
+  "color_groups": [
+    "grey",
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Графит",
+    "Дуб натуральный / Орех",
+    "Шелковистый белый / Кашемир"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-HW-100_main.webp"
+  ]
+}

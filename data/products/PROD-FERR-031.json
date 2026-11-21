@@ -1,0 +1,128 @@
+{
+  "id": "PROD-FERR-031",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери с зеркалом",
+  "collection_id": "COLL-FERR-",
+  "model": "9 см ГЕОМЕТРИЯ ЗЕРКАЛО бетон снежный",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь 9 см ГЕОМЕТРИЯ ЗЕРКАЛО бетон снежный. Коллекция: Двери с зеркалом. Внешняя отделка: фрезерованная МДФ-панель 8 мм, цвет - «сатин. Внутренняя отделка: МДФ-панель 10 мм, накладное зеркало, цвет -. Толщина полотна: 104 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 18,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "фрезерованная МДФ-панель 8 мм, цвет - «сатин",
+    "color": "фрезерованная МДФ-панель 8 мм, цвет - «сатин / МДФ-панель 10 мм, накладное зеркало, цвет -",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Зеркало с защитной пленкой",
+    "decor": "Накладное зеркало с защитной пленкой",
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "104 мм",
+      "frame_depth": "115 мм",
+      "insulation": "пенополистирол",
+      "seals": "3 контура уплотнителя из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 104 мм, внешняя отделка фрезерованная МДФ-панель 8 мм, цвет - «сатин, внутренняя МДФ-панель 10 мм, накладное зеркало, цвет -",
+    "frame": "Утепленный цельногнутый стальной короб 115 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-031_main.webp"
+  ],
+  "price": 34750,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-031-1",
+      "name": "9 см ГЕОМЕТРИЯ ЗЕРКАЛО бетон снежный 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "фрезерованная МДФ-панель 8 мм, цвет - «сатин",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-031_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-031_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-031-2",
+      "name": "9 см ГЕОМЕТРИЯ ЗЕРКАЛО бетон снежный 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "фрезерованная МДФ-панель 8 мм, цвет - «сатин",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-031_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-031_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-031-3",
+      "name": "9 см ГЕОМЕТРИЯ ЗЕРКАЛО бетон снежный 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "фрезерованная МДФ-панель 8 мм, цвет - «сатин",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-031_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-031_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-031-4",
+      "name": "9 см ГЕОМЕТРИЯ ЗЕРКАЛО бетон снежный 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "фрезерованная МДФ-панель 8 мм, цвет - «сатин",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-031_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-031_main.webp"
+    }
+  ],
+  "kit_price": 34750,
+  "dealer_price": 24750,
+  "color_groups": [
+    "grey"
+  ],
+  "color_names": [
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-031_main.webp"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "PROD-D25-008",
+  "brand": "Двери 2025",
+  "brand_id": "BRAND-DVERI2025",
+  "collection": "Серия Фрателли",
+  "collection_id": "COLL-D25-",
+  "model": "Фрателли Дос",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь для современных интерьеров Фрателли Дос (Серия Фрателли). Дверь глухая.",
+  "source": {
+    "pdf_file": "Двери 2025.pdf",
+    "page": 3,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая конструкция с усиленным каркасом",
+    "material": "МДФ / хвойный брус",
+    "coating": "Экошпон / Эмаль",
+    "color": "Белый / Серый / Бежевый / Антрацит",
+    "texture": "Матовая гладкая / софт-тач",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Геометрическая фрезеровка",
+    "style": "Современный / Модерн / Минимализм",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (распашное / раздвижное)",
+    "other_specs": {
+      "thickness": "38 мм"
+    }
+  },
+  "complectation": {
+    "leaf": "Глухое полотно 38 мм",
+    "frame": "Телескопическая коробка с уплотнителем",
+    "casing": "Телескопический наличник",
+    "extensions": "Доборы телескопические",
+    "hinges": "Приобретаются отдельно",
+    "locks": "Приобретаются отдельно",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": null
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-D25-008_main.webp"
+  ],
+  "price": 12850,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-D25-008-1",
+      "name": "Фрателли Дос 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "Эмаль / Экошпон в ассортименте",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-D25-008_main.webp",
+      "color_groups": [
+        "dark",
+        "grey",
+        "white"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-D25-008_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-D25-008-2",
+      "name": "Фрателли Дос 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "Эмаль / Экошпон в ассортименте",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-D25-008_main.webp",
+      "color_groups": [
+        "dark",
+        "grey",
+        "white"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-D25-008_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-D25-008-3",
+      "name": "Фрателли Дос 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "Эмаль / Экошпон в ассортименте",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-D25-008_main.webp",
+      "color_groups": [
+        "dark",
+        "grey",
+        "white"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-D25-008_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-D25-008-4",
+      "name": "Фрателли Дос 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "Эмаль / Экошпон в ассортименте",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-D25-008_main.webp",
+      "color_groups": [
+        "dark",
+        "grey",
+        "white"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-D25-008_main.webp"
+    }
+  ],
+  "kit_price": 14900,
+  "leaf_price": 12850,
+  "dealer_price": 2850,
+  "color_groups": [
+    "dark",
+    "grey",
+    "white"
+  ],
+  "color_names": [
+    "Антрацит",
+    "Белый / Бежевый",
+    "Серый"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-D25-008_main.webp"
+  ]
+}

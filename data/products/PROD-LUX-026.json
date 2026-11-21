@@ -1,0 +1,136 @@
+{
+  "id": "PROD-LUX-026",
+  "brand": "Luxor",
+  "brand_id": "BRAND-LUXOR",
+  "collection": "Luxor 2МДФ",
+  "collection_id": "COLL-LUX-LUXOR2",
+  "model": "Luxor 2мдф Дуб Диагональ зеркало Смарт",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная дверь Luxor 2мдф Дуб Диагональ зеркало Смарт серии Luxor 2МДФ. Внешнее покрытие: каньон коньяк. Внутренняя панель: Сатин черный. 11 см. Нет.",
+  "source": {
+    "pdf_file": "Каталог Люксор май 2026 (3).pdf",
+    "page": 27,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция с коробом закрытого типа",
+    "material": "Сталь / МДФ",
+    "coating": "каньон коньяк",
+    "color": "каньон коньяк / Сатин черный",
+    "texture": "Букле / Муар / Сатин / МДФ панель",
+    "glass": "Зеркало",
+    "decor": "Встроенное зеркало с защитной пленкой Встроенный видеодомофон / умный замок",
+    "style": "Современный / Неоклассика / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "11 см",
+      "thermal_break": "Нет",
+      "frame_depth": "130-150 мм",
+      "insulation": "PIR-плита / базальтовая плита / пенополистирол",
+      "seals": "3 контура уплотнения (включая магнитный на коробе)",
+      "locks": "Двухсистемный сувальдный + цилиндровый высшего класса взломостойкости",
+      "handles": "Раздельная ручка в цвете черный / хром"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 11 см, сталь 1.5 мм, терморазрыв Нет",
+    "frame": "Утепленный цельногнутый короб с терморазрывом и эксцентриком",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли 180° на подшипниках",
+    "locks": "Сувальдный и цилиндровый замки",
+    "handles": "Раздельная эргономичная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, порог из нержавеющей стали"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-LUX-026_main.webp",
+    "data/catalog-output/webp/PROD-LUX-026_alt1.webp",
+    "data/catalog-output/webp/PROD-LUX-026_alt2.webp"
+  ],
+  "price": 75200,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-LUX-026-1",
+      "name": "Luxor 2мдф Дуб Диагональ зеркало Смарт 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "каньон коньяк / Сатин черный",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-LUX-026_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-026_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-026-2",
+      "name": "Luxor 2мдф Дуб Диагональ зеркало Смарт 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "каньон коньяк / Сатин черный",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-LUX-026_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-026_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-026-3",
+      "name": "Luxor 2мдф Дуб Диагональ зеркало Смарт 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "каньон коньяк / Сатин черный",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-LUX-026_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-026_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-026-4",
+      "name": "Luxor 2мдф Дуб Диагональ зеркало Смарт 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "каньон коньяк / Сатин черный",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-LUX-026_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-026_main.webp"
+    }
+  ],
+  "kit_price": 75200,
+  "dealer_price": 65200,
+  "color_groups": [
+    "dark",
+    "wood"
+  ],
+  "color_names": [
+    "Древесные оттенки (дуб / орех / каштан)",
+    "Тёмный / Чёрный / Букле шоколад"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-LUX-026_main.webp",
+    "data/catalog-output/thumbs/PROD-LUX-026_alt1.webp",
+    "data/catalog-output/thumbs/PROD-LUX-026_alt2.webp"
+  ]
+}

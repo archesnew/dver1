@@ -34,14 +34,21 @@
     wallThickness: 75
   };
 
-  // Резолвер путей изображений
-  function resolveImagePath(img) {
+  // Резолвер путей изображений с автоматическим маппингом в легковесные WebP (thumbs / webp)
+  function resolveImagePath(img, preferHighRes = false) {
     if (!img || img === 'door-placeholder.svg') return 'door-placeholder.svg';
     if (img.startsWith('http://') || img.startsWith('https://')) return img;
-    if (img.startsWith('data/')) return img;
-    if (img.startsWith('catalog-images/')) return 'data/catalog-output/' + img;
-    if (img.startsWith('extracted_images/')) return 'data/catalog-output/' + img;
-    return 'data/catalog-output/' + img;
+    if (img.startsWith('data/catalog-output/thumbs/') || img.startsWith('data/catalog-output/webp/')) return img;
+    if (img.startsWith('thumbs/') || img.startsWith('webp/')) return 'data/catalog-output/' + img;
+
+    const folder = preferHighRes ? 'webp' : 'thumbs';
+    const clean = img
+      .replace(/^data\/catalog-output\/(catalog-images|thumbs|webp)\//, '')
+      .replace(/^catalog-images\//, '')
+      .replace(/^extracted_images\//, '')
+      .replace(/\.[^.]+$/, '');
+
+    return `data/catalog-output/${folder}/${clean}.webp`;
   }
 
   // --------------------------------------------------------------------------
@@ -51,25 +58,30 @@
     setupCitySelector();
     setupEventListeners();
 
-    // 1. Попытка взять предварительно загруженные данные из products-data.js
-    if (window.CATALOG_PRODUCTS && Array.isArray(window.CATALOG_PRODUCTS) && window.CATALOG_PRODUCTS.length > 0) {
-      console.log('Каталог загружен через products-data.js:', window.CATALOG_PRODUCTS.length, 'товаров');
-      state.allProducts = window.CATALOG_PRODUCTS;
-      finishDataLoad();
-      return;
-    }
-
-    // 2. Асинхронный fetch из products.json
+    // 1. Быстрая загрузка оптимизированного индекса каталога (data/catalog-index.json)
     try {
       showLoading(true);
+      const res = await fetch('data/catalog-index.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      console.log('Каталог загружен через catalog-index.json:', data.length, 'товаров');
+      state.allProducts = data;
+      finishDataLoad();
+      return;
+    } catch (err) {
+      console.warn('Не удалось загрузить catalog-index.json, пробуем fallback на products.json:', err);
+    }
+
+    // 2. Fallback на полный products.json при локальных сбоях
+    try {
       const res = await fetch('data/catalog-output/products.json');
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
-      console.log('Каталог загружен через fetch():', data.length, 'товаров');
+      console.log('Каталог загружен через fallback products.json:', data.length, 'товаров');
       state.allProducts = data;
       finishDataLoad();
     } catch (err) {
-      console.error('Ошибка загрузки products.json:', err);
+      console.error('Ошибка загрузки каталога:', err);
       showDataLoadError(err);
     } finally {
       showLoading(false);
@@ -660,22 +672,23 @@
     let html = '';
 
     visibleItems.forEach(p => {
-      // Изображение ровно одной двери, если отсутствует - door-placeholder.svg
-      const mainImg = (p.images && p.images.length > 0) ? resolveImagePath(p.images[0]) : 'door-placeholder.svg';
+      // Изображение двери: приоритет WebP-превью 480px (thumb)
+      const mainImg = p.thumb || ((p.images && p.images.length > 0) ? resolveImagePath(p.images[0]) : 'door-placeholder.svg');
       const brandName = p.brand || 'Коллекция';
       const collectionSub = p.collection ? `${brandName} • ${p.collection}` : brandName;
+      const modelName = p.model || p.name || 'Дверное полотно';
       const priceText = p.price ? Number(p.price).toLocaleString('ru-RU') + ' ₽' : 'Уточнить цену';
 
       html += `
         <article class="product-card" data-id="${p.id}">
           <a href="product.html?id=${encodeURIComponent(p.id)}" class="card-image-box">
-            <img class="card-img" src="${mainImg}" alt="${escapeHtml(p.model)}" loading="lazy" onerror="this.onerror=null; this.src='door-placeholder.svg';">
+            <img class="card-img" src="${mainImg}" alt="${escapeHtml(modelName)}" loading="lazy" decoding="async" width="480" height="640" onerror="this.onerror=null; this.src='door-placeholder.svg';">
           </a>
           
           <div class="card-body">
             <div class="card-brand-line">${escapeHtml(collectionSub)}</div>
-            <h3 class="card-model-title" title="${escapeHtml(p.model)}">
-              <a href="product.html?id=${encodeURIComponent(p.id)}" style="color: inherit; text-decoration: none;">${escapeHtml(p.model)}</a>
+            <h3 class="card-model-title" title="${escapeHtml(modelName)}">
+              <a href="product.html?id=${encodeURIComponent(p.id)}" style="color: inherit; text-decoration: none;">${escapeHtml(modelName)}</a>
             </h3>
             
             <div class="card-bottom-row">
@@ -690,14 +703,17 @@
       `;
     });
 
-    // Кнопка пагинации "Показать еще"
+    // Порционная пагинация: индикатор "Показано X из Y", кнопка "Показать еще" и IntersectionObserver
     if (visibleItems.length < state.filteredProducts.length) {
       const remaining = state.filteredProducts.length - visibleItems.length;
       html += `
-        <div style="grid-column: 1 / -1; display: flex; justify-content: center; padding: 24px 0 12px;">
-          <button type="button" class="btn-card-more" id="btnLoadMore" style="padding: 12px 32px; font-size: 0.9375rem; background: var(--bg-surface);">
-            <span>Показать еще ${Math.min(remaining, state.pageSize)} из ${remaining}</span>
-            <span class="more-arrow">↓</span>
+        <div class="catalog-pagination-wrap" id="paginationWrap" style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 36px 0 20px; gap: 14px;">
+          <div class="pagination-counter-text" style="font-family: var(--font-sans); font-size: 0.875rem; color: #686C6A;">
+            Показано <strong>${visibleItems.length}</strong> из <strong>${state.filteredProducts.length}</strong> моделей
+          </div>
+          <button type="button" class="btn-load-more" id="btnLoadMore" style="padding: 12px 36px; font-size: 0.9375rem; font-weight: 500; font-family: var(--font-sans); background: var(--bg-surface); border: 1px solid var(--border-stone); border-radius: 8px; cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); color: var(--text-primary); display: inline-flex; align-items: center; gap: 8px;">
+            <span>Показать ещё ${Math.min(remaining, state.pageSize)}</span>
+            <span class="more-arrow" style="font-size: 1.1rem; transition: transform 0.2s ease;">↓</span>
           </button>
         </div>
       `;
@@ -705,12 +721,26 @@
 
     grid.innerHTML = html;
 
+    // Подключение клика и IntersectionObserver для плавной автоматической подгрузки
     const btnLoadMore = document.getElementById('btnLoadMore');
     if (btnLoadMore) {
       btnLoadMore.addEventListener('click', () => {
         state.currentPage++;
         renderGrid();
       });
+
+      if (window.IntersectionObserver) {
+        if (state._paginationObserver) {
+          state._paginationObserver.disconnect();
+        }
+        state._paginationObserver = new IntersectionObserver((entries) => {
+          if (entries[0] && entries[0].isIntersecting) {
+            state.currentPage++;
+            renderGrid();
+          }
+        }, { rootMargin: '280px' });
+        state._paginationObserver.observe(btnLoadMore);
+      }
     }
   }
 
@@ -1469,15 +1499,30 @@
     const btnResetFilters = document.getElementById('btnResetFilters');
     if (btnResetFilters) btnResetFilters.addEventListener('click', resetAllFilters);
 
-    // Компактный живой поиск
+    // Утилита debounce для предотвращения лагов при вводе поиска и фильтрации
+    function debounce(fn, wait = 200) {
+      let timer = null;
+      return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn.apply(this, args), wait);
+      };
+    }
+
+    // Компактный живой поиск с debounce (200 мс)
     const searchInput = document.getElementById('searchInput');
     const searchClear = document.getElementById('searchClearBtn');
+
+    const debouncedSearch = debounce((query) => {
+      state.searchQuery = query;
+      state.currentPage = 1;
+      applyFiltersAndSort();
+    }, 200);
+
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
-        state.searchQuery = e.target.value;
-        if (searchClear) searchClear.style.display = state.searchQuery ? 'block' : 'none';
-        state.currentPage = 1;
-        applyFiltersAndSort();
+        const val = e.target.value;
+        if (searchClear) searchClear.style.display = val ? 'block' : 'none';
+        debouncedSearch(val);
       });
     }
     if (searchClear) {

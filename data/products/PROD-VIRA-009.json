@@ -1,0 +1,138 @@
+{
+  "id": "PROD-VIRA-009",
+  "brand": "ViraDoors",
+  "brand_id": "BRAND-VIRADOORS",
+  "collection": "Входные двери с терморазрывом",
+  "collection_id": "COLL-VIRA-",
+  "model": "ВИРА-10 (Аляска)",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Металлическая входная дверь ViraDoors ВИРА-10 (Аляска). Покрытие: Букле опал / букле графит / шоколад. Конструкция: арктический терморазрыв, сталь 1.5 мм. Толщина полотна: 115 мм. Толщина короба: 150 мм.",
+  "source": {
+    "pdf_file": "ViraDoors_каталог_2026_А4_4+4_НОВЫЙ_ПЕЧАТЬ.pdf",
+    "page": 10,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Стальная цельногнутая конструкция, арктический терморазрыв",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "Букле опал / букле графит / шоколад",
+    "texture": "Шагрень / Антик / Букле / Муар",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Лофт / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "115 мм",
+      "frame_depth": "150 мм",
+      "steel_thickness": "1.5 мм",
+      "insulation": "Многослойное утепление с PIR",
+      "seals": "3 контура, морозостойкий уплотнитель",
+      "locks": "Гардиан сувальдные",
+      "thermal_break": "Терморазрыв"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 115 мм, сталь 1.5 мм",
+    "frame": "Короб 150 мм, арктический терморазрыв",
+    "casing": "Интегрированный фигурный наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли",
+    "locks": "Гардиан сувальдные",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-VIRA-009_main.webp",
+    "data/catalog-output/webp/PROD-VIRA-009_alt1.webp",
+    "data/catalog-output/webp/PROD-VIRA-009_alt2.webp",
+    "data/catalog-output/webp/PROD-VIRA-P10_page.webp"
+  ],
+  "price": 52000,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-VIRA-009-1",
+      "name": "ВИРА-10 (Аляска) 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Букле опал / букле графит / шоколад",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-009_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-009_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-009-2",
+      "name": "ВИРА-10 (Аляска) 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Букле опал / букле графит / шоколад",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-009_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-009_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-009-3",
+      "name": "ВИРА-10 (Аляска) 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Букле опал / букле графит / шоколад",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-009_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-009_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-009-4",
+      "name": "ВИРА-10 (Аляска) 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Букле опал / букле графит / шоколад",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-009_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-009_main.webp"
+    }
+  ],
+  "kit_price": 52000,
+  "dealer_price": 42000,
+  "color_groups": [
+    "dark",
+    "grey"
+  ],
+  "color_names": [
+    "Серый / Графит / Антрацит",
+    "Тёмный / Чёрный / Букле шоколад"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-VIRA-009_main.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-009_alt1.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-009_alt2.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-P10_page.webp"
+  ]
+}

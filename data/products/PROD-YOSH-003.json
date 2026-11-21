@@ -1,0 +1,134 @@
+{
+  "id": "PROD-YOSH-003",
+  "brand": "Йошкар-Ола",
+  "brand_id": "BRAND-YOSHKAR-OLA",
+  "collection": "Входные двери с терморазрывом",
+  "collection_id": "COLL-YOSH-",
+  "model": "Термо Люкс",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная дверь Йошкар-Ола Термо Люкс. Толщина полотна: • Толщина полотна с панелью 120 мм. Толщина стали: • Толщина стали 1.2 мм. Короб закрытый утепленный глубиной • Короб закрытый утепленный, глубина короба 148 мм.",
+  "source": {
+    "pdf_file": "ДВЕРИ ЙОШКАР ОЛА 2026.pdf",
+    "page": 4,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция с закрытым утепленным коробом",
+    "material": "Сталь / МДФ",
+    "coating": "Порошково-полимерное антивандальное покрытие",
+    "color": "Муар Графит / Букле / Цинкогрунт / Опал / Медь",
+    "texture": "Шагрень / Букле / Муар / МДФ панель",
+    "glass": "сечения внутри стеклопакета",
+    "decor": null,
+    "style": "Современный / Неоклассика",
+    "available_sizes": [
+      "980 х 2080 мм",
+      "860 х 2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "• Толщина полотна с панелью 120 мм",
+      "steel_thickness": "• Толщина стали 1.2 мм",
+      "frame_depth": "• Короб закрытый утепленный, глубина короба 148 мм",
+      "thermal_break": "Полиамидный терморазрыв",
+      "stainless_sill": "Порог из нержавеющей стали зеркальный"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно • Толщина полотна с панелью 120 мм, сталь • Толщина стали 1.2 мм",
+    "frame": "Короб закрытый утепленный • Короб закрытый утепленный, глубина короба 148 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли на упорных подшипниках",
+    "locks": "Замковая система сувальдный + цилиндровый",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок (для моделей без зеркала)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-YOSH-003_main.webp",
+    "data/catalog-output/webp/PROD-YOSH-003_alt1.webp",
+    "data/catalog-output/webp/PROD-YOSH-003_alt2.webp"
+  ],
+  "price": 54500,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-YOSH-003-1",
+      "name": "Термо Люкс 980 х 2080 мм (Левое)",
+      "size": "980 х 2080 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-YOSH-003_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-003_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-003-2",
+      "name": "Термо Люкс 980 х 2080 мм (Правое)",
+      "size": "980 х 2080 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-YOSH-003_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-003_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-003-3",
+      "name": "Термо Люкс 860 х 2050 мм (Левое)",
+      "size": "860 х 2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-YOSH-003_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-003_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-003-4",
+      "name": "Термо Люкс 860 х 2050 мм (Правое)",
+      "size": "860 х 2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-YOSH-003_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-003_main.webp"
+    }
+  ],
+  "kit_price": 54500,
+  "dealer_price": 44500,
+  "color_groups": [
+    "grey",
+    "metal"
+  ],
+  "color_names": [
+    "Металл / Медный антик / Серебро",
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-YOSH-003_main.webp",
+    "data/catalog-output/thumbs/PROD-YOSH-003_alt1.webp",
+    "data/catalog-output/thumbs/PROD-YOSH-003_alt2.webp"
+  ]
+}

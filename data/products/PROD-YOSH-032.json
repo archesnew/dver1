@@ -1,0 +1,186 @@
+{
+  "id": "PROD-YOSH-032",
+  "brand": "Йошкар-Ола",
+  "brand_id": "BRAND-YOSHKAR-OLA",
+  "collection": "Межкомнатные двери Йошкар-Ола",
+  "collection_id": "COLL-YOSH-INT",
+  "model": "Квадро 7",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь Квадро 7. Покрытие: ПВХ. Внутреннее заполнение: МДФ. Доступные цвета: Топленое молоко, Дуб кантри белый.",
+  "source": {
+    "pdf_file": "ДВЕРИ ЙОШКАР ОЛА 2026.pdf",
+    "page": 33,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая / царговая",
+    "material": "МДФ / сосна",
+    "coating": "ПВХ",
+    "color": "Топленое молоко, Дуб кантри белый",
+    "texture": "Гладкая матовая / древесная",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Фрезеровка / багет",
+    "style": "Классика / Неоклассика / Модерн",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (левое / правое)",
+    "other_specs": {
+      "filling": "МДФ",
+      "molding_system": "Телескопический погонаж"
+    }
+  },
+  "complectation": {
+    "leaf": "Дверное полотно 2000х600/700/800/900 мм",
+    "frame": "Телескопическая коробка МДФ/сэндвич 2070х75 мм",
+    "casing": "Наличники телескопические 2150х70 мм (или 2180х80 мм)",
+    "extensions": "Доборы телескопические 2070х90, 130, 170, 210 мм",
+    "hinges": "Приобретаются отдельно (универсальные / скрытые)",
+    "locks": "Приобретаются отдельно (магнитные / сантехнические)",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Притворная планка (для распашных двупольных дверей)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-YOSH-032_main.webp"
+  ],
+  "price": 12850,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-YOSH-032-1",
+      "name": "Квадро 7 2000х600 мм Топленое молоко",
+      "size": "2000х600 мм",
+      "color": "Топленое молоко",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-032_main.webp",
+      "color_groups": [
+        "white",
+        "wood"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-032_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-032-2",
+      "name": "Квадро 7 2000х600 мм Дуб кантри белый",
+      "size": "2000х600 мм",
+      "color": "Дуб кантри белый",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-032_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-032_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-032-3",
+      "name": "Квадро 7 2000х700 мм Топленое молоко",
+      "size": "2000х700 мм",
+      "color": "Топленое молоко",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-032_main.webp",
+      "color_groups": [
+        "white",
+        "wood"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-032_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-032-4",
+      "name": "Квадро 7 2000х700 мм Дуб кантри белый",
+      "size": "2000х700 мм",
+      "color": "Дуб кантри белый",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-032_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-032_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-032-5",
+      "name": "Квадро 7 2000х800 мм Топленое молоко",
+      "size": "2000х800 мм",
+      "color": "Топленое молоко",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-032_main.webp",
+      "color_groups": [
+        "white",
+        "wood"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-032_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-032-6",
+      "name": "Квадро 7 2000х800 мм Дуб кантри белый",
+      "size": "2000х800 мм",
+      "color": "Дуб кантри белый",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-032_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-032_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-032-7",
+      "name": "Квадро 7 2000х900 мм Топленое молоко",
+      "size": "2000х900 мм",
+      "color": "Топленое молоко",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-032_main.webp",
+      "color_groups": [
+        "white",
+        "wood"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-032_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-032-8",
+      "name": "Квадро 7 2000х900 мм Дуб кантри белый",
+      "size": "2000х900 мм",
+      "color": "Дуб кантри белый",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-032_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-032_main.webp"
+    }
+  ],
+  "kit_price": 14900,
+  "leaf_price": 12850,
+  "dealer_price": 2850,
+  "color_groups": [
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Белый 850 / Латте / Песчаный",
+    "Дуб кантри белый / Орех"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-YOSH-032_main.webp"
+  ]
+}

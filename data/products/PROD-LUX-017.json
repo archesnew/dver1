@@ -1,0 +1,134 @@
+{
+  "id": "PROD-LUX-017",
+  "brand": "Luxor",
+  "brand_id": "BRAND-LUXOR",
+  "collection": "Luxor Термо",
+  "collection_id": "COLL-LUX-LUXOR",
+  "model": "Luxor Термо Панорама",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная дверь Luxor Термо Панорама серии Luxor Термо. Внешнее покрытие: Муар 7024. Внутренняя панель: Эмалит белый. Толщина полотна 11,5 см. Терморазрыв 24 мм.",
+  "source": {
+    "pdf_file": "Каталог Люксор май 2026 (3).pdf",
+    "page": 18,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция с коробом закрытого типа",
+    "material": "Сталь / МДФ",
+    "coating": "Муар 7024",
+    "color": "Муар 7024 / Эмалит белый",
+    "texture": "Букле / Муар / Сатин / МДФ панель",
+    "glass": "Тонированный стеклопакет с ковкой/решеткой",
+    "decor": null,
+    "style": "Современный / Неоклассика / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "Толщина полотна 11,5 см",
+      "thermal_break": "Терморазрыв 24 мм",
+      "frame_depth": "130-150 мм",
+      "insulation": "PIR-плита / базальтовая плита / пенополистирол",
+      "seals": "3 контура уплотнения (включая магнитный на коробе)",
+      "locks": "Двухсистемный сувальдный + цилиндровый высшего класса взломостойкости",
+      "handles": "Раздельная ручка в цвете черный / хром"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно Толщина полотна 11,5 см, сталь 1.5 мм, терморазрыв Терморазрыв 24 мм",
+    "frame": "Утепленный цельногнутый короб с терморазрывом и эксцентриком",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли 180° на подшипниках",
+    "locks": "Сувальдный и цилиндровый замки",
+    "handles": "Раздельная эргономичная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, порог из нержавеющей стали"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-LUX-017_main.webp",
+    "data/catalog-output/webp/PROD-LUX-017_alt1.webp"
+  ],
+  "price": 52000,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-LUX-017-1",
+      "name": "Luxor Термо Панорама 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Муар 7024 / Эмалит белый",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-LUX-017_main.webp",
+      "color_groups": [
+        "grey",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-017_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-017-2",
+      "name": "Luxor Термо Панорама 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Муар 7024 / Эмалит белый",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-LUX-017_main.webp",
+      "color_groups": [
+        "grey",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-017_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-017-3",
+      "name": "Luxor Термо Панорама 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Муар 7024 / Эмалит белый",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-LUX-017_main.webp",
+      "color_groups": [
+        "grey",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-017_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-017-4",
+      "name": "Luxor Термо Панорама 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Муар 7024 / Эмалит белый",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-LUX-017_main.webp",
+      "color_groups": [
+        "grey",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-017_main.webp"
+    }
+  ],
+  "kit_price": 52000,
+  "dealer_price": 42000,
+  "color_groups": [
+    "grey",
+    "white"
+  ],
+  "color_names": [
+    "Белый / Светлый (внутренняя панель)",
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-LUX-017_main.webp",
+    "data/catalog-output/thumbs/PROD-LUX-017_alt1.webp"
+  ]
+}

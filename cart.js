@@ -78,6 +78,18 @@
     initMobileMenu();
   }
 
+  function resolveCartImg(img) {
+    if (!img) return 'door-placeholder.svg';
+    if (img.startsWith('http://') || img.startsWith('https://')) return img;
+    if (img.startsWith('data/catalog-output/thumbs/') || img.startsWith('data/catalog-output/webp/')) return img;
+    if (img.startsWith('thumbs/') || img.startsWith('webp/')) return 'data/catalog-output/' + img;
+    if (img.startsWith('catalog-images/')) {
+      const base = img.replace(/^catalog-images\//, '').replace(/\.[^.]+$/, '');
+      return 'data/catalog-output/thumbs/' + base + '.webp';
+    }
+    return img;
+  }
+
   function renderCart() {
     const cart = window.CartStore.getCart();
     const totals = window.CartStore.calculateTotals(cart);
@@ -120,10 +132,12 @@
         ? `<div class="cart-spec-uncertain-alert"><span>ℹ</span> Точная цена полотна и фурнитуры рассчитывается инженером</div>`
         : '';
 
+      const resolvedImage = resolveCartImg(item.image);
+
       html += `
         <article class="cart-item-card" data-id="${escapeHtml(item.id)}">
           <div class="cart-item-image-box">
-            <img class="cart-item-img" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.src='door-placeholder.svg'">
+            <img class="cart-item-img" src="${escapeHtml(resolvedImage)}" alt="${escapeHtml(item.title)}" loading="lazy" onerror="this.onerror=null; this.src='door-placeholder.svg';">
           </div>
 
           <div class="cart-item-info">

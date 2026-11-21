@@ -2280,6 +2280,7 @@ a {
 .card-image-box {
   width: 100%;
   height: 380px;
+  aspect-ratio: 3 / 4;
   background: #FAF9F6;
   position: relative;
   overflow: hidden;
@@ -2289,6 +2290,101 @@ a {
   padding: 8px 12px;
   border-bottom: 1px solid var(--border-stone-subtle);
   cursor: pointer;
+}
+
+/* SKELETON UI STYLES (PREMIUM WARM STONE PULSE) */
+.skeleton-card {
+  pointer-events: none;
+  user-select: none;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-stone);
+  border-radius: var(--radius-md);
+}
+
+.skeleton-box {
+  width: 100%;
+  height: 380px;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(90deg, #FAF9F6 0%, #EDE9E1 50%, #FAF9F6 100%);
+  background-size: 200% 100%;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+  border-bottom: 1px solid var(--border-stone-subtle);
+}
+
+.skeleton-line {
+  height: 12px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #EFECE6 0%, #DFDAD0 50%, #EFECE6 100%);
+  background-size: 200% 100%;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+  margin-bottom: 12px;
+}
+
+.skeleton-meta {
+  width: 45%;
+  height: 10px;
+}
+
+.skeleton-title {
+  width: 85%;
+  height: 16px;
+  margin-bottom: 24px;
+}
+
+.skeleton-price {
+  width: 40%;
+  height: 20px;
+}
+
+@keyframes skeleton-pulse {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ПАГИНАЦИЯ И КНОПКА ПОКАЗАТЬ ЕЩЁ */
+.catalog-pagination-wrap {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 0 20px;
+  gap: 14px;
+}
+
+.pagination-counter-text {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.btn-load-more {
+  padding: 12px 36px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-stone);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(34, 35, 32, 0.04);
+}
+
+.btn-load-more:hover {
+  background: #222320;
+  color: #FFFFFF;
+  border-color: #222320;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(34, 35, 32, 0.12);
+}
+
+.btn-load-more:hover .more-arrow {
+  transform: translateY(2px);
 }
 
 .card-img {

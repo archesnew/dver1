@@ -1,0 +1,114 @@
+{
+  "id": "PROD-LUX-001",
+  "brand": "Luxor",
+  "brand_id": "BRAND-LUXOR",
+  "collection": "Luxor Термо",
+  "collection_id": "COLL-LUX-LUXOR",
+  "model": "Luxor Термо Стр.2",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная дверь Luxor Термо Стр.2 серии Luxor Термо. Внешнее покрытие: порошковое. Внутренняя панель: МДФ. 11 см. 24 мм.",
+  "source": {
+    "pdf_file": "Каталог Люксор май 2026 (3).pdf",
+    "page": 2,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция с коробом закрытого типа",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "По каталогу",
+    "texture": "Букле / Муар / Сатин / МДФ панель",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Неоклассика / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "11 см",
+      "thermal_break": "24 мм",
+      "frame_depth": "130-150 мм",
+      "insulation": "PIR-плита / базальтовая плита / пенополистирол",
+      "seals": "3 контура уплотнения (включая магнитный на коробе)",
+      "locks": "Двухсистемный сувальдный + цилиндровый высшего класса взломостойкости",
+      "handles": "Раздельная ручка в цвете черный / хром"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 11 см, сталь 1.5 мм, терморазрыв 24 мм",
+    "frame": "Утепленный цельногнутый короб с терморазрывом и эксцентриком",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли 180° на подшипниках",
+    "locks": "Сувальдный и цилиндровый замки",
+    "handles": "Раздельная эргономичная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, порог из нержавеющей стали"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-LUX-001_main.webp"
+  ],
+  "price": 40200,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-LUX-001-1",
+      "name": "Luxor Термо Стр.2 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-LUX-001_main.webp",
+      "color_groups": [],
+      "color_group": "unconfirmed",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-001_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-001-2",
+      "name": "Luxor Термо Стр.2 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-LUX-001_main.webp",
+      "color_groups": [],
+      "color_group": "unconfirmed",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-001_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-001-3",
+      "name": "Luxor Термо Стр.2 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-LUX-001_main.webp",
+      "color_groups": [],
+      "color_group": "unconfirmed",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-001_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-001-4",
+      "name": "Luxor Термо Стр.2 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-LUX-001_main.webp",
+      "color_groups": [],
+      "color_group": "unconfirmed",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-001_main.webp"
+    }
+  ],
+  "kit_price": 40200,
+  "dealer_price": 30200,
+  "color_groups": [],
+  "color_names": [],
+  "need_manual_check": true,
+  "check_reason": "Цвет полотна не указан в документации производителя",
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-LUX-001_main.webp"
+  ]
+}

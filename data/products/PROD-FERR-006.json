@@ -1,0 +1,142 @@
+{
+  "id": "PROD-FERR-006",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери с терморазрывом",
+  "collection_id": "COLL-FERR-",
+  "model": "11 см ISOTERMA МЕДНЫЙ АНТИК",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь 11 см ISOTERMA МЕДНЫЙ АНТИК. Коллекция: Двери с терморазрывом. Внешняя отделка: атмосферостойкое порошково-полимерное «букле антрацит»,. Внутренняя отделка: МДФ-панель 10 мм, цвет – «эмалит белый». Толщина полотна: 110 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 6,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "атмосферостойкое порошково-полимерное «букле антрацит»,",
+    "color": "атмосферостойкое порошково-полимерное «букле антрацит», / МДФ-панель 10 мм, цвет – «эмалит белый»",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "110 мм",
+      "frame_depth": "137 мм",
+      "insulation": "пенополистирол",
+      "seals": "3 контура уплотнителя из вспененной резины (2 на полотне, 1 на коробе)",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 110 мм, внешняя отделка атмосферостойкое порошково-полимерное «букле антрацит»,, внутренняя МДФ-панель 10 мм, цвет – «эмалит белый»",
+    "frame": "Утепленный цельногнутый стальной короб 137 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-006_main.webp"
+  ],
+  "price": 33300,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-006-1",
+      "name": "11 см ISOTERMA МЕДНЫЙ АНТИК 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «букле антрацит»,",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-006_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-006_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-006-2",
+      "name": "11 см ISOTERMA МЕДНЫЙ АНТИК 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «букле антрацит»,",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-006_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-006_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-006-3",
+      "name": "11 см ISOTERMA МЕДНЫЙ АНТИК 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «букле антрацит»,",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-006_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-006_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-006-4",
+      "name": "11 см ISOTERMA МЕДНЫЙ АНТИК 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «букле антрацит»,",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-006_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-006_main.webp"
+    }
+  ],
+  "kit_price": 33300,
+  "dealer_price": 23300,
+  "color_groups": [
+    "grey",
+    "metal",
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Белый / Светлый (внутренняя панель)",
+    "Древесные оттенки (дуб / орех / каштан)",
+    "Металл / Медный антик / Серебро",
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-006_main.webp"
+  ]
+}

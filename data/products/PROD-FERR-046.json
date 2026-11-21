@@ -1,0 +1,134 @@
+{
+  "id": "PROD-FERR-046",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери металл/МДФ",
+  "collection_id": "COLL-FERR-",
+  "model": "7,5 см ГАРДА СЕРЕБРО ЦАРГА",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь 7,5 см ГАРДА СЕРЕБРО ЦАРГА. Коллекция: Двери металл/МДФ. Внешняя отделка: атмосферостойкое порошково-. Внутренняя отделка: царговая МДФ-панель 16 мм, цвет -. Толщина полотна: 75 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 24,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "атмосферостойкое порошково-",
+    "color": "атмосферостойкое порошково- / царговая МДФ-панель 16 мм, цвет -",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "75 мм",
+      "frame_depth": "105 мм",
+      "insulation": "пенополистирол",
+      "seals": "2 контура уплотнителя из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 75 мм, внешняя отделка атмосферостойкое порошково-, внутренняя царговая МДФ-панель 16 мм, цвет -",
+    "frame": "Утепленный цельногнутый стальной короб 105 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-046_main.webp"
+  ],
+  "price": 26600,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-046-1",
+      "name": "7,5 см ГАРДА СЕРЕБРО ЦАРГА 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-046_main.webp",
+      "color_groups": [
+        "metal",
+        "grey"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-046_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-046-2",
+      "name": "7,5 см ГАРДА СЕРЕБРО ЦАРГА 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-046_main.webp",
+      "color_groups": [
+        "metal",
+        "grey"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-046_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-046-3",
+      "name": "7,5 см ГАРДА СЕРЕБРО ЦАРГА 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-046_main.webp",
+      "color_groups": [
+        "metal",
+        "grey"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-046_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-046-4",
+      "name": "7,5 см ГАРДА СЕРЕБРО ЦАРГА 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-046_main.webp",
+      "color_groups": [
+        "metal",
+        "grey"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-046_main.webp"
+    }
+  ],
+  "kit_price": 26600,
+  "dealer_price": 16600,
+  "color_groups": [
+    "grey",
+    "metal"
+  ],
+  "color_names": [
+    "Металл / Медный антик / Серебро",
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-046_main.webp"
+  ]
+}

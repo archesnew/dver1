@@ -1,0 +1,138 @@
+{
+  "id": "PROD-VIRA-012",
+  "brand": "ViraDoors",
+  "brand_id": "BRAND-VIRADOORS",
+  "collection": "Входные стальные двери ViraDoors",
+  "collection_id": "COLL-VIRA-VIRADOORS",
+  "model": "ВИРА-12",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Металлическая входная дверь ViraDoors ВИРА-12. Покрытие: Шагрень RAL7024. Конструкция: закрытый короб с эксцентриком, сталь 1.4 мм. Толщина полотна: 100 мм. Толщина короба: 125 мм.",
+  "source": {
+    "pdf_file": "ViraDoors_каталог_2026_А4_4+4_НОВЫЙ_ПЕЧАТЬ.pdf",
+    "page": 13,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Стальная цельногнутая конструкция, закрытый короб с эксцентриком",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "Шагрень RAL7024",
+    "texture": "Шагрень / Антик / Букле / Муар",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Лофт / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "100 мм",
+      "frame_depth": "125 мм",
+      "steel_thickness": "1.4 мм",
+      "insulation": "Пенополистирол",
+      "seals": "3 контура",
+      "locks": "Сувальдный + цилиндровый",
+      "thermal_break": "Нет"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 100 мм, сталь 1.4 мм",
+    "frame": "Короб 125 мм, закрытый короб с эксцентриком",
+    "casing": "Интегрированный фигурный наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли",
+    "locks": "Сувальдный + цилиндровый",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-VIRA-012_main.webp",
+    "data/catalog-output/webp/PROD-VIRA-012_alt1.webp",
+    "data/catalog-output/webp/PROD-VIRA-012_alt2.webp",
+    "data/catalog-output/webp/PROD-VIRA-P13_page.webp"
+  ],
+  "price": 42000,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-VIRA-012-1",
+      "name": "ВИРА-12 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Шагрень RAL7024",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-012_main.webp",
+      "color_groups": [
+        "metal",
+        "grey"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-012_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-012-2",
+      "name": "ВИРА-12 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Шагрень RAL7024",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-012_main.webp",
+      "color_groups": [
+        "metal",
+        "grey"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-012_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-012-3",
+      "name": "ВИРА-12 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Шагрень RAL7024",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-012_main.webp",
+      "color_groups": [
+        "metal",
+        "grey"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-012_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-012-4",
+      "name": "ВИРА-12 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Шагрень RAL7024",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-012_main.webp",
+      "color_groups": [
+        "metal",
+        "grey"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-012_main.webp"
+    }
+  ],
+  "kit_price": 42000,
+  "dealer_price": 32000,
+  "color_groups": [
+    "grey",
+    "metal"
+  ],
+  "color_names": [
+    "Металл / Медный антик / Серебро",
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-VIRA-012_main.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-012_alt1.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-012_alt2.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-P13_page.webp"
+  ]
+}

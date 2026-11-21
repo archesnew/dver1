@@ -1,0 +1,132 @@
+{
+  "id": "PROD-YOSH-029",
+  "brand": "Йошкар-Ола",
+  "brand_id": "BRAND-YOSHKAR-OLA",
+  "collection": "Входные металлические двери",
+  "collection_id": "COLL-YOSH-",
+  "model": "Эмалит 100",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная дверь Йошкар-Ола Эмалит 100. Толщина полотна: • Толщина полотна 100мм. Толщина стали: • Толщина стали 0,8 мм. Короб закрытый утепленный глубиной 120-148 мм.",
+  "source": {
+    "pdf_file": "ДВЕРИ ЙОШКАР ОЛА 2026.pdf",
+    "page": 30,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция с закрытым утепленным коробом",
+    "material": "Сталь / МДФ",
+    "coating": "Порошково-полимерное антивандальное покрытие",
+    "color": "Муар Графит / Букле / Цинкогрунт / Опал / Медь",
+    "texture": "Шагрень / Букле / Муар / МДФ панель",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Неоклассика",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "• Толщина полотна 100мм",
+      "steel_thickness": "• Толщина стали 0,8 мм",
+      "frame_depth": "120-148 мм",
+      "thermal_break": "Нет",
+      "stainless_sill": null
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно • Толщина полотна 100мм, сталь • Толщина стали 0,8 мм",
+    "frame": "Короб закрытый утепленный 120-148 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли на упорных подшипниках",
+    "locks": "Замковая система сувальдный + цилиндровый",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок (для моделей без зеркала)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-YOSH-029_main.webp",
+    "data/catalog-output/webp/PROD-YOSH-029_alt1.webp"
+  ],
+  "price": 25600,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-YOSH-029-1",
+      "name": "Эмалит 100 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-YOSH-029_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-029_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-029-2",
+      "name": "Эмалит 100 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-YOSH-029_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-029_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-029-3",
+      "name": "Эмалит 100 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-YOSH-029_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-029_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-029-4",
+      "name": "Эмалит 100 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-YOSH-029_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-029_main.webp"
+    }
+  ],
+  "kit_price": 25600,
+  "dealer_price": 15600,
+  "color_groups": [
+    "grey",
+    "metal"
+  ],
+  "color_names": [
+    "Металл / Медный антик / Серебро",
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-YOSH-029_main.webp",
+    "data/catalog-output/thumbs/PROD-YOSH-029_alt1.webp"
+  ]
+}

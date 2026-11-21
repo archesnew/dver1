@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=3.5.2">
+  <link rel="stylesheet" href="app.css?v=3.6.0">
   <style id="critical-designer-fallback">
     .designer-showcase-wrapper { position: relative; width: 100%; }
     .designer-showcase-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; padding: 4px 2px 14px; }
@@ -33,8 +33,16 @@
       .designer-card { flex: 0 0 82%; min-width: 82%; max-width: 82%; }
       .designer-canvas { height: 250px; padding: 18px 14px 12px; }
     }
+    /* SKELETON UI STYLES */
+    .skeleton-card { pointer-events: none; user-select: none; background: #FFFFFF; border: 1px solid #E9E5DC; border-radius: 6px; overflow: hidden; }
+    .skeleton-box { width: 100%; height: 380px; aspect-ratio: 3 / 4; background: linear-gradient(90deg, #FAF9F6 0%, #EDE9E1 50%, #FAF9F6 100%); background-size: 200% 100%; animation: skeleton-pulse 1.5s ease-in-out infinite; }
+    .skeleton-line { height: 12px; border-radius: 4px; background: linear-gradient(90deg, #EFECE6 0%, #DFDAD0 50%, #EFECE6 100%); background-size: 200% 100%; animation: skeleton-pulse 1.5s ease-in-out infinite; margin-bottom: 12px; }
+    .skeleton-meta { width: 45%; height: 10px; }
+    .skeleton-title { width: 85%; height: 16px; margin-bottom: 24px; }
+    .skeleton-price { width: 40%; height: 20px; }
+    @keyframes skeleton-pulse { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
   </style>
-  <script src="cart-store.js?v=3.5.2"></script>
+  <script src="cart-store.js?v=3.6.0"></script>
 </head>
 <body>
 
@@ -122,7 +130,7 @@
   <!-- ПЕРВЫЙ ЭКРАН: PREMIUM APPLE-INSPIRED SHOWROOM HERO -->
   <section class="hero-showroom-section" id="heroSection">
     <div class="hero-bg-container">
-      <img src="hero-interior.jpg" alt="Интерьер премиального шоурума Двери №1" class="hero-bg-img">
+      <img src="hero-interior.webp" alt="Интерьер премиального шоурума Двери №1" class="hero-bg-img" fetchpriority="high" loading="eager" decoding="async" width="1920" height="1080">
       <div class="hero-overlay-tint"></div>
     </div>
     <div class="hero-container">
@@ -154,7 +162,7 @@
         <!-- 1. Ведущее направление: Межкомнатные двери (Lead Feature Card) -->
         <a href="#catalogContent" class="cat-editorial-card cat-editorial-lead" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Межкомнатные двери');">
           <div class="cat-media-wrapper">
-            <img src="category-interior.jpg" alt="Межкомнатные двери" class="cat-editorial-img" loading="eager">
+            <img src="category-interior.webp" alt="Межкомнатные двери" class="cat-editorial-img" loading="eager" decoding="async" width="800" height="600">
             <div class="cat-scrim-overlay"></div>
           </div>
           <div class="cat-editorial-content">
@@ -167,7 +175,7 @@
         <!-- 2. Скрытые двери (Invisible) -->
         <a href="#catalogContent" class="cat-editorial-card cat-editorial-invisible" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Скрытые двери');">
           <div class="cat-media-wrapper">
-            <img src="category-invisible.jpg" alt="Скрытые двери Invisible" class="cat-editorial-img" loading="eager">
+            <img src="category-invisible.webp" alt="Скрытые двери Invisible" class="cat-editorial-img" loading="eager" decoding="async" width="800" height="600">
             <div class="cat-scrim-overlay"></div>
           </div>
           <div class="cat-editorial-content">
@@ -180,7 +188,7 @@
         <!-- 3. Входные двери -->
         <a href="#catalogContent" class="cat-editorial-card cat-editorial-entrance" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Входные двери');">
           <div class="cat-media-wrapper">
-            <img src="category-entrance.jpg" alt="Входные двери" class="cat-editorial-img" loading="eager">
+            <img src="category-entrance.webp" alt="Входные двери" class="cat-editorial-img" loading="lazy" decoding="async" width="800" height="600">
             <div class="cat-scrim-overlay"></div>
           </div>
           <div class="cat-editorial-content">
@@ -193,7 +201,7 @@
         <!-- 4. Двери со стеклом -->
         <a href="#catalogContent" class="cat-editorial-card cat-editorial-glass" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Двери со стеклом');">
           <div class="cat-media-wrapper">
-            <img src="category-glass.jpg" alt="Двери со стеклом" class="cat-editorial-img" loading="eager">
+            <img src="category-glass.webp" alt="Двери со стеклом" class="cat-editorial-img" loading="lazy" decoding="async" width="800" height="600">
             <div class="cat-scrim-overlay"></div>
           </div>
           <div class="cat-editorial-content">
@@ -247,7 +255,7 @@
           <article class="designer-card" data-id="PROD-CHAM-101">
             <a href="product.html?id=PROD-CHAM-101" class="designer-card-media" aria-label="Chameleon Doors Glass 1">
               <div class="designer-canvas">
-                <img src="data/catalog-output/catalog-images/PROD-CHAM-101_main.png" alt="Дверь Chameleon Doors Glass 1" class="designer-door-img" loading="eager">
+                <img src="data/catalog-output/webp/PROD-CHAM-101_main.webp" alt="Дверь Chameleon Doors Glass 1" class="designer-door-img" loading="eager" decoding="async" width="480" height="1050">
               </div>
             </a>
             <div class="designer-card-body">
@@ -269,7 +277,7 @@
           <article class="designer-card" data-id="PROD-CHAM-003">
             <a href="product.html?id=PROD-CHAM-003" class="designer-card-media" aria-label="Chameleon Doors Rail 1">
               <div class="designer-canvas">
-                <img src="data/catalog-output/catalog-images/PROD-CHAM-003_main.png" alt="Дверь с рельефной рейкой Rail 1" class="designer-door-img" loading="eager">
+                <img src="data/catalog-output/webp/PROD-CHAM-003_main.webp" alt="Дверь с рельефной рейкой Rail 1" class="designer-door-img" loading="eager" decoding="async" width="480" height="1050">
               </div>
             </a>
             <div class="designer-card-body">
@@ -291,7 +299,7 @@
           <article class="designer-card" data-id="PROD-D25-001">
             <a href="product.html?id=PROD-D25-001" class="designer-card-media" aria-label="Двери 2025 Венто">
               <div class="designer-canvas">
-                <img src="data/catalog-output/catalog-images/PROD-D25-001_main.png" alt="Межкомнатная дверь Венто" class="designer-door-img" loading="eager">
+                <img src="data/catalog-output/webp/PROD-D25-001_main.webp" alt="Межкомнатная дверь Венто" class="designer-door-img" loading="eager" decoding="async" width="480" height="1050">
               </div>
             </a>
             <div class="designer-card-body">
@@ -313,7 +321,7 @@
           <article class="designer-card" data-id="PROD-FERR-001">
             <a href="product.html?id=PROD-FERR-001" class="designer-card-media" aria-label="Входная дверь Феррони 13 СМ VITRA ВИНОРИТ ПАТИНА">
               <div class="designer-canvas">
-                <img src="data/catalog-output/catalog-images/PROD-FERR-001_main.png" alt="Входная дверь 13 СМ VITRA ВИНОРИТ ПАТИНА" class="designer-door-img" loading="eager">
+                <img src="data/catalog-output/webp/PROD-FERR-001_main.webp" alt="Входная дверь 13 СМ VITRA ВИНОРИТ ПАТИНА" class="designer-door-img" loading="lazy" decoding="async" width="480" height="1050">
               </div>
             </a>
             <div class="designer-card-body">
@@ -335,7 +343,7 @@
           <article class="designer-card" data-id="PROD-CHAM-006">
             <a href="product.html?id=PROD-CHAM-006" class="designer-card-media" aria-label="Chameleon Doors Oval 1">
               <div class="designer-canvas">
-                <img src="data/catalog-output/catalog-images/PROD-CHAM-006_main.png" alt="Дверь Chameleon Doors Oval 1" class="designer-door-img" loading="lazy">
+                <img src="data/catalog-output/webp/PROD-CHAM-006_main.webp" alt="Дверь Chameleon Doors Oval 1" class="designer-door-img" loading="lazy" decoding="async" width="480" height="1050">
               </div>
             </a>
             <div class="designer-card-body">
@@ -357,7 +365,7 @@
           <article class="designer-card" data-id="PROD-VIRA-002">
             <a href="product.html?id=PROD-VIRA-002" class="designer-card-media" aria-label="Входная дверь ViraDoors ВИРА-1">
               <div class="designer-canvas">
-                <img src="data/catalog-output/catalog-images/PROD-VIRA-002_main.png" alt="Входная дверь ВИРА-1" class="designer-door-img" loading="lazy">
+                <img src="data/catalog-output/webp/PROD-VIRA-002_main.webp" alt="Входная дверь ВИРА-1" class="designer-door-img" loading="lazy" decoding="async" width="480" height="1050">
               </div>
             </a>
             <div class="designer-card-body">
@@ -506,14 +514,78 @@
           </div>
         </aside>
 
-        <!-- СЕТКА КАРТОЧЕК ТОВАРОВ -->
+        <!-- СЕТКА КАРТОЧЕК ТОВАРОВ С НАЧАЛЬНЫМ SKELETON UI -->
         <section class="catalog-grid-area">
           <div class="catalog-status-bar" id="resultsStatsBar">
             <span class="status-count-text">Загрузка каталога...</span>
           </div>
 
           <div class="product-grid" id="productGrid">
-            <!-- Карточки товаров генерируются скриптом app.js -->
+            <!-- 8 Аккуратных CSS-скелетонов для мгновенного восприятия до ответа сети -->
+            <div class="product-card skeleton-card" aria-hidden="true">
+              <div class="card-image-box skeleton-box"></div>
+              <div class="card-body">
+                <div class="skeleton-line skeleton-meta"></div>
+                <div class="skeleton-line skeleton-title"></div>
+                <div class="skeleton-line skeleton-price"></div>
+              </div>
+            </div>
+            <div class="product-card skeleton-card" aria-hidden="true">
+              <div class="card-image-box skeleton-box"></div>
+              <div class="card-body">
+                <div class="skeleton-line skeleton-meta"></div>
+                <div class="skeleton-line skeleton-title"></div>
+                <div class="skeleton-line skeleton-price"></div>
+              </div>
+            </div>
+            <div class="product-card skeleton-card" aria-hidden="true">
+              <div class="card-image-box skeleton-box"></div>
+              <div class="card-body">
+                <div class="skeleton-line skeleton-meta"></div>
+                <div class="skeleton-line skeleton-title"></div>
+                <div class="skeleton-line skeleton-price"></div>
+              </div>
+            </div>
+            <div class="product-card skeleton-card" aria-hidden="true">
+              <div class="card-image-box skeleton-box"></div>
+              <div class="card-body">
+                <div class="skeleton-line skeleton-meta"></div>
+                <div class="skeleton-line skeleton-title"></div>
+                <div class="skeleton-line skeleton-price"></div>
+              </div>
+            </div>
+            <div class="product-card skeleton-card" aria-hidden="true">
+              <div class="card-image-box skeleton-box"></div>
+              <div class="card-body">
+                <div class="skeleton-line skeleton-meta"></div>
+                <div class="skeleton-line skeleton-title"></div>
+                <div class="skeleton-line skeleton-price"></div>
+              </div>
+            </div>
+            <div class="product-card skeleton-card" aria-hidden="true">
+              <div class="card-image-box skeleton-box"></div>
+              <div class="card-body">
+                <div class="skeleton-line skeleton-meta"></div>
+                <div class="skeleton-line skeleton-title"></div>
+                <div class="skeleton-line skeleton-price"></div>
+              </div>
+            </div>
+            <div class="product-card skeleton-card" aria-hidden="true">
+              <div class="card-image-box skeleton-box"></div>
+              <div class="card-body">
+                <div class="skeleton-line skeleton-meta"></div>
+                <div class="skeleton-line skeleton-title"></div>
+                <div class="skeleton-line skeleton-price"></div>
+              </div>
+            </div>
+            <div class="product-card skeleton-card" aria-hidden="true">
+              <div class="card-image-box skeleton-box"></div>
+              <div class="card-body">
+                <div class="skeleton-line skeleton-meta"></div>
+                <div class="skeleton-line skeleton-title"></div>
+                <div class="skeleton-line skeleton-price"></div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -737,10 +809,8 @@
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- СКРИПТЫ: ДАННЫЕ И ЛОГИКА -->
-  <!-- 1. Синхронные данные каталога (для работы как через http://, так и через локальный file://) -->
-  <script src="data/catalog-output/products-data.js"></script>
-  <!-- 2. Ядро каталога, фильтрация, галерея, калькулятор комплектации V3.2 -->
-  <script src="app.js"></script>
+  <!-- Облегчённый асинхронный каталог data/catalog-index.json подгружается ядром app.js -->
+  <script src="app.js?v=3.6.0"></script>
 
 </body>
 </html>

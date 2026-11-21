@@ -1,0 +1,133 @@
+{
+  "id": "PROD-CHAM-031",
+  "brand": "Chameleon Doors",
+  "brand_id": "BRAND-CHAMELEON",
+  "collection": "ROUND STICK COLLECTION",
+  "collection_id": "COLL-CHAM-ROUNDSTICK",
+  "model": "Round stick 8",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь Chameleon Doors Round stick 8. Коллекция: ROUND STICK COLLECTION. Покрытие ПВХ высокой износостойкости. Надежная каркасно-щитовая или фрезерованная конструкция.",
+  "source": {
+    "pdf_file": "Chameleon Doors каталог 01.03.2026.pdf",
+    "page": 14,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая с заполнением брусом / сотовым, фрезерованный МДФ",
+    "material": "МДФ / сосна",
+    "coating": "ПВХ европейского качества",
+    "color": "В ассортименте декоров фабрики Chameleon Doors",
+    "texture": "Матовая шелковистая / древесная / софт-тач",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Глубокая фрезеровка / молдинги / декоративные рейки",
+    "style": "Современный / Неоклассика / Минимализм / Лофт",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм",
+      "нестандартные размеры до 2400 мм"
+    ],
+    "opening_direction": "Универсальное (распашная, раздвижная система)",
+    "other_specs": {
+      "thickness": "38 мм",
+      "factory_options": "Заполнение брусом, вентиляционная решетка, автопорог, скрытые петли"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно глухое или остекленное с ПВХ покрытием",
+    "frame": "Телескопическая коробка с пазом под уплотнитель",
+    "casing": "Телескопический фигурный или плоский наличник",
+    "extensions": "Телескопические доборы 100/150/200 мм",
+    "hinges": "Приобретаются отдельно (накладные-бабочки / скрытые)",
+    "locks": "Приобретаются отдельно (магнитные замки)",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Автопорог (опция)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-CHAM-031_main.webp",
+    "data/catalog-output/webp/PROD-CHAM-P14_page.webp"
+  ],
+  "price": 15950,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-CHAM-031-1",
+      "name": "Round stick 8 Глухая (ДГ) 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-031_main.webp",
+      "color_groups": [
+        "grey",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-031_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-031-2",
+      "name": "Round stick 8 Глухая (ДГ) 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-031_main.webp",
+      "color_groups": [
+        "grey",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-031_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-031-3",
+      "name": "Round stick 8 Глухая (ДГ) 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-031_main.webp",
+      "color_groups": [
+        "grey",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-031_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-031-4",
+      "name": "Round stick 8 Глухая (ДГ) 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-031_main.webp",
+      "color_groups": [
+        "grey",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-031_main.webp"
+    }
+  ],
+  "kit_price": 18400,
+  "leaf_price": 15950,
+  "dealer_price": 5950,
+  "color_groups": [
+    "grey",
+    "white"
+  ],
+  "color_names": [
+    "Белый матовый",
+    "Серый шелк"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-CHAM-031_main.webp",
+    "data/catalog-output/thumbs/PROD-CHAM-P14_page.webp"
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "id": "PROD-FERR-019",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери МДФ/МДФ",
+  "collection_id": "COLL-FERR-",
+  "model": "9 см ВУД ВЕРТИКАЛЬ",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь 9 см ВУД ВЕРТИКАЛЬ. Коллекция: Двери МДФ/МДФ. Внешняя отделка: сборная фрезерованная МДФ-панель 10 мм, цвет - «орех кантри. Внутренняя отделка: сборная фрезерованная  МДФ-панель 10 мм, цвет - «сатин белый»,. Толщина полотна: 104 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 12,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "сборная фрезерованная МДФ-панель 10 мм, цвет - «орех кантри",
+    "color": "сборная фрезерованная МДФ-панель 10 мм, цвет - «орех кантри / сборная фрезерованная  МДФ-панель 10 мм, цвет - «сатин белый»,",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "104 мм",
+      "frame_depth": "115 мм",
+      "insulation": "пенополистирол",
+      "seals": "3 контура уплотнителя из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 104 мм, внешняя отделка сборная фрезерованная МДФ-панель 10 мм, цвет - «орех кантри, внутренняя сборная фрезерованная  МДФ-панель 10 мм, цвет - «сатин белый»,",
+    "frame": "Утепленный цельногнутый стальной короб 115 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-019_main.webp"
+  ],
+  "price": 31800,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-019-1",
+      "name": "9 см ВУД ВЕРТИКАЛЬ 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "сборная фрезерованная МДФ-панель 10 мм, цвет - «орех кантри",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-019_main.webp",
+      "color_groups": [
+        "wood"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-019_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-019-2",
+      "name": "9 см ВУД ВЕРТИКАЛЬ 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "сборная фрезерованная МДФ-панель 10 мм, цвет - «орех кантри",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-019_main.webp",
+      "color_groups": [
+        "wood"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-019_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-019-3",
+      "name": "9 см ВУД ВЕРТИКАЛЬ 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "сборная фрезерованная МДФ-панель 10 мм, цвет - «орех кантри",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-019_main.webp",
+      "color_groups": [
+        "wood"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-019_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-019-4",
+      "name": "9 см ВУД ВЕРТИКАЛЬ 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "сборная фрезерованная МДФ-панель 10 мм, цвет - «орех кантри",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-019_main.webp",
+      "color_groups": [
+        "wood"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-019_main.webp"
+    }
+  ],
+  "kit_price": 31800,
+  "dealer_price": 21800,
+  "color_groups": [
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Белый / Светлый (внутренняя панель)",
+    "Древесные оттенки (дуб / орех / каштан)"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-019_main.webp"
+  ]
+}

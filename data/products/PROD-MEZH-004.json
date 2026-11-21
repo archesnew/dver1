@@ -1,0 +1,139 @@
+{
+  "id": "PROD-MEZH-004",
+  "brand": "Фабрика Межкомнатных Дверей",
+  "brand_id": "BRAND-MEZH-DOORS",
+  "collection": "Каркасно-щитовые двери",
+  "collection_id": "COLL-MEZH-",
+  "model": "Li-2",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь Li-2. Коллекция: Каркасно-щитовые двери. Конструкция: Каркасно-щитовая конструкция. Покрытие: ПЭТ. Толщина полотна: 38 мм.",
+  "source": {
+    "pdf_file": "Каталог_межкомнатных_дверей_2026_3.pdf",
+    "page": 3,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая конструкция",
+    "material": "МДФ / сосновый брус",
+    "coating": "ПЭТ",
+    "color": "Бьянка / Айс / Крим / Санторини / Платина / Белый / Дуб дымчатый",
+    "texture": "Матовая / древесная фактура / гладкая эмаль",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Алюминиевая кромка ABS черная / хром, композитная заливка",
+    "style": "Современный / Минимализм / Неоклассика",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (Direct / Reverse)",
+    "other_specs": {
+      "thickness": "38 мм",
+      "edge": "Кромка ABS с 4-х сторон черного цвета или алюминиевая кромка (для скрытых)",
+      "stiles": "Вертикальные стоевые - заполнение сосновым брусом + фанера + МДФ (бескромочная технология)"
+    }
+  },
+  "complectation": {
+    "leaf": "Дверное полотно 38 мм с заводской врезкой или без врезки",
+    "frame": "Алюминиевый скрытый короб (хром/черный) 2.5 шт. или телескопический короб МДФ",
+    "casing": "Без наличников (для скрытых) или телескопические плоские наличники",
+    "extensions": "Телескопические доборы 100/150 мм",
+    "hinges": "Две скрытые петли 180 градусов (хром/черный)",
+    "locks": "Врезка под магнитный замок",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Ответная планка короба"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-MEZH-004_main.webp",
+    "data/catalog-output/webp/PROD-MEZH-004_interior.webp"
+  ],
+  "price": 14650,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-MEZH-004-1",
+      "name": "Li-2 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "ПЭТ",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-MEZH-004_main.webp",
+      "color_groups": [
+        "grey",
+        "white",
+        "wood"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-MEZH-004_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-MEZH-004-2",
+      "name": "Li-2 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "ПЭТ",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-MEZH-004_main.webp",
+      "color_groups": [
+        "grey",
+        "white",
+        "wood"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-MEZH-004_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-MEZH-004-3",
+      "name": "Li-2 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "ПЭТ",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-MEZH-004_main.webp",
+      "color_groups": [
+        "grey",
+        "white",
+        "wood"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-MEZH-004_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-MEZH-004-4",
+      "name": "Li-2 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "ПЭТ",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-MEZH-004_main.webp",
+      "color_groups": [
+        "grey",
+        "white",
+        "wood"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-MEZH-004_main.webp"
+    }
+  ],
+  "kit_price": 17050,
+  "leaf_price": 14650,
+  "dealer_price": 4650,
+  "color_groups": [
+    "grey",
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Бьянка / Айс / Крим / Белый",
+    "Дуб дымчатый",
+    "Санторини / Платина"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-MEZH-004_main.webp",
+    "data/catalog-output/thumbs/PROD-MEZH-004_interior.webp"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "PROD-CHAM-164",
+  "brand": "Chameleon Doors",
+  "brand_id": "BRAND-CHAMELEON",
+  "collection": "Погонажные изделия",
+  "collection_id": "COLL-CHAM-MOLDING",
+  "model": "Погонаж телескопический и капители Chameleon",
+  "article": null,
+  "category": "Комплектующие",
+  "description": "Фирменный телескопический погонаж Chameleon Doors: коробка телескоп с уплотнителем, наличник плоский телескоп, наличник каннелюр, доборы телескопические, притворная планка, плинтус, капитель в сборе.",
+  "source": {
+    "pdf_file": "Chameleon Doors каталог 01.03.2026.pdf",
+    "page": 43,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": true,
+    "check_reason": "Не дверное полотно (требуется проверка)"
+  },
+  "specs": {
+    "door_type": "Погонаж",
+    "construction": "Телескопическая система крепления без гвоздей",
+    "material": "МДФ / сосна",
+    "coating": "ПВХ",
+    "color": "В цвет дверных полотен",
+    "texture": "Соответствует полотну",
+    "glass": "Нет",
+    "decor": "Каннелюры / капители / карнизы",
+    "style": "Универсальный",
+    "available_sizes": [
+      "Коробка 2070х75х32",
+      "Наличник 2150х70х10",
+      "Добор 2070х100/150/200"
+    ],
+    "opening_direction": "Универсальное",
+    "other_specs": {
+      "system": "Телескопический шип-паз"
+    }
+  },
+  "complectation": {
+    "leaf": null,
+    "frame": "Коробка телескопическая с пазом под добор и наличник",
+    "casing": "Наличники телескопические Г-образные",
+    "extensions": "Доборы телескопические",
+    "hinges": null,
+    "locks": null,
+    "handles": null,
+    "other_hardware": "Плинтус, капитель, розетки, цоколи"
+  },
+  "images": [
+    "data/catalog-output/webp/door-placeholder.webp"
+  ],
+  "price": 8400,
+  "price_type": "fixed",
+  "variants": [],
+  "kit_price": 8400,
+  "leaf_price": 5950,
+  "dealer_price": 5950,
+  "color_groups": [],
+  "color_names": [],
+  "need_manual_check": true,
+  "check_reason": "Комплектующие и погонаж (подбираются в цвет полотна)",
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/door-placeholder.webp"
+  ]
+}

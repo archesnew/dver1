@@ -1,0 +1,134 @@
+{
+  "id": "PROD-YOSH-011",
+  "brand": "Йошкар-Ола",
+  "brand_id": "BRAND-YOSHKAR-OLA",
+  "collection": "Входные металлические двери",
+  "collection_id": "COLL-YOSH-",
+  "model": "Лофт",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная дверь Йошкар-Ола Лофт. Толщина полотна: • Толщина полотна 80 мм (с панелью). Толщина стали: • Толщина стали 1 мм. Короб закрытый утепленный глубиной 120-148 мм.",
+  "source": {
+    "pdf_file": "ДВЕРИ ЙОШКАР ОЛА 2026.pdf",
+    "page": 12,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция с закрытым утепленным коробом",
+    "material": "Сталь / МДФ",
+    "coating": "Порошково-полимерное антивандальное покрытие",
+    "color": "Муар Графит / Букле / Цинкогрунт / Опал / Медь",
+    "texture": "Шагрень / Букле / Муар / МДФ панель",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Неоклассика",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2080 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "• Толщина полотна 80 мм (с панелью)",
+      "steel_thickness": "• Толщина стали 1 мм",
+      "frame_depth": "120-148 мм",
+      "thermal_break": "Нет",
+      "stainless_sill": null
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно • Толщина полотна 80 мм (с панелью), сталь • Толщина стали 1 мм",
+    "frame": "Короб закрытый утепленный 120-148 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли на упорных подшипниках",
+    "locks": "Замковая система сувальдный + цилиндровый",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок (для моделей без зеркала)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-YOSH-011_main.webp",
+    "data/catalog-output/webp/PROD-YOSH-011_alt1.webp",
+    "data/catalog-output/webp/PROD-YOSH-011_alt2.webp"
+  ],
+  "price": 30600,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-YOSH-011-1",
+      "name": "Лофт 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-YOSH-011_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-011_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-011-2",
+      "name": "Лофт 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-YOSH-011_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-011_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-011-3",
+      "name": "Лофт 960х2080 мм (Левое)",
+      "size": "960х2080 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-YOSH-011_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-011_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-011-4",
+      "name": "Лофт 960х2080 мм (Правое)",
+      "size": "960х2080 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-YOSH-011_main.webp",
+      "color_groups": [
+        "grey",
+        "metal"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-011_main.webp"
+    }
+  ],
+  "kit_price": 30600,
+  "dealer_price": 20600,
+  "color_groups": [
+    "grey",
+    "metal"
+  ],
+  "color_names": [
+    "Металл / Медный антик / Серебро",
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-YOSH-011_main.webp",
+    "data/catalog-output/thumbs/PROD-YOSH-011_alt1.webp",
+    "data/catalog-output/thumbs/PROD-YOSH-011_alt2.webp"
+  ]
+}

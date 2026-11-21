@@ -1,0 +1,132 @@
+{
+  "id": "PROD-VIRA-017",
+  "brand": "ViraDoors",
+  "brand_id": "BRAND-VIRADOORS",
+  "collection": "Входные стальные двери ViraDoors",
+  "collection_id": "COLL-VIRA-VIRADOORS",
+  "model": "ВИРА-17",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Металлическая входная дверь ViraDoors ВИРА-17. Покрытие: Муар 7024 / Муар 8019. Конструкция: закрытый короб, сталь 1.2 мм. Толщина полотна: 95 мм. Толщина короба: 120 мм.",
+  "source": {
+    "pdf_file": "ViraDoors_каталог_2026_А4_4+4_НОВЫЙ_ПЕЧАТЬ.pdf",
+    "page": 18,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Стальная цельногнутая конструкция, закрытый короб",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "Муар 7024 / Муар 8019",
+    "texture": "Шагрень / Антик / Букле / Муар",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Лофт / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "95 мм",
+      "frame_depth": "120 мм",
+      "steel_thickness": "1.2 мм",
+      "insulation": "Пенополистирол",
+      "seals": "3 контура",
+      "locks": "Сувальдный + цилиндровый",
+      "thermal_break": "Нет"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 95 мм, сталь 1.2 мм",
+    "frame": "Короб 120 мм, закрытый короб",
+    "casing": "Интегрированный фигурный наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли",
+    "locks": "Сувальдный + цилиндровый",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-VIRA-017_main.webp",
+    "data/catalog-output/webp/PROD-VIRA-017_alt1.webp",
+    "data/catalog-output/webp/PROD-VIRA-017_interior.webp",
+    "data/catalog-output/webp/PROD-VIRA-P18_page.webp"
+  ],
+  "price": 49000,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-VIRA-017-1",
+      "name": "ВИРА-17 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Муар 7024 / Муар 8019",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-017_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-017_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-017-2",
+      "name": "ВИРА-17 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Муар 7024 / Муар 8019",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-017_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-017_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-017-3",
+      "name": "ВИРА-17 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Муар 7024 / Муар 8019",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-017_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-017_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-017-4",
+      "name": "ВИРА-17 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Муар 7024 / Муар 8019",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-017_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-017_main.webp"
+    }
+  ],
+  "kit_price": 49000,
+  "dealer_price": 39000,
+  "color_groups": [
+    "grey"
+  ],
+  "color_names": [
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-VIRA-017_main.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-017_alt1.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-017_interior.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-P18_page.webp"
+  ]
+}

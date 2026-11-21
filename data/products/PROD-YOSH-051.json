@@ -1,0 +1,230 @@
+{
+  "id": "PROD-YOSH-051",
+  "brand": "Йошкар-Ола",
+  "brand_id": "BRAND-YOSHKAR-OLA",
+  "collection": "Межкомнатные двери Йошкар-Ола",
+  "collection_id": "COLL-YOSH-INT",
+  "model": "Line-7",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь Line-7. Покрытие: ПВХ. Внутреннее заполнение: Сосна по периметру. Доступные цвета: Латте 853, Ферро, Белая 850.",
+  "source": {
+    "pdf_file": "ДВЕРИ ЙОШКАР ОЛА 2026.pdf",
+    "page": 41,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая / царговая",
+    "material": "МДФ / сосна",
+    "coating": "ПВХ",
+    "color": "Латте 853, Ферро, Белая 850",
+    "texture": "Гладкая матовая / древесная",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Фрезеровка / багет",
+    "style": "Классика / Неоклассика / Модерн",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (левое / правое)",
+    "other_specs": {
+      "filling": "Сосна по периметру",
+      "molding_system": "Телескопический погонаж"
+    }
+  },
+  "complectation": {
+    "leaf": "Дверное полотно 2000х600/700/800/900 мм",
+    "frame": "Телескопическая коробка МДФ/сэндвич 2070х75 мм",
+    "casing": "Наличники телескопические 2150х70 мм (или 2180х80 мм)",
+    "extensions": "Доборы телескопические 2070х90, 130, 170, 210 мм",
+    "hinges": "Приобретаются отдельно (универсальные / скрытые)",
+    "locks": "Приобретаются отдельно (магнитные / сантехнические)",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Притворная планка (для распашных двупольных дверей)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-YOSH-051_main.webp"
+  ],
+  "price": 15850,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-YOSH-051-1",
+      "name": "Line-7 2000х600 мм Латте 853",
+      "size": "2000х600 мм",
+      "color": "Латте 853",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-2",
+      "name": "Line-7 2000х600 мм Ферро",
+      "size": "2000х600 мм",
+      "color": "Ферро",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-3",
+      "name": "Line-7 2000х600 мм Белая 850",
+      "size": "2000х600 мм",
+      "color": "Белая 850",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-4",
+      "name": "Line-7 2000х700 мм Латте 853",
+      "size": "2000х700 мм",
+      "color": "Латте 853",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-5",
+      "name": "Line-7 2000х700 мм Ферро",
+      "size": "2000х700 мм",
+      "color": "Ферро",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-6",
+      "name": "Line-7 2000х700 мм Белая 850",
+      "size": "2000х700 мм",
+      "color": "Белая 850",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-7",
+      "name": "Line-7 2000х800 мм Латте 853",
+      "size": "2000х800 мм",
+      "color": "Латте 853",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-8",
+      "name": "Line-7 2000х800 мм Ферро",
+      "size": "2000х800 мм",
+      "color": "Ферро",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-9",
+      "name": "Line-7 2000х800 мм Белая 850",
+      "size": "2000х800 мм",
+      "color": "Белая 850",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-10",
+      "name": "Line-7 2000х900 мм Латте 853",
+      "size": "2000х900 мм",
+      "color": "Латте 853",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-11",
+      "name": "Line-7 2000х900 мм Ферро",
+      "size": "2000х900 мм",
+      "color": "Ферро",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-051-12",
+      "name": "Line-7 2000х900 мм Белая 850",
+      "size": "2000х900 мм",
+      "color": "Белая 850",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-051_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+    }
+  ],
+  "kit_price": 18250,
+  "leaf_price": 15850,
+  "dealer_price": 5850,
+  "color_groups": [
+    "grey",
+    "white"
+  ],
+  "color_names": [
+    "Белый 850 / Латте / Песчаный",
+    "Светло-серый Р-576 / Ферро"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-YOSH-051_main.webp"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "PROD-VIRA-011",
+  "brand": "ViraDoors",
+  "brand_id": "BRAND-VIRADOORS",
+  "collection": "Входные стальные двери ViraDoors",
+  "collection_id": "COLL-VIRA-VIRADOORS",
+  "model": "ВИРА-11 Классика",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Металлическая входная дверь ViraDoors ВИРА-11 Классика. Покрытие: Букле черный / фрезерованная МДФ. Конструкция: классическая фрезеровка с багетом, сталь 1.4 мм. Толщина полотна: 100 мм. Толщина короба: 125 мм.",
+  "source": {
+    "pdf_file": "ViraDoors_каталог_2026_А4_4+4_НОВЫЙ_ПЕЧАТЬ.pdf",
+    "page": 12,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Стальная цельногнутая конструкция, классическая фрезеровка с багетом",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "Букле черный / фрезерованная МДФ",
+    "texture": "Шагрень / Антик / Букле / Муар",
+    "glass": "Нет",
+    "decor": "Фрезерованная МДФ-панель",
+    "style": "Современный / Лофт / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "100 мм",
+      "frame_depth": "125 мм",
+      "steel_thickness": "1.4 мм",
+      "insulation": "Пенополистирол",
+      "seals": "3 контура",
+      "locks": "Гардиан",
+      "thermal_break": "Нет"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 100 мм, сталь 1.4 мм",
+    "frame": "Короб 125 мм, классическая фрезеровка с багетом",
+    "casing": "Интегрированный фигурный наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли",
+    "locks": "Гардиан",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-VIRA-011_main.webp",
+    "data/catalog-output/webp/PROD-VIRA-011_alt1.webp",
+    "data/catalog-output/webp/PROD-VIRA-011_alt2.webp",
+    "data/catalog-output/webp/PROD-VIRA-P12_page.webp"
+  ],
+  "price": 32000,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-VIRA-011-1",
+      "name": "ВИРА-11 Классика 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Букле черный / фрезерованная МДФ",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-011_main.webp",
+      "color_groups": [
+        "dark"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-011_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-011-2",
+      "name": "ВИРА-11 Классика 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Букле черный / фрезерованная МДФ",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-011_main.webp",
+      "color_groups": [
+        "dark"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-011_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-011-3",
+      "name": "ВИРА-11 Классика 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Букле черный / фрезерованная МДФ",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-011_main.webp",
+      "color_groups": [
+        "dark"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-011_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-011-4",
+      "name": "ВИРА-11 Классика 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Букле черный / фрезерованная МДФ",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-011_main.webp",
+      "color_groups": [
+        "dark"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-011_main.webp"
+    }
+  ],
+  "kit_price": 32000,
+  "dealer_price": 22000,
+  "color_groups": [
+    "dark"
+  ],
+  "color_names": [
+    "Тёмный / Чёрный / Букле шоколад"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-VIRA-011_main.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-011_alt1.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-011_alt2.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-P12_page.webp"
+  ]
+}

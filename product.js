@@ -38,13 +38,20 @@
       .replace(/'/g, '&#39;');
   }
 
-  function resolveImgPath(imgPath) {
+  function resolveImgPath(imgPath, preferHighRes = true) {
     if (!imgPath) return 'door-placeholder.svg';
     if (imgPath.startsWith('http://') || imgPath.startsWith('https://')) return imgPath;
-    if (imgPath.startsWith('data/')) return imgPath;
-    if (imgPath.startsWith('catalog-images/')) return 'data/catalog-output/' + imgPath;
-    if (imgPath.startsWith('extracted_images/')) return 'data/catalog-output/' + imgPath;
-    return imgPath;
+    if (imgPath.startsWith('data/catalog-output/webp/') || imgPath.startsWith('data/catalog-output/thumbs/')) return imgPath;
+    if (imgPath.startsWith('thumbs/') || imgPath.startsWith('webp/')) return 'data/catalog-output/' + imgPath;
+
+    const folder = preferHighRes ? 'webp' : 'thumbs';
+    const clean = imgPath
+      .replace(/^data\/catalog-output\/(catalog-images|thumbs|webp)\//, '')
+      .replace(/^catalog-images\//, '')
+      .replace(/^extracted_images\//, '')
+      .replace(/\.[^.]+$/, '');
+
+    return `data/catalog-output/${folder}/${clean}.webp`;
   }
 
   function formatPrice(val) {
@@ -129,29 +136,37 @@
   // ИНИЦИАЛИЗАЦИЯ И РЕНДЕР ТОВАРА
   // --------------------------------------------------------------------------
 
-  function initPDP() {
+  async function initPDP() {
     loadCartFromStorage();
     updateCartCount();
 
     // Получаем ID товара из URL или hash
     let targetId = getQueryParam('id') || window.location.hash.replace('#', '') || 'PROD-FERR-001';
 
-    // Получаем массив каталога
-    let allProducts = window.CATALOG_PRODUCTS || [];
+    // 1. Быстрая прямая загрузка индивидуального JSON товара (~5 KB вместо 3.74 MB)
+    try {
+      const res = await fetch(`data/products/${encodeURIComponent(targetId)}.json`);
+      if (res.ok) {
+        const prodData = await res.json();
+        pdpState.product = prodData;
+        setupProductState(prodData);
+        renderProductPage();
+        bindGlobalEvents();
+        return;
+      }
+    } catch (e) {
+      console.warn(`Не удалось загрузить data/products/${targetId}.json, пробуем fallback:`, e);
+    }
 
-    if (!allProducts || allProducts.length === 0) {
-      fetch('data/catalog-output/products.json')
-        .then(res => res.json())
-        .then(data => {
-          window.CATALOG_PRODUCTS = data;
-          loadTargetProduct(targetId, data);
-        })
-        .catch(err => {
-          console.error('Ошибка загрузки products.json:', err);
-          showToast('Не удалось загрузить данные каталога');
-        });
-    } else {
-      loadTargetProduct(targetId, allProducts);
+    // 2. Fallback: загрузка через products.json
+    try {
+      const res = await fetch('data/catalog-output/products.json');
+      const data = await res.json();
+      window.CATALOG_PRODUCTS = data;
+      loadTargetProduct(targetId, data);
+    } catch (err) {
+      console.error('Ошибка загрузки products.json:', err);
+      showToast('Не удалось загрузить данные каталога');
     }
 
     bindGlobalEvents();

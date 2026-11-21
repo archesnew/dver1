@@ -1,0 +1,134 @@
+{
+  "id": "PROD-FERR-061",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери металл/металл",
+  "collection_id": "COLL-FERR-",
+  "model": "9 см МЕДНЫЙ АНТИК МЕТАЛЛ/МЕТАЛЛ",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь 9 см МЕДНЫЙ АНТИК МЕТАЛЛ/МЕТАЛЛ. Коллекция: Двери металл/металл. Внешняя отделка: порошково-полимерное покрытие. Внутренняя отделка: атмосферостойкое порошково-полимерное «букле. Толщина полотна: 90мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 31,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "атмосферостойкое порошково-полимерное «букле",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "90мм",
+      "frame_depth": "105мм",
+      "insulation": "пенополистирол",
+      "seals": "3 контура уплотнителя из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 90мм, внешняя отделка , внутренняя атмосферостойкое порошково-полимерное «букле",
+    "frame": "Утепленный цельногнутый стальной короб 105мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-061_main.webp"
+  ],
+  "price": 26700,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-061-1",
+      "name": "9 см МЕДНЫЙ АНТИК МЕТАЛЛ/МЕТАЛЛ 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-061_main.webp",
+      "color_groups": [
+        "wood",
+        "metal"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-061_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-061-2",
+      "name": "9 см МЕДНЫЙ АНТИК МЕТАЛЛ/МЕТАЛЛ 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-061_main.webp",
+      "color_groups": [
+        "wood",
+        "metal"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-061_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-061-3",
+      "name": "9 см МЕДНЫЙ АНТИК МЕТАЛЛ/МЕТАЛЛ 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-061_main.webp",
+      "color_groups": [
+        "wood",
+        "metal"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-061_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-061-4",
+      "name": "9 см МЕДНЫЙ АНТИК МЕТАЛЛ/МЕТАЛЛ 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-061_main.webp",
+      "color_groups": [
+        "wood",
+        "metal"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-061_main.webp"
+    }
+  ],
+  "kit_price": 26700,
+  "dealer_price": 16700,
+  "color_groups": [
+    "metal",
+    "wood"
+  ],
+  "color_names": [
+    "Древесные оттенки (дуб / орех / каштан)",
+    "Металл / Медный антик / Серебро"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-061_main.webp"
+  ]
+}

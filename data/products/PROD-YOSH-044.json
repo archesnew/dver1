@@ -1,0 +1,184 @@
+{
+  "id": "PROD-YOSH-044",
+  "brand": "Йошкар-Ола",
+  "brand_id": "BRAND-YOSHKAR-OLA",
+  "collection": "Межкомнатные двери Йошкар-Ола",
+  "collection_id": "COLL-YOSH-INT",
+  "model": "Аттика",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь Аттика. Покрытие: ПВХ. Внутреннее заполнение: МДФ. Доступные цвета: Песчаный рай, Белая вуаль.",
+  "source": {
+    "pdf_file": "ДВЕРИ ЙОШКАР ОЛА 2026.pdf",
+    "page": 39,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая / царговая",
+    "material": "МДФ / сосна",
+    "coating": "ПВХ",
+    "color": "Песчаный рай, Белая вуаль",
+    "texture": "Гладкая матовая / древесная",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Фрезеровка / багет",
+    "style": "Классика / Неоклассика / Модерн",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (левое / правое)",
+    "other_specs": {
+      "filling": "МДФ",
+      "molding_system": "Телескопический погонаж"
+    }
+  },
+  "complectation": {
+    "leaf": "Дверное полотно 2000х600/700/800/900 мм",
+    "frame": "Телескопическая коробка МДФ/сэндвич 2070х75 мм",
+    "casing": "Наличники телескопические 2150х70 мм (или 2180х80 мм)",
+    "extensions": "Доборы телескопические 2070х90, 130, 170, 210 мм",
+    "hinges": "Приобретаются отдельно (универсальные / скрытые)",
+    "locks": "Приобретаются отдельно (магнитные / сантехнические)",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Притворная планка (для распашных двупольных дверей)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-YOSH-044_main.webp"
+  ],
+  "price": 12850,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-YOSH-044-1",
+      "name": "Аттика 2000х600 мм Песчаный рай",
+      "size": "2000х600 мм",
+      "color": "Песчаный рай",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-044_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-044_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-044-2",
+      "name": "Аттика 2000х600 мм Белая вуаль",
+      "size": "2000х600 мм",
+      "color": "Белая вуаль",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-044_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-044_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-044-3",
+      "name": "Аттика 2000х700 мм Песчаный рай",
+      "size": "2000х700 мм",
+      "color": "Песчаный рай",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-044_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-044_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-044-4",
+      "name": "Аттика 2000х700 мм Белая вуаль",
+      "size": "2000х700 мм",
+      "color": "Белая вуаль",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-044_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-044_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-044-5",
+      "name": "Аттика 2000х800 мм Песчаный рай",
+      "size": "2000х800 мм",
+      "color": "Песчаный рай",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-044_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-044_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-044-6",
+      "name": "Аттика 2000х800 мм Белая вуаль",
+      "size": "2000х800 мм",
+      "color": "Белая вуаль",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-044_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-044_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-044-7",
+      "name": "Аттика 2000х900 мм Песчаный рай",
+      "size": "2000х900 мм",
+      "color": "Песчаный рай",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-044_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-044_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-YOSH-044-8",
+      "name": "Аттика 2000х900 мм Белая вуаль",
+      "size": "2000х900 мм",
+      "color": "Белая вуаль",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-YOSH-044_main.webp",
+      "color_groups": [
+        "wood",
+        "white"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-YOSH-044_main.webp"
+    }
+  ],
+  "kit_price": 14900,
+  "leaf_price": 12850,
+  "dealer_price": 2850,
+  "color_groups": [
+    "white"
+  ],
+  "color_names": [
+    "Белый 850 / Латте / Песчаный"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-YOSH-044_main.webp"
+  ]
+}

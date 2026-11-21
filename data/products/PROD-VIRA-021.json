@@ -1,0 +1,140 @@
+{
+  "id": "PROD-VIRA-021",
+  "brand": "ViraDoors",
+  "brand_id": "BRAND-VIRADOORS",
+  "collection": "Входные стальные двери ViraDoors",
+  "collection_id": "COLL-VIRA-VIRADOORS",
+  "model": "ВИРА-21 ВЕРТИКАЛЬ СО СТЕКЛОМ",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Металлическая входная дверь ViraDoors ВИРА-21 ВЕРТИКАЛЬ СО СТЕКЛОМ. Покрытие: Муар RAL 7016 + черный / Муар RAL 8019. Конструкция: дизайнерская со стеклопакетом, сталь 1.4 мм. Толщина полотна: 105 мм. Толщина короба: 130 мм.",
+  "source": {
+    "pdf_file": "ViraDoors_каталог_2026_А4_4+4_НОВЫЙ_ПЕЧАТЬ.pdf",
+    "page": 22,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Стальная цельногнутая конструкция, дизайнерская со стеклопакетом",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "Муар RAL 7016 + черный / Муар RAL 8019",
+    "texture": "Шагрень / Антик / Букле / Муар",
+    "glass": "Тонированный стеклопакет",
+    "decor": null,
+    "style": "Современный / Лофт / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "105 мм",
+      "frame_depth": "130 мм",
+      "steel_thickness": "1.4 мм",
+      "insulation": "Минеральная плита",
+      "seals": "3 контура",
+      "locks": "Гардиан",
+      "thermal_break": "Нет"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 105 мм, сталь 1.4 мм",
+    "frame": "Короб 130 мм, дизайнерская со стеклопакетом",
+    "casing": "Интегрированный фигурный наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли",
+    "locks": "Гардиан",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-VIRA-021_main.webp",
+    "data/catalog-output/webp/PROD-VIRA-021_alt1.webp",
+    "data/catalog-output/webp/PROD-VIRA-021_alt2.webp",
+    "data/catalog-output/webp/PROD-VIRA-021_interior.webp",
+    "data/catalog-output/webp/PROD-VIRA-P22_page.webp"
+  ],
+  "price": 57000,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-VIRA-021-1",
+      "name": "ВИРА-21 ВЕРТИКАЛЬ СО СТЕКЛОМ 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Муар RAL 7016 + черный / Муар RAL 8019",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-021_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-021_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-021-2",
+      "name": "ВИРА-21 ВЕРТИКАЛЬ СО СТЕКЛОМ 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Муар RAL 7016 + черный / Муар RAL 8019",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-021_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-021_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-021-3",
+      "name": "ВИРА-21 ВЕРТИКАЛЬ СО СТЕКЛОМ 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Муар RAL 7016 + черный / Муар RAL 8019",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-021_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-021_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-021-4",
+      "name": "ВИРА-21 ВЕРТИКАЛЬ СО СТЕКЛОМ 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Муар RAL 7016 + черный / Муар RAL 8019",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-021_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-021_main.webp"
+    }
+  ],
+  "kit_price": 57000,
+  "dealer_price": 47000,
+  "color_groups": [
+    "dark",
+    "wood"
+  ],
+  "color_names": [
+    "Древесные оттенки (дуб / орех / каштан)",
+    "Тёмный / Чёрный / Букле шоколад"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-VIRA-021_main.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-021_alt1.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-021_alt2.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-021_interior.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-P22_page.webp"
+  ]
+}

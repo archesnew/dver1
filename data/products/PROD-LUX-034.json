@@ -1,0 +1,128 @@
+{
+  "id": "PROD-LUX-034",
+  "brand": "Luxor",
+  "brand_id": "BRAND-LUXOR",
+  "collection": "Luxor 2МДФ",
+  "collection_id": "COLL-LUX-LUXOR2",
+  "model": "Luxor 2МДФ Стр.35",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная дверь Luxor 2МДФ Стр.35 серии Luxor 2МДФ. Внешнее покрытие: сатин черный. Внутренняя панель: Сатин черный. Толщина полотна 11,5 см. Нет.",
+  "source": {
+    "pdf_file": "Каталог Люксор май 2026 (3).pdf",
+    "page": 35,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция с коробом закрытого типа",
+    "material": "Сталь / МДФ",
+    "coating": "сатин черный",
+    "color": "сатин черный / Сатин черный",
+    "texture": "Букле / Муар / Сатин / МДФ панель",
+    "glass": "Зеркало",
+    "decor": "Встроенное зеркало с защитной пленкой",
+    "style": "Современный / Неоклассика / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "Толщина полотна 11,5 см",
+      "thermal_break": "Нет",
+      "frame_depth": "130-150 мм",
+      "insulation": "PIR-плита / базальтовая плита / пенополистирол",
+      "seals": "3 контура уплотнения (включая магнитный на коробе)",
+      "locks": "Двухсистемный сувальдный + цилиндровый высшего класса взломостойкости",
+      "handles": "Раздельная ручка в цвете черный / хром"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно Толщина полотна 11,5 см, сталь 1.5 мм, терморазрыв Нет",
+    "frame": "Утепленный цельногнутый короб с терморазрывом и эксцентриком",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли 180° на подшипниках",
+    "locks": "Сувальдный и цилиндровый замки",
+    "handles": "Раздельная эргономичная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, порог из нержавеющей стали"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-LUX-034_main.webp",
+    "data/catalog-output/webp/PROD-LUX-034_alt1.webp"
+  ],
+  "price": 38700,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-LUX-034-1",
+      "name": "Luxor 2МДФ Стр.35 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "сатин черный / Сатин черный",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-LUX-034_main.webp",
+      "color_groups": [
+        "dark"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-034_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-034-2",
+      "name": "Luxor 2МДФ Стр.35 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "сатин черный / Сатин черный",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-LUX-034_main.webp",
+      "color_groups": [
+        "dark"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-034_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-034-3",
+      "name": "Luxor 2МДФ Стр.35 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "сатин черный / Сатин черный",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-LUX-034_main.webp",
+      "color_groups": [
+        "dark"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-034_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-LUX-034-4",
+      "name": "Luxor 2МДФ Стр.35 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "сатин черный / Сатин черный",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-LUX-034_main.webp",
+      "color_groups": [
+        "dark"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-LUX-034_main.webp"
+    }
+  ],
+  "kit_price": 38700,
+  "dealer_price": 28700,
+  "color_groups": [
+    "dark"
+  ],
+  "color_names": [
+    "Тёмный / Чёрный / Букле шоколад"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-LUX-034_main.webp",
+    "data/catalog-output/thumbs/PROD-LUX-034_alt1.webp"
+  ]
+}

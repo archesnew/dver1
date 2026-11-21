@@ -1,0 +1,131 @@
+{
+  "id": "PROD-FSD-011",
+  "brand": "ФСД",
+  "brand_id": "BRAND-FSD",
+  "collection": "Входные двери ФСД",
+  "collection_id": "COLL-FSD-ENTRANCE",
+  "model": "Металл Медь антик 67 мм",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная дверь ФСД Металл Медь антик 67 мм. Внешнее покрытие: Медь антик. Толщина полотна: 67 мм. Утеплитель: пенополистирол.",
+  "source": {
+    "pdf_file": "Каталог FSD 07-10-2025-2 цвета разв.pdf",
+    "page": 4,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "Медь антик",
+    "texture": "Муар / Букле / Антик",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Минимализм",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "67 мм",
+      "insulation": "пенополистирол",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "handles": "Раздельная, квадратная"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 67 мм, сталь 1.4 мм",
+    "frame": "Короб цельногнутый утепленный",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли",
+    "locks": "Сувальдный и цилиндровый замки",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FSD-011_main.webp",
+    "data/catalog-output/webp/PROD-FSD-011_interior.webp"
+  ],
+  "price": 23500,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FSD-011-1",
+      "name": "Металл Медь антик 67 мм 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Медь антик",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FSD-011_main.webp",
+      "color_groups": [
+        "wood",
+        "metal"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FSD-011_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FSD-011-2",
+      "name": "Металл Медь антик 67 мм 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Медь антик",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FSD-011_main.webp",
+      "color_groups": [
+        "wood",
+        "metal"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FSD-011_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FSD-011-3",
+      "name": "Металл Медь антик 67 мм 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Медь антик",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FSD-011_main.webp",
+      "color_groups": [
+        "wood",
+        "metal"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FSD-011_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FSD-011-4",
+      "name": "Металл Медь антик 67 мм 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Медь антик",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FSD-011_main.webp",
+      "color_groups": [
+        "wood",
+        "metal"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FSD-011_main.webp"
+    }
+  ],
+  "kit_price": 23500,
+  "dealer_price": 13500,
+  "color_groups": [
+    "metal",
+    "wood"
+  ],
+  "color_names": [
+    "Древесные оттенки (дуб / орех / каштан)",
+    "Металл / Медный антик / Серебро"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FSD-011_main.webp",
+    "data/catalog-output/thumbs/PROD-FSD-011_interior.webp"
+  ]
+}

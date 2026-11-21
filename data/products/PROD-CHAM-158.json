@@ -1,0 +1,185 @@
+{
+  "id": "PROD-CHAM-158",
+  "brand": "Chameleon Doors",
+  "brand_id": "BRAND-CHAMELEON",
+  "collection": "BAR ROOMS COLLECTION",
+  "collection_id": "COLL-CHAM-BARROOMSCO",
+  "model": "B 2",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь Chameleon Doors B 2. Коллекция: BAR ROOMS COLLECTION. Покрытие ПВХ высокой износостойкости. Надежная каркасно-щитовая или фрезерованная конструкция.",
+  "source": {
+    "pdf_file": "Chameleon Doors каталог 01.03.2026.pdf",
+    "page": 39,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая с заполнением брусом / сотовым, фрезерованный МДФ",
+    "material": "МДФ / сосна",
+    "coating": "ПВХ европейского качества",
+    "color": "В ассортименте декоров фабрики Chameleon Doors",
+    "texture": "Матовая шелковистая / древесная / софт-тач",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Глубокая фрезеровка / молдинги / декоративные рейки",
+    "style": "Современный / Неоклассика / Минимализм / Лофт",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм",
+      "нестандартные размеры до 2400 мм"
+    ],
+    "opening_direction": "Универсальное (распашная, раздвижная система)",
+    "other_specs": {
+      "thickness": "38 мм",
+      "factory_options": "Заполнение брусом, вентиляционная решетка, автопорог, скрытые петли"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно глухое или остекленное с ПВХ покрытием",
+    "frame": "Телескопическая коробка с пазом под уплотнитель",
+    "casing": "Телескопический фигурный или плоский наличник",
+    "extensions": "Телескопические доборы 100/150/200 мм",
+    "hinges": "Приобретаются отдельно (накладные-бабочки / скрытые)",
+    "locks": "Приобретаются отдельно (магнитные замки)",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Автопорог (опция)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-CHAM-158_main.webp",
+    "data/catalog-output/webp/PROD-CHAM-P39_page.webp"
+  ],
+  "price": 17500,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-CHAM-158-1",
+      "name": "B 2 Глухая (ДГ) 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-158_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-158_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-158-2",
+      "name": "B 2 Остекленная (ДО) 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P39_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P39_page.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-158-3",
+      "name": "B 2 Глухая (ДГ) 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-158_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-158_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-158-4",
+      "name": "B 2 Остекленная (ДО) 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P39_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P39_page.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-158-5",
+      "name": "B 2 Глухая (ДГ) 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-158_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-158_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-158-6",
+      "name": "B 2 Остекленная (ДО) 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P39_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P39_page.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-158-7",
+      "name": "B 2 Глухая (ДГ) 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-158_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-158_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-158-8",
+      "name": "B 2 Остекленная (ДО) 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P39_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P39_page.webp"
+    }
+  ],
+  "kit_price": 19950,
+  "leaf_price": 17500,
+  "dealer_price": 7500,
+  "color_groups": [
+    "dark",
+    "grey"
+  ],
+  "color_names": [
+    "Серый графит",
+    "Темный лофт"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-CHAM-158_main.webp",
+    "data/catalog-output/thumbs/PROD-CHAM-P39_page.webp"
+  ]
+}

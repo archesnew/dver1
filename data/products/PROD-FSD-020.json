@@ -1,0 +1,123 @@
+{
+  "id": "PROD-FSD-020",
+  "brand": "ФСД",
+  "brand_id": "BRAND-FSD",
+  "collection": "Межкомнатные двери ФСД",
+  "collection_id": "COLL-FSD-INTERIOR",
+  "model": "F2",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь ФСД F2. Современное покрытие Эмалит / ПЭТ / Ривьера айс. Телескопический погонаж.",
+  "source": {
+    "pdf_file": "Каталог FSD 07-10-2025-2 цвета разв.pdf",
+    "page": 7,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Царговая / каркасно-щитовая",
+    "material": "МДФ / брус хвойных пород",
+    "coating": "Эмалит / Экошпон / ПВХ",
+    "color": "Эмалит белый / Крем / Ривьера айс / Вайт кристалл",
+    "texture": "Матовая шелковистая / древесная",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Фрезеровка / молдинг",
+    "style": "Неоклассика / Модерн",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (левое / правое)",
+    "other_specs": {
+      "thickness": "38 мм"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 2000х600/700/800/900х38 мм",
+    "frame": "Короб телескопический с уплотнителем",
+    "casing": "Наличники телескопические плоские",
+    "extensions": "Доборы телескопические 100/150 мм",
+    "hinges": "Приобретаются отдельно",
+    "locks": "Приобретаются отдельно",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": null
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FSD-020_main.webp"
+  ],
+  "price": 17500,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FSD-020-1",
+      "name": "F2 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "Эмалит белый / Ривьера айс / Крем",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-FSD-020_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-FSD-020_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FSD-020-2",
+      "name": "F2 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "Эмалит белый / Ривьера айс / Крем",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-FSD-020_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-FSD-020_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FSD-020-3",
+      "name": "F2 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "Эмалит белый / Ривьера айс / Крем",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-FSD-020_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-FSD-020_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FSD-020-4",
+      "name": "F2 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "Эмалит белый / Ривьера айс / Крем",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-FSD-020_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-FSD-020_main.webp"
+    }
+  ],
+  "kit_price": 19950,
+  "leaf_price": 17500,
+  "dealer_price": 7500,
+  "color_groups": [
+    "white"
+  ],
+  "color_names": [
+    "Эмалит белый / Крем / Ривьера айс / Вайт кристалл"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FSD-020_main.webp"
+  ]
+}

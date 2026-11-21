@@ -1,0 +1,130 @@
+{
+  "id": "PROD-FERR-014",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери МДФ/МДФ",
+  "collection_id": "COLL-FERR-",
+  "model": "Модель Феррони Стр.10",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь Модель Феррони Стр.10. Коллекция: Двери МДФ/МДФ. Внешняя отделка: порошково-полимерное покрытие. Внутренняя отделка: панель МДФ. Толщина полотна: не указано.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 10,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "75-130 мм",
+      "frame_depth": "90-148 мм",
+      "insulation": "Пенополистирол",
+      "seals": "Уплотнитель из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно , внешняя отделка , внутренняя",
+    "frame": "Утепленный цельногнутый стальной короб",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-014_main.webp",
+    "data/catalog-output/webp/PROD-FERR-014_interior.webp"
+  ],
+  "price": 26000,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-014-1",
+      "name": "Модель Феррони Стр.10 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-014_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-014_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-014-2",
+      "name": "Модель Феррони Стр.10 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-014_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-014_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-014-3",
+      "name": "Модель Феррони Стр.10 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-014_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-014_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-014-4",
+      "name": "Модель Феррони Стр.10 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-014_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-014_main.webp"
+    }
+  ],
+  "kit_price": 26000,
+  "dealer_price": 16000,
+  "color_groups": [
+    "grey"
+  ],
+  "color_names": [
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-014_main.webp",
+    "data/catalog-output/thumbs/PROD-FERR-014_interior.webp"
+  ]
+}

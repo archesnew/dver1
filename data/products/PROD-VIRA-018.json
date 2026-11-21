@@ -1,0 +1,144 @@
+{
+  "id": "PROD-VIRA-018",
+  "brand": "ViraDoors",
+  "brand_id": "BRAND-VIRADOORS",
+  "collection": "Входные стальные двери ViraDoors",
+  "collection_id": "COLL-VIRA-VIRADOORS",
+  "model": "ВИРА-18",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Металлическая входная дверь ViraDoors ВИРА-18. Покрытие: Букле графит / шоколад / панель белый матовый. Конструкция: закрытый короб, сталь 1.4 мм. Толщина полотна: 100 мм. Толщина короба: 125 мм.",
+  "source": {
+    "pdf_file": "ViraDoors_каталог_2026_А4_4+4_НОВЫЙ_ПЕЧАТЬ.pdf",
+    "page": 19,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Стальная цельногнутая конструкция, закрытый короб",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "Букле графит / шоколад / панель белый матовый",
+    "texture": "Шагрень / Антик / Букле / Муар",
+    "glass": "Нет",
+    "decor": "Фрезерованная МДФ-панель",
+    "style": "Современный / Лофт / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "100 мм",
+      "frame_depth": "125 мм",
+      "steel_thickness": "1.4 мм",
+      "insulation": "Пенополистирол",
+      "seals": "3 контура",
+      "locks": "Гардиан 32.11 / Бордер",
+      "thermal_break": "Нет"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 100 мм, сталь 1.4 мм",
+    "frame": "Короб 125 мм, закрытый короб",
+    "casing": "Интегрированный фигурный наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли",
+    "locks": "Гардиан 32.11 / Бордер",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-VIRA-018_main.webp",
+    "data/catalog-output/webp/PROD-VIRA-018_alt1.webp",
+    "data/catalog-output/webp/PROD-VIRA-018_alt2.webp",
+    "data/catalog-output/webp/PROD-VIRA-P19_page.webp"
+  ],
+  "price": 54000,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-VIRA-018-1",
+      "name": "ВИРА-18 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Букле графит / шоколад / панель белый матовый",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-018_main.webp",
+      "color_groups": [
+        "grey",
+        "dark",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-018_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-018-2",
+      "name": "ВИРА-18 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Букле графит / шоколад / панель белый матовый",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-018_main.webp",
+      "color_groups": [
+        "grey",
+        "dark",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-018_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-018-3",
+      "name": "ВИРА-18 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Букле графит / шоколад / панель белый матовый",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-018_main.webp",
+      "color_groups": [
+        "grey",
+        "dark",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-018_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-018-4",
+      "name": "ВИРА-18 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Букле графит / шоколад / панель белый матовый",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-018_main.webp",
+      "color_groups": [
+        "grey",
+        "dark",
+        "white"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-018_main.webp"
+    }
+  ],
+  "kit_price": 54000,
+  "dealer_price": 44000,
+  "color_groups": [
+    "dark",
+    "grey",
+    "white"
+  ],
+  "color_names": [
+    "Белый / Светлый (внутренняя панель)",
+    "Серый / Графит / Антрацит",
+    "Тёмный / Чёрный / Букле шоколад"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-VIRA-018_main.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-018_alt1.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-018_alt2.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-P19_page.webp"
+  ]
+}

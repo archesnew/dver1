@@ -1,0 +1,128 @@
+{
+  "id": "PROD-DVER-018",
+  "brand": "Двереки",
+  "brand_id": "BRAND-DVEREKI",
+  "collection": "Серия Байсар",
+  "collection_id": "COLL-DVER-",
+  "model": "Байсар 3 (остекленная)",
+  "article": null,
+  "category": "Двери со стеклом",
+  "description": "Межкомнатная дверь фабрики «Двереки» — модель Байсар 3 (остекленная). Коллекция: Серия Байсар. Экологичные материалы европейского стандарта, гарантия качества производителя.",
+  "source": {
+    "pdf_file": "Двереки каталог  .pdf",
+    "page": 13,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Царговая / каркасно-щитовая сборная конструкция",
+    "material": "МДФ / сосновый брус",
+    "coating": "Экошпон / полипропиленовое покрытие с 3D эффектом",
+    "color": "Белый матовый / Латте / Серый велюр / Дуб натуральный",
+    "texture": "Текстурированная под древесину / софт-тач",
+    "glass": "Матовое стекло сатинат (светопрозрачное)",
+    "decor": "Фигурная фрезеровка / вставки стекла",
+    "style": "Современный / Неоклассика / Модерн",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (распашное / раздвижное купе)",
+    "other_specs": {
+      "thickness": "38 мм",
+      "eco_friendly": "Экологичные материалы, влагостойкость"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно Байсар 3 остекленная",
+    "frame": "Телескопическая коробка с пазом под уплотнитель",
+    "casing": "Наличник телескопический прямой",
+    "extensions": "Доборы телескопические 100/150 мм",
+    "hinges": "Приобретаются отдельно",
+    "locks": "Приобретаются отдельно",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": null
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-DVER-018_main.webp"
+  ],
+  "price": 13800,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-DVER-018-1",
+      "name": "Байсар 3 (остекленная) 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "Экошпон / Эмалекс по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-DVER-018_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-DVER-018_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-DVER-018-2",
+      "name": "Байсар 3 (остекленная) 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "Экошпон / Эмалекс по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-DVER-018_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-DVER-018_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-DVER-018-3",
+      "name": "Байсар 3 (остекленная) 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "Экошпон / Эмалекс по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-DVER-018_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-DVER-018_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-DVER-018-4",
+      "name": "Байсар 3 (остекленная) 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "Экошпон / Эмалекс по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-DVER-018_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-DVER-018_main.webp"
+    }
+  ],
+  "kit_price": 15980,
+  "leaf_price": 13800,
+  "dealer_price": 3800,
+  "color_groups": [
+    "grey",
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Белый матовый / Латте",
+    "Дуб натуральный",
+    "Серый велюр"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "glass",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-DVER-018_main.webp"
+  ]
+}

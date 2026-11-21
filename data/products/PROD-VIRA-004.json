@@ -1,0 +1,144 @@
+{
+  "id": "PROD-VIRA-004",
+  "brand": "ViraDoors",
+  "brand_id": "BRAND-VIRADOORS",
+  "collection": "Входные стальные двери ViraDoors",
+  "collection_id": "COLL-VIRA-VIRADOORS",
+  "model": "ВИРА-4",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Металлическая входная дверь ViraDoors ВИРА-4. Покрытие: Серебряный антик / Шагрень RAL7024. Конструкция: закрытый тип короба, сталь 1.2 мм. Толщина полотна: 95 мм. Толщина короба: 120 мм.",
+  "source": {
+    "pdf_file": "ViraDoors_каталог_2026_А4_4+4_НОВЫЙ_ПЕЧАТЬ.pdf",
+    "page": 5,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Стальная цельногнутая конструкция, закрытый тип короба",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "Серебряный антик / Шагрень RAL7024",
+    "texture": "Шагрень / Антик / Букле / Муар",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Лофт / Хай-тек",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "95 мм",
+      "frame_depth": "120 мм",
+      "steel_thickness": "1.2 мм",
+      "insulation": "Базальтовая плита + пенополистирол",
+      "seals": "3 контура уплотнения",
+      "locks": "Гардиан 32.11 / Бордер",
+      "thermal_break": "Нет"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно 95 мм, сталь 1.2 мм",
+    "frame": "Короб 120 мм, закрытый тип короба",
+    "casing": "Интегрированный фигурный наличник",
+    "extensions": null,
+    "hinges": "3 наружные петли",
+    "locks": "Гардиан 32.11 / Бордер",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-VIRA-004_main.webp",
+    "data/catalog-output/webp/PROD-VIRA-004_alt1.webp",
+    "data/catalog-output/webp/PROD-VIRA-004_alt2.webp",
+    "data/catalog-output/webp/PROD-VIRA-P5_page.webp"
+  ],
+  "price": 27200,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-VIRA-004-1",
+      "name": "ВИРА-4 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Серебряный антик / Шагрень RAL7024",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-004_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-004_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-004-2",
+      "name": "ВИРА-4 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Серебряный антик / Шагрень RAL7024",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-004_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-004_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-004-3",
+      "name": "ВИРА-4 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Серебряный антик / Шагрень RAL7024",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-VIRA-004_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-004_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-VIRA-004-4",
+      "name": "ВИРА-4 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Серебряный антик / Шагрень RAL7024",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-VIRA-004_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-VIRA-004_main.webp"
+    }
+  ],
+  "kit_price": 27200,
+  "dealer_price": 17200,
+  "color_groups": [
+    "grey",
+    "metal",
+    "wood"
+  ],
+  "color_names": [
+    "Древесные оттенки (дуб / орех / каштан)",
+    "Металл / Медный антик / Серебро",
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-VIRA-004_main.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-004_alt1.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-004_alt2.webp",
+    "data/catalog-output/thumbs/PROD-VIRA-P5_page.webp"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "PROD-CHAM-163",
+  "brand": "Chameleon Doors",
+  "brand_id": "BRAND-CHAMELEON",
+  "collection": "Стеновые панели",
+  "collection_id": "COLL-CHAM-PANELS",
+  "model": "Стеновые реечные и плоские панели Chameleon",
+  "article": null,
+  "category": "Декоративные элементы и дополнительные решения",
+  "description": "Стеновые панели МДФ в цвет межкомнатных дверей с ПВХ покрытием. Идеальное решение для создания единого стилевого пространства интерьера.",
+  "source": {
+    "pdf_file": "Chameleon Doors каталог 01.03.2026.pdf",
+    "page": 42,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": true,
+    "check_reason": "Не дверное полотно (требуется проверка)"
+  },
+  "specs": {
+    "door_type": "Стеновые панели",
+    "construction": "МДФ высокой плотности",
+    "material": "МДФ",
+    "coating": "ПВХ пленка в цвет дверей",
+    "color": "В ассортименте декоров каталога",
+    "texture": "Матовая / древесная / бетон",
+    "glass": "Нет",
+    "decor": "Реечный рельеф / гладкие панели",
+    "style": "Современный",
+    "available_sizes": [
+      "Высота до 2800 мм",
+      "Ширина по проекту"
+    ],
+    "opening_direction": "Стационарные панели",
+    "other_specs": {
+      "thickness": "10-16 мм"
+    }
+  },
+  "complectation": {
+    "leaf": "Панели стеновые",
+    "frame": null,
+    "casing": null,
+    "extensions": null,
+    "hinges": null,
+    "locks": null,
+    "handles": null,
+    "other_hardware": "Крепежные планки"
+  },
+  "images": [
+    "data/catalog-output/webp/door-placeholder.webp"
+  ],
+  "price": 8400,
+  "price_type": "fixed",
+  "variants": [],
+  "kit_price": 8400,
+  "leaf_price": 5950,
+  "dealer_price": 5950,
+  "color_groups": [],
+  "color_names": [],
+  "need_manual_check": true,
+  "check_reason": "Комплектующие и погонаж (подбираются в цвет полотна)",
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/door-placeholder.webp"
+  ]
+}

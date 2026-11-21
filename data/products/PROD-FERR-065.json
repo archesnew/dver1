@@ -1,0 +1,128 @@
+{
+  "id": "PROD-FERR-065",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери металл/металл",
+  "collection_id": "COLL-FERR-",
+  "model": "ГАРДА МИНИ МЕТАЛЛ/МЕТАЛЛ",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь ГАРДА МИНИ МЕТАЛЛ/МЕТАЛЛ. Коллекция: Двери металл/металл. Внешняя отделка: порошково-полимерное покрытие. Внутренняя отделка: атмосферостойкое порошково-полимерное. Толщина полотна: 60 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 32,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "Атмосферостойкое порошково-полимерное",
+    "color": "атмосферостойкое порошково-полимерное",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "60 мм",
+      "frame_depth": "90 мм",
+      "insulation": "пенополистирол",
+      "seals": "2 контура уплотнителя из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 60 мм, внешняя отделка , внутренняя атмосферостойкое порошково-полимерное",
+    "frame": "Утепленный цельногнутый стальной короб 90 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-065_main.webp"
+  ],
+  "price": 23800,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-065-1",
+      "name": "ГАРДА МИНИ МЕТАЛЛ/МЕТАЛЛ 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-065_main.webp",
+      "color_groups": [
+        "metal"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-065_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-065-2",
+      "name": "ГАРДА МИНИ МЕТАЛЛ/МЕТАЛЛ 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-065_main.webp",
+      "color_groups": [
+        "metal"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-065_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-065-3",
+      "name": "ГАРДА МИНИ МЕТАЛЛ/МЕТАЛЛ 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "Стандарт",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-065_main.webp",
+      "color_groups": [
+        "metal"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-065_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-065-4",
+      "name": "ГАРДА МИНИ МЕТАЛЛ/МЕТАЛЛ 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "Стандарт",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-065_main.webp",
+      "color_groups": [
+        "metal"
+      ],
+      "color_group": "metal",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-065_main.webp"
+    }
+  ],
+  "kit_price": 23800,
+  "dealer_price": 13800,
+  "color_groups": [
+    "metal"
+  ],
+  "color_names": [
+    "Металл / Медный антик / Серебро"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-065_main.webp"
+  ]
+}

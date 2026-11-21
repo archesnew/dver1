@@ -1,0 +1,127 @@
+{
+  "id": "PROD-D25-019",
+  "brand": "Двери 2025",
+  "brand_id": "BRAND-DVERI2025",
+  "collection": "Серия Сувенир",
+  "collection_id": "COLL-D25-",
+  "model": "Сувенир Вертикаль",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь для современных интерьеров Сувенир Вертикаль (Серия Сувенир). Дверь глухая.",
+  "source": {
+    "pdf_file": "Двери 2025.pdf",
+    "page": 7,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая конструкция с усиленным каркасом",
+    "material": "МДФ / хвойный брус",
+    "coating": "Экошпон / Эмаль",
+    "color": "Белый / Серый / Бежевый / Антрацит",
+    "texture": "Матовая гладкая / софт-тач",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Геометрическая фрезеровка",
+    "style": "Современный / Модерн / Минимализм",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (распашное / раздвижное)",
+    "other_specs": {
+      "thickness": "38 мм"
+    }
+  },
+  "complectation": {
+    "leaf": "Глухое полотно 38 мм",
+    "frame": "Телескопическая коробка с уплотнителем",
+    "casing": "Телескопический наличник",
+    "extensions": "Доборы телескопические",
+    "hinges": "Приобретаются отдельно",
+    "locks": "Приобретаются отдельно",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": null
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-D25-019_main.webp"
+  ],
+  "price": 12850,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-D25-019-1",
+      "name": "Сувенир Вертикаль 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "Эмаль / Экошпон в ассортименте",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-D25-019_main.webp",
+      "color_groups": [
+        "wood"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-D25-019_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-D25-019-2",
+      "name": "Сувенир Вертикаль 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "Эмаль / Экошпон в ассортименте",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-D25-019_main.webp",
+      "color_groups": [
+        "wood"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-D25-019_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-D25-019-3",
+      "name": "Сувенир Вертикаль 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "Эмаль / Экошпон в ассортименте",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-D25-019_main.webp",
+      "color_groups": [
+        "wood"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-D25-019_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-D25-019-4",
+      "name": "Сувенир Вертикаль 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "Эмаль / Экошпон в ассортименте",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-D25-019_main.webp",
+      "color_groups": [
+        "wood"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-D25-019_main.webp"
+    }
+  ],
+  "kit_price": 14900,
+  "leaf_price": 12850,
+  "dealer_price": 2850,
+  "color_groups": [
+    "dark",
+    "grey",
+    "white"
+  ],
+  "color_names": [
+    "Антрацит",
+    "Белый / Бежевый",
+    "Серый"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-D25-019_main.webp"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "PROD-FERR-028",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери с зеркалом",
+  "collection_id": "COLL-FERR-",
+  "model": "9 СМ КОНЦЕПТ САТИН ГРАФИТ ЗЕРКАЛО",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь 9 СМ КОНЦЕПТ САТИН ГРАФИТ ЗЕРКАЛО. Коллекция: Двери с зеркалом. Внешняя отделка: фрезерованная МДФ-панель 10 мм, цвет – «Капучино», «Сатин чёрный». Внутренняя отделка: фрезерованная МДФ-панель 10 мм, цвет – «эмалит белый»,. Толщина полотна: 104 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 17,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "фрезерованная МДФ-панель 10 мм, цвет – «Капучино», «Сатин чёрный»",
+    "color": "фрезерованная МДФ-панель 10 мм, цвет – «Капучино», «Сатин чёрный» / фрезерованная МДФ-панель 10 мм, цвет – «эмалит белый»,",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Зеркало с защитной пленкой",
+    "decor": "Накладное зеркало с защитной пленкой",
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "104 мм",
+      "frame_depth": "115 мм",
+      "insulation": "пенополистирол",
+      "seals": "3 контура уплотнителя из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 104 мм, внешняя отделка фрезерованная МДФ-панель 10 мм, цвет – «Капучино», «Сатин чёрный», внутренняя фрезерованная МДФ-панель 10 мм, цвет – «эмалит белый»,",
+    "frame": "Утепленный цельногнутый стальной короб 115 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-028_main.webp"
+  ],
+  "price": 29900,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-028-1",
+      "name": "9 СМ КОНЦЕПТ САТИН ГРАФИТ ЗЕРКАЛО 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "фрезерованная МДФ-панель 10 мм, цвет – «Капучино», «Сатин чёрный»",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-028_main.webp",
+      "color_groups": [
+        "wood",
+        "dark",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-028_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-028-2",
+      "name": "9 СМ КОНЦЕПТ САТИН ГРАФИТ ЗЕРКАЛО 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "фрезерованная МДФ-панель 10 мм, цвет – «Капучино», «Сатин чёрный»",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-028_main.webp",
+      "color_groups": [
+        "wood",
+        "dark",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-028_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-028-3",
+      "name": "9 СМ КОНЦЕПТ САТИН ГРАФИТ ЗЕРКАЛО 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "фрезерованная МДФ-панель 10 мм, цвет – «Капучино», «Сатин чёрный»",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-028_main.webp",
+      "color_groups": [
+        "wood",
+        "dark",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-028_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-028-4",
+      "name": "9 СМ КОНЦЕПТ САТИН ГРАФИТ ЗЕРКАЛО 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "фрезерованная МДФ-панель 10 мм, цвет – «Капучино», «Сатин чёрный»",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-028_main.webp",
+      "color_groups": [
+        "wood",
+        "dark",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-028_main.webp"
+    }
+  ],
+  "kit_price": 29900,
+  "dealer_price": 19900,
+  "color_groups": [
+    "dark",
+    "grey",
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Белый / Светлый (внутренняя панель)",
+    "Древесные оттенки (дуб / орех / каштан)",
+    "Серый / Графит / Антрацит",
+    "Тёмный / Чёрный / Букле шоколад"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-028_main.webp"
+  ]
+}

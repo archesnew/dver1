@@ -1,0 +1,179 @@
+{
+  "id": "PROD-CHAM-106",
+  "brand": "Chameleon Doors",
+  "brand_id": "BRAND-CHAMELEON",
+  "collection": "GLASS COLLECTION",
+  "collection_id": "COLL-CHAM-GLASSCOLLE",
+  "model": "Glass 6",
+  "article": null,
+  "category": "Двери со стеклом",
+  "description": "Межкомнатная дверь Chameleon Doors Glass 6. Коллекция: GLASS COLLECTION. Покрытие ПВХ высокой износостойкости. Надежная каркасно-щитовая или фрезерованная конструкция.",
+  "source": {
+    "pdf_file": "Chameleon Doors каталог 01.03.2026.pdf",
+    "page": 29,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая с заполнением брусом / сотовым, фрезерованный МДФ",
+    "material": "МДФ / сосна",
+    "coating": "ПВХ европейского качества",
+    "color": "В ассортименте декоров фабрики Chameleon Doors",
+    "texture": "Матовая шелковистая / древесная / софт-тач",
+    "glass": "Сатин (Мателюкс), Зеркало, Лакобель, Графит, Бронза",
+    "decor": "Глубокая фрезеровка / молдинги / декоративные рейки",
+    "style": "Современный / Неоклассика / Минимализм / Лофт",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм",
+      "нестандартные размеры до 2400 мм"
+    ],
+    "opening_direction": "Универсальное (распашная, раздвижная система)",
+    "other_specs": {
+      "thickness": "38 мм",
+      "factory_options": "Заполнение брусом, вентиляционная решетка, автопорог, скрытые петли"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно глухое или остекленное с ПВХ покрытием",
+    "frame": "Телескопическая коробка с пазом под уплотнитель",
+    "casing": "Телескопический фигурный или плоский наличник",
+    "extensions": "Телескопические доборы 100/150/200 мм",
+    "hinges": "Приобретаются отдельно (накладные-бабочки / скрытые)",
+    "locks": "Приобретаются отдельно (магнитные замки)",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Автопорог (опция)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-CHAM-106_main.webp",
+    "data/catalog-output/webp/PROD-CHAM-P29_page.webp"
+  ],
+  "price": 15950,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-CHAM-106-1",
+      "name": "Glass 6 Глухая (ДГ) 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-106_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-106_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-106-2",
+      "name": "Glass 6 Остекленная (ДО) 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P29_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P29_page.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-106-3",
+      "name": "Glass 6 Глухая (ДГ) 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-106_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-106_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-106-4",
+      "name": "Glass 6 Остекленная (ДО) 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P29_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P29_page.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-106-5",
+      "name": "Glass 6 Глухая (ДГ) 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-106_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-106_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-106-6",
+      "name": "Glass 6 Остекленная (ДО) 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P29_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P29_page.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-106-7",
+      "name": "Glass 6 Глухая (ДГ) 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-106_main.webp",
+      "color_groups": [
+        "grey"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-106_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-106-8",
+      "name": "Glass 6 Остекленная (ДО) 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P29_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P29_page.webp"
+    }
+  ],
+  "kit_price": 18575,
+  "leaf_price": 15950,
+  "dealer_price": 5950,
+  "color_groups": [
+    "grey"
+  ],
+  "color_names": [
+    "Серый / Графит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "glass",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-CHAM-106_main.webp",
+    "data/catalog-output/thumbs/PROD-CHAM-P29_page.webp"
+  ]
+}

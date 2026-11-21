@@ -1,0 +1,116 @@
+{
+  "id": "PROD-FERR-042",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери металл/МДФ",
+  "collection_id": "COLL-FERR-",
+  "model": "9 см ФЬЮЖН",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь 9 см ФЬЮЖН. Коллекция: Двери металл/МДФ. Внешняя отделка: атмосферостойкое порошково-. Внутренняя отделка: фрезерованная МДФ-панель 10 мм,. Толщина полотна: 90 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 22,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "атмосферостойкое порошково-",
+    "color": "атмосферостойкое порошково- / фрезерованная МДФ-панель 10 мм,",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "90 мм",
+      "frame_depth": "117 мм",
+      "insulation": "пенополистирол",
+      "seals": "3 контура уплотнителя из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 90 мм, внешняя отделка атмосферостойкое порошково-, внутренняя фрезерованная МДФ-панель 10 мм,",
+    "frame": "Утепленный цельногнутый стальной короб 117 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-042_main.webp"
+  ],
+  "price": 27500,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-042-1",
+      "name": "9 см ФЬЮЖН 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-042_main.webp",
+      "color_groups": [],
+      "color_group": "unconfirmed",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-042_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-042-2",
+      "name": "9 см ФЬЮЖН 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-042_main.webp",
+      "color_groups": [],
+      "color_group": "unconfirmed",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-042_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-042-3",
+      "name": "9 см ФЬЮЖН 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-042_main.webp",
+      "color_groups": [],
+      "color_group": "unconfirmed",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-042_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-042-4",
+      "name": "9 см ФЬЮЖН 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-042_main.webp",
+      "color_groups": [],
+      "color_group": "unconfirmed",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-042_main.webp"
+    }
+  ],
+  "kit_price": 27500,
+  "dealer_price": 17500,
+  "color_groups": [],
+  "color_names": [],
+  "need_manual_check": true,
+  "check_reason": "Цвет полотна не указан в документации производителя",
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-042_main.webp"
+  ]
+}

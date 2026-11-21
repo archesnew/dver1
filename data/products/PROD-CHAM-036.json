@@ -1,0 +1,185 @@
+{
+  "id": "PROD-CHAM-036",
+  "brand": "Chameleon Doors",
+  "brand_id": "BRAND-CHAMELEON",
+  "collection": "VERY RICH COLLECTION",
+  "collection_id": "COLL-CHAM-VERYRICHCO",
+  "model": "Very rich 3",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь Chameleon Doors Very rich 3. Коллекция: VERY RICH COLLECTION. Покрытие ПВХ высокой износостойкости. Надежная каркасно-щитовая или фрезерованная конструкция.",
+  "source": {
+    "pdf_file": "Chameleon Doors каталог 01.03.2026.pdf",
+    "page": 16,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Каркасно-щитовая с заполнением брусом / сотовым, фрезерованный МДФ",
+    "material": "МДФ / сосна",
+    "coating": "ПВХ европейского качества",
+    "color": "В ассортименте декоров фабрики Chameleon Doors",
+    "texture": "Матовая шелковистая / древесная / софт-тач",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Глубокая фрезеровка / молдинги / декоративные рейки",
+    "style": "Современный / Неоклассика / Минимализм / Лофт",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм",
+      "нестандартные размеры до 2400 мм"
+    ],
+    "opening_direction": "Универсальное (распашная, раздвижная система)",
+    "other_specs": {
+      "thickness": "38 мм",
+      "factory_options": "Заполнение брусом, вентиляционная решетка, автопорог, скрытые петли"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно глухое или остекленное с ПВХ покрытием",
+    "frame": "Телескопическая коробка с пазом под уплотнитель",
+    "casing": "Телескопический фигурный или плоский наличник",
+    "extensions": "Телескопические доборы 100/150/200 мм",
+    "hinges": "Приобретаются отдельно (накладные-бабочки / скрытые)",
+    "locks": "Приобретаются отдельно (магнитные замки)",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Автопорог (опция)"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-CHAM-036_main.webp",
+    "data/catalog-output/webp/PROD-CHAM-P16_page.webp"
+  ],
+  "price": 17500,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-CHAM-036-1",
+      "name": "Very rich 3 Глухая (ДГ) 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-036_main.webp",
+      "color_groups": [
+        "white",
+        "wood"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-036_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-036-2",
+      "name": "Very rich 3 Остекленная (ДО) 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P16_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P16_page.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-036-3",
+      "name": "Very rich 3 Глухая (ДГ) 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-036_main.webp",
+      "color_groups": [
+        "white",
+        "wood"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-036_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-036-4",
+      "name": "Very rich 3 Остекленная (ДО) 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P16_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P16_page.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-036-5",
+      "name": "Very rich 3 Глухая (ДГ) 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-036_main.webp",
+      "color_groups": [
+        "white",
+        "wood"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-036_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-036-6",
+      "name": "Very rich 3 Остекленная (ДО) 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P16_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P16_page.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-036-7",
+      "name": "Very rich 3 Глухая (ДГ) 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-036_main.webp",
+      "color_groups": [
+        "white",
+        "wood"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-036_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-CHAM-036-8",
+      "name": "Very rich 3 Остекленная (ДО) 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "ПВХ декор по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-CHAM-P16_page.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-CHAM-P16_page.webp"
+    }
+  ],
+  "kit_price": 19950,
+  "leaf_price": 17500,
+  "dealer_price": 7500,
+  "color_groups": [
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Белый шелковистый",
+    "Древесные декоры"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-CHAM-036_main.webp",
+    "data/catalog-output/thumbs/PROD-CHAM-P16_page.webp"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "id": "PROD-FERR-016",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери МДФ/МДФ",
+  "collection_id": "COLL-FERR-",
+  "model": "9 см КАНТРИ",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь 9 см КАНТРИ. Коллекция: Двери МДФ/МДФ. Внешняя отделка: фрезерованная МДФ-панель 10 мм, цвет – «сатин черный», «орех  каньон. Внутренняя отделка: фрезерованная МДФ-панель 10 мм, цвет – «эмалит белый». Толщина полотна: 104 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 11,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "фрезерованная МДФ-панель 10 мм, цвет – «сатин черный», «орех  каньон",
+    "color": "фрезерованная МДФ-панель 10 мм, цвет – «сатин черный», «орех  каньон / фрезерованная МДФ-панель 10 мм, цвет – «эмалит белый»",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Стеклопакет / вставки стекла",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "104 мм",
+      "frame_depth": "115 мм",
+      "insulation": "пенополистирол",
+      "seals": "3 контура уплотнителя из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 104 мм, внешняя отделка фрезерованная МДФ-панель 10 мм, цвет – «сатин черный», «орех  каньон, внутренняя фрезерованная МДФ-панель 10 мм, цвет – «эмалит белый»",
+    "frame": "Утепленный цельногнутый стальной короб 115 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-016_main.webp"
+  ],
+  "price": 31950,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-016-1",
+      "name": "9 см КАНТРИ 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "фрезерованная МДФ-панель 10 мм, цвет – «сатин черный», «орех  каньон",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-016_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-016_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-016-2",
+      "name": "9 см КАНТРИ 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "фрезерованная МДФ-панель 10 мм, цвет – «сатин черный», «орех  каньон",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-016_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-016_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-016-3",
+      "name": "9 см КАНТРИ 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "фрезерованная МДФ-панель 10 мм, цвет – «сатин черный», «орех  каньон",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-016_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-016_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-016-4",
+      "name": "9 см КАНТРИ 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "фрезерованная МДФ-панель 10 мм, цвет – «сатин черный», «орех  каньон",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-016_main.webp",
+      "color_groups": [
+        "wood",
+        "dark"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-016_main.webp"
+    }
+  ],
+  "kit_price": 31950,
+  "dealer_price": 21950,
+  "color_groups": [
+    "dark",
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Белый / Светлый (внутренняя панель)",
+    "Древесные оттенки (дуб / орех / каштан)",
+    "Тёмный / Чёрный / Букле шоколад"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-016_main.webp"
+  ]
+}

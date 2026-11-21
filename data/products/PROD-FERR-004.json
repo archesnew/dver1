@@ -1,0 +1,136 @@
+{
+  "id": "PROD-FERR-004",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери с терморазрывом",
+  "collection_id": "COLL-FERR-",
+  "model": "ТЕРМО 3 ШОКОЛАД",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь ТЕРМО 3 ШОКОЛАД. Коллекция: Двери с терморазрывом. Внешняя отделка: атмосферостойкое порошково-полимерное «букле графит», накладной. Внутренняя отделка: МДФ-панель 16 мм, цвет – «эмалит белый». Толщина полотна: 110 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 5,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "атмосферостойкое порошково-полимерное «букле графит», накладной",
+    "color": "атмосферостойкое порошково-полимерное «букле графит», накладной / МДФ-панель 16 мм, цвет – «эмалит белый»",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "4 камеры, 83 мм, тонированный, ковка внутри",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "110 мм",
+      "frame_depth": "137 мм",
+      "insulation": "пенополистирол",
+      "seals": "3 контура уплотнителя из вспененной резины (2 на полотне, 1 на коробе)",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 110 мм, внешняя отделка атмосферостойкое порошково-полимерное «букле графит», накладной, внутренняя МДФ-панель 16 мм, цвет – «эмалит белый»",
+    "frame": "Утепленный цельногнутый стальной короб 137 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-004_main.webp"
+  ],
+  "price": 50500,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-004-1",
+      "name": "ТЕРМО 3 ШОКОЛАД 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «букле графит», накладной",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-004_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-004_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-004-2",
+      "name": "ТЕРМО 3 ШОКОЛАД 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «букле графит», накладной",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-004_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-004_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-004-3",
+      "name": "ТЕРМО 3 ШОКОЛАД 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «букле графит», накладной",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-004_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-004_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-004-4",
+      "name": "ТЕРМО 3 ШОКОЛАД 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «букле графит», накладной",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-004_main.webp",
+      "color_groups": [
+        "dark",
+        "grey"
+      ],
+      "color_group": "dark",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-004_main.webp"
+    }
+  ],
+  "kit_price": 50500,
+  "dealer_price": 40500,
+  "color_groups": [
+    "dark",
+    "grey",
+    "white"
+  ],
+  "color_names": [
+    "Белый / Светлый (внутренняя панель)",
+    "Серый / Графит / Антрацит",
+    "Тёмный / Чёрный / Букле шоколад"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-004_main.webp"
+  ]
+}

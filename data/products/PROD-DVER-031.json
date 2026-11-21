@@ -1,0 +1,136 @@
+{
+  "id": "PROD-DVER-031",
+  "brand": "Двереки",
+  "brand_id": "BRAND-DVEREKI",
+  "collection": "Серия Нервадо",
+  "collection_id": "COLL-DVER-",
+  "model": "Нервадо 3 (глухая)",
+  "article": null,
+  "category": "Межкомнатные двери",
+  "description": "Межкомнатная дверь фабрики «Двереки» — модель Нервадо 3 (глухая). Коллекция: Серия Нервадо. Экологичные материалы европейского стандарта, гарантия качества производителя.",
+  "source": {
+    "pdf_file": "Двереки каталог  .pdf",
+    "page": 21,
+    "confidence_status": "ocr_extracted",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Межкомнатная дверь",
+    "construction": "Царговая / каркасно-щитовая сборная конструкция",
+    "material": "МДФ / сосновый брус",
+    "coating": "Экошпон / полипропиленовое покрытие с 3D эффектом",
+    "color": "Белый матовый / Латте / Серый велюр / Дуб натуральный",
+    "texture": "Текстурированная под древесину / софт-тач",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Фигурная фрезеровка полотна",
+    "style": "Современный / Неоклассика / Модерн",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (распашное / раздвижное купе)",
+    "other_specs": {
+      "thickness": "38 мм",
+      "eco_friendly": "Экологичные материалы, влагостойкость"
+    }
+  },
+  "complectation": {
+    "leaf": "Полотно Нервадо 3 глухая",
+    "frame": "Телескопическая коробка с пазом под уплотнитель",
+    "casing": "Наличник телескопический прямой",
+    "extensions": "Доборы телескопические 100/150 мм",
+    "hinges": "Приобретаются отдельно",
+    "locks": "Приобретаются отдельно",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": null
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-DVER-031_main.webp"
+  ],
+  "price": 12990,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-DVER-031-1",
+      "name": "Нервадо 3 (глухая) 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "Экошпон / Эмалекс по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-DVER-031_main.webp",
+      "color_groups": [
+        "grey",
+        "white",
+        "wood"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-DVER-031_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-DVER-031-2",
+      "name": "Нервадо 3 (глухая) 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "Экошпон / Эмалекс по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-DVER-031_main.webp",
+      "color_groups": [
+        "grey",
+        "white",
+        "wood"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-DVER-031_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-DVER-031-3",
+      "name": "Нервадо 3 (глухая) 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "Экошпон / Эмалекс по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-DVER-031_main.webp",
+      "color_groups": [
+        "grey",
+        "white",
+        "wood"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-DVER-031_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-DVER-031-4",
+      "name": "Нервадо 3 (глухая) 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "Экошпон / Эмалекс по каталогу",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-DVER-031_main.webp",
+      "color_groups": [
+        "grey",
+        "white",
+        "wood"
+      ],
+      "color_group": "grey",
+      "thumb": "data/catalog-output/thumbs/PROD-DVER-031_main.webp"
+    }
+  ],
+  "kit_price": 15040,
+  "leaf_price": 12990,
+  "dealer_price": 2990,
+  "color_groups": [
+    "grey",
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Белый матовый / Латте",
+    "Дуб натуральный",
+    "Серый велюр"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "flush",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-DVER-031_main.webp"
+  ]
+}

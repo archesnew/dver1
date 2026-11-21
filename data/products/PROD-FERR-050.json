@@ -1,0 +1,148 @@
+{
+  "id": "PROD-FERR-050",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери металл/МДФ",
+  "collection_id": "COLL-FERR-",
+  "model": "7,5 см ГАРДА БУКЛЕ ЧЕРНЫЙ",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь 7,5 см ГАРДА БУКЛЕ ЧЕРНЫЙ. Коллекция: Двери металл/МДФ. Внешняя отделка: атмосферостойкое порошково-полимерное «Антик серебро». Внутренняя отделка: фрезерованная МДФ-панель 8 мм, цвет - «Белый ясень». Толщина полотна: 75 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 26,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "атмосферостойкое порошково-полимерное «Антик серебро»",
+    "color": "атмосферостойкое порошково-полимерное «Антик серебро» / фрезерованная МДФ-панель 8 мм, цвет - «Белый ясень»",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "75 мм",
+      "frame_depth": "105 мм",
+      "insulation": "пенополистирол",
+      "seals": "2 контура уплотнителя из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 75 мм, внешняя отделка атмосферостойкое порошково-полимерное «Антик серебро», внутренняя фрезерованная МДФ-панель 8 мм, цвет - «Белый ясень»",
+    "frame": "Утепленный цельногнутый стальной короб 105 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-050_main.webp"
+  ],
+  "price": 24350,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-050-1",
+      "name": "7,5 см ГАРДА БУКЛЕ ЧЕРНЫЙ 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «Антик серебро»",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-050_main.webp",
+      "color_groups": [
+        "wood",
+        "dark",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-050_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-050-2",
+      "name": "7,5 см ГАРДА БУКЛЕ ЧЕРНЫЙ 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «Антик серебро»",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-050_main.webp",
+      "color_groups": [
+        "wood",
+        "dark",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-050_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-050-3",
+      "name": "7,5 см ГАРДА БУКЛЕ ЧЕРНЫЙ 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «Антик серебро»",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-050_main.webp",
+      "color_groups": [
+        "wood",
+        "dark",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-050_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-050-4",
+      "name": "7,5 см ГАРДА БУКЛЕ ЧЕРНЫЙ 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «Антик серебро»",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-050_main.webp",
+      "color_groups": [
+        "wood",
+        "dark",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-050_main.webp"
+    }
+  ],
+  "kit_price": 24350,
+  "dealer_price": 14350,
+  "color_groups": [
+    "dark",
+    "grey",
+    "metal",
+    "white",
+    "wood"
+  ],
+  "color_names": [
+    "Белый / Светлый (внутренняя панель)",
+    "Древесные оттенки (дуб / орех / каштан)",
+    "Металл / Медный антик / Серебро",
+    "Серый / Графит / Антрацит",
+    "Тёмный / Чёрный / Букле шоколад"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-050_main.webp"
+  ]
+}

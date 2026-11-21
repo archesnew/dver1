@@ -1,0 +1,125 @@
+{
+  "id": "PROD-MEZH-001",
+  "brand": "Фабрика Межкомнатных Дверей",
+  "brand_id": "BRAND-MEZH-DOORS",
+  "collection": "Invisible",
+  "collection_id": "COLL-MEZH-2026",
+  "model": "Invisible под покраску (Скрытая дверь 38 мм)",
+  "article": null,
+  "category": "Скрытые двери",
+  "description": "Дверь скрытого монтажа Invisible. Грунтованное полотно под покраску, декоративную штукатурку или обои. Комплектуется анодированным скрытым алюминиевым коробом под шпаклевку и скрытыми петлями 180°.",
+  "source": {
+    "pdf_file": "Каталог_межкомнатных_дверей_2026_3.pdf",
+    "page": 2,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Скрытая дверь",
+    "construction": "Каркасно-щитовая",
+    "material": "МДФ / сосновый брус",
+    "coating": "Грунт под покраску / штукатурку / обои",
+    "color": "Под покраску (белый грунт)",
+    "texture": "Матовая / древесная фактура / гладкая эмаль",
+    "glass": "Глухое полотно (без остекления)",
+    "decor": "Алюминиевая кромка ABS черная / хром, композитная заливка",
+    "style": "Современный / Минимализм / Неоклассика",
+    "available_sizes": [
+      "2000х600 мм",
+      "2000х700 мм",
+      "2000х800 мм",
+      "2000х900 мм"
+    ],
+    "opening_direction": "Универсальное (Direct / Reverse)",
+    "other_specs": {
+      "thickness": "38 мм",
+      "edge": "Кромка ABS с 4-х сторон черного цвета или алюминиевая кромка (для скрытых)",
+      "stiles": "Вертикальные стоевые - заполнение сосновым брусом + фанера + МДФ (бескромочная технология)"
+    }
+  },
+  "complectation": {
+    "leaf": "Дверное полотно 38 мм с заводской врезкой или без врезки",
+    "frame": "Алюминиевый скрытый короб (хром/черный) 2.5 шт. или телескопический короб МДФ",
+    "casing": "Без наличников (для скрытых) или телескопические плоские наличники",
+    "extensions": "Телескопические доборы 100/150 мм",
+    "hinges": "Две скрытые петли 180 градусов (хром/черный)",
+    "locks": "Врезка под магнитный замок",
+    "handles": "Приобретаются отдельно",
+    "other_hardware": "Ответная планка короба"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-MEZH-001_main.webp"
+  ],
+  "price": 12850,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-MEZH-001-1",
+      "name": "Invisible под отделку 2000х600 мм",
+      "size": "2000х600 мм",
+      "color": "Грунт под покраску",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-MEZH-001_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-MEZH-001_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-MEZH-001-2",
+      "name": "Invisible под отделку 2000х700 мм",
+      "size": "2000х700 мм",
+      "color": "Грунт под покраску",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-MEZH-001_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-MEZH-001_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-MEZH-001-3",
+      "name": "Invisible под отделку 2000х800 мм",
+      "size": "2000х800 мм",
+      "color": "Грунт под покраску",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-MEZH-001_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-MEZH-001_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-MEZH-001-4",
+      "name": "Invisible под отделку 2000х900 мм",
+      "size": "2000х900 мм",
+      "color": "Грунт под покраску",
+      "opening": "Универсальное",
+      "image": "data/catalog-output/webp/PROD-MEZH-001_main.webp",
+      "color_groups": [
+        "white"
+      ],
+      "color_group": "white",
+      "thumb": "data/catalog-output/thumbs/PROD-MEZH-001_main.webp"
+    }
+  ],
+  "kit_price": 14900,
+  "leaf_price": 12850,
+  "dealer_price": 2850,
+  "color_groups": [
+    "white"
+  ],
+  "color_names": [
+    "Белый грунт под покраску"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "invisible",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-MEZH-001_main.webp"
+  ]
+}

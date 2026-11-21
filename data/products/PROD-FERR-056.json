@@ -1,0 +1,140 @@
+{
+  "id": "PROD-FERR-056",
+  "brand": "Феррони",
+  "brand_id": "BRAND-FERRONI",
+  "collection": "Двери металл/МДФ",
+  "collection_id": "COLL-FERR-",
+  "model": "ГАРДА МИНИ",
+  "article": null,
+  "category": "Входные двери",
+  "description": "Входная стальная дверь ГАРДА МИНИ. Коллекция: Двери металл/МДФ. Внешняя отделка: атмосферостойкое порошково-полимерное «антик серебро». Внутренняя отделка: ХДФ-панель 3 мм, цвет - «дуб сонома». Толщина полотна: 45 мм.",
+  "source": {
+    "pdf_file": "Каталог феррони 05-2026 (mngst) (4).pdf",
+    "page": 29,
+    "confidence_status": "verified",
+    "need_manual_check": false,
+    "check_reason": null
+  },
+  "specs": {
+    "door_type": "Входная дверь",
+    "construction": "Цельногнутая стальная конструкция",
+    "material": "Сталь / МДФ",
+    "coating": "атмосферостойкое порошково-полимерное «антик серебро»",
+    "color": "атмосферостойкое порошково-полимерное «антик серебро» / ХДФ-панель 3 мм, цвет - «дуб сонома»",
+    "texture": "Шагрень / Муар / МДФ фрезерованная",
+    "glass": "Нет",
+    "decor": null,
+    "style": "Современный / Модерн",
+    "available_sizes": [
+      "860х2050 мм",
+      "960х2050 мм"
+    ],
+    "opening_direction": "Левое / Правое (180°)",
+    "other_specs": {
+      "leaf_thickness": "45 мм",
+      "frame_depth": "52 мм",
+      "insulation": "пенополистирол",
+      "seals": "1 контур уплотнителя из вспененной резины",
+      "hinges": "3 шт., наружные, открывание 180°",
+      "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+      "handles": "Раздельная ручка",
+      "night_latch": "Независимая ночная задвижка",
+      "eccentric": "Металлический эксцентрик для регулировки притвора"
+    }
+  },
+  "complectation": {
+    "leaf": "Стальное полотно 45 мм, внешняя отделка атмосферостойкое порошково-полимерное «антик серебро», внутренняя ХДФ-панель 3 мм, цвет - «дуб сонома»",
+    "frame": "Утепленный цельногнутый стальной короб 52 мм",
+    "casing": "Интегрированный металлический наличник",
+    "extensions": null,
+    "hinges": "3 шт., наружные, открывание 180°",
+    "locks": "Основной замок MANGYST IV класс, дополнительный замок MANGYST IV класс",
+    "handles": "Раздельная ручка",
+    "other_hardware": "Ночная задвижка, эксцентрик, глазок широкого обзора, броненакладки"
+  },
+  "images": [
+    "data/catalog-output/webp/PROD-FERR-056_main.webp"
+  ],
+  "price": 22500,
+  "price_type": "fixed",
+  "variants": [
+    {
+      "variant_id": "VAR-PROD-FERR-056-1",
+      "name": "ГАРДА МИНИ 860х2050 мм (Левое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «антик серебро»",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-056_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-056_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-056-2",
+      "name": "ГАРДА МИНИ 860х2050 мм (Правое)",
+      "size": "860х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «антик серебро»",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-056_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-056_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-056-3",
+      "name": "ГАРДА МИНИ 960х2050 мм (Левое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «антик серебро»",
+      "opening": "Левое",
+      "image": "data/catalog-output/webp/PROD-FERR-056_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-056_main.webp"
+    },
+    {
+      "variant_id": "VAR-PROD-FERR-056-4",
+      "name": "ГАРДА МИНИ 960х2050 мм (Правое)",
+      "size": "960х2050 мм",
+      "color": "атмосферостойкое порошково-полимерное «антик серебро»",
+      "opening": "Правое",
+      "image": "data/catalog-output/webp/PROD-FERR-056_main.webp",
+      "color_groups": [
+        "wood",
+        "metal",
+        "grey"
+      ],
+      "color_group": "wood",
+      "thumb": "data/catalog-output/thumbs/PROD-FERR-056_main.webp"
+    }
+  ],
+  "kit_price": 22500,
+  "dealer_price": 12500,
+  "color_groups": [
+    "grey",
+    "metal",
+    "wood"
+  ],
+  "color_names": [
+    "Древесные оттенки (дуб / орех / каштан)",
+    "Металл / Медный антик / Серебро",
+    "Серый / Графит / Антрацит"
+  ],
+  "need_manual_check": false,
+  "check_reason": null,
+  "door_type_group": "entrance",
+  "thumbs": [
+    "data/catalog-output/thumbs/PROD-FERR-056_main.webp"
+  ]
+}
