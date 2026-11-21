@@ -6,4 +6,4 @@ Disallow: /data/carts/
 Disallow: /data/sms/
 Disallow: /api/
 
-Sitemap: https://dver1.ru/sitemap.xml
+Sitemap: https://dver1.tatar/sitemap.xml

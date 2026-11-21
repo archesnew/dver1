@@ -1,7 +1,7 @@
 [
   {
     "id": "usr-owner-001",
-    "login": "owner@dver1.ru",
+    "login": "owner@dver1.tatar",
     "name": "Руководитель (Владелец)",
     "role": "owner",
     "hash": "0a3c19eb11321fed57742c66d8f7c60868aa241c7a3d9acc8e9f5e3d10b82a7ceeb703e4be8aa5b84fbaa2188daee47166cc558068b87981921fae66236d4568",
@@ -12,7 +12,7 @@
   },
   {
     "id": "usr-admin-002",
-    "login": "admin@dver1.ru",
+    "login": "admin@dver1.tatar",
     "name": "Старший администратор",
     "role": "admin",
     "hash": "9973fcd2ae7a1bc3e05cdac323b8a829b32a5a54e593eb6ad9eacfbc5d0f2575c48d6b40323c8cd03fb277925282efe8e0c338345f4d08a2ea5ac26447d1de87",
@@ -23,7 +23,7 @@
   },
   {
     "id": "usr-mgr-003",
-    "login": "manager@dver1.ru",
+    "login": "manager@dver1.tatar",
     "name": "Менеджер шоурума Казань",
     "role": "manager",
     "hash": "406442b97df1de8df52717667ae0347f938242211a42d7be4577be211dd3046daf1ccd8c38ca7d276021623f496d94aa292b8627ed008e4361707eac508dbbfe",
