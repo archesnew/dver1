@@ -1081,7 +1081,13 @@ const server = http.createServer(async (req, res) => {
   if (relPath === 'cart') relPath = 'cart.html';
   if (relPath === 'product') relPath = 'product.html';
   if (relPath === 'showrooms') relPath = 'showrooms.html';
-  if (relPath === 'admin' || relPath === 'admin/') relPath = 'admin/index.html';
+
+  // Redirect admin.html and /admin to /admin/
+  if (relPath === 'admin.html' || relPath === 'admin') {
+    res.writeHead(302, { 'Location': '/admin/' });
+    return res.end();
+  }
+  if (relPath === 'admin/') relPath = 'admin/index.html';
 
   let safePath = path.normalize(path.join(ROOT_DIR, relPath));
   if (!safePath.startsWith(ROOT_DIR)) {
