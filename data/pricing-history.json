@@ -1,0 +1,52 @@
+[
+  {
+    "id": "HIST-1795219309664",
+    "date": "2026-11-21T00:01:49.664Z",
+    "displayDate": "21.11.2026, 03:01:49",
+    "admin": "Куратор каталога",
+    "appliedCount": 3,
+    "items": [
+      {
+        "productId": "PROD-VIRA-002",
+        "model": "ВИРА-1",
+        "brand": "ViraDoors",
+        "supplier": "VIRA DOORS",
+        "oldPurchase": 13800,
+        "newPurchase": 14000,
+        "oldRetail": 23800,
+        "newRetail": 24000,
+        "diff": 200
+      },
+      {
+        "productId": "PROD-VIRA-003",
+        "model": "ВИРА-2 М/М",
+        "brand": "ViraDoors",
+        "supplier": "VIRA DOORS",
+        "oldPurchase": 14000,
+        "newPurchase": 18500,
+        "oldRetail": 24000,
+        "newRetail": 28500,
+        "diff": 4500
+      },
+      {
+        "productId": "PROD-VIRA-012",
+        "model": "ВИРА-12",
+        "brand": "ViraDoors",
+        "supplier": "VIRA DOORS",
+        "oldPurchase": 22000,
+        "newPurchase": 32000,
+        "oldRetail": 32000,
+        "newRetail": 42000,
+        "diff": 10000
+      }
+    ]
+  },
+  {
+    "id": "HIST-1795219243307",
+    "date": "2026-11-21T00:00:43.307Z",
+    "displayDate": "21.11.2026, 03:00:43",
+    "admin": "Куратор каталога (E2E Test)",
+    "appliedCount": 0,
+    "items": []
+  }
+]

@@ -18412,7 +18412,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-002_alt2.png",
       "catalog-images/PROD-VIRA-P3_page.png"
     ],
-    "price": 23800,
+    "price": 24000,
     "price_type": "fixed",
     "variants": [
       {
@@ -18448,8 +18448,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-002_main.png"
       }
     ],
-    "kit_price": 23800,
-    "dealer_price": 13800
+    "kit_price": 24000,
+    "dealer_price": 14000
   },
   {
     "id": "PROD-VIRA-003",
@@ -18509,7 +18509,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-003_alt2.png",
       "catalog-images/PROD-VIRA-P4_page.png"
     ],
-    "price": 24000,
+    "price": 28500,
     "price_type": "fixed",
     "variants": [
       {
@@ -18545,8 +18545,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-003_main.png"
       }
     ],
-    "kit_price": 24000,
-    "dealer_price": 14000
+    "kit_price": 28500,
+    "dealer_price": 18500
   },
   {
     "id": "PROD-VIRA-004",
@@ -19382,7 +19382,7 @@ window.CATALOG_PRODUCTS = [
       "catalog-images/PROD-VIRA-012_alt2.png",
       "catalog-images/PROD-VIRA-P13_page.png"
     ],
-    "price": 32000,
+    "price": 42000,
     "price_type": "fixed",
     "variants": [
       {
@@ -19418,8 +19418,8 @@ window.CATALOG_PRODUCTS = [
         "image": "catalog-images/PROD-VIRA-012_main.png"
       }
     ],
-    "kit_price": 32000,
-    "dealer_price": 22000
+    "kit_price": 42000,
+    "dealer_price": 32000
   },
   {
     "id": "PROD-VIRA-013",

@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { URL } = require('url');
+const pricingEngine = require('./pricing-engine.js');
 
 const PORT = process.env.PORT || 3000;
 const ROOT_DIR = __dirname;
@@ -354,7 +355,7 @@ function parseBody(req) {
     let body = '';
     req.on('data', chunk => {
       body += chunk;
-      if (body.length > 2 * 1024 * 1024) { // 2MB limit
+      if (body.length > 50 * 1024 * 1024) { // 50MB limit for price lists
         reject(new Error('Payload too large'));
       }
     });
@@ -675,6 +676,100 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 404, { error: 'No active session' });
     }
     return sendJson(res, 200, { phone, code: session.latestCodeDev });
+  }
+
+  // ------------------------------------------------------------------------
+  // PRICING & PRICE LIST MANAGEMENT API (V3.3)
+  // ------------------------------------------------------------------------
+
+  // 9. GET /api/pricing/suppliers
+  if (pathname === '/api/pricing/suppliers' && req.method === 'GET') {
+    return sendJson(res, 200, {
+      suppliers: pricingEngine.SUPPLIERS,
+      baseMarkup: 10000,
+      formula: 'РОЗНИЧНАЯ ЦЕНА = ЗАКУПОЧНАЯ ЦЕНА + 10 000 ₽'
+    });
+  }
+
+  // 10. POST /api/pricing/parse (Import & Parse price list file or raw text)
+  if (pathname === '/api/pricing/parse' && req.method === 'POST') {
+    try {
+      const body = await parseBody(req);
+      let buffer = null;
+      if (body.fileBase64) {
+        buffer = Buffer.from(body.fileBase64, 'base64');
+      }
+
+      const parsed = await pricingEngine.parsePriceListFile({
+        buffer,
+        filename: body.filename,
+        textContent: body.textContent,
+        forcedSupplier: body.forcedSupplier
+      });
+
+      return sendJson(res, 200, parsed);
+    } catch (err) {
+      console.error('Error in /api/pricing/parse:', err);
+      return sendJson(res, 500, { error: 'Ошибка парсинга прайс-листа: ' + err.message });
+    }
+  }
+
+  // 11. POST /api/pricing/match (Match parsed items with catalog)
+  if (pathname === '/api/pricing/match' && req.method === 'POST') {
+    try {
+      const body = await parseBody(req);
+      if (!body.items || !Array.isArray(body.items)) {
+        return sendJson(res, 400, { error: 'Передайте массив позиций (items).' });
+      }
+
+      const matched = pricingEngine.matchWithCatalog(body.items, body.supplierKey || 'GENERIC');
+      return sendJson(res, 200, {
+        supplierKey: body.supplierKey,
+        totalItems: matched.length,
+        items: matched
+      });
+    } catch (err) {
+      console.error('Error in /api/pricing/match:', err);
+      return sendJson(res, 500, { error: 'Ошибка сопоставления: ' + err.message });
+    }
+  }
+
+  // 12. POST /api/pricing/apply (Apply confirmed price updates)
+  if (pathname === '/api/pricing/apply' && req.method === 'POST') {
+    try {
+      const body = await parseBody(req);
+      if (!body.approvedItems || !Array.isArray(body.approvedItems)) {
+        return sendJson(res, 400, { error: 'Передайте список утвержденных позиций (approvedItems).' });
+      }
+
+      const result = pricingEngine.applyPriceUpdates(body.approvedItems, body.adminUser || 'Администратор');
+      return sendJson(res, 200, result);
+    } catch (err) {
+      console.error('Error in /api/pricing/apply:', err);
+      return sendJson(res, 500, { error: 'Ошибка применения цен: ' + err.message });
+    }
+  }
+
+  // 13. GET /api/pricing/history (Price change history log)
+  if (pathname === '/api/pricing/history' && req.method === 'GET') {
+    const history = pricingEngine.getPriceHistory();
+    return sendJson(res, 200, { history });
+  }
+
+  // 14. GET /api/pricing/catalog (Lightweight catalog for manual binding)
+  if (pathname === '/api/pricing/catalog' && req.method === 'GET') {
+    const catalog = pricingEngine.loadCatalog();
+    const searchList = catalog.map(p => ({
+      id: p.id,
+      model: p.model,
+      brand: p.brand,
+      collection: p.collection,
+      category: p.category,
+      price: p.price,
+      dealer_price: p.dealer_price,
+      image: (p.images && p.images.length > 0) ? p.images[0] : null
+    }));
+    return sendJson(res, 200, { products: searchList });
   }
 
   // ------------------------------------------------------------------------

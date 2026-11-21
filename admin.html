@@ -3,158 +3,290 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Двери №1 — Панель куратора каталога (Регламент V3.2)</title>
+  <title>Двери №1 — Управление ценообразованием и прайс-листами</title>
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css">
-  <style>
-    body { background-color: #0d121c; color: #f8fafc; font-family: 'Inter', sans-serif; }
-    .admin-bar-header {
-      background: #151d2a;
-      border-bottom: 1px solid #233045;
-      padding: 16px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .admin-title { font-size: 1.15rem; font-weight: 700; color: #fff; }
-    .btn-return-store {
-      background: var(--accent-terracotta);
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .admin-pub-tabs {
-      display: flex;
-      gap: 10px;
-      padding: 16px 24px;
-      background: #111827;
-      border-bottom: 1px solid #1f2937;
-    }
-    .admin-tab {
-      background: #1f2937;
-      color: #9ca3af;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-size: 0.875rem;
-      border: 1px solid #374151;
-      cursor: pointer;
-    }
-    .admin-tab.active { background: #374151; color: #fff; border-color: #60a5fa; }
-    .admin-note {
-      padding: 12px 24px;
-      background: rgba(30, 41, 59, 0.5);
-      color: #94a3b8;
-      font-size: 0.8125rem;
-      border-bottom: 1px solid #1e293b;
-    }
-    .admin-grid {
-      max-width: 1440px;
-      margin: 24px auto;
-      padding: 0 24px;
-    }
-    .admin-card {
-      background: #16202e;
-      border: 1px solid #24344b;
-      border-radius: 6px;
-      padding: 16px;
-      display: flex;
-      gap: 16px;
-      margin-bottom: 12px;
-      align-items: center;
-    }
-    .admin-card-img {
-      width: 70px;
-      height: 100px;
-      object-fit: contain;
-      background: #0b1017;
-      border-radius: 4px;
-      padding: 4px;
-    }
-    .badge-status-ocr {
-      background: #78350f;
-      color: #fde68a;
-      padding: 2px 8px;
-      border-radius: 3px;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-    .badge-status-ok {
-      background: #064e3b;
-      color: #a7f3d0;
-      padding: 2px 8px;
-      border-radius: 3px;
-      font-size: 0.75rem;
-      font-weight: 600;
-    }
-  </style>
+  <link rel="stylesheet" href="admin-pricing.css">
 </head>
 <body>
-  <div class="admin-bar-header">
-    <div class="admin-title">🔒 Служебный интерфейс куратора каталога «Двери №1» (Регламент V3.2)</div>
-    <a href="index.html" class="btn-return-store">← Вернуться в витрину магазина</a>
+
+  <!-- ВЕРХНИЙ БАР УПРАВЛЕНИЯ -->
+  <header class="admin-header-bar">
+    <div class="admin-header-left">
+      <img src="logo.png" alt="Двери №1" class="admin-logo-img">
+      <div class="admin-system-title">Панель управления ценообразованием и каталогом «Двери №1»</div>
+    </div>
+    <div>
+      <a href="index.html" class="btn-exit-showroom">← Вернуться в витрину магазина</a>
+    </div>
+  </header>
+
+  <!-- НАВИГАЦИОННЫЕ ВКЛАДКИ -->
+  <nav class="admin-nav-tabs">
+    <button class="admin-nav-item active" data-view="pricing">
+      <span>🏷️ Ценообразование и импорт прайс-листов</span>
+    </button>
+    <button class="admin-nav-item" data-view="history">
+      <span>📜 История изменений цен</span>
+    </button>
+    <button class="admin-nav-item" data-view="catalog">
+      <span>📦 Реестр товаров каталога (697)</span>
+    </button>
+  </nav>
+
+  <main class="admin-main-wrap">
+
+    <!-- ==================================================================== -->
+    <!-- РАЗДЕЛ 1: ЦЕНООБРАЗОВАНИЕ И ИМПОРТ ПРАЙС-ЛИСТОВ (ОСНОВНОЙ) -->
+    <!-- ==================================================================== -->
+    <div id="viewPricing">
+
+      <!-- ГЛАВНОЕ ПРАВИЛО ЦЕНООБРАЗОВАНИЯ -->
+      <section class="pricing-rule-banner">
+        <div>
+          <div class="rule-formula-box">
+            <span class="rule-formula-tag">Главный регламент</span>
+            <span class="rule-formula-text">РОЗНИЧНАЯ ЦЕНА = ЗАКУПОЧНАЯ ЦЕНА + 10 000 ₽</span>
+          </div>
+          <div class="rule-desc-text">
+            Единая фиксированная наценка действует на все категории дверей (входные, межкомнатные, скрытые, со стеклом) независимо от фабрики.
+            Не переносить наценку +10 000 ₽ на фурнитуру, погонаж, плинтус и услуги монтажа.
+          </div>
+        </div>
+        <div style="text-align: right; font-size: 0.8125rem; color: #94a3b8; white-space: nowrap;">
+          Статус защиты:<br>
+          <strong style="color: #34d399;">✓ Публикация строго по согласованию</strong>
+        </div>
+      </section>
+
+      <!-- ИМПОРТ ПРАЙС-ЛИСТОВ -->
+      <section class="import-card-grid">
+
+        <!-- 1. Загрузка файла -->
+        <div class="import-box">
+          <div class="import-box-title">
+            <span>📁 Загрузка файла прайс-листа</span>
+          </div>
+
+          <label style="font-size: 0.75rem; color: #94a3b8; display: block; margin-bottom: 6px;">
+            Поставщик (выберите вручную или оставьте автоопределение):
+          </label>
+          <select id="pricingSupplierSelect" class="form-select-supplier">
+            <option value="">-- Автоматическое определение поставщика --</option>
+          </select>
+
+          <div id="supplierRuleBadge" class="supplier-rule-badge">
+            Выберите поставщика для отображения регламента закупки.
+          </div>
+
+          <div id="priceDropZone" class="file-drop-zone">
+            <div class="drop-icon">📄</div>
+            <div class="drop-text-primary">Перетащите прайс-лист сюда или кликните для выбора</div>
+            <div class="drop-text-secondary">Поддерживаются форматы фабрик РФ:</div>
+            <div class="format-pills">
+              <span class="pill-fmt">XLSX</span>
+              <span class="pill-fmt">XLS</span>
+              <span class="pill-fmt">CSV</span>
+              <span class="pill-fmt">DOCX</span>
+              <span class="pill-fmt">PDF</span>
+            </div>
+            <input type="file" id="priceFileInput" style="display: none;" accept=".xlsx,.xls,.csv,.docx,.pdf,.tsv">
+          </div>
+        </div>
+
+        <!-- 2. Быстрая вставка текста/таблицы из буфера обмена -->
+        <div class="import-box">
+          <div class="import-box-title">
+            <span>📋 Быстрая вставка текста / таблицы (Excel / Буфер)</span>
+          </div>
+          <div style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 8px;">
+            Скопируйте строки прайса прямо из Excel, сообщения Telegram или Word и вставьте в поле ниже:
+          </div>
+          <textarea id="rawPriceTextInput" class="raw-textarea" placeholder="Пример:
+GREY MIRROR – 23200 / под заказ 25000 / безнал 27000
+VIRA 1 металл / панель	13800	15200
+Эконом 60	9700 / 11450
+Invisible Direct	14500
+Гарда 8 мм Венге	11450"></textarea>
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <button type="button" id="btnParseText" class="btn-primary-action">
+              ⚡ Распознать и сопоставить позиции
+            </button>
+            <span style="font-size: 0.75rem; color: #64748b;">Распознаются модели, закупка и безнал</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ПРЕДВАРИТЕЛЬНЫЙ ПРОСМОТР И ТАБЛИЦА СОПОСТАВЛЕНИЯ -->
+      <section id="pricingPreviewSection" style="display: none;">
+
+        <!-- Сводная статистика -->
+        <div id="previewSummaryStats" class="preview-summary-grid"></div>
+
+        <!-- Контейнер таблицы -->
+        <div class="preview-box">
+          <div class="preview-top-toolbar">
+            <div class="filter-tabs-group">
+              <button class="filter-tab-btn active" data-tab="all">Все позиции</button>
+              <button class="filter-tab-btn" data-tab="changed">Изменённые цены</button>
+              <button class="filter-tab-btn" data-tab="unchanged">Без изменений</button>
+              <button class="filter-tab-btn" data-tab="manual">⚠️ Требуют проверки</button>
+              <button class="filter-tab-btn" data-tab="new_items">Не найдены</button>
+            </div>
+            <div class="preview-action-group">
+              <button type="button" id="btnCancelImport" class="btn-cancel-import">✕ Отменить импорт</button>
+              <button type="button" id="btnApplySelected" class="btn-apply-selected" disabled>
+                ✓ Применить выбранные изменения (0)
+              </button>
+              <button type="button" id="btnApplyAllConfirmed" class="btn-apply-all">
+                ⚡ Применить все подтверждённые
+              </button>
+            </div>
+          </div>
+
+          <div class="table-responsive-container">
+            <table class="preview-table">
+              <thead>
+                <tr>
+                  <th style="width: 36px; text-align: center;">
+                    <input type="checkbox" id="selectAllRows" checked>
+                  </th>
+                  <th>Поставщик</th>
+                  <th>Наименование в прайсе</th>
+                  <th>Сопоставленный товар каталога</th>
+                  <th style="text-align: right;">Старая закупка</th>
+                  <th style="text-align: right;">Новая закупка</th>
+                  <th style="text-align: right;">Наценка</th>
+                  <th style="text-align: right;">Старая розница</th>
+                  <th style="text-align: right;">Новая розница</th>
+                  <th style="text-align: right;">Изменение</th>
+                  <th>Статус</th>
+                </tr>
+              </thead>
+              <tbody id="previewTableBody">
+                <!-- Заполняется динамически -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- ==================================================================== -->
+    <!-- РАЗДЕЛ 2: ИСТОРИЯ ИЗМЕНЕНИЙ ЦЕН (AUDIT LOG) -->
+    <!-- ==================================================================== -->
+    <div id="viewHistory" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <div>
+          <h2 style="margin: 0; font-size: 1.25rem; font-weight: 700; color: #fff;">Журнал аудита изменения цен</h2>
+          <div style="font-size: 0.8125rem; color: #94a3b8; margin-top: 4px;">
+            Фиксация всех сессий применения прайс-листов, оператора, даты и величины изменений.
+          </div>
+        </div>
+        <button type="button" id="btnRefreshHistory" class="filter-tab-btn">🔄 Обновить журнал</button>
+      </div>
+
+      <div id="historyListContainer">
+        <!-- Заполняется динамически -->
+      </div>
+    </div>
+
+    <!-- ==================================================================== -->
+    <!-- РАЗДЕЛ 3: СЛУЖЕБНЫЙ РЕЕСТР КАТАЛОГА (V3.2) -->
+    <!-- ==================================================================== -->
+    <div id="viewCatalog" style="display: none;">
+      <div style="margin-bottom: 16px;">
+        <h2 style="margin: 0; font-size: 1.25rem; font-weight: 700; color: #fff;">Реестр товаров каталога «Двери №1» (V3.2)</h2>
+        <div style="font-size: 0.8125rem; color: #94a3b8; margin-top: 4px;">
+          697 активных товаров с актуальными розничными ценами и сохранённой базой поставщиков.
+        </div>
+      </div>
+
+      <div class="admin-pub-tabs" style="display: flex; gap: 8px; margin-bottom: 16px;">
+        <button class="filter-tab-btn active" onclick="filterCatalogView('all')">Все позиции (697)</button>
+        <button class="filter-tab-btn" onclick="filterCatalogView('entrance')">Входные двери (171)</button>
+        <button class="filter-tab-btn" onclick="filterCatalogView('interior')">Межкомнатные двери (470)</button>
+        <button class="filter-tab-btn" onclick="filterCatalogView('hidden')">Скрытые двери (3)</button>
+        <button class="filter-tab-btn" onclick="filterCatalogView('glass')">Двери со стеклом (51)</button>
+      </div>
+
+      <div id="catalogRegistryList">
+        <!-- Заполняется динамически -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- МОДАЛЬНОЕ ОКНО РУЧНОЙ ПРИВЯЗКИ ТОВАРА -->
+  <div id="modalManualBind" class="modal-overlay">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Ручное сопоставление товара</div>
+          <div id="bindRowTitle" style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;"></div>
+        </div>
+        <button type="button" id="btnCloseBindModal" style="background: transparent; border: none; color: #94a3b8; font-size: 1.25rem; cursor: pointer;">✕</button>
+      </div>
+      <div class="modal-body">
+        <label style="font-size: 0.75rem; color: #94a3b8; display: block; margin-bottom: 6px;">
+          Поиск по каталогу (название модели, коллекция, артикул или ID):
+        </label>
+        <input type="text" id="bindSearchInput" class="bind-search-input" placeholder="Введите название модели, например: Вира, Эконом, Гарда...">
+        <div id="bindSearchResults"></div>
+      </div>
+    </div>
   </div>
 
-  <div class="admin-pub-tabs">
-    <button class="admin-tab active" onclick="filterAdmin('all')">Все позиции (697)</button>
-    <button class="admin-tab" onclick="filterAdmin('verified')">✓ Верифицировано фабриками (642)</button>
-    <button class="admin-tab" onclick="filterAdmin('ocr')">⚠️ Черновики OCR (55)</button>
-  </div>
-
-  <div class="admin-note">
-    Служебный реестр базы данных каталога V3.2. Здесь отображаются метаданные источников, статусы OCR и технические спецификации. Покупателям в витрине эти технические элементы не демонстрируются.
-  </div>
-
-  <div class="admin-grid" id="adminList">
-    <!-- Заполняется скриптом -->
-  </div>
-
+  <!-- СКРИПТЫ -->
   <script src="data/catalog-output/products-data.js"></script>
+  <script src="admin-pricing.js"></script>
+
+  <!-- СКРИПТ ДЛЯ ПРОСМОТРА СЛУЖЕБНОГО РЕЕСТРА КАТАЛОГА -->
   <script>
-    let currentFilter = 'all';
-    function renderAdminList() {
-      const container = document.getElementById('adminList');
-      if (!window.CATALOG_PRODUCTS) {
-        container.innerHTML = 'Загрузка...';
-        return;
-      }
-      const items = window.CATALOG_PRODUCTS.filter(p => {
-        const isOcr = p.source?.confidence_status === 'ocr_extracted';
-        if (currentFilter === 'ocr') return isOcr;
-        if (currentFilter === 'verified') return !isOcr;
+    let activeCatalogFilter = 'all';
+
+    function renderCatalogRegistry() {
+      const container = document.getElementById('catalogRegistryList');
+      if (!container || !window.CATALOG_PRODUCTS) return;
+
+      const prods = window.CATALOG_PRODUCTS.filter(p => {
+        if (activeCatalogFilter === 'entrance') return p.category === 'Входные двери';
+        if (activeCatalogFilter === 'interior') return p.category === 'Межкомнатные двери';
+        if (activeCatalogFilter === 'hidden') return p.category === 'Скрытые двери';
+        if (activeCatalogFilter === 'glass') return p.category === 'Двери со стеклом';
         return true;
       });
 
       container.innerHTML = `
-        <div style="margin-bottom: 12px; color: #94a3b8; font-size: 0.875rem;">
-          Показано записей: <strong>${items.length}</strong>
+        <div style="margin-bottom: 12px; color: #94a3b8; font-size: 0.8125rem;">
+          Отображается записей: <strong>${prods.length}</strong>
         </div>
-        ${items.slice(0, 100).map(p => {
-          const isOcr = p.source?.confidence_status === 'ocr_extracted';
+        ${prods.slice(0, 100).map(p => {
           const img = (p.images && p.images.length > 0) ? ('data/catalog-output/' + p.images[0]) : 'logo.png';
+          const purchase = p.dealer_price || (p.price - 10000);
           return `
-            <div class="admin-card">
-              <img src="${img}" class="admin-card-img" alt="${p.model}">
+            <div style="background: #151d2a; border: 1px solid #233045; border-radius: 6px; padding: 14px 18px; margin-bottom: 8px; display: flex; align-items: center; gap: 16px;">
+              <img src="${img}" style="width: 44px; height: 62px; object-fit: contain; background: #0b1019; border-radius: 4px; padding: 2px;" alt="">
               <div style="flex: 1;">
                 <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 4px;">
-                  <span class="${isOcr ? 'badge-status-ocr' : 'badge-status-ok'}">
-                    ${isOcr ? '⚠️ Черновик OCR' : '✓ Проверено фабрикой'}
-                  </span>
-                  <span style="font-size: 0.75rem; color: #64748b;">ID: ${p.id}</span>
-                  <span style="font-size: 0.75rem; color: #64748b;">Вариантов: ${p.variants ? p.variants.length : 0}</span>
+                  <span style="font-size: 0.6875rem; background: #1e293b; color: #94a3b8; padding: 2px 6px; border-radius: 3px;">ID: ${p.id}</span>
+                  <span style="font-size: 0.75rem; color: #64748b;">${p.category}</span>
                 </div>
-                <div style="font-size: 1.05rem; font-weight: 600; color: #fff;">${p.brand} — ${p.model}</div>
-                <div style="font-size: 0.8125rem; color: #94a3b8; margin-top: 2px;">
-                  Коллекция: ${p.collection || '—'} • Категория: ${p.category} • Источник: ${p.source?.pdf_catalog || 'PDF'}
-                </div>
+                <div style="font-weight: 600; color: #fff;">${p.brand} — ${p.model}</div>
+                <div style="font-size: 0.75rem; color: #94a3b8; margin-top: 2px;">Коллекция: ${p.collection || '—'}</div>
+              </div>
+              <div style="text-align: right; min-width: 180px;">
+                <div style="font-size: 0.75rem; color: #94a3b8;">Закупка: <span style="color: #cbd5e1; font-weight: 500;">${purchase ? purchase.toLocaleString('ru-RU') + ' ₽' : '—'}</span></div>
+                <div style="font-size: 0.9375rem; font-weight: 700; color: #60a5fa; margin-top: 2px;">Розница: ${p.price.toLocaleString('ru-RU')} ₽</div>
+                <div style="font-size: 0.6875rem; color: #c28b5b;">Наценка: +10 000 ₽</div>
               </div>
               <div>
-                <a href="index.html#product-${p.id}" target="_blank" style="color: #60a5fa; font-size: 0.8125rem;">Открыть в витрине ↗</a>
+                <a href="product.html?id=${encodeURIComponent(p.id)}" target="_blank" style="color: #60a5fa; font-size: 0.8125rem; text-decoration: none; padding: 6px 12px; background: rgba(96, 165, 250, 0.1); border-radius: 4px;">Открыть ↗</a>
               </div>
             </div>
           `;
@@ -162,15 +294,16 @@
       `;
     }
 
-    function filterAdmin(mode) {
-      currentFilter = mode;
-      document.querySelectorAll('.admin-tab').forEach((t, i) => {
-        t.classList.toggle('active', (mode === 'all' && i === 0) || (mode === 'verified' && i === 1) || (mode === 'ocr' && i === 2));
+    function filterCatalogView(filter) {
+      activeCatalogFilter = filter;
+      document.querySelectorAll('#viewCatalog .filter-tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes(filter));
       });
-      renderAdminList();
+      renderCatalogRegistry();
     }
 
-    document.addEventListener('DOMContentLoaded', renderAdminList);
+    document.addEventListener('DOMContentLoaded', renderCatalogRegistry);
   </script>
+
 </body>
 </html>
