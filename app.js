@@ -568,7 +568,7 @@
         if (state.activePrice === '10k_25k' && (pr < 10000 || pr >= 25000)) return false;
         if (state.activePrice === '25k_40k' && (pr < 25000 || pr >= 40000)) return false;
         if (state.activePrice === 'over_40k' && pr < 40000) return false;
-        if (state.activePrice === 'under_18k' && pr > 18000) return false;
+        if (state.activePrice === 'under_18k' && (pr <= 0 || pr > 18000)) return false;
       }
 
       // 7. Стиль (второстепенный)
@@ -1986,7 +1986,7 @@
             }
           } else if (p === 'glass') {
             state.activeType = 'all';
-          } else if (p === 'under18') {
+          } else if (p === 'under18' || p === 'budget') {
             state.activePrice = 'all';
           }
           showToast('Пресет отключен');
@@ -2012,7 +2012,7 @@
             if (sClr) sClr.style.display = 'block';
           } else if (p === 'glass') {
             state.activeType = 'glass';
-          } else if (p === 'under18') {
+          } else if (p === 'under18' || p === 'budget') {
             state.activePrice = 'under_18k';
           }
           showToast(`Пресет: ${pill.textContent.trim()}`);
@@ -2050,7 +2050,7 @@
         isActive = state.activeCategory === 'Входные двери' && (state.searchQuery || '').toLowerCase().includes('термо');
       } else if (p === 'glass') {
         isActive = state.activeType === 'glass';
-      } else if (p === 'under18') {
+      } else if (p === 'under18' || p === 'budget') {
         isActive = state.activePrice === 'under_18k';
       }
 
