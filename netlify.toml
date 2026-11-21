@@ -1,0 +1,34 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301
+
+[[redirects]]
+  from = "/admin.html"
+  to = "/admin/"
+  status = 301
+
+[[redirects]]
+  from = "/cart"
+  to = "/cart.html"
+  status = 200
+
+[[redirects]]
+  from = "/product"
+  to = "/product.html"
+  status = 200
+
+[[redirects]]
+  from = "/showrooms"
+  to = "/showrooms.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

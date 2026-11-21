@@ -10,6 +10,7 @@ package-lock.json
 .env
 .env.*
 !.env.example
+!.env.production.example
 *.env
 *.pem
 *.key
@@ -42,5 +43,7 @@ data/catalog-sources/
 
 # Резервные копии и промежуточные необработанные оригиналы
 # Рабочий каталог сайта использует data/catalog-output/catalog-images/
+data/backups/*.json
+!data/backups/.gitkeep
 data/catalog-output/catalog-images-original/
 data/catalog-output-backup/

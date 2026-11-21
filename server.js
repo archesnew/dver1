@@ -42,10 +42,19 @@ try {
   console.error('[CATALOG] Error loading catalog for validation:', e);
 }
 
+// ==========================================================================
+// CONSTANTS & SESSION LIFETIMES (PRODUCTION SPECIFICATION)
+// ==========================================================================
+const ADMIN_SESSION_TTL_MS = 12 * 60 * 60 * 1000;      // 12 hours (Staff shift session)
+const CUSTOMER_SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days (Buyer storefront cart retention)
+const SMS_CODE_TTL_MS = 5 * 60 * 1000;                 // 5 minutes (One-time verification code)
+const SMS_MAX_ATTEMPTS = 3;                            // 3 attempts max before code invalidation
+const SMS_COOLDOWN_MS = 60 * 1000;                     // 60 seconds minimum interval between SMS
+
 // In-memory auth tokens & SMS verification sessions
 // Map: phone -> { codeHash, salt, expiresAt, attemptsLeft, lastSentAt, verified, token, latestCodeDev }
 const smsSessions = new Map();
-// Map: token -> { phone, expiresAt }
+// Map: token -> { phone, expiresAt, createdAt }
 const authTokens = new Map();
 
 // Helper: normalize Russian phone number (+7XXXXXXXXXX)
@@ -62,6 +71,31 @@ function normalizePhone(raw) {
   return null;
 }
 
+// Helper: Mask phone for production logs: +7 (999) ***-**-11
+function maskPhone(phone) {
+  if (!phone) return '***';
+  const clean = String(phone).replace(/\D/g, '');
+  if (clean.length === 11) {
+    return `+7 (${clean.slice(1, 4)}) ***-**-${clean.slice(9)}`;
+  }
+  return phone.slice(0, 4) + '***' + phone.slice(-2);
+}
+
+// Helper: Verify customer token and expiration
+function verifyCustomerToken(token, expectedPhone = null) {
+  if (!token) return false;
+  const session = authTokens.get(token);
+  if (!session) return false;
+  if (Date.now() > session.expiresAt) {
+    authTokens.delete(token);
+    return false;
+  }
+  if (expectedPhone && session.phone !== expectedPhone) {
+    return false;
+  }
+  return true;
+}
+
 // Helper: generate 4-digit numeric code
 function generateCode() {
   return String(crypto.randomInt(1000, 9999));
@@ -72,7 +106,7 @@ function hashCode(code, salt) {
   return crypto.createHash('sha256').update(code + salt).digest('hex');
 }
 
-// Helper: append to text log
+// Helper: append to text log with timestamp
 function appendLog(filePath, text) {
   try {
     fs.appendFileSync(filePath, `[${new Date().toISOString()}] ${text}\n`, 'utf8');
@@ -82,27 +116,70 @@ function appendLog(filePath, text) {
 }
 
 // ==========================================================================
-// SMS SERVICE INTEGRATION INTERFACE
+// CONCURRENCY CONTROL & ATOMIC FILE STORAGE (MUTEX + TMP RENAME)
+// ==========================================================================
+class AsyncLock {
+  constructor() {
+    this._queue = Promise.resolve();
+  }
+  acquire(fn) {
+    let resolveNext;
+    const nextPromise = new Promise(resolve => { resolveNext = resolve; });
+    const current = this._queue;
+    this._queue = current.then(() => nextPromise);
+    return current.then(async () => {
+      try {
+        return await fn();
+      } finally {
+        resolveNext();
+      }
+    });
+  }
+}
+const ordersLock = new AsyncLock();
+
+// Atomic write: write to temp file on same filesystem, then rename
+function atomicWriteJson(filePath, data) {
+  const tmpPath = `${filePath}.tmp.${process.pid}.${Date.now()}.${Math.random().toString(36).slice(2, 8)}`;
+  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf8');
+  fs.renameSync(tmpPath, filePath);
+}
+
+// ==========================================================================
+// SMS SERVICE INTEGRATION INTERFACE (SMS.RU PRODUCTION HARDENED)
 // ==========================================================================
 const SmsService = {
   getProviderInfo() {
-    const provider = process.env.SMS_PROVIDER || (process.env.SMS_API_KEY ? 'smsru' : 'development');
-    const isConfigured = Boolean(process.env.SMS_API_KEY || process.env.SMS_RU_API_KEY || process.env.SMSAERO_API_KEY);
+    const isProd = process.env.NODE_ENV === 'production';
+    const apiKey = process.env.SMS_API_KEY || process.env.SMS_RU_API_KEY;
+    const isConfigured = Boolean(apiKey && apiKey.trim().length > 0);
+    const provider = isConfigured ? 'smsru' : (isProd ? 'unconfigured' : 'development');
     return {
       provider,
       isConfigured,
-      mode: isConfigured ? 'production' : 'development'
+      mode: isConfigured ? 'production' : (isProd ? 'unconfigured' : 'development')
     };
   },
 
   async sendSms(phone, code) {
     const info = this.getProviderInfo();
+    const masked = maskPhone(phone);
     const messageText = `Код подтверждения Двери №1: ${code}. Никому не сообщайте.`;
 
     if (!info.isConfigured) {
+      if (process.env.NODE_ENV === 'production') {
+        const errLog = `PROD_SMS_BLOCKED -> Phone: ${masked} | Error: SMS_API_KEY not configured in .env`;
+        appendLog(SMS_LOG_FILE, errLog);
+        return {
+          success: false,
+          provider: 'unconfigured',
+          error: 'SMS-шлюз не сконфигурирован в продакшн-окружении (требуется SMS_API_KEY).'
+        };
+      }
+
       // Safe Development / Staging Mode:
-      // Log to file and stdout, do not fake HTTP call, return truthful status
-      const logEntry = `DEV_SMS_DISPATCH -> Phone: ${phone} | Code: [SECURE_HASHED] | CodeDev: ${code}`;
+      // In dev mode only: record log and return truthful status
+      const logEntry = `DEV_SMS_DISPATCH -> Phone: ${masked} | CodeDev: ${code}`;
       console.log(`[SMS] ${logEntry}`);
       appendLog(SMS_LOG_FILE, logEntry);
 
@@ -115,20 +192,30 @@ const SmsService = {
 
     // Production Provider: SMS.RU
     const apiKey = process.env.SMS_API_KEY || process.env.SMS_RU_API_KEY;
+    const cleanPhone = phone.replace(/\D/g, '');
+    const url = `https://sms.ru/sms/send?api_id=${encodeURIComponent(apiKey)}&to=${encodeURIComponent(cleanPhone)}&msg=${encodeURIComponent(messageText)}&json=1`;
+
     try {
-      const url = `https://sms.ru/sms/send?api_id=${encodeURIComponent(apiKey)}&to=${encodeURIComponent(phone.replace('+', ''))}&msg=${encodeURIComponent(messageText)}&json=1`;
-      const res = await fetch(url);
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 6000); // 6s timeout
+
+      const res = await fetch(url, { signal: controller.signal });
+      clearTimeout(timeoutId);
       const data = await res.json();
-      if (data.status === 'OK') {
-        appendLog(SMS_LOG_FILE, `SMS.RU SUCCESS -> Phone: ${phone}`);
-        return { success: true, provider: 'smsru' };
+
+      if (data.status === 'OK' && (data.status_code === 100 || data.sms)) {
+        const smsDetail = data.sms ? data.sms[cleanPhone] : null;
+        const smsId = smsDetail?.sms_id || data.sms_id || 'ok';
+        appendLog(SMS_LOG_FILE, `SMS.RU SUCCESS -> Phone: ${masked} | MsgId: ${smsId} | Balance: ${data.balance ?? 'N/A'}`);
+        return { success: true, provider: 'smsru', messageId: smsId };
       } else {
-        appendLog(SMS_LOG_FILE, `SMS.RU ERROR -> Phone: ${phone} | Status: ${data.status_text}`);
-        return { success: false, error: data.status_text || 'Ошибка отправки через SMS.RU' };
+        const errorDesc = data.status_text || `HTTP ${data.status_code || res.status}`;
+        appendLog(SMS_LOG_FILE, `SMS.RU ERROR -> Phone: ${masked} | Status: ${errorDesc}`);
+        return { success: false, provider: 'smsru', error: `Ошибка шлюза SMS.RU: ${errorDesc}` };
       }
     } catch (err) {
-      appendLog(SMS_LOG_FILE, `SMS.RU EXCEPTION -> ${err.message}`);
-      return { success: false, error: err.message };
+      appendLog(SMS_LOG_FILE, `SMS.RU EXCEPTION -> Phone: ${masked} | Error: ${err.message}`);
+      return { success: false, provider: 'smsru', error: `Сбой сетевого соединения с SMS.RU: ${err.message}` };
     }
   }
 };
@@ -141,7 +228,14 @@ async function dispatchTelegramNotification(order) {
   const chatId = process.env.TELEGRAM_CHAT_ID;
 
   if (!token || !chatId) {
-    appendLog(path.join(ORDERS_DIR, 'telegram.log'), `Telegram tokens missing. Order #${order.id} saved in orders.json.`);
+    const unconfStatus = {
+      status: 'unconfigured',
+      attempts: 0,
+      lastAttemptAt: new Date().toISOString(),
+      lastError: 'TELEGRAM_BOT_TOKEN или TELEGRAM_CHAT_ID не заданы в .env'
+    };
+    appendLog(path.join(ORDERS_DIR, 'telegram.log'), `Telegram unconfigured for Order #${order.id}. Order safely stored in orders.json.`);
+    await updateOrderTelegramStatus(order.id, unconfStatus);
     return { sent: false, reason: 'unconfigured' };
   }
 
@@ -162,7 +256,12 @@ async function dispatchTelegramNotification(order) {
     (order.hasUncertainPrices ? ` _(есть позиции с ценой по уточнению)_` : '') +
     `\n\n🕒 *Дата:* ${new Date(order.createdAt).toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })}`;
 
+  const currentAttempts = (order.telegram?.attempts || 0) + 1;
+
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 6000); // 6s timeout
+
     const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -170,24 +269,65 @@ async function dispatchTelegramNotification(order) {
         chat_id: chatId,
         text: text,
         parse_mode: 'Markdown'
-      })
+      }),
+      signal: controller.signal
     });
+    clearTimeout(timeoutId);
+
     const data = await res.json();
     if (data.ok) {
-      appendLog(path.join(ORDERS_DIR, 'telegram.log'), `Telegram sent for Order #${order.id}`);
+      appendLog(path.join(ORDERS_DIR, 'telegram.log'), `Telegram sent for Order #${order.id} (MsgId: ${data.result?.message_id})`);
+      const sentStatus = {
+        status: 'sent',
+        attempts: currentAttempts,
+        lastAttemptAt: new Date().toISOString(),
+        messageId: data.result?.message_id || null,
+        lastError: null
+      };
+      await updateOrderTelegramStatus(order.id, sentStatus);
       return { sent: true };
     } else {
       appendLog(path.join(ORDERS_DIR, 'telegram.log'), `Telegram API rejected for Order #${order.id}: ${JSON.stringify(data)}`);
+      const failedStatus = {
+        status: 'failed',
+        attempts: currentAttempts,
+        lastAttemptAt: new Date().toISOString(),
+        lastError: data.description || 'API rejected'
+      };
+      await updateOrderTelegramStatus(order.id, failedStatus);
       return { sent: false, error: data.description };
     }
   } catch (err) {
     appendLog(path.join(ORDERS_DIR, 'telegram.log'), `Telegram network error for Order #${order.id}: ${err.message}`);
+    const failedStatus = {
+      status: 'failed',
+      attempts: currentAttempts,
+      lastAttemptAt: new Date().toISOString(),
+      lastError: err.message
+    };
+    await updateOrderTelegramStatus(order.id, failedStatus);
     return { sent: false, error: err.message };
   }
 }
 
+// Update Telegram dispatch status in order without failing order
+async function updateOrderTelegramStatus(orderId, tgStatus) {
+  return ordersLock.acquire(async () => {
+    try {
+      const orders = readAllOrders();
+      const idx = orders.findIndex(o => o.id === orderId);
+      if (idx >= 0) {
+        orders[idx].telegram = tgStatus;
+        atomicWriteJson(ORDERS_FILE, orders);
+      }
+    } catch (e) {
+      console.error('Error updating order telegram status:', e);
+    }
+  });
+}
+
 // ==========================================================================
-// ORDER STORAGE (ATOMIC JSON STORE)
+// ORDER STORAGE (CONCURRENT ATOMIC STORE WITH MUTEX & IDEMPOTENCY)
 // ==========================================================================
 function readAllOrders() {
   try {
@@ -197,16 +337,37 @@ function readAllOrders() {
   }
 }
 
-function saveOrder(order) {
-  const orders = readAllOrders();
-  // Check idempotency
-  if (order.idempotencyKey) {
-    const existing = orders.find(o => o.idempotencyKey === order.idempotencyKey);
-    if (existing) return existing;
-  }
-  orders.unshift(order);
-  fs.writeFileSync(ORDERS_FILE, JSON.stringify(orders, null, 2), 'utf8');
-  return order;
+async function saveOrder(order) {
+  return ordersLock.acquire(async () => {
+    const orders = readAllOrders();
+    const now = Date.now();
+
+    // 1. Idempotency Key check
+    if (order.idempotencyKey) {
+      const existing = orders.find(o => o.idempotencyKey === order.idempotencyKey);
+      if (existing) {
+        console.log(`[IDEMPOTENCY] Returning existing order #${existing.id} for key ${order.idempotencyKey}`);
+        return existing;
+      }
+    }
+
+    // 2. Double-click protection: same phone + same client name created within 30s
+    const duplicate = orders.find(o => {
+      if (o.client.phone === order.client.phone && o.client.name === order.client.name) {
+        const orderAge = now - new Date(o.createdAt).getTime();
+        return orderAge < 30000;
+      }
+      return false;
+    });
+    if (duplicate) {
+      console.log(`[DEDUP] Detected rapid repeat submission within 30s, returning #${duplicate.id}`);
+      return duplicate;
+    }
+
+    orders.unshift(order);
+    atomicWriteJson(ORDERS_FILE, orders);
+    return order;
+  });
 }
 
 // ==========================================================================
@@ -226,7 +387,7 @@ function saveCartForPhone(phone, cartItems) {
     items: cartItems,
     updatedAt: new Date().toISOString()
   };
-  fs.writeFileSync(CARTS_FILE, JSON.stringify(carts, null, 2), 'utf8');
+  atomicWriteJson(CARTS_FILE, carts);
 }
 
 function getCartForPhone(phone) {
@@ -375,7 +536,10 @@ function sendJson(res, statusCode, data) {
   res.writeHead(statusCode, {
     'Content-Type': 'application/json; charset=utf-8',
     'Cache-Control': 'no-store, no-cache, must-revalidate',
-    'Access-Control-Allow-Origin': '*'
+    'Access-Control-Allow-Origin': '*',
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'SAMEORIGIN',
+    'Referrer-Policy': 'strict-origin-when-cross-origin'
   });
   res.end(JSON.stringify(data));
 }
@@ -426,9 +590,9 @@ const server = http.createServer(async (req, res) => {
       const now = Date.now();
       const existing = smsSessions.get(phone);
 
-      // Rate limit: 60 seconds cooldown
-      if (existing && existing.lastSentAt && (now - existing.lastSentAt < 60000)) {
-        const remainingSec = Math.ceil((60000 - (now - existing.lastSentAt)) / 1000);
+      // Rate limit: 60 seconds cooldown (SMS_COOLDOWN_MS)
+      if (existing && existing.lastSentAt && (now - existing.lastSentAt < SMS_COOLDOWN_MS)) {
+        const remainingSec = Math.ceil((SMS_COOLDOWN_MS - (now - existing.lastSentAt)) / 1000);
         return sendJson(res, 429, {
           error: `Повторная отправка SMS возможна через ${remainingSec} сек.`,
           retryAfter: remainingSec
@@ -439,17 +603,17 @@ const server = http.createServer(async (req, res) => {
       const code = generateCode();
       const salt = crypto.randomBytes(16).toString('hex');
       const codeHash = hashCode(code, salt);
-      const expiresAt = now + (5 * 60 * 1000); // 5 minutes validity
+      const expiresAt = now + SMS_CODE_TTL_MS; // 5 minutes validity
 
       smsSessions.set(phone, {
         codeHash,
         salt,
         expiresAt,
-        attemptsLeft: 5,
+        attemptsLeft: SMS_MAX_ATTEMPTS, // 3 attempts max
         lastSentAt: now,
         verified: false,
         token: null,
-        latestCodeDev: code // stored internally for dev tests
+        latestCodeDev: process.env.NODE_ENV === 'production' ? null : code
       });
 
       // Dispatch SMS
@@ -458,7 +622,7 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 200, {
         status: 'sent',
         phone: phone,
-        expiresIn: 300,
+        expiresIn: Math.floor(SMS_CODE_TTL_MS / 1000),
         provider: smsResult.provider,
         note: smsResult.note || 'Код успешно сформирован и отправлен.'
       });
@@ -481,7 +645,7 @@ const server = http.createServer(async (req, res) => {
       }
 
       const session = smsSessions.get(phone);
-      if (!session) {
+      if (!session || !session.codeHash) {
         return sendJson(res, 400, { error: 'Код для этого номера не запрашивался или срок действия истёк.' });
       }
 
@@ -498,6 +662,13 @@ const server = http.createServer(async (req, res) => {
       const expectedHash = hashCode(inputCode, session.salt);
       if (expectedHash !== session.codeHash) {
         session.attemptsLeft -= 1;
+        if (session.attemptsLeft <= 0) {
+          smsSessions.delete(phone);
+          return sendJson(res, 403, {
+            error: 'Превышено максимальное число попыток ввода (3). Запросите новый код.',
+            attemptsLeft: 0
+          });
+        }
         return sendJson(res, 400, {
           error: `Неверный код подтверждения. Осталось попыток: ${session.attemptsLeft}.`,
           attemptsLeft: session.attemptsLeft
@@ -506,11 +677,11 @@ const server = http.createServer(async (req, res) => {
 
       // Code is valid! Issue signed session token
       const token = crypto.randomBytes(32).toString('hex');
-      const tokenExpiry = Date.now() + (30 * 24 * 60 * 60 * 1000); // 30 days
-      authTokens.set(token, { phone, expiresAt: tokenExpiry });
+      const tokenExpiry = Date.now() + CUSTOMER_SESSION_TTL_MS; // 30 days customer storefront session
+      authTokens.set(token, { phone, expiresAt: tokenExpiry, createdAt: new Date().toISOString() });
 
-      session.verified = true;
-      session.token = token;
+      // Invalidate the code immediately (one-time use)
+      smsSessions.delete(phone);
 
       // Handle cart linking and merging with guest cart if passed
       const guestCart = Array.isArray(body.guestCart) ? body.guestCart : [];
@@ -590,10 +761,9 @@ const server = http.createServer(async (req, res) => {
         return sendJson(res, 400, { error: 'Укажите корректный номер телефона.' });
       }
 
-      // Check phone token: phone must be verified
-      const auth = authTokens.get(token);
-      if (!auth || auth.phone !== phone) {
-        return sendJson(res, 403, { error: 'Телефон не подтвержден через SMS. Пройдите шаг подтверждения номера.' });
+      // Check phone token: phone must be verified and token active
+      if (!verifyCustomerToken(token, phone)) {
+        return sendJson(res, 403, { error: 'Телефон не подтвержден через SMS или срок сессии истек. Пройдите шаг подтверждения номера.' });
       }
 
       // Server-side validate items & prices against catalog
@@ -628,11 +798,17 @@ const server = http.createServer(async (req, res) => {
         hasUncertainPrices: validated.hasUncertainPrices,
         priceNotice: validated.hasUncertainPrices
           ? 'В заказе присутствуют позиции с расчетом стоимости инженером по спецификации фабрики.'
-          : 'Сумма фиксирована по позициям каталога.'
+          : 'Сумма фиксирована по позициям каталога.',
+        telegram: {
+          status: process.env.TELEGRAM_BOT_TOKEN ? 'pending' : 'unconfigured',
+          attempts: 0,
+          lastAttemptAt: null,
+          lastError: null
+        }
       };
 
-      // Persist order in reliable project store (orders.json)
-      const saved = saveOrder(newOrder);
+      // Persist order in reliable project store (orders.json) with Mutex & Deduplication
+      const saved = await saveOrder(newOrder);
 
       // Clear the active cart for this phone on server
       saveCartForPhone(phone, []);
@@ -668,8 +844,11 @@ const server = http.createServer(async (req, res) => {
   }
 
   // 8. DEV Test Helper: get latest code for automated test runner
-  // Only available on localhost / development
+  // Only available in development; strictly disabled in production
   if (pathname === '/api/dev/latest-code' && req.method === 'GET') {
+    if (process.env.NODE_ENV === 'production') {
+      return sendJson(res, 403, { error: 'Эндпоинт отладки отключен в production-режиме.' });
+    }
     const rawPhone = parsedUrl.searchParams.get('phone');
     const phone = normalizePhone(rawPhone);
     const session = phone ? smsSessions.get(phone) : null;
@@ -680,7 +859,16 @@ const server = http.createServer(async (req, res) => {
   }
 
   // ------------------------------------------------------------------------
-  // PRICING & PRICE LIST MANAGEMENT API (V3.3)
+  // ADMIN & PRICING ACCESS CONTROL (RBAC)
+  // ------------------------------------------------------------------------
+  function getAdminSession(req, requiredRole = null) {
+    const authHeader = req.headers['authorization'] || '';
+    const token = authHeader.replace(/^Bearer\s+/i, '').trim();
+    return adminBackend.verifySession(token, requiredRole);
+  }
+
+  // ------------------------------------------------------------------------
+  // PRICING & PRICE LIST MANAGEMENT API (RBAC PROTECTED)
   // ------------------------------------------------------------------------
 
   // 9. GET /api/pricing/suppliers
@@ -694,6 +882,9 @@ const server = http.createServer(async (req, res) => {
 
   // 10. POST /api/pricing/parse (Import & Parse price list file or raw text)
   if (pathname === '/api/pricing/parse' && req.method === 'POST') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен. Требуются права менеджера или администратора.' });
+
     try {
       const body = await parseBody(req);
       let buffer = null;
@@ -717,6 +908,9 @@ const server = http.createServer(async (req, res) => {
 
   // 11. POST /api/pricing/match (Match parsed items with catalog)
   if (pathname === '/api/pricing/match' && req.method === 'POST') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен. Требуются права менеджера или администратора.' });
+
     try {
       const body = await parseBody(req);
       if (!body.items || !Array.isArray(body.items)) {
@@ -735,15 +929,19 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
-  // 12. POST /api/pricing/apply (Apply confirmed price updates)
+  // 12. POST /api/pricing/apply (Apply confirmed price updates - Restricted to Admin/Owner)
   if (pathname === '/api/pricing/apply' && req.method === 'POST') {
+    const session = getAdminSession(req, 'admin');
+    if (!session) return sendJson(res, 403, { error: 'Недостаточно прав. Применять изменения цен могут только Администратор или Владелец.' });
+
     try {
       const body = await parseBody(req);
       if (!body.approvedItems || !Array.isArray(body.approvedItems)) {
         return sendJson(res, 400, { error: 'Передайте список утвержденных позиций (approvedItems).' });
       }
 
-      const result = pricingEngine.applyPriceUpdates(body.approvedItems, body.adminUser || 'Администратор');
+      const adminName = session.user ? session.user.name : 'Администратор';
+      const result = pricingEngine.applyPriceUpdates(body.approvedItems, adminName);
       return sendJson(res, 200, result);
     } catch (err) {
       console.error('Error in /api/pricing/apply:', err);
@@ -753,12 +951,18 @@ const server = http.createServer(async (req, res) => {
 
   // 13. GET /api/pricing/history (Price change history log)
   if (pathname === '/api/pricing/history' && req.method === 'GET') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
     const history = pricingEngine.getPriceHistory();
     return sendJson(res, 200, { history });
   }
 
   // 14. GET /api/pricing/catalog (Lightweight catalog for manual binding)
   if (pathname === '/api/pricing/catalog' && req.method === 'GET') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
     const catalog = pricingEngine.loadCatalog();
     const searchList = catalog.map(p => ({
       id: p.id,
@@ -776,13 +980,6 @@ const server = http.createServer(async (req, res) => {
   // ------------------------------------------------------------------------
   // ADMIN CONTROL CENTER API (V3.3)
   // ------------------------------------------------------------------------
-
-  // Helper for admin auth check
-  function getAdminSession(req, requiredRole = null) {
-    const authHeader = req.headers['authorization'] || '';
-    const token = authHeader.replace(/^Bearer\s+/i, '').trim();
-    return adminBackend.verifySession(token, requiredRole);
-  }
 
   // A1. POST /api/admin/auth/login
   if (pathname === '/api/admin/auth/login' && req.method === 'POST') {
@@ -878,6 +1075,22 @@ const server = http.createServer(async (req, res) => {
     } catch (err) {
       return sendJson(res, 400, { error: err.message });
     }
+  }
+
+  // A8-bis. POST /api/admin/orders/:id/resend-telegram
+  if (pathname.startsWith('/api/admin/orders/') && pathname.endsWith('/resend-telegram') && req.method === 'POST') {
+    const session = getAdminSession(req, 'manager');
+    if (!session) return sendJson(res, 401, { error: 'Доступ ограничен.' });
+
+    const orderId = pathname.replace('/api/admin/orders/', '').replace('/resend-telegram', '').trim();
+    const order = adminBackend.getOrderById(orderId);
+    if (!order) return sendJson(res, 404, { error: 'Заказ не найден.' });
+
+    const tgResult = await dispatchTelegramNotification(order);
+    return sendJson(res, 200, {
+      orderId,
+      telegram: tgResult
+    });
   }
 
   // A9. GET /api/admin/catalog
@@ -1112,7 +1325,10 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(200, {
       'Content-Type': contentType,
       'Content-Length': stats.size,
-      'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=3600'
+      'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=3600',
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'SAMEORIGIN',
+      'Referrer-Policy': 'strict-origin-when-cross-origin'
     });
 
     const stream = fs.createReadStream(safePath);
