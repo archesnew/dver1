@@ -1325,7 +1325,7 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(200, {
       'Content-Type': contentType,
       'Content-Length': stats.size,
-      'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=3600',
+      'Cache-Control': (ext === '.html' || ext === '.css' || ext === '.js') ? 'no-cache, no-store, must-revalidate' : 'public, max-age=3600',
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'SAMEORIGIN',
       'Referrer-Policy': 'strict-origin-when-cross-origin'

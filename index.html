@@ -16,8 +16,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css">
-  <script src="cart-store.js"></script>
+  <link rel="stylesheet" href="app.css?v=3.5.2">
+  <style id="critical-designer-fallback">
+    .designer-showcase-wrapper { position: relative; width: 100%; }
+    .designer-showcase-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; padding: 4px 2px 14px; }
+    .designer-showcase-track::-webkit-scrollbar { display: none; }
+    .designer-card { flex: 0 0 calc((100% - 60px) / 4); min-width: calc((100% - 60px) / 4); max-width: calc((100% - 60px) / 4); scroll-snap-align: start; background: #FFFFFF; border: 1px solid #E9E5DC; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; }
+    .designer-card-media { display: block; text-decoration: none; background: #FAF9F6; border-bottom: 1px solid #E9E5DC; position: relative; overflow: hidden; }
+    .designer-canvas { height: 310px; display: flex; align-items: center; justify-content: center; padding: 24px 20px 16px; position: relative; background: #FAF9F6; overflow: hidden; }
+    .designer-door-img { height: 100% !important; max-height: 100% !important; max-width: 100% !important; width: auto !important; object-fit: contain !important; display: block; margin: 0 auto; filter: drop-shadow(0 6px 14px rgba(34, 35, 32, 0.08)); }
+    @media (max-width: 1024px) {
+      .designer-card { flex: 0 0 calc((100% - 16px) / 2); min-width: calc((100% - 16px) / 2); max-width: calc((100% - 16px) / 2); }
+      .designer-canvas { height: 270px; }
+    }
+    @media (max-width: 640px) {
+      .designer-card { flex: 0 0 82%; min-width: 82%; max-width: 82%; }
+      .designer-canvas { height: 250px; padding: 18px 14px 12px; }
+    }
+  </style>
+  <script src="cart-store.js?v=3.5.2"></script>
 </head>
 <body>
 
