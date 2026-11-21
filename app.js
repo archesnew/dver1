@@ -36,10 +36,11 @@
 
   // Резолвер путей изображений
   function resolveImagePath(img) {
-    if (!img) return 'door-placeholder.svg';
+    if (!img || img === 'door-placeholder.svg') return 'door-placeholder.svg';
     if (img.startsWith('http://') || img.startsWith('https://')) return img;
     if (img.startsWith('data/')) return img;
     if (img.startsWith('catalog-images/')) return 'data/catalog-output/' + img;
+    if (img.startsWith('extracted_images/')) return 'data/catalog-output/' + img;
     return 'data/catalog-output/' + img;
   }
 

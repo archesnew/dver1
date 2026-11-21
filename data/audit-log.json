@@ -1,5 +1,137 @@
 [
   {
+    "id": "AUD-1795221927316-03421203",
+    "timestamp": "2026-11-21T00:45:27.316Z",
+    "user": "Менеджер шоурума Казань (manager)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-mgr-003",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221927194-4b0b8385",
+    "timestamp": "2026-11-21T00:45:27.194Z",
+    "user": "Старший администратор (admin)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-admin-002",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221927089-be6d74ed",
+    "timestamp": "2026-11-21T00:45:27.089Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221744211-2877edc1",
+    "timestamp": "2026-11-21T00:42:24.211Z",
+    "user": "Менеджер шоурума Казань (manager)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-mgr-003",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221744136-fdb2e9cd",
+    "timestamp": "2026-11-21T00:42:24.136Z",
+    "user": "Старший администратор (admin)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-admin-002",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221744058-23e92ad0",
+    "timestamp": "2026-11-21T00:42:24.058Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221506809-68e32aa6",
+    "timestamp": "2026-11-21T00:38:26.809Z",
+    "user": "Менеджер шоурума Казань (manager)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-mgr-003",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221506724-77f09d69",
+    "timestamp": "2026-11-21T00:38:26.724Z",
+    "user": "Старший администратор (admin)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-admin-002",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221506624-3d9f86ed",
+    "timestamp": "2026-11-21T00:38:26.624Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221363001-be700607",
+    "timestamp": "2026-11-21T00:36:03.001Z",
+    "user": "Менеджер шоурума Казань (manager)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-mgr-003",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221362904-612e6381",
+    "timestamp": "2026-11-21T00:36:02.904Z",
+    "user": "Старший администратор (admin)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-admin-002",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
+    "id": "AUD-1795221362736-83b0e2c9",
+    "timestamp": "2026-11-21T00:36:02.737Z",
+    "user": "Руководитель (Владелец) (owner)",
+    "action": "auth_login",
+    "entityType": "staff",
+    "entityId": "usr-owner-001",
+    "oldValue": null,
+    "newValue": null,
+    "details": "Успешный вход в систему с IP ::1"
+  },
+  {
     "id": "AUD-1795221037319-3503f4e4",
     "timestamp": "2026-11-21T00:30:37.319Z",
     "user": "Руководитель (Владелец) (owner)",

@@ -282,7 +282,7 @@ function validateAndEnrichOrderItems(rawItems) {
     let authoritativeUnitPrice = null;
     let isPriceKnown = false;
 
-    if (product && typeof product.price === 'number' && product.price > 0) {
+    if (item.isPriceKnown !== false && product && typeof product.price === 'number' && product.price > 0) {
       authoritativeBasePrice = product.price;
       const mult = SCENARIO_MULTIPLIERS[item.scenario] || 1.0;
       let calculated = authoritativeBasePrice * mult;

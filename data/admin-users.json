@@ -8,7 +8,7 @@
     "salt": "4435dbcef74cc97fca53934863fbd472",
     "active": true,
     "createdAt": "2026-11-21T00:12:26.538Z",
-    "lastLoginAt": "2026-11-21T00:30:37.314Z"
+    "lastLoginAt": "2026-11-21T00:45:27.084Z"
   },
   {
     "id": "usr-admin-002",
@@ -19,7 +19,7 @@
     "salt": "cb00108a6ca89b6c9a9c224459e3c38b",
     "active": true,
     "createdAt": "2026-11-21T00:12:26.539Z",
-    "lastLoginAt": null
+    "lastLoginAt": "2026-11-21T00:45:27.186Z"
   },
   {
     "id": "usr-mgr-003",
@@ -30,6 +30,6 @@
     "salt": "37de0091f27f1846350f5589e3a3e15c",
     "active": true,
     "createdAt": "2026-11-21T00:12:26.539Z",
-    "lastLoginAt": "2026-11-21T00:13:59.663Z"
+    "lastLoginAt": "2026-11-21T00:45:27.309Z"
   }
 ]
