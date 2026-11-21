@@ -47,9 +47,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=3.8.0">
-  <link rel="stylesheet" href="product.css?v=3.8.0">
-  <script src="cart-store.js?v=3.8.0"></script>
+  <link rel="stylesheet" href="app.css?v=3.8.1">
+  <link rel="stylesheet" href="product.css?v=3.8.1">
+  <script src="cart-store.js?v=3.8.1"></script>
 </head>
 <body class="pdp-body">
 
@@ -58,7 +58,7 @@
     <div class="header-container">
       <!-- СЛЕВА: ТОЛЬКО ОРИГИНАЛЬНЫЙ ЛОГОТИП -->
       <a href="index.html" class="header-logo-link" aria-label="«Двери №1» — Главная">
-        <img src="logo.png" alt="Двери №1" class="header-logo-img">
+        <img src="logo.png" alt="Двери №1" class="header-logo-img" width="168" height="38">
       </a>
 
       <!-- ПО ЦЕНТРУ: КОМПАКТНОЕ МЕНЮ (DESKTOP) -->
@@ -298,7 +298,7 @@
 
           <!-- 8. КНОПКА «ДОБАВИТЬ В КОРЗИНУ» И 9. ВТОРИЧНОЕ ДЕЙСТВИЕ -->
           <div class="pdp-cta-block">
-            <button type="button" class="btn-pdp-cart" id="btnAddToCart">
+            <button type="button" class="btn-pdp-cart" id="btnAddToCart" aria-label="Добавить в корзину">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -329,7 +329,7 @@
                 <span>Написать в Telegram</span>
               </a>
             </div>
-            <button type="button" class="btn-measure-call" id="pdpBtnMeasure">
+            <button type="button" class="btn-measure-call" id="pdpBtnMeasure" aria-label="Вызвать замерщика">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"/>
                 <path d="m14.5 3.5 2 2"/>
@@ -645,9 +645,9 @@
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- СКРИПТЫ: ЯДРО СТРАНИЦЫ ТОВАРА С АСИНХРОННОЙ ПОДГРУЗКОЙ JSON ТОВАРА -->
-  <script src="js/config.js?v=3.8.0"></script>
-  <script src="js/analytics.js?v=3.8.0"></script>
-  <script src="js/leads.js?v=3.8.0"></script>
-  <script src="product.js?v=3.8.0"></script>
+  <script src="js/config.js?v=3.8.1"></script>
+  <script src="js/analytics.js?v=3.8.1"></script>
+  <script src="js/leads.js?v=3.8.1"></script>
+  <script src="product.js?v=3.8.1"></script>
 </body>
 </html>

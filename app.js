@@ -831,6 +831,7 @@
         label: 'В наличии на складе (1–2 дня)',
         onRemove: () => {
           state.onlyInStock = false;
+          state.currentPage = 1;
           const btn = document.getElementById('btnStockToggle');
           if (btn) {
             btn.classList.remove('active');
@@ -842,18 +843,18 @@
     }
 
     if (state.activeCategory !== 'all') {
-      chips.push({ label: 'Категория: ' + state.activeCategory, onRemove: () => { state.activeCategory = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
+      chips.push({ label: 'Категория: ' + state.activeCategory, onRemove: () => { state.activeCategory = 'all'; state.currentPage = 1; applyFiltersAndSort(); buildFacetFilters(); } });
     }
     if (state.activeBrand !== 'all') {
-      chips.push({ label: 'Фабрика: ' + state.activeBrand, onRemove: () => { state.activeBrand = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
+      chips.push({ label: 'Фабрика: ' + state.activeBrand, onRemove: () => { state.activeBrand = 'all'; state.currentPage = 1; applyFiltersAndSort(); buildFacetFilters(); } });
     }
     if (state.activeColor !== 'all') {
       const cMap = { white: 'Белые и светлые', grey: 'Серые и графит', wood: 'Древесные оттенки', dark: 'Тёмные и чёрные', metal: 'Металл и антик' };
-      chips.push({ label: 'Цвет: ' + (cMap[state.activeColor] || state.activeColor), onRemove: () => { state.activeColor = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
+      chips.push({ label: 'Цвет: ' + (cMap[state.activeColor] || state.activeColor), onRemove: () => { state.activeColor = 'all'; state.currentPage = 1; applyFiltersAndSort(); buildFacetFilters(); } });
     }
     if (state.activeType !== 'all') {
       const tMap = { flush: 'Глухие полотна', glass: 'С остеклением', invisible: 'Скрытые Invisible', entrance: 'Входные двери' };
-      chips.push({ label: 'Тип: ' + (tMap[state.activeType] || state.activeType), onRemove: () => { state.activeType = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
+      chips.push({ label: 'Тип: ' + (tMap[state.activeType] || state.activeType), onRemove: () => { state.activeType = 'all'; state.currentPage = 1; applyFiltersAndSort(); buildFacetFilters(); } });
     }
     if (state.activePrice !== 'all') {
       const pLabels = {
@@ -862,17 +863,18 @@
         '25k_40k': 'Цена: 25 000 – 40 000 ₽',
         'over_40k': 'Цена: От 40 000 ₽'
       };
-      chips.push({ label: pLabels[state.activePrice] || 'Цена: ' + state.activePrice, onRemove: () => { state.activePrice = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
+      chips.push({ label: pLabels[state.activePrice] || 'Цена: ' + state.activePrice, onRemove: () => { state.activePrice = 'all'; state.currentPage = 1; applyFiltersAndSort(); buildFacetFilters(); } });
     }
     if (state.activeStyle !== 'all') {
-      chips.push({ label: 'Стиль: ' + state.activeStyle, onRemove: () => { state.activeStyle = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
+      chips.push({ label: 'Стиль: ' + state.activeStyle, onRemove: () => { state.activeStyle = 'all'; state.currentPage = 1; applyFiltersAndSort(); buildFacetFilters(); } });
     }
     if (state.activeMaterial !== 'all') {
-      chips.push({ label: 'Материал: ' + state.activeMaterial, onRemove: () => { state.activeMaterial = 'all'; applyFiltersAndSort(); buildFacetFilters(); } });
+      chips.push({ label: 'Материал: ' + state.activeMaterial, onRemove: () => { state.activeMaterial = 'all'; state.currentPage = 1; applyFiltersAndSort(); buildFacetFilters(); } });
     }
     if (state.searchQuery) {
       chips.push({ label: 'Поиск: "' + state.searchQuery + '"', onRemove: () => {
         state.searchQuery = '';
+        state.currentPage = 1;
         const sInput = document.getElementById('searchInput');
         if (sInput) sInput.value = '';
         const sClear = document.getElementById('searchClearBtn');

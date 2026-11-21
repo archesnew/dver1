@@ -46,7 +46,7 @@ function resolveWebpPath(imgPath, folder = 'thumbs') {
     return `data/catalog-output/${folder}/${webpName}`;
   }
 
-  return `data/catalog-output/${folder}/${webpName}`;
+  return 'door-placeholder.svg';
 }
 
 async function run() {

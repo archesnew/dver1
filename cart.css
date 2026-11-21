@@ -1037,6 +1037,11 @@
 }
 
 @media (max-width: 768px) {
+  /* Защита от перекрытия кнопки заказа плавающим виджетом на экранах <= 768px */
+  body.page-cart .floating-contact-widget {
+    bottom: 84px !important;
+  }
+
   .cart-page-wrapper {
     padding: 20px 16px 100px;
   }

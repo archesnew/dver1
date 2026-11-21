@@ -28,11 +28,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=3.8.0">
-  <link rel="stylesheet" href="cart.css?v=3.8.0">
+  <link rel="stylesheet" href="app.css?v=3.8.1">
+  <link rel="stylesheet" href="cart.css?v=3.8.1">
   <link rel="icon" type="image/png" href="logo.png">
 </head>
-<body>
+<body class="page-cart">
 
   <!-- ========================================================================
        APPLE LIQUID GLASS HEADER
@@ -41,7 +41,7 @@
     <div class="header-container">
       <!-- 1. СЛЕВА: ТОЛЬКО ОРИГИНАЛЬНЫЙ ЛОГОТИП -->
       <a href="index.html" class="header-logo-link" aria-label="Двери №1 — Главная">
-        <img src="logo.png" alt="Двери №1" class="header-logo-img">
+        <img src="logo.png" alt="Двери №1" class="header-logo-img" width="168" height="38">
       </a>
 
       <!-- 2. ПО ЦЕНТРУ: НАВИГАЦИЯ -->
@@ -117,7 +117,7 @@
         <span class="cart-total-badge-label" id="cartHeaderItemsCount">0 позиций</span>
       </div>
       <div class="cart-header-actions" id="cartHeaderActions">
-        <button type="button" class="btn-cart-tool" id="btnShareCart" title="Скопировать ссылку на подборку">
+        <button type="button" class="btn-cart-tool" id="btnShareCart" title="Скопировать ссылку на подборку" aria-label="Скопировать ссылку на подборку">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="18" cy="5" r="3"></circle>
             <circle cx="6" cy="12" r="3"></circle>
@@ -127,7 +127,7 @@
           </svg>
           <span>Поделиться подборкой</span>
         </button>
-        <button type="button" class="btn-cart-tool btn-cart-pdf" id="btnDownloadPdf" title="Скачать или распечатать официальную смету">
+        <button type="button" class="btn-cart-tool btn-cart-pdf" id="btnDownloadPdf" title="Скачать или распечатать официальную смету" aria-label="Скачать или распечатать официальную смету">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
@@ -184,7 +184,7 @@
           </svg>
         </button>
 
-        <button type="button" class="btn-cart-summary-pdf" id="btnSummaryPdf">
+        <button type="button" class="btn-cart-summary-pdf" id="btnSummaryPdf" title="Скачать или распечатать официальную смету" aria-label="Скачать или распечатать официальную смету">
           <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
@@ -452,10 +452,10 @@
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- Скрипты -->
-  <script src="js/config.js?v=3.8.0"></script>
-  <script src="js/analytics.js?v=3.8.0"></script>
-  <script src="js/leads.js?v=3.8.0"></script>
-  <script src="cart-store.js?v=3.8.0"></script>
-  <script src="cart.js?v=3.8.0"></script>
+  <script src="js/config.js?v=3.8.1"></script>
+  <script src="js/analytics.js?v=3.8.1"></script>
+  <script src="js/leads.js?v=3.8.1"></script>
+  <script src="cart-store.js?v=3.8.1"></script>
+  <script src="cart.js?v=3.8.1"></script>
 </body>
 </html>

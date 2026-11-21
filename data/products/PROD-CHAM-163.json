@@ -45,7 +45,7 @@
     "other_hardware": "Крепежные планки"
   },
   "images": [
-    "data/catalog-output/webp/door-placeholder.webp"
+    "door-placeholder.svg"
   ],
   "price": 8400,
   "price_type": "fixed",
@@ -60,6 +60,6 @@
   "door_type_group": "flush",
   "inStock": false,
   "thumbs": [
-    "data/catalog-output/thumbs/door-placeholder.webp"
+    "door-placeholder.svg"
   ]
 }
