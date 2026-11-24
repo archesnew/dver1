@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const BASE_URL = 'https://dver1.tatar';
+const BASE_URL = 'https://dver1.com';
 const CATALOG_INDEX_PATH = path.join(rootDir, 'data', 'catalog-index.json');
 const SITEMAP_OUTPUT_PATH = path.join(rootDir, 'sitemap.xml');
 

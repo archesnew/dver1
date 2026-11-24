@@ -1500,9 +1500,9 @@
   // Quick fill helper for login
   window.quickFillLogin = function(email) {
     document.getElementById('loginEmail').value = email;
-    if (email === 'owner@dver1.tatar') document.getElementById('loginPassword').value = 'OwnerDver1!2026';
-    else if (email === 'admin@dver1.tatar') document.getElementById('loginPassword').value = 'AdminDver1!2026';
-    else if (email === 'manager@dver1.tatar') document.getElementById('loginPassword').value = 'ManagerDver1!2026';
+    if (email === 'owner@dver1.com') document.getElementById('loginPassword').value = 'OwnerDver1!2026';
+    else if (email === 'admin@dver1.com') document.getElementById('loginPassword').value = 'AdminDver1!2026';
+    else if (email === 'manager@dver1.com') document.getElementById('loginPassword').value = 'ManagerDver1!2026';
   };
 
   // Expose global controller

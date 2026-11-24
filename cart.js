@@ -1189,7 +1189,7 @@
           <span><strong>Казань:</strong> ул. Сибирский тракт, 59б</span>
           <span><strong>Челны:</strong> Казанский пр-т, 232</span>
           <span><strong>Единый телефон:</strong> +7 (843) 205-00-01</span>
-          <span><strong>Сайт:</strong> dver1.tatar</span>
+          <span><strong>Сайт:</strong> dver1.com</span>
         </div>
       </div>
 

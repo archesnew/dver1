@@ -1364,8 +1364,8 @@
     const modelName = p.name || p.model || 'Дверное полотно';
     const brandName = p.brand || 'Двери №1';
     const imgUrl = (p.images && p.images.length > 0)
-      ? `https://dver1.tatar/${p.images[0]}`
-      : 'https://dver1.tatar/assets/hero-arch.webp';
+      ? `https://dver1.com/${p.images[0]}`
+      : 'https://dver1.com/assets/hero-arch.webp';
 
     const schema = {
       "@context": "https://schema.org/",
@@ -1380,7 +1380,7 @@
       "sku": p.id,
       "offers": {
         "@type": "Offer",
-        "url": `https://dver1.tatar/product.html?id=${encodeURIComponent(p.id)}`,
+        "url": `https://dver1.com/product.html?id=${encodeURIComponent(p.id)}`,
         "priceCurrency": "RUB",
         "price": currentPrice,
         "priceValidUntil": "2027-12-31",
@@ -1390,7 +1390,7 @@
           "@type": "HomeGoodsStore",
           "name": "Двери №1",
           "telephone": "+7 (843) 205-00-01",
-          "url": "https://dver1.tatar/"
+          "url": "https://dver1.com/"
         }
       }
     };
@@ -1404,7 +1404,7 @@
     const ogImg = document.querySelector('meta[property="og:image"]');
     if (ogImg) ogImg.content = imgUrl;
     const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.content = `https://dver1.tatar/product.html?id=${encodeURIComponent(p.id)}`;
+    if (ogUrl) ogUrl.content = `https://dver1.com/product.html?id=${encodeURIComponent(p.id)}`;
   }
 
   // --------------------------------------------------------------------------

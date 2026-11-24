@@ -65,7 +65,7 @@ function initAdminUsers() {
     const defaultUsers = [
       {
         id: 'usr-owner-001',
-        login: 'owner@dver1.tatar',
+        login: 'owner@dver1.com',
         name: 'Руководитель (Владелец)',
         role: 'owner',
         hash: owner.hash,
@@ -76,7 +76,7 @@ function initAdminUsers() {
       },
       {
         id: 'usr-admin-002',
-        login: 'admin@dver1.tatar',
+        login: 'admin@dver1.com',
         name: 'Старший администратор',
         role: 'admin',
         hash: admin.hash,
@@ -87,7 +87,7 @@ function initAdminUsers() {
       },
       {
         id: 'usr-mgr-003',
-        login: 'manager@dver1.tatar',
+        login: 'manager@dver1.com',
         name: 'Менеджер шоурума Казань',
         role: 'manager',
         hash: manager.hash,
