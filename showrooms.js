@@ -99,13 +99,76 @@
 
     const leadForm = document.getElementById('leadOrderForm');
     if (leadForm) {
-      leadForm.addEventListener('submit', (e) => {
+      leadForm.onsubmit = null;
+      leadForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        alert('Спасибо! Ваша заявка на визит в шоурум принята. Менеджер свяжется с вами для согласования удобного времени.');
-        closeLeadModal();
-        leadForm.reset();
+        const nameEl = document.getElementById('leadName');
+        const phoneEl = document.getElementById('leadPhone');
+        const cityEl = document.getElementById('leadCity');
+        const commentEl = document.getElementById('leadComment');
+        const submitBtn = leadForm.querySelector('button[type="submit"]');
+
+        if (window.DverLeads && typeof window.DverLeads.submitLead === 'function') {
+          try {
+            await window.DverLeads.submitLead({
+              name: nameEl ? nameEl.value : '',
+              phone: phoneEl ? phoneEl.value : '',
+              city: cityEl ? cityEl.value : 'Казань',
+              comment: commentEl ? commentEl.value : '',
+              source: document.getElementById('leadModalTitle')?.textContent || 'Страница магазинов'
+            }, {
+              formEl: leadForm,
+              submitBtn,
+              nameInputEl: nameEl,
+              phoneInputEl: phoneEl
+            });
+            setTimeout(() => {
+              closeLeadModal();
+              leadForm.reset();
+            }, 1400);
+          } catch (err) {
+            alert(err.message || 'Проверьте корректность имени и номера телефона.');
+          }
+        } else {
+          alert('Спасибо! Ваша заявка принята. Менеджер свяжется с вами в ближайшее время.');
+          closeLeadModal();
+          leadForm.reset();
+        }
       });
     }
+  }
+
+  function initShowroomsMap() {
+    const iframe = document.getElementById('showroomYandexMap');
+    const tabs = document.querySelectorAll('.map-city-tab');
+    if (!iframe || !tabs.length) return;
+
+    const mapUrls = {
+      kazan: 'https://yandex.ru/map-widget/v1/?ll=49.212100%2C55.744500&z=16&pt=49.212100%2C55.744500%2Cpm2rdm',
+      chelny: 'https://yandex.ru/map-widget/v1/?ll=52.426800%2C55.736600&z=16&pt=52.426800%2C55.736600%2Cpm2rdm'
+    };
+
+    function selectCity(cityKey, shouldScroll) {
+      if (!mapUrls[cityKey]) return;
+      iframe.src = mapUrls[cityKey];
+      tabs.forEach(tab => {
+        const active = tab.dataset.mapCity === cityKey;
+        tab.classList.toggle('active', active);
+        tab.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      if (shouldScroll) {
+        const section = document.getElementById('showroomsMapSection');
+        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        selectCity(tab.dataset.mapCity, false);
+      });
+    });
+
+    window.ShowroomsMap = { selectCity };
   }
 
   // Экспорт в глобальный scope для обработчиков onclick
@@ -118,5 +181,6 @@
     initHeaderMenu();
     initHeaderScrollEffect();
     setupModals();
+    initShowroomsMap();
   });
 })();

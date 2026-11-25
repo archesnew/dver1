@@ -6050,3 +6050,301 @@ h2, h3 {
   font-size: 0.8125rem;
   padding: 6px 8px;
 }
+
+/* ==========================================================================
+   СТРАНИЦА МАГАЗИНОВ И КОНТАКТОВ (SHOWROOMS.HTML)
+   ========================================================================== */
+.showroom-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.showroom-card-top .showroom-city-badge {
+  margin-bottom: 0;
+}
+
+.showroom-hours-pill {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-ivory, #FAF9F6);
+  border: 1px solid var(--border-stone, #DDD8CE);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.showroom-phone-link {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.showroom-phone-link:hover {
+  color: var(--accent-terracotta);
+}
+
+.showroom-messengers-note {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.showroom-landmark-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 14px;
+  margin: 12px 0 14px;
+  border-radius: 10px;
+  background: rgba(184, 92, 58, 0.08);
+  border: 1px solid rgba(184, 92, 58, 0.22);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.showroom-landmark-box svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--accent-terracotta);
+}
+
+.showroom-route-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.btn-map-focus {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--accent-terracotta);
+  background: rgba(184, 92, 58, 0.08);
+  color: var(--accent-terracotta);
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-map-focus:hover {
+  background: var(--accent-terracotta);
+  color: #FFFFFF;
+}
+
+.btn-route-ext {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-stone, #DDD8CE);
+  background: #FFFFFF;
+  color: var(--text-primary);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-route-ext:hover {
+  border-color: var(--accent-terracotta);
+  color: var(--accent-terracotta);
+}
+
+/* Живая карта проезда */
+.showroom-map-section {
+  padding: 20px 0 64px;
+}
+
+.map-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.map-city-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--border-stone, #DDD8CE);
+}
+
+.map-city-tab {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.map-city-tab:hover {
+  color: var(--text-primary);
+}
+
+.map-city-tab.active {
+  background: var(--accent-terracotta);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.map-embed-shell {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-stone, #DDD8CE);
+  background: #EDEAE3;
+  box-shadow: var(--shadow-card);
+}
+
+.map-embed-frame {
+  display: block;
+  width: 100%;
+  height: 420px;
+  border: 0;
+}
+
+/* Блок «Заказ онлайн» */
+.online-catalogs-section {
+  padding: 0 0 64px;
+}
+
+.online-catalogs-card {
+  background: #222320;
+  color: #FFFFFF;
+  border-radius: 24px;
+  padding: 40px 38px;
+  box-shadow: 0 20px 44px -12px rgba(34, 35, 32, 0.25);
+}
+
+.online-catalogs-header {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.online-catalogs-title {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  line-height: 1.18;
+}
+
+.online-catalogs-desc {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.online-catalogs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.online-channel-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.online-channel-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.11);
+  border-color: var(--accent-terracotta);
+}
+
+.channel-card-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(184, 92, 58, 0.2);
+  color: #E08A68;
+}
+
+.channel-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.channel-card-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 3px;
+}
+
+.channel-card-sub {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.channel-card-arrow {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.online-channel-card:hover .channel-card-arrow {
+  transform: translateX(3px);
+  color: #FFFFFF;
+}
+
+@media (max-width: 960px) {
+  .online-catalogs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-embed-frame {
+    height: 320px;
+  }
+  .online-catalogs-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+  .map-city-tabs {
+    border-radius: 14px;
+    width: 100%;
+  }
+  .map-city-tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 0.8125rem;
+  }
+}
