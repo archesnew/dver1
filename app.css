@@ -33,9 +33,9 @@
   --border-subtle: #E9E5DC;
 
   /* 2. Типографика */
-  --font-display: 'Neue Haas Grotesk Text Pro', 'Neue Haas Grotesk', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
-  --font-serif: var(--font-display); /* Замена всех антикв на Neue Haas Grotesk с фолбеком на Inter */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Golos Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-display);
+  --font-sans: 'Golos Text', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* 3. Архитектурная геометрия: скругления 4–8 px */
@@ -85,6 +85,7 @@ section[id], main[id], div[id] {
 
 body {
   font-family: var(--font-sans);
+  font-weight: 400;
   background-color: var(--bg-ivory);
   color: var(--text-primary);
   line-height: 1.5;
@@ -354,7 +355,7 @@ a {
 }
 
 .header-nav-link {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.9375rem; /* 15px */
   font-weight: 450;
   color: var(--text-secondary, #575652);
@@ -403,7 +404,7 @@ a {
   justify-content: center;
   height: 42px;
   padding: 0 20px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.875rem; /* 14px */
   font-weight: 500; /* Inter Medium */
   letter-spacing: -0.01em;
@@ -591,7 +592,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 13px 4px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   font-size: 1.0625rem;
   font-weight: 480;
   color: var(--text-primary, #222320);
@@ -639,7 +640,7 @@ a {
   border: 1px solid var(--accent-terracotta);
   border-radius: 8px; /* 8px радиус */
   padding: 0 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.9375rem;
   font-weight: 500; /* Inter Medium */
   text-align: center;
@@ -777,17 +778,18 @@ a {
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: 2.65rem;
-  line-height: 1.15;
-  font-weight: 500;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1.09;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 14px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .hero-subtitle {
   font-family: var(--font-sans);
   font-size: 1.0625rem;
+  font-weight: 400;
   line-height: 1.55;
   color: var(--text-secondary);
   margin-bottom: 28px;
@@ -808,7 +810,7 @@ a {
   border-radius: var(--radius-pill);
   font-family: var(--font-sans);
   font-size: 0.9375rem;
-  font-weight: 550;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
@@ -833,7 +835,7 @@ a {
   color: var(--text-primary);
   font-family: var(--font-sans);
   font-size: 0.9375rem;
-  font-weight: 550;
+  font-weight: 600;
   cursor: pointer;
   padding: 12px 8px;
   display: inline-flex;
@@ -880,10 +882,7 @@ a {
   margin-bottom: 8px;
 }
 
-.editorial-title {
-  font-family: var(--font-display);
-  font-size: 2.35rem;
-  font-weight: 500;
+-weight: 600;
   color: var(--text-primary);
   margin-bottom: 10px;
   letter-spacing: -0.02em;
@@ -1047,10 +1046,7 @@ a {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.cat-editorial-title {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 500;
+-weight: 600;
   color: #FFFFFF;
   line-height: 1.22;
   letter-spacing: -0.015em;
@@ -1394,10 +1390,8 @@ a {
   font-weight: 400;
 }
 
-.designer-price-val {
-  font-family: var(--font-sans);
-  font-size: 1.0625rem;
-  font-weight: 700;
+-weight: 600;
+  font-variant-numeric: tabular-nums;
   color: #222320;
   letter-spacing: -0.01em;
 }
@@ -1433,7 +1427,7 @@ a {
   border-radius: var(--radius-pill);
   font-family: var(--font-sans);
   font-size: 0.9375rem;
-  font-weight: 550;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 14px rgba(34, 35, 32, 0.15);
@@ -1562,7 +1556,7 @@ a {
   border-radius: var(--radius-pill);
   font-family: var(--font-sans);
   font-size: 0.875rem;
-  font-weight: 550;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.18s ease;
 }
@@ -1620,7 +1614,7 @@ a {
   border-radius: var(--radius-pill);
   font-family: var(--font-sans);
   font-size: 0.9375rem;
-  font-weight: 550;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
@@ -1710,7 +1704,7 @@ a {
   border-radius: var(--radius-pill);
   font-family: var(--font-sans);
   font-size: 0.9375rem;
-  font-weight: 550;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.18s ease;
   box-shadow: 0 4px 14px rgba(184, 92, 58, 0.25);
@@ -1730,7 +1724,7 @@ a {
   border-radius: var(--radius-pill);
   font-family: var(--font-sans);
   font-size: 0.9375rem;
-  font-weight: 550;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.18s ease;
 }
@@ -1887,10 +1881,7 @@ a {
   max-width: 680px;
 }
 
-.catalog-category-title {
-  font-family: var(--font-display);
-  font-size: 2.15rem;
-  font-weight: 500;
+-weight: 600;
   color: var(--text-primary);
   line-height: 1.2;
   margin-bottom: 8px;
@@ -3683,7 +3674,7 @@ a {
   border-radius: var(--radius-pill, 9999px);
   font-family: var(--font-sans, inherit);
   font-size: 0.9375rem;
-  font-weight: 550;
+  font-weight: 600;
   letter-spacing: -0.01em;
   text-decoration: none;
   cursor: pointer;
@@ -5976,4 +5967,30 @@ a {
   background: var(--accent-terracotta, #B85C3A);
   border-color: var(--accent-terracotta, #B85C3A);
   color: #FFFFFF;
+}
+
+/* ==========================================================================
+   GOLOS TEXT — ЕДИНАЯ ТИПОГРАФИЧЕСКАЯ ИЕРАРХИЯ
+   ========================================================================== */
+h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.card-price,
+.pdp-price-current,
+.cart-item-price,
+.cart-item-price-val,
+.summary-total-val,
+.cart-total-sum,
+.designer-price-val,
+.hero-trust-num {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
 }
