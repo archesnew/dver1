@@ -13,9 +13,7 @@
     TELEGRAM_USERNAME: "dveri_1",
     TELEGRAM_CATALOG_URL: "https://t.me/dveri_1",
     MAX_CATALOG_URL: "https://max.ru/join/ta3eyKCyExYWI37TCWrSAkzOkKTQAamITFpQHj9FEi4",
-    TELEGRAM_BOT_TOKEN: "9249325835:AAHeyJjebB5faxHimXTeSOUkcTsfaOARA50",
-    TELEGRAM_CHAT_ID: "-5252088437",
-    LEAD_ENDPOINT: "", // Опциональный внешний webhook; если пустой — используется Telegram Bot API
+    LEAD_ENDPOINT: "https://script.google.com/macros/s/AKfycbzZO-tsliWz2mZWnNA7A5HuzmYHOzBy3s3ny0rSxvIhtz_eT0ieSHhPlu8FxwpqZ9A/exec", // Google Apps Script прокси в Telegram (работает из РФ без VPN)
     YM_COUNTER_ID: null, // Плейсхолдер для номера счётчика Яндекс.Метрики (Спринт 5)
 
     // Города присутствия и магазины
