@@ -344,14 +344,13 @@ a {
   }
 }
 
-/* 2. ПО ЦЕНТРУ: КОМПАКТНОЕ МЕНЮ */
+/* 2. ПО ЦЕНТРУ: КОМПАКТНОЕ МЕНЮ (В ПОТОКЕ FLEX, БЕЗ НАЛОЖЕНИЯ) */
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 34px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  gap: clamp(16px, 2vw, 30px);
+  margin: 0 auto;
+  padding: 0 12px;
 }
 
 .header-nav-link {
@@ -393,7 +392,7 @@ a {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-shrink: 0;
 }
 
@@ -754,7 +753,7 @@ a {
 }
 
 .hero-glass-panel {
-  max-width: 470px;
+  max-width: 520px;
   width: 100%;
   background: rgba(247, 246, 242, 0.80);
   backdrop-filter: blur(24px) saturate(160%);
@@ -799,7 +798,7 @@ a {
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -807,11 +806,12 @@ a {
   background: var(--accent-terracotta);
   border: 1px solid var(--accent-terracotta);
   color: #FFFFFF;
-  padding: 13px 28px;
+  padding: 12px 24px;
   border-radius: var(--radius-pill);
   font-family: var(--font-sans);
   font-size: 0.9375rem;
   font-weight: 600;
+  white-space: nowrap;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
@@ -3668,7 +3668,8 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 13px 24px;
+  padding: 12px 22px;
+  white-space: nowrap;
   background: rgba(255, 255, 255, 0.85);
   color: var(--text-primary, #222320);
   border: 1px solid var(--border-stone, #DCDAD4);
@@ -5994,4 +5995,66 @@ h2, h3 {
 .hero-trust-num {
   font-weight: 600;
   font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   ВЫПАДАЮЩЕЕ ПОДМЕНЮ ВХОДНЫХ ДВЕРЕЙ В БОКОВОЙ ПАНЕЛИ ФИЛЬТРОВ
+   ========================================================================== */
+.category-group-entrance {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-entrance-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.category-entrance-btn {
+  flex: 1;
+  min-width: 0;
+}
+
+.cat-chevron-toggle {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.cat-chevron-toggle:hover {
+  background: rgba(184, 92, 58, 0.08);
+  color: var(--accent-terracotta);
+}
+
+.category-group-entrance.is-open .cat-chevron-toggle {
+  transform: rotate(180deg);
+  color: var(--accent-terracotta);
+}
+
+.category-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 4px 0 6px 10px;
+  padding-left: 10px;
+  border-left: 1.5px solid var(--border-stone, #DDD8CE);
+}
+
+.category-submenu[hidden] {
+  display: none;
+}
+
+.category-submenu-btn {
+  font-size: 0.8125rem;
+  padding: 6px 8px;
 }

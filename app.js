@@ -14,6 +14,7 @@
     filteredProducts: [],
     activeCategory: 'all',
     activeEntranceSubcat: 'all', // 'all' | 'thermo' | 'apartment' | 'fire_tech'
+    entranceMenuExpanded: false,
     activeBrand: 'all',
     activeColor: 'all',
     activeType: 'all',
@@ -304,13 +305,8 @@
       }
     });
 
-    // 1. Категория
-    renderFilterOptionList('categoryFilterList', categoryCounts, state.activeCategory, (val) => {
-      state.activeCategory = (state.activeCategory === val) ? 'all' : val;
-      state.currentPage = 1;
-      applyFiltersAndSort();
-      buildFacetFilters();
-    });
+    // 1. Категория (с выпадающим подменю для Входных дверей)
+    renderCategoryFilterList('categoryFilterList', categoryCounts);
 
     // 2. Фабрика / Производитель
     renderFilterOptionList('brandFilterList', brandCounts, state.activeBrand, (val) => {
@@ -358,6 +354,112 @@
       applyFiltersAndSort();
       buildFacetFilters();
     }, 6);
+  }
+
+  function renderCategoryFilterList(containerId, countMap) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const entries = Object.entries(countMap).sort((a, b) => b[1] - a[1]);
+    const totalCount = Object.values(countMap).reduce((a, b) => a + b, 0);
+
+    const entranceProducts = state.allProducts.filter(p => p.category === 'Входные двери');
+    const entranceSubcats = [
+      { key: 'thermo', label: 'Двери с терморазрывом', count: entranceProducts.filter(p => matchesEntranceSubcat(p, 'thermo')).length },
+      { key: 'apartment', label: 'Двери в квартиру', count: entranceProducts.filter(p => matchesEntranceSubcat(p, 'apartment')).length },
+      { key: 'fire_tech', label: 'Противопожарные и технические', count: entranceProducts.filter(p => matchesEntranceSubcat(p, 'fire_tech')).length }
+    ];
+    const isEntranceOpen = state.activeCategory === 'Входные двери' || state.entranceMenuExpanded;
+
+    let html = `
+      <button type="button" class="filter-row-btn ${state.activeCategory === 'all' ? 'active' : ''}" data-val="all">
+        <span class="filter-label-text">Все варианты</span>
+        <span class="filter-count-num">${totalCount}</span>
+      </button>
+    `;
+
+    entries.forEach(([name, count]) => {
+      const isActive = state.activeCategory === name;
+      if (name === 'Входные двери') {
+        html += `
+          <div class="category-group-entrance ${isEntranceOpen ? 'is-open' : ''}">
+            <div class="category-entrance-row">
+              <button type="button" class="filter-row-btn category-entrance-btn ${isActive && state.activeEntranceSubcat === 'all' ? 'active' : ''}" data-val="Входные двери">
+                <span class="filter-label-text">Входные двери</span>
+                <span class="filter-count-num">${count}</span>
+              </button>
+              <button type="button" class="cat-chevron-toggle" id="btnToggleEntranceMenu" aria-label="Раскрыть категории входных дверей" aria-expanded="${isEntranceOpen}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div class="category-submenu" ${isEntranceOpen ? '' : 'hidden'}>
+              ${entranceSubcats.map(sc => `
+                <button type="button" class="filter-row-btn category-submenu-btn ${isActive && state.activeEntranceSubcat === sc.key ? 'active' : ''}" data-entrance-subcat="${sc.key}">
+                  <span class="filter-label-text">${sc.label}</span>
+                  <span class="filter-count-num">${sc.count}</span>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      } else {
+        html += `
+          <button type="button" class="filter-row-btn ${isActive ? 'active' : ''}" data-val="${escapeHtml(name)}">
+            <span class="filter-label-text">${escapeHtml(name)}</span>
+            <span class="filter-count-num">${count}</span>
+          </button>
+        `;
+      }
+    });
+
+    container.innerHTML = html;
+
+    container.querySelectorAll('.filter-row-btn[data-val]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = btn.dataset.val;
+        if (val === 'Входные двери') {
+          if (state.activeCategory === 'Входные двери' && state.activeEntranceSubcat === 'all') {
+            state.activeCategory = 'all';
+            state.entranceMenuExpanded = false;
+          } else {
+            state.activeCategory = 'Входные двери';
+            state.activeEntranceSubcat = 'all';
+            state.entranceMenuExpanded = true;
+          }
+        } else {
+          state.activeCategory = (state.activeCategory === val) ? 'all' : val;
+          state.activeEntranceSubcat = 'all';
+        }
+        state.currentPage = 1;
+        applyFiltersAndSort();
+        buildFacetFilters();
+      });
+    });
+
+    const toggleBtn = container.querySelector('#btnToggleEntranceMenu');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        state.entranceMenuExpanded = !isEntranceOpen;
+        buildFacetFilters();
+      });
+    }
+
+    container.querySelectorAll('.category-submenu-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const subcat = btn.dataset.entranceSubcat;
+        if (state.activeCategory === 'Входные двери' && state.activeEntranceSubcat === subcat) {
+          state.activeEntranceSubcat = 'all';
+        } else {
+          state.activeCategory = 'Входные двери';
+          state.activeEntranceSubcat = subcat;
+          state.entranceMenuExpanded = true;
+        }
+        state.currentPage = 1;
+        applyFiltersAndSort();
+        buildFacetFilters();
+      });
+    });
   }
 
   function renderFilterOptionList(containerId, countMap, activeValue, onSelect, limit = 0) {
