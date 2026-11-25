@@ -157,6 +157,26 @@
         throw new Error(`Telegram API ${res.status}: ${errText}`);
       }
       return await res.json();
+    },
+
+    // Универсальная отправка заявки (через Google Apps Script / внешний webhook или напрямую в Telegram)
+    async dispatchLead(payload, telegramHtmlText) {
+      const endpoint = (this.LEAD_ENDPOINT || '').trim();
+      if (endpoint) {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            ...payload,
+            telegramText: telegramHtmlText
+          })
+        });
+        if (!res.ok) {
+          throw new Error(`Lead endpoint ${res.status}`);
+        }
+        return await res.json().catch(() => ({ ok: true }));
+      }
+      return await this.sendTelegramMessage(telegramHtmlText);
     }
   };
 

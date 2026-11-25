@@ -819,8 +819,8 @@
         console.warn('Backend /api/orders unavailable (static hosting), using Telegram direct:', apiErr.message);
       }
 
-      // На статическом хостинге (GitHub Pages) отправляем заказ напрямую в Telegram
-      if (!serverSaved && window.DVER_CONFIG && typeof window.DVER_CONFIG.sendTelegramMessage === 'function') {
+      // На статическом хостинге (GitHub Pages) отправляем заказ через LEAD_ENDPOINT (Google Apps Script) или в Telegram
+      if (!serverSaved && window.DVER_CONFIG && typeof window.DVER_CONFIG.dispatchLead === 'function') {
         const escTg = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
         const currentTotals = window.CartStore.calculateTotals(cart);
         const itemsText = cart.map((item, i) => {
@@ -850,9 +850,9 @@
         ].filter(Boolean);
 
         try {
-          await window.DVER_CONFIG.sendTelegramMessage(tgLines.join('\n'));
+          await window.DVER_CONFIG.dispatchLead({ ...orderPayload, orderId }, tgLines.join('\n'));
         } catch (tgErr) {
-          console.warn('Telegram order send failed:', tgErr.message);
+          console.warn('Order dispatch failed:', tgErr.message);
         }
       }
 

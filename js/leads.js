@@ -178,40 +178,31 @@
       const cfg = window.DVER_CONFIG || {};
       const escTg = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-      // Если задан внешний эндпоинт — отправляем туда
-      if (cfg.LEAD_ENDPOINT && cfg.LEAD_ENDPOINT.trim() !== '') {
-        const res = await fetch(cfg.LEAD_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(leadRecord)
-        });
-        if (!res.ok) throw new Error('Сервер вернул статус ' + res.status);
+      const lines = [
+        `🔔 <b>Новая заявка #${escTg(ticketNumber)}</b>`,
+        `📍 <b>Источник:</b> ${escTg(leadRecord.source)}`,
+        `👤 <b>Имя:</b> ${escTg(name)}`,
+        `📞 <b>Телефон:</b> ${escTg(phone)}`,
+        `🏙 <b>Город:</b> ${escTg(leadRecord.city)}`
+      ];
+      if (leadRecord.address) lines.push(`🏠 <b>Адрес:</b> ${escTg(leadRecord.address)}`);
+      if (leadRecord.product) {
+        const pName = leadRecord.product.name || leadRecord.product.model || '';
+        const pId = leadRecord.product.id ? ` (${leadRecord.product.id})` : '';
+        lines.push(`🚪 <b>Модель:</b> ${escTg(pName + pId)}`);
       }
+      if (leadRecord.cart && leadRecord.cart.itemsCount) {
+        lines.push(`🛒 <b>В корзине:</b> ${leadRecord.cart.itemsCount} шт. на ${Number(leadRecord.cart.total || 0).toLocaleString('ru-RU')} ₽`);
+      }
+      if (leadRecord.comment) lines.push(`💬 <b>Комментарий:</b> ${escTg(leadRecord.comment)}`);
 
-      // Отправляем заявку напрямую в Telegram-группу
-      if (typeof cfg.sendTelegramMessage === 'function') {
-        const lines = [
-          `🔔 <b>Новая заявка #${escTg(ticketNumber)}</b>`,
-          `📍 <b>Источник:</b> ${escTg(leadRecord.source)}`,
-          `👤 <b>Имя:</b> ${escTg(name)}`,
-          `📞 <b>Телефон:</b> ${escTg(phone)}`,
-          `🏙 <b>Город:</b> ${escTg(leadRecord.city)}`
-        ];
-        if (leadRecord.address) lines.push(`🏠 <b>Адрес:</b> ${escTg(leadRecord.address)}`);
-        if (leadRecord.product) {
-          const pName = leadRecord.product.name || leadRecord.product.model || '';
-          const pId = leadRecord.product.id ? ` (${leadRecord.product.id})` : '';
-          lines.push(`🚪 <b>Модель:</b> ${escTg(pName + pId)}`);
-        }
-        if (leadRecord.cart && leadRecord.cart.itemsCount) {
-          lines.push(`🛒 <b>В корзине:</b> ${leadRecord.cart.itemsCount} шт. на ${Number(leadRecord.cart.total || 0).toLocaleString('ru-RU')} ₽`);
-        }
-        if (leadRecord.comment) lines.push(`💬 <b>Комментарий:</b> ${escTg(leadRecord.comment)}`);
+      const tgText = lines.join('\n');
 
+      if (typeof cfg.dispatchLead === 'function') {
         try {
-          await cfg.sendTelegramMessage(lines.join('\n'));
+          await cfg.dispatchLead(leadRecord, tgText);
         } catch (tgErr) {
-          console.warn('Telegram direct send failed (fallback saved locally):', tgErr.message);
+          console.warn('Lead dispatch failed (saved locally):', tgErr.message);
         }
       }
 
