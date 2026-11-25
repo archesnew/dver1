@@ -3340,7 +3340,7 @@ a {
   background: var(--bg-graphite);
   color: #B3B0A6;
   border-top: 1px solid #383935;
-  padding: 50px 0 28px;
+  padding: 32px 0 20px;
   margin-top: auto;
   font-size: 0.8125rem;
 }
@@ -3350,8 +3350,8 @@ a {
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.2fr 1.4fr 1fr;
+  gap: 32px;
 }
 
 @media (max-width: 768px) {
@@ -3372,8 +3372,8 @@ a {
 
 .footer-bottom-bar {
   max-width: 1440px;
-  margin: 36px auto 0;
-  padding: 20px 24px 0;
+  margin: 22px auto 0;
+  padding: 14px 24px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: space-between;

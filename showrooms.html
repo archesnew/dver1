@@ -100,8 +100,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&subset=cyrillic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=4.5.0">
-  <script src="cart-store.js?v=4.5.0"></script>
+  <link rel="stylesheet" href="app.css?v=4.6.0">
+  <script src="cart-store.js?v=4.6.0"></script>
 </head>
 <body class="page-showrooms">
 
@@ -506,76 +506,43 @@
     </div>
   </div>
 
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
+  <!-- ПОДВАЛ САЙТА (FOOTER) -->
   <footer class="site-footer" id="siteFooter">
     <div class="footer-container">
-      <div class="footer-brand-col">
-        <a href="index.html" class="footer-logo-link">
-          <img src="logo.png" alt="Двери №1" class="footer-logo-img" width="132" height="34">
-        </a>
-        <p class="footer-brand-desc">
-          Двери эконом и среднего сегмента для ремонта и интерьера по доступным ценам в Казани и Набережных Челнах.
-        </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
-          <a href="https://t.me/dveri_1" target="_blank" rel="noopener noreferrer" style="color: #fff; font-size: 0.8rem; font-weight: 600;">Telegram-каталог →</a>
-          <a href="https://max.ru/join/ta3eyKCyExYWI37TCWrSAkzOkKTQAamITFpQHj9FEi4" target="_blank" rel="noopener noreferrer" style="color: #fff; font-size: 0.8rem; font-weight: 600;">MAX-каталог →</a>
+      <div>
+        <div style="font-size: 1.05rem; font-weight: 600; color: #FFFFFF; letter-spacing: 0.02em; margin-bottom: 6px;">ДВЕРИ №1</div>
+        <div style="color: #8E8C84; margin-bottom: 10px;">Казань и Набережные Челны</div>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="https://t.me/dveri_1" target="_blank" rel="noopener noreferrer" style="color: #E08A68; text-decoration: none; font-weight: 500;">Telegram</a>
+          <a href="https://max.ru/join/ta3eyKCyExYWI37TCWrSAkzOkKTQAamITFpQHj9FEi4" target="_blank" rel="noopener noreferrer" style="color: #E08A68; text-decoration: none; font-weight: 500;">MAX</a>
         </div>
       </div>
 
-      <div class="footer-nav-col">
-        <div class="footer-col-title">Каталог</div>
-        <ul class="footer-links-list">
-          <li><a href="index.html#catalogContent" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Межкомнатные двери');">Межкомнатные двери</a></li>
-          <li><a href="index.html#catalogContent" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Входные двери');">Входные двери</a></li>
-          <li><a href="index.html#catalogContent" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Скрытые двери');">Скрытые двери</a></li>
-          <li><a href="index.html#catalogContent" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Двери со стеклом');">Двери со стеклом</a></li>
-        </ul>
+      <div>
+        <div style="color: #FFFFFF; font-weight: 600; margin-bottom: 6px;">Адреса</div>
+        <div style="margin-bottom: 6px;">Казань: ул. Рихарда Зорге, 100 (09:00–19:00)</div>
+        <div>Челны: ТЦ «Кама», Московский пр-т, 126Б, 2 эт. (09:00–18:00)</div>
       </div>
 
-      <div class="footer-nav-col">
-        <div class="footer-col-title">Наши адреса</div>
-        <div class="footer-showroom-item">
-          <div class="footer-city-label">Казань — «Двери Голливуда»:</div>
-          <div class="footer-address-val">ул. Рихарда Зорге, 100</div>
-          <div class="footer-time-val">Ежедневно 09:00–19:00</div>
+      <div>
+        <div style="color: #FFFFFF; font-weight: 600; margin-bottom: 6px;">Контакты</div>
+        <div style="margin-bottom: 4px;">
+          <a href="tel:+79656271010" style="color: #FFFFFF; font-size: 1.05rem; font-weight: 600; text-decoration: none; font-variant-numeric: tabular-nums;">+7 (965) 627-10-10</a>
         </div>
-        <div class="footer-showroom-item" style="margin-top: 14px;">
-          <div class="footer-city-label">Набережные Челны — «Двери №1»:</div>
-          <div class="footer-address-val">ТЦ «Кама», пр-т Московский, 126Б, 2 этаж</div>
-          <div class="footer-time-val">Ежедневно 09:00–18:00</div>
-        </div>
-      </div>
-
-      <div class="footer-contact-col">
-        <div class="footer-col-title">Заказ онлайн</div>
-        <a href="tel:+79656271010" class="footer-phone-link">+7 (965) 627-10-10</a>
-        <div class="footer-phone-sub">Telegram, MAX, WhatsApp — заказ онлайн</div>
-        <button type="button" class="btn-footer-consult" onclick="if(window.DverApp && window.DverApp.openLeadModal) window.DverApp.openLeadModal('Консультация из подвала');">
-          Записаться на замер
-        </button>
+        <div style="color: #8E8C84;">Telegram • MAX • WhatsApp</div>
       </div>
     </div>
 
     <div class="footer-bottom-bar">
-      <div class="footer-bottom-container">
-        <div class="footer-copyright">
-          © 2026 «Двери №1». Все права защищены. Архитектурные и интерьерные решения.
-        </div>
-        <div class="footer-bottom-links">
-          <span>Политика конфиденциальности</span>
-          <span>Договор оферты</span>
-        </div>
-      </div>
+      <div>© 2026 Двери №1</div>
     </div>
   </footer>
 
   <!-- СКРИПТЫ СТРАНИЦЫ ШОУРУМОВ -->
-  <script src="js/config.js?v=4.5.0"></script>
-  <script src="js/city.js?v=4.5.0"></script>
-  <script src="js/analytics.js?v=4.5.0"></script>
-  <script src="js/leads.js?v=4.5.0"></script>
-  <script src="showrooms.js?v=4.5.0"></script>
+  <script src="js/config.js?v=4.6.0"></script>
+  <script src="js/city.js?v=4.6.0"></script>
+  <script src="js/analytics.js?v=4.6.0"></script>
+  <script src="js/leads.js?v=4.6.0"></script>
+  <script src="showrooms.js?v=4.6.0"></script>
 </body>
 </html>
