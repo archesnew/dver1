@@ -470,7 +470,7 @@
 
     if (btnNext) {
       if (stepNumber === 1) {
-        btnNext.innerHTML = '<span>Получить SMS-код</span> <span>→</span>';
+        btnNext.innerHTML = '<span>Далее: детали заказа</span> <span>→</span>';
       } else if (stepNumber === 2) {
         btnNext.innerHTML = '<span>Подтвердить телефон</span> <span>→</span>';
       } else if (stepNumber === 3) {
@@ -482,8 +482,9 @@
   }
 
   function handleStepPrev() {
-    if (checkoutState.step > 1) {
-      // Если возвращаемся со 2 шага, останавливаем таймер
+    if (checkoutState.step === 3) {
+      setCheckoutStep(1);
+    } else if (checkoutState.step > 1) {
       if (checkoutState.step === 2) clearInterval(checkoutState.timerInterval);
       setCheckoutStep(checkoutState.step - 1);
     }
@@ -516,13 +517,8 @@
       checkoutState.client.name = name;
       checkoutState.client.phone = phone;
 
-      // Если номер уже был подтверждён в текущей сессии с валидным токеном
-      if (checkoutState.verifiedToken && checkoutState.verifiedPhone === phone) {
-        setCheckoutStep(3);
-        return;
-      }
-
-      await requestSmsCode(phone);
+      // Переходим сразу к деталям доставки/монтажа без SMS-подтверждения
+      setCheckoutStep(3);
       return;
     }
 
@@ -823,30 +819,37 @@
       if (!serverSaved && window.DVER_CONFIG && typeof window.DVER_CONFIG.dispatchLead === 'function') {
         const escTg = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
         const currentTotals = window.CartStore.calculateTotals(cart);
+        const installTotals = calculateInstallationTotals(cart);
+        const grandTotal = (currentTotals.knownItemsTotal || 0) + (checkoutState.delivery.installation ? (installTotals.cost || 0) : 0);
+
         const itemsText = cart.map((item, i) => {
-          const priceStr = item.price ? `${Number(item.price).toLocaleString('ru-RU')} ₽` : 'по запросу';
-          const parts = [`${i + 1}. <b>${escTg(item.name || item.model || 'Дверь')}</b> (${item.qty || 1} шт. × ${priceStr})`];
+          const qty = item.quantity || item.qty || 1;
+          const unitPrice = item.unitPrice || item.price;
+          const priceStr = (item.isPriceKnown !== false && typeof unitPrice === 'number')
+            ? `${Number(unitPrice).toLocaleString('ru-RU')} ₽`
+            : 'по запросу';
+          const parts = [`${i + 1}. <b>${escTg(item.title || item.name || item.model || 'Дверь')}</b> (${qty} шт. × ${priceStr})`];
           if (item.size) parts.push(`размер: ${escTg(item.size)}`);
-          if (item.color) parts.push(`цвет: ${escTg(item.color)}`);
+          if (item.variant || item.color) parts.push(`отделка: ${escTg(item.variant || item.color)}`);
           if (item.room) parts.push(`помещение: ${escTg(item.room)}`);
           if (item.opening) parts.push(`открывание: ${escTg(item.opening)}`);
           return parts.join(', ');
         }).join('\n');
 
+        const deliveryLabel = orderPayload.delivery.type === 'delivery' ? 'Доставка на объект' : 'Самовывоз';
         const tgLines = [
           `🛒 <b>Новый заказ из корзины #${escTg(orderId)}</b>`,
-          `👤 <b>Клиент:</b> ${escTg(orderPayload.customer.name)}`,
-          `📞 <b>Телефон:</b> ${escTg(orderPayload.customer.phone)}`,
-          `🏙 <b>Город:</b> ${escTg(orderPayload.customer.city)}`,
-          orderPayload.customer.address ? `🏠 <b>Адрес:</b> ${escTg(orderPayload.customer.address)}` : '',
-          `🚚 <b>Доставка:</b> ${escTg(orderPayload.delivery.type)}`,
-          `🛠 <b>Монтаж под ключ:</b> ${orderPayload.delivery.installation ? 'Да (+' + Number(orderPayload.delivery.installationCost || 0).toLocaleString('ru-RU') + ' ₽)' : 'Нет'}`,
-          orderPayload.delivery.comment ? `💬 <b>Комментарий:</b> ${escTg(orderPayload.delivery.comment)}` : '',
+          `👤 <b>Клиент:</b> ${escTg(orderPayload.client.name)}`,
+          `📞 <b>Телефон:</b> ${escTg(orderPayload.client.phone)}`,
+          `🏙 <b>Город:</b> ${escTg(orderPayload.client.city)}`,
+          `🚚 <b>Получение:</b> ${escTg(deliveryLabel)}`,
+          `🛠 <b>Монтаж под ключ:</b> ${orderPayload.delivery.installation ? 'Да (+' + Number(installTotals.cost || 0).toLocaleString('ru-RU') + ' ₽)' : 'Нет'}`,
+          orderPayload.delivery.comment ? `💬 <b>Комментарий / адрес:</b> ${escTg(orderPayload.delivery.comment)}` : '',
           '',
           `<b>Состав заказа:</b>`,
           itemsText,
           '',
-          `💰 <b>Предварительный итог:</b> ${Number(currentTotals.total || 0).toLocaleString('ru-RU')} ₽`
+          `💰 <b>Предварительный итог:</b> ${grandTotal > 0 ? Number(grandTotal).toLocaleString('ru-RU') + ' ₽' : 'По согласованию'}`
         ].filter(Boolean);
 
         try {

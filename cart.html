@@ -28,8 +28,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&subset=cyrillic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=4.3.0">
-  <link rel="stylesheet" href="cart.css?v=4.3.0">
+  <link rel="stylesheet" href="app.css?v=4.4.0">
+  <link rel="stylesheet" href="cart.css?v=4.4.0">
   <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body class="page-cart">
@@ -297,18 +297,13 @@
           <span>Контакты</span>
         </div>
         <div class="checkout-step-line"></div>
-        <div class="checkout-step-tab" data-step="2">
-          <span class="checkout-step-num">2</span>
-          <span>SMS-код</span>
-        </div>
-        <div class="checkout-step-line"></div>
         <div class="checkout-step-tab" data-step="3">
-          <span class="checkout-step-num">3</span>
+          <span class="checkout-step-num">2</span>
           <span>Детали</span>
         </div>
         <div class="checkout-step-line"></div>
         <div class="checkout-step-tab" data-step="4">
-          <span class="checkout-step-num">4</span>
+          <span class="checkout-step-num">3</span>
           <span>Финал</span>
         </div>
       </div>
@@ -325,10 +320,7 @@
 
           <div class="form-group-field">
             <label class="form-field-label" for="clientPhone">Номер телефона РФ *</label>
-            <input type="tel" class="form-field-input" id="clientPhone" placeholder="+7 (999) 000-00-00" autocomplete="tel" required>
-            <small style="color: var(--text-muted); font-size: 0.75rem; margin-top: 4px; display: block;">
-              На этот номер будет отправлен 4-значный SMS-код для подтверждения заявки.
-            </small>
+            <input type="tel" class="form-field-input" id="clientPhone" placeholder="+7 (965) 000-00-00" autocomplete="tel" required>
           </div>
 
           <div class="form-group-field">
@@ -336,11 +328,11 @@
             <div class="city-select-grid">
               <button type="button" class="city-select-btn active" data-city="Казань">
                 <div class="city-select-title">Казань</div>
-                <div class="city-select-sub">Флагманский салон на пр. Победы</div>
+                <div class="city-select-sub">ул. Рихарда Зорге, 100</div>
               </button>
               <button type="button" class="city-select-btn" data-city="Набережные Челны">
                 <div class="city-select-title">Набережные Челны</div>
-                <div class="city-select-sub">Шоурум интерьерных дверей</div>
+                <div class="city-select-sub">ТЦ «Кама», пр-т Московский, 126Б</div>
               </button>
             </div>
           </div>
@@ -490,11 +482,11 @@
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- Скрипты -->
-  <script src="js/config.js?v=4.3.0"></script>
-  <script src="js/city.js?v=4.3.0"></script>
-  <script src="js/analytics.js?v=4.3.0"></script>
-  <script src="js/leads.js?v=4.3.0"></script>
-  <script src="cart-store.js?v=4.3.0"></script>
-  <script src="cart.js?v=4.3.0"></script>
+  <script src="js/config.js?v=4.4.0"></script>
+  <script src="js/city.js?v=4.4.0"></script>
+  <script src="js/analytics.js?v=4.4.0"></script>
+  <script src="js/leads.js?v=4.4.0"></script>
+  <script src="cart-store.js?v=4.4.0"></script>
+  <script src="cart.js?v=4.4.0"></script>
 </body>
 </html>
