@@ -155,6 +155,7 @@
       city: payload.city || context.city,
       address: payload.address?.trim() || '',
       comment: payload.comment?.trim() || '',
+      partnerRole: payload.partnerRole || '',
       source: context.source,
       pageUrl: context.pageUrl,
       product: context.product,
@@ -181,11 +182,12 @@
       const lines = [
         `🔔 <b>Новая заявка #${escTg(ticketNumber)}</b>`,
         `📍 <b>Источник:</b> ${escTg(leadRecord.source)}`,
+        leadRecord.partnerRole ? `🤝 <b>Формат сотрудничества:</b> ${escTg(leadRecord.partnerRole)}` : '',
         `👤 <b>Имя:</b> ${escTg(name)}`,
         `📞 <b>Телефон:</b> ${escTg(phone)}`,
         `🏙 <b>Город:</b> ${escTg(leadRecord.city)}`
-      ];
-      if (leadRecord.address) lines.push(`🏠 <b>Адрес:</b> ${escTg(leadRecord.address)}`);
+      ].filter(Boolean);
+      if (leadRecord.address) lines.push(`${leadRecord.partnerRole ? '🏢 <b>Студия / компания:</b>' : '🏠 <b>Адрес:</b>'} ${escTg(leadRecord.address)}`);
       if (leadRecord.product) {
         const pName = leadRecord.product.name || leadRecord.product.model || '';
         const pId = leadRecord.product.id ? ` (${leadRecord.product.id})` : '';
@@ -371,20 +373,72 @@
         summaryBox.style.display = 'block';
         summaryBox.innerHTML = `
           <div class="lead-default-summary">
-            <strong>Бесплатный выезд инженера-замерщика</strong>
-            <p>Точный лазерный замер дверных проёмов, демонстрация каталогов покрытий и веера эмалей на объекте.</p>
+            <strong>Выезд мастера-замерщика</strong>
+            <p>Точный замер дверных проёмов, демонстрация каталогов покрытий и образцов на объекте.</p>
           </div>
         `;
       }
     }
 
     const titleEl = document.getElementById('leadModalTitle');
-    if (titleEl) {
-      if (isDesigner) {
-        titleEl.textContent = 'Партнёрские условия для дизайнеров';
-      } else {
-        titleEl.textContent = product ? 'Заявка на расчет и замер' : 'Вызов инженера-замерщика';
+    const subtitleEl = modal.querySelector('.lead-form-subtitle');
+    const cityLabel = modal.querySelector('label[for="leadCitySelect"]');
+    const addrLabel = modal.querySelector('label[for="leadAddressInput"]');
+    const addrInput = document.getElementById('leadAddressInput');
+    const commentLabel = modal.querySelector('label[for="leadCommentInput"]');
+    const commentInput = document.getElementById('leadCommentInput');
+    const submitBtn = modal.querySelector('.btn-lead-submit');
+
+    // Добавляем блок выбора формата сотрудничества (если ещё не добавлен)
+    let partnerGroup = document.getElementById('leadPartnerRoleGroup');
+    if (!partnerGroup) {
+      const formEl = document.getElementById('leadOrderForm');
+      const cityGroup = document.getElementById('leadCitySelect')?.closest('.form-group');
+      if (formEl && cityGroup) {
+        partnerGroup = document.createElement('div');
+        partnerGroup.id = 'leadPartnerRoleGroup';
+        partnerGroup.className = 'form-group';
+        partnerGroup.innerHTML = `
+          <label class="form-label">Формат сотрудничества *</label>
+          <div class="partner-role-pills" id="partnerRolePills">
+            <button type="button" class="partner-role-pill active" data-role="Дизайнер / Студия">Дизайнер / Студия</button>
+            <button type="button" class="partner-role-pill" data-role="Прораб / Бригада">Прораб / Бригада</button>
+            <button type="button" class="partner-role-pill" data-role="Комплектатор">Комплектатор</button>
+            <button type="button" class="partner-role-pill" data-role="Застройщик / Опт">Застройщик / Опт</button>
+          </div>
+        `;
+        formEl.insertBefore(partnerGroup, cityGroup);
+        partnerGroup.querySelectorAll('.partner-role-pill').forEach(pill => {
+          pill.addEventListener('click', () => {
+            partnerGroup.querySelectorAll('.partner-role-pill').forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+          });
+        });
       }
+    }
+
+    if (partnerGroup) {
+      partnerGroup.style.display = isDesigner ? 'block' : 'none';
+    }
+
+    if (isDesigner) {
+      if (titleEl) titleEl.textContent = 'Партнёрские условия';
+      if (subtitleEl) subtitleEl.textContent = 'Специальные цены, кэшбэк на объём и расчёт смет по проектам в Казани и Челнах';
+      if (cityLabel) cityLabel.textContent = 'Ваш город';
+      if (addrLabel) addrLabel.textContent = 'Студия / компания или ссылка (по желанию)';
+      if (addrInput) addrInput.placeholder = 'Например: Студия «Интерьер» или Telegram';
+      if (commentLabel) commentLabel.textContent = 'Планируемый объём или задача';
+      if (commentInput) commentInput.placeholder = 'Например: 2–3 объекта в месяц, нужен прайс и образцы покрытий';
+      if (submitBtn) submitBtn.textContent = 'Получить партнёрские условия';
+    } else {
+      if (titleEl) titleEl.textContent = product ? 'Заявка на расчёт и замер' : 'Записаться на замер';
+      if (subtitleEl) subtitleEl.textContent = 'Замер дверных проёмов с образцами покрытий и каталогами';
+      if (cityLabel) cityLabel.textContent = 'Город замера / доставки';
+      if (addrLabel) addrLabel.textContent = 'Адрес объекта (улица, дом, кв.)';
+      if (addrInput) addrInput.placeholder = 'ул. Рихарда Зорге, д. 100';
+      if (commentLabel) commentLabel.textContent = 'Комментарий к заказу или число проёмов';
+      if (commentInput) commentInput.placeholder = 'Например: 4 межкомнатные двери, замер в субботу';
+      if (submitBtn) submitBtn.textContent = 'Отправить заявку на замер';
     }
 
     // Очистка состояния валидации
@@ -489,7 +543,9 @@
         const citySelect = document.getElementById('leadCitySelect');
         const addressInput = document.getElementById('leadAddressInput');
         const commentInput = document.getElementById('leadCommentInput');
-        const submitBtn = document.getElementById('btnSubmitLeadForm');
+        const submitBtn = document.getElementById('btnSubmitLeadForm') || form.querySelector('.btn-lead-submit');
+        const activeRolePill = document.querySelector('#partnerRolePills .partner-role-pill.active');
+        const isDesignerModal = modal.dataset.leadType === 'designer';
 
         const payload = {
           name: nameInput?.value,
@@ -497,6 +553,7 @@
           city: citySelect?.value || 'Казань',
           address: addressInput?.value,
           comment: commentInput?.value,
+          partnerRole: isDesignerModal ? (activeRolePill?.dataset.role || 'Дизайнер / Студия') : '',
           source: modal.dataset.leadSource || 'Модалка замера',
           type: modal.dataset.leadType || 'standard',
           product: currentBoundProduct
