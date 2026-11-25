@@ -792,25 +792,69 @@
         items: cart
       };
 
-      const res = await fetch('/api/orders', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(orderPayload)
-      });
-      const data = await res.json();
+      let orderId = 'D1-' + Date.now().toString().slice(-6);
+      let serverSaved = false;
 
-      if (!res.ok) {
-        alert(data.error || 'Ошибка при сохранении заявки на сервере. Пожалуйста, повторите.');
-        if (btnNext) {
-          btnNext.disabled = false;
-          btnNext.innerHTML = '<span>Отправить заявку</span> <span>✓</span>';
+      try {
+        const res = await fetch('/api/orders', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(orderPayload)
+        });
+        if (res.ok) {
+          const data = await res.json().catch(() => ({}));
+          orderId = data.orderId || (data.order && data.order.id) || orderId;
+          serverSaved = true;
+        } else if (res.status !== 404 && res.status !== 405) {
+          const data = await res.json().catch(() => ({}));
+          alert(data.error || 'Ошибка при сохранении заявки на сервере. Пожалуйста, повторите.');
+          if (btnNext) {
+            btnNext.disabled = false;
+            btnNext.innerHTML = '<span>Отправить заявку</span> <span>✓</span>';
+          }
+          checkoutState.isSubmitting = false;
+          return;
         }
-        checkoutState.isSubmitting = false;
-        return;
+      } catch (apiErr) {
+        console.warn('Backend /api/orders unavailable (static hosting), using Telegram direct:', apiErr.message);
       }
 
-      // УСПЕХ!
-      const orderId = data.orderId || (data.order && data.order.id) || 'D1-2026';
+      // На статическом хостинге (GitHub Pages) отправляем заказ напрямую в Telegram
+      if (!serverSaved && window.DVER_CONFIG && typeof window.DVER_CONFIG.sendTelegramMessage === 'function') {
+        const escTg = (s) => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        const currentTotals = window.CartStore.calculateTotals(cart);
+        const itemsText = cart.map((item, i) => {
+          const priceStr = item.price ? `${Number(item.price).toLocaleString('ru-RU')} ₽` : 'по запросу';
+          const parts = [`${i + 1}. <b>${escTg(item.name || item.model || 'Дверь')}</b> (${item.qty || 1} шт. × ${priceStr})`];
+          if (item.size) parts.push(`размер: ${escTg(item.size)}`);
+          if (item.color) parts.push(`цвет: ${escTg(item.color)}`);
+          if (item.room) parts.push(`помещение: ${escTg(item.room)}`);
+          if (item.opening) parts.push(`открывание: ${escTg(item.opening)}`);
+          return parts.join(', ');
+        }).join('\n');
+
+        const tgLines = [
+          `🛒 <b>Новый заказ из корзины #${escTg(orderId)}</b>`,
+          `👤 <b>Клиент:</b> ${escTg(orderPayload.customer.name)}`,
+          `📞 <b>Телефон:</b> ${escTg(orderPayload.customer.phone)}`,
+          `🏙 <b>Город:</b> ${escTg(orderPayload.customer.city)}`,
+          orderPayload.customer.address ? `🏠 <b>Адрес:</b> ${escTg(orderPayload.customer.address)}` : '',
+          `🚚 <b>Доставка:</b> ${escTg(orderPayload.delivery.type)}`,
+          `🛠 <b>Монтаж под ключ:</b> ${orderPayload.delivery.installation ? 'Да (+' + Number(orderPayload.delivery.installationCost || 0).toLocaleString('ru-RU') + ' ₽)' : 'Нет'}`,
+          orderPayload.delivery.comment ? `💬 <b>Комментарий:</b> ${escTg(orderPayload.delivery.comment)}` : '',
+          '',
+          `<b>Состав заказа:</b>`,
+          itemsText,
+          '',
+          `💰 <b>Предварительный итог:</b> ${Number(currentTotals.total || 0).toLocaleString('ru-RU')} ₽`
+        ].filter(Boolean);
+
+        try {
+          await window.DVER_CONFIG.sendTelegramMessage(tgLines.join('\n'));
+        } catch (tgErr) {
+          console.warn('Telegram order send failed:', tgErr.message);
+        }
+      }
 
       if (typeof window.trackGoal === 'function') {
         const currentCart = window.CartStore.getCart();

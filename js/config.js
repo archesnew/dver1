@@ -13,7 +13,9 @@
     TELEGRAM_USERNAME: "dveri_1",
     TELEGRAM_CATALOG_URL: "https://t.me/dveri_1",
     MAX_CATALOG_URL: "https://max.ru/join/ta3eyKCyExYWI37TCWrSAkzOkKTQAamITFpQHj9FEi4",
-    LEAD_ENDPOINT: "", // URL webhook/бота; если пустой — срабатывает graceful fallback с WhatsApp/Telegram
+    TELEGRAM_BOT_TOKEN: "9249325835:AAHeyJjebB5faxHimXTeSOUkcTsfaOARA50",
+    TELEGRAM_CHAT_ID: "-5252088437",
+    LEAD_ENDPOINT: "", // Опциональный внешний webhook; если пустой — используется Telegram Bot API
     YM_COUNTER_ID: null, // Плейсхолдер для номера счётчика Яндекс.Метрики (Спринт 5)
 
     // Города присутствия и магазины
@@ -132,6 +134,29 @@
         ? `от ${Number(product.price).toLocaleString('ru-RU')} ₽`
         : 'цена по запросу';
       return `Здравствуйте! Интересует дверь ${name} (${id}, ${priceStr}). Подскажите по наличию и срокам.`;
+    },
+
+    // Отправка заявки напрямую в Telegram-группу менеджеров (работает и на GitHub Pages)
+    async sendTelegramMessage(htmlText) {
+      if (!this.TELEGRAM_BOT_TOKEN || !this.TELEGRAM_CHAT_ID) {
+        return { ok: false, skipped: true };
+      }
+      const url = `https://api.telegram.org/bot${this.TELEGRAM_BOT_TOKEN}/sendMessage`;
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: this.TELEGRAM_CHAT_ID,
+          text: htmlText,
+          parse_mode: 'HTML',
+          disable_web_page_preview: true
+        })
+      });
+      if (!res.ok) {
+        const errText = await res.text().catch(() => '');
+        throw new Error(`Telegram API ${res.status}: ${errText}`);
+      }
+      return await res.json();
     }
   };
 
