@@ -938,26 +938,13 @@
       });
     });
 
-    // Подключение клика и IntersectionObserver для плавной автоматической подгрузки
+    // Подключение клика по кнопке «Показать ещё» (без автоподгрузки, чтобы можно было долистать до низа страницы)
     const btnLoadMore = document.getElementById('btnLoadMore');
     if (btnLoadMore) {
       btnLoadMore.addEventListener('click', () => {
         state.currentPage++;
         renderGrid();
       });
-
-      if (window.IntersectionObserver) {
-        if (state._paginationObserver) {
-          state._paginationObserver.disconnect();
-        }
-        state._paginationObserver = new IntersectionObserver((entries) => {
-          if (entries[0] && entries[0].isIntersecting) {
-            state.currentPage++;
-            renderGrid();
-          }
-        }, { rootMargin: '280px' });
-        state._paginationObserver.observe(btnLoadMore);
-      }
     }
   }
 

@@ -104,7 +104,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&subset=cyrillic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=4.7.0">
+  <link rel="stylesheet" href="app.css?v=4.8.0">
   <style id="critical-designer-fallback">
     .designer-showcase-wrapper { position: relative; width: 100%; }
     .designer-showcase-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; padding: 4px 2px 14px; }
@@ -130,7 +130,7 @@
     .skeleton-price { width: 40%; height: 20px; }
     @keyframes skeleton-pulse { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
   </style>
-  <script src="cart-store.js?v=4.7.0"></script>
+  <script src="cart-store.js?v=4.8.0"></script>
 </head>
 <body>
 
@@ -892,37 +892,6 @@
     </div>
   </section>
 
-  <!-- РАЗДЕЛ: РЕАЛИЗОВАННЫЕ ОБЪЕКТЫ (КЕЙСЫ) (SPRINT 8 — ЗАДАЧА 2) -->
-  <section class="cases-showcase-section" id="casesSection">
-    <div class="editorial-container">
-      <div class="editorial-header-row">
-        <div class="editorial-header">
-          <div class="editorial-kicker">Портфолио установок</div>
-          <h2 class="editorial-title">Реализованные объекты</h2>
-          <p class="editorial-subtitle">Фотографии и параметры завершённых монтажей в жилых комплексах и коттеджах Татарстана</p>
-        </div>
-        <div class="editorial-nav" aria-label="Навигация по объектам">
-          <button class="editorial-nav-btn prev" id="casesPrevBtn" aria-label="Предыдущий объект">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button class="editorial-nav-btn next" id="casesNextBtn" aria-label="Следующий объект">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="cases-carousel-wrapper">
-        <div class="cases-carousel-track" id="casesCarouselTrack">
-          <!-- Генерируется скриптом app.js из data/cases.json -->
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- МИНИ-ГИД: НА КАКОМ ЭТАПЕ РЕМОНТА ВЫЗЫВАТЬ ЗАМЕРЩИКА (SPRINT 4 — TASK 4) -->
   <section class="renovation-steps-section" aria-label="Когда вызывать замерщика">
     <div class="editorial-container">
@@ -1178,7 +1147,7 @@
   <footer class="site-footer" id="siteFooter">
     <div class="footer-container">
       <div>
-        <div style="font-size: 1.05rem; font-weight: 600; color: #FFFFFF; letter-spacing: 0.02em; margin-bottom: 6px;">ДВЕРИ №1</div>
+        <img src="logo-white.png" alt="Двери №1" width="142" height="32" style="display: block; height: 32px; width: auto; margin-bottom: 8px;">
         <div style="color: #8E8C84; margin-bottom: 10px;">Казань и Набережные Челны</div>
         <div style="display: flex; gap: 14px; flex-wrap: wrap;">
           <a href="https://t.me/dveri_1" target="_blank" rel="noopener noreferrer" style="color: #E08A68; text-decoration: none; font-weight: 500;">Telegram</a>
@@ -1243,12 +1212,12 @@
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- СКРИПТЫ: ДАННЫЕ И ЛОГИКА -->
-  <script src="js/config.js?v=4.7.0"></script>
-  <script src="js/city.js?v=4.7.0"></script>
-  <script src="js/analytics.js?v=4.7.0"></script>
-  <script src="js/leads.js?v=4.7.0"></script>
-  <script src="js/quiz.js?v=4.7.0"></script>
-  <script src="app.js?v=4.7.0"></script>
+  <script src="js/config.js?v=4.8.0"></script>
+  <script src="js/city.js?v=4.8.0"></script>
+  <script src="js/analytics.js?v=4.8.0"></script>
+  <script src="js/leads.js?v=4.8.0"></script>
+  <script src="js/quiz.js?v=4.8.0"></script>
+  <script src="app.js?v=4.8.0"></script>
 
 </body>
 </html>
