@@ -521,8 +521,8 @@
     if (document.getElementById('floatingContactWidget')) return;
 
     const cfg = window.DVER_CONFIG || {
-      getWhatsAppUrl: () => 'https://wa.me/78432050001',
-      getTelegramUrl: () => 'https://t.me/dver1_manager'
+      getWhatsAppUrl: () => 'https://wa.me/79656271010',
+      getTelegramUrl: () => 'https://t.me/dveri_1'
     };
 
     const widgetHtml = `
