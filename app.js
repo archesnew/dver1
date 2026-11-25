@@ -369,7 +369,7 @@
       { key: 'apartment', label: 'Двери в квартиру', count: entranceProducts.filter(p => matchesEntranceSubcat(p, 'apartment')).length },
       { key: 'fire_tech', label: 'Противопожарные и технические', count: entranceProducts.filter(p => matchesEntranceSubcat(p, 'fire_tech')).length }
     ];
-    const isEntranceOpen = state.activeCategory === 'Входные двери' || state.entranceMenuExpanded;
+    const isEntranceOpen = state.activeCategory === 'Входные двери';
 
     let html = `
       <button type="button" class="filter-row-btn ${state.activeCategory === 'all' ? 'active' : ''}" data-val="all">
@@ -383,15 +383,13 @@
       if (name === 'Входные двери') {
         html += `
           <div class="category-group-entrance ${isEntranceOpen ? 'is-open' : ''}">
-            <div class="category-entrance-row">
-              <button type="button" class="filter-row-btn category-entrance-btn ${isActive && state.activeEntranceSubcat === 'all' ? 'active' : ''}" data-val="Входные двери">
-                <span class="filter-label-text">Входные двери</span>
-                <span class="filter-count-num">${count}</span>
-              </button>
-              <button type="button" class="cat-chevron-toggle" id="btnToggleEntranceMenu" aria-label="Раскрыть категории входных дверей" aria-expanded="${isEntranceOpen}">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </button>
-            </div>
+            <button type="button" class="filter-row-btn category-entrance-btn ${isActive && state.activeEntranceSubcat === 'all' ? 'active' : ''}" data-val="Входные двери" aria-expanded="${isEntranceOpen}">
+              <span class="filter-label-text category-entrance-label">
+                <span>Входные двери</span>
+                <svg class="cat-chevron-inline" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+              <span class="filter-count-num">${count}</span>
+            </button>
             <div class="category-submenu" ${isEntranceOpen ? '' : 'hidden'}>
               ${entranceSubcats.map(sc => `
                 <button type="button" class="filter-row-btn category-submenu-btn ${isActive && state.activeEntranceSubcat === sc.key ? 'active' : ''}" data-entrance-subcat="${sc.key}">
@@ -420,11 +418,9 @@
         if (val === 'Входные двери') {
           if (state.activeCategory === 'Входные двери' && state.activeEntranceSubcat === 'all') {
             state.activeCategory = 'all';
-            state.entranceMenuExpanded = false;
           } else {
             state.activeCategory = 'Входные двери';
             state.activeEntranceSubcat = 'all';
-            state.entranceMenuExpanded = true;
           }
         } else {
           state.activeCategory = (state.activeCategory === val) ? 'all' : val;
@@ -436,15 +432,6 @@
       });
     });
 
-    const toggleBtn = container.querySelector('#btnToggleEntranceMenu');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        state.entranceMenuExpanded = !isEntranceOpen;
-        buildFacetFilters();
-      });
-    }
-
     container.querySelectorAll('.category-submenu-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const subcat = btn.dataset.entranceSubcat;
@@ -453,7 +440,6 @@
         } else {
           state.activeCategory = 'Входные двери';
           state.activeEntranceSubcat = subcat;
-          state.entranceMenuExpanded = true;
         }
         state.currentPage = 1;
         applyFiltersAndSort();
