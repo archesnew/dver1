@@ -13,6 +13,7 @@
     allProducts: [],
     filteredProducts: [],
     activeCategory: 'all',
+    activeEntranceSubcat: 'all', // 'all' | 'thermo' | 'apartment' | 'fire_tech'
     activeBrand: 'all',
     activeColor: 'all',
     activeType: 'all',
@@ -506,10 +507,37 @@
     });
   }
 
+  function matchesEntranceSubcat(p, subcat) {
+    if (!subcat || subcat === 'all') return true;
+    const text = `${p.name || ''} ${p.model || ''} ${p.description || ''} ${p.series || ''} ${p.collection || ''}`.toLowerCase();
+    const isThermo = /термо/.test(text);
+    const isFireTech = /противопожар|дпм|eis|техническ|стройгост|металл\/металл|мет\/мет|мини/.test(text);
+    if (subcat === 'thermo') return isThermo;
+    if (subcat === 'fire_tech') return isFireTech;
+    if (subcat === 'apartment') return !isThermo && !isFireTech;
+    return true;
+  }
+
+  function updateEntranceSubcatsBar() {
+    const entranceBar = document.getElementById('entranceSubcatsBar');
+    if (!entranceBar) return;
+    if (state.activeCategory === 'Входные двери') {
+      entranceBar.style.display = 'flex';
+      entranceBar.querySelectorAll('.entrance-subcat-pill').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.entranceType === state.activeEntranceSubcat);
+      });
+    } else {
+      entranceBar.style.display = 'none';
+    }
+  }
+
   // --------------------------------------------------------------------------
   // ФИЛЬТРАЦИЯ И СОРТИРОВКА (CORE LOGIC)
   // --------------------------------------------------------------------------
   function applyFiltersAndSort() {
+    if (state.activeCategory !== 'Входные двери' && state.activeEntranceSubcat !== 'all') {
+      state.activeEntranceSubcat = 'all';
+    }
     const q = state.searchQuery.toLowerCase().trim();
 
     state.filteredProducts = state.allProducts.filter(p => {
@@ -548,6 +576,13 @@
         if (state.activeType === 'invisible' && state.activeCategory === 'Межкомнатные двери') {
           if (p.category !== 'Межкомнатные двери' && p.category !== 'Скрытые двери') return false;
         } else if (p.category !== state.activeCategory) {
+          return false;
+        }
+      }
+
+      // 2.1. Подкатегория входных дверей
+      if (state.activeCategory === 'Входные двери' && state.activeEntranceSubcat !== 'all') {
+        if (!matchesEntranceSubcat(p, state.activeEntranceSubcat)) {
           return false;
         }
       }
@@ -595,8 +630,9 @@
     // Сортировка
     sortProducts();
 
-    // Обновление заголовков и счетчиков
+    // Обновление заголовков, подкатегорий и счетчиков
     updateCategoryHeader();
+    updateEntranceSubcatsBar();
     updateActiveFilterBadge();
 
     // Отрисовка
@@ -643,19 +679,30 @@
 
     if (state.activeCategory === 'Межкомнатные двери') {
       titleEl.textContent = 'Межкомнатные двери';
-      descEl.textContent = 'Дизайнерские межкомнатные полотна из натурального шпона, эмали и экошпона с итальянской бесшумной фурнитурой.';
+      descEl.textContent = 'ПВХ (ПВХ, ПЭТ, экошпон), эмаль и шпон натуральный — подбор по фабрикам.';
     } else if (state.activeCategory === 'Входные двери') {
-      titleEl.textContent = 'Входные двери и сейф-конструкции';
-      descEl.textContent = 'Максимальная безопасность: терморазрыв для коттеджей, замки 4 класса взломостойкости и шумоизоляция до 45 дБ.';
+      if (state.activeEntranceSubcat === 'thermo') {
+        titleEl.textContent = 'Двери с терморазрывом';
+        descEl.textContent = 'Входные двери с терморазрывом для частного дома и коттеджа без промерзания.';
+      } else if (state.activeEntranceSubcat === 'apartment') {
+        titleEl.textContent = 'Двери в квартиру';
+        descEl.textContent = 'Входные двери для квартиры с шумоизоляцией, надёжными замками и вариантами с зеркалом.';
+      } else if (state.activeEntranceSubcat === 'fire_tech') {
+        titleEl.textContent = 'Противопожарные и технические двери';
+        descEl.textContent = 'Противопожарные двери ДПМ EIS-60, строительные и технические модели металл/металл.';
+      } else {
+        titleEl.textContent = 'Входные двери';
+        descEl.textContent = 'Двери с терморазрывом, двери в квартиру, противопожарные и технические двери.';
+      }
     } else if (state.activeCategory === 'Скрытые двери') {
       titleEl.textContent = 'Скрытые двери Invisible';
-      descEl.textContent = 'Инженерные алюминиевые короба скрытого монтажа под покраску, штукатурку или отделку в плоскости стены.';
+      descEl.textContent = 'Алюминиевые короба скрытого монтажа под покраску, штукатурку или отделку в плоскости стены.';
     } else if (state.activeCategory === 'Двери со стеклом') {
       titleEl.textContent = 'Двери со стеклом и зеркалом';
-      descEl.textContent = 'Светопрозрачные конструкции с триплексом, матовым сатинатом, лакобелем и декоративным остеклением.';
+      descEl.textContent = 'Модели с матовым стеклом, триплексом, лакобелем и декоративным остеклением.';
     } else {
-      titleEl.textContent = 'Коллекция дизайнерских дверей';
-      descEl.textContent = 'Премиальные межкомнатные и входные двери ведущих фабрик с профессиональным инженерным замером по Республике Татарстан.';
+      titleEl.textContent = 'Каталог дверей';
+      descEl.textContent = 'Двери эконом и среднего сегмента для ремонта и интерьера по доступным ценам в Казани и Набережных Челнах.';
     }
   }
 
@@ -939,6 +986,7 @@
 
   function resetAllFilters() {
     state.activeCategory = 'all';
+    state.activeEntranceSubcat = 'all';
     state.activeBrand = 'all';
     state.activeColor = 'all';
     state.activeType = 'all';
@@ -1624,19 +1672,19 @@
         <div style="background: var(--bg-stone-light); padding: 14px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-stone);">
           <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px; display: inline-flex; align-items: center; gap: 6px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-terracotta); flex-shrink: 0;" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Центральный шоурум и склад «Казань»
+            г. Казань — магазин «Двери Голливуда»
           </div>
-          <div style="color: var(--text-secondary);">ул. Сибирский тракт, 59б • Ежедневно 09:00 - 19:00</div>
+          <div style="color: var(--text-secondary);">ул. Рихарда Зорге, 100 • Ежедневно 09:00 - 19:00</div>
           <div style="color: var(--accent-emerald); font-weight: 600; margin-top: 6px;">✓ Доступна складская программа (отгрузка за 24 ч)</div>
         </div>
 
         <div style="background: var(--bg-stone-light); padding: 14px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border-stone);">
           <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px; display: inline-flex; align-items: center; gap: 6px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-terracotta); flex-shrink: 0;" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Шоурум и региональный склад «Набережные Челны»
+            г. Набережные Челны — магазин «Двери №1»
           </div>
-          <div style="color: var(--text-secondary);">Казанский проспект, 232 • Пн-Сб 09:00 - 18:00</div>
-          <div style="color: var(--accent-terracotta); font-weight: 600; margin-top: 6px;">✓ Регулярная логистика Казань ↔ Челны (2 раза в неделю)</div>
+          <div style="color: var(--text-secondary);">ТЦ «Кама», пр-т Московский, 126Б (53/07а), 2 этаж • Ежедневно 09:00 - 18:00</div>
+          <div style="color: var(--accent-terracotta); font-weight: 600; margin-top: 6px;">✓ Заказ онлайн: Telegram, MAX, WhatsApp • +7 (965) 627-10-10</div>
         </div>
 
         <div style="color: var(--text-muted); line-height: 1.5; padding: 12px 14px; background: var(--bg-stone-subtle); border-radius: var(--radius-sm); border: 1px solid var(--border-stone-subtle);">
@@ -2214,6 +2262,7 @@
   // Быстрый фильтр по категории из навигации
   function setCategory(catName) {
     state.activeCategory = catName;
+    state.activeEntranceSubcat = 'all';
     state.currentPage = 1;
     
     // Подсветка ссылки в навигации
@@ -2236,6 +2285,54 @@
       catalogEl.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  function toggleEntranceSubcats() {
+    const panel = document.getElementById('entranceSubcatsPanel');
+    const btn = document.getElementById('btnCatEntranceCard');
+    if (!panel) {
+      setCategory('Входные двери');
+      return;
+    }
+    const isHidden = panel.hasAttribute('hidden');
+    if (isHidden) {
+      panel.removeAttribute('hidden');
+      if (btn) btn.classList.add('is-expanded');
+      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      panel.setAttribute('hidden', '');
+      if (btn) btn.classList.remove('is-expanded');
+    }
+  }
+
+  function setEntranceSubcategory(subcat) {
+    state.activeCategory = 'Входные двери';
+    state.activeEntranceSubcat = subcat || 'all';
+    state.currentPage = 1;
+
+    document.querySelectorAll('.header-nav .header-nav-link, .mobile-nav-item, .header-nav .nav-link').forEach(link => {
+      const txt = link.textContent.trim().toLowerCase();
+      if (txt.includes('входн')) link.classList.add('active');
+      else link.classList.remove('active');
+    });
+
+    buildFacetFilters();
+    applyFiltersAndSort();
+
+    const catalogEl = document.getElementById('catalogContent');
+    if (catalogEl) {
+      catalogEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Привязка пилюль подкатегорий входных дверей над каталогом
+  document.addEventListener('click', (e) => {
+    const pill = e.target.closest('.entrance-subcat-pill');
+    if (!pill) return;
+    const subcat = pill.dataset.entranceType || 'all';
+    state.activeEntranceSubcat = subcat;
+    state.currentPage = 1;
+    applyFiltersAndSort();
+  });
 
   function initHeaderMenu() {
     const toggleBtn = document.getElementById('mobileMenuBtn');
@@ -2454,6 +2551,8 @@
     closeLeadModal,
     resetAllFilters,
     setCategory,
+    toggleEntranceSubcats,
+    setEntranceSubcategory,
     toggleCompare,
     clearCompare,
     openCompareModal,

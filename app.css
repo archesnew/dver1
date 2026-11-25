@@ -5821,3 +5821,159 @@ a {
     font-size: 1.5rem;
   }
 }
+
+/* ==========================================================================
+   КАТЕГОРИИ: ДУАЛЬНАЯ СЕТКА И ПОДКАТЕГОРИИ ВХОДНЫХ ДВЕРЕЙ
+   ========================================================================== */
+.editorial-categories-gallery.editorial-categories-dual {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 768px) {
+  .editorial-categories-gallery.editorial-categories-dual {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cat-editorial-btn {
+  border: none;
+  padding: 0;
+  text-align: left;
+  font-family: inherit;
+  width: 100%;
+  cursor: pointer;
+}
+
+.cat-editorial-btn.is-expanded .cat-arrow {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+.entrance-subcats-panel {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--border-stone, #DCDAD4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 28px rgba(34, 35, 32, 0.06);
+}
+
+.entrance-subcats-panel[hidden] {
+  display: none;
+}
+
+.entrance-subcats-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.entrance-subcats-label {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-primary, #222320);
+}
+
+.entrance-all-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-terracotta, #B85C3A);
+  text-decoration: none;
+}
+
+.entrance-all-link:hover {
+  text-decoration: underline;
+}
+
+.entrance-subcats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 860px) {
+  .entrance-subcats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.entrance-subcat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 16px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-stone, #DCDAD4);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entrance-subcat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-terracotta, #B85C3A);
+  box-shadow: 0 8px 20px rgba(184, 92, 58, 0.12);
+}
+
+.entrance-subcat-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text-primary, #222320);
+  margin-bottom: 6px;
+}
+
+.entrance-subcat-desc {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text-secondary, #5C5D56);
+  margin-bottom: 14px;
+}
+
+.entrance-subcat-cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-terracotta, #B85C3A);
+}
+
+/* Полоса подкатегорий входных дверей над каталогом */
+.entrance-subcats-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--border-stone, #DCDAD4);
+}
+
+.entrance-subcat-pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-stone, #DCDAD4);
+  background: #FFFFFF;
+  color: var(--text-primary, #222320);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.entrance-subcat-pill:hover {
+  border-color: var(--accent-terracotta, #B85C3A);
+  color: var(--accent-terracotta, #B85C3A);
+}
+
+.entrance-subcat-pill.active {
+  background: var(--accent-terracotta, #B85C3A);
+  border-color: var(--accent-terracotta, #B85C3A);
+  color: #FFFFFF;
+}

@@ -7,32 +7,37 @@
   'use strict';
 
   const DVER_CONFIG = {
-    PHONE_DISPLAY: "+7 (843) 205-00-01",
-    PHONE_RAW: "+78432050001",
-    WHATSAPP_NUMBER: "78432050001",
-    TELEGRAM_USERNAME: "dver1_manager",
+    PHONE_DISPLAY: "+7 (965) 627-10-10",
+    PHONE_RAW: "+79656271010",
+    WHATSAPP_NUMBER: "79656271010",
+    TELEGRAM_USERNAME: "dveri_1",
+    TELEGRAM_CATALOG_URL: "https://t.me/dveri_1",
+    MAX_CATALOG_URL: "https://max.ru/join/ta3eyKCyExYWI37TCWrSAkzOkKTQAamITFpQHj9FEi4",
     LEAD_ENDPOINT: "", // URL webhook/бота; если пустой — срабатывает graceful fallback с WhatsApp/Telegram
     YM_COUNTER_ID: null, // Плейсхолдер для номера счётчика Яндекс.Метрики (Спринт 5)
 
-    // Города присутствия и флагманские шоурумы (Спринт 7)
+    // Города присутствия и магазины
     CITIES: {
       kazan: {
         id: 'kazan',
         name: 'Казань',
-        address: 'ул. Сибирский тракт, 59б',
+        storeName: 'Магазин «Двери Голливуда»',
+        address: 'ул. Рихарда Зорге, 100',
         schedule: 'Ежедневно 09:00–19:00',
-        phoneDisplay: '+7 (843) 205-00-01',
-        phoneRaw: '+78432050001',
-        coords: [55.8078, 49.1832]
+        phoneDisplay: '+7 (965) 627-10-10',
+        phoneRaw: '+79656271010',
+        coords: [55.7445, 49.2121]
       },
       chelny: {
         id: 'chelny',
         name: 'Набережные Челны',
-        address: 'Казанский проспект, 232',
-        schedule: 'Пн–Сб 09:00–18:00',
-        phoneDisplay: '+7 (843) 205-00-01',
-        phoneRaw: '+78432050001',
-        coords: [55.7089, 52.3789]
+        storeName: 'Магазин «Двери №1»',
+        address: 'ТЦ «Кама», пр-т Московский, 126Б (53/07а), 2 этаж',
+        addressHint: 'Большая Кама — ближе к «Тулпар», с эскалатора налево',
+        schedule: 'Ежедневно 09:00–18:00',
+        phoneDisplay: '+7 (965) 627-10-10',
+        phoneRaw: '+79656271010',
+        coords: [55.7366, 52.4268]
       }
     },
 

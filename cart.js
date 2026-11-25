@@ -1178,7 +1178,7 @@
         <div class="print-header-top">
           <div class="print-logo-box">
             <img src="logo.png" alt="Двери №1" class="print-logo-img">
-            <div class="print-tagline">ПРЕМИАЛЬНЫЕ ШОУРУМЫ ДВЕРЕЙ И ИНЖЕНЕРНЫХ СИСТЕМ</div>
+            <div class="print-tagline">ДВЕРИ ДЛЯ РЕМОНТА И ИНТЕРЬЕРА ПО ДОСТУПНЫМ ЦЕНАМ</div>
           </div>
           <div class="print-meta-box">
             <div class="print-doc-number">СПЕЦИФИКАЦИЯ-СМЕТА № DVER-${Date.now().toString().slice(-6)}</div>
@@ -1186,9 +1186,9 @@
           </div>
         </div>
         <div class="print-contacts-bar">
-          <span><strong>Казань:</strong> ул. Сибирский тракт, 59б</span>
-          <span><strong>Челны:</strong> Казанский пр-т, 232</span>
-          <span><strong>Единый телефон:</strong> +7 (843) 205-00-01</span>
+          <span><strong>Казань:</strong> ул. Рихарда Зорге, 100 («Двери Голливуда»)</span>
+          <span><strong>Челны:</strong> ТЦ «Кама», пр-т Московский, 126Б, 2 эт.</span>
+          <span><strong>Телефон / WhatsApp / TG / MAX:</strong> +7 (965) 627-10-10</span>
           <span><strong>Сайт:</strong> dver1.com</span>
         </div>
       </div>

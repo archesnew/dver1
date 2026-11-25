@@ -618,7 +618,7 @@
       if (p.description) {
         leadDesc.textContent = p.description;
       } else {
-        leadDesc.textContent = `Архитектурная конструкция ${p.category ? p.category.toLowerCase() : 'двери'} с высокоточной заводской врезкой, улучшенной звукоизоляцией и премиальными покрытиями.`;
+        leadDesc.textContent = `Надёжная конструкция ${p.category ? p.category.toLowerCase() : 'двери'} с заводской врезкой, хорошей звукоизоляцией и износостойким покрытием.`;
       }
     }
 
@@ -1372,7 +1372,7 @@
       "@type": "Product",
       "name": `${brandName} ${modelName}`,
       "image": [imgUrl],
-      "description": p.description || `${brandName} ${modelName} — премиальные межкомнатные и входные двери в Казани и Набережных Челнах.`,
+      "description": p.description || `${brandName} ${modelName} — межкомнатные и входные двери эконом и среднего сегмента в Казани и Набережных Челнах.`,
       "brand": {
         "@type": "Brand",
         "name": brandName
@@ -1389,7 +1389,7 @@
         "seller": {
           "@type": "HomeGoodsStore",
           "name": "Двери №1",
-          "telephone": "+7 (843) 205-00-01",
+          "telephone": "+7 (965) 627-10-10",
           "url": "https://dver1.com/"
         }
       }
