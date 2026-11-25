@@ -5820,11 +5820,22 @@ a {
    ========================================================================== */
 .editorial-categories-gallery.editorial-categories-dual {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 360px;
+  gap: 24px;
+}
+
+.editorial-categories-gallery.editorial-categories-dual .cat-editorial-lead,
+.editorial-categories-gallery.editorial-categories-dual .cat-editorial-entrance {
+  grid-column: auto;
+  grid-row: auto;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
   .editorial-categories-gallery.editorial-categories-dual {
     grid-template-columns: 1fr;
+    grid-template-rows: 240px 240px;
+    gap: 16px;
   }
 }
 
