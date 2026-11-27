@@ -32,6 +32,17 @@ function generateSitemap() {
     console.error('[SITEMAP] Error reading catalog index:', err);
   }
 
+  const SEO_SLUGS = [
+    'mezhkomnatnye-dveri',
+    'vhodnye-dveri',
+    'dveri-s-termorazryvom',
+    'dveri-v-kvartiru',
+    'protivopozharnye-dveri',
+    'skrytye-dveri',
+    'kazan',
+    'naberezhnye-chelny'
+  ];
+
   const urls = [
     {
       loc: `${BASE_URL}/`,
@@ -39,6 +50,12 @@ function generateSitemap() {
       changefreq: 'daily',
       priority: '1.0'
     },
+    ...SEO_SLUGS.map(slug => ({
+      loc: `${BASE_URL}/${slug}/`,
+      lastmod: today,
+      changefreq: 'weekly',
+      priority: '0.9'
+    })),
     {
       loc: `${BASE_URL}/showrooms.html`,
       lastmod: today,

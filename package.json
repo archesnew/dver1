@@ -10,6 +10,8 @@
     "split:catalog": "node scripts/split-catalog.mjs",
     "build:sitemap": "node scripts/generate-sitemap.mjs",
     "build:products": "node scripts/generate-products.cjs",
-    "build": "npm run build:products && npm run build:sitemap"
+    "build:categories": "node scripts/generate-categories.cjs",
+    "build:yml": "node scripts/generate-yml.cjs",
+    "build": "npm run build:products && npm run build:categories && npm run build:yml && npm run build:sitemap"
   }
 }

@@ -6481,3 +6481,130 @@ h2, h3 {
 @media (prefers-reduced-motion: reduce) {
   .home-page .site-header, .home-page .hero-showroom-section :is(a, button) { transition: none; }
 }
+
+/* ==========================================================================
+   SEO-ПОСАДОЧНЫЕ СТРАНИЦЫ, ПЕРЕЛИНКОВКА И БЛОК FAQ
+   ========================================================================== */
+.seo-home-faq-wrap {
+  padding: 20px 0 56px;
+}
+
+.seo-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.seo-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-stone, #DDD8CE);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.seo-hub-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.seo-hub-pill {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--border-stone, #DDD8CE);
+  color: var(--text-primary);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.seo-hub-pill:hover {
+  border-color: var(--accent-terracotta);
+  color: var(--accent-terracotta);
+  background: #FFFFFF;
+}
+
+.seo-hub-pill.active {
+  background: var(--accent-terracotta);
+  border-color: var(--accent-terracotta);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.seo-faq-section {
+  margin-top: 48px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--border-stone, #DDD8CE);
+}
+
+.seo-faq-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.seo-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.seo-faq-item {
+  border: 1px solid var(--border-subtle, #E9E5DC);
+  border-radius: 12px;
+  background: #FFFFFF;
+  padding: 14px 18px;
+}
+
+.seo-faq-q {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.seo-faq-q::-webkit-details-marker {
+  display: none;
+}
+
+.seo-faq-q::after {
+  content: '+';
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--accent-terracotta);
+  flex-shrink: 0;
+}
+
+.seo-faq-item[open] .seo-faq-q::after {
+  content: '−';
+}
+
+.seo-faq-a {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .seo-faq-section {
+    padding: 20px 18px;
+    border-radius: 16px;
+  }
+}

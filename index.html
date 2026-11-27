@@ -100,12 +100,54 @@
   }
   </script>
 
+  <!-- МИКРОРАЗМЕТКА FAQPAGE ДЛЯ РАСШИРЕННОГО СНИППЕТА В ПОИСКЕ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Сколько времени занимает доставка дверей в Казани и Набережных Челнах?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Модели из складской программы (в наличии) доставляются за 1–2 дня. Двери под заказ с фабрики привозятся в согласованные сроки после замера."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Что входит в стандартный комплект межкомнатной двери?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "В комплект входит дверное полотно, коробка (2,5 стойки) и наличники на две стороны (5 стоек). При необходимости подбираются доборы под толщину стены и фурнитура."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Какие входные двери выбрать для частного дома?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Для частного дома и коттеджа подходят входные двери с терморазрывом — они не промерзают и не образуют конденсат при отрицательных температурах."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Где находятся магазины «Двери №1»?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "В Казани — ул. Рихарда Зорге, 100 (магазин «Двери Голливуда», 09:00–19:00). В Набережных Челнах — ТЦ «Кама», пр-т Московский, 126Б, 2 этаж (09:00–18:00)."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" type="image/png" href="favicon.png?v=2">
   <link rel="apple-touch-icon" href="favicon.png?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&subset=cyrillic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=4.8.8">
+  <link rel="stylesheet" href="app.css?v=4.9.0">
   <style id="critical-designer-fallback">
     .designer-showcase-wrapper { position: relative; width: 100%; }
     .designer-showcase-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; padding: 4px 2px 14px; }
@@ -1085,6 +1127,44 @@
       </form>
     </div>
   </div>
+
+  <!-- ЧАСТЫЕ ВОПРОСЫ И РАЗДЕЛЫ КАТАЛОГА (SEO + УДОБНАЯ НАВИГАЦИЯ) -->
+  <section class="seo-home-faq-wrap" aria-label="Частые вопросы и разделы">
+    <div class="editorial-container">
+      <div class="seo-faq-section" style="margin-top: 0;">
+        <h2 class="seo-faq-title">Частые вопросы о покупке и установке</h2>
+        <div class="seo-faq-list">
+          <details class="seo-faq-item">
+            <summary class="seo-faq-q">Сколько времени занимает доставка дверей в Казани и Набережных Челнах?</summary>
+            <div class="seo-faq-a">Модели из наличия отгружаются за 1–2 дня. Позиции под заказ с фабрики доставляются в согласованные сроки после замера.</div>
+          </details>
+          <details class="seo-faq-item">
+            <summary class="seo-faq-q">Что входит в комплект межкомнатной двери?</summary>
+            <div class="seo-faq-a">Полотно, коробка (2,5 стойки) и наличники на две стороны (5 стоек). Доборы под толщину стены и фурнитура подбираются при расчёте.</div>
+          </details>
+          <details class="seo-faq-item">
+            <summary class="seo-faq-q">Какие входные двери лучше для частного дома, а какие для квартиры?</summary>
+            <div class="seo-faq-a">Для улицы и частного дома нужны двери с терморазрывом (без промерзания), а для квартиры — модели с 2–3 контурами уплотнения и шумоизоляцией.</div>
+          </details>
+          <details class="seo-faq-item">
+            <summary class="seo-faq-q">Где посмотреть двери вживую и как оформить заказ онлайн?</summary>
+            <div class="seo-faq-a">Казань: ул. Рихарда Зорге, 100 (09:00–19:00). Набережные Челны: ТЦ «Кама», пр-т Московский, 126Б, 2 эт. (09:00–18:00). Онлайн-заказ: +7 (965) 627-10-10 (Telegram, MAX, WhatsApp).</div>
+          </details>
+        </div>
+
+        <div class="seo-hub-pills" style="margin-top: 22px;" aria-label="Популярные разделы каталога">
+          <a href="mezhkomnatnye-dveri/" class="seo-hub-pill">Межкомнатные двери</a>
+          <a href="vhodnye-dveri/" class="seo-hub-pill">Входные двери</a>
+          <a href="dveri-s-termorazryvom/" class="seo-hub-pill">Двери с терморазрывом</a>
+          <a href="dveri-v-kvartiru/" class="seo-hub-pill">Двери в квартиру</a>
+          <a href="protivopozharnye-dveri/" class="seo-hub-pill">Противопожарные и технические</a>
+          <a href="skrytye-dveri/" class="seo-hub-pill">Скрытые двери</a>
+          <a href="kazan/" class="seo-hub-pill">Двери в Казани</a>
+          <a href="naberezhnye-chelny/" class="seo-hub-pill">Двери в Челнах</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ПОДВАЛ САЙТА (FOOTER) -->
   <div id="contacts"></div>
