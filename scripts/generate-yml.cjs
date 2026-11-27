@@ -91,4 +91,5 @@ ${offersXml}
 `;
 
 fs.writeFileSync(path.join(root, 'feed.yml'), yml, 'utf8');
-console.log(`Создан Яндекс YML-фид feed.yml (${offersCount} товаров).`);
+fs.writeFileSync(path.join(root, 'feed.xml'), yml, 'utf8');
+console.log(`Создан Яндекс YML-фид feed.yml и feed.xml (${offersCount} товаров).`);
