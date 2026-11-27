@@ -8,6 +8,8 @@
   "scripts": {
     "optimize:images": "node scripts/optimize-images.mjs",
     "split:catalog": "node scripts/split-catalog.mjs",
-    "build:sitemap": "node scripts/generate-sitemap.mjs"
+    "build:sitemap": "node scripts/generate-sitemap.mjs",
+    "build:products": "node scripts/generate-products.cjs",
+    "build": "npm run build:products && npm run build:sitemap"
   }
 }

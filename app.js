@@ -602,7 +602,7 @@
     const isFireTech = /противопожар|дпм|eis|техническ|стройгост|металл\/металл|мет\/мет|мини/.test(text);
     if (subcat === 'thermo') return isThermo;
     if (subcat === 'fire_tech') return isFireTech;
-    if (subcat === 'apartment') return !isThermo && !isFireTech;
+    if (subcat === 'apartment') return !isThermo && !isFireTech && !/коттедж|частн.{0,8}дом/.test(text);
     return true;
   }
 
@@ -863,13 +863,16 @@
       // Изображение двери: приоритет WebP-превью 480px (thumb)
       const mainImg = p.thumb || ((p.images && p.images.length > 0) ? resolveImagePath(p.images[0]) : 'door-placeholder.svg');
       const brandName = p.brand || 'Коллекция';
-      const collectionSub = p.collection ? `${brandName} • ${p.collection}` : brandName;
+      const collectionSub = brandName;
+      const coating = p.coating || p.specs?.coating || '';
+      const entrance = p.category === 'Входные двери';
       const modelName = p.model || p.name || 'Дверное полотно';
-      const priceText = p.price ? Number(p.price).toLocaleString('ru-RU') + ' ₽' : 'Уточнить цену';
+      const basePrice = entrance ? p.price : (p.leaf_price || (p.specs && p.leaf_price));
+      const priceText = basePrice > 0 ? (entrance ? 'Дверной блок от ' : 'Полотно от ') + Number(basePrice).toLocaleString('ru-RU') + ' ₽' : 'Цену уточняйте';
       const isCompared = state.comparedIds.includes(p.id);
 
       // Бейдж наличия на складе (Спринт 4)
-      const inStockBadge = p.inStock ? `
+      const inStockBadge = false ? `
         <span class="badge-in-stock" title="В наличии на складе (доставка 1–2 дня)">
           <span class="badge-dot"></span>
           <span>В наличии</span>
@@ -887,7 +890,7 @@
                 <line x1="6" y1="20" x2="6" y2="14"></line>
               </svg>
             </button>
-            <a href="product.html?id=${encodeURIComponent(p.id)}" class="card-image-box">
+            <a href="products/${encodeURIComponent(p.id)}/" class="card-image-box">
               <img class="card-img" src="${mainImg}" alt="${escapeHtml(modelName)}" loading="lazy" decoding="async" width="480" height="640" onerror="this.onerror=null; this.src='door-placeholder.svg';">
             </a>
           </div>
@@ -895,12 +898,13 @@
           <div class="card-body">
             <div class="card-brand-line">${escapeHtml(collectionSub)}</div>
             <h3 class="card-model-title" title="${escapeHtml(modelName)}">
-              <a href="product.html?id=${encodeURIComponent(p.id)}" style="color: inherit; text-decoration: none;">${escapeHtml(modelName)}</a>
+              <a href="products/${encodeURIComponent(p.id)}/" style="color: inherit; text-decoration: none;">${escapeHtml(modelName)}</a>
             </h3>
             
+            <div class="card-coating">${coating ? `Покрытие: ${escapeHtml(coating)}` : 'Покрытие уточняйте'}</div>
             <div class="card-bottom-row">
               <div class="card-price-value">${priceText}</div>
-              <a href="product.html?id=${encodeURIComponent(p.id)}" class="btn-card-more">
+              <a href="products/${encodeURIComponent(p.id)}/" class="btn-card-more">
                 <span>Подробнее</span>
                 <span class="btn-arrow">→</span>
               </a>
@@ -992,6 +996,10 @@
       });
     }
 
+    if (state.activeCategory === 'Входные двери' && state.activeEntranceSubcat !== 'all') {
+      const labels = { apartment: 'В квартиру', thermo: 'С терморазрывом', fire_tech: 'Технические' };
+      chips.push({ label: labels[state.activeEntranceSubcat] || state.activeEntranceSubcat, onRemove: () => { state.activeEntranceSubcat = 'all'; state.currentPage = 1; applyFiltersAndSort(); buildFacetFilters(); } });
+    }
     if (state.activeCategory !== 'all') {
       chips.push({ label: 'Категория: ' + state.activeCategory, onRemove: () => { state.activeCategory = 'all'; state.currentPage = 1; applyFiltersAndSort(); buildFacetFilters(); } });
     }
@@ -1210,7 +1218,7 @@
                 <div class="compare-door-name">${escapeHtml(p.name || p.model || 'Дверное полотно')}</div>
                 <div class="compare-door-price">${p.price ? Number(p.price).toLocaleString('ru-RU') + ' ₽' : 'По запросу'}</div>
                 <div style="margin-top: 10px; display: flex; gap: 8px; justify-content: center;">
-                  <a href="product.html?id=${encodeURIComponent(p.id)}" class="btn-card-more" style="padding: 6px 14px; font-size: 0.78rem;">
+                  <a href="products/${encodeURIComponent(p.id)}/" class="btn-card-more" style="padding: 6px 14px; font-size: 0.78rem;">
                     Подробнее →
                   </a>
                   <button type="button" class="btn-compare-remove-cell" data-id="${p.id}" style="background: none; border: 1px solid var(--border-stone); border-radius: 4px; padding: 4px 8px; cursor: pointer; color: var(--text-muted); font-size: 0.75rem;" title="Убрать из сравнения">
@@ -1287,7 +1295,7 @@
   // --------------------------------------------------------------------------
   function openProductModal(productId) {
     if (productId) {
-      window.location.href = `product.html?id=${encodeURIComponent(productId)}`;
+      window.location.href = `products/${encodeURIComponent(productId)}/`;
       return;
     }
     const product = state.allProducts.find(p => p.id === productId);
@@ -1658,7 +1666,7 @@
     pane.innerHTML = `
       <div class="calc-tab-box">
         <label style="font-size: 0.8125rem; font-weight: 700; color: var(--text-secondary);">
-          Выберите сценарий комплектации проема (согласно регламенту V3.2):
+          Выберите комплектацию дверного проема:
         </label>
         
         <select class="calc-scenario-select" id="calcScenarioSelect">
@@ -1791,10 +1799,14 @@
   // МОДАЛКА ОФОРМЛЕНИЯ ЗАЯВКИ (LEAD MODAL)
   // --------------------------------------------------------------------------
   function openLeadModal(productIdOrContext) {
-    let product = state.selectedProduct;
+    let product = null;
     if (productIdOrContext && typeof productIdOrContext === 'string' && productIdOrContext.startsWith('PROD-')) {
       product = state.allProducts.find(p => p.id === productIdOrContext);
-      state.selectedProduct = product;
+    }
+
+    if (window.DverLeads) {
+      window.DverLeads.openLeadModal({ product: product || null, source: product ? 'Карточка товара' : (productIdOrContext || 'Запись на замер') });
+      return;
     }
 
     const modal = document.getElementById('leadModal');
@@ -1815,7 +1827,7 @@
             </div>
           ` : ''}
           <div style="color: var(--text-muted); font-size: 0.75rem; margin-top: 4px;">
-            Конфигурация: ${escapeHtml(state.selectedScenario || 'Стандарт')}
+            Конфигурация: ${escapeHtml(document.getElementById('calcScenarioSelect')?.selectedOptions[0]?.textContent || 'Стандартная комплектация')}
           </div>
         `;
       } else {
@@ -2058,25 +2070,12 @@
     const btnCloseLeadModal = document.getElementById('btnCloseLeadModal');
     if (btnCloseLeadModal) btnCloseLeadModal.addEventListener('click', closeLeadModal);
 
-    // Сабмит заявки
-    const leadForm = document.getElementById('leadOrderForm');
-    if (leadForm) leadForm.addEventListener('submit', handleLeadSubmit);
-
     // Табы внутри модалки
     document.querySelectorAll('.modal-tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         switchModalTab(btn.dataset.targetTab);
       });
     });
-
-    // Кнопки в шапке
-    const btnHeaderLead = document.getElementById('btnHeaderLead');
-    if (btnHeaderLead) {
-      btnHeaderLead.addEventListener('click', () => {
-        state.selectedProduct = state.filteredProducts[0] || state.allProducts[0];
-        openLeadModal('Вызов замерщика из шапки');
-      });
-    }
 
     // Инициализация мобильного меню, эффекта стекла, витрины Designer Selection, кейсов и пресетов
     initHeaderMenu();
@@ -2208,6 +2207,7 @@
     try {
       const params = new URLSearchParams();
       if (state.activeCategory && state.activeCategory !== 'all') params.set('cat', state.activeCategory);
+      if (state.activeCategory === 'Входные двери' && state.activeEntranceSubcat !== 'all') params.set('sub', state.activeEntranceSubcat);
       if (state.activeBrand && state.activeBrand !== 'all') params.set('brand', state.activeBrand);
       if (state.activeColor && state.activeColor !== 'all') params.set('color', state.activeColor);
       if (state.activeType && state.activeType !== 'all') params.set('type', state.activeType);
@@ -2235,7 +2235,10 @@
       let hasDeepLink = false;
 
       if (params.has('cat')) {
-        state.activeCategory = params.get('cat');
+        const aliases = { interior: 'Межкомнатные двери', entrance: 'Входные двери', invisible: 'Скрытые двери' };
+        state.activeCategory = aliases[params.get('cat')] || params.get('cat');
+        if (params.get('cat') === 'invisible') { state.activeCategory = 'all'; state.activeType = 'invisible'; }
+        if (state.activeCategory === 'Входные двери' && ['apartment', 'thermo', 'fire_tech'].includes(params.get('sub'))) state.activeEntranceSubcat = params.get('sub');
         hasDeepLink = true;
       }
       if (params.has('brand')) {
@@ -2262,7 +2265,7 @@
         state.activeMaterial = params.get('material');
         hasDeepLink = true;
       }
-      if (params.get('inStock') === '1' || params.get('inStock') === 'true') {
+      if (false && (params.get('inStock') === '1' || params.get('inStock') === 'true')) {
         state.onlyInStock = true;
         hasDeepLink = true;
         const btnStock = document.getElementById('btnStockToggle');
@@ -2335,8 +2338,17 @@
   }
 
   // Быстрый фильтр по категории из навигации
+  function clearDirectionFilters() {
+    state.activeBrand = state.activeColor = state.activeType = state.activePrice = state.activeStyle = state.activeMaterial = 'all';
+    state.searchQuery = ''; state.onlyInStock = false;
+    const search = document.getElementById('searchInput'); if (search) search.value = '';
+    const clear = document.getElementById('searchClearBtn'); if (clear) clear.style.display = 'none';
+  }
+
   function setCategory(catName) {
-    state.activeCategory = catName;
+    clearDirectionFilters();
+    state.activeCategory = catName === 'Скрытые двери' ? 'all' : catName;
+    if (catName === 'Скрытые двери') state.activeType = 'invisible';
     state.activeEntranceSubcat = 'all';
     state.currentPage = 1;
     
@@ -2380,6 +2392,7 @@
   }
 
   function setEntranceSubcategory(subcat) {
+    clearDirectionFilters();
     state.activeCategory = 'Входные двери';
     state.activeEntranceSubcat = subcat || 'all';
     state.currentPage = 1;
@@ -2398,6 +2411,15 @@
       catalogEl.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('[data-direction]');
+    if (!link) return;
+    e.preventDefault();
+    const direction = link.dataset.direction;
+    if (direction === 'apartment' || direction === 'thermo') setEntranceSubcategory(direction);
+    else setCategory(direction === 'interior' ? 'Межкомнатные двери' : 'Скрытые двери');
+  });
 
   // Привязка пилюль подкатегорий входных дверей над каталогом
   document.addEventListener('click', (e) => {
@@ -2482,7 +2504,7 @@
     function onScroll() {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          if (window.scrollY > 12) {
+          if (window.scrollY > 40) {
             header.classList.add('is-scrolled');
           } else {
             header.classList.remove('is-scrolled');
@@ -2559,7 +2581,7 @@
             
             <div class="case-door-ref">
               <span class="case-door-label">Установленная модель:</span>
-              <a href="product.html?id=${c.door_id}" class="case-door-name">${c.door_name}</a>
+              <a href="products/${c.door_id}/" class="case-door-name">${c.door_name}</a>
             </div>
 
             <div class="case-details">
@@ -2578,7 +2600,7 @@
             </div>
 
             <div class="case-card-footer">
-              <a href="product.html?id=${c.door_id}" class="btn-case-product">
+              <a href="products/${c.door_id}/" class="btn-case-product">
                 Смотреть модель в каталоге
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7"/>

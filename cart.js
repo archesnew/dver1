@@ -202,7 +202,7 @@
             <div>
               <div class="cart-item-brand-row">${escapeHtml(item.brand)}${item.collection ? ' • ' + escapeHtml(item.collection) : ''}</div>
               <h3 class="cart-item-title">
-                <a href="product.html?id=${encodeURIComponent(item.productId)}">${escapeHtml(item.title)}</a>
+                <a href="products/${encodeURIComponent(item.productId)}/">${escapeHtml(item.title)}</a>
               </h3>
               
               <div class="cart-item-specs-grid">

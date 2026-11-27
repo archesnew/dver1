@@ -172,7 +172,9 @@
         if (!res.ok) {
           throw new Error(`Lead endpoint ${res.status}`);
         }
-        return await res.json().catch(() => ({ ok: true }));
+        const result = await res.json().catch(() => null);
+        if (!result || result.ok !== true) throw new Error('Сервис не подтвердил отправку заявки');
+        return result;
       }
       return await this.sendTelegramMessage(telegramHtmlText);
     }

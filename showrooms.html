@@ -101,7 +101,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&subset=cyrillic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=4.8.0">
+  <link rel="stylesheet" href="app.css?v=4.8.2">
   <script src="cart-store.js?v=4.8.0"></script>
 </head>
 <body class="page-showrooms">
@@ -119,9 +119,9 @@
       <!-- ПО ЦЕНТРУ: КОМПАКТНОЕ МЕНЮ (DESKTOP) -->
       <nav class="header-nav" id="headerNav" aria-label="Основная навигация">
         <a href="index.html#catalogContent" class="header-nav-link" data-nav="catalog">Каталог</a>
-        <a href="index.html#catalogContent" class="header-nav-link" data-nav="interior">Межкомнатные</a>
-        <a href="index.html#catalogContent" class="header-nav-link" data-nav="entrance">Входные</a>
-        <a href="index.html#catalogContent" class="header-nav-link" data-nav="invisible">Скрытые</a>
+        <a href="index.html?cat=interior#catalogContent" class="header-nav-link" data-nav="interior">Межкомнатные</a>
+        <a href="index.html?cat=entrance#catalogContent" class="header-nav-link" data-nav="entrance">Входные</a>
+        <a href="index.html?cat=invisible#catalogContent" class="header-nav-link" data-nav="invisible">Скрытые</a>
         <a href="showrooms.html" class="header-nav-link active" data-nav="showrooms">Шоурумы</a>
       </nav>
 
@@ -160,15 +160,15 @@
           <span>Каталог</span>
           <span class="link-arrow">→</span>
         </a>
-        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+        <a href="index.html?cat=interior#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
           <span>Межкомнатные</span>
           <span class="link-arrow">→</span>
         </a>
-        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+        <a href="index.html?cat=entrance#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
           <span>Входные</span>
           <span class="link-arrow">→</span>
         </a>
-        <a href="index.html#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
+        <a href="index.html?cat=invisible#catalogContent" class="mobile-glass-link" onclick="if(window.closeMobileMenu) window.closeMobileMenu();">
           <span>Скрытые</span>
           <span class="link-arrow">→</span>
         </a>
@@ -540,10 +540,10 @@
   </footer>
 
   <!-- СКРИПТЫ СТРАНИЦЫ ШОУРУМОВ -->
-  <script src="js/config.js?v=4.8.0"></script>
+  <script src="js/config.js?v=4.8.4"></script>
   <script src="js/city.js?v=4.8.0"></script>
   <script src="js/analytics.js?v=4.8.0"></script>
-  <script src="js/leads.js?v=4.8.0"></script>
+  <script src="js/leads.js?v=4.8.4"></script>
   <script src="showrooms.js?v=4.8.0"></script>
 </body>
 </html>

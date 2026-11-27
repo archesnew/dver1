@@ -49,7 +49,8 @@
   }
 
   function attachPhoneMask(inputEl) {
-    if (!inputEl) return;
+    if (!inputEl || inputEl.dataset.phoneMaskAttached) return;
+    inputEl.dataset.phoneMaskAttached = 'true';
 
     inputEl.setAttribute('type', 'tel');
     inputEl.setAttribute('autocomplete', 'tel');
@@ -80,19 +81,6 @@
 
   function getLeadContext(overrides = {}) {
     let product = overrides.product || null;
-
-    // Если продукт не передан явно, пробуем извлечь из глобального состояния PDP или каталога
-    if (!product && window.pdpState && window.pdpState.product) {
-      const p = window.pdpState.product;
-      product = {
-        id: p.id,
-        name: p.model || p.name,
-        price: (typeof window.calculateCurrentPrice === 'function' ? window.calculateCurrentPrice() : p.price),
-        variant: window.pdpState.activeVariantIndex !== undefined && p.variants ? p.variants[window.pdpState.activeVariantIndex]?.name : '',
-        size: window.pdpState.activeSize || '',
-        opening: window.pdpState.activeOpening || ''
-      };
-    }
 
     // Состав корзины (если пользователь что-то добавил)
     let cartSummary = null;
@@ -192,6 +180,8 @@
         const pName = leadRecord.product.name || leadRecord.product.model || '';
         const pId = leadRecord.product.id ? ` (${leadRecord.product.id})` : '';
         lines.push(`🚪 <b>Модель:</b> ${escTg(pName + pId)}`);
+        const details = [['Исполнение', leadRecord.product.variant], ['Размер', leadRecord.product.size], ['Сторона открывания', leadRecord.product.opening], ['Тип открывания', leadRecord.product.openingType], ['Комплектация', leadRecord.product.kit], ['Итого', leadRecord.product.price ? Number(leadRecord.product.price).toLocaleString('ru-RU') + ' ₽' : (leadRecord.product.kit ? 'Рассчитывается отдельно' : '')], ['Опции', (leadRecord.product.options || []).join(', ')], ['Фиксатор', leadRecord.product.wcTurn ? 'Да' : ''], ['Замер', leadRecord.product.freeMeasure ? 'Да' : '']];
+        details.forEach(([label, value]) => { if (value) lines.push(`<b>${label}:</b> ${escTg(value)}`); });
       }
       if (leadRecord.cart && leadRecord.cart.itemsCount) {
         lines.push(`🛒 <b>В корзине:</b> ${leadRecord.cart.itemsCount} шт. на ${Number(leadRecord.cart.total || 0).toLocaleString('ru-RU')} ₽`);
@@ -200,12 +190,12 @@
 
       const tgText = lines.join('\n');
 
-      if (typeof cfg.dispatchLead === 'function') {
-        try {
-          await cfg.dispatchLead(leadRecord, tgText);
-        } catch (tgErr) {
-          console.warn('Lead dispatch failed (saved locally):', tgErr.message);
-        }
+      if (typeof cfg.dispatchLead !== 'function') {
+        throw new Error('Не удалось отправить заявку. Попробуйте ещё раз или свяжитесь с нами по телефону.');
+      }
+      const dispatchResult = await cfg.dispatchLead(leadRecord, tgText);
+      if (!dispatchResult || dispatchResult.ok !== true) {
+        throw new Error('Не удалось подтвердить отправку заявки. Попробуйте ещё раз или свяжитесь с нами по телефону.');
       }
 
       // Сохраняем в localStorage для надёжности
@@ -326,18 +316,31 @@
 
   let currentBoundProduct = null;
 
+  let closeAfterSubmitTimer;
+
+  function escapeLeadHtml(value) {
+    return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
   function openLeadModal(options = {}) {
+    clearTimeout(closeAfterSubmitTimer);
     let modal = document.getElementById('leadModal');
     if (!modal) {
       createLeadModalMarkup();
       modal = document.getElementById('leadModal');
     }
     if (!modal) return;
+    if (!document.getElementById('leadNameInput') && window.DverApp?.openLeadModal) {
+      window.DverApp.openLeadModal(typeof options === 'string' ? options : options.source);
+      return;
+    }
 
     const source = typeof options === 'string' ? options : (options.source || 'Вызов замерщика');
     const product = typeof options === 'object' ? (options.product || null) : null;
     const isDesigner = (typeof options === 'object' && options.type === 'designer');
-    currentBoundProduct = product;
+    currentBoundProduct = product ? JSON.parse(JSON.stringify(product)) : null;
+    const form = document.getElementById('leadOrderForm');
+    if (form) form.reset();
 
     modal.dataset.leadType = isDesigner ? 'designer' : 'standard';
 
@@ -353,10 +356,10 @@
           </div>
         `;
       } else if (product) {
-        const pName = product.name || product.model || 'Дверное полотно';
-        const pId = product.id ? `арт. ${product.id}` : '';
+        const pName = escapeLeadHtml(product.name || product.model || 'Дверное полотно');
+        const pId = product.id ? `арт. ${escapeLeadHtml(product.id)}` : '';
         const pPrice = product.price ? `${Number(product.price).toLocaleString('ru-RU')} ₽` : '';
-        const pThumb = product.thumb || product.image || '';
+        const pThumb = escapeLeadHtml(product.thumb || product.image || '');
 
         summaryBox.style.display = 'flex';
         summaryBox.innerHTML = `
@@ -366,6 +369,7 @@
               <span class="lead-badge-kicker">Выбранная модель для расчёта:</span>
               <div class="lead-badge-title">${pName} <span class="lead-badge-art">${pId}</span></div>
               ${pPrice ? `<div class="lead-badge-price">${pPrice}</div>` : ''}
+              ${[product.variant, product.size, product.opening, product.openingType, product.kit, ...(product.options || []), product.wcTurn ? 'Сантехнический фиксатор' : ''].filter(Boolean).map(value => `<div class="lead-badge-detail">${escapeLeadHtml(value)}</div>`).join('')}
             </div>
           </div>
         `;
@@ -439,6 +443,11 @@
       if (commentLabel) commentLabel.textContent = 'Комментарий к заказу или число проёмов';
       if (commentInput) commentInput.placeholder = 'Например: 4 межкомнатные двери, замер в субботу';
       if (submitBtn) submitBtn.textContent = 'Отправить заявку на замер';
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('btn-loading', 'btn-lead-success');
     }
 
     // Очистка состояния валидации
@@ -568,7 +577,7 @@
           });
 
           // Предлагаем быстрый переход в мессенджер при желании
-          setTimeout(() => {
+          closeAfterSubmitTimer = setTimeout(() => {
             closeLeadModal();
             // Возвращаем кнопку в исходное состояние
             if (submitBtn) {

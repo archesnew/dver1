@@ -11,9 +11,10 @@
     product: null,
     activeVariantIndex: 0,
     activeSize: '',
-    activeOpening: 'Универсальное',
+    activeOpening: '',
+    activeOpeningType: '',
     activeScenario: 'standard_kit_with_hardware',
-    kitType: 'kit', // 'leaf' | 'kit'
+    kitType: 'leaf', // 'leaf' | 'kit'
     selectedKitOptionIds: [],
     wallColor: '#F7F7F5',
     wallColorName: 'Белый',
@@ -87,61 +88,33 @@
   // РАСЧЁТ ЦЕНЫ (ЖИВОЙ КОНФИГУРАТОР V3.2)
   // --------------------------------------------------------------------------
 
-  function calculateCurrentPrice() {
+  function getPriceDetails() {
     const p = pdpState.product;
-    if (!p) return null;
-
-    let base = p.price;
-    if (!base || isNaN(base) || base <= 0) {
-      return null;
-    }
-
-    let total = base;
-    const isEntrance = (p.category && p.category.toLowerCase().includes('входн')) || (p.type === 'entrance');
-    const optionsConfig = (window.DVER_CONFIG && window.DVER_CONFIG.KIT_SURCHARGES)
-      ? (isEntrance ? window.DVER_CONFIG.KIT_SURCHARGES.entrance : window.DVER_CONFIG.KIT_SURCHARGES.interior)
-      : [];
-
-    if (pdpState.kitType === 'kit') {
-      optionsConfig.forEach(opt => {
-        if (pdpState.selectedKitOptionIds.includes(opt.id)) {
-          total += opt.price;
-        }
-      });
-    }
-
-    if (pdpState.wcTurn && !isEntrance) {
-      total += 1850;
-    }
-
-    return total;
+    if (!p) return { base: null, options: [], total: null };
+    const entrance = (p.category || '').toLowerCase().includes('входн') || p.type === 'entrance';
+    const base = Number(entrance ? p.price : p.leaf_price) || null;
+    const configs = window.DVER_CONFIG?.KIT_SURCHARGES?.[entrance ? 'entrance' : 'interior'] || [];
+    const options = pdpState.kitType === 'kit' ? configs.filter(o => pdpState.selectedKitOptionIds.includes(o.id)).map(o => o.name) : [];
+    if (pdpState.wcTurn && !entrance) options.push('Сантехнический фиксатор');
+    return { base, options, total: options.length ? null : base, entrance };
   }
 
+  function calculateCurrentPrice() { return getPriceDetails().total; }
+
   function updatePriceDisplay() {
-    const priceAmountEl = document.getElementById('pdpPriceAmount');
-    const priceSubnoteEl = document.getElementById('pdpPriceSubnote');
-    const stickyPriceEl = document.getElementById('stickyPriceVal');
-
-    const total = calculateCurrentPrice();
-
-    if (total !== null) {
-      const formatted = formatPrice(total);
-      if (priceAmountEl) priceAmountEl.textContent = formatted;
-      if (stickyPriceEl) stickyPriceEl.textContent = formatted;
-      if (priceSubnoteEl) {
-        if (pdpState.kitType === 'kit') {
-          priceSubnoteEl.textContent = 'Комплект «под ключ» с выбранным набором погонажа и фурнитуры';
-        } else {
-          priceSubnoteEl.textContent = 'Только дверное полотно без погонажных изделий и фурнитуры';
-        }
-      }
-    } else {
-      const text = 'Уточнить цену';
-      if (priceAmountEl) priceAmountEl.textContent = text;
-      if (stickyPriceEl) stickyPriceEl.textContent = text;
-      if (priceSubnoteEl) {
-        priceSubnoteEl.textContent = 'Стоимость рассчитывается индивидуально инженером по спецификации проёмов';
-      }
+    const details = getPriceDetails();
+    const amount = document.getElementById('pdpPriceAmount');
+    const sticky = document.getElementById('stickyPriceVal');
+    const note = document.getElementById('pdpPriceSubnote');
+    const breakdown = document.getElementById('pdpPriceBreakdown');
+    const price = details.total ? formatPrice(details.total) : 'Рассчитывается отдельно';
+    if (amount) amount.textContent = price;
+    if (sticky) sticky.textContent = price;
+    if (note) note.textContent = details.options.length ? 'Стоимость дополнений и итог уточнит специалист.' : 'Доставка и монтаж рассчитываются отдельно.';
+    if (breakdown) {
+      const label = details.entrance ? 'Дверной блок' : 'Дверное полотно';
+      breakdown.innerHTML = `<div><span>${label}</span><strong>${details.base ? formatPrice(details.base) : 'Уточнить цену'}</strong></div>` +
+        (details.options.length ? details.options.map(o => `<div><span>${escapeHtml(o)}</span><span>Рассчитывается отдельно</span></div>`).join('') : '<div><span>Дополнения</span><span>Не выбраны</span></div>');
     }
   }
 
@@ -154,7 +127,7 @@
     updateCartCount();
 
     // Получаем ID товара из URL или hash
-    let targetId = getQueryParam('id') || window.location.hash.replace('#', '') || 'PROD-FERR-001';
+    let targetId = getQueryParam('id') || document.body.dataset.productId || window.location.hash.replace('#', '') || 'PROD-FERR-001';
 
     // 1. Быстрая прямая загрузка индивидуального JSON товара (~5 KB вместо 3.74 MB)
     try {
@@ -222,7 +195,8 @@
 
     // Сторона открывания
     let openings = extractOpeningOptions(p);
-    pdpState.activeOpening = openings.length > 0 ? openings[0] : 'Универсальное';
+    pdpState.activeOpening = openings[0] || '';
+    pdpState.activeOpeningType = extractOpeningTypes(p)[0] || '';
 
     // Сценарий комплектации
     pdpState.activeScenario = 'standard_kit_with_hardware';
@@ -259,31 +233,58 @@
   }
 
   function extractOpeningOptions(p) {
-    const list = [];
-    if (p.variants && p.variants.length > 0) {
-      p.variants.forEach(v => {
-        if (v.opening && !list.includes(v.opening)) {
-          list.push(v.opening);
-        }
-      });
+    const values = (p.variants || []).map(v => v.opening).filter(Boolean);
+    const spec = p.specs && p.specs.opening_direction;
+    if (typeof spec === 'string') {
+      if (/левое\s*\/\s*правое/i.test(spec) && !/универсальное/i.test(spec)) values.push('Левое', 'Правое');
+      else if (/универсальное/i.test(spec)) values.push('Универсальное');
     }
-    if (p.specs && p.specs.opening_direction) {
-      if (Array.isArray(p.specs.opening_direction)) {
-        list.push(...p.specs.opening_direction);
-      } else if (typeof p.specs.opening_direction === 'string') {
-        list.push(...p.specs.opening_direction.split(/[,;]/).map(s => s.trim()).filter(Boolean));
-      }
-    }
-    const clean = [...new Set(list)].filter(Boolean);
-    if (clean.length > 0) return clean;
+    return [...new Set(values.filter(v => /^(Левое|Правое|Универсальное)$/i.test(v)))];
+  }
 
-    if (p.category === 'Входные двери') {
-      return ['Левое открывание (наружное)', 'Правое открывание (наружное)'];
-    }
-    if (p.category === 'Скрытые двери') {
-      return ['Direct (на себя)', 'Reverse (от себя)'];
-    }
-    return ['Универсальное'];
+  function extractOpeningTypes(p) {
+    const spec = p.specs && p.specs.opening_direction;
+    if (typeof spec !== 'string') return [];
+    const types = [];
+    if (/распашн/i.test(spec)) types.push('Распашное');
+    if (/рото/i.test(spec)) types.push('Рото');
+    if (/раздвижн/i.test(spec)) types.push('Раздвижное');
+    if (/direct/i.test(spec)) types.push('Direct (на себя)');
+    if (/reverse/i.test(spec)) types.push('Reverse (от себя)');
+    return types;
+  }
+
+  function getLeadProduct() {
+    const p = pdpState.product;
+    if (!p) return null;
+    const v = (p.variants || [])[pdpState.activeVariantIndex];
+    const entrance = (p.category || '').toLowerCase().includes('входн') || p.type === 'entrance';
+    const options = window.DVER_CONFIG?.KIT_SURCHARGES?.[entrance ? 'entrance' : 'interior'] || [];
+    return {
+      id: p.id, name: [p.brand, p.model].filter(Boolean).join(' '),
+      price: calculateCurrentPrice(), image: pdpState.activeMainImage,
+      variant: v ? getVariantDisplayName(v, p) : '',
+      size: pdpState.activeSize, opening: pdpState.activeOpening,
+      openingType: pdpState.activeOpeningType,
+      kit: pdpState.kitType === 'kit' ? 'Комплектация по запросу' : (entrance ? 'Дверной блок' : 'Только полотно'),
+      options: pdpState.kitType === 'kit' ? options.filter(o => pdpState.selectedKitOptionIds.includes(o.id)).map(o => o.name) : [],
+      wcTurn: pdpState.wcTurn, freeMeasure: pdpState.freeMeasure
+    };
+  }
+
+  function getProductInquiryText() {
+    const p = getLeadProduct();
+    if (!p) return '';
+    return ['Здравствуйте! Интересует дверь ' + p.name,
+      p.variant && 'Исполнение: ' + p.variant,
+      p.size && 'Размер: ' + p.size,
+      p.opening && 'Сторона открывания: ' + p.opening,
+      p.openingType && 'Тип открывания: ' + p.openingType,
+      'Комплектация: ' + p.kit,
+      p.options.length && 'Дополнения: ' + p.options.join(', '),
+      p.wcTurn && 'Сантехнический фиксатор',
+      'Итого: ' + (p.price ? formatPrice(p.price) : 'рассчитывается отдельно')
+    ].filter(Boolean).join('\n');
   }
 
   // --------------------------------------------------------------------------
@@ -461,7 +462,7 @@
       const priceText = item.price ? Number(item.price).toLocaleString('ru-RU') + ' ₽' : 'Уточнить цену';
 
       return `
-        <a href="product.html?id=${encodeURIComponent(item.id)}" class="rec-card">
+        <a href="products/${encodeURIComponent(item.id)}/" class="rec-card">
           <div class="rec-card-image-box">
             ${item.inStock ? '<span class="badge-in-stock" style="position: absolute; top: 10px; left: 10px;"><span class="badge-dot"></span>В наличии</span>' : ''}
             <img src="${img}" alt="${escapeHtml(name)}" class="rec-card-img" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='door-placeholder.svg';">
@@ -513,7 +514,7 @@
       const priceText = item.price ? Number(item.price).toLocaleString('ru-RU') + ' ₽' : 'Уточнить';
 
       return `
-        <a href="product.html?id=${encodeURIComponent(item.id)}" class="recent-card">
+        <a href="products/${encodeURIComponent(item.id)}/" class="recent-card">
           <div class="recent-card-img-box">
             <img src="${img}" alt="${escapeHtml(name)}" class="recent-card-img" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='door-placeholder.svg';">
           </div>
@@ -630,6 +631,7 @@
 
     // 3. Открывание
     renderOpeningPills(p);
+    renderOpeningTypePills(p);
 
     // 4. Примерка под цвет стен (Sprint 3)
     setupWallFitting(p);
@@ -651,18 +653,18 @@
 
     // 8. Мессенджеры и быстрый замер (Sprint 2)
     if (window.DVER_CONFIG) {
-      const msg = window.DVER_CONFIG.getProductInquiryText(p);
+      const msg = getProductInquiryText();
       const btnWa = document.getElementById('pdpBtnWhatsApp');
-      if (btnWa) btnWa.href = window.DVER_CONFIG.getWhatsAppUrl(msg);
+      if (btnWa) { btnWa.href = window.DVER_CONFIG.getWhatsAppUrl(msg); btnWa.addEventListener('click', () => { btnWa.href = window.DVER_CONFIG.getWhatsAppUrl(getProductInquiryText()); }); }
       const btnTg = document.getElementById('pdpBtnTelegram');
-      if (btnTg) btnTg.href = window.DVER_CONFIG.getTelegramUrl(msg);
+      if (btnTg) { btnTg.href = window.DVER_CONFIG.getTelegramUrl(msg); btnTg.addEventListener('click', () => { btnTg.href = window.DVER_CONFIG.getTelegramUrl(getProductInquiryText()); }); }
     }
     const btnMeasure = document.getElementById('pdpBtnMeasure');
     if (btnMeasure) {
       btnMeasure.onclick = () => {
         if (window.DverLeads) {
           window.DverLeads.openLeadModal({
-            product: p,
+            product: getLeadProduct(),
             source: 'Страница товара — Вызов замерщика'
           });
         }
@@ -833,9 +835,8 @@
 
     const openings = extractOpeningOptions(p);
 
-    if (openings.length <= 1 && openings[0] === 'Универсальное') {
+    if (!openings.length || (openings.length === 1 && openings[0] === 'Универсальное')) {
       group.style.display = 'none';
-      pdpState.activeOpening = 'Универсальное';
       return;
     }
 
@@ -867,6 +868,23 @@
         renderStickyBar(p);
       });
     });
+  }
+
+  function renderOpeningTypePills(p) {
+    const group = document.getElementById('groupOpeningType');
+    const wrap = document.getElementById('openingTypePillsWrap');
+    const label = document.getElementById('selectedOpeningTypeVal');
+    if (!group || !wrap) return;
+    const types = extractOpeningTypes(p);
+    if (!types.length) { group.style.display = 'none'; return; }
+    group.style.display = 'block';
+    label.textContent = pdpState.activeOpeningType;
+    wrap.innerHTML = types.map(type => `<button type="button" class="pdp-pill-btn ${type === pdpState.activeOpeningType ? 'active' : ''}" data-opening-type="${escapeHtml(type)}">${escapeHtml(type)}</button>`).join('');
+    wrap.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => {
+      pdpState.activeOpeningType = btn.dataset.openingType;
+      label.textContent = pdpState.activeOpeningType;
+      wrap.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+    }));
   }
 
   // --------------------------------------------------------------------------
@@ -942,17 +960,23 @@
     const optionsList = document.getElementById('kitOptionsList');
     const kitSubtext = document.getElementById('kitFullSubtext');
     const wcRow = document.getElementById('wcTurnRow');
+    if (isEntrance && btnLeaf) {
+      btnLeaf.querySelector('strong').textContent = 'Дверной блок';
+      btnLeaf.querySelector('small').textContent = 'Базовая комплектация модели';
+    }
 
     if (isEntrance && wcRow) {
       wcRow.style.display = 'none';
     }
 
     if (kitSubtext) {
-      kitSubtext.textContent = isEntrance ? 'Доставка, подъём и монтаж' : 'Короб, наличники, петли, замок';
+      kitSubtext.textContent = isEntrance ? 'Доставка и монтаж по запросу' : 'Дополнительные элементы по запросу';
     }
 
+    if (optionsWrap) optionsWrap.style.display = pdpState.kitType === 'kit' ? 'block' : 'none';
+
     // По умолчанию активируем опции со статусом defaultActive
-    pdpState.selectedKitOptionIds = optionsConfig.filter(o => o.defaultActive).map(o => o.id);
+    pdpState.selectedKitOptionIds = [];
 
     // Рендер чекбоксов опций
     if (optionsList) {
@@ -965,7 +989,7 @@
           <input type="checkbox" data-opt-id="${escapeHtml(opt.id)}" ${isChecked ? 'checked' : ''}>
           <span class="kit-option-label">
             <span class="kit-option-name">${escapeHtml(opt.name)}</span>
-            <span class="kit-option-price">+${opt.price.toLocaleString('ru-RU')} ₽</span>
+            <span class="kit-option-price">Уточнить стоимость</span>
           </span>
         `;
         const chk = label.querySelector('input');
@@ -1360,51 +1384,25 @@
       script.type = 'application/ld+json';
       document.head.appendChild(script);
     }
-    const currentPrice = calculateCurrentPrice() || p.price || 0;
-    const modelName = p.name || p.model || 'Дверное полотно';
     const brandName = p.brand || 'Двери №1';
-    const imgUrl = (p.images && p.images.length > 0)
-      ? `https://dver1.com/${p.images[0]}`
-      : 'https://dver1.com/assets/hero-arch.webp';
-
-    const schema = {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": `${brandName} ${modelName}`,
-      "image": [imgUrl],
-      "description": p.description || `${brandName} ${modelName} — межкомнатные и входные двери эконом и среднего сегмента в Казани и Набережных Челнах.`,
-      "brand": {
-        "@type": "Brand",
-        "name": brandName
-      },
-      "sku": p.id,
-      "offers": {
-        "@type": "Offer",
-        "url": `https://dver1.com/product.html?id=${encodeURIComponent(p.id)}`,
-        "priceCurrency": "RUB",
-        "price": currentPrice,
-        "priceValidUntil": "2027-12-31",
-        "itemCondition": "https://schema.org/NewCondition",
-        "availability": p.inStock ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
-        "seller": {
-          "@type": "HomeGoodsStore",
-          "name": "Двери №1",
-          "telephone": "+7 (965) 627-10-10",
-          "url": "https://dver1.com/"
-        }
-      }
-    };
-    script.textContent = JSON.stringify(schema, null, 2);
-
-    // Обновляем OpenGraph теги в <head>
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.content = `${brandName} ${modelName} | Двери №1`;
-    const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.content = `Купить ${brandName} ${modelName} от ${Number(currentPrice).toLocaleString('ru-RU')} ₽. Шоурумы в Казани и Набережных Челнах.`;
-    const ogImg = document.querySelector('meta[property="og:image"]');
-    if (ogImg) ogImg.content = imgUrl;
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.content = `https://dver1.com/product.html?id=${encodeURIComponent(p.id)}`;
+    const modelName = p.model || p.name || 'Дверь';
+    const url = 'https://dver1.com/products/' + encodeURIComponent(p.id) + '/';
+    const imgUrl = p.images?.[0] ? new URL(resolveImgPath(p.images[0]), 'https://dver1.com/').href : '';
+    const price = (p.category === 'Входные двери' ? p.price : p.leaf_price);
+    const schema = { '@context': 'https://schema.org/', '@type': 'Product', name: brandName + ' ' + modelName, description: p.description || '', sku: p.id, brand: { '@type': 'Brand', name: brandName } };
+    if (imgUrl) schema.image = [imgUrl];
+    if (Number(price) > 0) schema.offers = { '@type': 'Offer', url, priceCurrency: 'RUB', price: Number(price) };
+    script.textContent = JSON.stringify(schema);
+    let canonical = document.getElementById('pdpCanonical');
+    if (!canonical) { canonical = document.createElement('link'); canonical.id = 'pdpCanonical'; canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+    canonical.href = url;
+    const ogTitle = document.getElementById('pdpOgTitle'); if (ogTitle) ogTitle.content = brandName + ' ' + modelName + ' | Двери №1';
+    const ogDesc = document.getElementById('pdpMetaDescOg'); if (ogDesc) ogDesc.content = (p.description || '').slice(0,160);
+    const ogImg = document.getElementById('pdpOgImage'); if (ogImg && imgUrl) ogImg.content = imgUrl;
+    const ogUrl = document.getElementById('pdpOgUrl'); if (ogUrl) ogUrl.content = url;
+    const twTitle = document.getElementById('pdpTwTitle'); if (twTitle) twTitle.content = brandName + ' ' + modelName + ' | Двери №1';
+    const twDesc = document.getElementById('pdpTwDesc'); if (twDesc) twDesc.content = (p.description || '').slice(0,160);
+    const twImg = document.getElementById('pdpTwImage'); if (twImg && imgUrl) twImg.content = imgUrl;
   }
 
   // --------------------------------------------------------------------------
@@ -1480,13 +1478,13 @@
       });
     }
 
-    const kitTypeTitle = pdpState.kitType === 'kit' ? 'Комплект «под ключ»' : 'Только полотно';
+    const kitTypeTitle = pdpState.kitType === 'kit' ? 'Комплектация по запросу' : (isEntrance ? 'Дверной блок' : 'Только полотно');
     const hardwareDesc = pdpState.kitType === 'kit'
-      ? (activeOptNames.length > 0 ? activeOptNames.join(', ') : 'Базовый комплект')
-      : 'Без погонажа и фурнитуры';
+      ? (activeOptNames.length > 0 ? activeOptNames.join(', ') : 'Базовая комплектация')
+      : (isEntrance ? 'Состав дверного блока уточняйте' : 'Без погонажа и фурнитуры');
 
     const cartItem = {
-      id: `${p.id}-${pdpState.activeVariantIndex}-${pdpState.activeSize}-${pdpState.kitType}-${pdpState.selectedKitOptionIds.join('_')}-${pdpState.activeOpening || 'uni'}`,
+      id: `${p.id}-${pdpState.activeVariantIndex}-${pdpState.activeSize}-${pdpState.kitType}-${pdpState.selectedKitOptionIds.join('_')}-${pdpState.activeOpening || 'uni'}-${pdpState.activeOpeningType}-${pdpState.wcTurn}`,
       productId: p.id,
       brand: p.brand || 'Двери №1',
       model: p.model || 'Модель двери',
@@ -1495,7 +1493,7 @@
       article: p.article || '',
       variant: vName,
       size: pdpState.activeSize || '800 × 2000 мм',
-      opening: pdpState.activeOpening || 'Уточнит замерщик',
+      opening: [pdpState.activeOpening, pdpState.activeOpeningType].filter(Boolean).join(', ') || 'Уточнит замерщик',
       room: 'Гостиная', // Значение по умолчанию для спецификации по комнатам
       kitType: pdpState.kitType,
       kitTypeTitle: kitTypeTitle,
@@ -1548,12 +1546,6 @@
     let hasQuotePrice = false;
 
     listEl.innerHTML = pdpState.cart.map((item, idx) => {
-      if (item.price && !isNaN(item.price)) {
-        totalPrice += item.price * (item.quantity || 1);
-      } else {
-        hasQuotePrice = true;
-      }
-
       const isKnown = item.isPriceKnown || (typeof item.unitPrice === 'number' && item.unitPrice > 0) || (typeof item.price === 'number' && item.price > 0);
       const priceVal = typeof item.unitPrice === 'number' ? item.unitPrice : item.price;
 
@@ -1567,14 +1559,16 @@
 
       return `
         <div class="cart-item-row" data-cart-id="${escapeHtml(item.id)}">
-          <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.model)}" class="cart-item-thumb" onerror="this.onerror=null; this.src='door-placeholder.svg';">
+          <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.title || item.model)}" class="cart-item-thumb" onerror="this.onerror=null; this.src='door-placeholder.svg';">
           <div class="cart-item-info">
             <div class="cart-item-brand">${escapeHtml(item.brand)}</div>
-            <div class="cart-item-title">${escapeHtml(item.model)}</div>
+            <div class="cart-item-title">${escapeHtml(item.title || item.model)}</div>
             <div class="cart-item-details">
               <span>${escapeHtml(item.variant)}</span> • 
               <span>${escapeHtml(item.size)}</span> • 
               <span>${escapeHtml(item.opening)}</span>
+              <span> • ${escapeHtml(item.kitTypeTitle || '')}</span>
+              ${item.kitOptions?.length ? ' • <span>' + escapeHtml(item.kitOptions.join(', ')) + '</span>' : ''}
               ${item.wcTurn ? ' • <span style="color: var(--color-terracotta);">+WC фиксатор</span>' : ''}
             </div>
             <div class="cart-item-price">${priceStr}</div>
@@ -1949,6 +1943,7 @@
   // Экспорт для глобального использования
   window.PDP = {
     init: initPDP,
+    getLeadProduct,
     openConsultModal: openConsultModal,
     openCheckoutModal: openCheckoutModal,
     openCartModal: openCartModal,

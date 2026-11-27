@@ -94,6 +94,8 @@ async function run() {
       color_names: p.color_names || [],
       style: p.specs?.style || '',
       material: p.specs?.material || '',
+      coating: p.specs?.coating || '',
+      leaf_price: p.leaf_price || null,
       price: p.price,
       inStock: inStock,
       thumb: thumbPath

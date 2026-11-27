@@ -105,7 +105,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&subset=cyrillic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app.css?v=4.8.0">
+  <link rel="stylesheet" href="app.css?v=4.8.8">
   <style id="critical-designer-fallback">
     .designer-showcase-wrapper { position: relative; width: 100%; }
     .designer-showcase-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; padding: 4px 2px 14px; }
@@ -133,14 +133,15 @@
   </style>
   <script src="cart-store.js?v=4.8.0"></script>
 </head>
-<body>
+<body class="home-page">
 
   <!-- ЕДИНАЯ АРХИТЕКТУРНАЯ ШАПКА APPLE LIQUID GLASS -->
   <header class="site-header" id="siteHeader">
     <div class="header-container">
       <!-- СЛЕВА: ТОЛЬКО ОРИГИНАЛЬНЫЙ ЛОГОТИП -->
       <a href="index.html" class="header-logo-link" aria-label="«Двери №1» — Главная">
-        <img src="logo.png" alt="Двери №1" class="header-logo-img" width="168" height="38">
+        <img src="logo.png" alt="Двери №1" class="header-logo-img header-logo-dark" width="168" height="38">
+        <img src="logo-white.png" alt="" aria-hidden="true" class="header-logo-img header-logo-light" width="168" height="38">
       </a>
 
       <!-- ПО ЦЕНТРУ: КОМПАКТНОЕ МЕНЮ (DESKTOP) -->
@@ -252,60 +253,14 @@
       <div class="editorial-header">
         <div class="editorial-kicker">Каталог по направлениям</div>
         <h2 class="editorial-title">Категории дверей</h2>
-        <p class="editorial-subtitle">Выберите нужное направление — от практичных моделей эконом-сегмента до решений для современного интерьера</p>
+        <p class="editorial-subtitle">Выберите направление, чтобы перейти к подходящим моделям.</p>
       </div>
 
-      <div class="editorial-categories-gallery editorial-categories-dual">
-        <!-- 1. Межкомнатные двери -->
-        <a href="#catalogContent" class="cat-editorial-card cat-editorial-lead" onclick="if(window.DverApp && window.DverApp.setCategory) window.DverApp.setCategory('Межкомнатные двери');">
-          <div class="cat-media-wrapper">
-            <img src="category-interior.webp" alt="Межкомнатные двери" class="cat-editorial-img" loading="eager" decoding="async" width="800" height="600">
-            <div class="cat-scrim-overlay"></div>
-          </div>
-          <div class="cat-editorial-content">
-            <span class="cat-editorial-kicker">ПВХ (ПВХ, ПЭТ, экошпон) • Эмаль • Шпон натуральный</span>
-            <h3 class="cat-editorial-title">Межкомнатные двери</h3>
-            <span class="cat-editorial-action">Выбрать по фабрикам <span class="cat-arrow">→</span></span>
-          </div>
-        </a>
-
-        <!-- 2. Входные двери (проваливаемся в 3 категории) -->
-        <button type="button" class="cat-editorial-card cat-editorial-entrance cat-editorial-btn" id="btnCatEntranceCard" onclick="if(window.DverApp && window.DverApp.toggleEntranceSubcats) window.DverApp.toggleEntranceSubcats();">
-          <div class="cat-media-wrapper">
-            <img src="category-entrance.webp" alt="Входные двери" class="cat-editorial-img" loading="eager" decoding="async" width="800" height="600">
-            <div class="cat-scrim-overlay"></div>
-          </div>
-          <div class="cat-editorial-content">
-            <span class="cat-editorial-kicker">С терморазрывом • В квартиру • Противопожарные и технические</span>
-            <h3 class="cat-editorial-title">Входные двери</h3>
-            <span class="cat-editorial-action">Открыть категории <span class="cat-arrow">↓</span></span>
-          </div>
-        </button>
-      </div>
-
-      <!-- РАСКРЫВАЮЩИЙСЯ БЛОК 3 КАТЕГОРИЙ ВХОДНЫХ ДВЕРЕЙ -->
-      <div class="entrance-subcats-panel" id="entranceSubcatsPanel" hidden>
-        <div class="entrance-subcats-header">
-          <span class="entrance-subcats-label">Категории входных дверей:</span>
-          <a href="#catalogContent" class="entrance-all-link" onclick="if(window.DverApp && window.DverApp.setEntranceSubcategory) window.DverApp.setEntranceSubcategory('all');">Смотреть все входные →</a>
-        </div>
-        <div class="entrance-subcats-grid">
-          <a href="#catalogContent" class="entrance-subcat-card" onclick="if(window.DverApp && window.DverApp.setEntranceSubcategory) window.DverApp.setEntranceSubcategory('thermo');">
-            <div class="entrance-subcat-title">Двери с терморазрывом</div>
-            <div class="entrance-subcat-desc">Для частного дома и коттеджа — защита от промерзания и конденсата</div>
-            <span class="entrance-subcat-cta">Смотреть модели →</span>
-          </a>
-          <a href="#catalogContent" class="entrance-subcat-card" onclick="if(window.DverApp && window.DverApp.setEntranceSubcategory) window.DverApp.setEntranceSubcategory('apartment');">
-            <div class="entrance-subcat-title">Двери в квартиру</div>
-            <div class="entrance-subcat-desc">Надёжные замки, шумоизоляция, варианты с зеркалом и МДФ-панелями</div>
-            <span class="entrance-subcat-cta">Смотреть модели →</span>
-          </a>
-          <a href="#catalogContent" class="entrance-subcat-card" onclick="if(window.DverApp && window.DverApp.setEntranceSubcategory) window.DverApp.setEntranceSubcategory('fire_tech');">
-            <div class="entrance-subcat-title">Противопожарные и технические двери</div>
-            <div class="entrance-subcat-desc">Противопожарные ДПМ EIS-60, строительные и подсобные металл/металл</div>
-            <span class="entrance-subcat-cta">Смотреть модели →</span>
-          </a>
-        </div>
+      <div class="direction-grid">
+        <a class="direction-card" href="?cat=interior#catalogContent" data-direction="interior"><img src="assets/directions/interior.webp" alt="Светлая деревянная межкомнатная дверь в квартире" width="800" height="993" loading="lazy"><span>Межкомнатные <b aria-hidden="true">→</b></span></a>
+        <a class="direction-card" href="?cat=entrance&amp;sub=apartment#catalogContent" data-direction="apartment"><img src="assets/directions/apartment.webp" alt="Металлическая входная дверь в подъезде многоквартирного дома" width="800" height="993" loading="lazy"><span>В квартиру <b aria-hidden="true">→</b></span></a>
+        <a class="direction-card" href="?cat=entrance&amp;sub=thermo#catalogContent" data-direction="thermo"><img src="assets/directions/house.webp" alt="Металлическая входная дверь в кирпичном частном доме зимой" width="800" height="993" loading="lazy"><span>В частный дом <b aria-hidden="true">→</b></span></a>
+        <a class="direction-card" href="?cat=invisible#catalogContent" data-direction="invisible"><img src="assets/directions/hidden.webp" alt="Светлая скрытая дверь в одной плоскости со стеной" width="800" height="993" loading="lazy"><span>Скрытые <b aria-hidden="true">→</b></span></a>
       </div>
     </div>
   </section>
@@ -349,7 +304,7 @@
 
           <!-- Модель 1: Chameleon Doors • Glass 1 -->
           <article class="designer-card" data-id="PROD-CHAM-101">
-            <a href="product.html?id=PROD-CHAM-101" class="designer-card-media" aria-label="Chameleon Doors Glass 1">
+            <a href="products/PROD-CHAM-101/" class="designer-card-media" aria-label="Chameleon Doors Glass 1">
               <div class="designer-canvas">
                 <img src="data/catalog-output/webp/PROD-CHAM-101_main.webp" alt="Дверь Chameleon Doors Glass 1" class="designer-door-img" loading="eager" decoding="async" width="480" height="1050">
               </div>
@@ -357,21 +312,21 @@
             <div class="designer-card-body">
               <div class="designer-card-meta">Chameleon Doors • Glass</div>
               <h3 class="designer-card-title">
-                <a href="product.html?id=PROD-CHAM-101">Glass 1 (Лакобель Графит)</a>
+                <a href="products/PROD-CHAM-101/">Glass 1 (Лакобель Графит)</a>
               </h3>
               <div class="designer-card-footer">
                 <div class="designer-price-box">
                   <span class="designer-price-label">от</span>
                   <span class="designer-price-val">15 950 ₽</span>
                 </div>
-                <a href="product.html?id=PROD-CHAM-101" class="designer-card-link">Подробнее →</a>
+                <a href="products/PROD-CHAM-101/" class="designer-card-link">Подробнее →</a>
               </div>
             </div>
           </article>
 
           <!-- Модель 2: Chameleon Doors • Rail 1 -->
           <article class="designer-card" data-id="PROD-CHAM-003">
-            <a href="product.html?id=PROD-CHAM-003" class="designer-card-media" aria-label="Chameleon Doors Rail 1">
+            <a href="products/PROD-CHAM-003/" class="designer-card-media" aria-label="Chameleon Doors Rail 1">
               <div class="designer-canvas">
                 <img src="data/catalog-output/webp/PROD-CHAM-003_main.webp" alt="Дверь с рельефной рейкой Rail 1" class="designer-door-img" loading="eager" decoding="async" width="480" height="1050">
               </div>
@@ -379,21 +334,21 @@
             <div class="designer-card-body">
               <div class="designer-card-meta">Chameleon Doors • Rail 3D</div>
               <h3 class="designer-card-title">
-                <a href="product.html?id=PROD-CHAM-003">Rail 1 (Вертикальная рейка)</a>
+                <a href="products/PROD-CHAM-003/">Rail 1 (Вертикальная рейка)</a>
               </h3>
               <div class="designer-card-footer">
                 <div class="designer-price-box">
                   <span class="designer-price-label">от</span>
                   <span class="designer-price-val">15 950 ₽</span>
                 </div>
-                <a href="product.html?id=PROD-CHAM-003" class="designer-card-link">Подробнее →</a>
+                <a href="products/PROD-CHAM-003/" class="designer-card-link">Подробнее →</a>
               </div>
             </div>
           </article>
 
           <!-- Модель 3: Двери 2025 • Венто -->
           <article class="designer-card" data-id="PROD-D25-001">
-            <a href="product.html?id=PROD-D25-001" class="designer-card-media" aria-label="Двери 2025 Венто">
+            <a href="products/PROD-D25-001/" class="designer-card-media" aria-label="Двери 2025 Венто">
               <div class="designer-canvas">
                 <img src="data/catalog-output/webp/PROD-D25-001_main.webp" alt="Межкомнатная дверь Венто" class="designer-door-img" loading="eager" decoding="async" width="480" height="1050">
               </div>
@@ -401,21 +356,21 @@
             <div class="designer-card-body">
               <div class="designer-card-meta">Двери 2025 • Серия Вектор</div>
               <h3 class="designer-card-title">
-                <a href="product.html?id=PROD-D25-001">Венто (Минимализм эмаль)</a>
+                <a href="products/PROD-D25-001/">Венто (Минимализм эмаль)</a>
               </h3>
               <div class="designer-card-footer">
                 <div class="designer-price-box">
                   <span class="designer-price-label">от</span>
                   <span class="designer-price-val">14 750 ₽</span>
                 </div>
-                <a href="product.html?id=PROD-D25-001" class="designer-card-link">Подробнее →</a>
+                <a href="products/PROD-D25-001/" class="designer-card-link">Подробнее →</a>
               </div>
             </div>
           </article>
 
           <!-- Модель 4: Феррони • 13 СМ VITRA ВИНОРИТ ПАТИНА -->
           <article class="designer-card" data-id="PROD-FERR-001">
-            <a href="product.html?id=PROD-FERR-001" class="designer-card-media" aria-label="Входная дверь Феррони 13 СМ VITRA ВИНОРИТ ПАТИНА">
+            <a href="products/PROD-FERR-001/" class="designer-card-media" aria-label="Входная дверь Феррони 13 СМ VITRA ВИНОРИТ ПАТИНА">
               <div class="designer-canvas">
                 <img src="data/catalog-output/webp/PROD-FERR-001_main.webp" alt="Входная дверь 13 СМ VITRA ВИНОРИТ ПАТИНА" class="designer-door-img" loading="lazy" decoding="async" width="480" height="1050">
               </div>
@@ -423,21 +378,21 @@
             <div class="designer-card-body">
               <div class="designer-card-meta">Феррони • Терморазрыв</div>
               <h3 class="designer-card-title">
-                <a href="product.html?id=PROD-FERR-001">13 СМ VITRA Винорит Патина</a>
+                <a href="products/PROD-FERR-001/">13 СМ VITRA Винорит Патина</a>
               </h3>
               <div class="designer-card-footer">
                 <div class="designer-price-box">
                   <span class="designer-price-label">от</span>
                   <span class="designer-price-val">58 500 ₽</span>
                 </div>
-                <a href="product.html?id=PROD-FERR-001" class="designer-card-link">Подробнее →</a>
+                <a href="products/PROD-FERR-001/" class="designer-card-link">Подробнее →</a>
               </div>
             </div>
           </article>
 
           <!-- Модель 5: Chameleon Doors • Oval 1 -->
           <article class="designer-card" data-id="PROD-CHAM-006">
-            <a href="product.html?id=PROD-CHAM-006" class="designer-card-media" aria-label="Chameleon Doors Oval 1">
+            <a href="products/PROD-CHAM-006/" class="designer-card-media" aria-label="Chameleon Doors Oval 1">
               <div class="designer-canvas">
                 <img src="data/catalog-output/webp/PROD-CHAM-006_main.webp" alt="Дверь Chameleon Doors Oval 1" class="designer-door-img" loading="lazy" decoding="async" width="480" height="1050">
               </div>
@@ -445,21 +400,21 @@
             <div class="designer-card-body">
               <div class="designer-card-meta">Chameleon Doors • Oval</div>
               <h3 class="designer-card-title">
-                <a href="product.html?id=PROD-CHAM-006">Oval 1 (Скандинавский овал)</a>
+                <a href="products/PROD-CHAM-006/">Oval 1 (Скандинавский овал)</a>
               </h3>
               <div class="designer-card-footer">
                 <div class="designer-price-box">
                   <span class="designer-price-label">от</span>
                   <span class="designer-price-val">15 950 ₽</span>
                 </div>
-                <a href="product.html?id=PROD-CHAM-006" class="designer-card-link">Подробнее →</a>
+                <a href="products/PROD-CHAM-006/" class="designer-card-link">Подробнее →</a>
               </div>
             </div>
           </article>
 
           <!-- Модель 6: ViraDoors • ВИРА-1 -->
           <article class="designer-card" data-id="PROD-VIRA-002">
-            <a href="product.html?id=PROD-VIRA-002" class="designer-card-media" aria-label="Входная дверь ViraDoors ВИРА-1">
+            <a href="products/PROD-VIRA-002/" class="designer-card-media" aria-label="Входная дверь ViraDoors ВИРА-1">
               <div class="designer-canvas">
                 <img src="data/catalog-output/webp/PROD-VIRA-002_main.webp" alt="Входная дверь ВИРА-1" class="designer-door-img" loading="lazy" decoding="async" width="480" height="1050">
               </div>
@@ -467,14 +422,14 @@
             <div class="designer-card-body">
               <div class="designer-card-meta">ViraDoors • Входные двери</div>
               <h3 class="designer-card-title">
-                <a href="product.html?id=PROD-VIRA-002">ВИРА-1 (Металл / Панель)</a>
+                <a href="products/PROD-VIRA-002/">ВИРА-1 (Металл / Панель)</a>
               </h3>
               <div class="designer-card-footer">
                 <div class="designer-price-box">
                   <span class="designer-price-label">от</span>
                   <span class="designer-price-val">24 000 ₽</span>
                 </div>
-                <a href="product.html?id=PROD-VIRA-002" class="designer-card-link">Подробнее →</a>
+                <a href="products/PROD-VIRA-002/" class="designer-card-link">Подробнее →</a>
               </div>
             </div>
           </article>
@@ -552,14 +507,6 @@
 
       <!-- БЫСТРЫЕ ПРЕСЕТЫ-СЦЕНАРИИ КАТАЛОГА (СПРИНТ 7) -->
       <div class="catalog-presets-strip" id="catalogPresetsStrip" role="region" aria-label="Быстрые сценарии подбора">
-        <button type="button" class="preset-pill" data-preset="inStock">
-          <span class="preset-icon" aria-hidden="true">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-          </span>
-          <span>В наличии (1–2 дня)</span>
-        </button>
         <button type="button" class="preset-pill" data-preset="invisible">
           <span class="preset-icon" aria-hidden="true">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -690,10 +637,6 @@
               <span class="status-count-text">Загрузка каталога...</span>
             </div>
             <div class="status-right-group">
-              <button type="button" class="btn-stock-toggle" id="btnStockToggle" role="switch" aria-checked="false" title="Показать только двери с быстрой доставкой 1–2 дня">
-                <span class="stock-toggle-dot"></span>
-                <span class="stock-toggle-label">В наличии на складе (1–2 дня)</span>
-              </button>
             </div>
           </div>
 
@@ -1213,12 +1156,12 @@
   <div id="siteToast" class="toast-notice"></div>
 
   <!-- СКРИПТЫ: ДАННЫЕ И ЛОГИКА -->
-  <script src="js/config.js?v=4.8.0"></script>
+  <script src="js/config.js?v=4.8.4"></script>
   <script src="js/city.js?v=4.8.0"></script>
   <script src="js/analytics.js?v=4.8.0"></script>
-  <script src="js/leads.js?v=4.8.0"></script>
+  <script src="js/leads.js?v=4.8.4"></script>
   <script src="js/quiz.js?v=4.8.0"></script>
-  <script src="app.js?v=4.8.0"></script>
+  <script src="app.js?v=4.8.6"></script>
 
 </body>
 </html>

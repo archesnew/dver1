@@ -2079,3 +2079,17 @@
     height: 130px;
   }
 }
+
+
+/* Цена и комплектация рядом с действием */
+.pdp-purchase-panel { margin-top: 24px; padding: 22px; border: 1px solid #dedbd4; border-radius: 14px; background: #faf9f6; }
+.pdp-purchase-panel .pdp-complectation-block { margin: 0; }
+.pdp-purchase-panel .pdp-price-panel { margin: 20px 0 12px; padding: 18px 0 0; border-top: 1px solid #d9d4cb; }
+.pdp-price-breakdown > div, .pdp-purchase-panel .pdp-price-row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.pdp-price-breakdown > div { padding: 5px 0; color: #555650; font-size: .875rem; line-height: 1.4; }
+.pdp-price-breakdown > div > :last-child { text-align: right; }
+.pdp-service-note { color: #555650; font-size: .8125rem; line-height: 1.6; margin-bottom: 16px; }
+@media (max-width: 768px) {
+  .pdp-purchase-panel { padding: 16px; }
+  body.sticky-bar-active .floating-contact-widget { bottom: 90px; }
+}

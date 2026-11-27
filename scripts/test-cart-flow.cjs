@@ -1,0 +1,30 @@
+const assert = require('assert'), fs = require('fs'), vm = require('vm');
+const data = new Map();
+const storage = { getItem:k=>data.get(k)||null, setItem:(k,v)=>data.set(k,v), removeItem:k=>data.delete(k) };
+const list = {innerHTML:'', querySelectorAll(){return []}}, total={textContent:''};
+const doc = {readyState:'loading', addEventListener(){}, querySelectorAll(){return []}, getElementById(id){return id==='cartItemsList'?list:id==='cartTotalAmount'?total:null}};
+const win = {dispatchEvent(){}, location:{search:'',hash:''}, DVER_CONFIG:{KIT_SURCHARGES:{interior:[{id:'hinges',name:'Петли'}], entrance:[{id:'delivery_lift',name:'Доставка'}]}}};
+const ctx={window:win,document:doc,localStorage:storage,console,CustomEvent:function(){},setTimeout(){},URLSearchParams,Intl};
+vm.createContext(ctx);
+vm.runInContext(fs.readFileSync('cart-store.js','utf8'),ctx);
+let js=fs.readFileSync('product.js','utf8').replace('  // Экспорт для глобального использования','  window.flowTest = {pdpState, addCurrentProductToCart, getLeadProduct, getProductInquiryText, renderCartModal};\n  // Экспорт для глобального использования').replace('  function showToast(message) {','  function showToast(message) { return;');
+vm.runInContext(js,ctx);
+for(const id of ['PROD-CHAM-101','PROD-FERR-001']){
+  win.CartStore.clearCart();
+  const p=JSON.parse(fs.readFileSync('data/products/'+id+'.json'));
+  const st=win.flowTest.pdpState;
+  st.product=p;st.activeVariantIndex=0;st.activeSize='2000х800 мм';st.activeOpening='Левое';st.activeOpeningType='';st.kitType='leaf';st.wcTurn=false;st.selectedKitOptionIds=[];st.activeMainImage='';
+  const lead=win.flowTest.getLeadProduct();
+  win.flowTest.addCurrentProductToCart();
+  let item=win.CartStore.getCart()[0];
+  assert.strictEqual(item.productId,id);assert.strictEqual(item.size,lead.size);assert.strictEqual(item.unitPrice,lead.price);
+  win.CartStore.updateQuantity(item.id,1);
+  item=win.CartStore.getCart()[0];assert.strictEqual(item.quantity,2);
+  st.cart=win.CartStore.getCart();win.flowTest.renderCartModal();
+  assert(list.innerHTML.includes(p.model));assert(total.textContent.includes((item.unitPrice*2).toLocaleString('ru-RU')));
+  st.kitType='kit';st.selectedKitOptionIds=[id==='PROD-CHAM-101'?'hinges':'delivery_lift'];
+  win.flowTest.addCurrentProductToCart();item=win.CartStore.getCart()[1];
+  assert.strictEqual(item.unitPrice,null);assert.strictEqual(item.isPriceKnown,false);assert(item.kitOptions.length);
+  assert.strictEqual(win.flowTest.getLeadProduct().price,null);assert(win.flowTest.getProductInquiryText().includes('рассчитывается отдельно'));
+}
+console.log('Корзина: две модели, параметры, количество, цена и доп. опции проверены без сетевых запросов.');

@@ -51,7 +51,7 @@ function generateSitemap() {
   products.forEach(p => {
     if (p.id) {
       urls.push({
-        loc: `${BASE_URL}/product.html?id=${encodeURIComponent(p.id)}`,
+        loc: `${BASE_URL}/products/${encodeURIComponent(p.id)}/`,
         lastmod: today,
         changefreq: 'weekly',
         priority: '0.7'
