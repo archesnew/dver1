@@ -14,7 +14,7 @@
     TELEGRAM_CATALOG_URL: "https://t.me/dveri_1",
     MAX_CATALOG_URL: "https://max.ru/join/ta3eyKCyExYWI37TCWrSAkzOkKTQAamITFpQHj9FEi4",
     LEAD_ENDPOINT: "https://script.google.com/macros/s/AKfycbzZO-tsliWz2mZWnNA7A5HuzmYHOzBy3s3ny0rSxvIhtz_eT0ieSHhPlu8FxwpqZ9A/exec", // Google Apps Script прокси в Telegram (работает из РФ без VPN)
-    YM_COUNTER_ID: null, // Плейсхолдер для номера счётчика Яндекс.Метрики (Спринт 5)
+    YM_COUNTER_ID: 114727314, // Номер счётчика Яндекс.Метрики
 
     // Города присутствия и магазины
     CITIES: {
