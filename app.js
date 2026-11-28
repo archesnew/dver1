@@ -904,7 +904,7 @@
             <div class="card-coating">${coating ? `Покрытие: ${escapeHtml(coating)}` : 'Покрытие уточняйте'}</div>
             <div class="card-bottom-row">
               <div class="card-price-value">${priceText}</div>
-              <a href="products/${encodeURIComponent(p.id)}/" class="btn-card-more">
+              <a href="products/${encodeURIComponent(p.id)}/" class="btn-card-more" aria-label="Подробнее о модели ${escapeHtml(modelName)}">
                 <span>Подробнее</span>
                 <span class="btn-arrow">→</span>
               </a>

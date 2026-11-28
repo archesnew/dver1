@@ -3638,6 +3638,34 @@ a {
     font-size: 1.05rem;
   }
 
+  .card-bottom-row {
+    padding-top: 10px;
+    gap: 8px;
+  }
+
+  .card-price-value {
+    font-size: 0.9rem;
+    line-height: 1.25;
+    min-width: 0;
+  }
+
+  .card-bottom-row .btn-card-more {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .card-bottom-row .btn-card-more span:first-child {
+    display: none;
+  }
+
+  .card-bottom-row .btn-card-more .btn-arrow {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
   .card-footer {
     flex-direction: column;
     align-items: flex-start;
