@@ -614,7 +614,7 @@
             <span>Быстрая связь со специалистом</span>
           </div>
           <div class="floating-popover-actions">
-            <a href="${cfg.getWhatsAppUrl('Здравствуйте! Хочу проконсультироваться по выбору дверей.')}" target="_blank" rel="noopener" class="floating-action-item floating-action-wa" aria-label="Написать в WhatsApp">
+            <a href="${cfg.getWhatsAppUrl('Здравствуйте! Хочу проконсультироваться по выбору дверей.')}" target="_blank" rel="noopener" class="floating-action-item action-wa floating-action-wa" aria-label="Написать в WhatsApp">
               <span class="floating-action-icon wa-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.33 7.34 9 7.41 8.73 7.71C8.46 8.01 7.7 8.72 7.7 10.17C7.7 11.62 8.76 13.02 8.91 13.22C9.06 13.43 10.95 16.48 13.92 17.65C16.38 18.62 16.89 18.42 17.42 18.37C17.96 18.32 19.14 17.67 19.39 16.97C19.64 16.27 19.64 15.67 19.57 15.54C19.5 15.42 19.3 15.35 19 15.2C18.7 15.05 17.22 14.32 16.94 14.22C16.67 14.12 16.47 14.07 16.27 14.37C16.07 14.67 15.5 15.35 15.33 15.54C15.16 15.74 14.99 15.77 14.69 15.62C14.39 15.47 13.43 15.16 12.3 14.15C11.42 13.36 10.83 12.39 10.66 12.09C10.49 11.79 10.64 11.63 10.79 11.48C10.92 11.35 11.09 11.13 11.24 10.96C11.39 10.78 11.44 10.66 11.54 10.46C11.64 10.26 11.59 10.08 11.51 9.93C11.44 9.78 10.84 8.3 10.59 7.7C10.35 7.12 10.1 7.2 9.91 7.19C9.74 7.19 9.53 7.34 9.53 7.34Z"/>
@@ -626,7 +626,7 @@
               </span>
             </a>
 
-            <a href="${cfg.getTelegramUrl('Здравствуйте! Хочу проконсультироваться по выбору дверей.')}" target="_blank" rel="noopener" class="floating-action-item floating-action-tg" aria-label="Написать в Telegram">
+            <a href="${cfg.getTelegramUrl('Здравствуйте! Хочу проконсультироваться по выбору дверей.')}" target="_blank" rel="noopener" class="floating-action-item action-tg floating-action-tg" aria-label="Написать в Telegram">
               <span class="floating-action-icon tg-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
@@ -638,7 +638,7 @@
               </span>
             </a>
 
-            <button type="button" class="floating-action-item floating-action-measure" id="btnFloatingMeasure" aria-label="Заказать бесплатный замер">
+            <button type="button" class="floating-action-item action-measure floating-action-measure" id="btnFloatingMeasure" aria-label="Заказать бесплатный замер">
               <span class="floating-action-icon measure-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -660,7 +660,7 @@
             </svg>
           </span>
           <span class="trigger-icon-close" aria-hidden="true">✕</span>
-          <span class="floating-pulse-ring" aria-hidden="true"></span>
+          <span class="pulse-ring floating-pulse-ring" aria-hidden="true"></span>
         </button>
       </div>
     `;
@@ -673,14 +673,14 @@
 
     if (trigger && popover && widget) {
       trigger.onclick = () => {
-        const isOpen = widget.classList.toggle('active');
+        const isOpen = widget.classList.toggle('is-open');
         trigger.setAttribute('aria-expanded', isOpen);
         popover.setAttribute('aria-hidden', !isOpen);
       };
 
       document.addEventListener('click', (e) => {
-        if (!widget.contains(e.target) && widget.classList.contains('active')) {
-          widget.classList.remove('active');
+        if (!widget.contains(e.target) && widget.classList.contains('is-open')) {
+          widget.classList.remove('is-open');
           trigger.setAttribute('aria-expanded', 'false');
           popover.setAttribute('aria-hidden', 'true');
         }
@@ -689,7 +689,9 @@
       const btnMeasure = document.getElementById('btnFloatingMeasure');
       if (btnMeasure) {
         btnMeasure.onclick = () => {
-          widget.classList.remove('active');
+          widget.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+          popover.setAttribute('aria-hidden', 'true');
           openLeadModal({ source: 'Плавающая кнопка связи (Floating Widget)' });
         };
       }
